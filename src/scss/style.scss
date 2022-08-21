@@ -10,9 +10,9 @@
 // Переменные
 // Текст
 $text-primary: #333;
-$text-second: brig-color($text-primary, .7);
-$text-label: #BDBDBD;
-$accent: #FFCD6D;
+$text-second: brig-color($text-primary, 0.7);
+$text-label: #bdbdbd;
+$accent: #ffcd6d;
 $light: #fff;
 
 // Задний фон разделов
@@ -27,13 +27,12 @@ $radius-s: 4px;
 $radius-l: 30px;
 
 // Текстовые поля
-$input-placeholder: brig-color(#000, .3);
+$input-placeholder: brig-color(#000, 0.3);
 
 // Уведомления
-$error: #EB5757;
+$error: #eb5757;
 
 // ================ Colors End ================
-
 
 // ================ Responsive Start ================
 $min-width: 320px;
@@ -43,7 +42,7 @@ $container-padding: 48;
 $container-width: $max-width-container + $container-padding;
 
 :root {
-	--container-padding: #{math.div($container-padding, 2) + 'px'};
+  --container-padding: #{math.div($container-padding, 2) + "px"};
 }
 
 $laptop-l: 1500px;
@@ -55,10 +54,9 @@ $mobile-s: 330px;
 $hide-menu: $tablet;
 // ================ Responsive End ================
 
-
 // ================ Other Start ================
 $ff-main: sans-serif;
-$tr: .3s;
+$tr: 0.3s;
 // ================ Other End ================
 //========================================================================================================================================================
 
@@ -66,31 +64,31 @@ $tr: .3s;
 @import "./reset";
 
 body {
-	font-family: $ff-main;
-	font-size: 14px;
-	font-weight: 400;
-	color: $text-primary;
-	line-height: 1.2;
+  font-family: $ff-main;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $text-primary;
 
-    ._lock & {
-        overflow: hidden;
-		touch-action: none;
-    }
+  ._lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
 }
 
 .wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
 
-    & > .content {
-        flex: 1 0 auto;
-        position: relative;
-        z-index: 1;
-    }
+  & > .content {
+    position: relative;
+    z-index: 1;
+    flex: 1 0 auto;
+  }
 }
 
 /*
@@ -99,26 +97,26 @@ body {
 Например header__container, main__container и т.д.
 */
 [class*="__container"] {
-    @if ($max-width-container>0) {
-        max-width: $max-width-container;
-        box-sizing: content-box;
-        margin: 0 auto;
-    }
-    @if ($container-padding>0) {
-        padding: 0 var(--container-padding);
-    }
+  @if ($max-width-container>0) {
+    max-width: $max-width-container;
+    box-sizing: content-box;
+    margin: 0 auto;
+  }
+  @if ($container-padding>0) {
+    padding: 0 var(--container-padding);
+  }
 
-	@media (max-width: $tablet) {
-		--container-padding: 30px;
-	}
+  @media (max-width: $tablet) {
+    --container-padding: 30px;
+  }
 
-    @media (max-width: $mobile-l) {
-		--container-padding: 20px;
-    }
+  @media (max-width: $mobile-l) {
+    --container-padding: 20px;
+  }
 
-    @media (max-width: $mobile-m) {
-		--container-padding: 16px;
-    }
+  @media (max-width: $mobile-m) {
+    --container-padding: 16px;
+  }
 }
 
 // Библиотеки

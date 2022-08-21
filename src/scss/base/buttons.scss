@@ -1,36 +1,34 @@
 // Основной шаблон кнопки
 .btn {
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 0 50px;
-    border-radius: 50px;
-    transition: $tr;
-    white-space: nowrap;
-    user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 50px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  user-select: none;
+  border-radius: 50px;
+  transition: $tr;
 
-	@media (any-hover: hover) {
-
-        &:hover {
-            background: #000;
-        }
+  @media (any-hover: hover) {
+    &:hover {
+      background: #000;
     }
+  }
 }
 
 .link {
-    transition: $tr;
+  transition: $tr;
 
-    @media (any-hover: hover) {
-
-        &:hover {
-            color: $accent;
-        }
+  @media (any-hover: hover) {
+    &:hover {
+      color: $accent;
     }
+  }
 
-    &:active {
-        color: brig-color($accent, active);
-    }
+  &:active {
+    color: brig-color($accent, active);
+  }
 }
