@@ -37,16 +37,19 @@ function webServer() {
 
 // Файлы, за изменением которых gulp будет следить
 function watchFiles() {
+  /* eslint-disable no-undef */
   gulp.watch(app.path.watch.html, htmlBuild);
   gulp.watch(app.path.watch.scss, cssBuild);
   gulp.watch(app.path.watch.js, jsBuild);
   gulp.watch(app.path.watch.images, imagesBuild);
   gulp.watch(app.path.watch.svg, imagesBuild);
   gulp.watch(app.path.watch.resources, resourcesBuild);
+  /* eslint-enable no-undef */
 }
 
 // Удалить папку с build
 async function cleanDist() {
+  // eslint-disable-next-line no-undef
   await del(app.path.buildFolder);
 }
 
