@@ -2,15 +2,24 @@
  */
 // #region timer
 const timers = document.querySelectorAll(".timer");
+const timerName = "localTimer";
+// const timerDeadline = 48 * 60 * 60 * 1000;
+const timerDeadline = getTimerDeadlineFromNow(0.1);
 
+function getTimerDeadlineFromNow(hours, isDaysInTimer = false) {
+  const milliseconds = 1000;
+  const seconds = 60;
+  const minutes = 60;
+  return hours * minutes * seconds * milliseconds;
+}
 if ([...timers].length > 0) {
-  function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    var hoursTotal = Math.floor(t / (1000 * 60 * 60));
+  function getTimeRemaining(deadline) {
+    let t = Date.parse(deadline) - Date.parse(new Date());
+    let seconds = Math.floor((t / 1000) % 60);
+    let minutes = Math.floor((t / 1000 / 60) % 60);
+    let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hoursTotal = Math.floor(t / (1000 * 60 * 60));
 
     const ticks = {
       total: t,
@@ -24,41 +33,36 @@ if ([...timers].length > 0) {
   }
 
   function onTimerExpire(clock) {
-    clock.style.opacity = "0";
-
-    console.log("timerExpire");
+    // clock.style.opacity = "0";
   }
 
-  function initializeClock(element, endtime) {
-    // const clock = document.querySelector(element);
-    const clock = element;
+  function initClock(timer, deadline) {
+    // const clock = document.querySelector(timer);
+    const clock = timer;
     // letk daysSpan = clock.querySelector(".timer-days_value");
     let hoursSpan = clock.querySelector(".timer__left");
     let minutesSpan = clock.querySelector(".timer__center");
     let secondsSpan = clock.querySelector(".timer__right");
     let time = [hoursSpan, minutesSpan, secondsSpan];
 
+    function getLeadingZeroTime(time) {
+      return ("0" + time).slice(-2);
+    }
     function updateClock() {
-      let t = getTimeRemaining(endtime);
+      let { hoursTotal, minutes, seconds, total } = getTimeRemaining(deadline);
 
-      // daysSpan.innerHTML = t.days;
-      // hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
-      // minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-      // secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
-
-      let left = ("0" + t.hoursTotal).slice(-2);
-      let center = ("0" + t.minutes).slice(-2);
-      let right = ("0" + t.seconds).slice(-2);
+      let left = getLeadingZeroTime(hoursTotal);
+      let center = getLeadingZeroTime(minutes);
+      let right = getLeadingZeroTime(seconds);
       let timerSpan = [left, center, right];
 
       time.forEach((span, i) => {
         [...span.querySelectorAll(".timer__digit")].forEach((digit, index) => {
-          digit.innerText = timerSpan[i][index];
+          digit.innerText = total >= 0 ? timerSpan[i][index] : "0";
         });
       });
-      if (t.total <= 0) {
-        // clearInterval(timeinterval);
-        // location.assign("");
+      if (total <= 0) {
+        clearInterval(timeinterval);
         onTimerExpire(clock);
       }
     }
@@ -66,19 +70,24 @@ if ([...timers].length > 0) {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
   }
-
-  if (localStorage.getItem("localTimer") == null) {
+  function setTimer(deadline) {
     localStorage.setItem(
-      "localTimer",
-      new Date(Date.parse(new Date()) + 72 * 60 * 60 * 1000)
+      timerName,
+      new Date(Date.parse(new Date()) + deadline)
     );
+    return getTimer();
   }
-
-  var deadline = localStorage.getItem("localTimer");
+  function getTimer() {
+    return localStorage.getItem(timerName);
+  }
+  function isTimerNull() {
+    return localStorage.getItem(timerName) == null;
+  }
+  const deadline = isTimerNull() ? setTimer(timerDeadline) : getTimer();
   // var deadline = new Date(Date.parse(new Date()) + 10 * 1000); // for endless timer
 
   timers.forEach((timer) => {
-    initializeClock(timer, deadline);
+    initClock(timer, deadline);
   });
 }
 // #endregion timer
