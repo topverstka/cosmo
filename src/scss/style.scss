@@ -1,64 +1,11 @@
 @use "sass:math";
 
-// Миксины
+@import "./variables";
 @import "./mixins";
 
 // Шрифты
 // @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular.woff2');
 // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
-
-// Переменные
-// Текст
-$text-primary: #333;
-$text-second: brig-color($text-primary, 0.7);
-$text-label: #bdbdbd;
-$accent: #ffcd6d;
-$light: #fff;
-
-// Задний фон разделов
-// $frame-dark: #080A0A;
-// $frame-light: #0E1010;
-
-// Обводка
-$border-line: #cecece;
-
-// Радиусы
-$radius-s: 4px;
-$radius-l: 30px;
-
-// Текстовые поля
-$input-placeholder: brig-color(#000, 0.3);
-
-// Уведомления
-$error: #eb5757;
-
-// ================ Colors End ================
-
-// ================ Responsive Start ================
-$min-width: 320px;
-$max-width: 1920px;
-$max-width-container: 1200;
-$container-padding: 48;
-$container-width: $max-width-container + $container-padding;
-
-:root {
-  --container-padding: #{math.div($container-padding, 2) + "px"};
-}
-
-$laptop-l: 1500px;
-$laptop: 1100px;
-$tablet: 800px;
-$mobile-l: 450px;
-$mobile-m: 390px;
-$mobile-s: 330px;
-$hide-menu: $tablet;
-// ================ Responsive End ================
-
-// ================ Other Start ================
-$ff-main: sans-serif;
-$tr: 0.3s;
-// ================ Other End ================
-//========================================================================================================================================================
 
 // Сброс CSS
 @import "./reset";
