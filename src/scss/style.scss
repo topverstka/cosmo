@@ -1,3 +1,4 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
 @use "sass:math";
 
 @import "./variables";
@@ -44,12 +45,12 @@ body {
 Например header__container, main__container и т.д.
 */
 [class*="__container"] {
-  @if ($max-width-container>0) {
-    max-width: $max-width-container;
+  @if ($max-width-container > 0) {
     box-sizing: content-box;
+    max-width: $max-width-container;
     margin: 0 auto;
   }
-  @if ($container-padding>0) {
+  @if ($container-padding > 0) {
     padding: 0 var(--container-padding);
   }
 
