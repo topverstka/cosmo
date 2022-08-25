@@ -21,7 +21,7 @@ global.app = {
   path,
   gulp,
   plugins,
-  useWebp: false,
+  useWebp: true,
 };
 
 function webServer() {
@@ -42,6 +42,7 @@ function watchFiles() {
   gulp.watch(app.path.watch.scss, cssBuild);
   gulp.watch(app.path.watch.js, jsBuild);
   gulp.watch(app.path.watch.images, imagesBuild);
+  gulp.watch(app.path.watch.images, convertImages);
   gulp.watch(app.path.watch.svg, imagesBuild);
   gulp.watch(app.path.watch.resources, resourcesBuild);
   /* eslint-enable no-undef */
@@ -59,7 +60,8 @@ const tasks = gulp.series(
   cssBuild,
   jsBuild,
   imagesBuild,
-  resourcesBuild
+  resourcesBuild,
+  imagesCopy
 );
 
 // Серия выполнения команд для разработки
