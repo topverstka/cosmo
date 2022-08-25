@@ -14,34 +14,12 @@ $mobile-s: 330px;
 $hide-menu: $tablet;
 // ================ Responsive End ================
 
-:root {
-  --c-text-regular: #333;
-  --c-text-secondary: brig-color($text-primary, 0.7);
-  --c-text-label: #bdbdbd;
-  --c-text-on: #fff;
-  --c-input-placeholder: brig-color(#000, 0.3);
-
-  --c-accent: #ffcd6d;
-  --c-erorr: #ff3b30;
-
-  --c-border: #cecece;
-  --radius-s: 4px;
-  --radius-l: 30px;
-
-  --tr: 0.3s;
-  --tr-regular: all var(--tr) ease;
-
-  --container-padding: #{math.div($container-padding, 2) + "px"};
-
-  --ff-regular: sans-serif;
-}
-
 // ================ Colors Start ================
 // Текст
 $text-primary: var(--c-text-regular);
 $text-second: var(--c-text-secondary);
 $text-label: var(--c-text-label);
-$accent: var(--c-accent);
+$accent: #ffcd6d;
 $light: #fff;
 
 // Задний фон разделов
@@ -61,6 +39,27 @@ $input-placeholder: var(--c-input-placeholder);
 // Уведомления
 $error: var(--c-error);
 // ================ Colors End ================
+:root {
+  --c-text-regular: #333;
+  --c-text-secondary: brig-color($text-primary, 0.7);
+  --c-text-label: #bdbdbd;
+  --c-text-on: #fff;
+  --c-input-placeholder: brig-color(#000, 0.3);
+
+  --c-accent: $accent;
+  --c-erorr: #ff3b30;
+
+  --c-border: #cecece;
+  --radius-s: 4px;
+  --radius-l: 30px;
+
+  --tr: 0.3s;
+  --tr-regular: all var(--tr) ease;
+
+  --container-padding: #{math.div($container-padding, 2) + "px"};
+
+  --ff-regular: sans-serif;
+}
 
 // ================ Other Start ================
 $ff-main: var(--ff-regular);
