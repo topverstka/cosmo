@@ -34,7 +34,53 @@
           </picture>
         </div>
       </main>
-      <div class="content"></div>
+      <div class="content">
+        <form action="">
+          <h2>Заголовок формы</h2>
+          <label class="input input--name">
+            <input
+              class="input__field"
+              name="user_name"
+              type="text"
+              placeholder="Имя"
+              data-value-missing="Заполните имя"
+              data-value-invalid="Что-то не так с введенным именем"
+              autocomplete="name"
+            />
+            <span class="input__message">Сообщение</span>
+          </label>
+          <label class="input input--tel">
+            <input
+              class="input__field"
+              name="user_tel"
+              type="tel"
+              placeholder="Телефон"
+              maxlength="25"
+              minlength="10"
+              data-value-missing="Напишите телефон"
+              data-value-invalid="Проверьте корректность телефона"
+              autocomplete="tel"
+            />
+            <span class="input__message">Ошибка</span>
+          </label>
+          <label class="input input--email">
+            <input
+              class="input__field"
+              name="user_email"
+              type="email"
+              placeholder="Email"
+              autocorrect="off"
+              autocomplete="email"
+              data-value-missing="Напишите имейл"
+              data-value-invalid="Проверьте корректность имейла"
+            />
+            <span class="input__message">Ошибка</span>
+          </label>
+          <button class="button button--primary" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
 
       @@include('tpls/footer.html',{})
     </div>

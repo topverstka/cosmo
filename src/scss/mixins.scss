@@ -152,3 +152,14 @@
   animation: spinAround 500ms infinite linear;
 }
 //========================================================================================================================================================
+
+@mixin getmask($image_path: null, $size: contain) {
+  -webkit-mask: url("#{$image_path}");
+  mask: url("#{$image_path}");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: #{$size};
+  mask-size: #{$size};
+}
