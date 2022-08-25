@@ -25,77 +25,6 @@ function bodyLock(con) {
   }
 }
 
-// Открытие модального окна, если в url указан его id
-openModalHash();
-function openModalHash() {
-  if (window.location.hash) {
-    const hash = window.location.hash.substring(1);
-    const modal = document.querySelector(`.modal#${hash}`);
-
-    if (modal) {
-      modal.classList.add("_show");
-      bodyLock(true);
-      closeWhenClickingOnBg(`#${hash} .modal__content`, modal);
-    }
-  }
-}
-
-// Закрытие модальных окон при клике по крестику
-closeModalWhenClickingOnCross();
-function closeModalWhenClickingOnCross() {
-  const modalElems = document.querySelectorAll(".modal");
-  for (let i = 0; i < modalElems.length; i++) {
-    const modal = modalElems[i];
-    const closeThisModal = modal.querySelector(".modal__close");
-
-    closeThisModal.addEventListener("click", () => {
-      modal.classList.remove("_show");
-      bodyLock(false);
-      resetHash();
-    });
-  }
-}
-
-// Сброс id модального окна в url
-function resetHash() {
-  const windowTop = window.pageYOffset;
-  window.location.hash = "";
-  window.scrollTo(0, windowTop);
-}
-
-// Открытие модальных окон
-function openModal() {
-  const btnsOpenModal = document.querySelectorAll("[data-modal-open]");
-  const btnsCloseModal = document.querySelectorAll("[data-modal-close]");
-
-  for (let i = 0; i < btnsOpenModal.length; i++) {
-    const btn = btnsOpenModal[i];
-
-    btn.addEventListener("click", () => {
-      const dataBtn = btn.dataset.modalOpen;
-      const modalThatOpens = document.querySelector(`#${dataBtn}`);
-
-      btn.classList.add("modal-show");
-      modalThatOpens.classList.add("_show");
-      bodyLock(true);
-      closeWhenClickingOnBg(`#${dataBtn} .modal__content`, modalThatOpens);
-      window.location.hash = dataBtn;
-    });
-  }
-
-  btnsCloseModal.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const dataBtn = btn.dataset.modalClose;
-      const modalThatCloses = document.querySelector(`#${dataBtn}`);
-
-      btn.classList.remove("modal-show");
-      modalThatCloses.classList.remove("_show");
-      bodyLock(false);
-      resetHash();
-    });
-  });
-}
-
 // Закрытие модального окна при клике по заднему фону
 function closeWhenClickingOnBg(itemArray, itemParent, classShow = "_show") {
   document.addEventListener("click", (e) => {
@@ -155,6 +84,8 @@ class Poppa {
         // resetHash();
       }
     });
+
+    this.openPoppaHash();
   }
 
   instances = [];
@@ -234,6 +165,7 @@ class Poppa {
     setTimeout(() => {
       pop.classList.add("_show");
     });
+    window.location.hash = id;
   }
 
   handleClose(button) {
@@ -251,6 +183,7 @@ class Poppa {
     if (pop.classList.contains("_show")) {
       pop.classList.remove("_show");
     }
+    this.resetHash();
   }
 
   makeInfoPop(text, removeAfter = 6000) {
@@ -283,6 +216,21 @@ class Poppa {
     return opened.length == 0
       ? false
       : opened[opened.length - 1].dataset.poppaName;
+  }
+
+  openPoppaHash() {
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      const poppa = document.querySelector(`.poppa#${hash}`);
+      if (poppa) {
+        this.openPop(hash);
+      }
+    }
+  }
+  resetHash() {
+    const windowTop = window.pageYOffset;
+    window.location.hash = "";
+    window.scrollTo(0, windowTop);
   }
 }
 
