@@ -64,7 +64,6 @@ function resetHash() {
 }
 
 // Открытие модальных окон
-openModal();
 function openModal() {
   const btnsOpenModal = document.querySelectorAll("[data-modal-open]");
   const btnsCloseModal = document.querySelectorAll("[data-modal-close]");
@@ -148,7 +147,7 @@ class Poppa {
 
     document.addEventListener("keydown", (e) => {
       const id = this.getLastOpenedId();
-      if (e.key === "Escape") {
+      if (e.key === "Escape" && id) {
         console.log(id);
         this.closePop(id);
         // modal.classList.remove("_show");
@@ -232,7 +231,9 @@ class Poppa {
   openPop(id) {
     const pop = this.getPop(id);
     this.getPopupsStorage().append(pop);
-    pop.classList.add("_show");
+    setTimeout(() => {
+      pop.classList.add("_show");
+    });
   }
 
   handleClose(button) {
@@ -279,7 +280,9 @@ class Poppa {
     // storage = Array.from(storage.children);
     // return storage[storage.length - 1].dataset.poppaName;
     const opened = [...document.querySelectorAll("._show[data-poppa-name]")];
-    return opened[opened.length - 1].dataset.poppaName;
+    return opened.length == 0
+      ? false
+      : opened[opened.length - 1].dataset.poppaName;
   }
 }
 

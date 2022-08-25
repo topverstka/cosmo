@@ -3,6 +3,7 @@
 import { removeAllClasses, bodyLock } from "./utils/functions.js";
 import DismalModules, { acc } from "./utils/modules.js";
 import "./b_timer.js";
+import "./poppa.js";
 
 // Аккордеон
 // const accordions = new DismalModules.Accordions()
