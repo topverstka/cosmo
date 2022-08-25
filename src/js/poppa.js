@@ -283,4 +283,5 @@ class Poppa {
   }
 }
 
-new Poppa();
+const b_Poppa = new Poppa();
+window.poppa = b_Poppa;

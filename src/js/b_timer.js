@@ -87,7 +87,6 @@ class Timer {
   }
   // if ([...timers].length > 0) {
   getTimeRemaining(deadline) {
-    console.log(deadline);
     let t = Date.parse(deadline) - Date.parse(new Date());
     let seconds = Math.floor((t / 1000) % 60);
     let minutes = Math.floor((t / 1000 / 60) % 60);
@@ -112,5 +111,7 @@ class Timer {
 
   // }
 }
-new Timer();
+const b_Timer = new Timer();
+
+window.b_timer = b_Timer;
 // #endregion timer
