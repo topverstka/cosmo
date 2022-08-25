@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import del from "del";
 import browserSync from "browser-sync";
+import sourcemaps from "gulp-sourcemaps";
 
 import uglify from "gulp-uglify";
 import webpack from "webpack-stream";
@@ -17,7 +18,9 @@ export default function jsBuild() {
         },
       })
     )
+    .pipe(sourcemaps.init())
     .pipe(uglify())
+    .pipe(sourcemaps.write("../maps"))
     .pipe(gulp.dest(app.path.build.js))
     .pipe(browserSync.reload({ stream: true }));
 }

@@ -32,6 +32,7 @@ function webServer() {
     },
     notify: false,
     port: 3000,
+    online: false,
   });
 }
 
