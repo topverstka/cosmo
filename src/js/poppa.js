@@ -104,8 +104,19 @@ class Poppa {
     // TODO: В прототип будет вписываться метод открыть и закрыть
   }
 
+  makePopup(popup, id = new Date().getTime()) {
+    popup.id = `p-${id}`;
+    this.makePopupWrapper(popup);
+  }
+  makeOpenerButton(button, id) {
+    button.dataset.poppaOpen = id;
+    button.addEventListener("click", () => {
+      this.handleOpen(button);
+    });
+  }
+
   makePopupWrapper(poppa) {
-    const id = poppa.id;
+    let id = poppa.id;
 
     const overlay = document.createElement("div");
     overlay.classList.add("poppa__overlay");
