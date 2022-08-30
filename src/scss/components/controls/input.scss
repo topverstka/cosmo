@@ -1,25 +1,34 @@
 .input {
   --border-color: #dfdfdf;
   --border-radius: 5px;
-  --label-color: var(--c-text-grey-2);
   --text-color: var(--c-text-regular);
+  --fz: 16px;
+  --lh: 1.45;
+  --padding: 0.893em 1.33em;
+  --label-color: var(--c-text-grey-2);
+  --label-top: 16px;
+  --label-left: 12px;
+  --label-fz: var(--fz);
+  --label-lh: var(--lh);
+  --message-color: var(--c-text);
+  --message-transform: scale(1, 0);
   position: relative;
   width: 100%;
-  font-size: var(--fz-body--small);
-  line-height: 1.45;
 }
 .input--active {
   --border-color: var(--c-text-grey-2);
+  --label-top: -9px;
+  --lebel-left: 12px;
+  --label-fz: calc(var(--label-fz) - 5);
 }
 
 .input__field {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-height: 50px;
-  padding: 0.893em 1.33em;
-  font-size: inherit;
-  line-height: inherit;
+  padding: var(--padding);
+  font-size: var(--fz);
+  line-height: var(--lh);
   color: var(--text-color);
   background-color: var(--bg-element);
   border: 1px solid var(--border-color);
@@ -30,25 +39,10 @@
   color: var(--text-color);
 }
 
-.input--dropdown.input--active .input__field {
-  border-color: var(--c-blind);
-}
-.input--selected-dropdown.input--active .input__field,
-.input--active-dropdown.input--active .input__field {
-  border-color: var(--c-text-grey-2);
-}
-
-.input--dropdown .input__label {
-  opacity: 0;
-}
-.input--selected-dropdown .input__label {
-  opacity: 1;
-}
-
 .input__label {
   position: absolute;
-  top: 16px;
-  left: 12px;
+  top: var(--label-top);
+  left: var(--label-left);
   z-index: 3;
   display: inline-block;
   padding-right: 4px;
@@ -59,121 +53,20 @@
   transition: all 0.3s ease;
 }
 
-.input--active .input__label {
-  // .input__field:focus + .input__label {
-  // top: -0.6em;
-  top: -9px;
-  left: 12px;
-  font-size: var(--fz-body--small-2);
-  line-height: var(--lh-body--small-2);
-}
-
-.input--dropdown {
-  margin-top: -2px;
-}
-.input--dropdown::after {
-  position: absolute;
-  top: 17px;
-  right: 16px;
-  z-index: 3;
-  display: block;
-  width: 16px;
-  height: 16px;
-  pointer-events: none;
-  content: "";
-  background-color: var(--c-accent);
-  transition: all 0.3s ease;
-  @include getmask("../img/icons/arrow-down.svg");
-}
-
-.input--active-dropdown.input--dropdown::after {
-  transform: rotate(180deg);
-}
-
-.input-dropdown {
-  position: absolute;
-  width: 100%;
-  max-height: 188px;
-  margin-top: 8px;
-  overflow: hidden;
-  overflow-y: auto;
-  pointer-events: none;
-  visibility: hidden;
-  background-color: var(--bg-element);
-  border: 1px solid var(--c-text-disabled);
-  border-radius: 5px;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-.input-dropdown li {
-  width: 100%;
-}
-.input--active-dropdown .input-dropdown {
-  position: absolute;
-  top: 100%;
-  z-index: 4;
-  // position: relative;
-  pointer-events: initial;
-  visibility: visible;
-  opacity: 1;
-}
-
-.input-dropdown__item {
-  width: 100%;
-  padding: 10px 16px;
-  font-size: var(--fz-body--small);
-  line-height: var(--lh-body--small);
-  color: var(--c-text);
-  text-align: left;
-}
-.input-dropdown__item:hover {
-  @media (hover: hover) {
-    cursor: pointer;
-    background-color: var(--c-accent--light);
-  }
-}
-.theme--dark .input-dropdown__item:hover {
-  @media (hover: hover) {
-    cursor: pointer;
-    background: rgba(40, 190, 70, 0.1);
-  }
-}
-
-.input--half {
-  @media (min-width: 576px) {
-    max-width: 48.3%;
-  }
-}
-
-.input__error {
+.input__message {
   z-index: 1;
   display: block;
   font-size: var(--fz-tag);
   line-height: var(--lh-tag);
-  color: var(--c-text);
+  color: var(--message-color);
   transition: all 0.3s ease;
-  transform: scale(1, 0);
+  transform: var(--message-transform);
   transform-origin: top;
-  @media (min-width: 1101px) {
-    padding-top: 2px;
-  }
-  @media (max-width: 576px) {
-    padding-top: 2px;
-  }
 }
 
 .input--invalid {
   --label-color: var(--c-error);
-  @media (max-width: 575px) {
-    margin-bottom: calc(var(--mb-input) - 2px);
-  }
-}
-.input.input--invalid .input__field {
-  border-color: var(--c-error);
-}
-.input--invalid .input__error {
-  display: block;
-  margin-top: 0;
-  color: var(--c-error);
-  transform: scale(1);
+  --message-transform: scale(1);
+  --message-color: var(--c-error);
+  --border-color: var(--c-error);
 }
