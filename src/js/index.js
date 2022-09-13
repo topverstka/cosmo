@@ -2,8 +2,35 @@
 
 import { removeAllClasses, bodyLock } from "./utils/functions.js";
 import DismalModules, { acc } from "./utils/modules.js";
-import "./b_timer.js";
+
+import "./unstable/formich.js";
+import Swiper, { Navigation, Autoplay } from "swiper";
+import "./unstable/burger.js";
+
+/**
+ * Poppa
+ */
 import "./poppa.js";
+
+/**
+ * Lazy Load
+ */
+import "./libs/lazyload.min.js";
+let lazyLoadInstance = new LazyLoad();
+
+/**
+ * Dropdown Select
+ */
+import "./libs/custom-select.min.js";
+if (document.querySelector(".input--dropdown")) {
+  customSelect(".input--dropdown .input__select");
+}
+import "./unstable/tabs.js";
+
+/**
+ * Smooth anchors
+ */
+import "./utils/smooth-anchors.js";
 
 // Аккордеон
 // const accordions = new DismalModules.Accordions()

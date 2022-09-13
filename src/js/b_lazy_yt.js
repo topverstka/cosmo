@@ -1,5 +1,27 @@
+// #region lazyYT
+/**
+ *
+ * @param {*}
+ */
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  const lazyYT = {
+    videoParents: document.querySelectorAll(".big-card__media"),
+    videoPicClassName: "picture",
+    videoImgClassName: ".js_lazy__preview",
+    videoIframeClassName: ".js_lazy__content",
+  };
+  setupLazyYT(lazyYT);
+});
 function setupLazyYT($) {
-  $.videoParents.forEach((review, index) => {
+  const {
+    videoParents,
+    videoPicClassName,
+    videoImgClassName,
+    videoIframeClassName,
+  } = $;
+
+  videoParents.forEach((review, index) => {
     let ytId = review.getAttribute("data-yt-id");
     if (!ytId) return;
 
@@ -9,45 +31,30 @@ function setupLazyYT($) {
     let ytVideoUrl = `https://www.youtube.com/embed/${ytId}/?autoplay=1`;
     // let ytVideoUrl = `https://www.youtube.com/watch?v=${ytId}`;
 
-    let pic = review.querySelector($.videoPicClassName);
-    let thumb = review.querySelector($.videoImgClassName);
-    let video = review.querySelector($.videoIframeClassName);
-    let play = review.querySelector($.playButtonClassName);
-
+    let pic = review.querySelector(videoPicClassName);
+    let thumb = review.querySelector(videoImgClassName);
     let thumbWebp = document.createElement("source");
     thumbWebp.srcset = ytThumbWebpUrl;
     thumbWebp.type = "image/webp";
     pic.appendChild(thumbWebp);
     pic.appendChild(thumb);
-
-    video.setAttribute("data-src", ytVideoUrl);
     thumb.src = ytThumbUrl;
 
+    let video = review.querySelector(videoIframeClassName);
+    // let play = review.querySelector($.playButtonClassName);
+    video.setAttribute("data-src", ytVideoUrl);
     let videoClass = `js_video--${index}`;
-    let playClass = `js_play--${index}`;
-
-    // let videoFirstClass = video.classList[0];
-    // video.classList.remove(videoFirstClass)
-
     video.classList.add(videoClass);
-    // video.classList.add(videoFirstClass)
-    play.classList.add(playClass);
 
-    play.addEventListener("click", function () {
+    function initVideo() {
+      console.log("yep");
+      // if (review.classList.contains("js_lazy-init"))
+      review.classList.add("js_lazy-init");
       video.src = video.getAttribute("data-src");
-      pic.style.display = "none";
-      video.style.display = "block";
-      this.remove();
-    });
+      debugger;
+      review.removeEventListener("click", initVideo);
+    }
+    review.addEventListener("click", initVideo);
   });
 }
-window.addEventListener("DOMContentLoaded", (event) => {
-  const testimonialsYT = {
-    videoParents: document.querySelectorAll(".reviews-slider__slide"),
-    videoPicClassName: ".reviews-slider__pic",
-    videoImgClassName: ".reviews-slider__img",
-    videoIframeClassName: ".reviews-slider__video",
-    playButtonClassName: ".reviews-slider__button",
-  };
-  setupLazyYT(testimonialsYT);
-});
+// #endregion lazyYT

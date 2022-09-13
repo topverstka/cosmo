@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  outline: none;
 }
 
 *,
@@ -37,6 +38,9 @@ button,
 textarea {
   font-family: inherit;
   color: inherit;
+}
+button:active {
+  outline: none;
 }
 
 // input::-ms-clear {
