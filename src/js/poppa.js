@@ -101,7 +101,12 @@ class Poppa {
     document.body.append(popupsStorage);
 
     popups.forEach((poppa) => this.makePopupWrapper(poppa));
-    // TODO: В прототип будет вписываться метод открыть и закрыть
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("poppa__aligner")) {
+        this.closePop(e.target.querySelector(".poppa").id);
+      }
+    });
   }
 
   makePopup(popup, id = new Date().getTime()) {
@@ -116,7 +121,7 @@ class Poppa {
   }
 
   makePopupWrapper(poppa) {
-    let id = poppa.id;
+    let { id } = poppa;
 
     const overlay = document.createElement("div");
     overlay.classList.add("poppa__overlay");
@@ -135,7 +140,6 @@ class Poppa {
     };
     closer.addEventListener("click", handleClose);
     // TODO: Сделай накидывание нужных ариа атрибутов
-    // TODO: Сделай накидывание хрефа, который будет закрывать
 
     document.querySelector(".poppa__storage").append(overlay);
     aligner.append(poppa);
@@ -167,7 +171,7 @@ class Poppa {
     if (poppa) {
       this.openPop(id);
     } else {
-      this.makeInfoPop(`Попапа "#${id}" нет. Проверь правильность айди`);
+      this.makeInfoPop(`Попапа "#${id}" нет. Проверь айди`);
     }
   }
   openPop(id) {
@@ -177,6 +181,9 @@ class Poppa {
       pop.classList.add("_show");
     });
     window.location.hash = id;
+    const event = new Event("poppa-open");
+    pop.dispatchEvent(event);
+    pop.querySelector(".poppa").dispatchEvent(event);
   }
 
   handleClose(button) {
@@ -185,7 +192,7 @@ class Poppa {
     if (poppa) {
       this.closePop(id);
     } else {
-      this.makeInfoPop(`Попапа "#${id}" нет. Проверь правильность айди`);
+      this.makeInfoPop(`Попапа "#${id}" нет. Проверь айди`);
     }
   }
 
@@ -195,6 +202,9 @@ class Poppa {
       pop.classList.remove("_show");
     }
     this.resetHash();
+    const event = new Event("poppa-close");
+    pop.dispatchEvent(event);
+    pop.querySelector(".poppa").dispatchEvent(event);
   }
 
   makeInfoPop(text, removeAfter = 6000) {
@@ -217,6 +227,9 @@ class Poppa {
 
   getPop(id) {
     return document.querySelector(`[data-poppa-name="${id}"]`);
+  }
+  getTotalPopups() {
+    return document.querySelectorAll(`[data-poppa-name]`);
   }
 
   getLastOpenedId() {
