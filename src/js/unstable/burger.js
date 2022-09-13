@@ -12,10 +12,12 @@ function closeBurger() {
   bodyUnlock();
 }
 
-burger.addEventListener("click", () => {
-  if (header.classList.contains(HEADER_OPENED_CLASS)) {
-    closeBurger();
-  } else {
-    openBurger();
-  }
-});
+if (header && burger) {
+  burger.addEventListener("click", () => {
+    if (header.classList.contains(HEADER_OPENED_CLASS)) {
+      closeBurger();
+    } else {
+      openBurger();
+    }
+  });
+}
