@@ -1,4 +1,72 @@
-// Удаляет у всех элементов items класс itemClass
+/**
+ * getCoords(elem) - получает координаты элемента, относительно страницы
+ */
+function getCoords(elem) {
+    var box = elem.getBoundingClientRect();
+
+    return {
+      top: box.top + pageYOffset,
+      left: box.left + pageXOffset
+    };
+}
+/**
+ * offsetPage(elem) - определение расстояния между элементом и верхней границей страницы
+ */
+function offsetPage(elem) {
+    var rect = elem.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
+/**
+ * SVGToURL(value) - генератор svg в url формат
+ */
+function SVGToURL(value) {
+    const notSpace = value.replace(/>\s+</g, '><');
+    const notDoubleQuotes = notSpace.replace(/"/g, '\'');
+    const notSharp = notDoubleQuotes.replace(/#/g, '%23');
+    const notAngleLeft = notSharp.replace(/</g, '%3C');
+    const notAngleRight = notAngleLeft.replace(/>/g, '%3E');
+    const url = 'data:image/svg+xml,' + notAngleRight;
+
+    return url;
+}
+
+/**
+ * URLToSVG(value) - генератор svg в url формат
+ */
+function URLToSVG(value) {
+  const pasteSpace = value.replace(/></g, '> <');
+  const pasteDoubleQuotes = pasteSpace.replace(/'/g, '\"');
+  const pasteSharp = pasteDoubleQuotes.replace(/%23/g, '#');
+  const pasteAngleLeft = pasteSharp.replace(/%3C/g, '<');
+  const pasteAngleRight = pasteAngleLeft.replace(/%3E/g, '>');
+  const svg = pasteAngleRight.replace('data:image/svg+xml,', '');
+
+  return svg;
+}
+
+
+/**
+ * getCookie(name) - возвращает cookie с указанным именем
+ * name - имя куки
+ * Если ничего не будет найдено, вернет undefined
+ */
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+
+/*
+ * Удаляет у всех элементов items класс itemClass
+ * items - класс элементов или массив с переменными с селекторами, у которых нужно удалить класс.
+ * itemsClass - класс, который нужно удалить. Указывается без точки
+ *
+ */
 export function removeAllClasses(items, itemClass) {
   if (typeof items == "string") {
     items = document.querySelectorAll(items);
@@ -37,7 +105,7 @@ export function getSiblings(elem) {
   return siblings;
 }
 
-// Возвращает рандомное целое число
+// Возвращает рандомное целое число включительно max
 export function getRandomInt(min, max) {
   return (
     Math.floor(Math.random() * (Math.floor(max) + 1 - Math.ceil(min))) +
@@ -156,3 +224,34 @@ export const isMobile = {
     );
   },
 };
+
+/**
+ * mediaMax(value) - проверяет на максимальный размер экрана
+ * Возвращает true если ширина экрана меньше value, false если нет.
+ * ℹ️ Попробовать `window.innerWidth`
+ */
+function mediaMax(value) {
+  return window.matchMedia(`(max-width: ${parseInt(value)}px)`).matches
+}
+
+/**
+ * mediaMin(value) - проверяет на минимальный размер экрана
+ * Возвращает true если ширина экрана больше value, false если нет.
+ *
+ */
+
+function mediaMin(value) {
+  return window.matchMedia(`(min-width: ${parseInt(value)}px)`).matches
+}
+
+
+/**
+ * Загружает скрипт в DOM
+ */
+function loadScript(windowWidth, scriptPath) {
+	if (window.innerWidth <= windowWidth) {
+		const script = document.createElement('script')
+		script.setAttribute('src', scriptPath)
+		body.prepend(script)
+	}
+}
