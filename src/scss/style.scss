@@ -30,6 +30,8 @@ body._lock {
   flex-direction: column;
   width: 100%;
   min-height: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
   overflow: hidden;
 }
 .wrapper > .content {
@@ -43,27 +45,31 @@ body._lock {
 всем классам содержащим *__container
 Например header__container, main__container и т.д.
 */
-[class*="__container"] {
-  @if ($max-width-container > 0) {
-    box-sizing: content-box;
-    max-width: $max-width-container;
-    margin: 0 auto;
-  }
-  @if ($container-padding > 0) {
-    padding: 0 var(--container-padding);
-  }
+// [class*="__container"] {
+//   @if ($max-width-container > 0) {
+//     box-sizing: content-box;
+//     max-width: $max-width-container;
+//     margin: 0 auto;
+//   }
+//   @if ($container-padding > 0) {
+//     padding: 0 var(--container-padding);
+//   }
 
-  @media (max-width: $tablet) {
-    --container-padding: 30px;
-  }
+//   @media (max-width: $tablet) {
+//     --container-padding: 30px;
+//   }
 
-  @media (max-width: $mobile-l) {
-    --container-padding: 20px;
-  }
+//   @media (max-width: $mobile-l) {
+//     --container-padding: 20px;
+//   }
 
-  @media (max-width: $mobile-m) {
-    --container-padding: 16px;
-  }
+//   @media (max-width: $mobile-m) {
+//     --container-padding: 16px;
+//   }
+// }
+.container {
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 // Библиотеки

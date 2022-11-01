@@ -20,7 +20,7 @@ $minHover: $laptop;
 $text-primary: var(--c-text-regular);
 $text-second: var(--c-text-secondary);
 $text-label: var(--c-text-label);
-$accent: #b24d2b;
+$accent: #5f6c75;
 $light: #fff;
 
 // Задний фон разделов
@@ -41,20 +41,20 @@ $input-placeholder: var(--c-input-placeholder);
 $error: var(--c-error);
 // ================ Colors End ================
 :root {
-  --c-text-regular: #333;
+  --c-text-regular: #000;
   --c-text-secondary: #5b5b5b;
   --c-button-secondary: #5b5b5b;
   --c-text-label: #bdbdbd;
   --c-text-on: #fff;
+  --c-text-on-secondary: #a1aeb2;
   --c-input-placeholder: brig-color(#000, 0.3);
 
-  --c-accent: #b24d2b;
-  --c-accent-light: #cc886a;
+  --c-accent: #5f6c75;
+  --c-accent-light: #6c7982;
   --c-error: #ff3b30;
 
   --bg-element: #fff;
-  --bg-app: #0e1317;
-  --bg-app-light: #212425;
+  --bg-app: #f0f3f5;
 
   --bg-dropdown: #384043;
   --bg-dropdown-list: #4e5557;
@@ -66,6 +66,8 @@ $error: var(--c-error);
   --c-border: #cecece;
   --radius-s: 4px;
   --radius-l: 30px;
+  --section-radius: 12px;
+  --button-radius: 6px;
 
   --tr: 0.3s;
   --tr-regular: all var(--tr) ease;
