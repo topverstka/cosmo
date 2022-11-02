@@ -4,7 +4,7 @@ import { removeAllClasses, bodyLock } from "./utils/functions.js";
 import DismalModules, { acc } from "./utils/modules.js";
 
 import "./unstable/formich.js";
-import Swiper, { Navigation, Autoplay } from "swiper";
+import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 import "./unstable/burger.js";
 
 /**
@@ -31,6 +31,28 @@ import "./unstable/tabs.js";
  * Smooth anchors
  */
 import "./utils/smooth-anchors.js";
+
+let promoSlider = new Swiper(".promo-carousel", {
+  modules: [Navigation, Autoplay, Pagination],
+  autoplay: {
+    delay: 3000,
+  },
+  // grabCursor: true,
+  // effect: 'creative',
+  // creativeEffect: {
+  // prev: {
+  //   shadow: false,
+  //   translate: [0, 0, -400],
+  // },
+  // next: {
+  //   translate: ['100%', 0, 0],
+  // },
+  // },
+  pagination: {
+    el: ".promo-carousel__pagination",
+    clickable: true,
+  },
+});
 
 // Аккордеон
 // const accordions = new DismalModules.Accordions()

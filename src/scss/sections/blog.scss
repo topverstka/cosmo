@@ -71,3 +71,9 @@
 .blog-card--accent .blog-card__button {
   background: #f0f3f5;
 }
+.blog-card--accent .blog-card__button:hover {
+  @media (any-hover: hover) {
+    --button-color: #fff;
+    --button-bg: #000;
+  }
+}

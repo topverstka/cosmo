@@ -32,6 +32,13 @@
   color: #000000;
   background: #ffffff;
   border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.review-card__profile:hover {
+  @media (any-hover: hover) {
+    color: #fff;
+    background: #6c7982;
+  }
 }
 
 .review-card__feedback {

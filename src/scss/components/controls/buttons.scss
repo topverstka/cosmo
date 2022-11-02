@@ -45,11 +45,6 @@
   --icon-color: var(--button-color);
 }
 
-.button--primary:hover {
-  @media (min-width: $minHover) {
-  }
-}
-
 // .button--primary[disabled] {
 //   --button-color: var(--c-blind);
 // }
@@ -172,5 +167,13 @@
   margin-left: auto;
 }
 .button--light {
-  background-color: var(--bg-element);
+  --button-bg: var(--bg-element);
+}
+
+.button--primary:hover {
+  @media (any-hover: hover) {
+    --button-bg: #6c7982;
+    --button-color: #fff;
+    --icon-color: #fff;
+  }
 }

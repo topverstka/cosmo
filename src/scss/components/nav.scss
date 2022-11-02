@@ -33,3 +33,12 @@
 .nav__list--contacts .nav__list-title {
   margin-bottom: 8px;
 }
+
+.nav__link {
+  transition: all 0.3s ease;
+}
+.nav__link:hover {
+  @media (any-hover: hover) {
+    color: var(--c-text-on-secondary);
+  }
+}

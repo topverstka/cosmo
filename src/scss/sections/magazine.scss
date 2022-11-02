@@ -32,6 +32,11 @@
 .magazine-card__button {
   margin-bottom: 26px;
 }
+.magazine-card__button:hover {
+  @media (any-hover: hover) {
+    --button-bg: #000;
+  }
+}
 .magazine-card__desc {
   max-width: 508px;
   font-size: 14px;

@@ -61,6 +61,14 @@
   color: #000000;
   background: #f0f3f5;
   border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.product-card__options-caption:hover {
+  @media (any-hover: hover) {
+    color: #fff;
+    background: #6c7982;
+  }
 }
 .product-card__options-input:checked ~ .product-card__options-caption {
   color: #fff;
