@@ -37,8 +37,8 @@
   }
 }
 
-.button--primary {
-  --button-color: var(--c-accent);
+.button--dark {
+  --button-color: #000;
   color: var(--c-text-on);
   background-color: var(--button-color);
 }
@@ -198,4 +198,15 @@
     --icon-color: var(--c-accent);
     --button-color: var(--c-accent);
   }
+}
+
+.button-cart__counter {
+  display: none;
+}
+.button--circle {
+  border-radius: 50%;
+}
+
+.button__icon {
+  height: 12px;
 }

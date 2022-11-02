@@ -1,0 +1,59 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav {
+  margin-right: 77px;
+}
+.header__nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: uppercase;
+}
+.header__nav-item {
+  margin-right: 28px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.header__nav-item:last-of-type {
+  margin-right: 0;
+}
+.header__button {
+  --size: 36px;
+  width: var(--size);
+  min-width: var(--size);
+  height: var(--size);
+  padding: 0;
+}
+
+.header__pickers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 77px;
+}
+.header__picker {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 28px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.header__picker:last-child {
+  margin-right: 0;
+}
+.header__picker-icon {
+  max-width: 14px;
+  height: 15px;
+  margin-right: 4px;
+}
