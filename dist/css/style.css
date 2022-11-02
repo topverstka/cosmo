@@ -2245,7 +2245,7 @@ body._lock {
 }
 
 .blog-card--accent .blog-card__button {
-  background: #f0f3f5;
+  --button-bg: #f0f3f5;
 }
 
 @media (any-hover: hover) {
@@ -2439,4 +2439,3 @@ body._lock {
   margin-top: 32px;
   text-align: center;
 }
-/*# sourceMappingURL=../maps/style.css.map */
