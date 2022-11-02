@@ -114,7 +114,8 @@
   width: var(--button-icon-size);
   min-width: var(--button-icon-size);
   max-width: var(--button-icon-size);
-  height: var(--button-icon-size);
+  height: 12px;
+  // height: var(--button-icon-size);
   background-color: transparent;
   fill: var(--icon-color);
   stroke: none;
@@ -162,6 +163,14 @@
   border-radius: 50%;
 }
 
-.button__icon {
-  height: 12px;
+.button--fullsize {
+  display: block;
+  width: 100%;
+  padding-top: 21px;
+  padding-bottom: 22px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.button--light {
+  background-color: var(--bg-element);
 }

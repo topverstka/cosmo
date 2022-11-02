@@ -1,0 +1,27 @@
+.testimonials {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.testimonials__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 8px;
+  column-gap: 8px;
+  margin-bottom: 40px;
+}
+.testimonials-card {
+  padding: 20px;
+  background-color: var(--bg-element);
+}
+
+.testimonials-card__review {
+  margin-bottom: 35px;
+}
+.testimonials-card__bundle {
+  height: 160px;
+  margin-bottom: 46px;
+}
+
+.testimonials-card__add-to-cart {
+  margin-right: 8px;
+}

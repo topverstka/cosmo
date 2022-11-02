@@ -16,6 +16,9 @@
   border-radius: var(--section-radius);
 }
 
+.footer__logo .logo__img {
+  fill: #f0f3f5;
+}
 .footer__info {
   display: flex;
   align-items: center;

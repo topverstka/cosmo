@@ -80,6 +80,9 @@ body._lock {
 //   }
 // }
 .container {
+  max-width: 1186px;
+  margin-right: auto;
+  margin-left: auto;
   // padding-right: 16px;
   // padding-left: 16px;
 }
@@ -106,6 +109,11 @@ body._lock {
 @import "./sections/main";
 @import "./sections/hero";
 @import "./sections/popular";
+@import "./sections/changes";
+@import "./sections/testimonials";
+@import "./sections/magazine";
+@import "./sections/blog";
+@import "./sections/locations";
 @import "./sections/footer";
 
 // Стили для отдельных страниц

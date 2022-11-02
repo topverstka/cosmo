@@ -2,6 +2,9 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.popular__title {
+  margin-bottom: 40px;
+}
 .popular__gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

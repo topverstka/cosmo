@@ -1,0 +1,31 @@
+.section-title {
+  margin-bottom: 20px;
+  font-family: "RF Dewi Extended";
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  color: #000000;
+}
+.section-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #a1aeb3;
+}
+
+.section-text--center {
+  text-align: center;
+}
+
+.captions-1-1 {
+  column-count: 2;
+  column-gap: 58px;
+}
+.captions-1-1__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a1aeb3;
+  opacity: 0.6;
+}
