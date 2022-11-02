@@ -1,12 +1,65 @@
-<article class="card card--event">
-  <picture class="card__pic">
-    <source srcset="./img/events/events.webp" type="image/webp" />
-    <img class="card__img" src="./img/events/events.jpg" alt="" />
+<article class="product-card @@className">
+  <picture class="product-card__pic">
+    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+    <img class="product-card__img lazy" data-src="./img/catalog/@@img" alt="" />
   </picture>
-  <h3 class="card__title">Nom et essence de l'événement dans une courte thèse</h3>
-  <p class="card__desc">Voici une petite description : pour quel l'événement, ce qui va se passer en général. Un petit descriptif...</p>
-  <ul class="card__meta">
-    <li class="card__meta-bullet">Voici toutes les conditions, restrictions et autres points importants de l'organisation</li>
-    <li class="card__meta-bullet card__meta-bullet--time">Lundi, 12:00 - 23:30</li>
-  </ul>
+  <div class="product-card__top">
+    <h3 class="product-card__name">
+      <a href="" class="product-card__link"
+        >Дневная защитная сыворотка с витамином D</a
+      >
+    </h3>
+    <form class="product-card__options">
+      <label class="product-card__options-checkbox">
+        <input
+          class="product-card__options-input"
+          type="radio"
+          name="option"
+          checked
+          hidden
+        />
+        <p class="product-card__options-caption">200 мл</p>
+      </label>
+      <label class="product-card__options-checkbox">
+        <input
+          class="product-card__options-input"
+          type="radio"
+          name="option"
+          hidden
+        />
+        <p class="product-card__options-caption">100 мл</p>
+      </label>
+      <label class="product-card__options-checkbox">
+        <input
+          class="product-card__options-input"
+          type="radio"
+          name="option"
+          hidden
+        />
+        <p class="product-card__options-caption">50 мл</p>
+      </label>
+      <label class="product-card__options-checkbox">
+        <input
+          class="product-card__options-input"
+          type="radio"
+          name="option"
+          hidden
+        />
+        <p class="product-card__options-caption">15 мл</p>
+      </label>
+    </form>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__add">
+      <button class="button button--primary product-card__button-add">
+        <svg class="button__icon">
+          <use xlink:href="./img/common/cart.svg#cart" />
+        </svg>
+      </button>
+      <div class="product-card__price">
+        <p class="product-card__price-old">4 000 ₽</p>
+        <p class="product-card__price-new">2 000 ₽</p>
+      </div>
+    </div>
+  </div>
 </article>

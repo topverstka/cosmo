@@ -29,7 +29,7 @@
                       <!-- <source data-srcset="./img/hero/promo.webp," type="image/webp"> -->
                       <img
                         class="promo-carousel__img"
-                        src="./img/hero/promo.png"
+                        src="./img/hero/promo.jpg"
                         alt=""
                       />
                     </picture>
@@ -94,7 +94,7 @@
                   <!-- <source data-srcset="./img/hero/promo-1.webp," type="image/webp"> -->
                   <img
                     class="promo-gallery-card__img"
-                    src="./img/hero/promo-1.png"
+                    src="./img/hero/promo-1.jpg"
                     alt=""
                   />
                 </picture>
@@ -119,7 +119,7 @@
                   <!-- <source data-srcset="./img/hero/promo-1.webp," type="image/webp"> -->
                   <img
                     class="promo-gallery-card__img"
-                    src="./img/hero/promo-1.png"
+                    src="./img/hero/promo-1.jpg"
                     alt=""
                   />
                 </picture>
@@ -144,11 +144,93 @@
                   <!-- <source data-srcset="./img/hero/promo-1.webp," type="image/webp"> -->
                   <img
                     class="promo-gallery-card__img"
-                    src="./img/hero/promo-1.png"
+                    src="./img/hero/promo-2.jpg"
                     alt=""
                   />
                 </picture>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="popular">
+          <div class="container popular__container">
+            <h2 class="section-title popular__title">Популярные товары</h2>
+            <form class="popular-filters scroller snacks">
+              <div class="scroller__track">
+                <div class="scroller__content">
+                  <label class="snack__item popular-filters__item">
+                    <input
+                      class="snack__input"
+                      type="checkbox"
+                      name="filter"
+                      checked
+                      hidden
+                    />
+                    <span class="snack__mark"></span>
+                    <p class="snack__caption">Все категории</p>
+                  </label>
+                  <label class="snack__item popular-filters__item">
+                    <input
+                      class="snack__input"
+                      type="checkbox"
+                      name="filter"
+                      checked
+                      hidden
+                    />
+                    <span class="snack__mark"></span>
+                    <p class="snack__caption">
+                      Очищающие и тонизизирующие средства
+                    </p>
+                  </label>
+                  <label class="snack__item popular-filters__item">
+                    <input
+                      class="snack__input"
+                      type="checkbox"
+                      name="filter"
+                      checked
+                      hidden
+                    />
+                    <span class="snack__mark"></span>
+                    <p class="snack__caption">Кремы для лица и шеи</p>
+                  </label>
+                  <label class="snack__item popular-filters__item">
+                    <input
+                      class="snack__input"
+                      type="checkbox"
+                      name="filter"
+                      checked
+                      hidden
+                    />
+                    <span class="snack__mark"></span>
+                    <p class="snack__caption">Маски и сыворотки</p>
+                  </label>
+                  <label class="snack__item popular-filters__item">
+                    <input
+                      class="snack__input"
+                      type="checkbox"
+                      name="filter"
+                      checked
+                      hidden
+                    />
+                    <span class="snack__mark"></span>
+                    <p class="snack__caption">
+                      Кремы для век и специальные средства
+                    </p>
+                  </label>
+                </div>
+              </div>
+            </form>
+
+            <div class="popular__gallery">
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "product-tall.png",
+              className: "product-card--tall"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
             </div>
           </div>
         </section>

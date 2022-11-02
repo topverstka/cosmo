@@ -22,9 +22,11 @@
   width: 100%;
   height: 100%;
   background-color: #f8f8f8;
+  border-radius: 12px 0px 0px 12px;
 }
 .promo-carousel__img {
   border-radius: 12px 0px 0px 12px;
+  object-fit: cover;
 }
 .promo-carousel-card {
   position: relative;

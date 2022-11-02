@@ -20,8 +20,6 @@
   position: relative;
   z-index: 2;
 }
-.promo-gallery-card--no-pic {
-}
 .promo-gallery-card__title {
   max-width: 269px;
   margin-bottom: 8px;
@@ -32,6 +30,7 @@
 }
 
 .promo-gallery-card__desc {
+  max-width: 220px;
   font-family: "RF Dewi", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -49,8 +48,18 @@
 }
 .promo-gallery-card__img {
   border-radius: 12px;
+  object-fit: cover;
 }
 
+.promo-gallery-card--no-pic .promo-gallery-card__pic {
+  display: none;
+}
+.promo-gallery-card--no-pic .promo-gallery-card__title {
+  max-width: 100%;
+}
+.promo-gallery-card--no-pic .promo-gallery-card__desc {
+  max-width: 100%;
+}
 .promo-gallery-card--accent {
   background-color: var(--c-accent);
 }

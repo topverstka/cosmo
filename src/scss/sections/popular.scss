@@ -1,0 +1,15 @@
+.popular {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.popular__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+// .popular__gallery .product-card:nth-of-type(4) {
+.popular__gallery .product-card--tall {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 4;
+}
