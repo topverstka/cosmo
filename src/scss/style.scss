@@ -6,7 +6,18 @@
 @import "./components";
 
 // Шрифты
-// @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular.woff2');
+@include font(
+  "RF Dewi Extended",
+  normal,
+  400,
+  "../resources/fonts/RFDewiExtended-Regular"
+);
+@include font(
+  "RF Dewi Extended",
+  normal,
+  600,
+  "../resources/fonts/RFDewiExtended-Bold"
+);
 // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
 
 // Сброс CSS
