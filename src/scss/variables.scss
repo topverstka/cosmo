@@ -81,10 +81,11 @@ $error: var(--c-error);
   --ff-regular: "RF Dewi Extended", sans-serif;
   --ff-title: "Poiret One", sans-serif;
 
-  --fz-button: 18px;
-  --lh-button: 126.5%;
+  --fz-button: 14px;
+  --lh-button: 17px;
+  --fw-button: 600;
   @media (max-width: 768px) {
-    --fz-button: 15px;
+    --fz-button: 14px;
     --lh-button: 126%;
   }
 }

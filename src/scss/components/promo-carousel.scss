@@ -1,0 +1,78 @@
+.promo-carousel {
+  height: 680px;
+  margin-bottom: 8px;
+}
+.promo-carousel__slide {
+  display: grid;
+  grid-template-columns: 75.421348314606741573033707865169% auto;
+  border-radius: 12px 0px 0px 12px;
+}
+.promo-carousel__hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+}
+.promo-carousel__pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.promo-carousel__img {
+  border-radius: 12px 0px 0px 12px;
+}
+.promo-carousel-card {
+  position: relative;
+  z-index: 2;
+  max-width: 232px;
+  padding: 20px;
+  padding-right: 15px;
+  background-color: #5f6c75;
+  border-radius: 6px;
+}
+.promo-carousel-card__title {
+  margin-bottom: 28px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #f0f3f5;
+}
+.promo-carousel-card__desc {
+  margin-bottom: 34px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a1aeb3;
+}
+
+.promo-carousel__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  padding-right: 12px;
+  padding-bottom: 78px;
+  background-color: #fff;
+  border-radius: 0px 12px 12px 0px;
+}
+.promo-carousel__category {
+  margin-bottom: 32px;
+  font-family: "RF Dewi", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #a1aeb3;
+}
+.promo-carousel__title {
+  margin-bottom: 14px;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #000000;
+}

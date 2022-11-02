@@ -9,19 +9,18 @@
   align-items: center;
   justify-content: center;
   // padding: 23px 46px 26px 46px;
-  padding: 21px 16px 26px 16px;
+  padding: 11px 22px 14px 22px;
   font-size: var(--fz-button);
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-button);
   line-height: var(--lh-button);
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 0.03em;
   cursor: pointer;
   border: 1px solid var(--button-color);
   transition: all 0.3s ease;
   @media (max-width: 768px) {
-    padding-top: 20px;
-    padding-top: 21px;
+    // padding-top: 20px;
+    // padding-top: 21px;
   }
 }
 
@@ -37,6 +36,11 @@
   }
 }
 
+.button--primary {
+  color: #000000;
+  background: #f0f3f5;
+  border-radius: 100px;
+}
 .button--dark {
   --button-color: #000;
   color: var(--c-text-on);
