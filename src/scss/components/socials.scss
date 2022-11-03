@@ -19,6 +19,7 @@
   min-height: var(--size);
   max-height: var(--size);
   fill: var(--icon-color);
+  transition: var(--tr);
 }
 .socials__link--has-stroke {
   // margin-left: 7px;
@@ -34,5 +35,6 @@
     --icon-color: var(--c-accent);
     // fill: var(--c-accent);
     // stroke: var(--icon-color);
+    color: var(--c-text-on-secondary);
   }
 }

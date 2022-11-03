@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  transition: var(--tr);
 }
 .footer__credits-item {
   margin-right: 83px;
@@ -53,8 +54,18 @@
 .footer__credits-link {
   color: var(--c-text-on-secondary);
 }
+.footer__credits-link:hover {
+  @media (any-hover: hover) {
+    color: #fff;
+  }
+}
 .footer__credits-link--accent {
   color: var(--c-text-on);
+}
+.footer__credits-link--accent:hover {
+  @media (any-hover: hover) {
+    color: var(--c-text-on-secondary);
+  }
 }
 
 .footer__payments {

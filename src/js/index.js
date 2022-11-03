@@ -21,11 +21,18 @@ let lazyLoadInstance = new LazyLoad();
 /**
  * Dropdown Select
  */
-import "./libs/custom-select.min.js";
-if (document.querySelector(".input--dropdown")) {
-  customSelect(".input--dropdown .input__select");
+// import "./libs/custom-select.min.js";
+// if (document.querySelector(".input--dropdown")) {
+//   customSelect(".input--dropdown .input__select");
+// }
+// import "./unstable/tabs.js";
+import NiceSelect from "./libs/nice-select2.js";
+if (document.querySelector(".input--dropdown.input--dropdown-has-search")) {
+  NiceSelect.bind(
+    document.querySelector(".input--dropdown.input--dropdown-has-search"),
+    { searchable: true }
+  );
 }
-import "./unstable/tabs.js";
 
 /**
  * Smooth anchors

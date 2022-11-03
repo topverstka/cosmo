@@ -14,6 +14,7 @@
   padding: 13px 20px 15px;
   background: #ffffff;
   border-radius: 6px;
+  transition: var(--tr);
 }
 .snack__caption:hover {
   @media (any-hover: hover) {

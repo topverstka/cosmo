@@ -81,10 +81,60 @@
   justify-content: flex-start;
 }
 .product-card__button-add {
-  width: 42px;
-  height: 42px;
+  --size: 42px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
   padding: 0;
   margin-right: 8px;
+  transition: var(--tr);
+}
+.product-card__button-add::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: var(--button-bg);
+  border-radius: 100px;
+  transition: var(--tr);
+}
+.product-card__button-add .button__icon {
+  position: relative;
+  z-index: 3;
+}
+.product-card__button-add .button__text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--size) / 2);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 100%;
+  padding-top: 13px;
+  padding-right: 20px;
+  padding-bottom: 13px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  white-space: nowrap;
+  background-color: var(--button-bg);
+  border-radius: 0 100px 100px 0;
+  transition: color 0s, background-color 0.3s, transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.product-card__button-add:hover .button__text {
+  @media (any-hover: hover) {
+    transform: scaleX(1);
+  }
 }
 
 .product-card__price {
