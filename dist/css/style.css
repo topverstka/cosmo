@@ -1320,7 +1320,6 @@
   padding: 1em;
   margin-right: auto;
   margin-left: auto;
-  background-color: #fff;
   border-radius: 2em;
   transition: all 0.3s ease;
   transform: scale(0.86);
@@ -1396,7 +1395,6 @@
   padding-bottom: 37px;
   padding-left: 18px;
   color: var(--c-text-on);
-  background: var(--bg-poppa);
   border-radius: var(--radius-poppa);
 }
 @media (min-width: 1100px) {
@@ -1410,10 +1408,10 @@
 }
 
 .poppa__closer {
-  --closer-color: #707070;
+  --closer-color: #fff;
   font-size: 20px;
   color: transparent;
-  background-color: var(--bg-poppa);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: var(--radius-poppa);
 }
 @media (max-width: 768px) {
@@ -1498,11 +1496,17 @@
   margin-left: auto;
 }
 
-.search-pop__categories {
+.search-pop__suggests {
+  display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
-.search-pop__category {
+.search-pop__suggest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
   padding: 11px 22px 14px;
   margin-right: 8px;
   font-size: 14px;
@@ -1511,10 +1515,40 @@
   color: #000;
   background: #f0f3f5;
   border-radius: 100px;
+  transition: all 0.3s ease;
 }
 
-.search-pop__category:last-of-type {
+.search-pop__suggest--search::before {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  margin-bottom: -1.5px;
+  content: "";
+  background-color: #000;
+  -webkit-mask: url("../img/common/search-mask.svg");
+  mask: url("../img/common/search-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.search-pop__suggest--search:hover::before {
+  background-color: #fff;
+}
+
+.search-pop__suggest:last-child {
   margin-right: 0;
+}
+
+@media (any-hover: hover) {
+  .search-pop__suggest:hover {
+    color: #fff;
+    background: var(--c-accent);
+  }
 }
 
 .search-pop__title {
@@ -2320,6 +2354,14 @@ input[type=search]::-webkit-search-cancel-button {
   min-width: var(--size);
   height: var(--size);
   padding: 0;
+}
+
+.header__button .button__icon {
+  stroke: #fff;
+}
+
+.button-cart .button__icon {
+  stroke: none;
 }
 
 .header__pickers {

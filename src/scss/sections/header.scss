@@ -51,6 +51,12 @@
   height: var(--size);
   padding: 0;
 }
+.header__button .button__icon {
+  stroke: #fff;
+}
+.button-cart .button__icon {
+  stroke: none;
+}
 
 .header__pickers {
   display: flex;

@@ -50,7 +50,7 @@
   padding: 1em;
   margin-right: auto;
   margin-left: auto;
-  background-color: #fff;
+  // background-color: #fff;
   border-radius: 2em;
   transition: all 0.3s ease;
   transform: scale(0.86);
@@ -131,7 +131,7 @@
   padding-bottom: 37px;
   padding-left: 18px;
   color: var(--c-text-on);
-  background: var(--bg-poppa);
+  // background: var(--bg-poppa);
   border-radius: var(--radius-poppa);
   @media (min-width: 1100px) {
     max-width: 500px;
@@ -142,10 +142,10 @@
 }
 
 .poppa__closer {
-  --closer-color: #707070;
+  --closer-color: #fff;
   font-size: 20px;
   color: transparent;
-  background-color: var(--bg-poppa);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: var(--radius-poppa);
   @media (max-width: 768px) {
     font-size: 12px;

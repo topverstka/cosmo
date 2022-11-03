@@ -248,9 +248,11 @@ class Poppa {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
       const poppa = document.querySelector(`.poppa#${hash}`);
-      if (poppa) {
-        this.openPop(hash);
-      }
+      setTimeout(() => {
+        if (poppa) {
+          this.openPop(hash);
+        }
+      });
     }
   }
   resetHash() {
