@@ -14,11 +14,13 @@ function bodyLock(con) {
     document.body.classList.add("_lock");
   } else if (con === false) {
     document.body.classList.remove("_lock");
+    document.body.style.paddingRight = "0";
   } else if (con === undefined) {
     if (!document.body.classList.contains("_lock")) {
       document.body.classList.add("_lock");
     } else {
       document.body.classList.remove("_lock");
+      document.body.style.paddingRight = "0";
     }
   } else {
     console.error("Неопределенный аргумент у функции bodyLock()");

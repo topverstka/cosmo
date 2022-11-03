@@ -1469,6 +1469,7 @@
 }
 
 .search-pop {
+  display: none;
   max-width: 100%;
   height: 100%;
   padding-top: 80px;
@@ -1479,6 +1480,10 @@
 .poppa__overlay--search-pop .poppa__aligner {
   align-items: flex-start;
   padding: 0;
+}
+
+.poppa__overlay--search-pop .search-pop {
+  display: initial;
 }
 
 .search-pop__gallery-inner {

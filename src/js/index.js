@@ -94,6 +94,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
+document.getElementById("dropdown-city").addEventListener("change", (e) => {
+  document.querySelector(".header__geo .header__picker-text").innerText =
+    e.target.value;
+});
+
 // import "./unstable/tabs.js";
 
 /**
