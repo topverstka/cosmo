@@ -1,0 +1,134 @@
+.select {
+  position: relative;
+}
+
+.select__list--dropdown {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.select.is-open .select__list--dropdown {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.select__list--dropdown::before {
+  position: absolute;
+  top: 32px;
+  right: 36px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  content: "";
+  background-color: #000;
+  @include getmask("../img/common/search.svg");
+}
+.select__list--dropdown::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: calc(100% - 14px);
+  height: 100px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(
+    0deg,
+    #ffffff 24.79%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 0 0 14px 14px;
+}
+
+.select__list--dropdown .select__list {
+  position: relative;
+  width: calc(100% + 40px);
+  max-height: 482px;
+  padding-bottom: 40px;
+  margin-left: -20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.select__list--dropdown .select__list::before {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: calc(100% - 14px);
+  height: 30px;
+  margin-bottom: -10px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    #ffffff 24.79%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.select__item {
+  padding: 8px 20px 12px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #000000;
+  cursor: pointer;
+  background-color: #fff;
+}
+.select__list--single > .select__item {
+  width: 100%;
+  padding: 10px 17px 11px 17px;
+  margin-left: unset;
+  color: #fff;
+  background: #79868d;
+  border-radius: 62px;
+  opacity: 0.4;
+}
+.select__list--single {
+  position: relative;
+}
+.select__list--single::after {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  transition: all 0.3s ease;
+  transform: rotate(180deg);
+  @include getmask("../img/common/arrow-circle.svg");
+}
+.select.is-open .select__list--single::after {
+  transform: rotate(0);
+}
+
+.select__item.is-highlighted {
+  background-color: #f0f3f5;
+}
+
+.select__list .select__input[type="search"]::placeholder {
+  color: #a1aeb3;
+}
+.select__list .select__input[type="search"] {
+  width: 100%;
+  padding: 14px 20px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #a1aeb3;
+  background: #f0f3f5;
+  border-radius: 6px;
+}

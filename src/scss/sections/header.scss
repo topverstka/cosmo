@@ -1,13 +1,19 @@
 .header {
-  padding-top: 26px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
+  position: relative;
+  z-index: 2;
 }
 .header__container {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: calc(100% + 16px);
+  padding-top: 26px;
+  padding-right: 28px;
+  padding-bottom: 30px;
+  padding-left: 28px;
+  margin-left: -8px;
 }
 .header__menu {
   display: flex;
@@ -68,4 +74,83 @@
   max-width: 14px;
   height: 15px;
   margin-right: 4px;
+}
+
+.header__snacks {
+  position: relative;
+  z-index: 2;
+  width: calc(100% + 16px);
+  margin-left: -8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.header__snacks--show {
+  padding-top: 80px;
+  overflow: visible;
+}
+.header-snack {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 18px;
+  padding-bottom: 20px;
+  padding-left: 28px;
+  color: #fff;
+  pointer-events: none;
+  background: #5f6c75;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.header-snack--visible {
+  pointer-events: initial;
+  opacity: 1;
+}
+.header-snack__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-snack__title {
+  width: 100%;
+  max-width: 434px;
+  margin-right: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+}
+.header-snack__content {
+  width: 44%;
+}
+.header-snack__content .selector__group {
+  justify-content: center;
+}
+.header-snack__close {
+  --size: 40px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin-left: auto;
+}
+.header-snack__close::before,
+.header-snack__close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 60%;
+  height: 2px;
+  content: "";
+  background: #fff;
+  transition: $tr;
+}
+.header-snack__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.header-snack__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header-snack__select {
+  max-width: 350px;
 }

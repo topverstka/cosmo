@@ -21,18 +21,80 @@ let lazyLoadInstance = new LazyLoad();
 /**
  * Dropdown Select
  */
+import Choices from "choices.js";
 // import "./libs/custom-select.min.js";
-// if (document.querySelector(".input--dropdown")) {
-//   customSelect(".input--dropdown .input__select");
-// }
-// import "./unstable/tabs.js";
-import NiceSelect from "./libs/nice-select2.js";
-if (document.querySelector(".input--dropdown.input--dropdown-has-search")) {
-  NiceSelect.bind(
-    document.querySelector(".input--dropdown.input--dropdown-has-search"),
-    { searchable: true }
-  );
+if (document.querySelector(".select")) {
+  // customSelect(".input--dropdown .input__select");
+  const dropdowns = document.querySelectorAll(".select");
+  dropdowns.forEach((dropdown) => {
+    const choices = new Choices(dropdown.querySelector(".select__input"), {
+      searchPlaceholderValue: "Населённый пункт",
+      noResultsText: "Нет результатов",
+      classNames: {
+        containerOuter: "select",
+        input: "select__input",
+        inputCloned: "select__input--cloned",
+        list: "select__list",
+        listItems: "select__list--multiple",
+        listSingle: "select__list--single",
+        listDropdown: "select__list--dropdown",
+        item: "select__item",
+        itemSelectable: "select__item--selectable",
+        itemDisabled: "select__item--disabled",
+        itemChoice: "select__item--choice",
+        placeholder: "select__placeholder",
+        group: "select__group",
+        groupHeading: "select__heading",
+        button: "select__button",
+        activeState: "is-active",
+        focusState: "is-focused",
+        openState: "is-open",
+        disabledState: "is-disabled",
+        highlightedState: "is-highlighted",
+        selectedState: "is-selected",
+        flippedState: "is-flipped",
+        loadingState: "is-loading",
+        noResults: "has-no-results",
+        noChoices: "has-no-choices",
+      },
+    });
+  });
 }
+
+const headerSnacksContainer = document.querySelector(".header__snacks");
+const headerPickers = document.querySelectorAll(".header__picker");
+headerPickers.forEach((picker) => {
+  picker.addEventListener("click", () => {
+    const snackName = picker.dataset.snack;
+    if (!snackName) return;
+
+    headerSnacksContainer.classList.add("header__snacks--show");
+
+    document.querySelectorAll(".header-snack").forEach((snack) => {
+      if (snack.dataset.snack === snackName) return;
+      snack.classList.remove("header-snack--visible");
+    });
+
+    document
+      .querySelector(`.header-snack[data-snack="${snackName}"]`)
+      .classList.add("header-snack--visible");
+  });
+});
+const headerSnacks = document.querySelectorAll(".header-snack");
+headerSnacks.forEach((snack) => {
+  const closer = snack.querySelector(".header-snack__close");
+  closer.addEventListener("click", () => {
+    snack.classList.remove("header-snack--visible");
+    headerSnacksContainer.classList.remove("header__snacks--show");
+  });
+});
+window.addEventListener("scroll", () => {
+  if (headerSnacksContainer.classList.contains("header__snacks--show")) {
+    headerSnacksContainer.classList.remove("header__snacks--show");
+  }
+});
+
+// import "./unstable/tabs.js";
 
 /**
  * Smooth anchors

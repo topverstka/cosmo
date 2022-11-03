@@ -55,6 +55,7 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "choices.js": "^10.1.0",
     "swiper": "^8.3.1"
   }
 }
