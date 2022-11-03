@@ -184,6 +184,7 @@ class Poppa {
     const event = new Event("poppa-open");
     pop.dispatchEvent(event);
     pop.querySelector(".poppa").dispatchEvent(event);
+    bodyLock(true);
   }
 
   handleClose(button) {
@@ -205,6 +206,7 @@ class Poppa {
     const event = new Event("poppa-close");
     pop.dispatchEvent(event);
     pop.querySelector(".poppa").dispatchEvent(event);
+    bodyLock(false);
   }
 
   makeInfoPop(text, removeAfter = 6000) {

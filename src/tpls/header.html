@@ -173,3 +173,44 @@
     </div>
   </div>
 </header>
+
+<section class="poppa search-pop" id="search-pop">
+  <div class="search-pop__container">
+    <div class="search-pop__box search">
+      <form class="search-pop__form search__form">
+        <input
+          type="search"
+          name="s"
+          placeholder="Поиск по каталогу товаров"
+          class="search__input"
+        />
+        <button class="search__button" type="submit">
+          <svg class="search__button-icon">
+            <use xlink:href="./img/common/search.svg#search" />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="search-pop__categories">
+      <a href="#" class="search-pop__category">См. все очищающие средства</a>
+      <a href="#" class="search-pop__category">См. все очищающие средства</a>
+      <a href="#" class="search-pop__category">См. все очищающие средства</a>
+    </div>
+    <div class="search-pop__results">
+      <h2 class="section-title search-pop__title">
+        Результаты поиска по запросу “очищающий крем для жирной кожи”
+      </h2>
+      <p class="search-pop__results-count">Найдено 6 товаров</p>
+      <div class="search-pop__gallery">
+        <div class="search-pop__gallery-inner">
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
