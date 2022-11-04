@@ -7,6 +7,9 @@ import "./unstable/formich.js";
 import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 import "./unstable/burger.js";
 
+
+
+
 /**
  * Poppa
  */
@@ -17,6 +20,26 @@ import "./poppa.js";
  */
 import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
+
+/**
+ * header__controls
+ */
+
+ const minicart = document.querySelector('.minicart');
+ const buttonCart = document.querySelector('.button-cart');
+
+ buttonCart.addEventListener('click', () => {
+  buttonCart.parentElement.querySelector('.minicart').classList.toggle('minicart--visible')
+ })
+ minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
+  const yOffset = e.target.scrollTop;
+  if (yOffset > 20) {
+    e.target.classList.add('minicart__content--scrolled')
+  } else {
+    e.target.classList.remove('minicart__content--scrolled')
+  }
+ })
+
 
 /**
  * Dropdown Select
