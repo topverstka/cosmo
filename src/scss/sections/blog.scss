@@ -36,6 +36,7 @@
   color: #000000;
 }
 .blog-card__desc {
+  margin-bottom: 16px;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -51,6 +52,14 @@
   padding-top: 12px;
   padding-right: 12px;
   padding-bottom: 12px;
+}
+.blog-card__media-compare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+  width: 100%;
+  max-width: 240px;
+  margin-left: auto;
 }
 .blog-card__img {
   object-fit: cover;
@@ -76,4 +85,8 @@
     --button-color: #fff;
     --button-bg: #000;
   }
+}
+
+.blog-card__pic {
+  width: 100%;
 }
