@@ -1868,7 +1868,9 @@
 }
 
 .auth {
+  opacity: 0;
   transform-origin: top;
+  transform: scaleY(0);
   transition: all 0.3s ease, pointer-events 0s;
   position: absolute;
   width: 310px;

@@ -27,9 +27,13 @@ let lazyLoadInstance = new LazyLoad();
 
  const minicart = document.querySelector('.minicart');
  const buttonCart = document.querySelector('.button-cart');
+const miniAuth = document.querySelector('.auth');
+const buttonAuth = document.querySelector('.button-auth');
 
  buttonCart.addEventListener('click', () => {
   buttonCart.parentElement.querySelector('.minicart').classList.toggle('minicart--visible')
+
+  buttonAuth.parentElement.querySelector('.auth').classList.remove('auth--visible')
  })
  minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
   const yOffset = e.target.scrollTop;
@@ -41,10 +45,9 @@ let lazyLoadInstance = new LazyLoad();
  })
 
 
-  const miniAuth = document.querySelector('.auth');
-  const buttonAuth = document.querySelector('.button-auth');
-    buttonCart.addEventListener('click', () => {
-    buttonCart.parentElement.querySelector('.auth').classList.toggle('auth--visible')
+  buttonAuth.addEventListener('click', () => {
+    buttonAuth.parentElement.querySelector('.auth').classList.toggle('auth--visible')
+    buttonCart.parentElement.querySelector('.minicart').classList.remove('minicart--visible')
   })
 
   const authMethodsTogglers = document.querySelectorAll('.auth__button-method-toggler')
@@ -75,6 +78,11 @@ let lazyLoadInstance = new LazyLoad();
         page.querySelector(`.${authFieldsetClass}`).classList.add(authFieldsetClassActive)
       })
     })
+  })
+
+  window.addEventListener('scroll', () => {
+    minicart.classList.remove('minicart--visible')
+    miniAuth.classList.remove('auth--visible')
   })
 
 
