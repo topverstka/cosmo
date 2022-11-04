@@ -3,7 +3,7 @@
 import { removeAllClasses, bodyLock } from "./utils/functions.js";
 import DismalModules, { acc } from "./utils/modules.js";
 
-import "./unstable/formich.js";
+import "./unstable/inputster/formich.js";
 import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 import "./unstable/burger.js";
 
@@ -39,6 +39,43 @@ let lazyLoadInstance = new LazyLoad();
     e.target.classList.remove('minicart__content--scrolled')
   }
  })
+
+
+  const miniAuth = document.querySelector('.auth');
+  const buttonAuth = document.querySelector('.button-auth');
+    buttonCart.addEventListener('click', () => {
+    buttonCart.parentElement.querySelector('.auth').classList.toggle('auth--visible')
+  })
+
+  const authMethodsTogglers = document.querySelectorAll('.auth__button-method-toggler')
+  const authFieldsetClass = 'auth__fieldset';
+  const authFieldsetClassActive = 'auth__fieldset--visible';
+  authMethodsTogglers.forEach(button => {
+    button.addEventListener('click', () => {
+      const toggleName = button.dataset.toggler;
+      // const activeToggler = document.querySelector(`.${authFieldsetClass}[data-toggler="${toggleName}"]`);
+      document.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
+        if (fieldset.dataset.toggler != toggleName) {
+          fieldset.classList.remove(authFieldsetClassActive)
+        } else {
+          fieldset.classList.add(authFieldsetClassActive)
+        }
+      })
+    })
+  })
+
+  const authTabsTogglers = document.querySelectorAll('.auth__tabs .tabs__toggler')
+  const authTabsPages = document.querySelectorAll('.auth__tabs .tabs__page')
+  authTabsTogglers.forEach((toggler, togglerIndex) => {
+    toggler.addEventListener('click', () => {
+      authTabsPages.forEach((page, pageIndex) => {
+        page.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
+          fieldset.classList.remove(authFieldsetClassActive)
+        })
+        page.querySelector(`.${authFieldsetClass}`).classList.add(authFieldsetClassActive)
+      })
+    })
+  })
 
 
 /**
@@ -122,7 +159,7 @@ document.getElementById("dropdown-city").addEventListener("change", (e) => {
     e.target.value;
 });
 
-// import "./unstable/tabs.js";
+import "./unstable/tabs.js";
 
 /**
  * Smooth anchors

@@ -38,3 +38,23 @@
     color: var(--c-text-on-secondary);
   }
 }
+
+.socials--icons .socials__link {
+  --size: 36px;
+  background-color: #fff;
+  border-radius: 100%;
+  padding: 5px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials__icon--google {
+  height: 16px;
+}
+.socials__icon--vk {
+  height: 12px;
+}
+.socials__icon--yandex {
+  height: 16px;
+}

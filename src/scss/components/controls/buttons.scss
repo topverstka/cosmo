@@ -177,3 +177,15 @@
     --icon-color: #fff;
   }
 }
+
+.button--thirdly {
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration-line: underline;
+  --button-color: #FFFFFF;
+  --button-bg: transparent;
+  border-bottom: 1px solid var(--button-color);
+  border-radius: 0;
+}

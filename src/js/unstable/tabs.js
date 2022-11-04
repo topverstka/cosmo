@@ -4,9 +4,12 @@
  *
  * Табы инициируются все
  * У какой кнопки таба есть класс из js переменной TAB_ACTIVE_CLASS, тот таб и будет активным сразу
+ *
+ * .tabs>.tabs__toggler-container>button.tabs__toggler*2^.tabs__page-container>.tabs__page*2
+ *
  */
-const tabsBars = document.querySelectorAll(".tabs__controls");
-const tabsPagesWraps = document.querySelectorAll(".tabs__pages");
+const tabsBars = document.querySelectorAll(".tabs__toggler-container");
+const tabsPagesWraps = document.querySelectorAll(".tabs__page-container");
 const TAB_ACTIVE_CLASS = "tab--active";
 const TAB_ANIMATED_CLASS = "tab--animated";
 
@@ -22,10 +25,20 @@ tabsBars.forEach((tabsBar) => {
   }
 });
 
+tabsBars.forEach(tabsBar => {
+  if (!tabsBar.querySelector(`.${TAB_ACTIVE_CLASS}`)) {
+    tabsBar.querySelector('.tabs__toggler').classList.add(TAB_ACTIVE_CLASS)
+  }
+})
+tabsPagesWraps.forEach(wrap => {
+  if (!wrap.querySelector(`.${TAB_ACTIVE_CLASS}`)) {
+    wrap.querySelector('.tabs__page').classList.add(TAB_ACTIVE_CLASS)
+  }
+})
 // Задержка нужна, чтобы Swiper слайдеры не разъезжались
 setTimeout(() => {
   tabsBars.forEach((tabsBar) => {
-    const tabBarButtons = tabsBar.querySelectorAll(".tabs__controls-button");
+    const tabBarButtons = tabsBar.querySelectorAll(".tabs__toggler");
     let clickedCount = 0;
     tabBarButtons.forEach((tabButton, buttonIndex) => {
       tabButton.addEventListener("click", () => {
@@ -41,7 +54,7 @@ setTimeout(() => {
 
         if (tabsBar.dataset.tabs) {
           const tabPages = document
-            .querySelector(`.tabs__pages[data-tabs="${tabsBar.dataset.tabs}"]`)
+            .querySelector(`.tabs__page-container[data-tabs="${tabsBar.dataset.tabs}"]`)
             .querySelectorAll(".tabs__page");
 
           if (tabPages[buttonIndex]) {

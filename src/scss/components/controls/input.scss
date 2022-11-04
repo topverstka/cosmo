@@ -1,22 +1,20 @@
 .input {
-  --border-color: #dfdfdf;
-  --border-radius: 0px;
+  --border-color: transparent;
+  --border-radius: 6px;
   --text-color: var(--c-text-regular);
-  --fz: 18px;
-  --lh: 1.4;
-  --padding: 22px 22px 22px 68px;
-  --label-color: var(--c-text-grey-2);
-  --label-top: 16px;
-  --label-left: 12px;
-  --label-fz: var(--fz);
-  --label-lh: var(--lh);
+  --fz: 12px;
+  --lh: 1.25;
+  --padding: 12px 20px 16px 20px;
+  --label-color: var(--bg-element);
   --message-color: var(--c-text);
   --message-transform: scale(1, 0);
   --message-offset: -1.2em;
+  --error-icon-transform: scale(0);
   position: relative;
   display: block;
   width: 100%;
   font-family: var(--ff-regular);
+  margin-bottom: 8px;
   @media (max-width: 768px) {
     --padding: 13px 13px 13px 46px;
     --fz: 15px;
@@ -24,7 +22,7 @@
   }
 }
 .input--active {
-  --border-color: var(--c-text-grey-2);
+  // --border-color: var(--c-text-grey-2);
   --label-top: -9px;
   --lebel-left: 12px;
   --label-fz: calc(var(--label-fz) - 5);
@@ -33,8 +31,9 @@
   --label-color: var(--c-error);
   --message-transform: scale(1);
   --message-color: var(--c-error);
-  --message-offset: 5px;
-  --border-color: var(--c-error);
+  --message-offset: 9px;
+  // --border-color: var(--c-error);
+  --error-icon-transform: scale(1);
 }
 
 .input__field {
@@ -48,7 +47,6 @@
   background-color: var(--bg-element);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  box-shadow: inset 0px 0px 40px rgba(188, 188, 188, 0.25);
   transition: all 0.3s ease;
 }
 .input__field::placeholder {
@@ -70,6 +68,17 @@
     height: 14px;
   }
 }
+.input__error-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  z-index: 2;
+  transform: var(--error-icon-transform);
+  transition: all 0.45s ease;
+}
 
 .input__label {
   position: absolute;
@@ -87,15 +96,19 @@
 
 .input__message {
   z-index: 1;
-  display: block;
   min-height: 1.2em;
   margin-top: var(--message-offset);
-  font-size: var(--fz-tag);
-  line-height: var(--lh-tag);
-  color: var(--message-color);
   transition: all 0.3s ease;
   transform: var(--message-transform);
   transform-origin: top;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  background: #A1AEB3;
+  border-radius: 6px;
+  padding: 5px 10px 8px;
+  display: inline-block;
 }
 
 .input--textarea .input__field {
@@ -103,3 +116,4 @@
   padding-left: 42px;
   resize: none;
 }
+
