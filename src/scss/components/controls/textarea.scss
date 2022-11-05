@@ -1,0 +1,23 @@
+.textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+.textarea__field {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 42px;
+  resize: none;
+  background: #F0F3F5;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: #A1AEB3;
+  min-height: 140px;
+}
