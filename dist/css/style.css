@@ -992,7 +992,7 @@
   width: 100%;
   height: 100%;
   padding-left: 42px;
-  resize: none;
+  resize: vertical;
   background: #F0F3F5;
   border-radius: 6px;
   padding: 12px 20px;

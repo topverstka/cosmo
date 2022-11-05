@@ -129,36 +129,52 @@ if (document.querySelector(".select")) {
   });
 }
 
+const SNACKS_SHOW_CLASS = 'header__snacks--show';
+const SNACK_VISIBLE_CLASS = 'header-snack--visible';
 const headerSnacksContainer = document.querySelector(".header__snacks");
+
+function closeSnack(currentSnack) {
+    headerSnacksContainer.classList.remove(SNACKS_SHOW_CLASS);
+    if (currentSnack) currentSnack.classList.remove(SNACK_VISIBLE_CLASS);
+}
+function openSnack(currentSnack) {
+    headerSnacksContainer.classList.add(SNACKS_SHOW_CLASS);
+    currentSnack.classList.add(SNACK_VISIBLE_CLASS);
+
+    document.querySelectorAll(".header-snack").forEach((snack) => {
+      if (snack.dataset.snack === currentSnack.dataset.snack) return;
+      snack.classList.remove(SNACK_VISIBLE_CLASS);
+    });
+}
+function toggleSnackVisibility(snackName) {
+  const currentSnack = document.querySelector(`.header-snack[data-snack="${snackName}"]`)
+  if (currentSnack.classList.contains(SNACK_VISIBLE_CLASS)) {
+    closeSnack(currentSnack);
+  } else {
+    openSnack(currentSnack)
+  }
+}
+
 const headerPickers = document.querySelectorAll(".header__picker");
 headerPickers.forEach((picker) => {
   picker.addEventListener("click", () => {
     const snackName = picker.dataset.snack;
     if (!snackName) return;
 
-    headerSnacksContainer.classList.add("header__snacks--show");
-
-    document.querySelectorAll(".header-snack").forEach((snack) => {
-      if (snack.dataset.snack === snackName) return;
-      snack.classList.remove("header-snack--visible");
-    });
-
-    document
-      .querySelector(`.header-snack[data-snack="${snackName}"]`)
-      .classList.add("header-snack--visible");
+    toggleSnackVisibility(snackName)
   });
 });
+
 const headerSnacks = document.querySelectorAll(".header-snack");
 headerSnacks.forEach((snack) => {
   const closer = snack.querySelector(".header-snack__close");
   closer.addEventListener("click", () => {
-    snack.classList.remove("header-snack--visible");
-    headerSnacksContainer.classList.remove("header__snacks--show");
+    closeSnack(snack)
   });
 });
 window.addEventListener("scroll", () => {
-  if (headerSnacksContainer.classList.contains("header__snacks--show")) {
-    headerSnacksContainer.classList.remove("header__snacks--show");
+  if (headerSnacksContainer.classList.contains(SNACKS_SHOW_CLASS)) {
+    closeSnack();
   }
 });
 
