@@ -8,6 +8,56 @@ import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 import "./unstable/burger.js";
 
 
+/**
+ * Textarea resize
+ */
+
+
+const textareas = document.querySelectorAll('.textarea');
+
+function createResizer(area) {
+  const resizer = document.createElement('div')
+  resizer.classList.add('textarea__resizer')
+  area.appendChild(resizer)
+
+  return {
+    resizer,
+    width: area.getBoundingClientRect().width,
+    height: area.getBoundingClientRect().height,
+    x: 0,
+    y: 0,
+    dx: 0,
+    dy: 0,
+  }
+}
+textareas.forEach(area => {
+  let {resizer, width, height, y, dy} = createResizer(area);
+  area.dataset.initialHeight = height;
+
+  let startResize = function(evt) {
+    // x = evt.screenX;
+    y = evt.screenY;
+  };
+
+  let resize = function(evt) {
+    // dx = x - evt.screenX;
+    dy = y - evt.screenY;
+    // x = evt.screenX;
+    y = evt.screenY;
+    // width += dx;
+    height -= dy;
+    // area.style.width = width + "px";
+    area.style.height = height + "px";
+  };
+
+  resizer.addEventListener("mousedown", function(evt) {
+    startResize(evt);
+    document.body.addEventListener("mousemove", resize);
+    document.body.addEventListener("mouseup", function() {
+      document.body.removeEventListener("mousemove", resize);
+    });
+  });
+})
 
 
 /**

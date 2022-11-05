@@ -1,6 +1,6 @@
 /**
  *
- * form.chips>.chips__track>.chips__content>label.chips__item>.input.chips__input[type="radio"][hidden]+p.chips__caption
+ * form.chips>.chips__track>.chips__content>label.chips__item>input.chips__input[type="radio"][hidden][name="option"]+p.chips__caption
  *
  */
 .chips {
@@ -10,6 +10,9 @@
   --chips-fw: 400;
   --chips-lh: 1.25;
   --chips-padding: 13px 20px 15px;
+  --chips-border: none;
+  --chips-item-mr: 8px;
+  --chips-item-mb: 8px;
 
   --chips-bg: #fff;
   --chips-active-bg: #5f6c75;
@@ -18,10 +21,14 @@
   --chips-color: #000;
   --chips-active-color: #fff;
   --chips-hover-color: #fff;
-
-  --chips-item-mr: 8px;
-  --chips-item-mb: 8px;
-
+}
+.chips--ghots {
+  --chips-bg: transparent;
+  --chips-active-bg: #a1aeb2;
+  --chips-color: #fff;
+  --chips-border: 1px solid var(--chips-active-bg);
+  --chips-active-bg:  #a1aeb2;
+  // --border-color: #a1aeb2;
 }
 .chips__content {
   display: flex;
@@ -43,6 +50,7 @@
   font-size: var(--chips-fz);
   line-height: var(--chips-lh);
   font-weight: var(--chips-fw);
+  border: var(--chips-border);
 }
 .chips__caption:hover {
   @media (any-hover: hover) {
