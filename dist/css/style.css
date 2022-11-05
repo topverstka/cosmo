@@ -675,38 +675,61 @@
   border-radius: 0;
 }
 
-.snacks {
+/**
+ *
+ * form.chips>.chips__track>.chips__content>label.chips__item>.input.chips__input[type="radio"][hidden]+p.chips__caption
+ *
+ */
+.chips {
   margin-bottom: 40px;
+  --chips-fz: 14px;
+  --chips-fw: 400;
+  --chips-lh: 1.25;
+  --chips-padding: 13px 20px 15px;
+  --chips-bg: #fff;
+  --chips-active-bg: #5f6c75;
+  --chips-hover-bg: #6c7982;
+  --chips-color: #000;
+  --chips-active-color: #fff;
+  --chips-hover-color: #fff;
+  --chips-item-mr: 8px;
+  --chips-item-mb: 8px;
 }
 
-.snack__content {
+.chips__content {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.snack__item {
-  margin-right: 8px;
+.chips__item {
+  margin-right: var(--chips-item-mr);
+  margin-bottom: var(--chips-item-mb);
   cursor: pointer;
 }
 
-.snack__caption {
-  padding: 13px 20px 15px;
-  background: #ffffff;
+.chips__caption {
+  padding: var(--chips-padding);
+  background: var(--chips-bg);
+  color: var(--chips-color);
   border-radius: 6px;
   transition: var(--tr);
+  font-size: var(--chips-fz);
+  line-height: var(--chips-lh);
+  font-weight: var(--chips-fw);
 }
 
 @media (any-hover: hover) {
-  .snack__caption:hover {
-    color: #fff;
-    background: #6c7982;
+  .chips__caption:hover {
+    color: var(--chips-hover-color);
+    background: var(--chips-hover-bg);
   }
 }
 
-.snack__input:checked ~ .snack__caption {
-  color: #fff;
-  background: #5f6c75;
+.chips__input:checked ~ .chips__caption {
+  color: var(--chips-active-color);
+  background: var(--chips-active-bg);
 }
 
 .selector {
@@ -979,6 +1002,7 @@
 }
 
 .textarea {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -1264,36 +1288,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 225px;
-}
-
-.product-card__options-checkbox {
-  margin-right: 4px;
-  margin-bottom: 4px;
-  cursor: pointer;
-}
-
-.product-card__options-caption {
-  padding: 9px;
-  padding-top: 7px;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 12px;
-  color: #000000;
-  background: #f0f3f5;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-@media (any-hover: hover) {
-  .product-card__options-caption:hover {
-    color: #fff;
-    background: #6c7982;
-  }
-}
-
-.product-card__options-input:checked ~ .product-card__options-caption {
-  color: #fff;
-  background: #5f6c75;
+  --chips-bg: #f0f3f5;
+  --chips-color: #000;
+  --chips-hover-bg: #6c7982;
+  --chips-hover-color: #fff;
+  --chips-active-bg: #5f6c75;
+  --chips-active-color: #fff;
+  --chips-fz: 10px;
+  --chips-fw: 600;
+  --chips-lh: 12px;
+  --chips-padding: 7px 9px 9px 9px ;
 }
 
 .product-card__add {

@@ -1,0 +1,56 @@
+/**
+ *
+ * form.chips>.chips__track>.chips__content>label.chips__item>.input.chips__input[type="radio"][hidden]+p.chips__caption
+ *
+ */
+.chips {
+  margin-bottom: 40px;
+
+  --chips-fz: 14px;
+  --chips-fw: 400;
+  --chips-lh: 1.25;
+  --chips-padding: 13px 20px 15px;
+
+  --chips-bg: #fff;
+  --chips-active-bg: #5f6c75;
+  --chips-hover-bg: #6c7982;
+
+  --chips-color: #000;
+  --chips-active-color: #fff;
+  --chips-hover-color: #fff;
+
+  --chips-item-mr: 8px;
+  --chips-item-mb: 8px;
+
+}
+.chips__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.chips__item {
+  margin-right: var(--chips-item-mr);
+  margin-bottom: var(--chips-item-mb);
+  cursor: pointer;
+}
+.chips__caption {
+  padding: var(--chips-padding);
+  background: var(--chips-bg);
+  color: var(--chips-color);
+  border-radius: 6px;
+  transition: var(--tr);
+  font-size: var(--chips-fz);
+  line-height: var(--chips-lh);
+  font-weight: var(--chips-fw);
+}
+.chips__caption:hover {
+  @media (any-hover: hover) {
+    color: var(--chips-hover-color);
+    background: var(--chips-hover-bg);
+  }
+}
+.chips__input:checked ~ .chips__caption {
+  color: var(--chips-active-color);
+  background: var(--chips-active-bg);
+}
