@@ -1,0 +1,43 @@
+.doc--small {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.doc__title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 400;
+font-size: 27px;
+line-height: 110%;
+text-align: center;
+color: #000000;
+}
+.doc-card {
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-bottom: 80px;
+  padding-right: 120px;
+  background-color: var(--bg-element);
+  display: grid;
+  border-radius: 12px;
+  grid-template-columns: 308px auto;
+  column-gap: 70px;
+  margin-bottom: 8px;
+}
+.doc-card__title {
+  font-weight: 400;
+font-size: 20px;
+line-height: 120%;
+color: #000000;
+}
+.doc-card__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #000000;
+}
+.doc-card__desc p {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 1.2em;
+}

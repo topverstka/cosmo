@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Блог</title>
+    <title>Вопросы и ответы</title>
     <link rel="stylesheet" href="./css/style.css?_v=20221107130448" />
 
     <!-- Отключить автодетект телефонов -->
@@ -1304,439 +1304,74 @@
         <div class="breadcrumbs">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
-          <li class="breadcrumbs__item">Блог</li>
+          <li class="breadcrumbs__item">Вопросы и ответы</li>
         </ul>
         </div>
         <section class="page-heading">
-          <h1 class="page-heading__title">Блог</h1>
-          <p class="page-heading__desc">Последние новости, специальные предложения и секреты вечной красоты от российского бренда авторской косметики Cosmomedica by doctor Kondrasheva</p>
+          <h1 class="page-heading__title">Вопросы и ответы</h1>
         </section>
 
+        <section class="doc">
+          <div class="doc__container">
+            <div class="doc__gallery">
+              <article class="doc-card">
+                <h3 class="doc-card__title">Доставка по Москве</h3>
+                <div class="doc-card__desc">
+                  <p>Наш курьер доставит ваш заказ по Москве, Московской области и в регионы Российской Федерации. В случае не получения заказа клиентом, повторная отправка посылки осуществляется за счет средств клиента. Если клиент отказывается от доставки после передачи заказа в Транспортную компанию или не забирает свой заказ в месте вручения, то стоимость доставки и стоимость возврата отправления на склад ООО "Миксит" будет удержана с клиента при возврате средств.
 
-        <section class="blog">
-          <div class="blog__container">
-            <form action="" class="blog__filters row-filters">
-            <div class="select row-filters__select">
-            <select
-              name="sort"
-              id="blog-sort"
-              class="select__input input--dropdown-has-search"
-            >
-              <option value="Москва">Сначала новые</option>
-              <option value="Санкт-Петербург">Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область
-              </option>
-              <option value="Казань">Казань, Татарстан республика</option>
-              <option value="Челябинск">Челябинск, Челябинская область</option>
-              <option value="Краснодар">Краснодар, Краснодарский Край</option>
-              <option value="Самара">Самара, Самарская область</option>
-              <option value="Москва">2 Москва</option>
-              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область 2
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область 2
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область 2
-              </option>
-              <option value="Казань">Казань, Татарстан республика 2</option>
-              <option value="Челябинск">
-                Челябинск, Челябинская область 2
-              </option>
-              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
-              <option value="Самара">Самара, Самарская область 2</option>
-            </select>
-          </div>
-          <div class="select row-filters__select">
-            <select
-              name="filter"
-              id="blog-filter"
-              class="select__input input--dropdown-has-search"
-            >
-              <option value="Все публикации">Все публикации</option>
-              <option value="Санкт-Петербург">Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область
-              </option>
-              <option value="Казань">Казань, Татарстан республика</option>
-              <option value="Челябинск">Челябинск, Челябинская область</option>
-              <option value="Краснодар">Краснодар, Краснодарский Край</option>
-              <option value="Самара">Самара, Самарская область</option>
-              <option value="Москва">2 Москва</option>
-              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область 2
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область 2
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область 2
-              </option>
-              <option value="Казань">Казань, Татарстан республика 2</option>
-              <option value="Челябинск">
-                Челябинск, Челябинская область 2
-              </option>
-              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
-              <option value="Самара">Самара, Самарская область 2</option>
-            </select>
-          </div>
-            </form>
-            <div class="blog__gallery">
-              <article class="blog-card">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Основные принципы ежедневного ухода за кожей
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a href="#" class="button button--primary blog-card__button"
-                      >Читать статью</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-1.jpg"
-                      alt=""
-                    />
-                  </picture>
+</p><p>
+Уважаемые клиенты! Убедительная просьба! Проверяйте заказы при их получении в ПВЗ или курьером, данная услуга является бесплатной. В случае обнаружения расхождений в количестве/качестве, необходимо в присутствии курьера составить акт о расхождении. При отсутствии акта претензии в наш адрес приниматься не будут.</p>
                 </div>
               </article>
-              <article class="blog-card blog-card--accent">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Скидка 30% на все бестселлеры Cosmomedica до конца мая во
-                      всех магазинах
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Подробнее об акции
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-3.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Торжественное открытие корнера Cosmomedica в ТЦ Авиапарк
-                      (Москва)
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Читать новость
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-2.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--grey">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">Новинка</h3>
-                    <p class="blog-card__desc">
-                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
-                      фирменных магазинах в России
-                    </p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a
-                      href="#"
-                      class="button button--primary button--dark blog-card__button"
-                      >Подробнее о новинке</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <article class="product-card @@className">
-  <picture class="product-card__pic">
-    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
-    <img class="product-card__img lazy" data-src="./img/catalog/card.png" alt="" />
-  </picture>
-  <div class="product-card__top">
-    <h3 class="product-card__name">
-      <a href="" class="product-card__link"
-        >Дневная защитная сыворотка с витамином D</a
-      >
-    </h3>
-    <form action="" class="chips product-card__options">
-      <div class="chips__track">
-        <div class="chips__content">
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" checked hidden>
-            <p class="chips__caption">200мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">100мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">50мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">15мл</p>
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="product-card__bottom">
-    <div class="product-card__add">
-      <button class="button button--primary product-card__button-add">
-        <svg class="button__icon">
-          <use xlink:href="./img/common/cart.svg#cart" />
-        </svg>
-        <span class="button__text">В корзину</span>
-      </button>
-      <div class="product-card__price">
-        <p class="product-card__price-old">4 000 ₽</p>
-        <p class="product-card__price-new">2 000 ₽</p>
-      </div>
-    </div>
-  </div>
-</article>
-
-                </div>
-              </article>
-              <article class="blog-card blog-card--grey">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">Новинка</h3>
-                    <p class="blog-card__desc">
-                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
-                      фирменных магазинах в России
-                    </p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a
-                      href="#"
-                      class="button button--primary button--dark blog-card__button"
-                      >Подробнее о новинке</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <article class="product-card @@className">
-  <picture class="product-card__pic">
-    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
-    <img class="product-card__img lazy" data-src="./img/catalog/card.png" alt="" />
-  </picture>
-  <div class="product-card__top">
-    <h3 class="product-card__name">
-      <a href="" class="product-card__link"
-        >Дневная защитная сыворотка с витамином D</a
-      >
-    </h3>
-    <form action="" class="chips product-card__options">
-      <div class="chips__track">
-        <div class="chips__content">
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" checked hidden>
-            <p class="chips__caption">200мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">100мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">50мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">15мл</p>
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="product-card__bottom">
-    <div class="product-card__add">
-      <button class="button button--primary product-card__button-add">
-        <svg class="button__icon">
-          <use xlink:href="./img/common/cart.svg#cart" />
-        </svg>
-        <span class="button__text">В корзину</span>
-      </button>
-      <div class="product-card__price">
-        <p class="product-card__price-old">4 000 ₽</p>
-        <p class="product-card__price-new">2 000 ₽</p>
-      </div>
-    </div>
-  </div>
-</article>
-
-                </div>
-              </article>
-              <article class="blog-card">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Уход за кожей <br>в холодное время года: рекомендуемая косметика из каталога Cosmomedica
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Читать новость
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-4.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--accent">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Скидка 20% на все бестселлеры Cosmomedica до конца января во всех магазинах
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Подробнее об акции
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-5.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--grey">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">Новинка</h3>
-                    <p class="blog-card__desc">
-                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
-                      фирменных магазинах в России
-                    </p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a
-                      href="#"
-                      class="button button--primary button--dark blog-card__button"
-                      >Подробнее о новинке</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <article class="product-card @@className">
-  <picture class="product-card__pic">
-    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
-    <img class="product-card__img lazy" data-src="./img/catalog/card.png" alt="" />
-  </picture>
-  <div class="product-card__top">
-    <h3 class="product-card__name">
-      <a href="" class="product-card__link"
-        >Дневная защитная сыворотка с витамином D</a
-      >
-    </h3>
-    <form action="" class="chips product-card__options">
-      <div class="chips__track">
-        <div class="chips__content">
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" checked hidden>
-            <p class="chips__caption">200мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">100мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">50мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">15мл</p>
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="product-card__bottom">
-    <div class="product-card__add">
-      <button class="button button--primary product-card__button-add">
-        <svg class="button__icon">
-          <use xlink:href="./img/common/cart.svg#cart" />
-        </svg>
-        <span class="button__text">В корзину</span>
-      </button>
-      <div class="product-card__price">
-        <p class="product-card__price-old">4 000 ₽</p>
-        <p class="product-card__price-new">2 000 ₽</p>
-      </div>
-    </div>
-  </div>
-</article>
-
+              <article class="doc-card">
+                <h3 class="doc-card__title">Правила обмена и возврата</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ от 20.10.1998 N 1222, от 06.02.2002 N 81)</p>
                 </div>
               </article>
             </div>
-            <div class="container">
-              <button class="button button--primary button--fullsize button--light blog__button-load">Загрузить ещё</button>
+          </div>
+        </section>
+        <section class="doc doc--small">
+          <div class="doc__container">
+            <h2 class="doc__title">Вопросы и ответы по доставке</h2>
+            <div class="doc__gallery">
+              <article class="doc-card">
+                <h3 class="doc-card__title">Почему доставка задерживается?</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ ох... <a href="#">Читать полностью</a> </p>
+                </div>
+              </article>
+              <article class="doc-card">
+                <h3 class="doc-card__title">Как отслеживать заказ?</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ ох... <a href="#">Читать полностью</a> </p>
+                </div>
+              </article>
+              <article class="doc-card">
+                <h3 class="doc-card__title">Можно ли заказать в страны СНГ?</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ ох...  <a href="#">Читать полностью</a></p>
+                </div>
+              </article>
+              <article class="doc-card">
+                <h3 class="doc-card__title">Почему доставка задерживается?</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ ох...  <a href="#">Читать полностью</a></p>
+                </div>
+              </article>
+              <article class="doc-card">
+                <h3 class="doc-card__title">Как отслеживать заказ?</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ ох...  <a href="#">Читать полностью</a></p>
+                </div>
+              </article>
+              <article class="doc-card">
+                <h3 class="doc-card__title">Можно ли заказать в страны СНГ?</h3>
+                <div class="doc-card__desc">
+                  <p>Парфюмерно-косметические товары входят в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки или комплектации (в ред. Постановлений Правительства РФ ох... <a href="#">Читать полностью</a>  </p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
