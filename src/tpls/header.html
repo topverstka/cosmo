@@ -57,32 +57,13 @@
           Выберите язык, используемый на сайте
         </h3>
         <div class="header-snack__content">
-          <form class="header-snack__selector selector__group">
-            <label class="selector-option">
-              <input
-                class="selector-option__input"
-                type="radio"
-                name="language"
-                checked
-              />
-              <p class="selector-option__caption">Русский</p>
-            </label>
-            <label class="selector-option">
-              <input
-                class="selector-option__input"
-                type="radio"
-                name="language"
-              />
-              <p class="selector-option__caption">English</p>
-            </label>
-          </form>
-          <form action="" class="chips chips--ghost ">
+          <form action="" class="chips chips--ghost header-snack__language">
             <div class="chips__content">
-              <label for="" class="chips__item">
+              <label class="chips__item">
                 <input type="radio" class="chips__input" checked hidden name="language">
                 <p class="chips__caption">Русский</p>
               </label>
-              <label for="" class="chips__item">
+              <label class="chips__item">
                 <input type="radio" class="chips__input" hidden name="language">
                 <p class="chips__caption">English</p>
               </label>
@@ -321,16 +302,14 @@
             <a href="#changes" class="header__nav-link">До и после</a>
             <div class="header__nav-item-dropdown">
               <div class="header__nav-item-dropdown-content">
-                <div class="header__nav-item-dropdown-heading">
-                  <h3 class="header__nav-item-dropdodwn-title">
-                    Решение кожных проблем с помощью Cosmomedica
-                  </h3>
-                  <a
-                    href="#"
-                    class="button button--primary button--dark header__button-services"
-                    >См. все проблемы</a
-                  >
-                </div>
+                <h3 class="header__nav-item-dropdodwn-title">
+                  Решение кожных проблем с помощью Cosmomedica
+                </h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                  >См. все проблемы</a
+                >
                 <div class="header__nav-item-dropdown-cards">
                   <article class="header__nav-item-dropdown-card blog-card">
                     <div class="blog-card__info">
@@ -420,16 +399,14 @@
             <a href="#shops" class="header__nav-link">Магазины</a>
             <div class="header__nav-item-dropdown">
               <div class="header__nav-item-dropdown-content">
-                <div class="header__nav-item-dropdown-heading">
                   <h3 class="header__nav-item-dropdodwn-title">
                     Фирменные магазины Cosmomedica в вашем городе
                   </h3>
                   <a
                     href="#"
-                    class="button button--primary button--dark header__button-services"
+                    class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
                     >См. все магазины</a
                   >
-                </div>
                 <div class="header__nav-item-dropdown-cards">
                   <article class="header__nav-item-dropdown-card blog-card">
                     <div class="blog-card__info">
@@ -491,16 +468,14 @@
             <a href="#blog" class="header__nav-link">Блог</a>
             <div class="header__nav-item-dropdown">
               <div class="header__nav-item-dropdown-content">
-                <div class="header__nav-item-dropdown-heading">
-                  <h3 class="header__nav-item-dropdodwn-title">
-                    Статьи, новости, акции
-                  </h3>
-                  <a
-                    href="#"
-                    class="button button--primary button--dark header__button-services"
-                    >См. все записи</a
-                  >
-                </div>
+                <h3 class="header__nav-item-dropdodwn-title">
+                  Статьи, новости, акции
+                </h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                  >См. все записи</a
+                >
                 <div class="header__nav-item-dropdown-cards">
                   <article class="header__nav-item-dropdown-card blog-card">
                     <div class="blog-card__info">
@@ -565,14 +540,12 @@
             <a href="#about" class="header__nav-link">О бренде</a>
             <div class="header__nav-item-dropdown">
               <div class="header__nav-item-dropdown-content">
-                <div class="header__nav-item-dropdown-heading">
                   <h3 class="header__nav-item-dropdodwn-title">Главное</h3>
                   <a
                     href="#"
                     class="button button--primary button--dark header__button-services"
                     >Подробнее о бренде</a
                   >
-                </div>
                 <article
                   class="header__nav-item-dropdown-card--single header__nav-item-dropdown-card blog-card"
                 >
@@ -761,6 +734,13 @@
             <a href="#" class="button button--primary button--light minicart__button">Перейти в каталог</a>
           </div>
         </section>
+        <button
+          class="button button--primary button--circle button--dark button-burger burger header__button"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
 
         <button
           class="button button--primary button--circle button--dark button-auth header__button"

@@ -2,6 +2,10 @@
   display: block;
   max-width: 202px;
   height: 28px;
+  @media (max-width: $mobile) {
+    position: relative;
+    z-index: 2;
+  }
 }
 .logo__img {
   display: block;

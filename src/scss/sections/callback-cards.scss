@@ -1,0 +1,34 @@
+.callback-cards {
+  padding-top: 40px;
+}
+.callback-cards__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+}
+.callback-cards-card {
+  background-color: var(--bg-element);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 380px
+}
+.callback-cards-card__title {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 110%;
+  color: #000000;
+  margin-bottom: 21px;
+}
+.callback-cards-card__title > *{
+  color: inherit;
+}
+.callback-cards-card__desc {
+  font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+color: #000000;
+}

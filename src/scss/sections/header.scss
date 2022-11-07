@@ -12,14 +12,64 @@
   padding-right: 28px;
   padding-left: 28px;
   margin-left: -8px;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+    position: relative;
+  }
+}
+.header__container::before {
+  @media (max-width: $mobile) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 63px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #5F6C75;
+    opacity: 0.3;
+    z-index: 2;
+  }
+}
+.header__container::after {
+  @media (max-width: $mobile) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 128px;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
+  }
 }
 .header__menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    margin-top: -33px;
+    z-index: 1;
+    position: relative;
+  }
 }
 .header__nav {
   margin-right: 77px;
+  @media (max-width: $mobile) {
+    margin-right: 0;
+    width: 100%;
+    padding-top: 28px;
+  }
 }
 .header__nav-links {
   display: flex;
@@ -27,11 +77,26 @@
   justify-content: flex-start;
   text-transform: uppercase;
   transition: var(--tr);
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    width: inherit;
+    padding-top: 32px;
+  }
 }
 .header__nav-item {
   font-size: 12px;
   font-weight: 700;
   line-height: 14px;
+  @media (max-width: $mobile) {
+    width: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
 }
 .header__nav-item:last-of-type {
   margin-right: 0;
@@ -42,6 +107,13 @@
   padding-right: 28px;
   margin-top: 34px;
   margin-bottom: 36px;
+  @media (max-width: $mobile) {
+    padding-right: 0;
+    width: inherit;
+    padding: 16.5px 16px;
+    margin-top: unset;
+    margin-bottom: unset;
+  }
 }
 .header__nav-link:hover {
   @media (any-hover: hover) {
@@ -50,6 +122,9 @@
     margin-top: unset;
     margin-bottom: unset;
     color: #6c7982;
+    @media (max-width: $mobile) {
+      padding: 16.5px 16px;
+    }
   }
 }
 .header__button {
@@ -71,6 +146,11 @@
   align-items: center;
   justify-content: flex-start;
   margin-right: 77px;
+  @media (max-width: $mobile) {
+    order: -1;
+    margin-right: auto;
+    margin-top: -25px;
+  }
 }
 .header__picker {
   display: flex;
@@ -136,8 +216,10 @@
 .header-snack__content {
   width: 44%;
 }
-.header-snack__content .selector__group {
+.header-snack__language  {
   justify-content: center;
+  margin-bottom: 0;
+  --chips-item-mb:0;
 }
 .header-snack__close {
   --size: 40px;
@@ -185,6 +267,14 @@
   transition: all 0.3s ease, pointer-events 0s;
   transform: scaleY(0);
   transform-origin: top;
+  @media (max-width: $mobile) {
+    position: static;
+    padding-top: 0;
+    box-shadow: none;
+    overflow: hidden;
+    max-height: 0px;
+    min-height: initial;
+  }
 }
 
 .header__nav-item-dropdown-content {
@@ -194,9 +284,23 @@
   padding-bottom: 60px;
   padding-left: 127px;
   border-top: 1px solid rgba(108, 121, 130, 0.3);
+
+  display: grid;
+  grid-template-areas:
+      "title button"
+      "cards cards";
+  row-gap: 24px;
+  justify-content: space-between;
+  @media (max-width: $mobile) {
+    padding: 16px;
+    border-top: none;
+  }
 }
 .header__nav-item-dropdown-content--nav {
   padding-right: 74px;
+  @media (max-width: $mobile) {
+    padding-right: 16px;
+  }
 }
 
 .header__nav-item-dropdown:hover,
@@ -204,6 +308,9 @@
   pointer-events: initial;
   opacity: 1;
   transform: scaleY(1);
+  @media (max-width: $mobile) {
+    max-height: 3000px;
+  }
 }
 
 .header__nav-catalog {
@@ -213,6 +320,9 @@
   --item-bottom: 16px;
   --item-fz: 14px;
   justify-content: space-between;
+  @media (max-width: $mobile) {
+    display: block;
+  }
 }
 .header__nav-item-dropdown-heading {
   display: flex;
@@ -225,8 +335,13 @@
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
+  grid-area: title;
+}
+.header__nav-item-dropdodwn-button {
+  grid-area: button;
 }
 .header__nav-item-dropdown-cards {
+  grid-area: cards;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 8px;
@@ -270,5 +385,19 @@
 
 .header__controls {
   position: relative;
+  @media (max-width: $mobile) {
+    order: -2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 11px;
+    row-gap: 27px;
+    margin-left: auto;
+  }
 }
 
+
+.button-burger {
+  @media (min-width: $mobile) {
+    display: none;
+  }
+}

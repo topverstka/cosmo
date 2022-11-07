@@ -1,5 +1,16 @@
 .select {
   position: relative;
+  --value-color: #fff;
+  --bg: #79868d;
+  --angle-color: #fff;
+  --brad: 62px;
+}
+.select > .select{
+  --color: inherit;
+  --bg: inherit;
+  --angle-color: inherit;
+  --value-color: inherit;
+  --brad: inherit;
 }
 
 .select__list--dropdown {
@@ -30,7 +41,7 @@
   pointer-events: none;
   content: "";
   background-color: #000;
-  @include getmask("../img/common/search.svg");
+  @include getmask("../img/common/search-mask.svg");
 }
 .select__list--dropdown::after {
   position: absolute;
@@ -87,11 +98,11 @@
 }
 .select__list--single > .select__item {
   width: 100%;
-  padding: 10px 17px 11px 17px;
+  padding: 10px 47px 11px 17px;
   margin-left: unset;
-  color: #fff;
-  background: #79868d;
-  border-radius: 62px;
+  color: var(--value-color);
+  background: var(--bg);
+  border-radius: var(--brad);
   // opacity: 0.4;
 }
 .select__list--single {
@@ -106,7 +117,7 @@
   height: 20px;
   pointer-events: none;
   content: "";
-  background-color: #fff;
+  background-color: var(--angle-color);
   transition: all 0.3s ease;
   transform: rotate(180deg);
   @include getmask("../img/common/arrow-circle.svg");

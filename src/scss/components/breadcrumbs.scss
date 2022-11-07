@@ -1,0 +1,35 @@
+.breadcrumbs {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #A1AEB3;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.breadcrumbs__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.breadcrumbs__item::after {
+  margin-left: 10px;
+  margin-right: 10px;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/common/arrow-right.svg");
+  background-size: 9px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.breadcrumbs__item:last-of-type::after {
+  content: none;
+}

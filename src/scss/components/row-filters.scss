@@ -1,0 +1,15 @@
+.row-filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.row-filters__select {
+  margin-right: 8px;
+  min-width: fit-content;
+  padding-right: 10px;
+  --bg: #fff;
+  --angle-color: #000;
+  --value-color: #000;
+  --brad: 6px;
+}
