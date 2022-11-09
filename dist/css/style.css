@@ -2675,6 +2675,45 @@
   content: none;
 }
 
+.error {
+  padding-top: clamp(60px, 26vh, 260px);
+}
+
+.message {
+  background-color: #fff;
+  max-width: 708px;
+  width: 100%;
+  padding-top: 80px;
+  padding-left: 119px;
+  padding-right: 119px;
+  padding-bottom: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.message__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.message__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #A1AEB3;
+  margin-bottom: 40px;
+}
+
 @font-face {
   font-family: "RF Dewi Extended";
   font-style: normal;
