@@ -1,6 +1,11 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 @use "sass:math";
 
+// Библиотеки
+@import "./libs/swiper";
+// @import "./libs/lightgallery";
+// @import "./libs/rangeslider";
+
 // Базовые стили, шаблоны, заготовки
 @import "./base";
 @import "./variables";
@@ -93,10 +98,6 @@ input[type="search"]::-webkit-search-cancel-button {
   opacity: 0;
 }
 
-// Библиотеки
-@import "./libs/swiper";
-// @import "./libs/lightgallery";
-// @import "./libs/rangeslider";
 
 // Общие стили проекта
 @import "./common";
@@ -106,6 +107,16 @@ input[type="search"]::-webkit-search-cancel-button {
 
 // Модальные окна
 // @import "./components/modals/";
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1186px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
 
 // Секции
 @import "./sections/header";
@@ -123,6 +134,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @import "./sections/callback-cards";
 @import "./sections/doc";
+
+@import "./sections/about-features";
+@import "./sections/about-ol";
+@import "./sections/shops";
 
 @import "./sections/footer";
 

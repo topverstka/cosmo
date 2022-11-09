@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>О бренде</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221107140340" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221109142843" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -1311,467 +1311,279 @@
           <h1 class="page-heading__title">О бренде</h1>
         </section>
         <section class="hero">
-          <div class="hero__img"></div>
-                <article
-                  class="header__nav-item-dropdown-card--single header__nav-item-dropdown-card blog-card"
-                >
-                  <div class="blog-card__info">
-                    <div class="blog-card__top">
-                      <h3 class="blog-card__title">
-                        Здравствуйте! <br />
-                        Меня зовут Елена Кондрашева. <br />
-                        Я врач-дерматолог и косметолог.
-                      </h3>
-                    </div>
-                    <div class="blog-card__bottom">
-                      <p class="blog-card__desc">
-                        Имея 20-летний практический опыт омоложения и лечения
-                        кожи, я приняла решение о создании собственной
-                        косметической марки. Со своей коман- дой биохимиков и
-                        технологов мне удалось разрабо- тать комплексную систему
-                        ухода, которая основана на базовых принципах омоложения
-                        кожи...
-                      </p>
-                    </div>
-                  </div>
-                  <div class="blog-card__media">
-                    <picture class="blog-card__pic">
-                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                      <img
-                        class="blog-card__img lazy"
-                        data-src="./img/about/header-about.jpg"
-                        alt=""
-                      />
-                    </picture>
-                  </div>
-                </article>
+          <div class="hero__container">
+            <div class="hero__layout">
+              <figure class="hero__media">
+                <picture class="hero__pic">
+                  <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                  <img
+                    class="hero__img"
+                    src="./img/about/about-hero.jpg"
+                    alt=""
+                  />
+                </picture>
+              </figure>
+              <h2 class="hero__title">
+                Здравствуйте! Меня <br>
+                зовут Елена Кондрашева. <br>
+                Я врач — дерматолог  <br>
+                и косметолог
+              </h2>
+              <div class="hero__desc">
+                <p class="hero__paragraph">
+                  Имея 20-летний практический опыт омоложения и лечения кожи, я приняла решение о создании собственной косметической марки. Со своей коман- дой биохимиков и технологов мне удалось разрабо- тать комплексную систему ухода, которая основана на базовых принципах омоложения кожи:
+                </p>
+                <ol class="hero__ol">
+                  <li class="hero__ol-item">
+                    Очищениe
+                  </li>
+                  <li class="hero__ol-item">
+                    Отшелушиваниe
+                  </li>
+                  <li class="hero__ol-item">
+                    Лимфодренаж
+                  </li>
+                  <li class="hero__ol-item">
+                    Стимуляция
+                  </li>
+                  <li class="hero__ol-item">
+                    Защита
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-ol">
+          <div class="about-ol__container">
+            <h2 class="section-title about-ol__title">Почему моя косметика работает?</h2>
+            <ol class="about-ol-list">
+              <li class="about-ol-list__item">Оптимальное количество активов с подтвержденной клинической эффективностью.</li>
+              <li class="about-ol-list__item">Натуральная база крема, повторяющая липидный состав кожи.</li>
+              <li class="about-ol-list__item">Природная антиоксидантная фуллереновая вода.</li>
+              <li class="about-ol-list__item">Уникальная сбалансированная рецептура.</li>
+              <li class="about-ol-list__item">Отсутствие критических химических элементов и агрессивных консервантов.</li>
+            </ol>
+          </div>
         </section>
 
+        <section class="about-features">
+          <div class="about-features__container">
+            <div class="about-features__gallery">
+              <figure class="about-features__media">
+                <picture class="about-features__pic">
+                  <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                  <img
+                    class="about-features__img lazy"
+                    data-src="./img/about/about-feature-1.jpg"
+                    alt=""
+                  />
+                </picture>
+              </figure>
+              <figure class="about-features__media">
+                <picture class="about-features__pic">
+                  <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                  <img
+                    class="about-features__img lazy"
+                    data-src="./img/about/about-feature-2.jpg"
+                    alt=""
+                  />
+                </picture>
+              </figure>
+              <figure class="about-features__media">
+                <picture class="about-features__pic">
+                  <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                  <img
+                    class="about-features__img lazy"
+                    data-src="./img/about/about-feature-3.jpg"
+                    alt=""
+                  />
 
-        <section class="blog">
-          <div class="blog__container">
-            <form action="" class="blog__filters row-filters">
-            <div class="select row-filters__select">
-            <select
-              name="sort"
-              id="blog-sort"
-              class="select__input input--dropdown-has-search"
-            >
-              <option value="Москва">Сначала новые</option>
-              <option value="Санкт-Петербург">Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область
-              </option>
-              <option value="Казань">Казань, Татарстан республика</option>
-              <option value="Челябинск">Челябинск, Челябинская область</option>
-              <option value="Краснодар">Краснодар, Краснодарский Край</option>
-              <option value="Самара">Самара, Самарская область</option>
-              <option value="Москва">2 Москва</option>
-              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область 2
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область 2
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область 2
-              </option>
-              <option value="Казань">Казань, Татарстан республика 2</option>
-              <option value="Челябинск">
-                Челябинск, Челябинская область 2
-              </option>
-              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
-              <option value="Самара">Самара, Самарская область 2</option>
-            </select>
-          </div>
-          <div class="select row-filters__select">
-            <select
-              name="filter"
-              id="blog-filter"
-              class="select__input input--dropdown-has-search"
-            >
-              <option value="Все публикации">Все публикации</option>
-              <option value="Санкт-Петербург">Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область
-              </option>
-              <option value="Казань">Казань, Татарстан республика</option>
-              <option value="Челябинск">Челябинск, Челябинская область</option>
-              <option value="Краснодар">Краснодар, Краснодарский Край</option>
-              <option value="Самара">Самара, Самарская область</option>
-              <option value="Москва">2 Москва</option>
-              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область 2
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область 2
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область 2
-              </option>
-              <option value="Казань">Казань, Татарстан республика 2</option>
-              <option value="Челябинск">
-                Челябинск, Челябинская область 2
-              </option>
-              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
-              <option value="Самара">Самара, Самарская область 2</option>
-            </select>
-          </div>
-            </form>
-            <div class="blog__gallery">
-              <article class="blog-card">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Основные принципы ежедневного ухода за кожей
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a href="#" class="button button--primary blog-card__button"
-                      >Читать статью</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-1.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--accent">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Скидка 30% на все бестселлеры Cosmomedica до конца мая во
-                      всех магазинах
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Подробнее об акции
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-3.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Торжественное открытие корнера Cosmomedica в ТЦ Авиапарк
-                      (Москва)
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Читать новость
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-2.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--grey">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">Новинка</h3>
-                    <p class="blog-card__desc">
-                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
-                      фирменных магазинах в России
-                    </p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a
-                      href="#"
-                      class="button button--primary button--dark blog-card__button"
-                      >Подробнее о новинке</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <article class="product-card @@className">
-  <picture class="product-card__pic">
-    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
-    <img class="product-card__img lazy" data-src="./img/catalog/card.png" alt="" />
-  </picture>
-  <div class="product-card__top">
-    <h3 class="product-card__name">
-      <a href="" class="product-card__link"
-        >Дневная защитная сыворотка с витамином D</a
-      >
-    </h3>
-    <form action="" class="chips product-card__options">
-      <div class="chips__track">
-        <div class="chips__content">
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" checked hidden>
-            <p class="chips__caption">200мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">100мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">50мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">15мл</p>
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="product-card__bottom">
-    <div class="product-card__add">
-      <button class="button button--primary product-card__button-add">
-        <svg class="button__icon">
-          <use xlink:href="./img/common/cart.svg#cart" />
-        </svg>
-        <span class="button__text">В корзину</span>
-      </button>
-      <div class="product-card__price">
-        <p class="product-card__price-old">4 000 ₽</p>
-        <p class="product-card__price-new">2 000 ₽</p>
-      </div>
-    </div>
-  </div>
-</article>
+                </picture>
+              </figure>
+              <figure class="about-features__media">
+                <picture class="about-features__pic">
+                  <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                  <img
+                    class="about-features__img lazy"
+                    data-src="./img/about/about-feature-4.jpg"
+                    alt=""
+                  />
 
+                </picture>
+              </figure>
+              <figure class="about-features__media">
+                <picture class="about-features__pic">
+                  <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                  <img
+                    class="about-features__img lazy"
+                    data-src="./img/about/about-feature-5.jpg"
+                    alt=""
+                  />
+                </picture>
+              </figure>
+            </div>
+            <div class="about-features__columns">
+              <article class="about-features__column">
+                <h3 class="about-features__column-title">Собственное производство</h3>
+                <div class="about-features__column-desc">
+                  <p>
+                    Важно, что мы ничего не придумываем, не выстраиваем маркетинг вокруг несуществующих волшебных «молекул молодости». Мы просто закупаем самые эффективные ингредиенты в лучших лабораториях мира и создаем на их основе действенную косметику.
+                  </p>
                 </div>
               </article>
-              <article class="blog-card blog-card--grey">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">Новинка</h3>
-                    <p class="blog-card__desc">
-                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
-                      фирменных магазинах в России
-                    </p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a
-                      href="#"
-                      class="button button--primary button--dark blog-card__button"
-                      >Подробнее о новинке</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <article class="product-card @@className">
-  <picture class="product-card__pic">
-    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
-    <img class="product-card__img lazy" data-src="./img/catalog/card.png" alt="" />
-  </picture>
-  <div class="product-card__top">
-    <h3 class="product-card__name">
-      <a href="" class="product-card__link"
-        >Дневная защитная сыворотка с витамином D</a
-      >
-    </h3>
-    <form action="" class="chips product-card__options">
-      <div class="chips__track">
-        <div class="chips__content">
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" checked hidden>
-            <p class="chips__caption">200мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">100мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">50мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">15мл</p>
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="product-card__bottom">
-    <div class="product-card__add">
-      <button class="button button--primary product-card__button-add">
-        <svg class="button__icon">
-          <use xlink:href="./img/common/cart.svg#cart" />
-        </svg>
-        <span class="button__text">В корзину</span>
-      </button>
-      <div class="product-card__price">
-        <p class="product-card__price-old">4 000 ₽</p>
-        <p class="product-card__price-new">2 000 ₽</p>
-      </div>
-    </div>
-  </div>
-</article>
-
-                </div>
-              </article>
-              <article class="blog-card">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Уход за кожей <br>в холодное время года: рекомендуемая косметика из каталога Cosmomedica
-                    </h3>
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Читать новость
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-4.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--accent">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">
-                      Скидка 20% на все бестселлеры Cosmomedica до конца января во всех магазинах
-                    <p class="blog-card__desc">21 сен. 2022</p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <button class="button button--primary blog-card__button">
-                      Подробнее об акции
-                    </button>
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <picture class="blog-card__pic">
-                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
-                    <img
-                      class="blog-card__img lazy"
-                      data-src="./img/magazine/blog-5.jpg"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-card blog-card--grey">
-                <div class="blog-card__info">
-                  <div class="blog-card__top">
-                    <h3 class="blog-card__title">Новинка</h3>
-                    <p class="blog-card__desc">
-                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
-                      фирменных магазинах в России
-                    </p>
-                  </div>
-                  <div class="blog-card__bottom">
-                    <a
-                      href="#"
-                      class="button button--primary button--dark blog-card__button"
-                      >Подробнее о новинке</a
-                    >
-                  </div>
-                </div>
-                <div class="blog-card__media">
-                  <article class="product-card @@className">
-  <picture class="product-card__pic">
-    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
-    <img class="product-card__img lazy" data-src="./img/catalog/card.png" alt="" />
-  </picture>
-  <div class="product-card__top">
-    <h3 class="product-card__name">
-      <a href="" class="product-card__link"
-        >Дневная защитная сыворотка с витамином D</a
-      >
-    </h3>
-    <form action="" class="chips product-card__options">
-      <div class="chips__track">
-        <div class="chips__content">
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" checked hidden>
-            <p class="chips__caption">200мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">100мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">50мл</p>
-          </label>
-          <label class="chips__item">
-            <input type="radio" name="option" class="chips__input" hidden>
-            <p class="chips__caption">15мл</p>
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="product-card__bottom">
-    <div class="product-card__add">
-      <button class="button button--primary product-card__button-add">
-        <svg class="button__icon">
-          <use xlink:href="./img/common/cart.svg#cart" />
-        </svg>
-        <span class="button__text">В корзину</span>
-      </button>
-      <div class="product-card__price">
-        <p class="product-card__price-old">4 000 ₽</p>
-        <p class="product-card__price-new">2 000 ₽</p>
-      </div>
-    </div>
-  </div>
-</article>
-
+              <article class="about-features__column">
+                <h3 class="about-features__column-title">Технологичная упаковка</h3>
+                <div class="about-features__column-desc">
+                  <p>Защищает косметику от взаимодействия с кислородом и от попадания пыли.</p>
+                  <p>Соответствует жёстким нормам сертификации Ecocert (attestation of conformity).
+        Обеспечивает высокую производительность дозирования до последней капли.</p>
+                  <p>Состоит всего из 4 частей, что меньше чем у конкурентов (обычно диспенсеры состоят из 11-16 частей).</p>
+                  <p>Не содержит металлических частей, сделан на 100% из пластика. 100% Recyclable.</p>
                 </div>
               </article>
             </div>
+          </div>
+        </section>
+
+        <section class="shops">
+          <div class="shops__container">
+            <div class="section-heading">
+              <h2 class="section-title shops__title">Фирменные магазины</h2>
+              <a href="#" class="button button--primary button--dark shops__button-all">См. все магазины</a>
+            </div>
+            <div class="swiper grabber-carousel shops__gallery">
+              <div class="swiper-wrapper">
+                <article class="swiper-slide grabber-carousel__slide">
+                  <figure class="grabber-carousel__slide-media">
+                    <picture class="grabber-carousel__slide-pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="grabber-carousel__slide-img lazy"
+                        data-src="./img/shops/shop-1.jpg"
+                        alt=""
+                      />
+                    </picture>
+                  </figure>
+                  <h3 class="grabber-carousel__slide-title">Москва, ТЦ Авиапарк</h3>
+                  <p class="grabber-carousel__slide-desc">Ходынский б-р, 4, 1-ый этаж (напротив аквариума)</p>
+                </article>
+                <article class="swiper-slide grabber-carousel__slide">
+                  <figure class="grabber-carousel__slide-media">
+                    <picture class="grabber-carousel__slide-pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="grabber-carousel__slide-img lazy"
+                        data-src="./img/shops/shop-2.jpg"
+                        alt=""
+                      />
+                    </picture>
+                  </figure>
+                  <h3 class="grabber-carousel__slide-title">Екатеринург, ТЦ Гринвич</h3>
+                  <p class="grabber-carousel__slide-desc">Ходынский б-р, 4, 1-ый этаж (напротив аквариума)</p>
+                </article>
+                <article class="swiper-slide grabber-carousel__slide">
+                  <figure class="grabber-carousel__slide-media">
+                    <picture class="grabber-carousel__slide-pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="grabber-carousel__slide-img lazy"
+                        data-src="./img/shops/shop-3.jpg"
+                        alt=""
+                      />
+                    </picture>
+                  </figure>
+                  <h3 class="grabber-carousel__slide-title">Дубай, mall of Emirates</h3>
+                  <p class="grabber-carousel__slide-desc">Ходынский б-р, 4, 1-ый этаж (напротив аквариума)</p>
+                </article>
+                <article class="swiper-slide grabber-carousel__slide">
+                  <figure class="grabber-carousel__slide-media">
+                    <picture class="grabber-carousel__slide-pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="grabber-carousel__slide-img lazy"
+                        data-src="./img/shops/shop-1.jpg"
+                        alt=""
+                      />
+                    </picture>
+                  </figure>
+                  <h3 class="grabber-carousel__slide-title">Москва, ТЦ Авиапарк</h3>
+                  <p class="grabber-carousel__slide-desc">Ходынский б-р, 4, 1-ый этаж (напротив аквариума)</p>
+                </article>
+                <article class="swiper-slide grabber-carousel__slide">
+                  <figure class="grabber-carousel__slide-media">
+                    <picture class="grabber-carousel__slide-pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="grabber-carousel__slide-img lazy"
+                        data-src="./img/shops/shop-2.jpg"
+                        alt=""
+                      />
+                    </picture>
+                  </figure>
+                  <h3 class="grabber-carousel__slide-title">Екатеринург, ТЦ Гринвич</h3>
+                  <p class="grabber-carousel__slide-desc">Ходынский б-р, 4, 1-ый этаж (напротив аквариума)</p>
+                </article>
+                <article class="swiper-slide grabber-carousel__slide">
+                  <figure class="grabber-carousel__slide-media">
+                    <picture class="grabber-carousel__slide-pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="grabber-carousel__slide-img lazy"
+                        data-src="./img/shops/shop-3.jpg"
+                        alt=""
+                      />
+                    </picture>
+                  </figure>
+                  <h3 class="grabber-carousel__slide-title">Дубай, mall of Emirates</h3>
+                  <p class="grabber-carousel__slide-desc">Ходынский б-р, 4, 1-ый этаж (напротив аквариума)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="locations locations--no-bg">
+          <div class="locations__container">
+            <div class="locations__gallery">
+              <article class="locations-card locations-card--reverse">
+                <picture class="locations-card__pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="locations-card__img lazy"
+                    data-src="./img/locations/location-1.jpg"
+                    alt=""
+                  />
+                </picture>
+                <h3 class="locations-card__title">
+                  Cosmomedica на Коробейников
+                </h3>
+                <p class="locations-card__address">Москва, Коробейников пер.</p>
+                <p class="locations-card__desc">
+                  Косметологические процедуры, индивидуальный подбор косметики,
+                  уход за волосами
+                </p>
+              </article>
+              <article class="locations-card">
+                <picture class="locations-card__pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="locations-card__img lazy"
+                    data-src="./img/locations/location-2.jpg"
+                    alt=""
+                  />
+                </picture>
+                <h3 class="locations-card__title">Cosmomedica Center</h3>
+                <p class="locations-card__address">Москва, Малая Бронная</p>
+                <p class="locations-card__desc">
+                  Косметологические процедуры, индивидуальный подбор косметики,
+                  уход за волосами
+                </p>
+              </article>
+            </div>
             <div class="container">
-              <button class="button button--primary button--fullsize button--light blog__button-load">Загрузить ещё</button>
+              <a href="#" class="button button--primary button--dark button--fullsize locations__button-all"
+                >Подробнее об услугах Cosmomedica</a
+              >
             </div>
           </div>
         </section>
@@ -2157,6 +1969,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221107140340"></script>
+    <script src="./js/bundle.min.js?_v=20221109142843"></script>
   </body>
 </html>

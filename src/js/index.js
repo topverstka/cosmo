@@ -11,8 +11,6 @@ import "./unstable/burger.js";
 /**
  * Textarea resize
  */
-
-
 const textareas = document.querySelectorAll('.textarea');
 
 function createResizer(area) {
@@ -240,12 +238,38 @@ import "./unstable/tabs.js";
  */
 import "./utils/smooth-anchors.js";
 
-let promoSlider = new Swiper(".promo-carousel", {
-  modules: [Navigation, Autoplay, Pagination],
-  autoplay: {
-    delay: 3000,
-  },
-  // grabCursor: true,
+if (document.querySelector('.promo-carousel')) {
+  let promoSlider = new Swiper(".promo-carousel", {
+    modules: [Navigation, Autoplay, Pagination],
+    autoplay: {
+      delay: 3000,
+    },
+    // grabCursor: true,
+    // effect: 'creative',
+    // creativeEffect: {
+    // prev: {
+    //   shadow: false,
+    //   translate: [0, 0, -400],
+    // },
+    // next: {
+    //   translate: ['100%', 0, 0],
+    // },
+    // },
+    pagination: {
+      el: ".promo-carousel__pagination",
+      clickable: true,
+    },
+  });
+}
+
+if (document.querySelector('.grabber-carousel')) {
+let promoSlider = new Swiper(".grabber-carousel", {
+  grabCursor: true,
+  slidesPerView: 2.5,
+  spaceBetween: 8,
+  // cssMode: true,
+  // freeMode: true,
+  // centeredSlides: true,
   // effect: 'creative',
   // creativeEffect: {
   // prev: {
@@ -256,11 +280,8 @@ let promoSlider = new Swiper(".promo-carousel", {
   //   translate: ['100%', 0, 0],
   // },
   // },
-  pagination: {
-    el: ".promo-carousel__pagination",
-    clickable: true,
-  },
 });
+}
 
 // Аккордеон
 // const accordions = new DismalModules.Accordions()

@@ -1,10 +1,15 @@
 .locations {
   padding-top: 40px;
+  --bg: var(--bg-element);
+}
+.locations--no-bg {
+  padding-top: 0;
+ --bg: transparent;
 }
 .locations__container {
   padding-top: 180px;
   padding-bottom: 80px;
-  background-color: #fff;
+  background-color: var(--bg);
   border-radius: 12px;
 }
 .locations__gallery {
@@ -13,6 +18,9 @@
   column-gap: 127px;
   justify-content: center;
   margin-bottom: 80px;
+}
+.locations--no-bg .locations__container {
+  padding-top: 120px;
 }
 
 .locations-card {

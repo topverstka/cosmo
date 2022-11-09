@@ -1,3 +1,54 @@
 .hero {
   margin-bottom: 40px;
 }
+.hero__layout {
+  display: grid;
+  grid-template-areas: "media media" "title desc";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  row-gap: 40px;
+  max-width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
+.hero__media {
+  grid-area: media;
+  display: block;
+}
+.hero__pic {
+  display: block;
+}
+.hero__img {
+  border-radius: 12px;
+  height: 500px;
+  display: block;
+  object-fit: cover;
+}
+.hero__title {
+  grid-area: title;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 110%;
+  color: #000000;
+}
+.hero__desc {
+  grid-area: desc;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #000000;
+}
+.hero__paragraph {
+  margin-bottom: 22px;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+.hero__ol {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
