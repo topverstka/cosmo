@@ -346,34 +346,63 @@ const storeMenu = document.querySelector('.stores__menu');
 const showListButton = document.querySelector('.stores__details-show-list');
 const SHOW_DETAILS_CLASS = 'stores__menu--show-details';
 
-function showDetails(details) {
-  const {name, info, map} = details
-  storeMenu.classList.add(SHOW_DETAILS_CLASS)
+if (storesCards) {
+  function showDetails(details) {
+    const {name, info, map} = details
+    storeMenu.classList.add(SHOW_DETAILS_CLASS)
 
-  storeDetails.querySelector('.stores__details-title').innerHTML = name;
-  storeDetails.querySelector('.stores__details-info').innerHTML = info;
-  mapIframe.src = map;
-}
-function showList() {
-  storeMenu.classList.remove(SHOW_DETAILS_CLASS)
-  mapIframe.src = mapIframe.dataset.mapAll;
-}
-function getStoreDetails(card) {
-  return {
-    name: card.querySelector('.stores-list-card__name').innerHTML,
-    info: card.querySelector('.stores-list-card__info').innerHTML,
-    map: card.dataset.map
+    storeDetails.querySelector('.stores__details-title').innerHTML = name;
+    storeDetails.querySelector('.stores__details-info').innerHTML = info;
+    mapIframe.src = map;
+  }
+  function showList() {
+    storeMenu.classList.remove(SHOW_DETAILS_CLASS)
+    mapIframe.src = mapIframe.dataset.mapAll;
+  }
+  function getStoreDetails(card) {
+    return {
+      name: card.querySelector('.stores-list-card__name').innerHTML,
+      info: card.querySelector('.stores-list-card__info').innerHTML,
+      map: card.dataset.map
+    }
+  }
+
+  storesCards.forEach(card => {
+    const cardName = card.querySelector('.stores-list-card__name');
+    cardName.addEventListener('click', () => {
+      const storeInfo = getStoreDetails(card);
+      showDetails(storeInfo);
+    })
+  })
+
+  if (showListButton) {
+    showListButton.addEventListener('click', () => {
+      showList()
+    })
   }
 }
 
-storesCards.forEach(card => {
-  const cardName = card.querySelector('.stores-list-card__name');
-  cardName.addEventListener('click', () => {
-    const storeInfo = getStoreDetails(card);
-    showDetails(storeInfo);
-  })
-})
 
-showListButton.addEventListener('click', () => {
-  showList()
-})
+const blogGallery = [...document.querySelectorAll('.blog-article__gallery')];
+const GALLERY_INITIAL_SHOW = 3;
+const GALLERY_ITEM_VISIBLE_CLASS = 'blog-article__media--visible'
+const GALLERY_BUTTON_HIDDEN_CLASS = 'blog-article__gallery-more--hidden'
+if (blogGallery) {
+  blogGallery.forEach(gallery => {
+    const photos = gallery.querySelectorAll(".blog-article__media")
+    const expandButton = document.querySelector('.blog-article__gallery-more');
+    const initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
+
+    photos.forEach((photo, index) => {
+      if (index < GALLERY_INITIAL_SHOW) {
+        photo.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+      }
+    })
+    expandButton.addEventListener('click', () => {
+      expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+      photos.forEach(photo => {
+        photo.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+      })
+    })
+  })
+}
