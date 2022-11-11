@@ -142,9 +142,17 @@ input[type="search"]::-webkit-search-cancel-button {
 @import "./sections/about-ol";
 @import "./sections/shops";
 @import "./sections/stores";
+@import "./sections/services";
+@import "./sections/certificates";
 
 
 @import "./sections/footer";
 
 // Стили для отдельных страниц
 // @import "./pages/";
+
+.section-map__frame {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}

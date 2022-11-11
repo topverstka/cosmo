@@ -1,0 +1,36 @@
+.certificates {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-bottom: 8px;
+}
+.certificates__container {
+  max-width: 1186px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.certificates__gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sertificates__pic {
+  margin-right: 9px;
+  display: block;
+}
+.sertificates__pic:nth-of-type(1) {
+  max-width: 230px;
+  margin-top: auto;
+}
+.sertificates__pic:nth-of-type(2) {
+  max-width: 350px;
+  margin-top: auto;
+}
+.sertificates__pic:nth-of-type(3) {
+  max-width: 230px;
+}
+.sertificates__pic:nth-of-type(4) {
+  max-width: 350px;
+  margin-right: 0;
+  margin-bottom: 70px;
+}
