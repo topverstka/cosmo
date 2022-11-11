@@ -1,0 +1,29 @@
+.link {
+  --link-color: var(--c-accent);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--link-color);
+}
+.link::before {
+  display: block;
+  width: 16px;
+  height: 18px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+  background-color: var(--c-accent);
+}
+.link--geo::before {
+  content: "";
+  @include getmask("../img/common/icon-geo.svg");
+}
+.link--time::before {
+  content: "";
+  @include getmask("../img/common/icon-time.svg");
+}
+.link--phone::before {
+  content: "";
+  @include getmask("../img/common/icon-tel.svg");
+}

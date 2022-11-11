@@ -122,3 +122,48 @@ grid-area: services;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
 }
+
+
+
+// === all
+.services-all__category {
+  margin-bottom: 60px;
+}
+.services-all__title {
+  margin-bottom: 42px;
+}
+
+.services-all-card {
+  padding: 20px;
+  padding-right: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+.services-all-card:last-of-type {
+  margin-bottom: 0;
+}
+.services-all-card__title {
+  font-weight: 400;
+font-size: 20px;
+line-height: 120%;
+color: #000000;
+margin-bottom: 2px;
+}
+.services-all-card__subtitle {
+  font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+color: #A1AEB3;
+margin-bottom: 16px;
+}
+.services-all-card__desc {
+  font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+color: #A1AEB3;
+margin-bottom: 19px;
+}
+.services-all-card .product-card__price {
+  font-size: 16px;
+}

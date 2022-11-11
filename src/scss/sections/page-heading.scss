@@ -1,5 +1,15 @@
 .page-heading {
+  padding-top: 52px;
+  border-top: 1px solid #c5cacf;
   margin-bottom: 40px;
+  margin-left: -8px;
+  width: calc(100% + 16px);
+}
+.breadcrumbs ~ .page-heading {
+  width: 100%;
+  margin-left: 0;
+  padding-top: 0;
+  border: none;
 }
 .page-heading__title {
   font-weight: 400;
