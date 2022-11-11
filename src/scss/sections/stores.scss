@@ -172,21 +172,22 @@
 
 
 .stores__details {
-  transform: scaleY(0);
-  opacity: 0;
-  pointer-events: none;
+  // transform: scaleY(0);
+  // opacity: 0;
+  // pointer-events: none;
   transition: all 0.45s ease, pointerEvents 0s;
   transform-origin: top;
-  max-height: 1px;
+  // max-height: 1px;
   overflow: hidden;
   z-index: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 450px;
 }
 .stores__menu--show-details {
-  max-width: 450px;
+  // max-width: 450px;
   .stores__details {
     max-height: 2000px;
     opacity: 1;
