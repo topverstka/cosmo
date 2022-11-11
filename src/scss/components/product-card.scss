@@ -212,3 +212,31 @@
   --chips-bg: var(--bg-element);
 }
 
+.product-card--out::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  z-index: 4;
+  position: absolute;
+  background-color: rgba(255,255,255,.6);
+}
+
+.product-card__price-out {
+  display: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A1AEB3;
+}
+.product-card--out .product-card__price-out {
+  display: block;
+}
+.product-card--out .product-card__price-new,
+.product-card--out .product-card__price-old
+ {
+  display: none;
+}

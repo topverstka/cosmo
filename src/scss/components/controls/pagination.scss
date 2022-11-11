@@ -1,0 +1,70 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-page {
+  padding: 7.5px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+  margin-right: 4px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-page:last-child {
+  margin-right: 0;
+}
+
+.nav-arrow {
+  position: relative;
+  padding: 7.5px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-arrow.disabled {
+  display: none;
+}
+.nav-prev {
+  margin-right: 20px;
+}
+.nav-prev::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  @include getmask("../img/common/arrow-circle.svg");
+  background-color: #000;
+  margin-bottom: -2px;
+  transform: rotate(-90deg);
+}
+.nav-next {
+  margin-left: 20px;
+}
+.nav-next::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  @include getmask("../img/common/arrow-circle.svg");
+  background-color: #000;
+  margin-bottom: -2px;
+  transform: rotate(90deg);
+}

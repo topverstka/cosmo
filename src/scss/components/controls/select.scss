@@ -4,6 +4,7 @@
   --bg: #79868d;
   --angle-color: #fff;
   --brad: 62px;
+  --maxw: initial;
 }
 .select > .select{
   --color: inherit;
@@ -11,6 +12,10 @@
   --angle-color: inherit;
   --value-color: inherit;
   --brad: inherit;
+  --maxw: inherit;
+}
+.select .choices__inner {
+  max-width: var(--maxw);
 }
 
 .select__list--dropdown {
@@ -142,4 +147,10 @@
   color: #a1aeb3;
   background: #f0f3f5;
   border-radius: 6px;
+}
+
+.select__item--selectable {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }

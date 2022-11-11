@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+            <li class="breadcrumbs__item">Тип средства</li>
+          </ul>
+        </div>
+        <section class="page-heading">
+          <h1 class="page-heading__title">Типы косметических средств Cosmomedica</h1>
+        </section>
+
+
+        <section class="catalog">
+          <div class="catalog-categories">
+            <ul class="catalog-cateogories__list">
+              <li class="catalog-categories__item--current catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Все средства</a>
+              </li>
+              <li class="catalog-categories__item--highlighted catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Новинки</a>
+              </li>
+              <li class="catalog-categories__item--highlighted catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Бестселлеры</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Очищающие средства</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Тонизирующие средства</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Кремы для лица и шеи</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Cредства для кожи век</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Сыворотки для лица и шеи</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Маски для лица и шеи</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Шлифовки для лица и шеи</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Тонирующие кремы</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Косметика с SPF-защитой</a>
+              </li>
+              <li class="catalog-categories__item">
+                <a href="#" class="catalog-categories__link">Специальные средства</a>
+              </li>
+            </ul>
+          </div>
+          <div class="catalog-products">
+            <form action="" class="catalog-products__filters row-filters">
+              <div class="select row-filters__select">
+                <select
+                  name="sort"
+                  id="catalog-sort"
+                  class="select__input input--dropdown-has-search"
+                >
+                  <option value="Сначала популярные">Сначала популярные</option>
+                  <option value="Сначала дорогие">Сначала дорогие</option>
+                  <option value="Сначала дешевые">Сначала дешевые</option>
+                </select>
+              </div>
+              <div class="select row-filters__select">
+                <select
+                  name="filter[0]"
+                  id="filter-0"
+                  class="select__input input--dropdown-has-search"
+                >
+                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
+                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
+                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
+                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
+                </select>
+              </div>
+              <div class="select row-filters__select">
+                <select
+                  name="filter[1]"
+                  id="filter-1"
+                  class="select__input input--dropdown-has-search"
+                >
+                  <option value="Потребности кожи: 2">Потребности кожи: 2</option>
+                  <option value="Потребности кожи: 2">Потребности кожи: 2</option>
+                  <option value="Потребности кожи: 2">Потребности кожи: 2</option>
+                </select>
+              </div>
+              <div class="select row-filters__select">
+                <select
+                  name="filter[2]"
+                  id="filter-2"
+                  class="select__input input--dropdown-has-search"
+                >
+                  <option value="Время применения">Время применения</option>
+                  <option value="Время применения">Время применения</option>
+                  <option value="Время применения">Время применения</option>
+                </select>
+              </div>
+              <div class="select row-filters__select">
+                <select
+                  name="filter[3]"
+                  id="filter-3"
+                  class="select__input input--dropdown-has-search"
+                >
+                  <option value="Объём">Объём</option>
+                  <option value="Объём">Объём</option>
+                  <option value="Объём">Объём</option>
+                </select>
+              </div>
+            </form>
+            <div class="catalog-products__gallery">
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png", className: "product-card--out"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+            </div>
+            <div class="catalog-products__pagination pagination navigation-pages">
+              <!-- <span class="nav-arrow nav-prev disabled">Назад</span> -->
+              <span class="nav-arrow nav-prev">Назад</span>
+              <a href="" class="nav-page">1</a>
+              <span class="nav-page nav__gap">...</span>
+              <a href="" class="nav-page">10</a>
+              <a href="" class="nav-page">11</a>
+              <span class="nav-page current-page">12</span>
+              <a href="" class="nav-page">13</a>
+              <a href="" class="nav-page">14</a>
+              <span class="nav-page nav__gap">...</span>
+              <a href="" class="nav-page">24</a>
+              <span class="nav-arrow nav-next">Далее</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

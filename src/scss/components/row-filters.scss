@@ -3,6 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 .row-filters__select {
   margin-right: 8px;
@@ -12,4 +13,5 @@
   --angle-color: #000;
   --value-color: #000;
   --brad: 6px;
+  --maxw: 256px;
 }
