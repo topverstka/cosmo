@@ -1,0 +1,55 @@
+.case-review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: #5F6C75;
+  border-radius: 12px;
+}
+.case-review-card__top {
+  margin-bottom: 40px;
+}
+.case-review-card__title {
+  margin-bottom: 8px;
+  font-family: 'RF Dewi', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #A1AEB3;
+}
+.case-review-card__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #F0F3F5;
+}
+
+.case-review-card__pic {
+  display: block;
+  --size: 100px;
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+}
+.case-review-card__img {
+  object-fit: cover;
+  border-radius: 6px;
+}
+.case-review-card__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+.case-review-card__profile-link {
+  display: block;
+  padding: 0px 8px 4px;
+  background: #F0F3F5;
+  border-radius: 6px;
+}
+
+.case-review-card__bottom {
+ width: 100%;
+}

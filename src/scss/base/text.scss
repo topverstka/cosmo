@@ -21,6 +21,9 @@
   text-align: right;
 }
 
+.captions {
+  margin-bottom: 30px;
+}
 .captions-1-1 {
   column-count: 2;
   column-gap: 58px;
@@ -31,4 +34,9 @@
   line-height: 17px;
   color: #a1aeb3;
   opacity: 0.6;
+  break-inside: avoid;
+}
+.captions-1-1__desc--big {
+  font-size: 20px;
+  line-height: 120%;
 }

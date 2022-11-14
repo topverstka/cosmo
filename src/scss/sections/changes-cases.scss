@@ -1,0 +1,75 @@
+.changes-cases {
+  margin-bottom: 72px;
+}
+.changes-cases--has-mb {
+  margin-bottom: 120px;
+}
+.changes-cases__gallery {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+
+}
+.changes-cases-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+}
+.changes-cases-card .blog-card__media-compare {
+  max-width: 100%;
+}
+.changes-cases-card .blog-card__button {
+  margin-bottom: unset;
+}
+
+.changes-case-card-carousel {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 12px;
+  // padding: 20px;
+}
+.changes-cases-card--has-carousel .changes-case-card-carousel{
+  grid-column: 2/3;
+
+}
+
+.changes-case-card-carousel__slide {
+  padding: 20px;
+}
+
+.changes-case-card-carousel__title {
+  font-family: 'RF Dewi';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A1AEB3;
+  margin-bottom: 27px;
+  text-align: center;
+}
+.changes-case-card-carousel__title-link {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.changes-case-card-carousel__pic {
+  margin-bottom: 26px;
+  display: block;
+  height: 196px;
+}
+
+.changes-case-card-carousel__button {
+  display: block;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+color: #A1AEB3;
+font-size: 28px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 20px;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 20px;
+}
