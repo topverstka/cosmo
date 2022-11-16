@@ -403,20 +403,39 @@ function initAccordionGallery() {
   if (galleries) {
     galleries.forEach(gallery => {
       const cards = gallery.querySelectorAll('.gallery-accordion__item')
-      const expandButton = document.querySelector('.gallery-accordion__button-more');
+      const expandButton = gallery.querySelector('.gallery-accordion__button-more');
       const initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
 
       cards.forEach((card, index) => {
         if (index < initialShow) {
             card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+        } else {
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 100)
         }
       })
+      if (!expandButton) return;
+
       expandButton.addEventListener('click', () => {
         expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+        setTimeout(() => {
+          expandButton.style.display = 'none';
+        }, 100)
         cards.forEach(card => {
-            card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+            card.style.display = '';
+            setTimeout(() => {
+              card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+            }, 100)
         })
       })
+
+      if ([...cards].length <= initialShow) {
+        expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+        setTimeout(() => {
+          expandButton.style.display = 'none';
+        }, 100)
+      }
     })
   }
 }

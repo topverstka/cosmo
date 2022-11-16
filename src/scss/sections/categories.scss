@@ -73,17 +73,18 @@
   display: block;
   align-items: center;
   padding: 12px 20px 16px;
-  background: #000000;
+  background: var(--categories-nav-link-bg, #000000);
   border-radius: 6px;
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
-  color: #FFFFFF;
+  color: var(--categories-nav-link-color, #FFFFFF);
   transition: all 0.3s ease;
 }
 .categories-nav__list-link:hover {
   @media (any-hover: hover) {
     background-color: var(--c-accent);
+    color: var(--categories-nav-link-color-hover, #fff);
   }
 }
 
