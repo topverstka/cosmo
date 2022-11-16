@@ -10,7 +10,6 @@
 @import "./base";
 @import "./variables";
 @import "./mixins";
-@import "./components";
 
 // Шрифты
 @include font(
@@ -101,6 +100,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 // Общие стили проекта
 @import "./common";
+@import "./components";
 
 // Карточки
 // @import "./components/cards/";

@@ -394,26 +394,30 @@ if (storesCards) {
 }
 
 
-const blogGallery = [...document.querySelectorAll('.blog-article__gallery')];
-const GALLERY_INITIAL_SHOW = 3;
-const GALLERY_ITEM_VISIBLE_CLASS = 'blog-article__media--visible'
-const GALLERY_BUTTON_HIDDEN_CLASS = 'blog-article__gallery-more--hidden'
-if (blogGallery) {
-  blogGallery.forEach(gallery => {
-    const photos = gallery.querySelectorAll(".blog-article__media")
-    const expandButton = document.querySelector('.blog-article__gallery-more');
-    const initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
+function initAccordionGallery() {
+  const GALLERY_INITIAL_SHOW = 3; // or data-start-show attr of gallerySelector
+  const GALLERY_ITEM_VISIBLE_CLASS = 'gallery-accordion__item--visible';
+  const GALLERY_BUTTON_HIDDEN_CLASS = 'gallery-accordion__button-more--hidden'
+  const galleries = [...document.querySelectorAll('.gallery-accordion')];
 
-    photos.forEach((photo, index) => {
-      if (index < GALLERY_INITIAL_SHOW) {
-        photo.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
-      }
-    })
-    expandButton.addEventListener('click', () => {
-      expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
-      photos.forEach(photo => {
-        photo.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+  if (galleries) {
+    galleries.forEach(gallery => {
+      const cards = gallery.querySelectorAll('.gallery-accordion__item')
+      const expandButton = document.querySelector('.gallery-accordion__button-more');
+      const initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
+
+      cards.forEach((card, index) => {
+        if (index < initialShow) {
+            card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+        }
+      })
+      expandButton.addEventListener('click', () => {
+        expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+        cards.forEach(card => {
+            card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+        })
       })
     })
-  })
+  }
 }
+initAccordionGallery()

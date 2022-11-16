@@ -124,24 +124,12 @@ margin-bottom: 20px;
 .blog-article__gallery {
   padding-top: 18px;
 }
-.blog-article__gallery-contnet {
+.blog-article__gallery-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 8px;
   row-gap: 8px;
   margin-bottom: 16px;
-}
-.blog-article__media {
-  transition: all 0.3s ease;
-  opacity: 0;
-  max-height: 1px;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.blog-article__media--visible {
-  max-height: 1000px;
-  opacity: 1;
-  transform: scaleY(1);
 }
 .blog-article__media-pic {
   display: block;

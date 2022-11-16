@@ -59,3 +59,13 @@
 .page-heading__title ~ .page-heading__nav {
   margin-top: -20px;
 }
+
+
+.page-heading__captions {
+  color: #000;
+  column-gap: 50px;
+}
+.page-heading__captions .captions-1-1__desc {
+  color: inherit;
+  opacity: 1;
+}
