@@ -1,0 +1,23 @@
+.related-products {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.related-products .gallery-accordion__container {
+  max-width: 100%;
+}
+.related-products .gallery-accordion__content {
+  margin-bottom: 0;
+}
+.related-products .gallery-accordion__content ~ .container .button{
+  margin-top: 23px;
+}
+.related-products__title {
+  margin-bottom: 50px;
+}
+.related-products__gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 8px;
+  row-gap: 8px;
+}

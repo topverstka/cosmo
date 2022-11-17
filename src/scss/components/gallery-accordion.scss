@@ -1,0 +1,59 @@
+/*
+  <div class="gallery-accordion" data-start-show="5">
+    <div class="container gallery-accordion__container">
+      <div class="gallery-accordion__content person-result__gallery-content">
+        <article class="gallery-accordion__item">
+        </article>
+      </div>
+      <button class="button--thirdly gallery-accordion__button-more">См. все фото (6)</button>
+    </div>
+  </div>
+
+  - data-start-show — сколько айтемов показывать изначально. По дефолту 3
+  - Для `gallery-accordion__content` можно задавать любую раскладку, которая нужна, добавив класс или перебив специфичность селектора
+  - gallery-accordion__item можно добавить любые классы и изменить тег на нужный
+*/
+
+.gallery-accordion__container {
+  max-width: 1200px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-accordion__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+.gallery-accordion__item {
+  transition: all 0.3s ease;
+  opacity: 0;
+  max-height: 1px;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.gallery-accordion__item--visible {
+  opacity: 1;
+  // height: 348px;
+  max-height: 1000px;
+  overflow: initial;
+  pointer-events: initial;
+  transform: scaleY(1);
+}
+
+.gallery-accordion__button-more {
+  margin-left: auto;
+  margin-right: auto;
+  --button-color: #A1AEB3;
+}
+.gallery-accordion__button-more--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
