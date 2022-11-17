@@ -140,6 +140,8 @@ input[type="search"]::-webkit-search-cancel-button {
 @import "./sections/callback-cards";
 @import "./sections/doc";
 
+@import "./sections/cart";
+
 @import "./sections/about-features";
 @import "./sections/about-ol";
 @import "./sections/shops";
@@ -161,20 +163,3 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 12px;
 }
 
-.sidebar {
-  position: relative;
-}
-.sidebar-card {
-  position: sticky;
-  top: 8px
-}
-.sidebar-card__desc {
-  margin-bottom: 27px;
-}
-.sidebar-card__link {
-  --link-color: #fff;
-  margin-bottom: 11px;
-}
-.sidebar-card__link::before {
-  background-color: #fff;
-}

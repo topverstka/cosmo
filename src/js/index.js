@@ -213,6 +213,20 @@ headerPickers.forEach((picker) => {
   });
 });
 
+const cartCityPicker = document.querySelector('.cart-total__city-picker')
+if (cartCityPicker) {
+  cartCityPicker.addEventListener('click', (e) => {
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    setTimeout(() => {
+      toggleSnackVisibility('city')
+    }, 300)
+  })
+}
+
 const headerSnacks = document.querySelectorAll(".header-snack");
 headerSnacks.forEach((snack) => {
   const closer = snack.querySelector(".header-snack__close");
@@ -440,3 +454,4 @@ function initAccordionGallery() {
   }
 }
 initAccordionGallery()
+

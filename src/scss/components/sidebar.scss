@@ -1,0 +1,46 @@
+.sidebar {
+  position: relative;
+  color: #fff;
+}
+.sidebar__sticky {
+  position: sticky;
+  top: 8px;
+  bottom: 8px;
+}
+
+/*
+<article class="sidebar-card">
+  <div class="sidebar-card__top">
+  </div>
+  <div class="sidebar-card__bottom">
+  </div>
+</article>
+ */
+.sidebar-card {
+  border-radius: 8px;
+  background-color: #5F6C75;
+  padding: 40px;
+  margin-bottom: 8px;
+}
+.sidebar-card--autoheight {
+  min-height: initial;
+}
+.sidebar-card__desc {
+  margin-bottom: 27px;
+  font-family: 'RF Dewi', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A1AEB3;
+}
+.sidebar-card__desc:last-of-type {
+  margin-bottom: 0;
+}
+.sidebar-card__link {
+  --link-color: #fff;
+  margin-bottom: 11px;
+}
+.sidebar-card__link::before {
+  background-color: #fff;
+}

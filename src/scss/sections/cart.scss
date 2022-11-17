@@ -1,0 +1,119 @@
+.cart-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 28px;
+}
+.cart-heading__count {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+  margin-right: 30px;
+}
+
+.cart__gallery .product-card {
+  background-color: #fff;
+}
+.cart__gallery .product-card:last-of-type {
+  margin-bottom: 0;
+}
+
+.cart__columns {
+  display: grid;
+  grid-template-columns: 66.502808988764044943820224719101% auto;
+  column-gap: 8px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+}
+
+.cart-total__city-picker {
+  margin-bottom: 16px;
+}
+.cart-total__city-picker .input__field {
+  cursor: pointer;
+}
+
+.cart-sidebar {
+   @media (max-width: 1200px) {
+    position: sticky;
+    bottom: 0;
+    order: 1;
+    z-index: 2;
+  }
+}
+.cart-sidebar__sticky {
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+.cart-total {
+  @media (max-width: 1200px) {
+    order: -1;
+    position: sticky;
+    bottom: 0;
+  }
+}
+.cart-total__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 28px;
+}
+.cart-total__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+}
+.cart-total__value {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 110%;
+}
+
+.cart-total__button-submit:hover {
+  @media (any-hover: hover) {
+    --button-bg: #000;
+  }
+}
+
+.cart__section {
+  margin-bottom: 60px;
+}
+.cart__section::last-of-type {
+  margin-bottom: 0;
+}
+.cart__title {
+  padding-left: 35px;
+  margin-bottom: 45px;
+}
+.cart__gallery {
+  margin-bottom: 57px;
+}
+.cart__gifts-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(231px, auto));
+  width: 100%;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.cart__gift .product-card__pic {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <div class="breadcrumbs">
+        </div>
+        <section class="page-heading">
+          <h1 class="page-heading__title">Корзина</h1>
+        </section>
+
+          <div class="cart">
+            <div class="cart-heading">
+              <p class="cart-heading__count">3 товара</p>
+              <button class="button--thirdly cart__button-clear">Очистить корзину</button>
+            </div>
+            <div class="cart__columns">
+              <div class="cart__items">
+                <div class="cart__gallery products--layout-horizontal">
+                      @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", name: "Суперувлажняющий очищающий мусс"})
+                      @@include('tpls/cards/cart-card.html',{img: "product-cropped.png"})
+                      @@include('tpls/cards/cart-card.html',{img: "product-cropped.png"})
+                </div>
+
+                <div class="container cart__section">
+                  <h2 class="section-title cart__title">Ваш подарок — крем 15 мл на выбор</h2>
+                  <div class="gallery-accordion" data-start-show="4">
+                    <div class="container gallery-accordion__container">
+                      <div class="gallery-accordion__content cart__gifts-gallery">
+                        @@for (var i = 1; i < 8; i++) {
+                          @@include('tpls/cards/product-card-free.html',{img: "product-cropped.png", className: "gallery-accordion__item cart__gift"})
+                        }
+                      </div>
+                      <button class="button button--primary button--light button--fullsize gallery-accordion__button-more cart__gifts-gallery-button">Показать все доступные подарки</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container cart__section">
+                  <h2 class="section-title cart__title">Дополнительно</h2>
+                  <div class="gallery-accordion" data-start-show="4">
+                    <div class="container gallery-accordion__container">
+                      <div class="gallery-accordion__content cart__gifts-gallery">
+                        @@for (var i = 1; i <= 2; i++) {
+                          @@include('tpls/cards/product-card-free.html',{img: "product-cropped.png", className: "gallery-accordion__item cart__gift"})
+                        }
+                      </div>
+                      <button class="button button--primary button--light button--fullsize gallery-accordion__button-more cart__gifts-gallery-button">Показать все доступные подарки</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <aside class="cart-sidebar sidebar">
+                <div class="sidebar__sticky cart-sidebar__sticky">
+                  <article class="sidebar-card sidebar-card--autoheight">
+                    <form action="" class="cart-total__city-picker">
+                      <label class="input">
+                        <input
+                          class="input__field"
+                          name="city"
+                          type="text"
+                          value="г. Москва"
+                          readonly
+                        />
+                        <svg class="input__error-icon">
+                          <use xlink:href="./img/common/warn.svg#warn"></use>
+                        </svg>
+                      </label>
+                    </form>
+                    <p class="sidebar-card__desc">При оформлении заказа вам будут предложены варианты доставки или самовывоза для выбранного города</p>
+                  </article>
+                  <article class="cart-total sidebar-card sidebar-card--autoheight">
+                    <div class="cart-total__row">
+                      <h4 class="cart-total__title">Итого</h4>
+                      <p class="cart-total__value">12 000 ₽</p>
+                    </div>
+                    <button class="button button--primary button--light button--fullsize cart-total__button-submit">Перейти к оформлению заказа</button>
+                  </article>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+
+
+      </main>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

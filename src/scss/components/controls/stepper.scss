@@ -1,17 +1,19 @@
 .stepper {
   display: inline-flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   --bg: transparent;
   --line-color: #A1AEB3;
   border: 1px solid var(--line-color);
   border-radius: 100px;
+  max-width: 87px;
+  width: 100%;
 }
 .stepper__button {
   background-color: var(--bg);
   position: relative;
   width: 22px;
-  height: 28px;
+  height: var(--stepper-button-height, 28px);
 }
 .stepper__button::before {
   content: "";
@@ -25,7 +27,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: translateY(-50%);
-  background-color: #A1AEB3;
+  background-color: var(--stepper-button-color, #A1AEB3);
 }
 .stepper__button-plus::after {
   content: "";
@@ -48,5 +50,7 @@
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--stepper-value-color, #FFFFFF);
+  max-width: 30%;
+  width: 100%;
 }
