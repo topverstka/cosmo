@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Приёмка и возврат</title>
+    <title>Корзина</title>
     <link rel="stylesheet" href="./css/style.css?_v=20221117212556" />
 
     <!-- Отключить автодетект телефонов -->
@@ -1326,68 +1326,188 @@
 
       <main class="main">
         <div class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
-          <li class="breadcrumbs__item">Приёмка и возврат</li>
-        </ul>
         </div>
         <section class="page-heading">
-          <h1 class="page-heading__title">Приёмка и возврат</h1>
+          <h1 class="page-heading__title">Оформление заказа</h1>
         </section>
 
-        <section class="doc">
-          <div class="doc__container">
-            <div class="doc__gallery">
-              <article class="doc-card">
-                <h3 class="doc-card__title">Условия возврата</h3>
-                <div class="doc-card__desc">
-                  <p>Обмен непродовольственного товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ. </p>
+        <div class="cart checkout">
+          <div class="cart__columns">
+            <div class="checkout__fields">
+              <fieldset class="fieldset fieldset-contacts">
+                <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Ваши контакты</h2>
+                  <p class="section-desc fieldset__desc">Для подтверждения и <br> оформления заказа</p>
                 </div>
-              </article>
-              <article class="doc-card">
-                <h3 class="doc-card__title">Способы возврата</h3>
-                <div class="doc-card__desc">
-                  <p>Обмен непродовольственного товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ. Обмен непродовольственного товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ. Обмен непродовольственного товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ. </p>
+                <div class="fieldset__body">
+                  <div class="fieldset__layout fieldset__layout--1-end-2">
+                    <label class="input">
+                      <input
+                        class="input__field"
+                        name="user_lastname"
+                        type="text"
+                        placeholder="Фамилия"
+                        autocomplete="lastname"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <label class="input">
+                      <input
+                        class="input__field"
+                        name="user_name"
+                        type="text"
+                        placeholder="Имя"
+                        autocomplete="name"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <label class="input input--name">
+                      <input
+                        class="input__field"
+                        name="user_middlename"
+                        type="text"
+                        placeholder="Отчество"
+                        autocomplete="middlename"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <label class="input input--tel input--invalid">
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Телефон"
+    maxlength="25"
+    minlength="10"
+    data-value-missing="Напишите телефон"
+    data-value-invalid="Проверьте корректность телефона"
+    autocomplete="tel"
+  />
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <label class="input">
+                      <input
+                        class="input__field"
+                        name="user_email"
+                        type="email"
+                        placeholder="Электронная почта"
+                        autocomplete="email"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                  </div>
                 </div>
-              </article>
-              <article class="doc-card">
-                <h3 class="doc-card__title">Сроки возврата</h3>
-                <div class="doc-card__desc">
-                  <p>Обмен непродовольственного товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ. Обмен непродовольственного товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ. </p>
+              </fieldset>
+              <fieldset class="fieldset fieldset-shipping">
+                <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Способы доставки</h2>
+                  <p class="section-desc fieldset__desc">Выберите удобный способ <br> доставки в вашем городе</p>
                 </div>
-              </article>
+                <div class="fieldset__body">
+                  <div class="fieldset__layout">
+                    <label class="radio">
+                      <input name="shipping" type="radio" class="radio__input" checked>
+                      <span class="radio__check"></span>
+                      <span class="radio__caption">
+                        <p class="radio__title">Курьерская доставка</p>
+                        <p class="radio__desc">Стоимость: от 250 руб. Сроки: от 2 дней</p>
+                      </span>
+                    </label>
+                    <label class="radio">
+                      <input name="shipping" type="radio" class="radio__input">
+                      <span class="radio__check"></span>
+                      <span class="radio__caption">
+                        <p class="radio__title">Самовывоз из пункта выдачи</p>
+                        <p class="radio__desc">Стоимость: от 250 руб. Сроки: от 2 дней</p>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset fieldset-address">
+                <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Адрес доставки</h2>
+                  <p class="section-desc fieldset__desc">Укажите адрес, по которому будет выполняться доставка</p>
+                </div>
+                <div class="fieldset__body">
+                  <div class="fieldset__layout fieldset__layout--1-end-2">
+                    <label class="input">
+                      <input
+                        class="input__field"
+                        name="shipping_address"
+                        type="text"
+                        placeholder="Улица"
+                        autocomplete="address"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <label class="input">
+                      <input
+                        class="input__field"
+                        name="shipping_home"
+                        type="text"
+                        placeholder="Дом"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <label class="input">
+                      <input
+                        class="input__field"
+                        name="shipping_appartment"
+                        type="text"
+                        placeholder="Квартира"
+                      />
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
             </div>
+            <aside class="cart-sidebar sidebar">
+              <div class="sidebar__sticky cart-sidebar__sticky">
+                <article class="sidebar-card sidebar-card--autoheight checkout__subtotal">
+                  <div class="cart-total__row">
+                    <h4 class="cart-total__title">Товары: 4</h4>
+                    <p class="cart-total__value">14 700 ₽</p>
+                  </div>
+                  <div class="cart-total__row">
+                    <h4 class="cart-total__title">Скидка</h4>
+                    <p class="cart-total__value">-500 ₽</p>
+                  </div>
+                  <div class="cart-total__row">
+                    <h4 class="cart-total__title">Стоимость доставки</h4>
+                    <p class="cart-total__value">300 ₽</p>
+                  </div>
+                </article>
+                <article class="cart-total sidebar-card sidebar-card--autoheight">
+                  <div class="cart-total__row">
+                    <h4 class="cart-total__title">Итого</h4>
+                    <p class="cart-total__value">12 000 ₽</p>
+                  </div>
+                  <button class="button button--primary button--light button--fullsize cart-total__button-submit">Перейти к оформлению заказа</button>
+                </article>
+              </div>
+            </aside>
           </div>
-        </section>
-
-
-        <section class="callback-cards">
-  <div class="callback-cards__container">
-    <div class="callback-cards__gallery">
-      <article class="callback-cards-card">
-        <div class="callback-cards-card__top">
-          <h3 class="callback-cards-card__title">Личная консультация <br> по подбору косметики</h3>
-          <p class="callback-cards-card__desc">
-            Наши специалисты помогут вам с подбором косметики. <br>
-            Доступны консультации в WhatsApp.
-          </p>
         </div>
-        <div class="callback-cards-card__bottom">
-          <button class="button button--primary button--dark callback-cards-card__button">Записаться на консультацию</button>
-        </div>
-      </article>
-      <article class="callback-cards-card">
-        <div class="callback-cards-card__top">
-          <h3 class="callback-cards-card__title"><a href="#" class="js_tel">8 800 1234 567</a></h3>
-          <p class="callback-cards-card__desc">Если у вас возникли вопросы, звоните по бесплатному телефону</p>
-        </div>
-        <div class="callback-cards-card__bottom">
-          <button class="button button--primary button--dark callback-cards-card__button">Заказать обратный звонок</button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
 
       </main>
 

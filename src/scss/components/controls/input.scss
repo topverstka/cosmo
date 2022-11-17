@@ -44,7 +44,8 @@
   font-size: var(--fz);
   line-height: var(--lh);
   color: var(--text-color);
-  background-color: var(--bg-element);
+  // background-color: var(--bg-element);
+  background-color: var(--input-bg, #F0F3F5);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   transition: all 0.3s ease;

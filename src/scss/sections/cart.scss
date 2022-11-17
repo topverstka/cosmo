@@ -65,7 +65,13 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 16px;
+}
+.cart-total__row:only-child {
   margin-bottom: 28px;
+}
+.cart-total__row:last-child {
+  margin-bottom: 0;
 }
 .cart-total__title {
   font-weight: 400;
@@ -116,4 +122,8 @@
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.cart__gifts-gallery-button {
+  --button-color: #000;
 }
