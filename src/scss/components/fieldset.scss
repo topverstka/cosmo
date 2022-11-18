@@ -35,3 +35,8 @@
   grid-column-start: unset;
   grid-column-end: unset;
 }
+.fieldset__layout--1-1 {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  column-gap: 8px;
+}

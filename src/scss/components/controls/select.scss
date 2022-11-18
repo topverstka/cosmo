@@ -20,7 +20,7 @@
 
 .select__list--dropdown {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 48px;
   left: 0;
   width: 100%;
@@ -154,4 +154,14 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.select--grey {
+  --maxw: 100%;
+  --bg: var(--c-accent);
+  --value-color: var(--c-text-on);
+  --angle-color: #fff;
+  --brad: 6px;
+  margin-right: 0;
+  margin-bottom: 20px;
 }
