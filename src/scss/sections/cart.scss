@@ -127,3 +127,38 @@
 .cart__gifts-gallery-button {
   --button-color: #000;
 }
+
+
+.cart-product__button-remove {
+  display: block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 3;
+}
+.cart-product__button-remove::before,
+.cart-product__button-remove::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 28px;
+  position: absolute;
+  top: 14px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #A1AEB2;
+  transform-origin: center;
+}
+.cart-product__button-remove::before {
+  transform: rotate(45deg);
+}
+.cart-product__button-remove::after {
+  transform: rotate(-45deg);
+}
+
+.cart-product .product-card__link::before {
+  display: none;
+}

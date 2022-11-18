@@ -33,9 +33,10 @@
             <div class="cart__columns">
               <div class="cart__items">
                 <div class="cart__gallery products--layout-horizontal">
-                      @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", name: "Суперувлажняющий очищающий мусс"})
-                      @@include('tpls/cards/cart-card.html',{img: "product-cropped.png"})
-                      @@include('tpls/cards/cart-card.html',{img: "product-cropped.png"})
+                  @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
+                  @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
+                  @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
+                  @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
                 </div>
 
                 <div class="container cart__section">
@@ -43,8 +44,23 @@
                   <div class="gallery-accordion" data-start-show="4">
                     <div class="container gallery-accordion__container">
                       <div class="gallery-accordion__content cart__gifts-gallery">
+                        @@include('tpls/cards/product-card-free.html',{img: "product-cropped.png", className: "gallery-accordion__item cart__gift product-card--in-cart"})
                         @@for (var i = 1; i < 8; i++) {
                           @@include('tpls/cards/product-card-free.html',{img: "product-cropped.png", className: "gallery-accordion__item cart__gift"})
+                        }
+                      </div>
+                      <button class="button button--primary button--light button--fullsize gallery-accordion__button-more cart__gifts-gallery-button">Показать все доступные подарки</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container cart__section">
+                  <h2 class="section-title cart__title">Добавьте товаров на 3500 ₽ и получите ещё подарок</h2>
+                  <div class="gallery-accordion" data-start-show="4">
+                    <div class="container gallery-accordion__container">
+                      <div class="gallery-accordion__content cart__gifts-gallery">
+                        @@for (var i = 1; i < 8; i++) {
+                          @@include('tpls/cards/product-card-free.html',{img: "product-cropped.png", className: "gallery-accordion__item cart__gift product-card--out"})
                         }
                       </div>
                       <button class="button button--primary button--light button--fullsize gallery-accordion__button-more cart__gifts-gallery-button">Показать все доступные подарки</button>
@@ -68,23 +84,6 @@
               </div>
               <aside class="cart-sidebar sidebar">
                 <div class="sidebar__sticky cart-sidebar__sticky">
-                  <article class="sidebar-card sidebar-card--autoheight">
-                    <form action="" class="cart-total__city-picker">
-                      <label class="input">
-                        <input
-                          class="input__field"
-                          name="city"
-                          type="text"
-                          value="г. Москва"
-                          readonly
-                        />
-                        <svg class="input__error-icon">
-                          <use xlink:href="./img/common/warn.svg#warn"></use>
-                        </svg>
-                      </label>
-                    </form>
-                    <p class="sidebar-card__desc">При оформлении заказа вам будут предложены варианты доставки или самовывоза для выбранного города</p>
-                  </article>
                   <article class="cart-total sidebar-card sidebar-card--autoheight">
                     <div class="cart-total__row">
                       <h4 class="cart-total__title">Итого</h4>
