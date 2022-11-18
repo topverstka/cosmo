@@ -3,59 +3,11 @@
 import { removeAllClasses, bodyLock } from "./utils/functions.js";
 import DismalModules, { acc } from "./utils/modules.js";
 
-import "./unstable/inputster/formich.js";
 import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
-import "./unstable/burger.js";
 
+import "./components/header.js"
+import "./components/controls.js"
 
-/**
- * Textarea resize
- */
-const textareas = document.querySelectorAll('.textarea');
-
-function createResizer(area) {
-  const resizer = document.createElement('div');
-  resizer.classList.add('textarea__resizer');
-  area.appendChild(resizer);
-
-  return {
-    resizer,
-    width: area.getBoundingClientRect().width,
-    height: area.getBoundingClientRect().height,
-    x: 0,
-    y: 0,
-    dx: 0,
-    dy: 0,
-  }
-}
-textareas.forEach(area => {
-  let {resizer, width, height, y, dy} = createResizer(area);
-  area.dataset.initialHeight = height;
-
-  let startResize = function(evt) {
-    // x = evt.screenX;
-    y = evt.screenY;
-  };
-
-  let resize = function(evt) {
-    // dx = x - evt.screenX;
-    dy = y - evt.screenY;
-    // x = evt.screenX;
-    y = evt.screenY;
-    // width += dx;
-    height -= dy;
-    // area.style.width = width + "px";
-    area.style.height = height + "px";
-  };
-
-  resizer.addEventListener("mousedown", function(evt) {
-    startResize(evt);
-    document.body.addEventListener("mousemove", resize);
-    document.body.addEventListener("mouseup", function() {
-      document.body.removeEventListener("mousemove", resize);
-    });
-  });
-});
 
 
 /**
@@ -69,69 +21,6 @@ import "./poppa.js";
 import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
 
-/**
- * header__controls
- */
-
- const minicart = document.querySelector('.minicart');
- const buttonCart = document.querySelector('.button-cart');
-const miniAuth = document.querySelector('.auth');
-const buttonAuth = document.querySelector('.button-auth');
-
- buttonCart.addEventListener('click', () => {
-  buttonCart.parentElement.querySelector('.minicart').classList.toggle('minicart--visible')
-
-  buttonAuth.parentElement.querySelector('.auth').classList.remove('auth--visible')
- })
- minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
-  const yOffset = e.target.scrollTop;
-  if (yOffset > 20) {
-    e.target.classList.add('minicart__content--scrolled')
-  } else {
-    e.target.classList.remove('minicart__content--scrolled')
-  }
- })
-
-
-  buttonAuth.addEventListener('click', () => {
-    buttonAuth.parentElement.querySelector('.auth').classList.toggle('auth--visible')
-    buttonCart.parentElement.querySelector('.minicart').classList.remove('minicart--visible')
-  })
-
-  const authMethodsTogglers = document.querySelectorAll('.auth__button-method-toggler')
-  const authFieldsetClass = 'auth__fieldset';
-  const authFieldsetClassActive = 'auth__fieldset--visible';
-  authMethodsTogglers.forEach(button => {
-    button.addEventListener('click', () => {
-      const toggleName = button.dataset.toggler;
-      // const activeToggler = document.querySelector(`.${authFieldsetClass}[data-toggler="${toggleName}"]`);
-      document.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
-        if (fieldset.dataset.toggler != toggleName) {
-          fieldset.classList.remove(authFieldsetClassActive)
-        } else {
-          fieldset.classList.add(authFieldsetClassActive)
-        }
-      })
-    })
-  })
-
-  const authTabsTogglers = document.querySelectorAll('.auth__tabs .tabs__toggler')
-  const authTabsPages = document.querySelectorAll('.auth__tabs .tabs__page')
-  authTabsTogglers.forEach((toggler, togglerIndex) => {
-    toggler.addEventListener('click', () => {
-      authTabsPages.forEach((page, pageIndex) => {
-        page.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
-          fieldset.classList.remove(authFieldsetClassActive)
-        })
-        page.querySelector(`.${authFieldsetClass}`).classList.add(authFieldsetClassActive)
-      })
-    })
-  })
-
-  window.addEventListener('scroll', () => {
-    minicart.classList.remove('minicart--visible')
-    miniAuth.classList.remove('auth--visible')
-  })
 
 
 /**
@@ -177,60 +66,6 @@ if (document.querySelector(".select")) {
   });
 }
 
-const SNACKS_SHOW_CLASS = 'header__snacks--show';
-const SNACK_VISIBLE_CLASS = 'header-snack--visible';
-const headerSnacksContainer = document.querySelector(".header__snacks");
-
-function closeSnack(currentSnack) {
-    headerSnacksContainer.classList.remove(SNACKS_SHOW_CLASS);
-    if (currentSnack) currentSnack.classList.remove(SNACK_VISIBLE_CLASS);
-}
-function openSnack(currentSnack) {
-    headerSnacksContainer.classList.add(SNACKS_SHOW_CLASS);
-    currentSnack.classList.add(SNACK_VISIBLE_CLASS);
-
-    document.querySelectorAll(".header-snack").forEach((snack) => {
-      if (snack.dataset.snack === currentSnack.dataset.snack) return;
-      snack.classList.remove(SNACK_VISIBLE_CLASS);
-    });
-}
-function toggleSnackVisibility(snackName) {
-  const currentSnack = document.querySelector(`.header-snack[data-snack="${snackName}"]`)
-  if (currentSnack.classList.contains(SNACK_VISIBLE_CLASS)) {
-    closeSnack(currentSnack);
-  } else {
-    openSnack(currentSnack)
-  }
-}
-
-const headerPickers = document.querySelectorAll(".header__picker");
-headerPickers.forEach((picker) => {
-  picker.addEventListener("click", () => {
-    const snackName = picker.dataset.snack;
-    if (!snackName) return;
-
-    toggleSnackVisibility(snackName)
-  });
-});
-
-const headerSnacks = document.querySelectorAll(".header-snack");
-headerSnacks.forEach((snack) => {
-  const closer = snack.querySelector(".header-snack__close");
-  closer.addEventListener("click", () => {
-    closeSnack(snack)
-  });
-});
-window.addEventListener("scroll", () => {
-  if (headerSnacksContainer.classList.contains(SNACKS_SHOW_CLASS)) {
-    closeSnack();
-  }
-});
-
-document.getElementById("dropdown-city").addEventListener("change", (e) => {
-  document.querySelector(".header__geo .header__picker-text").innerText =
-    e.target.value;
-});
-
 import "./unstable/tabs.js";
 
 /**
@@ -238,61 +73,7 @@ import "./unstable/tabs.js";
  */
 import "./utils/smooth-anchors.js";
 
-if (document.querySelector('.promo-carousel')) {
-  let promoSlider = new Swiper(".promo-carousel", {
-    modules: [Navigation, Autoplay, Pagination],
-    autoplay: {
-      delay: 3000,
-    },
-    pagination: {
-      el: ".promo-carousel__pagination",
-      clickable: true,
-    },
-  });
-}
-
-
-const CHANGES_CASE_CARD_CAROUSEL = 'changes-case-card-carousel'
-if (document.querySelector(`.${CHANGES_CASE_CARD_CAROUSEL}`)) {
-  const carousels = document.querySelectorAll(`.${CHANGES_CASE_CARD_CAROUSEL}`);
-
-  carousels.forEach((carousel, index) => {
-    carousel.setAttribute('id', `${CHANGES_CASE_CARD_CAROUSEL}-${index}`);
-  })
-  carousels.forEach((carousel, index) => {
-    new Swiper(`#${CHANGES_CASE_CARD_CAROUSEL}-${index}`, {
-      modules: [Navigation, Autoplay, Pagination],
-      autoplay: {
-        delay: 3000,
-      },
-      navigation: {
-        nextEl: `#${CHANGES_CASE_CARD_CAROUSEL}-${index} .swiper-button-next`,
-        prevEl: `#${CHANGES_CASE_CARD_CAROUSEL}-${index} .swiper-button-prev`,
-      },
-    });
-  })
-}
-
-if (document.querySelector('.grabber-carousel')) {
-let promoSlider = new Swiper(".grabber-carousel", {
-  grabCursor: true,
-  slidesPerView: 2.5,
-  spaceBetween: 8,
-  // cssMode: true,
-  // freeMode: true,
-  // centeredSlides: true,
-  // effect: 'creative',
-  // creativeEffect: {
-  // prev: {
-  //   shadow: false,
-  //   translate: [0, 0, -400],
-  // },
-  // next: {
-  //   translate: ['100%', 0, 0],
-  // },
-  // },
-});
-}
+import "./components/carousels.js";
 
 // Аккордеон
 // const accordions = new DismalModules.Accordions()
