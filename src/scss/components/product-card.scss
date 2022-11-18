@@ -2,6 +2,8 @@
     # @card
 
     Бывают такие:
+    product-card--out — прозрачный. Нет в наличии
+    product-card--in-cart
 */
 .product-card {
   position: relative;
@@ -97,9 +99,23 @@
   transition: var(--tr);
 }
 .product-card__button-add .button__icon {
-  position: relative;
   z-index: 3;
 }
+.product-card__button-add .button__icon--cart {
+  position: relative;
+}
+.product-card--in-cart .button__icon--cart {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+.product-card--in-cart .button__icon--selected {
+  transform: translateY(0);
+  opacity: 1;
+}
+.product-card--in-cart .product-card__button-add::before {
+  background-color: var(--c-accent);
+}
+
 .product-card__button-add .button__text {
   position: absolute;
   top: 0;
@@ -130,6 +146,11 @@
     transform: scaleX(1);
   }
 }
+.product-card--in-cart .product-card__button-add:hover .button__text {
+  @media (any-hover: hover) {
+    transform: scaleX(0);
+  }
+}
 
 .product-card__stepper {
   --stepper-value-color: #000;
@@ -149,6 +170,9 @@
 }
 .product-card__button-add:hover ~ .product-card__price {
   opacity: 0;
+}
+.product-card--in-cart .product-card__button-add:hover ~ .product-card__price {
+  opacity: 1;
 }
 
 .product-card__price-old {
@@ -237,14 +261,6 @@
   font-size: 14px;
   line-height: 17px;
   color: #A1AEB3;
-}
-.product-card--out .product-card__price-out {
-  display: block;
-}
-.product-card--out .product-card__price-new,
-.product-card--out .product-card__price-old
- {
-  display: none;
 }
 
 .product-card__variation {
