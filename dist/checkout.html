@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оформление заказа</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221118181633" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221118185031" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -1354,6 +1354,26 @@
             <div class="checkout__fields">
               <fieldset class="fieldset fieldset-contacts">
                 <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Местоположение</h2>
+                  <p class="section-desc fieldset__desc">Укажите название населённого пункта, куда будет доставлен заказ</p>
+                </div>
+                <div class="fieldset__body">
+                  <div class="select select--grey">
+                    <select
+                      name="shipping_city"
+                      id="shipping_city"
+                      class="select__input input--dropdown-has-search"
+                    >
+                      <option value="Москва">24 января, понедельник (завтра)</option>
+                      <option value="Санкт-Петербург">25 января, вторник (послезавтра)</option>
+                      <option value="Казань">26 января, среда</option>
+                    </select>
+                  </div>
+                  <button class="button--thirdly button--fw-bold button-detect-city">Определить автоматически</button>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset fieldset-contacts">
+                <div class="fieldset__heading">
                   <h2 class="fieldset__title">Ваши контакты</h2>
                   <p class="section-desc fieldset__desc">Для подтверждения и <br> оформления заказа</p>
                 </div>
@@ -1496,6 +1516,7 @@
                       </svg>
                     </label>
                   </div>
+                  <button class="button--thirdly button--fw-bold checkout__button-pick-location">Выбрать на карте</button>
                 </div>
               </fieldset>
               <fieldset class="fieldset fieldset-shipping-time">
@@ -1504,7 +1525,7 @@
                   <p class="section-desc fieldset__desc">Курьер доставит заказ <br> в выбранный день</p>
                 </div>
                 <div class="fieldset__body">
-                  <div class="fieldset__layout">
+                  <div class="fieldset__layout fieldset__layout--1-1">
                     <div class="select row-filters__select checkout__select">
                       <select
                         name="shipping_date"
@@ -1914,6 +1935,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221118181633"></script>
+    <script src="./js/bundle.min.js?_v=20221118185031"></script>
   </body>
 </html>
