@@ -1113,6 +1113,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .select__list--dropdown {
   position: absolute;
+  z-index: 1;
   top: 48px;
   left: 0;
   width: 100%;
@@ -6116,6 +6117,15 @@ input[type=search]::-webkit-search-cancel-button {
 .checkout__subtotal .cart-total__value {
   font-size: 14px;
   line-height: 140%;
+}
+
+.checkout__select {
+  --maxw: 100%;
+  --bg: var(--c-accent);
+  --color: var(--c-text-on);
+  --angle-color: #fff;
+  margin-right: 0;
+  margin-bottom: 8px;
 }
 
 .footer {

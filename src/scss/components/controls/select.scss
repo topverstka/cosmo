@@ -20,6 +20,7 @@
 
 .select__list--dropdown {
   position: absolute;
+  z-index: 1;
   top: 48px;
   left: 0;
   width: 100%;

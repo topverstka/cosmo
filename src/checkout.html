@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Корзина</title>
+    <title>Оформление заказа</title>
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Отключить автодетект телефонов -->
@@ -154,6 +154,37 @@
                         <use xlink:href="./img/common/warn.svg#warn"></use>
                       </svg>
                     </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset fieldset-shipping-time">
+                <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Дата и время</h2>
+                  <p class="section-desc fieldset__desc">Курьер доставит заказ <br> в выбранный день</p>
+                </div>
+                <div class="fieldset__body">
+                  <div class="fieldset__layout">
+                    <div class="select row-filters__select checkout__select">
+                      <select
+                        name="shipping_date"
+                        id="shipping_date"
+                        class="select__input input--dropdown-has-search"
+                      >
+                        <option value="Москва">24 января, понедельник (завтра)</option>
+                        <option value="Санкт-Петербург">25 января, вторник (послезавтра)</option>
+                        <option value="Казань">26 января, среда</option>
+                      </select>
+                    </div>
+                    <div class="select row-filters__select checkout__select">
+                      <select
+                        name="shipping_time"
+                        id="shipping_time"
+                        class="select__input input--dropdown-has-search"
+                      >
+                        <option value="Москва">13:00-15:00</option>
+                        <option value="Санкт-Петербург">17:00-19:00</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </fieldset>
