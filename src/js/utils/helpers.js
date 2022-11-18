@@ -92,3 +92,23 @@ scrollTopButtons.forEach((button) =>
     scrollTop(event);
   })
 );
+
+/*
+ * Получает дату в человеческом формате
+ */
+export function getShortHumanDate(date, locale = "ru") {
+  var options = {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+    timezone: 'UTC'
+  };
+   return date.toLocaleString("ru", options);
+}
+
+export function getTodayPlus(days) {
+  let someDate = new Date();
+  let numberOfDaysToAdd = days;
+  let result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+  return new Date(result)
+}

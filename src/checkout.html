@@ -185,26 +185,8 @@
                 </div>
                 <div class="fieldset__body">
                   <div class="fieldset__layout fieldset__layout--1-1">
-                    <div class="select row-filters__select checkout__select">
-                      <select
-                        name="shipping_date"
-                        id="shipping_date"
-                        class="select__input input--dropdown-has-search"
-                      >
-                        <option value="Москва">24 января, понедельник (завтра)</option>
-                        <option value="Санкт-Петербург">25 января, вторник (послезавтра)</option>
-                        <option value="Казань">26 января, среда</option>
-                      </select>
-                    </div>
-                    <div class="select row-filters__select checkout__select">
-                      <select
-                        name="shipping_time"
-                        id="shipping_time"
-                        class="select__input input--dropdown-has-search"
-                      >
-                        <option value="Москва">13:00-15:00</option>
-                        <option value="Санкт-Петербург">17:00-19:00</option>
-                      </select>
+                    <div class="calendar calendar--inline">
+                      <input type="text" name="shipping_date" class="calendar__input" readonly>
                     </div>
                   </div>
                 </div>
