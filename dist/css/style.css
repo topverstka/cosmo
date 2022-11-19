@@ -2892,6 +2892,11 @@ select {
   cursor: initial;
 }
 
+.calendar .flatpickr-current-month {
+  padding-top: 0;
+  height: 100%;
+}
+
 .calendar .flatpickr-prev-month svg,
 .calendar .flatpickr-next-month svg {
   fill: #A1AEB3;
@@ -2911,10 +2916,19 @@ select {
   line-height: 19px;
   text-align: center;
   color: #000000;
+  margin-bottom: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  height: 34px;
+}
+
+.calendar .flatpickr-monthDropdown-months ~ .numInputWrapper {
+  display: none;
 }
 
 .calendar .flatpickr-months {
-  margin-bottom: 17px;
+  margin-bottom: 7px;
 }
 
 .calendar .flatpickr-current-month {
@@ -2925,6 +2939,7 @@ select {
   width: 100%;
   box-shadow: none;
   background-color: transparent;
+  margin-top: -10px;
 }
 
 .calendar .flatpickr-days {
@@ -2971,6 +2986,131 @@ select {
 .calendar .flatpickr-day.flatpickr-disabled, .calendar .flatpickr-day.flatpickr-disabled:hover, .calendar .flatpickr-day.prevMonthDay, .calendar .flatpickr-day.nextMonthDay, .calendar .flatpickr-day.notAllowed, .calendar .flatpickr-day.notAllowed.prevMonthDay, .calendar .flatpickr-day.notAllowed.nextMonthDay {
   color: #A1AEB2;
   font-weight: 400;
+}
+
+.timepicker {
+  max-width: 271px;
+  max-height: 310px;
+  width: 100%;
+  border-radius: 6px;
+  background: #F0F3F5;
+  padding: 13px;
+  padding-bottom: 3px;
+}
+
+.timepicker__list.timepicker__list--single {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+  pointer-events: none;
+}
+
+.timepicker__list.timepicker__list--dropdown {
+  overflow: auto;
+  height: 100%;
+  margin-top: -10px;
+  /* total width */
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+}
+.timepicker__list.timepicker__list--dropdown::-webkit-scrollbar {
+  background-color: #f0f3f5;
+  width: 12px;
+}
+.timepicker__list.timepicker__list--dropdown::-webkit-scrollbar-track {
+  background-color: #f0f3f5;
+}
+.timepicker__list.timepicker__list--dropdown::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 12px;
+  border: 4px solid #f0f3f5;
+}
+.timepicker__list.timepicker__list--dropdown::-webkit-scrollbar-button {
+  display: none;
+}
+
+.timepicker__item {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.timepicker__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.timepicker__item::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: block;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.timepicker__item::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #D3DCDF;
+  border-radius: 100%;
+  position: static;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+.timepicker__item.is-selected::before {
+  background-color: var(--c-accent);
+}
+
+.timepicker__item.is-selected::after {
+  background-color: #fff;
+}
+
+.timepicker__outer {
+  height: 100%;
+}
+
+.timepicker__list--dropdown .timepicker__list::before {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: calc(100% - 14px);
+  height: 30px;
+  margin-bottom: -10px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(180deg, #f0f3f5 24.79%, rgba(255, 255, 255, 0) 100%);
+}
+
+.timepicker__list--dropdown .timepicker__list::after {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin-bottom: -30px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(0deg, #f0f3f5 24.79%, rgba(255, 255, 255, 0) 100%);
 }
 
 .sidebar {
