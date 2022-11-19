@@ -34,7 +34,7 @@
                   <p class="section-desc fieldset__desc">Укажите название населённого пункта, куда будет доставлен заказ</p>
                 </div>
                 <div class="fieldset__body">
-                  <div class="select select--grey">
+                  <div class="select select--grey select--has-search" data-search-placeholder="Населенный пункт">
                     <select
                       name="shipping_city"
                       id="shipping_city"
@@ -187,6 +187,22 @@
                   <div class="fieldset__layout fieldset__layout--1-1">
                     <div class="calendar calendar--inline">
                       <input type="text" name="shipping_date" class="calendar__input" readonly>
+                    </div>
+                    <div class="timepicker">
+                      <select name="shipping_time" id="shipping_time" class="timepicker__select">
+                        <option value="11:00–12:00">11:00–12:00</option>
+                        <option value="12:00–13:00">12:00–13:00</option>
+                        <option value="13:00–14:00">13:00–14:00</option>
+                        <option value="11:00–12:00">11:00–12:00</option>
+                        <option value="12:00–13:00">12:00–13:00</option>
+                        <option value="13:00–14:00">13:00–14:00</option>
+                        <option value="11:00–12:00">11:00–12:00</option>
+                        <option value="11:00–12:00">11:00–12:00</option>
+                        <option value="12:00–13:00">12:00–13:00</option>
+                        <option value="13:00–14:00">13:00–14:00</option>
+                        <option value="12:00–13:00">12:00–13:00</option>
+                        <option value="13:00–14:00">13:00–14:00</option>
+                      </select>
                     </div>
                   </div>
                 </div>

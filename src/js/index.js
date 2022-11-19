@@ -3,7 +3,6 @@
 import { removeAllClasses, bodyLock } from "./utils/functions.js";
 import DismalModules, { acc } from "./utils/modules.js";
 
-import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 
 import "./components/header.js"
 import "./components/controls.js"
@@ -23,48 +22,6 @@ let lazyLoadInstance = new LazyLoad();
 
 
 
-/**
- * Dropdown Select
- */
-import Choices from "choices.js";
-// import "./libs/custom-select.min.js";
-if (document.querySelector(".select")) {
-  // customSelect(".input--dropdown .input__select");
-  const dropdowns = document.querySelectorAll(".select");
-  dropdowns.forEach((dropdown) => {
-    const choices = new Choices(dropdown.querySelector(".select__input"), {
-      searchPlaceholderValue: "Населённый пункт",
-      noResultsText: "Нет результатов",
-      classNames: {
-        containerOuter: "select",
-        input: "select__input",
-        inputCloned: "select__input--cloned",
-        list: "select__list",
-        listItems: "select__list--multiple",
-        listSingle: "select__list--single",
-        listDropdown: "select__list--dropdown",
-        item: "select__item",
-        itemSelectable: "select__item--selectable",
-        itemDisabled: "select__item--disabled",
-        itemChoice: "select__item--choice",
-        placeholder: "select__placeholder",
-        group: "select__group",
-        groupHeading: "select__heading",
-        button: "select__button",
-        activeState: "is-active",
-        focusState: "is-focused",
-        openState: "is-open",
-        disabledState: "is-disabled",
-        highlightedState: "is-highlighted",
-        selectedState: "is-selected",
-        flippedState: "is-flipped",
-        loadingState: "is-loading",
-        noResults: "has-no-results",
-        noChoices: "has-no-choices",
-      },
-    });
-  });
-}
 
 import "./unstable/tabs.js";
 

@@ -1418,6 +1418,11 @@ span.flatpickr-weekday {
 }
 
 /* stylelint-disable scss/operator-no-newline-after */
+/*
+  Customize website's scrollbar like Mac OS
+  Not supports in Firefox and IE
+  @source https://gist.github.com/spemer/a0e218bbb45433bd611e68446523a00b
+*/
 @font-face {
   font-family: "RF Dewi Extended";
   font-style: normal;
@@ -1526,6 +1531,11 @@ h6 {
   font-weight: inherit;
 }
 
+html {
+  scrollbar-color: #000 transparent;
+  scrollbar-width: thin;
+}
+
 body {
   font-family: var(--ff-regular);
   font-size: 14px;
@@ -1533,6 +1543,25 @@ body {
   line-height: 1.2;
   color: var(--c-text-regular);
   background-color: var(--bg-app);
+  /* total width */
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+}
+body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+body::-webkit-scrollbar-button {
+  display: none;
 }
 
 body._lock {
@@ -1904,6 +1933,18 @@ input[type=search]::-webkit-search-cancel-button {
   display: inline-block;
 }
 
+/*
+ * @library https://choices-js.github.io/Choices/
+ *
+ * Бывают:
+ * select--has-search
+ */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+}
+
 .select {
   position: relative;
   --value-color: #fff;
@@ -1932,7 +1973,9 @@ input[type=search]::-webkit-search-cancel-button {
   top: 48px;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
+  border-radius: 12px;
+  overflow: hidden;
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
@@ -1940,6 +1983,11 @@ input[type=search]::-webkit-search-cancel-button {
   transition: all 0.3s ease;
   transform: scaleY(0);
   transform-origin: top;
+  padding-right: 26px;
+}
+
+.select--has-search .select__list--dropdown {
+  padding-top: 20px;
 }
 
 .select.is-open .select__list--dropdown {
@@ -1947,7 +1995,7 @@ input[type=search]::-webkit-search-cancel-button {
   transform: scaleY(1);
 }
 
-.select__list--dropdown::before {
+.select--has-search .select__list--dropdown::before {
   position: absolute;
   top: 32px;
   right: 36px;
@@ -1989,6 +2037,26 @@ input[type=search]::-webkit-search-cancel-button {
   margin-left: -20px;
   overflow-x: hidden;
   overflow-y: auto;
+  /* total width */
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+  scrollbar-width: thin;
+}
+.select__list--dropdown .select__list::-webkit-scrollbar {
+  background-color: #fff;
+  width: 12px;
+}
+.select__list--dropdown .select__list::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.select__list--dropdown .select__list::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 12px;
+  border: 4px solid #fff;
+}
+.select__list--dropdown .select__list::-webkit-scrollbar-button {
+  display: none;
 }
 
 .select__list--dropdown .select__list::before {
@@ -2798,6 +2866,9 @@ input[type=search]::-webkit-search-cancel-button {
   color: #000000;
 }
 
+/*
+ * @library https://flatpickr.js.org/examples/
+ */
 .calendar {
   max-width: 270px;
   background-color: #F0F3F5;

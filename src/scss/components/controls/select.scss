@@ -1,3 +1,14 @@
+/*
+ * @library https://choices-js.github.io/Choices/
+ *
+ * Бывают:
+ * select--has-search
+ */
+ select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+ }
 .select {
   position: relative;
   --value-color: #fff;
@@ -24,7 +35,9 @@
   top: 48px;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
+  border-radius: 12px;
+  overflow: hidden;
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
@@ -32,12 +45,16 @@
   transition: all 0.3s ease;
   transform: scaleY(0);
   transform-origin: top;
+  padding-right: 26px;
+}
+.select--has-search .select__list--dropdown {
+  padding-top: 20px;
 }
 .select.is-open .select__list--dropdown {
   opacity: 1;
   transform: scaleY(1);
 }
-.select__list--dropdown::before {
+.select--has-search .select__list--dropdown::before {
   position: absolute;
   top: 32px;
   right: 36px;
@@ -75,6 +92,8 @@
   margin-left: -20px;
   overflow-x: hidden;
   overflow-y: auto;
+  @include macscrollbar(12px);
+  scrollbar-width: thin;
 }
 .select__list--dropdown .select__list::before {
   position: sticky;
