@@ -40,3 +40,42 @@
   display: grid;
   column-gap: 8px;
 }
+
+.fieldset__layout--2-end-3 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 8px;
+  counter-reset: rows;
+}
+.fieldset__layout--2-end-3 .input {
+}
+.fieldset__layout--2-end-3 .input:nth-of-type(odd) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.fieldset__layout--2-end-3 .input:nth-of-type(even) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.fieldset__layout--2-end-3 .input:nth-of-type(even):not(.input:nth-last-of-type(1),.input:nth-last-of-type(2),.input:nth-last-of-type(3)) {
+    counter-increment: rows;
+}
+.fieldset__layout--2-end-3 .input:nth-last-of-type(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.fieldset__layout--2-end-3 .input:nth-last-of-type(2) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.fieldset__layout--2-end-3 .input:nth-last-of-type(3) {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+.fieldset__layout--2-end-3 .input:nth-last-of-type(1),
+.fieldset__layout--2-end-3 .input:nth-last-of-type(2),
+.fieldset__layout--2-end-3 .input:nth-last-of-type(3) {
+  grid-row: 2;
+}

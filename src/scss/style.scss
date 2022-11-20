@@ -178,3 +178,13 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 12px;
 }
 
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
