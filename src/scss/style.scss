@@ -14,6 +14,12 @@
 
 // Шрифты
 @include font(
+  "RF Dewi",
+  normal,
+  400,
+  "../resources/fonts/RFDewi-Regular"
+);
+@include font(
   "RF Dewi Extended",
   normal,
   400,

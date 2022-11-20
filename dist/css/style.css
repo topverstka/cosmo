@@ -1424,6 +1424,14 @@ span.flatpickr-weekday {
   @source https://gist.github.com/spemer/a0e218bbb45433bd611e68446523a00b
 */
 @font-face {
+  font-family: "RF Dewi";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url("../resources/fonts/RFDewi-Regular.woff2") format("woff2"), url("../resources/fonts/RFDewi-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
   font-family: "RF Dewi Extended";
   font-style: normal;
   font-weight: 400;
