@@ -1,0 +1,112 @@
+/*
+ * @library https://flatpickr.js.org/examples/
+ */
+
+.calendar {
+  max-width: 270px;
+  background-color: #F0F3F5;
+  border-radius: 12px;
+  padding: 11px;
+}
+.calendar__input {
+  margin-bottom: 0;
+  background-color: var(--c-accent);
+  color: var(--c-text-on);
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 6px;
+  line-height: 14px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-family: 'RF Dewi Extended', sans-serif;
+  margin-bottom: 17px;
+  cursor: initial;
+}
+
+.calendar .flatpickr-current-month {
+  padding-top: 0;
+  height: 100%;
+}
+.calendar .flatpickr-prev-month svg,
+.calendar .flatpickr-next-month svg {
+  fill: #A1AEB3
+}
+.calendar .flatpickr-prev-month:hover svg,
+.calendar .flatpickr-next-month:hover svg {
+  @media (any-hover: hover) {
+    fill: #fff
+  }
+}
+
+.calendar .flatpickr-monthDropdown-months {
+  font-weight: 400;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  height: 34px;
+}
+.calendar .flatpickr-monthDropdown-months ~ .numInputWrapper {
+  display: none;
+}
+.calendar .flatpickr-months {
+  margin-bottom: 7px;
+}
+.calendar .flatpickr-current-month {
+  display: flex;
+}
+
+.calendar .flatpickr-calendar {
+  width: 100%;
+  box-shadow: none;
+  background-color: transparent;
+  margin-top: -10px;
+}
+.calendar .flatpickr-days {
+  width: 100%;
+}
+.calendar .dayContainer {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+.calendar .flatpickr-day {
+  border-radius: 6px;
+  max-width: 32px;
+  max-height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+}
+.calendar .flatpickr-day.selected {
+ background-color: var(--c-accent);
+ border-color: var(--c-accent);
+}
+.calendar .flatpickr-weekdays {
+  height: 19px;
+  margin-bottom: 9px;
+}
+.calendar .flatpickr-weekday {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.calendar {
+  .flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay, .flatpickr-day.notAllowed, .flatpickr-day.notAllowed.prevMonthDay, .flatpickr-day.notAllowed.nextMonthDay {
+    color: #A1AEB2;
+    font-weight: 400;
+  }
+}

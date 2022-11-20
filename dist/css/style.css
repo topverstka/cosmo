@@ -2341,7 +2341,6 @@ select {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  text-decoration-line: underline;
   --button-color: #5F6C75;
   --button-bg: transparent;
   border-bottom: 1px solid var(--button-color);
@@ -5307,6 +5306,36 @@ select {
   }
 }
 
+.header--mini {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.header--mini .header__pickers {
+  margin-right: 0;
+}
+
+.header__button-back {
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.header__button-back-icon {
+  width: 40px;
+  height: 40px;
+  fill: #000;
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .header__button-back:hover {
+    background-color: #000;
+  }
+  .header__button-back:hover .header__button-back-icon {
+    fill: #fff;
+  }
+}
+
 .page-heading {
   padding-top: 52px;
   border-top: 1px solid #c5cacf;
@@ -7343,6 +7372,10 @@ select {
   --angle-color: #fff;
   margin-right: 0;
   margin-bottom: 8px;
+}
+
+.checkout__fields {
+  padding-bottom: 72px;
 }
 
 .footer {

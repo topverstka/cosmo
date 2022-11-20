@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="wrapper">
-      @@include('tpls/header.html',{})
+      @@include('tpls/header-mini.html',{})
 
       <main class="main">
         <div class="breadcrumbs">
@@ -28,7 +28,7 @@
         <div class="cart checkout">
           <div class="cart__columns">
             <div class="checkout__fields">
-              <fieldset class="fieldset fieldset-contacts">
+              <fieldset class="fieldset fieldset-location">
                 <div class="fieldset__heading">
                   <h2 class="fieldset__title">Местоположение</h2>
                   <p class="section-desc fieldset__desc">Укажите название населённого пункта, куда будет доставлен заказ</p>
@@ -40,9 +40,9 @@
                       id="shipping_city"
                       class="select__input input--dropdown-has-search"
                     >
-                      <option value="Москва">24 января, понедельник (завтра)</option>
-                      <option value="Санкт-Петербург">25 января, вторник (послезавтра)</option>
-                      <option value="Казань">26 января, среда</option>
+                      <option value="Москва">Москва</option>
+                      <option value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option value="Казань">Казань</option>
                     </select>
                   </div>
                   <button class="button--thirdly button--fw-bold button-detect-city">Определить автоматически</button>
@@ -107,7 +107,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="fieldset fieldset-shipping">
+              <fieldset class="fieldset fieldset-shipping-method">
                 <div class="fieldset__heading">
                   <h2 class="fieldset__title">Способы доставки</h2>
                   <p class="section-desc fieldset__desc">Выберите удобный способ <br> доставки в вашем городе</p>
@@ -115,7 +115,7 @@
                 <div class="fieldset__body">
                   <div class="fieldset__layout">
                     <label class="radio">
-                      <input name="shipping" type="radio" class="radio__input" checked>
+                      <input name="shipping_method" hidden type="radio" class="radio__input" checked>
                       <span class="radio__check"></span>
                       <span class="radio__caption">
                         <p class="radio__title">Курьерская доставка</p>
@@ -123,7 +123,7 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input name="shipping" type="radio" class="radio__input">
+                      <input name="shipping_method" hidden type="radio" class="radio__input">
                       <span class="radio__check"></span>
                       <span class="radio__caption">
                         <p class="radio__title">Самовывоз из пункта выдачи</p>
@@ -133,12 +133,28 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="fieldset fieldset-address">
+              <fieldset class="fieldset fieldset-shipping-address">
                 <div class="fieldset__heading">
                   <h2 class="fieldset__title">Адрес доставки</h2>
                   <p class="section-desc fieldset__desc">Укажите адрес, по которому будет выполняться доставка</p>
                 </div>
                 <div class="fieldset__body">
+                  <div class="fieldset__layout">
+                    <label class="radio">
+                      <input name="shipping_user_address" hidden type="radio" class="radio__input" checked value="Москва, Чистый переулок 5А">
+                      <span class="radio__check"></span>
+                      <span class="radio__caption">
+                        <p class="radio__title">Москва, Чистый переулок 5А</p>
+                      </span>
+                    </label>
+                    <label class="radio">
+                      <input name="shipping_user_address" hidden type="radio" class="radio__input" checked value="Добавить новый адрес">
+                      <span class="radio__check"></span>
+                      <span class="radio__caption">
+                        <p class="radio__title">Добавить новый адрес</p>
+                      </span>
+                    </label>
+                  </div>
                   <div class="fieldset__layout fieldset__layout--1-end-2">
                     <label class="input">
                       <input
@@ -204,6 +220,46 @@
                         <option value="13:00–14:00">13:00–14:00</option>
                       </select>
                     </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset fieldset-payment-method">
+                <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Способы оплаты</h2>
+                  <p class="section-desc fieldset__desc">Выберите удобный способ <br> оплаты вашего заказа</p>
+                </div>
+                <div class="fieldset__body">
+                  <div class="fieldset__layout">
+                    <label class="radio">
+                      <input name="payment_medhod" hidden type="radio" class="radio__input" checked>
+                      <span class="radio__check"></span>
+                      <span class="radio__caption">
+                        <p class="radio__title">Онлайн-оплата картой</p>
+                        <p class="radio__desc">Оплата банковской картой Мир/Visa/Mastercard до отправки заказа</p>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset fieldset-pickup">
+                <div class="fieldset__heading">
+                  <h2 class="fieldset__title">Самовывоз</h2>
+                  <p class="section-desc fieldset__desc">Вы самостоятельно заберёте заказ</p>
+                </div>
+                <div class="fieldset__body">
+                  <div class="fieldset__layout">
+                    <label class="radio">
+                      <input name="pickup_address" hidden type="radio" class="radio__input" checked>
+                      <span class="radio__check"></span>
+                      <span class="radio__caption">
+                        <p class="radio__title">Ходынский б-р 4, ТЦ Авиапарк, магазин Cosmomedica</p>
+                        <p class="radio__desc">Можно забрать 21 октября (завтра) с 17:00. Срок хранения: 5 дней</p>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fieldset__layout">
+                    <input type="text" class="filedset-pickup__input" name="pickup_address" hidden readonly>
+                    <button class="button button--primary button--fullsize fieldset-pickup__button" type="button">Выбрать пункт выдачи</button>
                   </div>
                 </div>
               </fieldset>
