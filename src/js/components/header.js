@@ -7,60 +7,66 @@ const buttonCart = document.querySelector('.button-cart');
 const miniAuth = document.querySelector('.auth');
 const buttonAuth = document.querySelector('.button-auth');
 
-buttonCart.addEventListener('click', () => {
-buttonCart.parentElement.querySelector('.minicart').classList.toggle('minicart--visible')
+if (buttonCart) {
+  buttonCart.addEventListener('click', () => {
+    buttonCart.parentElement.querySelector('.minicart').classList.toggle('minicart--visible')
 
-buttonAuth.parentElement.querySelector('.auth').classList.remove('auth--visible')
-})
-minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
-const yOffset = e.target.scrollTop;
-if (yOffset > 20) {
-  e.target.classList.add('minicart__content--scrolled')
-} else {
-  e.target.classList.remove('minicart__content--scrolled')
+    buttonAuth.parentElement.querySelector('.auth').classList.remove('auth--visible')
+  });
+  minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
+  const yOffset = e.target.scrollTop;
+  if (yOffset > 20) {
+    e.target.classList.add('minicart__content--scrolled')
+  } else {
+    e.target.classList.remove('minicart__content--scrolled')
+  }
+  })
+  window.addEventListener('scroll', () => {
+    minicart.classList.remove('minicart--visible')
+  })
 }
-})
 
 
-buttonAuth.addEventListener('click', () => {
-  buttonAuth.parentElement.querySelector('.auth').classList.toggle('auth--visible')
-  buttonCart.parentElement.querySelector('.minicart').classList.remove('minicart--visible')
-})
-
-const authMethodsTogglers = document.querySelectorAll('.auth__button-method-toggler')
-const authFieldsetClass = 'auth__fieldset';
-const authFieldsetClassActive = 'auth__fieldset--visible';
-authMethodsTogglers.forEach(button => {
-  button.addEventListener('click', () => {
-    const toggleName = button.dataset.toggler;
-    // const activeToggler = document.querySelector(`.${authFieldsetClass}[data-toggler="${toggleName}"]`);
-    document.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
-      if (fieldset.dataset.toggler != toggleName) {
-        fieldset.classList.remove(authFieldsetClassActive)
-      } else {
-        fieldset.classList.add(authFieldsetClassActive)
-      }
-    })
+if (buttonAuth) {
+  buttonAuth.addEventListener('click', () => {
+    buttonAuth.parentElement.querySelector('.auth').classList.toggle('auth--visible')
+    buttonCart.parentElement.querySelector('.minicart').classList.remove('minicart--visible')
   })
-})
 
-const authTabsTogglers = document.querySelectorAll('.auth__tabs .tabs__toggler')
-const authTabsPages = document.querySelectorAll('.auth__tabs .tabs__page')
-authTabsTogglers.forEach((toggler, togglerIndex) => {
-  toggler.addEventListener('click', () => {
-    authTabsPages.forEach((page, pageIndex) => {
-      page.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
-        fieldset.classList.remove(authFieldsetClassActive)
+  const authMethodsTogglers = document.querySelectorAll('.auth__button-method-toggler')
+  const authFieldsetClass = 'auth__fieldset';
+  const authFieldsetClassActive = 'auth__fieldset--visible';
+  authMethodsTogglers.forEach(button => {
+    button.addEventListener('click', () => {
+      const toggleName = button.dataset.toggler;
+      // const activeToggler = document.querySelector(`.${authFieldsetClass}[data-toggler="${toggleName}"]`);
+      document.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
+        if (fieldset.dataset.toggler != toggleName) {
+          fieldset.classList.remove(authFieldsetClassActive)
+        } else {
+          fieldset.classList.add(authFieldsetClassActive)
+        }
       })
-      page.querySelector(`.${authFieldsetClass}`).classList.add(authFieldsetClassActive)
     })
   })
-})
 
-window.addEventListener('scroll', () => {
-  minicart.classList.remove('minicart--visible')
-  miniAuth.classList.remove('auth--visible')
-})
+  const authTabsTogglers = document.querySelectorAll('.auth__tabs .tabs__toggler')
+  const authTabsPages = document.querySelectorAll('.auth__tabs .tabs__page')
+  authTabsTogglers.forEach((toggler, togglerIndex) => {
+    toggler.addEventListener('click', () => {
+      authTabsPages.forEach((page, pageIndex) => {
+        page.querySelectorAll(`.${authFieldsetClass}`).forEach(fieldset => {
+          fieldset.classList.remove(authFieldsetClassActive)
+        })
+        page.querySelector(`.${authFieldsetClass}`).classList.add(authFieldsetClassActive)
+      })
+    })
+  })
+  window.addEventListener('scroll', () => {
+    miniAuth.classList.remove('auth--visible')
+  })
+}
+
 
 const SNACKS_SHOW_CLASS = 'header__snacks--show';
 const SNACK_VISIBLE_CLASS = 'header-snack--visible';
