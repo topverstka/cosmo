@@ -107,22 +107,27 @@ calendars.forEach((calendar) => {
   const calendarInput = calendar.querySelector('.calendar__input');
   if (!calendarInput) return
 
-  if (calendar.classList.contains('calendar--inline')) {
-    flatpickr(calendarInput, {
+    let calendarSettings = {
       altInput: true,
       altFormat: "D, j M Y",
-      inline: true,
       locale: Russian,
-      disable: [
-        {
-            to: new Date(),
-        },
-      ],
       defaultDate: getTodayPlus(2),
       time_24hr: true,
-      minDate: new Date(),
-    });
+    }
+  if (calendar.classList.contains('calendar--inline')) {
+    calendarSettings.inline = true;
+  } else {
+    calendarSettings.appendTo = calendar;
   }
+  if (calendar.classList.contains('calendar--only-future')) {
+    calendarSettings.disable = [{to: new Date(), }, ];
+    calendarSettings.minDate = new Date();
+  }
+
+  if (calendar.classList.contains('calendar--has-year')) {
+  }
+
+  flatpickr(calendarInput, calendarSettings);
 });
 
 
