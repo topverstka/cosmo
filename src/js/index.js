@@ -192,3 +192,64 @@ document.querySelectorAll('.cart-product').forEach(product => {
     product.classList.remove('product-card--removed')
   })
 })
+
+/*
+  Order cards
+*/
+const ORDER_CARD_OPENED_CLASS = 'order-history-card--opened'
+function openOrderCard(card, toggler) {
+  card.classList.add(ORDER_CARD_OPENED_CLASS);
+  toggler.innerText = toggler.dataset.textHide;
+}
+function closeOrderCard(card, toggler) {
+  card.classList.remove(ORDER_CARD_OPENED_CLASS)
+  toggler.innerText = toggler.dataset.textShow;
+}
+function toggleOrderCard(card, toggler) {
+  if (card.classList.contains(ORDER_CARD_OPENED_CLASS)) {
+    closeOrderCard(card, toggler);
+  } else {
+    openOrderCard(card, toggler);
+  }
+}
+function countHiddenOrderProducts(products) {
+  const count = [...products].length;
+
+  let hiddenCount = window.innerWidth > 1200
+    ? count - 5
+    : count - 3;
+
+ return hiddenCount > 0
+  ? hiddenCount
+  : false;
+}
+function updateHiddenOrderProductsCount(card) {
+  const plusCard = card.querySelector('.order-history-card__products-more');
+  const cardProducts = card.querySelectorAll('.product-card');
+  const hiddenProducts = countHiddenOrderProducts(cardProducts)
+
+  if (hiddenProducts) {
+    plusCard.style.display = '';
+    plusCard.innerHTML = `+${hiddenProducts}`;
+  } else {
+    plusCard.style.display = 'none'
+  }
+}
+const orderCards = document.querySelectorAll('.order-history-card');
+orderCards.forEach(card => {
+  const toggler = card.querySelector('.order-history-card__button-more');
+  toggler.dataset.textShow = toggler.innerText;
+  toggler.addEventListener('click', () =>{
+    // card.classList.toggle(ORDER_CARD_OPENED_CLASS);
+    toggleOrderCard(card, toggler)
+  })
+  window.addEventListener('resize', () => {
+    updateHiddenOrderProductsCount(card)
+  })
+  updateHiddenOrderProductsCount(card)
+
+  const plusCard = card.querySelector('.order-history-card__products-more');
+  plusCard.addEventListener('click', (e) => {
+    toggleOrderCard(card, toggler)
+  })
+})

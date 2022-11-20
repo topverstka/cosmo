@@ -1,0 +1,20 @@
+.account {
+  display: grid;
+  grid-template-columns: 318px auto;
+  column-gap: 30px;
+  margin-bottom: 58px;
+}
+
+.account__title {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 110%;
+  margin-bottom: 31px;
+}
+.account__pages {
+  position: relative;
+}
+.account__pages .side-navigation__list {
+  position: sticky;
+  top: 100px;
+}

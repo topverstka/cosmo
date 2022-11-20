@@ -3114,7 +3114,6 @@ select {
 
 .sidebar {
   position: relative;
-  color: #fff;
 }
 
 .sidebar__sticky {
@@ -3136,6 +3135,7 @@ select {
   background-color: #5F6C75;
   padding: 40px;
   margin-bottom: 8px;
+  color: #fff;
 }
 
 .sidebar-card--autoheight {
@@ -3872,6 +3872,23 @@ select {
 .product-card--removed .product-card__pic,
 .product-card--removed .product-card__price {
   opacity: 0.4;
+}
+
+.product-card__quantity {
+  --size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+  width: var(--size);
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  border: 1px solid #A1AEB2;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .review-card {
@@ -7401,6 +7418,272 @@ select {
 
 .checkout__fields {
   padding-bottom: 72px;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 318px auto;
+  column-gap: 30px;
+  margin-bottom: 58px;
+}
+
+.account__title {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 110%;
+  margin-bottom: 31px;
+}
+
+.account__pages {
+  position: relative;
+}
+
+.account__pages .side-navigation__list {
+  position: sticky;
+  top: 100px;
+}
+
+.order-history__active {
+  margin-bottom: 60px;
+}
+
+.order-history-card {
+  background-color: var(--bg-element);
+  padding: 15px 20px 20px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.order-history-card:last-child {
+  margin-bottom: 0;
+}
+
+.order-history-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.order-history-card__id {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.order-history-card__status {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.order-history-card__caption {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #A1AEB3;
+}
+
+.order-history-card__button-track {
+  margin-right: 8px;
+}
+
+.order-history-card__info {
+  display: grid;
+  column-gap: 120px;
+  row-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0px;
+  transition: all 0.3s ease;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  pointer-events: none;
+  max-height: 1px;
+  overflow: hidden;
+}
+
+.order-history-card__info-row {
+  display: grid;
+  grid-template-columns: 203px auto;
+  column-gap: 36px;
+  margin-bottom: 16px;
+  font-family: "RF Dewi", sans-serif;
+}
+
+.order-history-card__info-row:first-child {
+  margin-bottom: 41px;
+}
+
+.order-history-card__info-row:first-child .order-history-card__info-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #A1AEB3;
+}
+
+.order-history-card__products {
+  background: #F0F3F5;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.order-history-card__products-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 0px;
+  transition: all 0.3s ease;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  pointer-events: none;
+  max-height: 1px;
+  overflow: hidden;
+}
+
+.order-history-card:not(.order-history-card--opened) .order-history-card__products-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 8px;
+  margin-bottom: 18px;
+}
+
+.order-history-card__products-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 110%;
+  color: #5F6C75;
+  width: 100%;
+  cursor: pointer;
+}
+
+.order-history-card__total-short {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+  transform-origin: top;
+  max-height: 1000px;
+  overflow: visible;
+}
+
+.order-hisotry-card__total-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  max-height: 1px;
+}
+
+.order-history-card__total-card {
+  margin-bottom: 0;
+}
+
+.order-history-card:not(.order-history-card--opened) .order-history__product {
+  padding: 0;
+  max-width: 100%;
+  max-height: 162px;
+  margin-bottom: 0;
+}
+
+.order-history-card:not(.order-history-card--opened) .order-history__product:nth-child(n+6) {
+  display: none;
+}
+
+.order-history-card:not(.order-history-card--opened) .order-history__product .product-card__pic {
+  margin-right: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.order-history-card:not(.order-history-card--opened) .order-history__product .product-card__info {
+  max-width: 0px;
+  overflow: hidden;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.order-history__product .product-card__price {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.order-history-card--opened .order-history-card__top {
+  margin-bottom: 67px;
+}
+
+.order-history-card--opened .order-history-card__info {
+  pointer-events: initial;
+  transform: scaleY(1);
+  opacity: 1;
+  max-height: initial;
+  overflow: initial;
+  margin-bottom: 70px;
+}
+
+.order-history-card--opened .order-history-card__products-title {
+  pointer-events: initial;
+  transform: scaleY(1);
+  opacity: 1;
+  max-height: initial;
+  overflow: initial;
+  margin-bottom: 28px;
+}
+
+.order-history-card--opened .order-history-card__products {
+  background-color: transparent;
+  padding-top: 0;
+}
+
+.order-history-card--opened .order-hisotry-card__total-full {
+  pointer-events: initial;
+  transform: scaleY(1);
+  opacity: 1;
+  max-height: initial;
+  overflow: initial;
+}
+
+.order-history-card--opened .order-history-card__products-more {
+  display: none;
+}
+
+.order-history-card--opened .order-history-card__total-short {
+  transform: scaleY(0);
+  opacity: 0;
+  pointer-events: none;
+  max-height: 1px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.order-history-card--opened .order-history__product:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (any-hover: hover) {
+  .order-history-card__total-button-repeat:hover {
+    --button-bg: #000;
+  }
+}
+
+.order-history-card__button-cancel {
+  --button-color: var(--c-text-on);
 }
 
 .footer {

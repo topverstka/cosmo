@@ -288,3 +288,20 @@
     opacity: 0.4;
   }
 }
+
+.product-card__quantity {
+  --size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+  width: var(--size);
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  border: 1px solid #A1AEB2;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
