@@ -179,3 +179,16 @@ function initAccordionGallery() {
 }
 initAccordionGallery()
 
+
+
+document.querySelectorAll('.cart-product').forEach(product => {
+  const removeButton = product.querySelector('.cart-product__button-remove');
+  const returnButton = product.querySelector('.cart-product__button-return');
+
+  removeButton?.addEventListener('click', () => {
+    product.classList.add('product-card--removed')
+  })
+  returnButton?.addEventListener('click', () => {
+    product.classList.remove('product-card--removed')
+  })
+})
