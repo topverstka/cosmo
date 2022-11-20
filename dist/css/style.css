@@ -4808,11 +4808,11 @@ select {
   pointer-events: none;
 }
 
-.error {
+.message {
   padding-top: clamp(60px, 26vh, 260px);
 }
 
-.message {
+.message-card {
   background-color: #fff;
   max-width: 708px;
   width: 100%;
@@ -4829,7 +4829,7 @@ select {
   border-radius: 12px;
 }
 
-.message__title {
+.message-card__title {
   font-weight: 400;
   font-size: 40px;
   line-height: 48px;
@@ -4838,13 +4838,17 @@ select {
   margin-bottom: 16px;
 }
 
-.message__desc {
+.message-card__desc {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   text-align: center;
   color: #A1AEB3;
   margin-bottom: 40px;
+}
+
+.message-card__link {
+  margin-top: 16px;
 }
 
 .section-heading {
