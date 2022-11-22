@@ -14,7 +14,9 @@
 }
 .product-hero-play .button__icon {
   width: 12px;
-  margin-right: 8px;
+}
+.product-hero-play .button__text {
+  margin-bottom: 1px;
 }
 
 .product-hero__main {
@@ -62,6 +64,10 @@
   border-radius: 8px;
 }
 
+.product-hero__order {
+  font-size: 20px;
+  line-height: 120%;
+}
 .product-hero__bullets {
   margin-bottom: 50px;
 }

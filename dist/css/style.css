@@ -2260,12 +2260,15 @@ select {
   fill: var(--icon-color);
   stroke: none;
   transition: all var(--tr) ease;
-  margin-right: 8px;
 }
 
 .button--icon-stroke .button__icon {
   fill: transparent;
   stroke: var(--icon-color);
+}
+
+.button__icon ~ .button__text {
+  margin-left: 8px;
 }
 
 .button__icon--selected {
@@ -7829,7 +7832,10 @@ select {
 
 .product-hero-play .button__icon {
   width: 12px;
-  margin-right: 8px;
+}
+
+.product-hero-play .button__text {
+  margin-bottom: 1px;
 }
 
 .product-hero__main {
@@ -7879,6 +7885,11 @@ select {
 
 .product-hero__options .chips__caption {
   border-radius: 8px;
+}
+
+.product-hero__order {
+  font-size: 20px;
+  line-height: 120%;
 }
 
 .product-hero__bullets {

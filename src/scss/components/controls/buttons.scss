@@ -115,11 +115,13 @@
   fill: var(--icon-color);
   stroke: none;
   transition: all var(--tr) ease;
-  margin-right: 8px;
 }
 .button--icon-stroke .button__icon {
   fill: transparent;
   stroke: var(--icon-color);
+}
+.button__icon ~ .button__text{
+  margin-left: 8px;
 }
 .button__icon--selected {
   position: absolute;
