@@ -76,3 +76,13 @@
 .modal__group .input__field::placeholder {
   color: #A1AEB3;
 }
+
+.modal__group-column {
+  display: grid;
+  row-gap: 8px;
+  justify-content: center;
+}
+
+#callback-pop .modal__inner{
+  max-width: 375px;
+}

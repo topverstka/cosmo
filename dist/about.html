@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>О бренде</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221123012337" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221123013318" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -1901,89 +1901,28 @@
       </fieldset>
       <fieldset class="modal__group">
         <h3 class="modal__group-title">Желаемые дата и/или время</h3>
-        <div class="modal__group-row">
-          <div class="select modal__select">
-            <select
-              name="user_date"
-              id="modal__date"
-              class="select__input"
-            >
-              <option value="Москва">Дата</option>
-              <option value="Санкт-Петербург">02.11.22</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область
-              </option>
-              <option value="Казань">Казань, Татарстан республика</option>
-              <option value="Челябинск">Челябинск, Челябинская область</option>
-              <option value="Краснодар">Краснодар, Краснодарский Край</option>
-              <option value="Самара">Самара, Самарская область</option>
-              <option value="Москва">2 Москва</option>
-              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область 2
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область 2
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область 2
-              </option>
-              <option value="Казань">Казань, Татарстан республика 2</option>
-              <option value="Челябинск">
-                Челябинск, Челябинская область 2
-              </option>
-              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
-              <option value="Самара">Самара, Самарская область 2</option>
-            </select>
+        <div class="modal__group-column">
+          <div class="calendar calendar--inline calendar--only-future">
+            <input type="text" name="date" class="calendar__input" readonly>
           </div>
-          <div class="select modal__select">
-            <select
-              name="user_time"
-              id="modal__time"
-              class="select__input"
-            >
-              <option value="Время">Время</option>
-              <option value="Санкт-Петербург">02.11.22</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область
-              </option>
-              <option value="Казань">Казань, Татарстан республика</option>
-              <option value="Челябинск">Челябинск, Челябинская область</option>
-              <option value="Краснодар">Краснодар, Краснодарский Край</option>
-              <option value="Самара">Самара, Самарская область</option>
-              <option value="Москва">2 Москва</option>
-              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
-              <option value="Екатеринбург">
-                Екатеринбург, Свердловская область 2
-              </option>
-              <option value="Нижний Новгород">
-                Нижний Новгород, Нижегородская область 2
-              </option>
-              <option value="Новосибирск">
-                Новосибирск, Новосибирская область 2
-              </option>
-              <option value="Казань">Казань, Татарстан республика 2</option>
-              <option value="Челябинск">
-                Челябинск, Челябинская область 2
-              </option>
-              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
-              <option value="Самара">Самара, Самарская область 2</option>
+          <div class="timepicker">
+            <select name="time" id="shipping_time" class="timepicker__select">
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
             </select>
           </div>
         </div>
-        <p class="modal__caption section-text--right">Московское время</p>
+        <!-- <p class="modal__caption section-text--right">Московское время</p> -->
       </fieldset>
       <fieldset class="modal__group">
         <h3 class="modal__group-title">Комментарий</h3>
@@ -2026,6 +1965,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221123012337"></script>
+    <script src="./js/bundle.min.js?_v=20221123013318"></script>
   </body>
 </html>

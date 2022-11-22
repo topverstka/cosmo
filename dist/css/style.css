@@ -3047,6 +3047,8 @@ select {
   background: #F0F3F5;
   padding: 13px;
   padding-bottom: 3px;
+  --height: 310px;
+  height: var(--height);
 }
 
 .timepicker__list.timepicker__list--single {
@@ -3059,7 +3061,7 @@ select {
 
 .timepicker__list.timepicker__list--dropdown {
   overflow: auto;
-  height: 100%;
+  height: calc(var(--height) - 10px);
   margin-top: -10px;
   /* total width */
   /* background of the scrollbar except button or resizer */
@@ -3089,6 +3091,7 @@ select {
   align-items: center;
   cursor: pointer;
   margin-bottom: 12px;
+  color: var(--time-color, #000);
 }
 
 .timepicker__item:last-of-type {
@@ -4758,6 +4761,16 @@ select {
 
 .modal__group .input__field::placeholder {
   color: #A1AEB3;
+}
+
+.modal__group-column {
+  display: grid;
+  row-gap: 8px;
+  justify-content: center;
+}
+
+#callback-pop .modal__inner {
+  max-width: 375px;
 }
 
 .row-filters {
