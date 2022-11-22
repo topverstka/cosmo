@@ -111,7 +111,6 @@ calendars.forEach((calendar) => {
       altInput: true,
       altFormat: "D, j M Y",
       locale: Russian,
-      defaultDate: getTodayPlus(2),
       time_24hr: true,
     }
   if (calendar.classList.contains('calendar--inline')) {
@@ -122,6 +121,7 @@ calendars.forEach((calendar) => {
   if (calendar.classList.contains('calendar--only-future')) {
     calendarSettings.disable = [{to: new Date(), }, ];
     calendarSettings.minDate = new Date();
+    calendarSettings.defaultDate = getTodayPlus(2);
   }
 
   if (calendar.classList.contains('calendar--has-year')) {

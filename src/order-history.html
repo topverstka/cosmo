@@ -134,7 +134,6 @@
                         </div>
                         <div class="cart-total__row">
                           <button class="button button--primary button--light order-history-card__total-button-repeat">Повторить заказ</button>
-                          <button data-poppa-open="order-cancel" class="button--thirdly order-history-card__button-cancel">Отменить заказ</button>
                         </div>
                       </article>
                     </div>
@@ -234,7 +233,6 @@
                         </div>
                         <div class="cart-total__row">
                           <button class="button button--primary button--light order-history-card__total-button-repeat">Повторить заказ</button>
-                          <button data-poppa-open="order-cancel" class="button--thirdly order-history-card__button-cancel">Отменить заказ</button>
                         </div>
                       </article>
                     </div>
@@ -250,6 +248,12 @@
     </div>
 
     @@include('tpls/modals.html', {})
+    <section class="message-card poppa" id="order-cancel">
+      <h2 class="message-card__title">Вы уверены, что хотите отменить заказ №1211241334 от 1 янв. 2022?</h2>
+      <p class="message-card__desc">7 товаров на сумму 15 000 ₽ </p>
+      <button class="button button--primary button--dark message-card__button">Подтвердить отмену заказа</button>
+      <button data-poppa-close="order-cancel" class="button--thirdly message-card__link">Не отменять заказ</button>
+    </section>
     <script src="./js/bundle.min.js"></script>
   </body>
 </html>
