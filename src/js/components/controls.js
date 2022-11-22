@@ -15,6 +15,9 @@ if (document.querySelector(".select")) {
       searchEnabled: false,
       searchPlaceholderValue: "Поиск",
       noResultsText: "Нет результатов",
+      shouldSort: false,
+      // removeItemButton: true,
+      renderSelectedChoices: 'always',
       classNames: {
         containerOuter: "select",
         input: "select__input",
@@ -51,6 +54,9 @@ if (document.querySelector(".select")) {
         // choicesOptions.searchPlaceholderValue = "Населённый пункт";
       }
     }
+    if (dropdown.classList.contains('select--allow-multiple')) {
+      choicesOptions.maxItemCount = -1;
+    }
     const choices = new Choices(dropdown.querySelector(".select__input"), choicesOptions) });
 }
 
@@ -61,6 +67,7 @@ if (document.querySelector(".timepicker")) {
       searchEnabled: false,
       searchPlaceholderValue: "Поиск",
       noResultsText: "Нет результатов",
+      shouldSort: false,
       classNames: {
         containerOuter: "timepicker__outer",
         input: "timepicker__input",

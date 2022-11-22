@@ -28,6 +28,8 @@
   --value-color: #000;
   --brad: 6px;
   --maxw: 256px;
+  z-index: 2;
+  position: relative;
 }
 .row-filters__select-label {
   margin-right: -8px;
@@ -41,6 +43,7 @@
   position: static;
 }
 .row-filters__select > .select::before {
+  cursor: pointer;
   content: "";
   position: absolute;
   left: 0;
@@ -49,4 +52,12 @@
   width: 100%;
   height: 100%;
   z-index: 3;
+}
+
+.row-filters__select .choices__inner  {
+  z-index: 7;
+  position: relative;
+}
+.row-filters__select--has-label .select__item--selectable  {
+  background-color: transparent;
 }
