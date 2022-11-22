@@ -7,9 +7,13 @@
     product-card--removed — убранный товар в корзине
 */
 .product-card {
+  height: 100%;
+  position: relative;
+}
+.product-card__inner {
   position: relative;
   z-index: 1;
-  min-height: 348px;
+  height: 100%;
   padding: 20px;
   overflow: hidden;
   background-color: var(--bg-element);
@@ -18,6 +22,7 @@
 }
 .product-card__info {
   height: 100%;
+  min-height: 308px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -122,7 +127,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(var(--size) / 2);
+  left: calc(var(--size) / 2 - 10px);
   z-index: 1;
   display: flex;
   align-items: center;
@@ -206,18 +211,22 @@
  */
 
 .products--layout-horizontal .product-card {
+  margin-bottom: 8px;
+}
+.products--layout-horizontal .product-card__inner {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: #F0F3F5;
-  margin-bottom: 8px;
   padding: 8px;
+  background-color: #F0F3F5;
   padding-right: 16px;
   min-height: initial;
 }
 .products--layout-horizontal .product-card__info {
   padding-top: 12px;
-  padding-bottom: 12px;
+  // padding-bottom: 12px;
+  padding-bottom: 0;
+  min-height: 100px;
 }
 .products--layout-horizontal .product-card__pic {
   position: static;
@@ -237,7 +246,8 @@
 }
 
 .products--layout-horizontal .product-card__options {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-bottom: 30px;
   max-width: 100%;
 }
 .products--layout-horizontal .chips__item {
@@ -310,7 +320,7 @@
 .product-card__tooltip {
   position: absolute;
   right: 15px;
-  top: 20px;
+  top: 18px;
   z-index: 5;
   display: flex ;
   align-items: flex-start;
@@ -388,4 +398,20 @@
     transform: scaleX(1);
     opacity: 1;
   }
+}
+
+.product-card__caption {
+  display: block;
+  width: fit-content;
+  background-color: var(--bg-element);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  border-radius: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 2px;
 }

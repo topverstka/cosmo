@@ -157,8 +157,10 @@
             <div class="gallery-accordion" data-start-show="8">
               <div class="container gallery-accordion__container">
                 <div class="gallery-accordion__content related-products__gallery">
-                  @@for (var i = 1; i <= 16; i++) {
-                    @@include('tpls/cards/card.html',{img: "card.png", className: "gallery-accordion__item"})
+                  @@include('tpls/cards/card-has-bottom-caption.html',{img: "card.png", className: "gallery-accordion__item"})
+                  @@include('tpls/cards/card-has-tooltip.html',{img: "card.png", className: "gallery-accordion__item"})
+                  @@for (var i = 1; i <= 14; i++) {
+                    @@include('tpls/cards/card-has-bottom-caption.html',{img: "card.png", className: "gallery-accordion__item"})
                   }
                 </div>
                 <div class="container">
@@ -175,7 +177,7 @@
               <div class="container gallery-accordion__container">
                 <div class="gallery-accordion__content related-products__gallery">
                   @@for (var i = 1; i <= 4; i++) {
-                    @@include('tpls/cards/card.html',{img: "card.png", className: "gallery-accordion__item"})
+                    @@include('tpls/cards/card-has-bottom-caption.html',{img: "card.png", className: "gallery-accordion__item"})
                   }
                 </div>
                 <div class="container">
@@ -227,7 +229,7 @@
               <div class="container gallery-accordion__container">
                 <div class="gallery-accordion__content related-products__gallery">
                   @@for (var i = 1; i <= 7; i++) {
-                    @@include('tpls/cards/card.html',{img: "card.png", className: "gallery-accordion__item"})
+                    @@include('tpls/cards/card-has-bottom-caption.html',{img: "card.png", className: "gallery-accordion__item"})
                   }
                 </div>
                 <div class="container">
@@ -289,7 +291,7 @@
               <div class="container gallery-accordion__container">
                 <div class="gallery-accordion__content related-products__gallery">
                   @@for (var i = 1; i <= 2; i++) {
-                    @@include('tpls/cards/card.html',{img: "card.png", className: "gallery-accordion__item"})
+                    @@include('tpls/cards/card-has-bottom-caption.html',{img: "card.png", className: "gallery-accordion__item"})
                   }
                 </div>
                 <div class="container">
@@ -306,7 +308,7 @@
               <div class="container gallery-accordion__container">
                 <div class="gallery-accordion__content related-products__gallery">
                   @@for (var i = 1; i <= 4; i++) {
-                    @@include('tpls/cards/card.html',{img: "card.png", className: "gallery-accordion__item"})
+                    @@include('tpls/cards/card-has-bottom-caption.html',{img: "card.png", className: "gallery-accordion__item"})
                   }
                 </div>
                 <div class="container">
