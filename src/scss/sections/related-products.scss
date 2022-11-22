@@ -17,7 +17,12 @@
 .related-products__gallery {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, minmax(280px, 1fr));
   column-gap: 8px;
   row-gap: 8px;
+}
+
+.related-products__gallery ~ .container {
+  padding-top: 40px;
 }

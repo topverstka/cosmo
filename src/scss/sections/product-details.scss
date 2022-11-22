@@ -1,0 +1,123 @@
+.product-details {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.product-details-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 33.125%;
+  column-gap: 127px;
+}
+.product-details-content__pic {
+  top: 88px;
+  width: 100%;
+  position: sticky;
+  height: 400px;
+  height: 80vh;
+}
+.product-details-content__img {
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  object-position: center;
+  position: absolute;
+  right: -120px;
+}
+
+.product-details__title {
+   font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.product-details__desc {
+  max-width: 709px;
+  margin-bottom: 60px;
+}
+.product-details__desc {
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 16px;
+    max-width: 579px;
+  }
+  h3:not(:first-child) {
+    margin-top: 60px;
+  }
+  p {
+    max-width: 579px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 28px;
+  }
+
+  ol {
+    counter-reset: product-desc-list;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 51px;
+    row-gap: 28px;
+    margin-bottom: 40px;
+  }
+  ol li {
+    list-style-type: none;
+    counter-increment: product-desc-list;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  ol li::before {
+    content: counter(product-desc-list);
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 17px;
+  }
+  a {
+    @extend .button--thirdly;
+    display: inline-block;
+    border: none;
+    text-decoration: underline;
+  }
+}
+
+.product-details-contra {
+  background-color: var(--bg-element);
+  padding: 20px 40px 20px 20px;
+  border-radius: 12px;
+}
+.product-details-contra__title {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.product-details-contra p {
+  max-width: 100%;
+}
+.product-details-contra p:last-child {
+  margin-bottom: 0;
+}
+
+
+.product-details-actives {
+}
+.product-details-actives__title {
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.product-details-actives__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 21px;
+  row-gap: 30px;
+  margin-bottom: 60px;
+}
+.product-details-actives-card__title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}

@@ -57,3 +57,11 @@
   opacity: 0;
   pointer-events: none;
 }
+.person-result__media-pic {
+  display: block;
+  height: var(--gallery-item-h, 348px);
+}
+.person-result__media-img {
+  display: block;
+  height: var(--gallery-item-h, 348px);
+}

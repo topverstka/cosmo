@@ -106,15 +106,16 @@
 
 .button__icon {
   display: block;
-  width: var(--button-icon-size);
-  min-width: var(--button-icon-size);
-  max-width: var(--button-icon-size);
+  width: var(--button-icon-size, 12px);
+  min-width: var(--button-icon-size, 12px);
+  max-width: var(--button-icon-size, 12px);
   height: 12px;
   // height: var(--button-icon-size);
   background-color: transparent;
   fill: var(--icon-color);
   stroke: none;
   transition: all var(--tr) ease;
+  margin-right: 8px;
 }
 .button--icon-stroke .button__icon {
   fill: transparent;

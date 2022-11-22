@@ -57,3 +57,33 @@ let promoSlider = new Swiper(".grabber-carousel", {
   // },
 });
 }
+
+if (document.querySelector('.product-cases-carousel')) {
+  const carousels = document.querySelectorAll('.product-cases-carousel');
+  const CAROUSEL_ID = 'product-cases-carousel';
+  setTimeout(() => {
+    carousels.forEach((carousel, index) => {
+      carousel.id = `${CAROUSEL_ID}-${index}`
+
+      let productCaseSlider = new Swiper(`#${carousel.id}`, {
+        grabCursor: true,
+        autoHeight: true,
+        slidesPerView: 1,
+        spaceBetween: 150,
+        modules: [Navigation, Autoplay, Pagination],
+        navigation: {
+          nextEl: `#${carousel.id} .swiper-button-next`,
+          prevEl: `#${carousel.id} .swiper-button-prev`,
+        },
+      });
+      carousel.querySelectorAll('.product-cases-carousel-slide').forEach(slide => {
+        slide.querySelector('.gallery-accordion__button-more').addEventListener('click', () => {
+          console.log(productCaseSlider)
+          setTimeout(() => {
+            productCaseSlider.update();
+          }, 200)
+        })
+      })
+    })
+  }, 1000)
+}
