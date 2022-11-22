@@ -14,6 +14,7 @@
 
 function scrollToAnchor(distanceTop = 0) {
     const linkElems = document.querySelectorAll('[href^="#"]')
+    if (!linkElems) return;
     for (let i = 0; i < linkElems.length; i++) {
         const link = linkElems[i];
         link.addEventListener('click', (e) => {
