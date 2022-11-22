@@ -19,13 +19,13 @@
       @@include('tpls/header.html',{})
 
       <main class="main">
-        <section class="page-heading">
+        <section class="page-heading page-heading--sticky">
           <h1 class="page-heading__title">Услуги Cosmomedica Center в Москве</h1>
-              <nav class="page-heading__nav">
+              <nav class="page-heading__nav nav-dynamic">
                 <ul class="page-heading__nav-list">
-                  <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link page-heading__nav-link--current">Акции</a></li>
-                  <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">Популярное</a></li>
-                  <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">Endospheres</a></li>
+                  <li class="page-heading__nav-item"><a href="#services-stocks" class="page-heading__nav-link page-heading__nav-link--current">Акции</a></li>
+                  <li class="page-heading__nav-item"><a href="#services-popular" class="page-heading__nav-link">Популярное</a></li>
+                  <li class="page-heading__nav-item"><a href="#services-endospheres" class="page-heading__nav-link">Endospheres</a></li>
                   <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">Oxigeneo+</a></li>
                   <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">Dermalux</a></li>
                   <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">Для лица</a></li>
@@ -36,8 +36,8 @@
         </section>
 
         <div class="blog__article-layout">
-          <div class="services-all">
-            <section class="services-all__category">
+          <div class="services-all nav-dynamic-content">
+            <section class="services-all__category" id="services-stocks">
               <h2 class="services-all__title section-title">Акции</h2>
               <article class="services-all-card">
                 <h3 class="services-all-card__title">
@@ -52,7 +52,7 @@
               </article>
             </section>
 
-            <section class="services-all__category">
+            <section class="services-all__category" id="services-popular">
               <h2 class="services-all__title section-title">Популярное</h2>
               <article class="services-all-card">
                 <h3 class="services-all-card__title">
@@ -77,7 +77,7 @@
               </article>
             </section>
 
-            <section class="services-all__category">
+            <section class="services-all__category" id="services-endospheres">
               <h2 class="services-all__title section-title">Endospheres</h2>
               <article class="services-all-card">
                 <h3 class="services-all-card__title">

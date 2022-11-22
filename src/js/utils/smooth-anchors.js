@@ -1,16 +1,16 @@
-const anchors = document.querySelectorAll('a[href*="#"]');
-for (let anchor of anchors) {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (anchor.getAttribute("href") === "#") return;
+// const anchors = document.querySelectorAll('a[href*="#"]');
+// for (let anchor of anchors) {
+//   anchor.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     if (anchor.getAttribute("href") === "#") return;
 
-    const blockID = anchor.getAttribute("href").substr(1);
-    document.getElementById(blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  });
-}
+//     const blockID = anchor.getAttribute("href").substr(1);
+//     document.getElementById(blockID).scrollIntoView({
+//       behavior: "smooth",
+//       block: "start",
+//     });
+//   });
+// }
 
 function scrollToAnchor(distanceTop = 0) {
     const linkElems = document.querySelectorAll('[href^="#"]')
@@ -28,3 +28,4 @@ function scrollToAnchor(distanceTop = 0) {
         })
     }
 }
+scrollToAnchor(80);

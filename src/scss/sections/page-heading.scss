@@ -5,6 +5,17 @@
   margin-left: -8px;
   width: calc(100% + 16px);
 }
+
+.page-heading--sticky {
+  position: sticky;
+  top: -105px;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+.page-heading--sticky-run {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
+}
 .breadcrumbs ~ .page-heading {
   width: 100%;
   margin-left: 0;

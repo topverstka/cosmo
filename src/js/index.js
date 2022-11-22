@@ -253,3 +253,44 @@ orderCards.forEach(card => {
     toggleOrderCard(card, toggler)
   })
 })
+
+
+const stickyPageHeadings = document.querySelectorAll('.page-heading--sticky');
+stickyPageHeadings.forEach((heading) => {
+  window.addEventListener('scroll', () => {
+    const top = heading.getBoundingClientRect().top;
+    if(top < -100) {
+      heading.classList.add('page-heading--sticky-run')
+    } else {
+      heading.classList.remove('page-heading--sticky-run')
+    }
+  })
+})
+
+const dynamicNav = document.querySelector('.nav-dynamic');
+const dynamicNavContent = document.querySelector('.nav-dynamic-content');
+
+if (dynamicNav && dynamicNavContent) {
+  const dynamicLinks = dynamicNav.querySelectorAll('a');
+  const dynamicSections = dynamicNavContent.querySelectorAll('section');
+  dynamicSections.forEach((section, index, array) => {
+    window.addEventListener('scroll', () => {
+      const top = section.getBoundingClientRect().top;
+      const bottom = section.getBoundingClientRect().bottom;
+
+      function isTopEntered() {
+        return top < 100 && top > 0;
+      }
+      function isBottomEntered() {
+        return bottom < 100 && bottom > 0;
+      }
+
+      if (isTopEntered() || isBottomEntered()) {
+        dynamicLinks.forEach(link => {
+          link.classList.remove('page-heading__nav-link--current')
+        })
+        dynamicNav.querySelector(`a[href="#${section.id}"]`).classList.add('page-heading__nav-link--current')
+      }
+    })
+  })
+}
