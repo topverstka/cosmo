@@ -4647,22 +4647,54 @@ select {
 }
 
 .row-filters {
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 32px;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.row-filters__select--has-label {
+  background-color: var(--bg);
+  border-radius: var(--brad);
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .row-filters__select {
-  margin-right: 8px;
   min-width: fit-content;
-  padding-right: 10px;
   --bg: #fff;
   --angle-color: #000;
   --value-color: #000;
   --brad: 6px;
   --maxw: 256px;
+}
+
+.row-filters__select-label {
+  margin-right: -8px;
+  z-index: 2;
+  position: relative;
+  display: block;
+}
+
+.row-filters__select > .select {
+  position: static;
+}
+
+.row-filters__select > .select::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
 .breadcrumbs {

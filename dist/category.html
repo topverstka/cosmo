@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221122223648" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221122225825" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -29,7 +29,7 @@
             <select
               name="city"
               id="dropdown-city"
-              class="select__input input--dropdown-has-search"
+              class="select__input"
             >
               <option value="Москва">Москва</option>
               <option value="Санкт-Петербург">Санкт-Петербург</option>
@@ -1405,56 +1405,59 @@
                 <select
                   name="sort"
                   id="catalog-sort"
-                  class="select__input input--dropdown-has-search"
+                  class="select__input"
                 >
                   <option value="Сначала популярные">Сначала популярные</option>
                   <option value="Сначала дорогие">Сначала дорогие</option>
                   <option value="Сначала дешевые">Сначала дешевые</option>
                 </select>
               </div>
-              <div class="select row-filters__select">
+              <div class="select row-filters__select row-filters__select--has-label">
+                <label class="row-filters__select-label">Cостояние кожи:</label>
                 <select
                   name="filter[0]"
                   id="filter-0"
-                  class="select__input input--dropdown-has-search"
+                  class="select__input"
                 >
-                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
-                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
-                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
-                  <option value="Комбинированное">Cостояние кожи: Комбинированное</option>
+                  <option value="Комбинированное">Комбинированное</option>
+                  <option value="Нормальное">Нормлаьное</option>
+                  <option value="Сухое">Сухое</option>
                 </select>
               </div>
-              <div class="select row-filters__select">
+              <div class="select row-filters__select select row-filters__select--has-label">
+                <label class="row-filters__select-label">Потребности кожи:</label>
                 <select
                   name="filter[1]"
                   id="filter-1"
-                  class="select__input input--dropdown-has-search"
+                  class="select__input"
                 >
-                  <option value="Потребности кожи: 2">Потребности кожи: 2</option>
-                  <option value="Потребности кожи: 2">Потребности кожи: 2</option>
-                  <option value="Потребности кожи: 2">Потребности кожи: 2</option>
+                  <option value="Высокая влажность">Высокая влажность</option>
+                  <option value="Частый уход">Частый уход</option>
+                  <option value="Соблюдение температур">Соблюдение температур</option>
                 </select>
               </div>
-              <div class="select row-filters__select">
+              <div class="select row-filters__select row-filters__select--has-label">
+                <label class="row-filters__select-label">Время применения</label>
                 <select
                   name="filter[2]"
                   id="filter-2"
-                  class="select__input input--dropdown-has-search"
+                  class="select__input"
                 >
-                  <option value="Время применения">Время применения</option>
-                  <option value="Время применения">Время применения</option>
-                  <option value="Время применения">Время применения</option>
+                  <option value="Утро">Утро</option>
+                  <option value="День">День</option>
+                  <option value="Вечер">Вечер</option>
                 </select>
               </div>
-              <div class="select row-filters__select">
+              <div class="select row-filters__select row-filters__select--has-label">
+                <label class="row-filters__select-label">Объем:</label>
                 <select
                   name="filter[3]"
                   id="filter-3"
-                  class="select__input input--dropdown-has-search"
+                  class="select__input "
                 >
-                  <option value="Объём">Объём</option>
-                  <option value="Объём">Объём</option>
-                  <option value="Объём">Объём</option>
+                  <option value="250">250мл</option>
+                  <option value="200">200мл</option>
+                  <option value="100">100мл</option>
                 </select>
               </div>
             </form>
@@ -2396,7 +2399,7 @@
             <select
               name="user_date"
               id="modal__date"
-              class="select__input input--dropdown-has-search"
+              class="select__input"
             >
               <option value="Москва">Дата</option>
               <option value="Санкт-Петербург">02.11.22</option>
@@ -2436,7 +2439,7 @@
             <select
               name="user_time"
               id="modal__time"
-              class="select__input input--dropdown-has-search"
+              class="select__input"
             >
               <option value="Время">Время</option>
               <option value="Санкт-Петербург">02.11.22</option>
@@ -2516,6 +2519,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221122223648"></script>
+    <script src="./js/bundle.min.js?_v=20221122225825"></script>
   </body>
 </html>
