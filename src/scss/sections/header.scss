@@ -19,6 +19,10 @@
     padding: 16px;
     position: relative;
   }
+  @media (max-width: 1020px) {
+    max-height: 64px;
+    overflow: hidden;
+  }
 }
 .header__container::before {
   @media (max-width: $mobile) {

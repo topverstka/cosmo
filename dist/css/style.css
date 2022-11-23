@@ -5502,6 +5502,11 @@ select {
 .message {
   padding-top: clamp(60px, 26vh, 260px);
 }
+@media (max-width: 768px) {
+  .message {
+    padding-top: clamp(60px, 26vh, 165px);
+  }
+}
 
 .message-card {
   background-color: #fff;
@@ -5519,6 +5524,14 @@ select {
   justify-content: center;
   border-radius: 12px;
 }
+@media (max-width: 768px) {
+  .message-card {
+    padding-top: 56px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 60px;
+  }
+}
 
 .message-card__title {
   font-weight: 400;
@@ -5527,6 +5540,12 @@ select {
   text-align: center;
   color: #000000;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .message-card__title {
+    font-size: 27px;
+    line-height: 29px;
+  }
 }
 
 .message-card__desc {
@@ -5539,6 +5558,17 @@ select {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 768px) {
+  .message-card__desc {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .message-card__desc br {
+    display: none;
+  }
 }
 
 .message-card__link {
@@ -5578,6 +5608,12 @@ select {
     align-items: flex-start;
     padding: 16px;
     position: relative;
+  }
+}
+@media (max-width: 1020px) {
+  .header__container {
+    max-height: 64px;
+    overflow: hidden;
   }
 }
 
