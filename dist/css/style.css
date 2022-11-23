@@ -1923,9 +1923,9 @@ input[type=search]::-webkit-search-cancel-button {
 }
 @media (max-width: 768px) {
   .input {
-    --padding: 13px 13px 13px 46px;
-    --fz: 15px;
-    --lh: 22px;
+    --padding: 12px 20px 16px 20px;
+    --fz: 12px;
+    --lh: 14px;
   }
 }
 
@@ -2985,6 +2985,11 @@ select {
   padding: 11px;
   position: relative;
 }
+@media (max-width: 601px) {
+  .calendar--inline {
+    max-width: 100%;
+  }
+}
 
 .calendar--inline .calendar__input {
   margin-bottom: 0;
@@ -3141,6 +3146,11 @@ select {
   padding-bottom: 3px;
   --height: 310px;
   height: var(--height);
+}
+@media (max-width: 601px) {
+  .timepicker {
+    max-width: 100%;
+  }
 }
 
 .timepicker__list.timepicker__list--single {
@@ -3430,6 +3440,12 @@ select {
   margin-bottom: 8px;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .sidebar-card {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 .sidebar-card--autoheight {
   min-height: initial;
@@ -3456,6 +3472,11 @@ select {
 
 .sidebar-card__link:first-of-type {
   margin-top: 27px;
+}
+@media (max-width: 768px) {
+  .sidebar-card__link:first-of-type {
+    margin-top: 16px;
+  }
 }
 
 .sidebar-card__link::before {
@@ -4942,6 +4963,13 @@ select {
   color: #FFFFFF;
   margin-bottom: 43px;
 }
+@media (max-width: 601px) {
+  .modal__title {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+}
 
 .modal__form {
   width: 100%;
@@ -4954,6 +4982,11 @@ select {
   padding: 40px;
   padding-top: 26px;
 }
+@media (max-width: 601px) {
+  .modal__group {
+    padding: 32px 20px 40px 20px;
+  }
+}
 
 .modal__group:last-of-type {
   margin-bottom: 16px;
@@ -4965,6 +4998,12 @@ select {
   line-height: 120%;
   color: #000000;
   margin-bottom: 40px;
+}
+@media (max-width: 601px) {
+  .modal__group-title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .modal__group-row {
@@ -7189,12 +7228,22 @@ select {
   color: #A1AEB3;
   margin-bottom: 28px;
 }
+@media (max-width: 768px) {
+  .blog-sidebar-about__title {
+    margin-bottom: 16px;
+  }
+}
 
 .blog-sidebar-about__desc {
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   color: #F0F3F5;
+}
+@media (max-width: 768px) {
+  .blog-sidebar-about__desc {
+    font-size: 16px;
+  }
 }
 
 .blog-related__title {
@@ -8589,6 +8638,11 @@ select {
     z-index: 10;
   }
 }
+@media (max-width: 768px) {
+  .services__sidebar {
+    --sidebar-minh: 359px;
+  }
+}
 
 .services__sidebar-toggler {
   border-radius: 6px;
@@ -8613,6 +8667,11 @@ select {
     z-index: 2;
     top: unset;
     bottom: -100vh;
+  }
+}
+@media (max-width: 768px) {
+  .services__sidebar-card {
+    padding-top: 28px;
   }
 }
 

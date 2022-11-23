@@ -8,6 +8,9 @@
   padding-bottom: 3px;
   --height: 310px;
   height: var(--height);
+  @media (max-width: 601px) {
+    max-width: 100%;
+  }
 }
 
 .timepicker__list.timepicker__list--single {

@@ -13,6 +13,9 @@
   border-radius: 12px;
   padding: 11px;
   position: relative;
+  @media (max-width: 601px) {
+    max-width: 100%;
+  }
 }
 .calendar--inline .calendar__input {
   margin-bottom: 0;
