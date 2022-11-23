@@ -1,11 +1,23 @@
 .promo-carousel {
   height: 680px;
   margin-bottom: 8px;
+  @media (max-width: 1024px) {
+    height: 500px;
+  }
+  @media (max-width: 601px) {
+    height: initial;
+  }
 }
 .promo-carousel__slide {
   display: grid;
   grid-template-columns: 75.421348314606741573033707865169% auto;
   border-radius: 12px 0px 0px 12px;
+  @media (max-width: 1130px) {
+    grid-template-columns: 70.421348314606741573033707865169% auto;
+  }
+  @media (max-width: 601px) {
+    grid-template-columns: 1fr;
+  }
 }
 .promo-carousel__hero {
   position: relative;
@@ -27,6 +39,10 @@
 .promo-carousel__img {
   border-radius: 12px 0px 0px 12px;
   object-fit: cover;
+  @media (max-width: 601px) {
+
+  border-radius: 12px 12px 0 0;
+  }
 }
 .promo-carousel-card {
   position: relative;
@@ -36,6 +52,14 @@
   padding-right: 15px;
   background-color: #5f6c75;
   border-radius: 6px;
+  @media (max-width: 601px) {
+    padding: 16.75px;
+    display: grid;
+    grid-template-columns: 50.974930362116991643454038997214% auto;
+    column-gap: 26px;
+    max-width: 100%;
+    width: 100%
+  }
 }
 .promo-carousel-card__title {
   margin-bottom: 28px;
@@ -43,6 +67,10 @@
   font-weight: 400;
   line-height: 120%;
   color: #f0f3f5;
+  @media (max-width: 601px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 .promo-carousel-card__desc {
   margin-bottom: 34px;
@@ -50,6 +78,9 @@
   font-weight: 400;
   line-height: 17px;
   color: #a1aeb3;
+  @media (max-width: 601px) {
+    display: none
+  }
 }
 
 .promo-carousel__info {
@@ -62,6 +93,10 @@
   padding-bottom: 78px;
   background-color: #fff;
   border-radius: 0px 12px 12px 0px;
+  @media (max-width: 601px) {
+    padding-right: 33px;
+    border-radius: 0 0 12px 12px;
+  }
 }
 .promo-carousel__category {
   margin-bottom: 32px;
@@ -70,6 +105,9 @@
   font-weight: 400;
   line-height: 14px;
   color: #a1aeb3;
+  @media (max-width: 601px) {
+    margin-bottom: 12px;
+  }
 }
 .promo-carousel__title {
   margin-bottom: 14px;
@@ -77,6 +115,16 @@
   font-weight: 400;
   line-height: 110%;
   color: #000000;
+  @media (max-width: 601px) {
+    margin-bottom: 16px
+  }
+}
+
+.promo-carousel__desc {
+  @media (max-width: 610px) {
+    margin-bottom: 60px
+
+  }
 }
 
 .promo-carousel__button:hover {
@@ -93,6 +141,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media (max-width: 601px) {
+    left: 24px
+
+  }
 }
 .promo-carousel__pagination .swiper-pagination-bullet {
   display: block;

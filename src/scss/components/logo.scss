@@ -6,6 +6,10 @@
     position: relative;
     z-index: 2;
   }
+  @media (max-width: 576px) {
+    height: 24px;
+    max-width: 176px;
+  }
 }
 .logo__img {
   display: block;

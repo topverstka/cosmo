@@ -21,6 +21,9 @@
   --chips-color: #000;
   --chips-active-color: #fff;
   --chips-hover-color: #fff;
+  @media (max-width: 962px) {
+    margin-bottom: 28px
+  }
 }
 .chips--ghost {
   --chips-bg: transparent;

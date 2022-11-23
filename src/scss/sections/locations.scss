@@ -1,6 +1,9 @@
 .locations {
   padding-top: 40px;
   --bg: var(--bg-element);
+  @media (max-width: 810px) {
+    padding-top: 30px
+  }
 }
 .locations--no-bg {
   padding-top: 0;
@@ -11,6 +14,15 @@
   padding-bottom: 80px;
   background-color: var(--bg);
   border-radius: 12px;
+  @media (max-width: 962px) {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  @media (max-width: 576px) {
+    padding: 40px;
+  }
 }
 .locations__gallery {
   display: grid;
@@ -18,6 +30,23 @@
   column-gap: 127px;
   justify-content: center;
   margin-bottom: 80px;
+  @media (max-width: 1300px) {
+    grid-template-columns: 1.2fr 0.8fr;
+    column-gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 810px) {
+    margin-bottom: 20px
+  }
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
 }
 .locations--no-bg .locations__container {
   padding-top: 120px;
@@ -35,6 +64,11 @@
   font-weight: 400;
   line-height: 110%;
   color: #000000;
+  @media (max-width: 576px) {
+    font-size: 20px;
+    margin-bottom: 4px;
+    line-height: 120%;
+  }
 }
 
 .locations-card__address {
@@ -43,6 +77,11 @@
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
+  @media (max-width: 576px) {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
 }
 
 .locations-card__desc {
@@ -52,11 +91,19 @@
   font-weight: 400;
   line-height: 140%;
   color: #000000;
+  @media (max-width: 576px) {
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
 }
 
 .locations-card__pic {
   display: block;
   margin-bottom: 28px;
+  @media (max-width: 576px) {
+    order: 5;
+    margin-bottom: 0;
+  }
 }
 .locations-card__img {
   object-fit: cover;

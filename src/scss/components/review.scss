@@ -11,6 +11,10 @@
   min-width: var(--size);
   height: var(--size);
   --size: 140px;
+  @media (max-width: 420px) {
+    --size: 90px;
+    height: 94px;
+  }
 }
 .review-card__img {
   border-radius: 6px;
@@ -19,6 +23,12 @@
 
 .review-card__info {
   padding: 20px;
+  @media (max-width: 601px) {
+    padding-top: 8px;
+    padding-left: 13px;
+    padding-right: 3px;
+    padding-bottom: 14px;
+  }
 }
 
 .review-card__profile {
@@ -33,6 +43,11 @@
   background: #ffffff;
   border-radius: 6px;
   transition: all 0.3s ease;
+  @media (max-width: 420px) {
+    font-size: 10px;
+    padding: 1px 4px 5px 4px;
+    margin-bottom: 8px
+  }
 }
 .review-card__profile:hover {
   @media (any-hover: hover) {
@@ -46,4 +61,8 @@
   font-weight: 400;
   line-height: 140%;
   color: #000000;
+  @media (max-width: 420px) {
+    font-size: 10px;
+    line-height: 1.2;
+  }
 }

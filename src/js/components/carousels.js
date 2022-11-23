@@ -5,9 +5,10 @@ import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 if (document.querySelector('.promo-carousel')) {
   let promoSlider = new Swiper(".promo-carousel", {
     modules: [Navigation, Autoplay, Pagination],
-    autoplay: {
-      delay: 3000,
-    },
+    spaceBetween: 100,
+    // autoplay: {
+      // delay: 3000,
+    // },
     pagination: {
       el: ".promo-carousel__pagination",
       clickable: true,

@@ -1,6 +1,10 @@
 .magazine {
   padding-top: 40px;
   padding-bottom: 40px;
+  @media (max-width: 810px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .magazine__row {
@@ -10,6 +14,10 @@
   row-gap: 8px;
   column-gap: 8px;
   margin-bottom: 8px;
+  @media (max-width: 601px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card pic1" "card pic2" "card pic3";
+  }
 }
 
 .magazine-card {
@@ -21,6 +29,10 @@
   padding: 24px 20px;
   background: #5f6c75;
   border-radius: 12px;
+  @media (max-width: 601px) {
+    padding: 20px;
+    padding-right: 13px;
+  }
 }
 
 .magazine-card__title {
@@ -28,9 +40,15 @@
   font-weight: 400;
   line-height: 110%;
   color: #f0f3f5;
+  @media (max-width: 601px) {
+    font-size: 16px;
+  }
 }
 .magazine-card__button {
   margin-bottom: 26px;
+  @media (max-width: 601px) {
+    margin-bottom: 24px;
+  }
 }
 .magazine-card__button:hover {
   @media (any-hover: hover) {
@@ -43,6 +61,10 @@
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
+  @media (max-width: 601px) {
+    font-size: 12px;
+    line-height: 1.25;
+  }
 }
 
 .magazine-card:nth-of-type(1) {
@@ -51,17 +73,32 @@
 .magazine-card:nth-of-type(2) {
   grid-area: pic1;
   height: 140px;
+  @media (max-width: 420px) {
+    height: 112px
+  }
 }
 .magazine-card:nth-of-type(3) {
   grid-area: pic2;
   height: 140px;
+  @media (max-width: 420px) {
+    height: 112px
+  }
 }
 .magazine-card:nth-of-type(4) {
   grid-area: pic3;
+  @media (max-width: 601px) {
+    height: 140px;
+  }
+  @media (max-width: 420px) {
+    height: 112px
+  }
 }
 .magazine-card:nth-of-type(5) {
   grid-area: pic4;
   height: 232px;
+  @media (max-width: 601px) {
+    display: none
+  }
 }
 
 .magazine-card__bg-pic {
@@ -84,6 +121,19 @@
   justify-content: center;
   height: 628px;
   padding-bottom: 80px;
+  overflow: hidden;
+  border-radius: 12px;
+  @media (max-width: 962px) {
+    height: 400px;
+  }
+  @media (max-width: 601px) {
+    height: 360px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: 1800px) {
+    height: 740px;
+  }
+
 }
 .magazine-card-fullsize::before {
   position: absolute;
@@ -113,11 +163,20 @@
   display: block;
   width: 100%;
   height: 100%;
+  @media (max-width: 962px) {
+    left: -15%;
+    top: -30%;
+    width: 120%;
+    height: 130%;
+  }
 }
 .magazine-card-fullsize__img {
   object-fit: cover;
   border-radius: 12px;
   object-position: bottom;
+  // @media (min-width: 1800px) {
+  //   object-position: center;
+  // }
 }
 
 .magazine-card-fullsize__title {
@@ -126,6 +185,12 @@
   font-weight: 400;
   line-height: 48px;
   color: #ffffff;
+  text-align: center;
+  @media (max-width: 601px) {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 11px;
+  }
 }
 .magazine-card-fullsize__desc {
   margin-bottom: 42px;
@@ -134,4 +199,8 @@
   line-height: 140%;
   color: #ffffff;
   text-align: center;
+  @media (max-width: 601px) {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
 }

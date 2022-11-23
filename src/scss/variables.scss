@@ -85,7 +85,7 @@ $error: var(--c-error);
   --lh-button: 17px;
   --fw-button: 600;
   @media (max-width: 768px) {
-    --fz-button: 14px;
+    --fz-button: 12px;
     --lh-button: 126%;
   }
 }
@@ -94,4 +94,5 @@ $error: var(--c-error);
 $ff-main: var(--ff-regular);
 $tr: var(--tr);
 $mobile: 1020px;
+// $mobile: 1300px;
 // ================ Other End ================

@@ -6,6 +6,10 @@
   font-weight: 400;
   line-height: 110%;
   color: #000000;
+  @media (max-width: 601px) {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
 }
 .section-desc {
   font-size: 14px;
@@ -27,6 +31,9 @@
 .captions-1-1 {
   column-count: 2;
   column-gap: 58px;
+  @media (max-width: 601px) {
+    column-count: 1;
+  }
 }
 .captions-1-1__desc {
   font-size: 14px;
@@ -35,6 +42,14 @@
   color: #a1aeb3;
   opacity: 0.6;
   break-inside: avoid;
+  @media (max-width: 601px) {
+    margin-bottom: 14px
+  }
+}
+.captions-1-1__desc:last-child {
+  @media (max-width: 601px) {
+    margin-bottom: 0;
+  }
 }
 .captions-1-1__desc--big {
   font-size: 20px;
