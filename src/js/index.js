@@ -259,7 +259,7 @@ const stickyPageHeadings = document.querySelectorAll('.page-heading--sticky');
 stickyPageHeadings.forEach((heading) => {
   window.addEventListener('scroll', () => {
     const top = heading.getBoundingClientRect().top;
-    if(top < -100) {
+    if(top < -80) {
       heading.classList.add('page-heading--sticky-run')
     } else {
       heading.classList.remove('page-heading--sticky-run')
@@ -293,4 +293,11 @@ if (dynamicNav && dynamicNavContent) {
       }
     })
   })
+}
+
+const servicesLeadButton = document.querySelector('.services__sidebar-toggler');
+if (servicesLeadButton) {
+  servicesLeadButton.addEventListener('click', () => {
+    document.querySelector('.services__sidebar').classList.add('services__sidebar--active');
+  });
 }

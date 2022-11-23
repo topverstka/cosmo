@@ -41,6 +41,9 @@
   --link-color: #fff;
   margin-bottom: 11px;
 }
+.sidebar-card__link:first-of-type {
+  margin-top: 27px;
+}
 .sidebar-card__link::before {
   background-color: #fff;
 }
