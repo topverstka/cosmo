@@ -54,7 +54,7 @@
 .nav__list--contacts {
   margin-left: auto;
   text-align: right;
-  @media (max-width: 601px) {
+  @media (max-width: 768px) {
     text-align: left;
     margin-left: unset
   }
@@ -66,7 +66,7 @@
   line-height: 120%;
 }
 .nav__list--contacts .nav__item:last-child {
-  @media (max-width: 601px) {
+  @media (max-width: 768px) {
     margin-bottom: 0;
   }
 }
