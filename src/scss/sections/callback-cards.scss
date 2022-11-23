@@ -51,3 +51,9 @@
     font-size: 12px
   }
 }
+
+.callback-cards-card__desc br {
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
