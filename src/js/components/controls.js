@@ -131,8 +131,9 @@ calendars.forEach((calendar) => {
     calendarSettings.defaultDate = getTodayPlus(2);
   }
 
-  if (calendar.classList.contains('calendar--has-year')) {
-  }
+  // if (calendar.classList.contains('calendar--has-year')) {
+  //   console.log('year', calendarInput)
+  // }
 
   flatpickr(calendarInput, calendarSettings);
 });
