@@ -1,10 +1,17 @@
 .callback-cards {
   padding-top: 40px;
+  @media (max-width: 768px) {
+    padding-top: 8px;
+  }
 }
 .callback-cards__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
 }
 .callback-cards-card {
   background-color: var(--bg-element);
@@ -14,7 +21,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 380px
+  min-height: 380px;
+  @media (max-width: 768px) {
+    min-height: 192px;
+    padding: 20px;
+  }
 }
 .callback-cards-card__title {
   font-weight: 400;
@@ -22,13 +33,21 @@
   line-height: 110%;
   color: #000000;
   margin-bottom: 21px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
 }
 .callback-cards-card__title > *{
   color: inherit;
 }
 .callback-cards-card__desc {
   font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-color: #000000;
+  font-size: 14px;
+  line-height: 140%;
+  color: #000000;
+  @media (max-width: 768px) {
+    font-size: 12px
+  }
 }

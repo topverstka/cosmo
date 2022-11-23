@@ -177,11 +177,13 @@
 }
 
 .footer__socials {
-  @media (max-width: 576px) {
+  @media (max-width: 601px) {
     flex-direction: column;
   }
 }
 .footer__socials .socials__item{
-  margin-right: 0;
-  margin-bottom: 7px;
+  @media (max-width: 601px) {
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
 }
