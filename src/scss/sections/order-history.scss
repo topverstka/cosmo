@@ -4,12 +4,19 @@
 
 .order-history__active {
   margin-bottom: 60px;
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+  }
 }
 .order-history-card {
   background-color: var(--bg-element);
   padding: 15px 20px 20px;
   border-radius: 12px;
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    padding-left: 8px;
+    padding-right: 8px
+  }
 }
 .order-history-card:last-child {
   margin-bottom: 0;
@@ -20,6 +27,14 @@
   align-items: center;
   margin-bottom: 20px;
   transition: all 0.3s ease;
+  @media (max-width: 768px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .order-history-card__id {
   font-weight: 400;
@@ -27,6 +42,9 @@
   line-height: 140%;
   color: #000000;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    margin-bottom: 16px
+  }
 }
 .order-history-card__status {
   font-weight: 400;
@@ -40,8 +58,28 @@
   line-height: 140%;
   color: #A1AEB3;
 }
+.order-history-card__heading {
+  @media (max-width: 420px) {
+    margin-bottom: 28px;
+  }
+}
+.order-history-card__buttons {
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-start
+  }
+  @media (max-width: 420px) {
+    align-items: flex-start;
+  }
+}
 .order-history-card__button-track {
   margin-right: 8px;
+  @media (max-width: 768px) {
+    margin-top: 16px;
+    margin-right: 0
+  }
 }
 
 .order-history-card__info {
@@ -57,6 +95,12 @@
   pointer-events: none;
   max-height: 1px;
   overflow: hidden;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 .order-history-card__info-row {
@@ -65,9 +109,18 @@
   column-gap: 36px;
   margin-bottom: 16px;
   font-family: "RF Dewi", sans-serif;
+  @media (max-width: 420px) {
+    grid-template-columns: 113px auto;
+  }
+}
+.order-history-card__info-row:last-of-type {
+  margin-bottom: 0;
 }
 .order-history-card__info-row:first-child {
   margin-bottom: 41px;
+  @media (max-width: 768px) {
+    margin-bottom: 32px
+  }
 }
 .order-history-card__info-row:first-child .order-history-card__info-title {
   font-weight: 400;
@@ -80,6 +133,9 @@
   background: #F0F3F5;
   border-radius: 6px;
   padding: 20px;
+  @media (max-width: 768px) {
+    padding: 16px
+  }
 }
 .order-history-card__products-title {
   font-weight: 400;
@@ -94,15 +150,21 @@
   pointer-events: none;
   max-height: 1px;
   overflow: hidden;
+  @media (max-width: 768px) {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
 
-.order-history-card__products-gallery {
-}
 .order-history-card:not(.order-history-card--opened) .order-history-card__products-gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 8px;
   margin-bottom: 18px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 12px;
+  }
 }
 
 .order-history-card__products-more {
@@ -117,6 +179,9 @@
   color: #5F6C75;
   width: 100%;
   cursor: pointer;
+  @media (max-width: 420px) {
+    font-size: 20px;
+  }
 }
 
 .order-history-card__total-short {
@@ -129,6 +194,14 @@
   max-height: 1000px;
   overflow: visible;
 }
+.order-history-card__total-short-summary {
+  @media (max-width: 420px) {
+    max-width: 140px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 
 .order-hisotry-card__total-full {
   display: grid;
@@ -140,12 +213,35 @@
   pointer-events: none;
   overflow: hidden;
   max-height: 1px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
 }
 
 .order-history-card__total-card {
   margin-bottom: 0;
+  @media (max-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
+.order-history-card__total-card .cart-total__row {
+  @media (max-width: 768px) {
+    margin-bottom: 8px;
+  }
+}
+.order-history-card__total-card .cart-total__row:last-of-type {
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+.order-history-card__total-card:last-of-type .cart-total__row:last-of-type {
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
 
+}
 // Modificatoins
 
 
@@ -155,14 +251,27 @@
   max-width: 100%;
   max-height: 162px;
   margin-bottom: 0;
+  @media (max-width: 420px) {
+    max-height: 72px;
+  }
 }
 .order-history-card:not(.order-history-card--opened) .order-history__product:nth-child(n+6) {
-  display: none;
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.order-history-card:not(.order-history-card--opened) .order-history__product:nth-child(n+4) {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .order-history-card:not(.order-history-card--opened) .order-history__product .product-card__pic {
   margin-right: 0px;
   height: 100%;
   width: 100%;
+  @media (max-width: 420px) {
+    padding: 10px;
+  }
 }
 .order-history-card:not(.order-history-card--opened) .order-history__product .product-card__info {
   max-width: 0px;
@@ -170,15 +279,28 @@
   transform: scaleX(0);
   transform-origin: left;
 }
+
+.order-history-card:not(.order-history-card--opened) .order-history__product .product-card__inner {
+  @media (max-width: 420px) {
+    padding: 0;
+  }
+}
+
 .order-history__product .product-card__price {
   font-size: 20px;
   font-weight: 400;
+  @media (max-width: 768px) {
+    font-size: 14px
+  }
 }
 
 // Opened
 
 .order-history-card--opened .order-history-card__top {
   margin-bottom: 67px;
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+  }
 }
 .order-history-card--opened .order-history-card__info {
   pointer-events: initial;
@@ -187,6 +309,9 @@
   max-height: initial;
   overflow: initial;
   margin-bottom: 70px;
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+  }
 }
 .order-history-card--opened .order-history-card__products-title {
   pointer-events: initial;
@@ -195,11 +320,18 @@
   max-height: initial;
   overflow: initial;
   margin-bottom: 28px;
+  @media (max-width: 768px) {
+    margin-bottom: 32px
+  }
 }
 
 .order-history-card--opened .order-history-card__products {
   background-color: transparent;
   padding-top: 0;
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .order-history-card--opened .order-hisotry-card__total-full {
   pointer-events: initial;
@@ -232,4 +364,15 @@
 }
 .order-history-card__button-cancel {
   --button-color: var(--c-text-on);
+}
+
+.products--layout-horizontal .order-history__product .product-card__inner {
+  @media (max-width: 768px) {
+    padding: 4px
+  }
+}
+.order-history-card--opened .order-history__product .product-card__pic {
+  @media (max-width: 768px) {
+    margin-right: 12px;
+  }
 }
