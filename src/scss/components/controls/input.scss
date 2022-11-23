@@ -21,6 +21,9 @@
     --lh: 14px;
   }
 }
+.input:last-of-type {
+  margin-bottom: 0;
+}
 .input--active {
   // --border-color: var(--c-text-grey-2);
   --label-top: -9px;

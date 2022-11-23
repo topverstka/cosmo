@@ -129,6 +129,9 @@
   background: var(--bg);
   border-radius: var(--brad);
   // opacity: 0.4;
+  @media (max-width: 576px) {
+    padding-left: 20px;
+  }
 }
 .select__list--single {
   position: relative;
@@ -183,4 +186,7 @@
   --brad: 6px;
   margin-right: 0;
   margin-bottom: 20px;
+  @media (max-width: 576px) {
+    margin-bottom: 16px
+  }
 }

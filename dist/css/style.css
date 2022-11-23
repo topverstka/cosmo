@@ -1929,6 +1929,10 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
+.input:last-of-type {
+  margin-bottom: 0;
+}
+
 .input--active {
   --label-top: -9px;
   --lebel-left: 12px;
@@ -2180,6 +2184,11 @@ select {
   background: var(--bg);
   border-radius: var(--brad);
 }
+@media (max-width: 576px) {
+  .select__list--single > .select__item {
+    padding-left: 20px;
+  }
+}
 
 .select__list--single {
   position: relative;
@@ -2244,6 +2253,11 @@ select {
   --brad: 6px;
   margin-right: 0;
   margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .select--grey {
+    margin-bottom: 16px;
+  }
 }
 
 /*
@@ -3278,9 +3292,32 @@ select {
   column-gap: 27px;
   margin-bottom: 8px;
 }
+@media (max-width: 962px) {
+  .fieldset {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .fieldset {
+    padding: 20px;
+    padding-bottom: 32px;
+  }
+}
 
 .fieldset:last-of-type {
   margin-bottom: 0;
+}
+
+@media (max-width: 962px) {
+  .fieldset__heading {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .fieldset__heading {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .fieldset__title {
@@ -3306,6 +3343,19 @@ select {
   grid-column-end: 3;
 }
 
+@media (max-width: 576px) {
+  .fieldset-contacts .fieldset__layout--1-end-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .fieldset-contacts .fieldset__layout--1-end-2 .input {
+    grid-column-start: unset;
+    grid-column-end: unset;
+  }
+}
+
 .fieldset__layout--1-end-2 .input:nth-last-of-type(1),
 .fieldset__layout--1-end-2 .input:nth-last-of-type(2) {
   grid-column-start: unset;
@@ -3316,6 +3366,13 @@ select {
   grid-template-columns: 1fr 1fr;
   display: grid;
   column-gap: 8px;
+}
+
+@media (max-width: 601px) {
+  .fieldset-shipping-time .fieldset__layout {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
 }
 
 .fieldset__layout--2-end-3 {
@@ -6063,6 +6120,11 @@ select {
 
 .page-heading__title:only-child {
   margin-bottom: 60px;
+}
+@media (max-width: 576px) {
+  .page-heading__title:only-child {
+    margin-bottom: 32px;
+  }
 }
 
 .page-heading__desc {
@@ -8979,6 +9041,11 @@ select {
 
 .checkout__fields {
   padding-bottom: 72px;
+}
+@media (max-width: 576px) {
+  .checkout__fields {
+    padding-bottom: 60px;
+  }
 }
 
 .account {

@@ -15,4 +15,7 @@
 
 .checkout__fields {
   padding-bottom: 72px;
+  @media (max-width: 576px) {
+    padding-bottom: 60px;
+  }
 }

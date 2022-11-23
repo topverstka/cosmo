@@ -6,9 +6,25 @@
   grid-template-columns: 291px auto;
   column-gap: 27px;
   margin-bottom: 8px;
+  @media (max-width: 962px) {
+    display: block;
+  }
+  @media (max-width: 576px) {
+    padding: 20px;
+    padding-bottom: 32px
+  }
 }
 .fieldset:last-of-type {
   margin-bottom: 0;
+}
+.fieldset__heading {
+  @media (max-width: 962px) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 576px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .fieldset__title {
   font-size: 20px;
@@ -30,6 +46,19 @@
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+.fieldset-contacts .fieldset__layout--1-end-2 {
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+.fieldset-contacts .fieldset__layout--1-end-2 .input {
+    @media (max-width: 576px) {
+      grid-column-start: unset;
+      grid-column-end: unset;
+    }
+}
+
 .fieldset__layout--1-end-2 .input:nth-last-of-type(1),
 .fieldset__layout--1-end-2 .input:nth-last-of-type(2) {
   grid-column-start: unset;
@@ -39,6 +68,12 @@
   grid-template-columns: 1fr 1fr;
   display: grid;
   column-gap: 8px;
+}
+.fieldset-shipping-time .fieldset__layout {
+  @media (max-width: 601px) {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
 }
 
 .fieldset__layout--2-end-3 {
