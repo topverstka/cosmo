@@ -20,11 +20,15 @@
   }
 }
 .account__pages {
-  position: relative;
+  @media (min-width: 1021px) {
+    position: relative;
+  }
 }
 .account__pages .side-navigation__list {
-  position: sticky;
-  top: 100px;
+  @media (min-width: 1021px) {
+    position: sticky;
+    top: 100px;
+  }
 }
 
 .account-personal__main {

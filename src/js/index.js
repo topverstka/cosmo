@@ -301,3 +301,16 @@ if (servicesLeadButton) {
     document.querySelector('.services__sidebar').classList.add('services__sidebar--active');
   });
 }
+
+const sideNav = document.querySelector('.side-navigation');
+if (sideNav) {
+  const button = sideNav.querySelector('.side-navigation__button-mobile')
+  button.addEventListener('click', (e) => {
+    sideNav.classList.add('side-navigation--visible');
+  })
+  window.addEventListener('click', (e)=> {
+    if (!e.target == sideNav || e.target == button) return;
+
+    sideNav.classList.remove('side-navigation--visible');
+  })
+}

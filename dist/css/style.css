@@ -3540,6 +3540,51 @@ select {
   background-color: #fff;
 }
 
+@media (max-width: 1020px) {
+  .side-navigation {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 1020px) {
+  .side-navigation--visible {
+    background-color: rgba(0, 0, 0, 0.85);
+    pointer-events: initial;
+  }
+}
+
+@media (max-width: 1020px) {
+  .side-navigation__list {
+    transition: all 0.3s ease;
+    background-color: var(--bg-element);
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1020px) {
+  .side-navigation--visible .side-navigation__list {
+    bottom: 0;
+  }
+}
+
 .side-navigation__item {
   display: block;
   width: 100%;
@@ -3574,6 +3619,35 @@ select {
 @media (any-hover: hover) {
   .side-navigation__item--current .side-navigation__link:hover {
     color: #fff;
+  }
+}
+
+.side-navigation__button-mobile {
+  border-radius: 6px;
+  --button-bg: var(--c-accent);
+  --button-color: var(--c-text-on);
+  z-index: 1;
+  display: none;
+}
+@media (max-width: 1020px) {
+  .side-navigation__button-mobile {
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+    width: 359px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .side-navigation__button-mobile .button__text {
+    width: auto;
+  }
+  .side-navigation__button-mobile * {
+    pointer-events: none;
+  }
+}
+@media (max-width: 601px) {
+  .side-navigation__button-mobile {
+    width: calc(100% - 16px);
   }
 }
 
@@ -6112,6 +6186,7 @@ select {
 @media (max-width: 768px) {
   .page-heading {
     margin-bottom: 32px;
+    padding-top: 28px;
   }
 }
 
@@ -9116,13 +9191,17 @@ select {
   }
 }
 
-.account__pages {
-  position: relative;
+@media (min-width: 1021px) {
+  .account__pages {
+    position: relative;
+  }
 }
 
-.account__pages .side-navigation__list {
-  position: sticky;
-  top: 100px;
+@media (min-width: 1021px) {
+  .account__pages .side-navigation__list {
+    position: sticky;
+    top: 100px;
+  }
 }
 
 .account-personal__main {
