@@ -142,7 +142,10 @@ function initAccordionGallery() {
     galleries.forEach(gallery => {
       const cards = gallery.querySelectorAll('.gallery-accordion__item')
       const expandButton = gallery.querySelector('.gallery-accordion__button-more');
-      const initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
+      let initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
+      initialShow = window.innerWidth <= 1024 ? initialShow - 2 : initialShow;
+      initialShow = window.innerWidth <= 970 ? initialShow - 1 : initialShow;
+
 
       cards.forEach((card, index) => {
         if (index < initialShow) {

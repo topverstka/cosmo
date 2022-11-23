@@ -4,6 +4,13 @@
   padding-top: 40px;
   padding-bottom: 40px;
   margin-bottom: 90px;
+  @media (max-width: 810px) {
+    margin-bottom: 32px;
+  }
+  @media (max-width: 601px) {
+    padding-top: 26px;
+    margin-bottom: 16px;
+  }
 }
 .product-cases__container {
   max-width: 1388px;
@@ -14,6 +21,10 @@
 .product-cases-carousel {
   padding-left: 94px;
   padding-right: 94px;
+  @media (max-width: 601px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .product-cases-carousel-slide__title {
   font-weight: 400;
@@ -22,13 +33,26 @@
   text-align: center;
   color: #000000;
   margin-bottom: 46px;
+  @media (max-width: 601px) {
+    max-width: 155px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
 }
 
 .product-cases-carousel__button-prev {
   left: 0;
+  @media (max-width: 601px) {
+    left: 10px;
+  }
 }
 .product-cases-carousel__button-next {
   right: 0;
+  @media (max-width: 601px) {
+    right: 10px;
+  }
 }
 
 .product-cases-carousel__button-prev,
@@ -36,6 +60,9 @@
   width: 60px;
   height: 40px;
   background-color: #F0F3F5;
+  @media (max-width: 601px) {
+    top: 20px;
+  }
 }
 .product-cases-carousel__button-prev::after,
 .product-cases-carousel__button-next::after {
