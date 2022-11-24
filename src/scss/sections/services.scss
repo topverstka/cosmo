@@ -1,5 +1,10 @@
 .services-gallery .about-features__gallery {
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "pic1 pic1 pic1" "pic1 pic1 pic1" "pic2 pic3 pic4" "pic2 pic5 pic5";
+  }
 }
 
 .services-location {

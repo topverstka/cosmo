@@ -11,3 +11,15 @@
 .shops__title {
   margin-bottom: 0;
 }
+
+.shops__container .section-heading {
+  @media (max-width: 1024px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.shops__button-all {
+  @media (max-width: 576px) {
+    display: none;
+  }
+}

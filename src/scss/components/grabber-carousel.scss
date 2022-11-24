@@ -4,6 +4,9 @@
   margin-left: auto;
   margin-right: 0;
   overflow: visible;
+  @media (max-width: 1024px) {
+    max-width: calc(100% - 40px);
+  }
 }
 .grabber-carousel .swiper-wrapper {
   overflow-x: visible;
@@ -16,6 +19,10 @@
   height: 315px;
   margin-bottom: 20px;
   display: block;
+  @media (max-width: 601px) {
+    height: 166px;
+    margin-bottom: 8px;
+  }
 }
 .grabber-carousel__slide-pic {
   display: block;
@@ -33,6 +40,10 @@
   line-height: 19px;
   color: #000000;
   margin-bottom: 8px;
+  @media (max-width: 601px) {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
 }
 .grabber-carousel__slide-desc {
   font-weight: 400;

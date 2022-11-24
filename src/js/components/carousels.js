@@ -41,8 +41,13 @@ if (document.querySelector(`.${CHANGES_CASE_CARD_CAROUSEL}`)) {
 if (document.querySelector('.grabber-carousel')) {
 let promoSlider = new Swiper(".grabber-carousel", {
   grabCursor: true,
-  slidesPerView: 2.5,
+  slidesPerView: 1.5,
   spaceBetween: 8,
+  breakpoints: {
+    577: {
+      slidesPerView: 2.5,
+    }
+  }
   // cssMode: true,
   // freeMode: true,
   // centeredSlides: true,

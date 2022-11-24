@@ -50,6 +50,9 @@
 }
 .locations--no-bg .locations__container {
   padding-top: 120px;
+  @media (max-width: 810px) {
+    padding-top: 48px
+  }
 }
 
 .locations-card {

@@ -1,6 +1,11 @@
 .hero {
   margin-bottom: 40px;
   @media (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 601px) {
+    padding-left: 12px;
+    padding-right: 12px;
     margin-bottom: 30px
   }
 }
@@ -14,6 +19,10 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 40px;
+  @media (max-width: 601px) {
+    display: block;
+    padding-bottom: 30px;
+  }
 }
 .hero__media {
   grid-area: media;
@@ -21,12 +30,18 @@
 }
 .hero__pic {
   display: block;
+  @media (max-width: 601px) {
+    margin-bottom: 20px;
+  }
 }
 .hero__img {
   border-radius: 12px;
   height: 500px;
   display: block;
   object-fit: cover;
+  @media (max-width: 601px) {
+    height: 220px
+  }
 }
 .hero__title {
   grid-area: title;
@@ -34,6 +49,10 @@
   font-size: 27px;
   line-height: 110%;
   color: #000000;
+  @media (max-width: 601px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }
 .hero__desc {
   grid-area: desc;
