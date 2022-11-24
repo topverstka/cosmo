@@ -2470,7 +2470,7 @@ select {
   }
 }
 
-.button--thirdly, .product-details__desc a {
+.button--thirdly, .product-details__desc a, .doc-card__desc a {
   padding: 0;
   font-weight: 400;
   font-size: 12px;
@@ -6338,7 +6338,7 @@ select {
 .page-heading__title:only-child {
   margin-bottom: 60px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .page-heading__title:only-child {
     margin-bottom: 32px;
   }
@@ -8318,6 +8318,12 @@ select {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media (max-width: 768px) {
+  .doc--small {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 .doc__title {
   margin-top: 40px;
@@ -8327,6 +8333,13 @@ select {
   line-height: 110%;
   text-align: center;
   color: #000000;
+}
+@media (max-width: 768px) {
+  .doc__title {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .doc-card {
@@ -8341,12 +8354,36 @@ select {
   column-gap: 70px;
   margin-bottom: 8px;
 }
+@media (max-width: 768px) {
+  .doc-card {
+    display: block;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doc--small .doc-card {
+    padding-bottom: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doc--small .doc-card__title {
+    margin-bottom: 12px;
+  }
+}
 
 .doc-card__title {
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   color: #000000;
+}
+@media (max-width: 768px) {
+  .doc-card__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }
 
 .doc-card__desc {

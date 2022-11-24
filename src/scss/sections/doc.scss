@@ -1,15 +1,24 @@
 .doc--small {
   padding-left: 40px;
   padding-right: 40px;
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .doc__title {
   margin-top: 40px;
   margin-bottom: 40px;
   font-weight: 400;
-font-size: 27px;
-line-height: 110%;
-text-align: center;
-color: #000000;
+  font-size: 27px;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 .doc-card {
   padding-top: 80px;
@@ -22,12 +31,30 @@ color: #000000;
   grid-template-columns: 308px auto;
   column-gap: 70px;
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    display: block;
+    padding: 20px;
+  }
+}
+.doc--small .doc-card {
+  @media (max-width: 768px) {
+    padding-bottom: 1px;
+  }
+}
+.doc--small .doc-card__title {
+  @media (max-width: 768px) {
+    margin-bottom: 12px;
+  }
 }
 .doc-card__title {
   font-weight: 400;
-font-size: 20px;
-line-height: 120%;
-color: #000000;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }
 .doc-card__desc {
   font-weight: 400;
@@ -40,4 +67,7 @@ color: #000000;
   font-size: inherit;
   line-height: inherit;
   margin-bottom: 1.2em;
+}
+.doc-card__desc a {
+  @extend .button--thirdly;
 }
