@@ -146,6 +146,9 @@ function initAccordionGallery() {
       initialShow = window.innerWidth <= 1024 ? initialShow - 2 : initialShow;
       initialShow = window.innerWidth <= 970 ? initialShow - 1 : initialShow;
       initialShow = initialShow < 2 ? 2 : initialShow;
+      if (window.innerWidth <= 601) {
+        initialShow = gallery.dataset.startShowMobile ? gallery.dataset.startShowMobile : initialShow;
+      }
 
 
       cards.forEach((card, index) => {

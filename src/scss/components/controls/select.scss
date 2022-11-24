@@ -132,6 +132,12 @@
   @media (max-width: 576px) {
     padding-left: 20px;
   }
+  @media (max-width: 420px) {
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-right: 37px;
+  }
 }
 .select__list--single {
   position: relative;
