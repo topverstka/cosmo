@@ -1,5 +1,8 @@
 .changes-cases {
   margin-bottom: 72px;
+  @media (max-width: 576px) {
+    margin-bottom: 51px;
+  }
 }
 .changes-cases--has-mb {
   margin-bottom: 120px;
@@ -8,12 +11,18 @@
   display: grid;
   gap: 8px;
   grid-template-columns: 1fr 1fr;
-
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 }
 .changes-cases-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 8px;
+  row-gap: 8px;
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 }
 .changes-cases-card .blog-card__media-compare {
   max-width: 100%;
@@ -30,7 +39,9 @@
 }
 .changes-cases-card--has-carousel .changes-case-card-carousel{
   grid-column: 2/3;
-
+  @media (max-width: 576px) {
+    grid-column: unset;
+  }
 }
 
 .changes-case-card-carousel__slide {
@@ -72,4 +83,10 @@ font-size: 28px;
 }
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
   right: 20px;
+}
+
+.changes-cases ~ .captions {
+  @media (max-width: 576px) {
+    margin-top: -10px;
+  }
 }
