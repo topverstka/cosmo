@@ -7,6 +7,9 @@
   align-items: stretch;
   justify-content: flex-start;
   position: relative;
+  @media (max-width: 768px) {
+    height: initial;
+  }
 }
 .stores__menu {
   position: absolute;
@@ -22,6 +25,11 @@
   transition: all 0.45s ease;
   transform-origin: left;
   overflow: hidden;
+  @media (max-width: 768px) {
+    margin-top: 320px;
+    max-width: 100%;
+    height: initial;
+  }
 }
 .stores__list {
   transition: all 0.45s ease, pointerEvents 0s;
@@ -53,6 +61,11 @@
   position: relative;
   width: calc(100% + 20px);
   padding-right: 8px;
+  @media (max-width: 768px) {
+    height: initial;
+    overflow: initial;
+    width: calc(100% + 10px);
+  }
 }
 .stores-list::before {
   position: sticky;
@@ -162,7 +175,10 @@
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  transform: translateZ(0)
+  transform: translateZ(0);
+  @media (max-width: 768px) {
+    height: 480px;;
+  }
 }
 .stores__map-frame {
   width: 100%;
