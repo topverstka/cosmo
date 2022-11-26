@@ -1,5 +1,7 @@
 .section-title {
   margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: "RF Dewi Extended";
   font-size: 27px;
   font-style: normal;
@@ -34,17 +36,19 @@
 }
 .captions-1-1 {
   column-count: 2;
-  column-gap: 58px;
+  column-gap: 8px;
   @media (max-width: 601px) {
     column-count: 1;
   }
 }
 .captions-1-1__desc {
+  font-family: "RF Dewi", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   color: #a1aeb3;
   opacity: 0.6;
+  max-width: 93%;
   break-inside: avoid;
   @media (max-width: 601px) {
     margin-bottom: 14px

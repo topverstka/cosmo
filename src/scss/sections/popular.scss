@@ -7,7 +7,7 @@
   }
 }
 .popular__title {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
   @media (max-width: 1200px) {
     margin-bottom: 28px
   }
@@ -22,6 +22,13 @@
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
   }
+}
+.popular-filters {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  --chips-fz: 12px;
+  --chips-fw: 400;
 }
 // .popular__gallery .product-card:nth-of-type(4) {
 .popular__gallery .product-card--tall {

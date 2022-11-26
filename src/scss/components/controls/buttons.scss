@@ -10,6 +10,7 @@
   justify-content: center;
   // padding: 23px 46px 26px 46px;
   padding: 11px 22px 14px 22px;
+  // padding: 11px 17px 14px 17px;
   font-size: var(--fz-button);
   font-weight: var(--fw-button);
   line-height: var(--lh-button);
@@ -42,6 +43,7 @@
   --icon-color: #000;
   --button-color: #000;
   --button-bg: #f0f3f5;
+  font-weight: 500;
 }
 .button--dark {
   --button-bg: #000;

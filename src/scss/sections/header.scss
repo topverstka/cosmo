@@ -98,7 +98,7 @@
   }
 }
 .header__nav {
-  margin-right: 77px;
+  margin-right: 48px;
   @media (max-width: 1370px) {
     margin-right: 20px
   }
@@ -232,6 +232,10 @@
   @media (max-width: 1200px) {
     margin-right: 16px;
   }
+}
+.header__picker-text {
+  font-size: inherit;
+  text-transform: uppercase;
 }
 .header__picker:last-child {
   margin-right: 0;

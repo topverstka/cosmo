@@ -13,7 +13,7 @@
   justify-content: space-between;
   max-width: 1184px;
   margin-right: auto;
-  margin-bottom: 112px;
+  margin-bottom: 110px;
   margin-left: auto;
   @media (max-width: 1300px) {
     display: grid;
@@ -28,7 +28,10 @@
 }
 
 .changes__desc {
-  margin-bottom: 88px;
+    margin-bottom: 122px;
+  @media (max-width: 1280px) {
+    margin-bottom: 88px;
+  }
   @media (max-width: 601px) {
     max-width: 400px;
     margin-left: auto;

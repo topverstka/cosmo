@@ -49,6 +49,7 @@
   z-index: 2;
   max-width: 232px;
   padding: 20px;
+  padding-top: 24px;
   padding-right: 15px;
   background-color: #5f6c75;
   border-radius: 6px;
@@ -62,7 +63,7 @@
   }
 }
 .promo-carousel-card__title {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   font-size: 20px;
   font-weight: 400;
   line-height: 120%;
@@ -73,11 +74,12 @@
   }
 }
 .promo-carousel-card__desc {
-  margin-bottom: 34px;
+  margin-bottom: 39px;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   color: #a1aeb3;
+  font-family: "RF Dewi", sans-serif;
   @media (max-width: 601px) {
     display: none
   }
@@ -110,7 +112,7 @@
   }
 }
 .promo-carousel__title {
-  margin-bottom: 14px;
+  margin-bottom: 22px;
   font-size: 27px;
   font-weight: 400;
   line-height: 110%;
@@ -136,7 +138,7 @@
 .promo-carousel__pagination {
   position: absolute;
   bottom: 30px;
-  left: calc(75.421348314606741573033707865169% + 25px);
+  left: calc(75.421348314606741573033707865169% + 20px);
   z-index: 2;
   display: flex;
   align-items: center;

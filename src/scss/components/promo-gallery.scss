@@ -15,7 +15,7 @@
   align-items: flex-start;
   justify-content: space-between;
   min-height: 248px;
-  padding: 24px 61px 24px 20px;
+  padding: 24px 61px 20px 20px;
   background-color: #fff;
   border-radius: 12px;
   @media (max-width: 1200px){
@@ -58,6 +58,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 .promo-gallery-card__img {
   border-radius: 12px;

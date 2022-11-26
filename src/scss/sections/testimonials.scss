@@ -1,5 +1,5 @@
 .testimonials {
-  padding-top: 40px;
+  padding-top: 27px;
   padding-bottom: 40px;
   @media (max-width: 601px) {
     padding-bottom: 30px;
@@ -11,7 +11,7 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 8px;
   column-gap: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   @media (max-width: 810px) {
     grid-template-columns: 1fr;
   }
@@ -35,7 +35,7 @@
 }
 .testimonials-card__bundle {
   height: 160px;
-  margin-bottom: 46px;
+  margin-bottom: 48px;
   @media (max-width: 601px) {
     margin-bottom: 38px
   }
