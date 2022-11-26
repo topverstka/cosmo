@@ -98,6 +98,9 @@
   width: 100%;
   max-width: 240px;
   margin-left: auto;
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
 }
 .blog-card__media-compare .blog-card__pic {
   height: 320px;

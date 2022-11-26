@@ -2,14 +2,20 @@
   display: block;
   max-width: 202px;
   height: 28px;
+  @media (max-width: 1180px) {
+    max-width: 122px;
+    height: 18px;
+  }
   @media (max-width: $mobile) {
     position: relative;
     z-index: 2;
+    height: 30px;
+    max-width: 212px;
   }
-  @media (max-width: 601px) {
-    height: 24px;
-    max-width: 176px;
-  }
+  // @media (max-width: 601px) {
+  //   height: 24px;
+  //   max-width: 176px;
+  // }
 }
 .logo__img {
   display: block;

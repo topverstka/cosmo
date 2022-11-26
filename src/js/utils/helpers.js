@@ -112,3 +112,30 @@ export function getTodayPlus(days) {
   let result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
   return new Date(result)
 }
+
+/**
+ * Фиксирует скрол у body
+ *  */
+export function bodyLock(con) {
+  let scrollFix = window.innerWidth - document.body.clientWidth;
+  const DEFAULT_SCROLLBAR_WIDTH = 17;
+  if (con === true) {
+    // scrollFix предотвращает скачки верстки в строну при блокировке скролла
+    scrollFix =
+      scrollFix > DEFAULT_SCROLLBAR_WIDTH ? DEFAULT_SCROLLBAR_WIDTH : scrollFix;
+    document.body.style.paddingRight = `${scrollFix}px`;
+    document.body.classList.add("_lock");
+  } else if (con === false) {
+    document.body.classList.remove("_lock");
+    document.body.style.paddingRight = "0";
+  } else if (con === undefined) {
+    if (!document.body.classList.contains("_lock")) {
+      document.body.classList.add("_lock");
+    } else {
+      document.body.classList.remove("_lock");
+      document.body.style.paddingRight = "0";
+    }
+  } else {
+    console.error("Неопределенный аргумент у функции bodyLock()");
+  }
+}

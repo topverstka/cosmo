@@ -1723,16 +1723,18 @@ input[type=search]::-webkit-search-cancel-button {
   max-width: 202px;
   height: 28px;
 }
+@media (max-width: 1180px) {
+  .logo {
+    max-width: 122px;
+    height: 18px;
+  }
+}
 @media (max-width: 1020px) {
   .logo {
     position: relative;
     z-index: 2;
-  }
-}
-@media (max-width: 601px) {
-  .logo {
-    height: 24px;
-    max-width: 176px;
+    height: 30px;
+    max-width: 212px;
   }
 }
 
@@ -4986,6 +4988,25 @@ select {
   overflow-x: hidden;
   max-height: 430px;
   margin-bottom: 20px;
+  /* total width */
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+}
+.minicart__content::-webkit-scrollbar {
+  background-color: #5F6C75;
+  width: 16px;
+}
+.minicart__content::-webkit-scrollbar-track {
+  background-color: #5F6C75;
+}
+.minicart__content::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 16px;
+  border: 4px solid #5F6C75;
+}
+.minicart__content::-webkit-scrollbar-button {
+  display: none;
 }
 
 .minicart__content::after {
@@ -5764,6 +5785,20 @@ select {
   position: relative;
   z-index: 100;
 }
+@media (max-width: 1020px) {
+  .header {
+    overflow: hidden;
+    margin-left: -8px;
+    width: calc(100% + 16px);
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+.header--opened {
+  position: fixed;
+}
 
 .header__container {
   position: relative;
@@ -5771,6 +5806,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.3s ease;
   width: calc(100% + 16px);
   padding-right: 28px;
   padding-left: 28px;
@@ -5789,6 +5825,8 @@ select {
   .header__container {
     max-height: 64px;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -5803,9 +5841,18 @@ select {
     width: 100%;
     height: 1px;
     background: #5F6C75;
-    opacity: 0.3;
     z-index: 2;
+    transition: all 0.3s ease;
+    opacity: 0;
   }
+}
+
+.header--opened .header__container {
+  max-height: 3000px;
+}
+
+.header--opened .header__container::before {
+  opacity: 0.3;
 }
 
 @media (max-width: 1020px) {
@@ -5815,13 +5862,20 @@ select {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: 1;
     display: block;
     width: 100%;
     height: 128px;
     background: #fff;
     box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease;
   }
+}
+
+.header--opened .header__container::after {
+  transform: scaleY(1);
 }
 
 .header__menu {
@@ -5834,8 +5888,8 @@ select {
     flex-direction: column;
     max-width: 100%;
     width: 100%;
+    height: 100%;
     margin-top: -33px;
-    z-index: 1;
     position: relative;
   }
 }
@@ -5854,6 +5908,49 @@ select {
     width: 100%;
     padding-top: 28px;
   }
+}
+@media (max-width: 1020px) {
+  .header__nav {
+    position: relative;
+    transform: translateY(-100vh);
+    transition: all 0.3s ease;
+    background: #F0F3F5;
+    left: 0;
+    top: 25px;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    /* total width */
+    /* background of the scrollbar except button or resizer */
+    /* scrollbar itself */
+    /* set button(top and bottom of the scrollbar) */
+    z-index: 1;
+    padding-bottom: 32px;
+    padding-top: 0;
+    padding-left: 8px;
+    padding-right: 32px;
+    margin-right: -12px;
+    width: calc(100% + 16px);
+  }
+  .header__nav::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+  }
+  .header__nav::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+  .header__nav::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 16px;
+    border: 4px solid #fff;
+  }
+  .header__nav::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+.header--opened .header__nav {
+  transform: translateY(0);
 }
 
 .header__nav-links {
@@ -5898,6 +5995,13 @@ select {
   padding-right: 28px;
   margin-top: 34px;
   margin-bottom: 36px;
+}
+@media (max-width: 1200px) {
+  .header__nav-link {
+    margin-right: 10px;
+    padding-right: 18px;
+    margin-right: 0;
+  }
 }
 @media (max-width: 1020px) {
   .header__nav-link {
@@ -5956,6 +6060,7 @@ select {
     order: -1;
     margin-right: auto;
     margin-top: -25px;
+    z-index: 2;
   }
 }
 
@@ -5967,6 +6072,11 @@ select {
   font-size: 12px;
   font-weight: 700;
   line-height: 14px;
+}
+@media (max-width: 1200px) {
+  .header__picker {
+    margin-right: 16px;
+  }
 }
 
 .header__picker:last-child {
@@ -5992,6 +6102,11 @@ select {
   padding-top: 80px;
   overflow: visible;
 }
+@media (max-width: 1020px) {
+  .header__snacks--show {
+    padding-top: 87px;
+  }
+}
 
 .header-snack {
   position: absolute;
@@ -6006,6 +6121,11 @@ select {
   background: #5f6c75;
   opacity: 0;
   transition: all 0.3s ease;
+}
+@media (max-width: 1020px) {
+  .header-snack {
+    min-height: 87px;
+  }
 }
 
 .header-snack--visible {
@@ -6111,6 +6231,16 @@ select {
   row-gap: 24px;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .header__nav-item-dropdown-content {
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 1020px) {
   .header__nav-item-dropdown-content {
     padding: 16px;
@@ -6172,6 +6302,12 @@ select {
 .header__nav-item-dropdodwn-button {
   grid-area: button;
 }
+@media (max-width: 1200px) {
+  .header__nav-item-dropdodwn-button {
+    width: fit-content;
+    margin-left: auto;
+  }
+}
 
 .header__nav-item-dropdown-cards {
   grid-area: cards;
@@ -6209,6 +6345,11 @@ select {
   padding: 0;
   background-color: transparent;
 }
+@media (max-width: 1280px) {
+  .header__nav-item-dropdown-card--single.blog-card {
+    max-width: 100%;
+  }
+}
 
 .header__nav-item-dropdown-card--single .blog-card__info {
   max-width: 100%;
@@ -6232,10 +6373,11 @@ select {
     column-gap: 11px;
     row-gap: 27px;
     margin-left: auto;
+    z-index: 2;
   }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1021px) {
   .button-burger {
     display: none;
   }
@@ -7357,6 +7499,11 @@ select {
   width: 100%;
   max-width: 240px;
   margin-left: auto;
+}
+@media (max-width: 1200px) {
+  .blog-card__media-compare {
+    max-width: 100%;
+  }
 }
 
 .blog-card__media-compare .blog-card__pic {

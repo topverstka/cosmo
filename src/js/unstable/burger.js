@@ -1,15 +1,16 @@
-import { bodyLock, bodyUnlock } from "../utils/functions.js";
+import {bodyLock} from '../utils/helpers.js'
+// import { bodyLock, bodyUnlock } from "../utils/functions.js";
 const burger = document.querySelector(".burger");
 const header = document.querySelector(".header");
 const HEADER_OPENED_CLASS = "header--opened";
 
 function openBurger() {
   header.classList.add(HEADER_OPENED_CLASS);
-  bodyLock();
+  bodyLock(true);
 }
 function closeBurger() {
   header.classList.remove(HEADER_OPENED_CLASS);
-  bodyUnlock();
+  bodyLock(false);
 }
 
 if (header && burger) {

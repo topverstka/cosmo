@@ -41,6 +41,7 @@
   overflow-x: hidden;
   max-height: 430px;
   margin-bottom: 20px;
+  @include macscrollbar(16px, 4px, #5F6C75);
 }
 .minicart__content::after {
   content: "";

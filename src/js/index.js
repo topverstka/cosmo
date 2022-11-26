@@ -314,7 +314,7 @@ if (servicesLeadButton) {
 const sideNav = document.querySelector('.side-navigation');
 if (sideNav) {
   const button = sideNav.querySelector('.side-navigation__button-mobile')
-  button.addEventListener('click', (e) => {
+  button?.addEventListener('click', (e) => {
     sideNav.classList.add('side-navigation--visible');
   })
   window.addEventListener('click', (e)=> {
