@@ -3,6 +3,14 @@
 import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 
 if (document.querySelector('.promo-carousel')) {
+  function normalizePaginationOffset(swiper) {
+    const currentSlideCard = swiper.slides[swiper.activeIndex].querySelector('.promo-carousel-card')
+    const paginationBottomOffset = +currentSlideCard.getBoundingClientRect().height;
+    const initialPaginationBottomOffset = 38;
+    const newPaginationOffset = Math.round(initialPaginationBottomOffset) + Math.round(paginationBottomOffset);
+    console.log(newPaginationOffset)
+    swiper.pagination.el.style.bottom =  newPaginationOffset + 'px';
+  }
   let promoSlider = new Swiper(".promo-carousel", {
     modules: [Navigation, Autoplay, Pagination],
     spaceBetween: 100,
@@ -13,6 +21,14 @@ if (document.querySelector('.promo-carousel')) {
       el: ".promo-carousel__pagination",
       clickable: true,
     },
+    on: {
+      init: function () {
+        normalizePaginationOffset(this)
+      },
+      slideChange: function () {
+        normalizePaginationOffset(this)
+      },
+    }
   });
 }
 

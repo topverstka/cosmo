@@ -26,6 +26,12 @@
   }
 }
 
+.footer__logo {
+  @media (max-width: 601px) {
+    height: 26px;
+    max-width: 178px;
+  }
+}
 .footer__logo .logo__img {
   fill: #f0f3f5;
 }
@@ -35,7 +41,7 @@
   justify-content: space-between;
   margin-bottom: 79px;
   @media (max-width: 601px) {
-    margin-bottom: 114px
+    margin-bottom: 106px;
   }
   @media (max-width: 576px) {
     align-items: flex-start;
@@ -50,6 +56,9 @@
     flex-wrap: wrap;
     margin-bottom: 32px;
   }
+  @media (max-width: 601px) {
+    margin-bottom: 30px;
+  }
 }
 .footer__nav .nav__list {
   min-width: 222px;
@@ -58,6 +67,7 @@
   }
   @media (max-width: 576px) {
     max-width: 100%;
+    min-width: initial;
   }
 }
 .footer__nav .nav__list:last-child {
@@ -132,8 +142,8 @@
 }
 .footer__payments-item {
   margin-right: 30px;
-  @media (max-width: 576px) {
-    margin-bottom: 20px
+  @media (max-width: 601px) {
+    margin-right: 16px;
   }
 }
 .footer__payments-item:last-of-type {
@@ -170,22 +180,43 @@
   }
 }
 
-.footer__bottom-desc:not(:fist-of-type) {
+.footer__bottom-desc:first-of-type {
+  @media (max-width: 601px) {
+    font-family: "RF Dewi";
+  }
+}
+.footer__bottom-desc:last-of-type {
+  @media (max-width: 601px) {
+    margin-bottom: 18px;
+  }
+}
+.footer__bottom-desc:not(:first-of-type) {
   font-family: "RF Dewi";
 }
 .footer__bottom-desc {
   margin-bottom: 25px;
+  @media (max-width: 601px) {
+    font-size: 12px;  
+    margin-bottom: 20px;
+    line-height: 1.17;
+  }
 }
 .footer__bottom-copy {
   width: 100%;
   max-width: 100%;
   margin-top: 16px;
   text-align: center;
+  @media (max-width: 601px) {
+    font-size: 12px;
+    font-family:  "RF Dewi", sans-serif;
+    line-height: 1.1;
+  }
 }
 
 .footer__socials {
   @media (max-width: 601px) {
     flex-direction: column;
+    padding-top: 4px;
   }
 }
 .footer__socials .socials__item{

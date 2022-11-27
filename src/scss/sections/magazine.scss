@@ -17,6 +17,8 @@
   @media (max-width: 601px) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "card pic1" "card pic2" "card pic3";
+    row-gap: 4px;
+    column-gap: 4px;
   }
 }
 
@@ -31,7 +33,7 @@
   border-radius: 12px;
   @media (max-width: 601px) {
     padding: 20px;
-    padding-right: 13px;
+    padding-right: 17px;
   }
 }
 
@@ -42,6 +44,7 @@
   color: #f0f3f5;
   @media (max-width: 601px) {
     font-size: 16px;
+    line-height: 1.18 
   }
 }
 .magazine-card__button {
@@ -50,6 +53,9 @@
   display: block;
   @media (max-width: 601px) {
     margin-bottom: 24px;
+    padding: 7px 17px 9px;
+    font-size: 12px;
+    margin-left: 0;
   }
 }
 .magazine-card__button:hover {
@@ -66,6 +72,7 @@
   @media (max-width: 601px) {
     font-size: 12px;
     line-height: 1.25;
+    font-family:  "RF Dewi", sans-serif;
   }
 }
 
@@ -130,7 +137,7 @@
   }
   @media (max-width: 601px) {
     height: 360px;
-    padding-bottom: 40px;
+    padding-bottom: 44px;
   }
   @media (min-width: 1800px) {
     height: 740px;
@@ -166,11 +173,18 @@
   display: block;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   @media (max-width: 962px) {
     left: -15%;
     top: -30%;
     width: 120%;
     height: 130%;
+  }
+  @media (max-width: 601px) {
+    left: -28%;
+    top: -61%;
+    width: 160%;
+    height: 160%;
   }
 }
 .magazine-card-fullsize__img {
@@ -192,7 +206,7 @@
   @media (max-width: 601px) {
     font-size: 20px;
     line-height: 1;
-    margin-bottom: 11px;
+    margin-bottom: 8px;
   }
 }
 .magazine-card-fullsize__desc {
@@ -205,5 +219,11 @@
   @media (max-width: 601px) {
     font-size: 12px;
     margin-bottom: 18px;
+    font-family: "RF Dewi", sans-serif;
+  }
+}
+.magazine-card-fullsize__button-about {
+  @media (max-width: 601px) {
+    padding: 9px 17px 11px;
   }
 }

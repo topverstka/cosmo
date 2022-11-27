@@ -323,3 +323,9 @@ if (sideNav) {
     sideNav.classList.remove('side-navigation--visible');
   })
 }
+
+const captionsMobileFold = document.querySelectorAll('.captions--mobile-fold');
+captionsMobileFold.forEach((caption) => {
+  const button = caption.querySelector('.captions__button-opener')
+  button.addEventListener('click', () => caption.classList.add('.captions--fold-opened'));
+})

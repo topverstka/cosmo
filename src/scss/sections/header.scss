@@ -35,6 +35,8 @@
     position: relative;
   }
   @media (max-width: 1020px) {
+    padding-right: 8px;
+    padding-left: 24px;
     max-height: 64px;
     overflow: hidden;
     width: 100%;
@@ -487,7 +489,7 @@
     order: -2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 11px;
+    column-gap: 12px;
     row-gap: 27px;
     margin-left: auto;
     z-index: 2;

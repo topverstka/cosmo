@@ -15,6 +15,9 @@
   @media (max-width: 810px) {
     grid-template-columns: 1fr;
   }
+  @media (max-width: 601px) {
+    margin-bottom: 18px;
+  }
 }
 .testimonials-card {
   padding: 20px;
@@ -43,23 +46,35 @@
     padding-left: 12px;
     padding-right: 12px;
     margin-bottom: 18px;
-    margin-bottom: 18px;
+    margin-bottom: 39px;
+    height: 140px 
   }
 }
 
+.testimonials-card__buttons {
+  @media (max-width: 576px) {
+    padding-left: 12px;
+  }
+}
 .testimonials-card__add-to-cart {
   margin-right: 8px;
   @media (max-width: 420px) {
-    padding-left: 14px;
-    padding-right: 14px;
+    font-size: 12px;
+    padding: 7px 13px 9px;
   }
   @media (max-width: 320px) {
-    margin-bottom: 8px
+    margin-bottom: 8px;
   }
 }
 .testimonials-card__more {
   @media (max-width: 420px) {
-    padding-left: 14px;
-    padding-right: 14px;
+    font-size: 12px;
+    padding: 7px 13px 9px;
+  }
+}
+
+.testimonials__button-more {
+  @media (max-width: 601px) {
+    --fz-button: 14px;
   }
 }

@@ -20,7 +20,8 @@
   --brad: 5px;
   border-radius: var(--brad);
   @media (max-width: 576px) {
-    padding: 12px;
+    --brad: 12px;
+    // padding: 12px; В макете popular было 20пк отступ
   }
 }
 .product-card__info {
@@ -65,9 +66,11 @@
   max-width: 60%;
   min-width: 200px;
   @media (max-width: 576px) {
-    margin-bottom: 21px;
-    max-width: calc(100% - 20px);
-    font-size: 14px;
+    margin-bottom: 11px;
+    // max-width: calc(100% - 20px);
+    max-width: 50%;
+    min-width: 180px;
+    // font-size: 14px;
   }
 }
 .product-card__options {
@@ -90,7 +93,7 @@
   --chips-padding: 7px 9px 9px 9px;
 
   @media (max-width: 576px) {
-    max-width: 100%;
+    // max-width: 100%; // В magazine на главной было так
   }
 }
 

@@ -17,7 +17,7 @@
     max-width: 100%;
   }
   @media (max-width: 601px) {
-    margin-bottom: 16px
+    margin-bottom: 18px;// main.html magazine
   }
 }
 
@@ -36,6 +36,10 @@
 
 .blog-card--bigger-title .blog-card__title {
   font-size: 27px;
+  @media (max-width: 601px) {
+    font-size: 25px;
+    margin-bottom: 3px;
+  }
 }
 .blog-card--grey {
   padding: 0;
@@ -64,6 +68,9 @@
   font-weight: 400;
   line-height: 120%;
   color: #000000;
+  @media (max-width: 601px) {
+    margin-bottom: 10px;
+  }
 }
 .blog-card__desc {
   margin-bottom: 16px;
@@ -72,14 +79,17 @@
   line-height: 17px;
   color: #a1aeb3;
   @media (max-width: 576px) {
-    margin-bottom: 34px
-
+    margin-bottom: 34px;
+    font-family: "RF Dewi", sans-serif;
   }
 }
 .blog-card__button {
   // margin-bottom: 28px;
   @media (max-width: 576px) {
     margin-bottom: 0;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

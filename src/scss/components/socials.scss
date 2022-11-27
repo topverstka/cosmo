@@ -25,6 +25,9 @@
   transition: var(--tr);
   font-size: var(--fz, 20px);
   line-height: 1.2;
+  @media (max-width: 601px) {
+    font-size: var(--fz, 14px);
+  }
 }
 .socials__link--has-stroke {
   // margin-left: 7px;

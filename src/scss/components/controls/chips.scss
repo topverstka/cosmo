@@ -25,6 +25,26 @@
     margin-bottom: 28px
   }
 }
+@media (max-width: 601px) {
+  .chips--has-scroll {
+    padding-left: 0;  
+    padding-right: 0; 
+    overflow: hidden;
+    margin-left: -8px;
+    width: calc(100% + 16px);
+  }
+  .chips--has-scroll .chips__track {
+    margin-bottom: -20px;  
+    overflow-x: auto;
+  }
+  .chips--has-scroll .chips__content {
+    padding-left: 28px; 
+    padding-right: 28px; 
+    padding-bottom: 20px;  
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+}
 .chips--ghost {
   --chips-bg: transparent;
   --chips-active-bg: #a1aeb2;
