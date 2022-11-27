@@ -83,9 +83,12 @@
     font-family: "RF Dewi", sans-serif;
   }
 }
+
 .blog-card__button {
   // margin-bottom: 28px;
-  @media (max-width: 576px) {
+  padding-left: 18px;
+  padding-right: 18px;
+  @media (max-width: 601px) {
     margin-bottom: 0;
     font-size: 14px;
     padding-left: 20px;
