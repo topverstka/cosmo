@@ -28,6 +28,12 @@
 @include font(
   "RF Dewi Extended",
   normal,
+  500,
+  "../resources/fonts/RFDewiExtended-Semibold"
+);
+@include font(
+  "RF Dewi Extended",
+  normal,
   600,
   "../resources/fonts/RFDewiExtended-Bold"
 );
