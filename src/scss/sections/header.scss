@@ -209,6 +209,9 @@
   height: var(--size);
   padding: 0;
 }
+.header__button--active {
+  --button-bg: var(--c-accent);
+}
 .header__button .button__icon {
   stroke: #fff;
 }
@@ -650,5 +653,11 @@
     .header__button-back-icon {
       fill: #fff;
     }
+  }
+}
+
+.header__auth {
+  @media (max-width: 1020px) {
+    top: 115px; 
   }
 }

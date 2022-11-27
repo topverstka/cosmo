@@ -29,8 +29,9 @@
   }
 
   &.is-active {
-    background-color: var(--c-accent);
+    background-color: #F0F3F5;
     & span {
+      background-color: #000;
       &:nth-child(1) {
         transform: translate(-50%, -50%) rotate(45deg);
       }

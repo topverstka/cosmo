@@ -7,12 +7,27 @@ const buttonCart = document.querySelector('.button-cart');
 const miniAuth = document.querySelector('.auth');
 const buttonAuth = document.querySelector('.button-auth');
 
+function showMinicat() {
+  buttonCart.parentElement.querySelector('.minicart').classList.add('minicart--visible')
+  buttonCart.classList.add('header__button--active');
+  hideAuth();
+}
+function hideMinicart() {
+  buttonCart.classList.remove('header__button--active');
+  buttonCart.parentElement.querySelector('.minicart').classList.remove('minicart--visible')
+}
+function toggleMinicart() {
+  if (minicart.classList.contains('minicart--visible')) {
+    hideMinicart();
+  } else {
+    showMinicat();
+  }
+}
 if (buttonCart) {
   buttonCart.addEventListener('click', () => {
-    buttonCart.parentElement.querySelector('.minicart').classList.toggle('minicart--visible')
-
-    buttonAuth.parentElement.querySelector('.auth').classList.remove('auth--visible')
+    toggleMinicart()
   });
+
   minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
   const yOffset = e.target.scrollTop;
   if (yOffset > 20) {
@@ -24,13 +39,35 @@ if (buttonCart) {
   window.addEventListener('scroll', () => {
     minicart.classList.remove('minicart--visible')
   })
+  window.addEventListener('click', (e) => {
+    if (e.path.includes(minicart)) return;
+    if (e.path.includes(buttonCart)) return;
+
+    hideMinicart();
+  });
 }
 
 
+function showAuth() {
+    buttonAuth.parentElement.querySelector('.auth').classList.add('auth--visible')
+    buttonAuth.classList.add('header__button--active');
+    hideMinicart();
+}
+function hideAuth() {
+    buttonAuth.parentElement.querySelector('.auth').classList.remove('auth--visible')
+    buttonAuth.classList.remove('header__button--active');
+}
+function toggleAuth() {
+    if (miniAuth.classList.contains('auth--visible')) {
+      hideAuth()
+    } else {
+      showAuth()
+    }
+}
+
 if (buttonAuth) {
   buttonAuth.addEventListener('click', () => {
-    buttonAuth.parentElement.querySelector('.auth').classList.toggle('auth--visible')
-    buttonCart.parentElement.querySelector('.minicart').classList.remove('minicart--visible')
+    toggleAuth();
   })
 
   const authMethodsTogglers = document.querySelectorAll('.auth__button-method-toggler')
@@ -64,6 +101,13 @@ if (buttonAuth) {
   })
   window.addEventListener('scroll', () => {
     miniAuth.classList.remove('auth--visible')
+  })
+
+  window.addEventListener('click', (e) => {
+    if (e.path.includes(miniAuth)) return;
+    if (e.path.includes(buttonAuth)) return;
+
+    hideAuth();
   })
 }
 
