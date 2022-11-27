@@ -4,6 +4,9 @@ import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 
 if (document.querySelector('.promo-carousel')) {
   function normalizePaginationOffset(swiper) {
+
+    if (window.innerWidth > 601) return
+
     const currentSlideCard = swiper.slides[swiper.activeIndex].querySelector('.promo-carousel-card')
     const paginationBottomOffset = +currentSlideCard.getBoundingClientRect().height;
     const initialPaginationBottomOffset = 38;
@@ -14,9 +17,9 @@ if (document.querySelector('.promo-carousel')) {
   let promoSlider = new Swiper(".promo-carousel", {
     modules: [Navigation, Autoplay, Pagination],
     spaceBetween: 100,
-    // autoplay: {
-      // delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
     pagination: {
       el: ".promo-carousel__pagination",
       clickable: true,
