@@ -634,8 +634,10 @@
 
 .header:not(.header--opened) .header__button:nth-of-type(3),
 .header:not(.header--opened) .header__button:nth-of-type(4) {
-  opacity: 0;
-  pointer-events: none;
+  @media (max-width: 1020px) {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 .header__button-back {
   padding: 0 10px;
