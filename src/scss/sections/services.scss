@@ -1,9 +1,13 @@
 .services-gallery .about-features__gallery {
   margin-bottom: 8px;
   @media (max-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "pic1 pic1 pic1" "pic1 pic1 pic1" "pic2 pic3 pic4" "pic2 pic5 pic5";
+    margin-bottom: -18px;
+    grid-template-columns: 37.9% 30% 30%;
+    grid-template-rows: 47.1% 22.1% 22.1%;
+    // grid-template-areas: "pic1 pic1 pic1" "pic1 pic1 pic1" "pic2 pic3 pic4" "pic2 pic5 pic5";
+    grid-template-areas: "pic1 pic1 pic1" "pic2 pic3 pic4" "pic2 pic5 pic5";
+    column-gap: 4px;
+    row-gap: 4px;
   }
 }
 
@@ -14,12 +18,15 @@
   padding-bottom: 84px;
   margin-bottom: 8px;
   @media (max-width: 768px) {
-    padding-top: 38px;
+    padding-top: 30px;
     padding-bottom: 40px;
   }
 }
 .services-location ~ .services-location {
   padding-top: 94px;
+  @media (max-width: 768px) {
+    padding-top: 34px;
+  }
 }
 
 .services-location__container {
@@ -73,7 +80,7 @@
   @media (max-width: 768px) {
     font-size: 20px;
     line-height: 120%;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
   }
 }
 
@@ -164,6 +171,12 @@
   --button-color: #5F6C75;
   font-family: "RF Dewi", sans-serif;
 }
+.services-location__button-book {
+  @media (max-width: 768px) {
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+}
 
 .services-location-service-card {
   padding: 20px;
@@ -176,6 +189,9 @@
 }
 .services-location-service-card:last-of-type {
   margin-bottom: 18px;
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
 }
 .services-location-service-card__title {
   font-weight: 400;
@@ -187,6 +203,7 @@
     font-size: 14px;
     line-height: 1.15;
     margin-bottom: 11px;
+    max-width: 80%;
   }
 }
 .services-location-service-card__desc {
@@ -195,6 +212,13 @@
   line-height: 14px;
   color: #A1AEB3;
   font-family: "RF Dewi", sans-serif;
+  @media (max-width: 768px) {
+    display: -webkit-box;
+    max-width: 96%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 .services-location__services-buttons {

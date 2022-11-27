@@ -97,7 +97,11 @@
     height: 100%;
     margin-top: -33px;
     position: relative;
+    pointer-events: none;
   }
+}
+.header--opened .header__menu {
+  pointer-events: initial;
 }
 .header__nav {
   margin-right: 48px;

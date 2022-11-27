@@ -36,7 +36,7 @@
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 1.25;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
   }
 }
 .callback-cards-card__title > *{
@@ -60,4 +60,9 @@
 
 .callback-cards-card__button {
   padding: 11px 18px 14px 18px;
+  @media (max-width: 601px) {
+    --fz: 12px;
+    padding: 7px 15px 9px 15px;
+    font-weight: 400
+  }
 }
