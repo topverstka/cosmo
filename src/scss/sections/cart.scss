@@ -143,7 +143,7 @@
   }
 }
 
-.cart__section ..gallery-accordion__content {
+.cart__section .gallery-accordion__content {
   @media (min-width: 602px) {
     margin-bottom: 36px;
   }
@@ -199,7 +199,7 @@
   }
 }
 .cart__gifts-gallery .product-card__info {
-  min-height: 318px;
+  min-height: 320px;
   @media (max-width: 601px) {
     min-height: 250px;
   }
@@ -219,6 +219,9 @@
 }
 .cart__gifts-gallery .product-card__bottom {
   padding-left: 2px;
+}
+.cart__gift .product-card__link::before {
+  border-radius: 12px;
 }
 .cart__gift .product-card__pic {
   left: 0;
