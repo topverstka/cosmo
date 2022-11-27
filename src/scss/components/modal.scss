@@ -25,7 +25,6 @@
   color: #FFFFFF;
   margin-bottom: 40px;
   @media (max-width: 601px) {
-    font-size: 20px;
     line-height: 1.2;
     margin-bottom: 40px;
   }
@@ -120,7 +119,8 @@
 #callback-pop {
   padding-top: 55px;
 }
-#thanks-pop .modal__inner,
-#callback-pop .modal__inner {
+
+
+.modal__inner {
   max-width: 375px;
 }

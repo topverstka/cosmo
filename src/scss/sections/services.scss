@@ -11,12 +11,15 @@
   background-color: var(--bg-element);
   border-radius: 12px;
   padding-top: 81px;
-  padding-bottom: 71px;
+  padding-bottom: 84px;
   margin-bottom: 8px;
   @media (max-width: 768px) {
     padding-top: 38px;
     padding-bottom: 40px;
   }
+}
+.services-location ~ .services-location {
+  padding-top: 94px;
 }
 
 .services-location__container {
@@ -25,7 +28,7 @@
   margin-right: auto;
   display: grid;
   grid-template-areas: "info info" "gallery services";
-  grid-template-columns: auto 596px;
+  grid-template-columns: auto 589px;
   column-gap: 127px;
   row-gap: 94px;
   @media (max-width: 1380px) {
@@ -109,6 +112,9 @@
 .services-location-address::before {
   background-image: url("../img/common/icon-geo.svg");
 }
+.services-location-time {
+  margin-right: 14px;
+}
 .services-location-time::before {
   background-image: url("../img/common/icon-time.svg");
 }
@@ -156,6 +162,7 @@
 
 .services-location__button-more {
   --button-color: #5F6C75;
+  font-family: "RF Dewi", sans-serif;
 }
 
 .services-location-service-card {
@@ -168,7 +175,7 @@
   }
 }
 .services-location-service-card:last-of-type {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .services-location-service-card__title {
   font-weight: 400;
@@ -187,6 +194,7 @@
   font-size: 12px;
   line-height: 14px;
   color: #A1AEB3;
+  font-family: "RF Dewi", sans-serif;
 }
 
 .services-location__services-buttons {
