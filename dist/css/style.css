@@ -11771,7 +11771,7 @@ select {
 @media (max-width: 601px) {
   .footer__top {
     padding-top: 18px;
-    padding-bottom: 14px;
+    padding-bottom: 15px;
     margin-bottom: 19px;
   }
 }
@@ -11831,7 +11831,7 @@ select {
 }
 @media (max-width: 768px) {
   .footer__nav .nav__list {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
@@ -11937,16 +11937,32 @@ select {
 }
 @media (max-width: 601px) {
   .footer__payments-item {
-    margin-right: 16px;
+    margin-right: 14px;
   }
+}
+
+.footer__payments-item:nth-of-type(1) {
+  width: 70px;
+  margin-left: -5px;
+}
+
+.footer__payments-item:nth-of-type(3) .footer__payments-logo {
+  height: 21px;
+  margin-top: 2px;
 }
 
 .footer__payments-item:last-of-type {
   margin-right: 0;
+  margin-top: -2px;
 }
 
 .footer__payments-logo {
   height: 20px;
+}
+@media (max-width: 601px) {
+  .footer__payments-logo {
+    height: 24px;
+  }
 }
 
 .footer__payments-item:last-of-type .footer__payments-logo {
@@ -11984,7 +12000,7 @@ select {
 
 @media (max-width: 601px) {
   .footer__bottom-desc:first-of-type {
-    font-family: "RF Dewi";
+    font-family: "RF Dewi", sans-serif;
   }
 }
 
@@ -11995,11 +12011,12 @@ select {
 }
 
 .footer__bottom-desc:not(:first-of-type) {
-  font-family: "RF Dewi";
+  font-family: "RF Dewi", sans-serif;
 }
 
 .footer__bottom-desc {
   margin-bottom: 25px;
+  color: #A1AEB2;
 }
 @media (max-width: 601px) {
   .footer__bottom-desc {

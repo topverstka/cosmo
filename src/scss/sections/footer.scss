@@ -21,7 +21,7 @@
   border-radius: var(--section-radius);
   @media (max-width: 601px) {
     padding-top: 18px;
-    padding-bottom: 14px;
+    padding-bottom: 15px;
     margin-bottom: 19px;
   }
 }
@@ -66,7 +66,7 @@
 .footer__nav .nav__list {
   min-width: 222px;
   @media (max-width: 768px) {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
   @media (max-width: 576px) {
     max-width: 100%;
@@ -149,14 +149,28 @@
 .footer__payments-item {
   margin-right: 30px;
   @media (max-width: 601px) {
-    margin-right: 16px;
+    margin-right: 14px;
+  }
+}
+.footer__payments-item:nth-of-type(1) {
+  width: 70px;
+  margin-left: -5px;
+}
+.footer__payments-item:nth-of-type(3) {
+  .footer__payments-logo {
+    height: 21px;
+    margin-top: 2px;
   }
 }
 .footer__payments-item:last-of-type {
   margin-right: 0;
+  margin-top: -2px;
 }
 .footer__payments-logo {
   height: 20px;
+  @media (max-width: 601px) {
+    height: 24px;
+  }
 }
 .footer__payments-item:last-of-type .footer__payments-logo {
   height: 33px;
@@ -188,7 +202,7 @@
 
 .footer__bottom-desc:first-of-type {
   @media (max-width: 601px) {
-    font-family: "RF Dewi";
+    font-family: "RF Dewi", sans-serif;
   }
 }
 .footer__bottom-desc:last-of-type {
@@ -197,10 +211,11 @@
   }
 }
 .footer__bottom-desc:not(:first-of-type) {
-  font-family: "RF Dewi";
+  font-family: "RF Dewi", sans-serif;
 }
 .footer__bottom-desc {
   margin-bottom: 25px;
+  color: #A1AEB2;
   @media (max-width: 601px) {
     font-size: 12px;  
     margin-bottom: 20px;
