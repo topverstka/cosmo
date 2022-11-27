@@ -5,6 +5,13 @@
   padding-top: 80px;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  @media (max-width: 601px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 112px;
+  }
 }
 .poppa__overlay--search-pop .poppa__aligner {
   align-items: flex-start;
@@ -14,11 +21,33 @@
   display: initial;
 }
 
+.search-pop__gallery {
+  @media (max-width: 601px) {
+    margin-left: -20px;
+    width: calc(100% + 40px);
+  }
+}
 .search-pop__gallery-inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 8px;
   column-gap: 8px;
+  @media (max-width: 601px) {
+    display: flex;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 0;
+    overflow-y: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.search-pop__gallery-inner .product-card{
+  @media (max-width: 601px) {
+    min-width: 330px;
+    margin-right: 8px;
+  }
 }
 
 .search-pop__box {
@@ -27,12 +56,29 @@
   margin-right: auto;
   margin-bottom: 80px;
   margin-left: auto;
+  @media (max-width: 601px) {
+    margin-bottom: 60px;
+  }
 }
 
 .search-pop__suggests {
+  margin-bottom: 40px;
+  @media (max-width: 601px) {
+    overflow: hidden;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+    margin-bottom: 22px;
+  }
+}
+.search-pop__suggests-track {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  padding-left: 22px;
+  padding-right: 20px;
+  @media (max-width: 601px) {
+    margin-bottom: -20px;
+    overflow-x: auto;
+  }
 }
 .search-pop__suggest {
   display: flex;
@@ -48,6 +94,10 @@
   background: #f0f3f5;
   border-radius: 100px;
   transition: all 0.3s ease;
+  @media (max-width: 601px) {
+    margin-bottom: 20px;
+    white-space: nowrap;
+  }
 }
 .search-pop__suggest--search::before {
   display: block;
@@ -73,8 +123,13 @@
 }
 
 .search-pop__title {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   color: #fff;
+  @media (max-width: 601px) {
+    padding-left: 0;
+    line-height: 1.2;
+    margin-bottom: 17px;
+  }
 }
 .search-pop__results-count {
   margin-bottom: 40px;
@@ -82,4 +137,8 @@
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
+  @media (min-width: 602px) {
+    padding-left: 20px;
+    margin-bottom: 37px;
+  }
 }

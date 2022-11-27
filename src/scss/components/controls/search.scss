@@ -15,8 +15,10 @@
   @media (max-width: 1100px) {
     margin-bottom: 40px;
   }
-  @media (max-width: 575px) {
+  @media (max-width: 601px) {
+    padding: 4px;    
     margin-bottom: 20px;
+    border-radius: 6px;
   }
 }
 .search__icon {
@@ -46,6 +48,12 @@
   line-height: 19px;
   color: #000;
   border: none;
+  @media (max-width: 601px) {
+    font-size: 12px;
+    padding-top: 0;
+    padding-bottom: 3px;
+    padding-left: 17px;
+  }
 }
 .search__input::placeholder {
   color: #a1aeb3;
@@ -58,6 +66,10 @@
   background: #f0f3f5;
   border-radius: 6px;
   transition: all 0.3s ease;
+  @media (max-width: 601px) {
+    --size: 34px;
+    
+  }
 }
 .search__button-icon {
   --size: 24px;
