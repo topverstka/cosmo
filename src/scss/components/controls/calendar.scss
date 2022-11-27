@@ -31,6 +31,9 @@
   font-family: 'RF Dewi Extended', sans-serif;
   margin-bottom: 17px;
   cursor: initial;
+  max-width: 255px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .flatpickr-calendar {
   max-width: 270px;
@@ -86,7 +89,7 @@
   padding-top: 5px;
 }
 .flatpickr-months {
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 .flatpickr-current-month {
   display: flex;
@@ -110,6 +113,8 @@
   width: 100%;
   max-width: 100%;
   min-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .flatpickr-day {
   border-radius: 6px;
@@ -129,12 +134,18 @@
 }
 .flatpickr-weekdays {
   height: 19px;
-  margin-bottom: 9px;
+  margin-bottom: 3px;
+}
+.flatpickr-weekdays .flatpickr-weekdaycontainer {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+span.flatpickr-weekday {
+  font-size: 9px;
 }
 .flatpickr-weekday {
   text-transform: uppercase;
   color: #000;
-  font-size: 12px;
   line-height: 1.2;
 }
 

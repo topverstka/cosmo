@@ -2005,7 +2005,7 @@ input[type=search]::-webkit-search-cancel-button {
   --border-radius: 6px;
   --text-color: var(--c-text-regular);
   --fz: 12px;
-  --lh: 1.25;
+  --lh: 1;
   --padding: 12px 20px 16px 20px;
   --label-color: var(--bg-element);
   --message-color: var(--c-text);
@@ -2056,6 +2056,8 @@ input[type=search]::-webkit-search-cancel-button {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
+  padding-top: 11px;
+  padding-bottom: 15px;
 }
 
 .input__field::placeholder {
@@ -2915,7 +2917,7 @@ select {
   height: 100%;
   max-width: 100%;
   min-width: 100%;
-  min-height: 140px;
+  min-height: 100px;
 }
 
 .textarea__field {
@@ -2927,13 +2929,17 @@ select {
   resize: none;
   background: #F0F3F5;
   border-radius: 6px;
-  padding: 12px 20px;
-  font-weight: 600;
+  padding: 12px 16px;
+  font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  color: #A1AEB3;
-  min-height: 140px;
+  color: #000;
+  min-height: inherit;
   position: relative;
+}
+
+.textarea__field::placeholder {
+  color: #A1AEB2;
 }
 
 .textarea__resizer {
@@ -3160,6 +3166,9 @@ select {
   font-family: "RF Dewi Extended", sans-serif;
   margin-bottom: 17px;
   cursor: initial;
+  max-width: 255px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flatpickr-calendar {
@@ -3222,7 +3231,7 @@ select {
 }
 
 .flatpickr-months {
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 
 .flatpickr-current-month {
@@ -3249,6 +3258,8 @@ select {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .flatpickr-day {
@@ -3271,13 +3282,21 @@ select {
 
 .flatpickr-weekdays {
   height: 19px;
-  margin-bottom: 9px;
+  margin-bottom: 3px;
+}
+
+.flatpickr-weekdays .flatpickr-weekdaycontainer {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+span.flatpickr-weekday {
+  font-size: 9px;
 }
 
 .flatpickr-weekday {
   text-transform: uppercase;
   color: #000;
-  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -3299,6 +3318,8 @@ select {
   background: #F0F3F5;
   padding: 13px;
   padding-bottom: 3px;
+  padding-left: 18px;
+  padding-top: 10px;
   --height: 310px;
   height: var(--height);
 }
@@ -3347,8 +3368,9 @@ select {
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--time-color, #000);
+  font-size: 16px;
 }
 
 .timepicker__item:last-of-type {
@@ -3358,8 +3380,8 @@ select {
 .timepicker__item::after {
   content: "";
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 11px;
+  top: 11px;
   display: block;
   margin: auto;
   width: 8px;
@@ -3372,8 +3394,8 @@ select {
 .timepicker__item::before {
   content: "";
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #D3DCDF;
   border-radius: 100%;
   position: static;
@@ -3382,6 +3404,7 @@ select {
   background-color: transparent;
   transition: all 0.3s ease;
   margin-right: 8px;
+  font-size: 16px;
 }
 
 .timepicker__item.is-selected::before {
@@ -5500,7 +5523,7 @@ select {
   font-size: 27px;
   line-height: 110%;
   color: #FFFFFF;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 @media (max-width: 601px) {
   .modal__title {
@@ -5519,7 +5542,7 @@ select {
   border-radius: 12px;
   margin-bottom: 8px;
   padding: 40px;
-  padding-top: 26px;
+  padding-top: 25px;
 }
 @media (max-width: 601px) {
   .modal__group {
@@ -5527,8 +5550,16 @@ select {
   }
 }
 
+.modal__group:first-of-type {
+  padding-top: 32px;
+}
+
 .modal__group:last-of-type {
   margin-bottom: 16px;
+}
+
+.modal__group:first-of-type .modal__group-title {
+  margin-bottom: 40px;
 }
 
 .modal__group-title {
@@ -5536,7 +5567,7 @@ select {
   font-size: 20px;
   line-height: 120%;
   color: #000000;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 @media (max-width: 601px) {
   .modal__group-title {
@@ -5571,6 +5602,11 @@ select {
   color: #A1AEB3;
 }
 
+.modal__desc--bigger {
+  color: #000;
+  font-size: 16px;
+}
+
 .modal__group .input__field {
   background: #F0F3F5;
 }
@@ -5583,8 +5619,27 @@ select {
   display: grid;
   row-gap: 8px;
   justify-content: center;
+  margin-top: -10px;
 }
 
+.modal__group-column .calendar--inline {
+  padding-top: 25px;
+  max-width: 100%;
+}
+.modal__group-column .calendar--inline .flatpickr-calendar.inline {
+  max-height: 215px;
+  overflow: hidden;
+}
+
+.modal__group-column .timepicker {
+  max-width: 100%;
+}
+
+#callback-pop {
+  padding-top: 55px;
+}
+
+#thanks-pop .modal__inner,
 #callback-pop .modal__inner {
   max-width: 375px;
 }

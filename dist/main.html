@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221127054708" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221127072230" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -2865,6 +2865,75 @@
 
 <section class="poppa modal" id="callback-pop">
   <div class="modal__inner">
+    <h2 class="modal__title">Запись на косультацию</h2>
+    <form action="#" class="modal__form">
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Ваши контакты</h3>
+        <label class="input input--name">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="ФИО"
+    data-value-missing="Заполните ФИО"
+    data-value-invalid="Что-то не так с введенным именем"
+    autocomplete="name"
+  />
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+        <label class="input input--tel input--invalid">
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Телефон"
+    maxlength="25"
+    minlength="10"
+    data-value-missing="Напишите телефон"
+    data-value-invalid="Проверьте корректность телефона"
+    autocomplete="tel"
+  />
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+      </fieldset>
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Дата и время</h3>
+        <div class="modal__group-column">
+          <div class="calendar calendar--inline calendar--only-future">
+            <input type="text" name="date" class="calendar__input" readonly>
+          </div>
+          <div class="timepicker">
+            <select name="time" id="shipping_time" class="timepicker__select">
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+            </select>
+          </div>
+        </div>
+        <!-- <p class="modal__caption section-text--right">Московское время</p> -->
+      </fieldset>
+      <button class="button button--primary button--fullsize button--light modal__button">Оставить заявку</button>
+    </form>
+  </div>
+</section>
+<section class="poppa modal" id="callback-pop-service">
+  <div class="modal__inner">
     <h2 class="modal__title">Запись на посещение <br> Cosmomedica Center <br> на Малой Бронной</h2>
     <form action="#" class="modal__form">
       <fieldset class="modal__group">
@@ -2904,7 +2973,7 @@
 
       </fieldset>
       <fieldset class="modal__group">
-        <h3 class="modal__group-title">Желаемые дата и/или время</h3>
+        <h3 class="modal__group-title">Дата и время</h3>
         <div class="modal__group-column">
           <div class="calendar calendar--inline calendar--only-future">
             <input type="text" name="date" class="calendar__input" readonly>
@@ -2934,18 +3003,28 @@
           <textarea name="user_comment" class="textarea__field" placeholder="Интересующие вас услуги, специалист или другие пожелания"></textarea>
         </label>
       </fieldset>
-      <button class="button button--primary button--fullsize modal__button">Заказать обратный звонок</button>
+      <button class="button button--primary button--fullsize button--light modal__button">Заказать обратный звонок</button>
     </form>
   </div>
 </section>
-<section class="poppa modal" id="thanks-pop">
+<section class="poppa modal" id="thanks-pop-service">
   <div class="modal__inner">
     <h2 class="modal__title">Запись на посещение <br> Cosmomedica Center <br> на Малой Бронной</h2>
     <div class="modal__group">
       <h3 class="modal__group-title">Ожидайте обратный звонок</h3>
       <p class="modal__desc">Сотрудник Cosmomedica Center свяжется с вами в ближайшее рабочее время для подтверждения и уточнения деталей вашего посещения.</p>
     </div>
-    <a href="#" class="button button--primary button--fullsize modal__button">Вернуться к странице услуг</a>
+    <a href="#" class="button button--primary button--fullsize button--light modal__button">Вернуться к странице услуг</button>
+  </div>
+</section>
+<section class="poppa modal" id="thanks-pop">
+  <div class="modal__inner">
+    <h2 class="modal__title">Запись на косультацию</h2>
+    <div class="modal__group">
+      <h3 class="modal__group-title">Вы успешно записаны на личную консультацию в WhatsApp</h3>
+      <p class="modal__desc">Дата и время</p>
+      <p class="modal__desc modal__desc--bigger">1 декабря (четверг), 13:30</p>
+    </div>
   </div>
 </section>
 
@@ -2969,6 +3048,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221127054708"></script>
+    <script src="./js/bundle.min.js?_v=20221127072230"></script>
   </body>
 </html>

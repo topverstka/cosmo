@@ -6,6 +6,8 @@
   background: #F0F3F5;
   padding: 13px;
   padding-bottom: 3px;
+  padding-left: 18px;
+  padding-top: 10px;
   --height: 310px;
   height: var(--height);
   @media (max-width: 601px) {
@@ -38,8 +40,9 @@
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 12px;
-  color: var(--time-color, #000)
+  margin-bottom: 10px;
+  color: var(--time-color, #000);
+  font-size: 16px;
 }
 .timepicker__item:last-of-type {
   margin-bottom: 0;
@@ -47,8 +50,8 @@
 .timepicker__item::after {
   content: "";
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 11px;
+  top: 11px;
   display: block;
   margin: auto;
   width: 8px;
@@ -60,8 +63,8 @@
 .timepicker__item::before {
   content: "";
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #D3DCDF;
   border-radius: 100%;
   position: static;
@@ -70,6 +73,7 @@
   background-color: transparent;
   transition: all 0.3s ease;
   margin-right: 8px;
+  font-size: 16px;
 }
 
 .timepicker__item.is-selected {
