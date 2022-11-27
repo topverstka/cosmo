@@ -187,6 +187,29 @@ function initAccordionGallery() {
 initAccordionGallery()
 
 
+const productAdd = document.querySelectorAll('.product-card__button-add');
+const IN_CART_CLASS = "product-card--in-cart";
+function cartAdd(product) {
+  product.classList.add(IN_CART_CLASS)
+}
+function cartRemove(product) {
+  product.classList.remove(IN_CART_CLASS)
+}
+productAdd.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const currentCard = [...e.path].filter((item) => {
+      if (!item.classList) return;
+      return item.classList.contains('product-card')
+    })[0];
+
+    if (currentCard.classList.contains(IN_CART_CLASS)) {
+      cartRemove(currentCard);
+    } else {
+      cartAdd(currentCard);
+    }
+  })
+})
+
 
 document.querySelectorAll('.cart-product').forEach(product => {
   const removeButton = product.querySelector('.cart-product__button-remove');
