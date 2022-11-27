@@ -14,13 +14,11 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
   </head>
-  <body>
+  <body class="page__cart">
     <div class="wrapper">
       @@include('tpls/header.html',{})
 
       <main class="main">
-        <div class="breadcrumbs">
-        </div>
         <section class="page-heading">
           <h1 class="page-heading__title">Корзина</h1>
         </section>
@@ -33,7 +31,6 @@
             <div class="cart__columns">
               <div class="cart__items">
                 <div class="cart__gallery products--layout-horizontal">
-                  @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
                   @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
                   @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})
                   @@include('tpls/cards/cart-card.html',{img: "product-cropped.png", className: "cart__product"})

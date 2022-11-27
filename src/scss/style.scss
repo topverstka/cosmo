@@ -221,3 +221,13 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none !important;
   }
 }
+
+.page__cart .page-heading {
+    margin-bottom: 26px;
+    @media (max-width: 601px) {
+      margin-bottom: 31px;
+    }
+}
+.page__cart .page-heading__title {
+    margin-bottom: 0;
+}
