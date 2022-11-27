@@ -6107,7 +6107,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 768px) {
   .message-card__desc {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
   }
 }
 
@@ -6127,6 +6127,14 @@ span.flatpickr-weekday {
   padding-left: 17px;
   padding-right: 17px;
   font-weight: 400;
+}
+@media (max-width: 768px) {
+  .message-card__button {
+    padding-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 20px;
+  }
 }
 
 .section-heading {
