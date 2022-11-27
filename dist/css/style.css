@@ -6049,14 +6049,11 @@ span.flatpickr-weekday {
 }
 
 .message {
-  padding-top: clamp(60px, 26vh, 260px);
+  min-height: calc(100vh - 130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width: 768px) {
-  .message {
-    padding-top: clamp(60px, 26vh, 165px);
-  }
-}
-
 .message-card {
   background-color: #fff;
   max-width: 708px;
@@ -6103,7 +6100,7 @@ span.flatpickr-weekday {
   line-height: 140%;
   text-align: center;
   color: #A1AEB3;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -6121,7 +6118,15 @@ span.flatpickr-weekday {
 }
 
 .message-card__link {
-  margin-top: 16px;
+  margin-top: 18px;
+  font-family: "RF Dewi", sans-serif;
+  font-size: 14px;
+}
+
+.message-card__button {
+  padding-left: 17px;
+  padding-right: 17px;
+  font-weight: 400;
 }
 
 .section-heading {
