@@ -53,7 +53,9 @@
   }
 }
 .page-heading__title:only-child {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
+  margin-bottom: 64px; //doc.html
+
   @media (max-width: 768px) {
     margin-bottom: 32px
   }

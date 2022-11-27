@@ -7007,7 +7007,7 @@ span.flatpickr-weekday {
 }
 
 .page-heading__title:only-child {
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 @media (max-width: 768px) {
   .page-heading__title:only-child {
@@ -9161,7 +9161,7 @@ span.flatpickr-weekday {
 }
 
 .doc__title {
-  margin-top: 40px;
+  margin-top: 44px;
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 27px;
@@ -9172,33 +9172,47 @@ span.flatpickr-weekday {
 @media (max-width: 768px) {
   .doc__title {
     font-size: 20px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 40px;
+    margin-bottom: 28px;
   }
 }
 
 .doc-card {
   padding-top: 80px;
   padding-left: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 82px;
   padding-right: 120px;
   background-color: var(--bg-element);
   display: grid;
   border-radius: 12px;
   grid-template-columns: 308px auto;
-  column-gap: 70px;
+  column-gap: 50px;
   margin-bottom: 8px;
 }
 @media (max-width: 768px) {
   .doc-card {
     display: block;
     padding: 20px;
+    padding-bottom: 21px;
   }
 }
 
+.doc--small .doc-card {
+  column-gap: 29px;
+  grid-template-columns: 320px auto;
+}
 @media (max-width: 768px) {
   .doc--small .doc-card {
+    padding-top: 14px;
+  }
+}
+@media (min-width: 769px) {
+  .doc--small .doc-card {
     padding-bottom: 1px;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 70px;
+    padding-bottom: 40px;
   }
 }
 
@@ -9227,12 +9241,38 @@ span.flatpickr-weekday {
   line-height: 140%;
   color: #000000;
 }
+@media (max-width: 601px) {
+  .doc-card__desc {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
 
 .doc-card__desc p {
   color: inherit;
   font-size: inherit;
   line-height: inherit;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.4em;
+}
+@media (max-width: 601px) {
+  .doc-card__desc p {
+    margin-bottom: 1.2em;
+  }
+}
+
+.doc-card__desc p:last-of-type {
+  margin-bottom: 0;
+}
+
+.doc-card__desc a {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+@media (min-width: 602px) {
+  .doc ~ .callback-cards {
+    padding-top: 30px;
+  }
 }
 
 .cart-heading {

@@ -7,7 +7,7 @@
   }
 }
 .doc__title {
-  margin-top: 40px;
+  margin-top: 44px;
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 27px;
@@ -16,31 +16,45 @@
   color: #000000;
   @media (max-width: 768px) {
     font-size: 20px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    // margin-top: 24px;
+    // margin-bottom: 24px;
+    margin-top: 40px;
+    margin-bottom: 28px;
   }
 }
 .doc-card {
   padding-top: 80px;
   padding-left: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 82px;
   padding-right: 120px;
   background-color: var(--bg-element);
   display: grid;
   border-radius: 12px;
   grid-template-columns: 308px auto;
-  column-gap: 70px;
+  column-gap: 50px;
   margin-bottom: 8px;
   @media (max-width: 768px) {
     display: block;
     padding: 20px;
+    padding-bottom: 21px;
   }
 }
 .doc--small .doc-card {
+  column-gap: 29px;
+  grid-template-columns: 320px auto;
   @media (max-width: 768px) {
+    // padding-bottom: 1px;
+    padding-top: 14px;
+  }
+  @media (min-width: 769px) {
     padding-bottom: 1px;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 70px;
+    padding-bottom: 40px;
   }
 }
+
 .doc--small .doc-card__title {
   @media (max-width: 768px) {
     margin-bottom: 12px;
@@ -61,13 +75,32 @@
   font-size: 14px;
   line-height: 140%;
   color: #000000;
+  @media (max-width: 601px) {
+    font-size: 12px;
+    line-height: 1.2;
+  }
 }
 .doc-card__desc p {
   color: inherit;
   font-size: inherit;
   line-height: inherit;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.4em;
+  // margin-bottom: 1.4em;
+  @media (max-width: 601px) {
+    margin-bottom: 1.2em;
+  }
+}
+.doc-card__desc p:last-of-type {
+  margin-bottom: 0;
 }
 .doc-card__desc a {
   @extend .button--thirdly;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.doc ~ .callback-cards {
+  @media (min-width: 602px) {
+    padding-top: 30px
+  }
 }
