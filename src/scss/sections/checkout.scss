@@ -19,3 +19,64 @@
     padding-bottom: 60px;
   }
 }
+
+.page__checkout .page-heading__title:only-child {
+  @media (min-width: 601px) {
+    margin-bottom: 79px;
+  }
+}
+.page__checkout .sidebar-card {
+  @media (min-width: 602px) {
+    padding-top: 37px;
+    padding-bottom: 21px
+  }
+}
+.page__checkout .cart-total__row {
+  @media (min-width: 602px) {
+    margin-bottom: 17px;
+  }
+}
+.page__checkout .cart-total {
+  @media (min-width: 602px) {
+    padding-top: 27px;
+    padding-bottom: 40px
+  }
+}
+.page__checkout .cart-total .cart-total__row {
+  @media (min-width: 602px) {
+    margin-bottom: 28px
+  }
+}
+.page__checkout .cart-sidebar {
+  @media (max-width: 1200px) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+  }
+}
+.page__checkout .sidebar__sticky {
+  @media (max-width: 1200px) {
+    position: static;
+    height: 100%;
+    justify-content: flex-end;
+  }
+}
+.page__checkout .sidebar-card {
+  @media (max-width: 1200px) {
+    pointer-events: initial;
+  }
+}
+.page__checkout .cart-total {
+  @media (max-width: 1200px) {
+    position: sticky;
+    bottom: 8px;
+  }
+}
+
+.button-detect-city {
+  font-size: 14px;
+  font-family: "RF Dewi", sans-serif;
+}

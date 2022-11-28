@@ -11,7 +11,8 @@
   }
   @media (max-width: 576px) {
     padding: 20px;
-    padding-bottom: 32px
+    padding-bottom: 32px;
+    padding-top: 30px; // checkout.html
   }
 }
 .fieldset:last-of-type {
@@ -24,6 +25,7 @@
   @media (max-width: 576px) {
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 37px;
   }
 }
 .fieldset__title {
@@ -35,6 +37,9 @@
   font-size: 14px;
   line-height: 140%;
   color: #A1AEB3;
+  @media (max-width: 601px) {
+    font-size: 12px;
+  }
 }
 
 .fieldset__layout--1-end-2 {

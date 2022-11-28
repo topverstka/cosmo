@@ -352,3 +352,20 @@ captionsMobileFold.forEach((caption) => {
   const button = caption.querySelector('.captions__button-opener')
   button.addEventListener('click', () => caption.classList.add('.captions--fold-opened'));
 })
+
+
+const cartSidebar = document.querySelector('.cart-sidebar');
+const cartColumns = document.querySelector('.cart__columns');
+if (cartSidebar && cartColumns) {
+  if (window.innerWidth <= 1200) {
+    const cards = [...cartSidebar.querySelectorAll('.sidebar-card')];
+    const GAP = 8;
+    let additionalHeight = cards.reduce((accum, card, index) => {
+      return accum + card.getBoundingClientRect().height
+    }, 0)
+    // additionalHeight -= (cards.length - 1) * GAP;
+    additionalHeight -= 20;
+    console.log(additionalHeight)
+    cartColumns.style.paddingBottom = `${additionalHeight}px`;
+  }
+}

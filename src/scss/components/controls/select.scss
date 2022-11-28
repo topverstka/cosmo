@@ -134,8 +134,8 @@
   }
   @media (max-width: 420px) {
     padding-left: 12px;
-    padding-top: 8px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 12px;
     padding-right: 37px;
   }
 }
@@ -144,15 +144,11 @@
 }
 .select__list--single::after {
   position: absolute;
-  top: 7px;
-  right: 10px;
+  top: 10px;
+  right: 8px;
   display: block;
-  width: 24px;
-  height: 24px;
-  // top: 10px;
-  // right: 14px;
-  // width: 20px;
-  // height: 20px;
+  width: 20px;
+  height: 20px;
   pointer-events: none;
   content: "";
   background-color: var(--angle-color);
