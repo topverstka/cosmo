@@ -7151,7 +7151,7 @@ span.flatpickr-weekday {
 
 .page-heading--sticky {
   position: sticky;
-  top: -105px;
+  top: -65px;
   z-index: 5;
   transition: all 0.3s ease;
 }
@@ -7162,7 +7162,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 420px) {
   .page-heading--sticky {
-    top: -115px;
+    top: -65px;
   }
 }
 
@@ -9072,7 +9072,7 @@ span.flatpickr-weekday {
 }
 
 .categories {
-  margin-bottom: 85px;
+  margin-bottom: 80px;
 }
 @media (max-width: 1024px) {
   .categories {
@@ -9081,7 +9081,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 576px) {
   .categories {
-    margin-bottom: 24px;
+    margin-bottom: 44px;
   }
 }
 
@@ -9091,6 +9091,11 @@ span.flatpickr-weekday {
 @media (max-width: 576px) {
   .categories:last-of-type {
     margin-bottom: 60px;
+  }
+}
+@media (min-width: 1025px) {
+  .categories:last-of-type {
+    margin-top: -10px;
   }
 }
 
@@ -9232,7 +9237,7 @@ span.flatpickr-weekday {
   .categories-nav {
     width: calc(100% + 16px);
     margin-left: -8px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 }
 
@@ -9273,6 +9278,12 @@ span.flatpickr-weekday {
   color: var(--categories-nav-link-color, #FFFFFF);
   transition: all 0.3s ease;
 }
+@media (max-width: 1024px) {
+  .categories-nav__list-link {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 
 @media (any-hover: hover) {
   .categories-nav__list-link:hover {
@@ -9291,9 +9302,10 @@ span.flatpickr-weekday {
 }
 @media (max-width: 576px) {
   .categories__title {
-    max-width: 270px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -9305,6 +9317,24 @@ span.flatpickr-weekday {
 @media (max-width: 576px) {
   .categories-catalog .categories-card {
     min-height: 175px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .page__categories .page-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .page__categories .page-heading__title {
+    margin-bottom: 53px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .nav-dynamic-content ~ .callback-cards {
+    padding-top: 120px;
   }
 }
 

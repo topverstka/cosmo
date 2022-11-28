@@ -13,14 +13,17 @@
 
 .page-heading--sticky {
   position: sticky;
-  top: -105px;
+  // top: -105px;
+  top: -65px;
+  // top: -45px;
   z-index: 5;
   transition: all 0.3s ease;
   @media (max-width: 768px) {
     top: -85px;
   }
   @media (max-width: 420px) {
-    top: -115px;
+    // top: -115px;
+    top: -65px;
   }
 }
 .page-heading--sticky-run {
