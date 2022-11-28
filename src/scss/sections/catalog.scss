@@ -71,6 +71,8 @@
 .catalog-products__filters .row-filters__select {
   @media (min-width: 1025px) {
     margin-right: 8px;
+  }
+  @media (max-width: 1024px) {
     --bg: #F0F3F5;
     margin-right: 0;
     --maxw: 100%;

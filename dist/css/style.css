@@ -9293,6 +9293,10 @@ span.flatpickr-weekday {
 @media (min-width: 1025px) {
   .catalog-products__filters .row-filters__select {
     margin-right: 8px;
+  }
+}
+@media (max-width: 1024px) {
+  .catalog-products__filters .row-filters__select {
     --bg: #F0F3F5;
     margin-right: 0;
     --maxw: 100%;
