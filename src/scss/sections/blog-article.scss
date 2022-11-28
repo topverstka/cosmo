@@ -254,7 +254,9 @@
   }
 }
 .blog-article .gallery-accordion__button-more {
-  margin-left: 0;
+  @media (max-width: 601px) {
+    margin-left: 0;
+  }
 }
 
 .blog-article .blog-sidebar {

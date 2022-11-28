@@ -1,8 +1,12 @@
 .shops {
   border-radius: 8px;
   background-color: var(--bg-element);
-  padding-top: 75px;
+  padding-top: 65px;
   padding-bottom: 57px;
+  @media (max-width: 601px) {
+    padding-top: 52px;
+    padding-bottom: 42px;
+  }
 }
 .shops__container {
   overflow: hidden;
@@ -10,6 +14,8 @@
 
 .shops__title {
   margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .shops__container .section-heading {

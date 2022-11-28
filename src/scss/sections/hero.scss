@@ -22,6 +22,19 @@
   @media (max-width: 601px) {
     display: block;
     padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.hero__layout .hero__title {
+  @media (max-width: 601px) {
+    line-height: 1.18;
+  }
+}
+.hero__layout .hero__desc {
+  @media (max-width: 601px) {
+    line-height: 1.225;
+    font-size: 14px
   }
 }
 .hero__media {
@@ -40,7 +53,7 @@
   display: block;
   object-fit: cover;
   @media (max-width: 601px) {
-    height: 220px
+    height: 200px
   }
 }
 .hero__title {
@@ -67,10 +80,16 @@
   line-height: inherit;
   color: inherit;
   font-weight: inherit;
+  @media (max-width: 601px) {
+    margin-bottom: 16px
+  }
 }
 .hero__ol {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
   font-weight: inherit;
+  @media (max-width: 601px) {
+    padding-left: 5px;
+  }
 }

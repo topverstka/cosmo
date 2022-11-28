@@ -4255,7 +4255,7 @@ span.flatpickr-weekday {
 }
 
 .grabber-carousel {
-  max-width: calc(100% - 159px);
+  max-width: calc(100% - 119px);
   width: 100%;
   margin-left: auto;
   margin-right: 0;
@@ -7305,6 +7305,21 @@ span.flatpickr-weekday {
   .hero__layout {
     display: block;
     padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 601px) {
+  .hero__layout .hero__title {
+    line-height: 1.18;
+  }
+}
+
+@media (max-width: 601px) {
+  .hero__layout .hero__desc {
+    line-height: 1.225;
+    font-size: 14px;
   }
 }
 
@@ -7330,7 +7345,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 601px) {
   .hero__img {
-    height: 220px;
+    height: 200px;
   }
 }
 
@@ -7363,12 +7378,22 @@ span.flatpickr-weekday {
   color: inherit;
   font-weight: inherit;
 }
+@media (max-width: 601px) {
+  .hero__paragraph {
+    margin-bottom: 16px;
+  }
+}
 
 .hero__ol {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
   font-weight: inherit;
+}
+@media (max-width: 601px) {
+  .hero__ol {
+    padding-left: 5px;
+  }
 }
 
 .popular {
@@ -8741,8 +8766,10 @@ span.flatpickr-weekday {
   }
 }
 
-.blog-article .gallery-accordion__button-more {
-  margin-left: 0;
+@media (max-width: 601px) {
+  .blog-article .gallery-accordion__button-more {
+    margin-left: 0;
+  }
 }
 
 .blog-article .blog-sidebar {
@@ -10058,11 +10085,12 @@ span.flatpickr-weekday {
 }
 
 .about-features {
-  padding-top: 8px;
+  padding-top: 21px;
   margin-bottom: 82px;
 }
 @media (max-width: 768px) {
   .about-features {
+    padding-top: 9px;
     margin-bottom: 28px;
   }
 }
@@ -10089,6 +10117,23 @@ span.flatpickr-weekday {
     grid-template-areas: "pic1 pic1" "pic2 pic3" "pic2 pic4" "pic5 pic5";
     margin-bottom: 32px;
   }
+}
+
+.about-features .about-features__gallery {
+  grid-template-columns: 41.4% 24.278652% 16.751685% auto;
+  grid-template-rows: 31.70339% 64.601695%;
+  margin-bottom: 73px;
+}
+@media (max-width: 768px) {
+  .about-features .about-features__gallery {
+    grid-template-columns: 49.4% 48.278652%;
+    grid-template-rows: 36.8% 14.8% 15% 30.6%;
+    margin-bottom: 33px;
+  }
+}
+
+.about-features .container {
+  max-width: 1280px;
 }
 
 .about-features__media:nth-of-type(1) {
@@ -10136,7 +10181,7 @@ span.flatpickr-weekday {
 @media (max-width: 601px) {
   .about-features__columns {
     grid-template-columns: 1fr;
-    row-gap: 32px;
+    row-gap: 18px;
   }
 }
 
@@ -10150,6 +10195,9 @@ span.flatpickr-weekday {
 @media (max-width: 576px) {
   .about-features__column-title {
     margin-bottom: 16px;
+    font-family: "RF Dewi", sans-serif;
+    font-size: 12px;
+    margin-bottom: 12px;
   }
 }
 
@@ -10159,6 +10207,11 @@ span.flatpickr-weekday {
   line-height: 140%;
   color: #000000;
 }
+@media (max-width: 601px) {
+  .about-features__column-desc {
+    line-height: 1.25;
+  }
+}
 
 .about-features__column-desc p {
   font-weight: inherit;
@@ -10166,6 +10219,11 @@ span.flatpickr-weekday {
   line-height: inherit;
   color: inherit;
   margin-bottom: 12px;
+}
+@media (max-width: 601px) {
+  .about-features__column-desc p {
+    margin-bottom: 13px;
+  }
 }
 
 .about-ol {
@@ -10230,6 +10288,17 @@ span.flatpickr-weekday {
   align-items: center;
   margin-bottom: 8px;
 }
+@media (max-width: 601px) {
+  .about-ol-list__item {
+    font-size: 14px;
+    line-height: 1.25;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+    padding-left: 30px;
+    min-height: 91px;
+  }
+}
 
 .about-ol-list__item::before {
   content: counter(about-ol);
@@ -10240,6 +10309,14 @@ span.flatpickr-weekday {
   color: #000000;
   margin-right: 45px;
 }
+@media (max-width: 601px) {
+  .about-ol-list__item::before {
+    margin-right: 20px;
+    min-width: 30px;
+    display: block;
+    max-width: 30px;
+  }
+}
 
 .about-ol-list__item:last-child {
   margin-bottom: 0;
@@ -10248,8 +10325,14 @@ span.flatpickr-weekday {
 .shops {
   border-radius: 8px;
   background-color: var(--bg-element);
-  padding-top: 75px;
+  padding-top: 65px;
   padding-bottom: 57px;
+}
+@media (max-width: 601px) {
+  .shops {
+    padding-top: 52px;
+    padding-bottom: 42px;
+  }
 }
 
 .shops__container {
@@ -10258,6 +10341,8 @@ span.flatpickr-weekday {
 
 .shops__title {
   margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (max-width: 1024px) {
