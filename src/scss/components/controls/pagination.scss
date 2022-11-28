@@ -3,6 +3,9 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
 }
 
 .nav-page {
@@ -42,6 +45,10 @@
 }
 .nav-prev {
   margin-right: 20px;
+  @media (max-width: 1024px) {
+    margin-top: 16px;
+    order: 100;
+  }
 }
 .nav-prev::before {
   content: "";
@@ -56,6 +63,10 @@
 }
 .nav-next {
   margin-left: 20px;
+  @media (max-width: 1024px) {
+    margin-top: 16px;
+    order: 101;
+  }
 }
 .nav-next::after {
   content: "";

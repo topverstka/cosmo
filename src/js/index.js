@@ -370,3 +370,25 @@ if (cartSidebar && cartColumns) {
     cartColumns.style.paddingBottom = `${additionalHeight}px`;
   }
 }
+
+const rowFilters = document.querySelectorAll('.row-filters__select');
+rowFilters.forEach((filter, index, arr) => {
+  if (window.innerWidth > 1024) {
+    filter.style.zIndex = arr.length - index;
+  }
+})
+
+const filterButton = document.querySelector('.catalog-products__filters-button-mobile');
+const filterBlock = document.querySelector('.catalog-products__filters');
+const FILTER_OPENED_CLASS = 'filters--opened'
+if (filterButton && filterBlock) {
+  filterButton.addEventListener('click', () => {
+    filterBlock.classList.add(FILTER_OPENED_CLASS);
+  })
+  window.addEventListener('click', (e) => {
+    if (e.target.contains(filterBlock)) return;
+    if (e.target.contains(filterButton)) return;
+
+    filterBlock.classList.remove(FILTER_OPENED_CLASS);
+  })
+}

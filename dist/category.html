@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221128192049" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221128205406" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -1412,6 +1412,12 @@
                 <a href="#" class="side-navigation__link">Специальные средства</a>
               </li>
             </ul>
+            <button class="button button--primary side-navigation__button-mobile side-navigation__button-mobile--half">
+              <svg class="button__icon">
+                <use xlink:href="./img/common/burger.svg#burger" />
+              </svg>
+              <span class="button__text">Категории</span>
+            </button>
           </nav>
           <div class="catalog-products">
             <form action="" class="catalog-products__filters row-filters">
@@ -1474,6 +1480,16 @@
                   <option value="100">100мл</option>
                 </select>
               </div>
+              <div class="catalog-products__filters-buttons">
+                <button class="button button--primary catalog-products__filters-button-clear" type="button">Очистить все</button>
+                <button class="button button--primary button--dark catalog-products__filters-button-apply" type="button">Применить все</button>
+              </div>
+              <button class="button button--primary catalog-products__filters-button-mobile side-navigation__button-mobile" type="button">
+                <svg class="button__icon">
+                  <use xlink:href="./img/common/filter.svg#filter" />
+                </svg>
+                <span class="button__text">Фильтры</span>
+              </button>
             </form>
             <div class="catalog-products__gallery">
               <article class="product-card @@className">
@@ -2583,6 +2599,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221128192049"></script>
+    <script src="./js/bundle.min.js?_v=20221128205406"></script>
   </body>
 </html>
