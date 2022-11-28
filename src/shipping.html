@@ -11,8 +11,8 @@
     <meta name="format-detection" content="telephone=no" >
 
     <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
-    <meta http-equiv="Cache-Control" content="no-cache" >
-    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
   </head>
   <body>
     <div class="wrapper">
@@ -29,7 +29,7 @@
           <h1 class="page-heading__title">Доставка и оплата</h1>
         </section>
 
-        <section class="doc">
+        <div class="doc">
           <div class="doc__container">
             <div class="doc__gallery">
               <article class="doc-card">
@@ -47,8 +47,8 @@
               </article>
             </div>
           </div>
-        </section>
-        <section class="doc doc--small">
+        </div>
+        <div class="doc doc--small">
           <div class="doc__container">
             <h2 class="doc__title">Вопросы и ответы по&nbsp;доставке</h2>
             <div class="doc__gallery">
@@ -90,7 +90,7 @@
               </article>
             </div>
           </div>
-        </section>
+        </div>
 
         @@include('tpls/sections/callback-cards.html',{})
       </main>
