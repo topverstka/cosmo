@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>История заказов | Личный кабинет</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221129001428" />
+    <link rel="stylesheet" href="./css/style.css?_v=20221129002506" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -783,7 +783,7 @@
             <use xlink:href="./img/common/profile.svg#profile" />
           </svg>
         </button>
-         <section class="auth header__auth">
+         <div class="auth header__auth">
           <div class="tabs auth__tabs">
             <div class="tabs__toggler-container auth__tabs-togglers" data-tabs="auth">
               <button class="tabs__toggler">Войти</button>
@@ -837,7 +837,6 @@
                         name="password"
                         type="password"
                         placeholder="Пароль"
-                        autocomplete="password"
                       />
                       <svg class="input__error-icon">
                         <use xlink:href="./img/common/warn.svg#warn"></use>
@@ -958,7 +957,7 @@
             </div>
             <button class="button button--primary button--light auth__button-submit">Вход</button>
           </div>
-        </section>
+        </div>
 
         <button
           class="button button--primary button--circle button--dark header__button"
@@ -2510,7 +2509,7 @@
 
       <footer class="footer">
   <div class="footer__container">
-    <section class="footer__top">
+    <div class="footer__top">
       <div class="footer__info">
         <a href="#" class="footer__logo logo">
           <svg class="logo__img">
@@ -2637,9 +2636,9 @@
           </li>
         </ul>
       </div>
-    </section>
-    <section class="footer__bottom">
-      <article class="footer__bottom-article">
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-article">
         <p class="footer__bottom-desc">
           Профессиональная уходовая косметика Cosmomedica
         </p>
@@ -2662,8 +2661,8 @@
           purpose. Any reliance or expectation is therefore strictly at the
           Client`s own risk.
         </p>
-      </article>
-      <article class="footer__bottom-article">
+      </div>
+      <div class="footer__bottom-article">
         <p class="footer__bottom-desc">
           Лучшие косметические средства по уходу за кожей
         </p>
@@ -2686,12 +2685,12 @@
           purpose. Any reliance or expectation is therefore strictly at the
           Client`s own risk.
         </p>
-      </article>
+      </div>
       <p class="footer__bottom-copy">
         Cosmomedica Shop — официальный интернет-магазин российского бренда
         косметики
       </p>
-    </section>
+    </div>
   </div>
 </footer>
 
@@ -2886,6 +2885,6 @@
       <button class="button button--primary button--dark message-card__button">Подтвердить отмену заказа</button>
       <button data-poppa-close="order-cancel" class="button--thirdly message-card__link">Не отменять заказ</button>
     </section>
-    <script src="./js/bundle.min.js?_v=20221129001428"></script>
+    <script src="./js/bundle.min.js?_v=20221129002506"></script>
   </body>
 </html>
