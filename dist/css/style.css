@@ -2574,6 +2574,11 @@ select {
   font-weight: 600;
 }
 
+.button--disabled {
+  --button-bg: var(--bg-app);
+  --button-color: var(--c-accent);
+}
+
 /**
  *
  * form.chips>.chips__track>.chips__content>label.chips__item>input.chips__input[type="radio"][hidden][name="option"]+p.chips__caption
@@ -3497,6 +3502,11 @@ span.flatpickr-weekday {
   line-height: 120%;
   margin-bottom: 12px;
 }
+@media (max-width: 768px) {
+  .fieldset__title {
+    margin-bottom: 40px;
+  }
+}
 
 .fieldset__desc {
   font-size: 14px;
@@ -3544,6 +3554,11 @@ span.flatpickr-weekday {
   display: grid;
   column-gap: 8px;
 }
+@media (max-width: 602px) {
+  .fieldset__layout--1-1 {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 601px) {
   .fieldset-shipping-time .fieldset__layout {
@@ -3563,10 +3578,20 @@ span.flatpickr-weekday {
   grid-column-start: 1;
   grid-column-end: 4;
 }
+@media (max-width: 601px) {
+  .fieldset__layout--2-end-3 .input:nth-of-type(odd) {
+    grid-column-end: 7;
+  }
+}
 
 .fieldset__layout--2-end-3 .input:nth-of-type(even) {
   grid-column-start: 4;
   grid-column-end: 7;
+}
+@media (max-width: 601px) {
+  .fieldset__layout--2-end-3 .input:nth-of-type(even) {
+    grid-column-start: 1;
+  }
 }
 
 .fieldset__layout--2-end-3 .input:nth-of-type(even):not(.input:nth-last-of-type(1), .input:nth-last-of-type(2), .input:nth-last-of-type(3)) {
@@ -3592,6 +3617,13 @@ span.flatpickr-weekday {
 .fieldset__layout--2-end-3 .input:nth-last-of-type(2),
 .fieldset__layout--2-end-3 .input:nth-last-of-type(3) {
   grid-row: 2;
+}
+@media (max-width: 601px) {
+  .fieldset__layout--2-end-3 .input:nth-last-of-type(1),
+.fieldset__layout--2-end-3 .input:nth-last-of-type(2),
+.fieldset__layout--2-end-3 .input:nth-last-of-type(3) {
+    grid-row: 3;
+  }
 }
 
 .link {
@@ -3771,7 +3803,7 @@ span.flatpickr-weekday {
 .side-navigation__item {
   display: block;
   width: 100%;
-  margin-bottom: 4px;
+  margin-bottom: 11px;
 }
 
 .side-navigation__item--highlighted {
@@ -3791,12 +3823,18 @@ span.flatpickr-weekday {
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 12px;
 }
 
 @media (any-hover: hover) {
   .side-navigation__link:hover {
     color: #6C7982;
   }
+}
+
+.side-navigation__item--current .side-navigation__link {
+  padding-top: 7px;
+  padding-bottom: 9px;
 }
 
 @media (any-hover: hover) {
@@ -11051,6 +11089,7 @@ span.flatpickr-weekday {
 @media (max-width: 1020px) {
   .account {
     grid-template-columns: 1fr;
+    margin-bottom: 140px;
   }
 }
 
@@ -11059,11 +11098,15 @@ span.flatpickr-weekday {
   font-size: 27px;
   line-height: 110%;
   margin-bottom: 31px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (max-width: 768px) {
   .account__title {
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     padding-left: 20px;
   }
 }
@@ -11071,6 +11114,7 @@ span.flatpickr-weekday {
 @media (min-width: 1021px) {
   .account__pages {
     position: relative;
+    padding-top: 60px;
   }
 }
 
@@ -11082,15 +11126,82 @@ span.flatpickr-weekday {
 }
 
 .account-personal__main {
-  margin-bottom: 34px;
+  margin-bottom: 21px;
+}
+@media (max-width: 601px) {
+  .account-personal__main {
+    margin-bottom: 34px;
+  }
 }
 
 .account-personal-addresses__card .fieldset__title {
   margin-bottom: 54px;
 }
+@media (max-width: 601px) {
+  .account-personal-addresses__card .fieldset__title {
+    margin-bottom: 32px;
+  }
+}
 
 .account-personal-addresses {
   margin-bottom: 32px;
+}
+@media (max-width: 601px) {
+  .account-personal-addresses {
+    margin-bottom: 14px;
+  }
+}
+
+.page__account .page-heading {
+  padding-top: 26px;
+}
+
+@media (min-width: 1020px) {
+  .page__account .page-heading__title:only-child {
+    margin-bottom: 96px;
+  }
+}
+
+@media (min-width: 602px) {
+  .page__account .fieldset {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 601px) {
+  .page__account .fieldset {
+    padding-bottom: 34px;
+  }
+}
+
+.page__account .fieldset .calendar {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 601px) {
+  .account-personal-addresses__button-use {
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 13.4px;
+    text-align: center;
+  }
+}
+
+.account-personal-addresses__card-remove {
+  font-size: 12.6px;
+  margin-top: 10px;
+}
+@media (min-width: 602px) {
+  .account-personal-addresses__card-remove {
+    display: none;
+  }
+}
+
+@media (max-width: 601px) {
+  .account-personal__add-address-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+  }
 }
 
 .order-history__active {

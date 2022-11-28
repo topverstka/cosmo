@@ -212,3 +212,8 @@
 .button--fw-bold {
   font-weight: 600;
 }
+
+.button--disabled {
+  --button-bg: var(--bg-app);
+  --button-color: var(--c-accent);
+}

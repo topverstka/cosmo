@@ -32,6 +32,9 @@
   font-size: 20px;
   line-height: 120%;
   margin-bottom: 12px;
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 .fieldset__desc {
   font-size: 14px;
@@ -73,6 +76,9 @@
   grid-template-columns: 1fr 1fr;
   display: grid;
   column-gap: 8px;
+  @media (max-width: 602px) {
+    grid-template-columns: 1fr;
+  }
 }
 .fieldset-shipping-time .fieldset__layout {
   @media (max-width: 601px) {
@@ -92,10 +98,16 @@
 .fieldset__layout--2-end-3 .input:nth-of-type(odd) {
     grid-column-start: 1;
     grid-column-end: 4;
+    @media (max-width: 601px) {
+      grid-column-end: 7;
+    }
 }
 .fieldset__layout--2-end-3 .input:nth-of-type(even) {
     grid-column-start: 4;
     grid-column-end: 7;
+    @media (max-width: 601px) {
+      grid-column-start: 1
+    }
 }
 
 .fieldset__layout--2-end-3 .input:nth-of-type(even):not(.input:nth-last-of-type(1),.input:nth-last-of-type(2),.input:nth-last-of-type(3)) {
@@ -118,4 +130,7 @@
 .fieldset__layout--2-end-3 .input:nth-last-of-type(2),
 .fieldset__layout--2-end-3 .input:nth-last-of-type(3) {
   grid-row: 2;
+  @media (max-width: 601px) {
+    grid-row: 3;
+  }
 }

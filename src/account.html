@@ -14,7 +14,7 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
   </head>
-  <body>
+  <body class="page__account">
     <div class="wrapper">
       @@include('tpls/header.html',{})
 
@@ -93,7 +93,7 @@
                           name="user_birthday"
                           type="text"
                           placeholder="Дата рождения"
-                          autocomplete="middlename"
+                          autocomplete="birthday"
                         />
                         <svg class="input__error-icon">
                           <use xlink:href="./img/common/warn.svg#warn"></use>
@@ -122,8 +122,8 @@
               <h2 class="account__title">Адреса</h2>
               <fieldset class="fieldset account-personal-addresses__card">
                 <div class="fieldset__heading">
-                  <h2 class="fieldset__title">Москва, Чистый переулок 5А</h2>
-                  <button class="button button--primary button--dark account-personal-addresses__button-use">Используется по умолчанию</button>
+                  <h2 class="fieldset__title">Москва, Чистый переулок&nbsp;5А</h2>
+                  <button class="button button--primary button--dark button--disabled account-personal-addresses__button-use">Используется по умолчанию</button>
                 </div>
                 <div class="fieldset__body">
                   <div class="fieldset__layout fieldset__layout--2-end-3">
@@ -184,12 +184,13 @@
                       </svg>
                     </label>
                   </div>
+                  <button class="button--thirdly account-personal-addresses__card-remove" type="button">Удалить адрес</button>
                 </div>
               </fieldset>
               <fieldset class="fieldset account-personal-addresses__card">
                 <div class="fieldset__heading">
-                  <h2 class="fieldset__title">Москва, Чистый переулок 5А</h2>
-                  <button class="button button--primary button--dark account-personal-addresses__button-use">Используется по умолчанию</button>
+                  <h2 class="fieldset__title">Москва, улица Пушкина 13</h2>
+                  <button class="button button--primary button--dark account-personal-addresses__button-use">Использовать по умолчанию</button>
                 </div>
                 <div class="fieldset__body">
                   <div class="fieldset__layout fieldset__layout--2-end-3">
@@ -250,12 +251,13 @@
                       </svg>
                     </label>
                   </div>
+                  <button class="button--thirdly account-personal-addresses__card-remove" type="button">Удалить адрес</button>
                 </div>
               </fieldset>
               <fieldset class="fieldset account-personal-addresses__card">
                 <div class="fieldset__heading">
-                  <h2 class="fieldset__title">Москва, Чистый переулок 5А</h2>
-                  <button class="button button--primary button--dark account-personal-addresses__button-use">Используется по умолчанию</button>
+                  <h2 class="fieldset__title">Новый адрес</h2>
+                  <button class="button button--primary button--dark account-personal-addresses__button-use">Использовать по умолчанию</button>
                 </div>
                 <div class="fieldset__body">
                   <div class="fieldset__layout fieldset__layout--2-end-3">
@@ -316,6 +318,7 @@
                       </svg>
                     </label>
                   </div>
+                  <button class="button--thirdly account-personal-addresses__card-remove" type="button">Удалить адрес</button>
                 </div>
               </fieldset>
             </div>
