@@ -28,6 +28,7 @@
     justify-content: center
   }
   @media (max-width: 601px) {
+    right: 26px;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }

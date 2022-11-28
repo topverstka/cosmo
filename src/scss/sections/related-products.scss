@@ -6,7 +6,17 @@
     padding-bottom: 16px;
   }
 }
+.related-products .product-card__name {
+  max-width: 84%;
+  @media (max-width: 601px) {
+    margin-bottom: 15px;
+  }
+}
+.related-products ~ .related-products {
+  padding-top: 10px;
+}
 .related-products ~ .callback-cards {
+  padding-top: 50px;
   @media (max-width: 601px) {
     padding-top: 30px;
   }
@@ -24,7 +34,7 @@
   }
 }
 .related-products__title {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   @media (max-width: 1024px) {
     margin-bottom: 24px;
     padding-left: 20px;

@@ -55,6 +55,10 @@
   margin-left: auto;
   margin-right: auto;
   --button-color: #A1AEB3;
+  font-size: 14px;
+  @media (max-width: 601px) {
+    font-size: 12px;
+  }
 }
 .gallery-accordion__button-more--hidden {
   opacity: 0;

@@ -2,13 +2,14 @@
   background-color: var(--bg-element);
   border-radius: 12px;
   padding-top: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 90px;
+  padding-bottom: 50px;
+  margin-bottom: 87px;
   @media (max-width: 810px) {
     margin-bottom: 32px;
   }
   @media (max-width: 601px) {
     padding-top: 26px;
+    padding-bottom: 30px;
     margin-bottom: 16px;
   }
 }
@@ -45,13 +46,13 @@
 .product-cases-carousel__button-prev {
   left: 0;
   @media (max-width: 601px) {
-    left: 10px;
+    left: 20px;
   }
 }
 .product-cases-carousel__button-next {
   right: 0;
   @media (max-width: 601px) {
-    right: 10px;
+    right: 20px;
   }
 }
 
@@ -61,7 +62,7 @@
   height: 40px;
   background-color: #F0F3F5;
   @media (max-width: 601px) {
-    top: 20px;
+    top: 30px;
   }
 }
 .product-cases-carousel__button-prev::after,
