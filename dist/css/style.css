@@ -3659,6 +3659,12 @@ span.flatpickr-weekday {
   bottom: 8px;
 }
 
+@media (min-width: 1025px) {
+  .sidebar .link--time {
+    margin-bottom: 17px;
+  }
+}
+
 /*
 <article class="sidebar-card">
   <div class="sidebar-card__top">
@@ -7135,8 +7141,8 @@ span.flatpickr-weekday {
 }
 
 .page-heading__nav-item {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 19px;
+  margin-right: 19px;
 }
 @media (max-width: 968px) {
   .page-heading__nav-item {
@@ -10637,7 +10643,36 @@ span.flatpickr-weekday {
 }
 @media (max-width: 601px) {
   .services-all-card__desc {
+    position: relative;
     margin-bottom: 16px;
+    line-height: 1.26;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 601px) {
+  .services-all-card__desc .button--thirdly, .services-all-card__desc .product-details__desc a, .product-details__desc .services-all-card__desc a, .services-all-card__desc .doc-card__desc a, .doc-card__desc .services-all-card__desc a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    font-size: inherit;
+  }
+}
+
+@media (max-width: 601px) {
+  .services-all-card__desc .button--thirdly::before, .services-all-card__desc .product-details__desc a::before, .product-details__desc .services-all-card__desc a::before, .services-all-card__desc .doc-card__desc a::before, .doc-card__desc .services-all-card__desc a::before {
+    content: "...";
+    font-size: inherit;
+    background-color: #fff;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -10700,6 +10735,50 @@ span.flatpickr-weekday {
 @media (max-width: 1024px) {
   .services__sidebar--active .services__sidebar-card {
     bottom: -40px;
+  }
+}
+
+@media (min-width: 602px) {
+  .page__services-all .page-heading {
+    margin-bottom: 22px;
+    padding-top: 50px;
+  }
+}
+
+.page__services-all .page-heading__title {
+  margin-bottom: 54px;
+}
+@media (max-width: 601px) {
+  .page__services-all .page-heading__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .page__services-all .sidebar {
+    padding-top: 70px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .page__services-all .blog-sidebar-about__desc {
+    font-size: 23px;
+    line-height: 1.08;
+  }
+}
+
+@media (min-width: 602px) {
+  .page__services-all .breadcrumbs {
+    display: none;
+  }
+}
+
+.page__services-all .page-heading--sticky {
+  top: -65px;
+}
+@media (max-width: 420px) {
+  .page__services-all .page-heading--sticky {
+    top: -75px;
   }
 }
 

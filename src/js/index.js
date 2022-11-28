@@ -290,7 +290,8 @@ stickyPageHeadings.forEach((heading) => {
   window.addEventListener('scroll', () => {
     const top = heading.getBoundingClientRect().top;
     const titleHeight = heading.querySelector('.page-heading__title').getBoundingClientRect().height
-    heading.style.top = `-${titleHeight}px`
+    const titlePadding = window.getComputedStyle(heading).paddingTop
+    heading.style.top = `-${titleHeight + titlePadding}px`
     if(top <= -titleHeight) {
       heading.classList.add('page-heading--sticky-run')
     } else {

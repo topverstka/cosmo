@@ -7,6 +7,11 @@
   bottom: 8px;
 }
 
+.sidebar .link--time {
+  @media (min-width: 1025px) {
+    margin-bottom: 17px;
+  }
+}
 /*
 <article class="sidebar-card">
   <div class="sidebar-card__top">
