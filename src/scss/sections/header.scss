@@ -617,6 +617,7 @@
 
 .header__controls {
   position: relative;
+  pointer-events: initial;
   @media (max-width: 1020px) {
     order: -2;
     display: grid;

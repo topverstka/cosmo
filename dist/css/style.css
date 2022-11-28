@@ -6914,6 +6914,7 @@ span.flatpickr-weekday {
 
 .header__controls {
   position: relative;
+  pointer-events: initial;
 }
 @media (max-width: 1020px) {
   .header__controls {
