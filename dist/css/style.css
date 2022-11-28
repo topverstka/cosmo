@@ -2587,7 +2587,7 @@ select {
 
 /**
  *
- * form.chips>.chips__track>.chips__content>label.chips__item>input.chips__input[type="radio"][hidden][name="option"]+p.chips__caption
+ * form.chips>.chips__track>.chips__content>label.chips__item>input.chips__input[type="radio"][hidden][name="option"]+span.chips__caption
  *
  */
 .chips {
