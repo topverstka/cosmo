@@ -215,3 +215,32 @@
     padding-right: 8px; 
   }
 }
+
+.page__changes .page-heading__title {
+  @media (min-width: 601px) {
+    margin-bottom: 45px;
+  }
+}
+.page__changes .page-heading {
+  margin-bottom: 44px;
+  @media (max-width: 601px) {
+    margin-bottom: 42px;
+  }
+}
+.page__changes .categories {
+  @media (min-width: 602px) {
+    margin-bottom: 135px;
+  }
+}
+
+.page__changes .blog-card {
+  @media (max-width: 601px) {
+    row-gap: 0;
+    
+  }
+}
+.page__changes .blog-card__title {
+  @media (max-width: 601px) {
+    padding-right: 10px;
+  }
+}

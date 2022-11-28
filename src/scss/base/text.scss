@@ -44,6 +44,11 @@
     width: 100%;  
   }
 }
+.captions .callback-cards {
+  @media (min-width: 602px) {
+    padding-top: 74px;
+  }
+}
 .captions--fold-opened {
   max-height: 2000px;
 }
