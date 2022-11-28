@@ -1,5 +1,8 @@
 .stores {
-
+  @media (min-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .stores__container {
   height: calc(100 * 1vh - 84px - 32px);
@@ -45,6 +48,8 @@
 
 .stores__list-title {
   margin-bottom: 32px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .stores__results-caption {
@@ -288,4 +293,12 @@
 }
 .stores__details-img {
   border-radius: 6px;
+}
+
+.stores__city-picker {
+  --brad: 6px;
+}
+.stores__city-picker .select__list--single > .select__item {
+  padding: 8px 12px 10px;
+  font-size: 12px;
 }
