@@ -1,0 +1,3082 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20221129002856" />
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="header__snacks">
+    <div class="header-snack" data-snack="city">
+      <div class="header-snack__container">
+        <h3 class="header-snack__title">
+          Выберите страну или регион, чтобы контент и&nbsp;онлайн-товары
+          соответствовали вашему местоположению
+        </h3>
+        <div class="header-snack__content">
+          <div class="select select--has-search header-snack__select" data-search-placeholder="Населенный пункт">
+            <select
+              name="city"
+              id="dropdown-city"
+              class="select__input"
+            >
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область
+              </option>
+              <option value="Казань">Казань, Татарстан республика</option>
+              <option value="Челябинск">Челябинск, Челябинская область</option>
+              <option value="Краснодар">Краснодар, Краснодарский Край</option>
+              <option value="Самара">Самара, Самарская область</option>
+              <option value="Москва">2 Москва</option>
+              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область 2
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область 2
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область 2
+              </option>
+              <option value="Казань">Казань, Татарстан республика 2</option>
+              <option value="Челябинск">
+                Челябинск, Челябинская область 2
+              </option>
+              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
+              <option value="Самара">Самара, Самарская область 2</option>
+            </select>
+          </div>
+        </div>
+        <button class="header-snack__close" type="button"></button>
+      </div>
+    </div>
+    <div class="header-snack" data-snack="language">
+      <div class="header-snack__container">
+        <h3 class="header-snack__title">
+          Выберите язык, используемый на сайте
+        </h3>
+        <div class="header-snack__content">
+          <form action="/api" class="chips chips--ghost header-snack__language">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" class="chips__input" checked hidden name="language">
+                <span class="chips__caption">Русский</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" class="chips__input" hidden name="language">
+                <span class="chips__caption">English</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <button class="header-snack__close" type="button"></button>
+      </div>
+    </div>
+  </div>
+  <div class="header__container">
+    <a href="#" class="header__logo logo">
+      <svg class="header__logo logo">
+        <use xlink:href="./img/common/logo.svg#logo" >
+      </svg>
+    </a>
+    <div class="header__menu">
+      <nav class="nav header__nav">
+        <ul class="header__nav-links">
+          <li class="header__nav-item header__nav-item--mobile-open">
+            <a href="#catalog" class="header__nav-link">Косметика</a>
+            <div class="header__nav-item-dropdown">
+              <div
+                class="header__nav-item-dropdown-content header__nav-item-dropdown-content--nav"
+              >
+                <nav class="nav header__nav-catalog">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Тип средств</h4>
+                    </li>
+                    <li class="nav__item nav__item--bold">
+                      <a href="#" class="nav__link">Все средства</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Новинки</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Бестеселлеры</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Очищающие средства</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Тонизирующие средства</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Кремы для лица и шеи</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Cредства для кожи век</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Маски для лица и шеи</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Состояние кожи</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Нормальная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Сухая</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Жирная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Комбинированная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Проблемная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Чувствительная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Возрастная</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Активы</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Ретинол</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Коллаген</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Кислоты</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Витамин С</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Витамин D</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">SPF-фактор</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Время применения</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Дневной уход</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Ночной уход</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Ежедневный уход</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Лето</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Зима</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Потребности кожи</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Увлажнение</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Питание и восстановление</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Омоложение и лифтинг</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link"
+                        >Пилинг, отшелушивание, обновление</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Тонирование</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">SPF-защита</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#services" class="header__nav-link">Услуги</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <!-- <div class="header__nav-item-dropdown-heading"> -->
+                  <h3 class="header__nav-item-dropdodwn-title">
+                    Услуги Cosmomedica в вашем городе
+                  </h3>
+                  <a
+                    href="#"
+                    class="button button--primary button--dark header__button-services"
+                    >См. все услуги в Москве</a
+                  >
+                <!-- </div> -->
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">Cosmomedica Center</h3>
+                        <p class="blog-card__desc">Москва, Малая Бронная 15Б</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <p class="blog-card__desc">
+                          Косметологические процедуры, индивидуальный подбор
+                          косметики и другие услуги.
+                        </p>
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Записаться</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-2.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Cosmomedica на&nbsp;Коробейников
+                        </h3>
+                        <p class="blog-card__desc">
+                          Москва, Коробейников пер. 1
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <p class="blog-card__desc">
+                          Косметологические процедуры, индивидуальный подбор
+                          косметики и другие услуги.
+                        </p>
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Записаться</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-1.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#changes" class="header__nav-link">До и после</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <h3 class="header__nav-item-dropdodwn-title">
+                  Решение кожных проблем с помощью Cosmomedica
+                </h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                  >См. все проблемы</a
+                >
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Акне. Острый воспалительный процесс
+                        </h3>
+                        <p class="blog-card__desc">
+                          Длительное воспалительное заболевание кожи,
+                          возникающее в ситуации, когда мертвые клетки кожи и
+                          кожное сало ...
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Подробнее о проблеме</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <div class="blog-card__media-compare">
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-41.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-42.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">Пигментация</h3>
+                        <p class="blog-card__desc">
+                          Длительное воспалительное заболевание кожи,
+                          возникающее в ситуации, когда мертвые клетки кожи и
+                          кожное сало ...
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Подробнее о проблеме</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <div class="blog-card__media-compare">
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-31.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-32.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#shops" class="header__nav-link">Магазины</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                  <h3 class="header__nav-item-dropdodwn-title">
+                    Фирменные магазины Cosmomedica в вашем городе
+                  </h3>
+                  <a
+                    href="#"
+                    class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                    >См. все магазины</a
+                  >
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">Cosmomedica Center</h3>
+                        <p class="blog-card__desc">Москва, Малая Бронная 15Б</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Показать на карте</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-2.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">ТЦ Авиапарк</h3>
+                        <p class="blog-card__desc">
+                          Ходынский б-р, 4, 1-ый этаж (напротив аквариума)
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Показать на карте</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-3.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#blog" class="header__nav-link">Блог</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <h3 class="header__nav-item-dropdodwn-title">
+                  Статьи, новости, акции
+                </h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                  >См. все записи</a
+                >
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Основные принципы ежедневного ухода за кожей
+                        </h3>
+                        <p class="blog-card__desc">21 сен. 2022</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Читать статью</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-2.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Торжественное открытие корнера Cosmomedica в ТЦ
+                          Авиапарк (Москва)
+                        </h3>
+                        <p class="blog-card__desc">21 сен. 2022</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Читать новость</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-3.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#about" class="header__nav-link">О бренде</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <h3 class="header__nav-item-dropdodwn-title">Главное</h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__button-services"
+                  >Подробнее о бренде</a
+                >
+                <article
+                  class="header__nav-item-dropdown-card--single header__nav-item-dropdown-card blog-card"
+                >
+                  <div class="blog-card__info">
+                    <div class="blog-card__top">
+                      <h3 class="blog-card__title">
+                        Здравствуйте! <br >
+                        Меня зовут Елена Кондрашева. <br >
+                        Я врач-дерматолог и косметолог.
+                      </h3>
+                    </div>
+                    <div class="blog-card__bottom">
+                      <p class="blog-card__desc">
+                        Имея 20-летний практический опыт омоложения и лечения
+                        кожи, я приняла решение о создании собственной
+                        косметической марки. Со своей коман- дой биохимиков и
+                        технологов мне удалось разрабо- тать комплексную систему
+                        ухода, которая основана на базовых принципах омоложения
+                        кожи...
+                      </p>
+                    </div>
+                  </div>
+                  <div class="blog-card__media">
+                    <picture class="blog-card__pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="blog-card__img lazy"
+                        data-src="./img/about/header-about.jpg"
+                          src="./placeholder.png"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__pickers">
+        <button
+          class="header__geo header__picker"
+          data-snack="city"
+          type="button"
+        >
+          <svg class="header__picker-icon">
+            <use xlink:href="./img/common/geo.svg#geo" >
+          </svg>
+          <span class="header__picker-text">Москва</span>
+        </button>
+        <button
+          class="header__language header__picker"
+          data-snack="language"
+          type="button"
+        >
+          <svg class="header__picker-icon">
+            <use xlink:href="./img/common/language.svg#language" >
+          </svg>
+          <span class="header__picker-text">RU</span>
+        </button>
+      </div>
+      <div class="header__controls">
+        <button
+          class="button button--primary button--circle button--dark button-cart header__button"
+        >
+          <svg class="button__icon">
+            <use xlink:href="./img/common/cart.svg#cart" >
+          </svg>
+          <span class="button-cart__counter">4</span>
+        </button>
+        <section class="minicart header__minicart">
+          <p class="minicart__message">В корзине пока нет товаров</p>
+          <p class="minicart__total">16 000 ₽</p>
+          <div class="minicart__content">
+            <article class="minicart-item">
+              <picture class="minicart-item__pic">
+                <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                <img
+                  class="minicart-item__img lazy"
+                  data-src="./img/catalog/product-cropped.png"
+                          src="./placeholder.png"
+                  alt=""
+                >
+              </picture>
+              <div class="minicart-item__info">
+                <h3 class="minicart-item__name">Биостимулирующий тоник с витамином С</h3>
+                <p class="minicart-item__variation">200 мл</p>
+                <div class="minicart-item__total">
+                  <div class="stepper minicart-item__stepper">
+                    <button class="stepper__button stepper__button-minus"></button>
+                    <input type="text" class="stepper__value" value="2">
+                    <button class="stepper__button stepper__button-plus"></button>
+                  </div>
+                  <p class="minicart-item__price">8 000 ₽</p>
+                </div>
+              </div>
+            </article>
+            <article class="minicart-item">
+              <picture class="minicart-item__pic">
+                <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                <img
+                  class="minicart-item__img lazy"
+                  data-src="./img/catalog/product-cropped.png"
+                          src="./placeholder.png"
+                  alt=""
+                >
+              </picture>
+              <div class="minicart-item__info">
+                <h3 class="minicart-item__name">Дневная защитная сыворотка с витамином D</h3>
+                <p class="minicart-item__variation">200 мл</p>
+                <div class="minicart-item__total">
+                  <div class="stepper minicart-item__stepper">
+                    <button class="stepper__button stepper__button-minus"></button>
+                    <input type="text" class="stepper__value" value="1">
+                    <button class="stepper__button stepper__button-plus"></button>
+                  </div>
+                  <p class="minicart-item__price">4 000 ₽</p>
+                </div>
+              </div>
+            </article>
+            <article class="minicart-item">
+              <picture class="minicart-item__pic">
+                <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                <img
+                  class="minicart-item__img lazy"
+                  data-src="./img/catalog/product-cropped.png"
+                          src="./placeholder.png"
+                  alt=""
+                >
+              </picture>
+              <div class="minicart-item__info">
+                <h3 class="minicart-item__name">Суперувлажняющий очищающий мусс</h3>
+                <p class="minicart-item__variation">200 мл</p>
+                <div class="minicart-item__total">
+                  <div class="stepper minicart-item__stepper">
+                    <button class="stepper__button stepper__button-minus"></button>
+                    <input type="text" class="stepper__value" value="1">
+                    <button class="stepper__button stepper__button-plus"></button>
+                  </div>
+                  <p class="minicart-item__price">4 000 ₽</p>
+                </div>
+              </div>
+            </article>
+            <article class="minicart-item">
+              <picture class="minicart-item__pic">
+                <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                <img
+                  class="minicart-item__img lazy"
+                  data-src="./img/catalog/product-cropped.png"
+                          src="./placeholder.png"
+                  alt=""
+                >
+              </picture>
+              <div class="minicart-item__info">
+                <h3 class="minicart-item__name">Суперувлажняющий очищающий мусс</h3>
+                <p class="minicart-item__variation">200 мл</p>
+                <div class="minicart-item__total">
+                  <div class="stepper minicart-item__stepper">
+                    <button class="stepper__button stepper__button-minus"></button>
+                    <input type="text" class="stepper__value" value="1">
+                    <button class="stepper__button stepper__button-plus"></button>
+                  </div>
+                  <p class="minicart-item__price">4 000 ₽</p>
+                </div>
+              </div>
+            </article>
+            <article class="minicart-item">
+              <picture class="minicart-item__pic">
+                <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                <img
+                  class="minicart-item__img lazy"
+                  data-src="./img/catalog/product-cropped.png"
+                          src="./placeholder.png"
+                  alt=""
+                >
+              </picture>
+              <div class="minicart-item__info">
+                <h3 class="minicart-item__name">Суперувлажняющий очищающий мусс</h3>
+                <p class="minicart-item__variation">200 мл</p>
+                <div class="minicart-item__total">
+                  <div class="stepper minicart-item__stepper">
+                    <button class="stepper__button stepper__button-minus"></button>
+                    <input type="text" class="stepper__value" value="1">
+                    <button class="stepper__button stepper__button-plus"></button>
+                  </div>
+                  <p class="minicart-item__price">4 000 ₽</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="minicart__bottom">
+            <a href="#" class="button button--primary button--light minicart__button">Перейти к оформлению заказа</a>
+          </div>
+        </section>
+        <button
+          class="button button--primary button--circle button--dark button-burger burger header__button"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <button
+          class="button button--primary button--circle button--dark button-auth header__button"
+        >
+          <svg class="button__icon">
+            <use xlink:href="./img/common/profile.svg#profile" >
+          </svg>
+        </button>
+         <div class="auth header__auth">
+          <div class="tabs auth__tabs">
+            <div class="tabs__toggler-container auth__tabs-togglers" data-tabs="auth">
+              <button class="tabs__toggler">Войти</button>
+              <button class="tabs__toggler">Зарегистрироваться</button>
+            </div>
+            <div class="tabs__page-container auth__pages" data-tabs="auth">
+              <form class="tabs__page auth__pages-login">
+                  <fieldset class="auth__fieldset auth__fieldset--visible auth__fieldset--login-phone" data-toggler="login-phone">
+                    <label class="input input--tel input--invalid">
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Телефон"
+    maxlength="25"
+    minlength="10"
+    data-value-missing="Напишите телефон"
+    data-value-invalid="Проверьте корректность телефона"
+    autocomplete="tel"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <span class="auth__pages-message">Ошибка</span>
+                    <div class="auth__methods">
+                      <button class="button button--thirdly auth__button-method-toggler" type="button" data-toggler="login-email">Вход с помощью эл. почты</button>
+                    </div>
+                  </fieldset>
+                  <fieldset class="auth__fieldset auth__fieldset--login-email" data-toggler="login-email">
+                    <label class="input input--email">
+  <input
+    class="input__field"
+    name="user_email"
+    type="email"
+    placeholder="E-mail"
+    autocomplete="email"
+    data-value-missing="Напишите имейл"
+    data-value-invalid="Проверьте корректность имейла"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <label class="input input--password">
+                      <input
+                        class="input__field"
+                        name="password"
+                        type="password"
+                        placeholder="Пароль"
+                      >
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <span class="auth__pages-message">Ошибка</span>
+                    <div class="auth__methods">
+                      <button class="button button--thirdly auth__button-method-toggler" type="button" data-toggler="login-phone">Вход по телефону</button>
+                      <button class="button button--thirdly auth__button-method-toggler" type="button" data-toggler="forget">Забыли пароль?</button>
+                    </div>
+                  </fieldset>
+                  <fieldset class="auth__fieldset auth__fieldset--forget" data-toggler="forget">
+                    <label class="input input--email">
+  <input
+    class="input__field"
+    name="user_email"
+    type="email"
+    placeholder="E-mail"
+    autocomplete="email"
+    data-value-missing="Напишите имейл"
+    data-value-invalid="Проверьте корректность имейла"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <span class="auth__pages-message">Ошибка</span>
+                    <div class="auth__methods">
+                      <button class="button button--thirdly auth__button-method-toggler" type="button" data-toggler="login-email">Я помню пароль</button>
+                    </div>
+                  </fieldset>
+              </form>
+              <form class="tabs__page auth__pages-register">
+                  <fieldset class="auth__fieldset auth__fieldset--visible">
+                    <label class="input input--name">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="ФИО"
+    data-value-missing="Заполните ФИО"
+    data-value-invalid="Что-то не так с введенным именем"
+    autocomplete="name"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <label class="input input--tel input--invalid">
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Телефон"
+    maxlength="25"
+    minlength="10"
+    data-value-missing="Напишите телефон"
+    data-value-invalid="Проверьте корректность телефона"
+    autocomplete="tel"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <label class="input input--email">
+  <input
+    class="input__field"
+    name="user_email"
+    type="email"
+    placeholder="E-mail"
+    autocomplete="email"
+    data-value-missing="Напишите имейл"
+    data-value-invalid="Проверьте корректность имейла"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+                    <label class="input input--password">
+                      <input
+                        class="input__field"
+                        name="password"
+                        type="password"
+                        placeholder="Пароль"
+                      >
+                      <svg class="input__error-icon">
+                        <use xlink:href="./img/common/warn.svg#warn"></use>
+                      </svg>
+                    </label>
+                    <span class="auth__pages-message">Ошибка</span>
+                  </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="auth__bottom">
+            <div class="auth__socials-login socials socials--icons">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="socials__link">
+                <svg class="socials__icon socials__icon--google">
+                  <use xlink:href="./img/common/logo-google.svg#google"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="socials__link">
+                <svg class="socials__icon socials__icon--vk">
+                  <use xlink:href="./img/common/logo-vk.svg#vk"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="socials__link">
+                <svg class="socials__icon socials__icon--yandex">
+                  <use xlink:href="./img/common/logo-yandex.svg#yandex"></use>
+                </svg>
+              </a>
+            </div>
+            <button class="button button--primary button--light auth__button-submit">Вход</button>
+          </div>
+        </div>
+
+        <button
+          class="button button--primary button--circle button--dark header__button"
+          data-poppa-open="search-pop"
+        >
+          <svg class="button__icon">
+            <use xlink:href="./img/common/search.svg#search" >
+          </svg>
+        </button>
+
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="poppa search-pop" id="search-pop">
+  <div class="search-pop__container">
+    <div class="search-pop__box search">
+      <form class="search-pop__form search__form">
+        <input
+          type="search"
+          name="s"
+          placeholder="Поиск по каталогу товаров"
+          class="search__input"
+        >
+        <button class="search__button" type="submit">
+          <svg class="search__button-icon">
+            <use xlink:href="./img/common/search.svg#search" >
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="search-pop__suggests">
+      <div class="search-pop__suggests-track">
+        <button class="search-pop__suggest search-pop__suggest--search">
+          См. все очищающие средства
+        </button>
+        <a href="#" class="search-pop__suggest">См. все очищающие средства</a>
+        <a href="#" class="search-pop__suggest">См. все очищающие средства</a>
+      </div>
+    </div>
+    <div class="search-pop__results">
+      <h2 class="section-title search-pop__title">
+        Результаты поиска по запросу “очищающий крем для жирной кожи”
+      </h2>
+      <p class="search-pop__results-count">Найдено 6 товаров</p>
+      <div class="search-pop__gallery">
+        <div class="search-pop__gallery-inner">
+          <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+          <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+          <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+          <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+          <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+          <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <main class="main">
+        <section class="hero">
+          <div class="hero__container">
+            <div class="swiper hero__carousel promo-carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide promo-carousel__slide">
+                  <div class="promo-carousel__hero">
+                    <picture class="promo-carousel__pic">
+                      <!-- <source data-srcset="./img/hero/promo.webp," type="image/webp"> -->
+                      <img
+                        class="promo-carousel__img"
+                        src="./img/hero/promo.jpg"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                  <div class="promo-carousel__info">
+                    <div class="promo-carousel__info-top">
+                      <h4 class="promo-carousel__category">
+                        Новые поступления
+                      </h4>
+                      <h3 class="promo-carousel__title">
+                        Встречайте янтарную серию
+                      </h3>
+                      <p class="promo-carousel__desc">
+                        Серия косметических средств с натуральной янтарной
+                        кислотой
+                      </p>
+                    </div>
+                    <div class="promo-carousel__info-bottom">
+                      <a
+                        href="#"
+                        class="button button--primary button--dark promo-carousel__button"
+                        >Перейти в каталог</a
+                      >
+                    </div>
+                  </div>
+                  <div class="promo-carousel-card">
+                    <h3 class="promo-carousel-card__title">
+                      Личная консультация по&nbsp;подбору косметики
+                    </h3>
+                    <p class="promo-carousel-card__desc">
+                      Наши специалисты помогут вам с подбором косметики.
+                      Доступны консультации в&nbsp;WhatsApp.
+                    </p>
+                    <button
+                      class="button button--primary promo-carousel__button promo-carousel-card__button"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide promo-carousel__slide">
+                  <div class="promo-carousel__hero">
+                    <picture class="promo-carousel__pic">
+                      <!-- <source data-srcset="./img/hero/promo.webp," type="image/webp"> -->
+                      <img
+                        class="promo-carousel__img"
+                        src="./img/hero/promo.jpg"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                  <div class="promo-carousel__info">
+                    <div class="promo-carousel__info-top">
+                      <h4 class="promo-carousel__category">
+                        Новые поступления
+                      </h4>
+                      <h3 class="promo-carousel__title">
+                        Встречайте янтарную серию
+                      </h3>
+                      <p class="promo-carousel__desc">
+                        Серия косметических средств с натуральной янтарной
+                        кислотой
+                      </p>
+                    </div>
+                    <div class="promo-carousel__info-bottom">
+                      <a
+                        href="#"
+                        class="button button--primary button--dark promo-carousel__button"
+                        >Перейти в каталог</a
+                      >
+                    </div>
+                  </div>
+                  <div class="promo-carousel-card">
+                    <h3 class="promo-carousel-card__title">
+                      Личная консультация по&nbsp;подбору косметики
+                    </h3>
+                    <p class="promo-carousel-card__desc">
+                      Наши специалисты помогут вам с подбором косметики.
+                      Доступны консультации в&nbsp;WhatsApp.
+                    </p>
+                    <button
+                      class="button button--primary promo-carousel__button promo-carousel-card__button"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </div><div class="swiper-slide promo-carousel__slide">
+                  <div class="promo-carousel__hero">
+                    <picture class="promo-carousel__pic">
+                      <!-- <source data-srcset="./img/hero/promo.webp," type="image/webp"> -->
+                      <img
+                        class="promo-carousel__img"
+                        src="./img/hero/promo.jpg"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                  <div class="promo-carousel__info">
+                    <div class="promo-carousel__info-top">
+                      <h4 class="promo-carousel__category">
+                        Новые поступления
+                      </h4>
+                      <h3 class="promo-carousel__title">
+                        Встречайте янтарную серию
+                      </h3>
+                      <p class="promo-carousel__desc">
+                        Серия косметических средств с натуральной янтарной
+                        кислотой
+                      </p>
+                    </div>
+                    <div class="promo-carousel__info-bottom">
+                      <a
+                        href="#"
+                        class="button button--primary button--dark promo-carousel__button"
+                        >Перейти в каталог</a
+                      >
+                    </div>
+                  </div>
+                  <div class="promo-carousel-card">
+                    <h3 class="promo-carousel-card__title">
+                      Личная консультация по&nbsp;подбору косметики
+                    </h3>
+                    <p class="promo-carousel-card__desc">
+                      Наши специалисты помогут вам с подбором косметики.
+                      Доступны консультации в&nbsp;WhatsApp.
+                    </p>
+                    <button
+                      class="button button--primary promo-carousel__button  promo-carousel-card__button"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </div><div class="swiper-slide promo-carousel__slide">
+                  <div class="promo-carousel__hero">
+                    <picture class="promo-carousel__pic">
+                      <!-- <source data-srcset="./img/hero/promo.webp," type="image/webp"> -->
+                      <img
+                        class="promo-carousel__img"
+                        src="./img/hero/promo.jpg"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                  <div class="promo-carousel__info">
+                    <div class="promo-carousel__info-top">
+                      <h4 class="promo-carousel__category">
+                        Новые поступления
+                      </h4>
+                      <h3 class="promo-carousel__title">
+                        Встречайте янтарную серию
+                      </h3>
+                      <p class="promo-carousel__desc">
+                        Серия косметических средств с натуральной янтарной
+                        кислотой
+                      </p>
+                    </div>
+                    <div class="promo-carousel__info-bottom">
+                      <a
+                        href="#"
+                        class="button button--primary button--dark promo-carousel__button"
+                        >Перейти в каталог</a
+                      >
+                    </div>
+                  </div>
+                  <div class="promo-carousel-card">
+                    <h3 class="promo-carousel-card__title">
+                      Личная консультация по&nbsp;подбору косметики
+                    </h3>
+                    <p class="promo-carousel-card__desc">
+                      Наши специалисты помогут вам с подбором косметики.
+                      Доступны консультации в&nbsp;WhatsApp.
+                    </p>
+                    <button
+                      class="button button--primary promo-carousel__button promo-carousel-card__button"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </div><div class="swiper-slide promo-carousel__slide">
+                  <div class="promo-carousel__hero">
+                    <picture class="promo-carousel__pic">
+                      <!-- <source data-srcset="./img/hero/promo.webp," type="image/webp"> -->
+                      <img
+                        class="promo-carousel__img"
+                        src="./img/hero/promo.jpg"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                  <div class="promo-carousel__info">
+                    <div class="promo-carousel__info-top">
+                      <h4 class="promo-carousel__category">
+                        Новые поступления
+                      </h4>
+                      <h3 class="promo-carousel__title">
+                        Встречайте янтарную серию
+                      </h3>
+                      <p class="promo-carousel__desc">
+                        Серия косметических средств с натуральной янтарной
+                        кислотой
+                      </p>
+                    </div>
+                    <div class="promo-carousel__info-bottom">
+                      <a
+                        href="#"
+                        class="button button--primary button--dark promo-carousel__button"
+                        >Перейти в каталог</a
+                      >
+                    </div>
+                  </div>
+                  <div class="promo-carousel-card">
+                    <h3 class="promo-carousel-card__title">
+                      Личная консультация по&nbsp;подбору косметики
+                    </h3>
+                    <p class="promo-carousel-card__desc">
+                      Наши специалисты помогут вам с подбором косметики.
+                      Доступны консультации в&nbsp;WhatsApp.
+                    </p>
+                    <button
+                      class="button button--primary promo-carousel__button promo-carousel-card__button"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </div>
+ 
+              </div>
+              <div
+                class="swiper-pagination promo-carousel__pagination slider__pagination"
+              ></div>
+            </div>
+            <div class="promo-gallery">
+              <article class="promo-gallery-card promo-gallery-card--no-pic">
+                <div class="promo-gallery-card__top">
+                  <h3 class="promo-gallery-card__title">
+                    C 30 декабря по 4 января будет приостановлена отправка
+                    заказов
+                  </h3>
+                </div>
+                <div class="promo-gallery-card__bottom">
+<!--                   <p class="promo-gallery-card__desc">
+                    Заказы оформленые и оплаченые в период, с 30 декабря по 4
+                    января включительно, будут обработаны и переданы в
+                    транспортнные компании 5 января
+                  </p>
+ -->                  <a
+                    href=""
+                    class="button button--primary promo-gallery-card__button"
+                    >В магазин</a
+                  >
+                </div>
+                <picture class="promo-gallery-card__pic">
+                  <!-- <source data-srcset="./img/hero/promo-1.webp," type="image/webp"> -->
+                  <img
+                    class="promo-gallery-card__img"
+                    src="./img/hero/promo-1.jpg"
+                    alt=""
+                  >
+                </picture>
+              </article>
+              <article class="promo-gallery-card">
+                <div class="promo-gallery-card__top">
+                  <h3 class="promo-gallery-card__title">
+                    Весь март cкидка 5% по&nbsp;промокоду “Women 8”
+                  </h3>
+<!--                   <p class="promo-gallery-card__desc">
+                    *При заказе от 5000 руб
+                  </p>
+ -->                </div>
+                <div class="promo-gallery-card__bottom">
+                  <a
+                    href=""
+                    class="button button--primary promo-gallery-card__button"
+                    >В магазин</a
+                  >
+                </div>
+                <picture class="promo-gallery-card__pic">
+                  <!-- <source data-srcset="./img/hero/promo-1.webp," type="image/webp"> -->
+                  <img
+                    class="promo-gallery-card__img"
+                    src="./img/hero/promo-1.jpg"
+                    alt=""
+                  >
+                </picture>
+              </article>
+              <article class="promo-gallery-card promo-gallery-card--accent">
+                <div class="promo-gallery-card__top">
+                  <h3 class="promo-gallery-card__title">
+                    Минитатюра на выбор в&nbsp;подарок к заказу
+                  </h3>
+<!--                   <p class="promo-gallery-card__desc">
+                    *При заказе от 5000 руб
+                  </p>
+ -->                </div>
+                <div class="promo-gallery-card__bottom">
+                  <a
+                    href=""
+                    class="button button--primary promo-gallery-card__button"
+                    >Подробнее</a
+                  >
+                </div>
+                <picture class="promo-gallery-card__pic">
+                  <!-- <source data-srcset="./img/hero/promo-1.webp," type="image/webp"> -->
+                  <img
+                    class="promo-gallery-card__img"
+                    src="./img/hero/promo-2.jpg"
+                    alt=""
+                  >
+                </picture>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="popular">
+          <div class="popular__container">
+            <h2 class="section-title popular__title">Популярные товары</h2>
+            <form class="popular-filters chips chips--has-scroll">
+              <div class="chips__track">
+                <div class="chips__content">
+                  <label class="chips__item popular-filters__item">
+                    <input
+                      class="chips__input"
+                      type="radio"
+                      name="filter"
+                      checked
+                      hidden
+                    >
+                    <span class="chips__caption">Все категории</span>
+                  </label>
+                  <label class="chips__item popular-filters__item">
+                    <input
+                      class="chips__input"
+                      type="radio"
+                      name="filter"
+                      hidden
+                    >
+                    <span class="chips__caption">
+                      Очищающие и тонизизирующие средства
+                    </span>
+                  </label>
+                  <label class="chips__item popular-filters__item">
+                    <input
+                      class="chips__input"
+                      type="radio"
+                      name="filter"
+                      hidden
+                    >
+                    <span class="chips__caption">Кремы для лица и шеи</span>
+                  </label>
+                  <label class="chips__item popular-filters__item">
+                    <input
+                      class="chips__input"
+                      type="radio"
+                      name="filter"
+                      hidden
+                    >
+                    <span class="snack__mark"></span>
+                    <span class="chips__caption">Маски и сыворотки</span>
+                  </label>
+                  <label class="chips__item popular-filters__item">
+                    <input
+                      class="chips__input"
+                      type="radio"
+                      name="filter"
+                      hidden
+                    >
+                    <span class="chips__caption">
+                      Кремы для век и специальные средства
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+
+            <div class="popular__gallery">
+              <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              <article class="product-card product-card--tall">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/product-tall.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+            </div>
+            <div class="container popular__button-container">
+              <button
+                  class="button button--primary button--light button--fullsize popular__mobile-button"
+                  data-text-hide="Свернуть список популярных товаров"
+                  type="button"
+              >
+                Больше популярных товаров
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="changes">
+          <div class="changes__container">
+            <h2 class="section-title section-text--center changes__title">
+              До и после использования косметики <br >
+              Cosmomedica&nbsp;by Dr.&nbsp;Kondrasheva
+            </h2>
+            <p class="section-desc section-text--center changes__desc">
+              Эти фотографии демонстрируют эффективность наших средств в борьбе
+              против ряда <br >
+              проблем: угревой сыпи, пигментации, аллергии, деформации формы
+              лица и др.
+            </p>
+            <div class="changes__gallery">
+              <article class="changes-card changes-card--end">
+                <div class="changes-card__before">
+                  <h3 class="changes-card__title">Гипер-пигментация</h3>
+                  <picture class="changes-card__before-pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="changes-card__before-img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/changes/ba-11.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+                <div class="changes-card__after">
+                  <picture class="changes-card__after-pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="changes-card__after-img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/changes/ba-12.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="changes-card">
+                <div class="changes-card__before">
+                  <h3 class="changes-card__title">Акне</h3>
+                  <picture class="changes-card__before-pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="changes-card__before-img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/changes/ba-21.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+                <div class="changes-card__after">
+                  <picture class="changes-card__after-pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="changes-card__after-img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/changes/ba-22.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+            </div>
+
+            <div class="container">
+              <button
+                class="button button--primary button--light button--fullsize changes__button-more"
+              >
+                См. До и После
+              </button>
+
+              <div class="changes__captions captions--mobile-fold captions-1-1">
+                <p class="captions-1-1__desc">
+                  Однако мы не можем гарантировать результат, поскольку
+                  эффективность средств по уходу за кожей зависит от целого ряда
+                  факторов, таких как тяжесть заболевания, постоянность
+                  соблюдения режима ухода за кожей, диета, а также многих других
+                  переменных факторов. Результаты после применения косметики
+                  могут отличаться, а также могут быть достигнуты в разные
+                  сроки.
+                </p>
+                <p class="captions-1-1__desc">
+                  Cosmomedica не делает никаких заявлений и не дает гарантий
+                  любого рода, прямых или косвенных, относительно полноты,
+                  точности, надежности или пригодности продуктов, услуг или
+                  связанных с ними графических изображений, содержащихся в этом
+                  каталоге или на нашем веб-сайте. Таким образом, покупатель сам
+                  решает, полагаться ли на действие продукта и ожидать ли от
+                  него определенных результатов, осознавая связанные с этим
+                  риски.
+                </p>
+                <button class="button--thirdly captions__button-opener">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials">
+          <div class="testimonials__container">
+            <div class="testimonials__gallery">
+              <div class="testimonials-card">
+                <div class="testimonials-card__review review-card">
+                  <picture class="review-card__pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="review-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/reviews/review-1.jpg"
+                      alt=""
+                    >
+                  </picture>
+                  <div class="review-card__info">
+                    <a
+                      href="#"
+                      class="review-card__profile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@divalova</a
+                    >
+                    <p class="review-card__feedback">
+                      Результат за 7 месяцев 😍 пигментация уменьшилась, отеки
+                      сошли! Красота и счастливая я! Спасибо Вам за гениальную
+                      косметику❤️!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonials-card__bundle">
+                  <picture class="testimonials-card__pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="testimonials-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/reviews/bundle.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+                <div class="testimonials-card__buttons">
+                  <button
+                    class="button button--primary button--dark testimonials-card__add-to-cart"
+                  >
+                    Добавить набор в корзину
+                  </button>
+                  <a
+                    href="#"
+                    class="button button--primary testimonials-card__more"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+              <div class="testimonials-card">
+                <div class="testimonials-card__review review-card">
+                  <picture class="review-card__pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="review-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/reviews/review-2.jpg"
+                      alt=""
+                    >
+                  </picture>
+                  <div class="review-card__info">
+                    <a
+                      href="#"
+                      class="review-card__profile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@ksenia445</a
+                    >
+                    <p class="review-card__feedback">
+                      Результат за 7 месяцев 😍 пигментация уменьшилась, отеки
+                      сошли! Красота и счастливая я! Спасибо Вам за гениальную
+                      косметику❤️!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonials-card__bundle">
+                  <picture class="testimonials-card__pic">
+                    <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                    <img
+                      class="testimonials-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/reviews/bundle.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+                <div class="testimonials-card__buttons">
+                  <button
+                    class="button button--primary button--dark testimonials-card__add-to-cart"
+                  >
+                    Добавить набор в корзину
+                  </button>
+                  <a
+                    href="#"
+                    class="button button--primary testimonials-card__more"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <button
+                class="button button--primary button--light button--fullsize testimonials__button-more"
+              >
+                Подобрать набор для себя
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="magazine">
+          <div class="magazine__container">
+            <div class="magazine__row">
+              <article class="magazine-card">
+                <div class="magazine-card__top">
+                  <h3 class="magazine-card__title">
+                    Личная консультация <br >
+                    по подбору косметики
+                  </h3>
+                </div>
+                <div class="magazine-card__bottom">
+                  <button class="button button--primary magazine-card__button">
+                    Записаться
+                  </button>
+                  <p class="magazine-card__desc">
+                    Наши специалисты помогут вам с подбором косметики. 
+                    Доступны консультации в WhatsApp.
+                  </p>
+                </div>
+              </article>
+              <div class="magazine-card">
+                <picture class="magazine-card__bg-pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="magazine-card__img lazy"
+                      src="./placeholder.png"
+                    data-src="./img/magazine/visuals-1.jpg"
+                    alt=""
+                  >
+                </picture>
+              </div>
+              <div class="magazine-card">
+                <picture class="magazine-card__bg-pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="magazine-card__img lazy"
+                      src="./placeholder.png"
+                    data-src="./img/magazine/visuals-2.jpg"
+                    alt=""
+                  >
+                </picture>
+              </div>
+              <div class="magazine-card">
+                <picture class="magazine-card__bg-pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="magazine-card__img lazy"
+                      src="./placeholder.png"
+                    data-src="./img/magazine/visuals-3.jpg"
+                    alt=""
+                  >
+                </picture>
+              </div>
+              <div class="magazine-card">
+                <picture class="magazine-card__bg-pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="magazine-card__img lazy"
+                      src="./placeholder.png"
+                    data-src="./img/magazine/visuals-4.jpg"
+                    alt=""
+                  >
+                </picture>
+              </div>
+            </div>
+            <div class="magazine-card-fullsize">
+              <div class="magazine-card-fullsize__info">
+                <h3 class="magazine-card-fullsize__title">
+                  «Защитите свою кожу, и&nbsp;она&nbsp;защитит вас»
+                </h3>
+                <p class="magazine-card-fullsize__desc">ДОКТОР КОНДРАШЕВА</p>
+                <a
+                  href="#"
+                  class="button button--primary button--light magazine-card-fullsize__button-about"
+                  >Подробнее о бренде</a
+                >
+              </div>
+              <picture class="magazine-card-fullsize__pic">
+                <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                <img
+                  class="magazine-card-fullsize__img lazy"
+                      src="./placeholder.png"
+                  data-src="./img/magazine/hero.jpg"
+                  alt=""
+                >
+              </picture>
+            </div>
+            <div class="magazine__blog blog__gallery">
+              <article class="blog-card blog-card--grey blog-card--bigger-title">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">Новинка</h3>
+                    <p class="blog-card__desc">
+                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
+                      фирменных магазинах в&nbsp;России
+                    </p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <a
+                      href="#"
+                      class="button button--primary button--dark blog-card__button"
+                      >Подробнее о новинке</a
+                    >
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon">
+              <use xlink:href="./img/common/cart.svg#cart"/>
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check"/>
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+                </div>
+              </article>
+              <article class="blog-card">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Основные принципы ежедневного ухода за кожей
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <a href="#" class="button button--primary blog-card__button"
+                      >Читать статью</a
+                    >
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/magazine/blog-1.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Торжественное открытие корнера Cosmomedica в ТЦ Авиапарк
+                      (Москва)
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <button class="button button--primary blog-card__button">
+                      Читать новость
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/magazine/blog-2.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card blog-card--accent">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Скидка 30% на все бестселлеры Cosmomedica до конца мая во
+                      всех магазинах
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <button class="button button--primary blog-card__button">
+                      Подробнее об акции
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      src="./placeholder.png"
+                      data-src="./img/magazine/blog-3.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+            </div>
+            <div class="container">
+              <a
+                href="#"
+                class="button button--primary button--fullsize button--light magazine__blog-button-all"
+              >
+                Смотреть все статьи и новости
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="locations">
+          <div class="locations__container">
+            <div class="locations__gallery">
+              <article class="locations-card locations-card--reverse">
+                <picture class="locations-card__pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="locations-card__img lazy"
+                      src="./placeholder.png"
+                    data-src="./img/locations/location-1.jpg"
+                    alt=""
+                  >
+                </picture>
+                <h3 class="locations-card__title">
+                  Cosmomedica на Коробейников
+                </h3>
+                <p class="locations-card__address">Москва, Коробейников пер.</p>
+                <p class="locations-card__desc">
+                  Косметологические процедуры, индивидуальный подбор косметики,
+                  уход за волосами
+                </p>
+              </article>
+              <article class="locations-card">
+                <picture class="locations-card__pic">
+                  <!-- <source data-srcset="./img/.webp," type="image/webp"> -->
+                  <img
+                    class="locations-card__img lazy"
+                    data-src="./img/locations/location-2.jpg"
+                      src="./placeholder.png"
+                    alt=""
+                  >
+                </picture>
+                <h3 class="locations-card__title">Cosmomedica Center</h3>
+                <p class="locations-card__address">Москва, Малая Бронная</p>
+                <p class="locations-card__desc">
+                  Косметологические процедуры, индивидуальный подбор косметики,
+                  уход за волосами
+                </p>
+              </article>
+            </div>
+            <div class="container">
+              <a href="#" class="button button--primary button--fullsize"
+                >
+                <span class="button__text _only-desktop">Подробнее об услугах Cosmomedica</span>
+                
+                <span class="button__text _only-mobile">Подробнее об услугах</span>
+                </a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__info">
+        <a href="#" class="footer__logo logo">
+          <svg class="logo__img">
+            <use xlink:href="./img/common/logo.svg#logo" />
+          </svg>
+        </a>
+        <ul class="socials footer__socials">
+          <li class="socials__item">
+            <a href="#" class="socials__link">Telegram</a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link">Youtube</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav footer__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <h4 class="nav__list-title">Компания</h4>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">О бренде</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Магазины</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Клиники</a>
+          </li>
+        </ul>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <h4 class="nav__list-title">Помошь</h4>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Оплата и доставка</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Приемка и возврат</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">FAQ</a>
+          </li>
+        </ul>
+        <ul class="nav__list nav__list--contacts">
+          <li class="nav__item">
+            <h4 class="nav__list-title">Бесплатная горячая линия</h4>
+            <a href="#" class="nav__link">8 800 0000 000</a>
+          </li>
+          <li class="nav__item">
+            <h4 class="nav__list-title">Помощь в Whatsapp</h4>
+            <a href="#" class="nav__link">8 926 912 70 03</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__credits">
+        <ul class="footer__credits-links">
+          <li class="footer__credits-item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__credits-link footer__credits-link--accent"
+              >Дизайн: Tomatdesign</a
+            >
+          </li>
+          <li class="footer__credits-item">
+            <a
+              href="#"
+              class="footer__credits-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Публичная оферта</a
+            >
+          </li>
+          <li class="footer__credits-item">
+            <a
+              href="#"
+              class="footer__credits-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Конфиденциальность</a
+            >
+          </li>
+          <li class="footer__credits-item">
+            <a
+              href="#"
+              class="footer__credits-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cookie</a
+            >
+          </li>
+        </ul>
+        <ul class="footer__payments">
+          <li class="footer__payments-item">
+            <img
+              src="./img/common/mir.svg"
+              alt="МИР"
+              class="footer__payments-logo"
+            >
+          </li>
+          <li class="footer__payments-item">
+            <img
+              src="./img/common/mastercard.svg"
+              alt="Мастеркард"
+              class="footer__payments-logo"
+            >
+          </li>
+          <li class="footer__payments-item">
+            <img
+              src="./img/common/visa.svg"
+              alt="Виза"
+              class="footer__payments-logo"
+            >
+          </li>
+          <li class="footer__payments-item">
+            <img
+              src="./img/common/paykeeper.png"
+              alt="Paykeeper"
+              class="footer__payments-logo"
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-article">
+        <p class="footer__bottom-desc">
+          Профессиональная уходовая косметика Cosmomedica
+        </p>
+        <p class="footer__bottom-desc">
+          BEFORE / AFTER application of cosmetics. Cosmomedica receives lots of
+          positive feedback from our clients along with inspiring pictures of
+          progress. These photographs show the effectiveness of our products
+          against a range of issues: acne, pigmentation, allergies, deformation
+          of the face shape and others. However, the results and effectiveness
+          of skincare products are not guaranteed and depend on a number of
+          factors, such as the case severity, consistency in following the
+          skincare routine, diet and many other variable factors.
+        </p>
+        <p class="footer__bottom-desc">
+          The results after cosmetics application may vary and can be achieved
+          at a different time frame.Cosmomedica makes no representation or
+          warranties of any kind, expressed or implied about the completeness,
+          accuracy, reliability, or suitability with respect to the products,
+          services, or related graphics contained on the website for any
+          purpose. Any reliance or expectation is therefore strictly at the
+          Client`s own risk.
+        </p>
+      </div>
+      <div class="footer__bottom-article">
+        <p class="footer__bottom-desc">
+          Лучшие косметические средства по уходу за кожей
+        </p>
+        <p class="footer__bottom-desc">
+          BEFORE / AFTER application of cosmetics. Cosmomedica receives lots of
+          positive feedback from our clients along with inspiring pictures of
+          progress. These photographs show the effectiveness of our products
+          against a range of issues: acne, pigmentation, allergies, deformation
+          of the face shape and others. However, the results and effectiveness
+          of skincare products are not guaranteed and depend on a number of
+          factors, such as the case severity, consistency in following the
+          skincare routine, diet and many other variable factors.
+        </p>
+        <p class="footer__bottom-desc">
+          The results after cosmetics application may vary and can be achieved
+          at a different time frame.Cosmomedica makes no representation or
+          warranties of any kind, expressed or implied about the completeness,
+          accuracy, reliability, or suitability with respect to the products,
+          services, or related graphics contained on the website for any
+          purpose. Any reliance or expectation is therefore strictly at the
+          Client`s own risk.
+        </p>
+      </div>
+      <p class="footer__bottom-copy">
+        Cosmomedica Shop — официальный интернет-магазин российского бренда
+        косметики
+      </p>
+    </div>
+  </div>
+</footer>
+
+<section class="poppa modal" id="callback-pop">
+  <div class="modal__inner">
+    <h2 class="modal__title">Запись на косультацию</h2>
+    <form action="#" class="modal__form">
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Ваши контакты</h3>
+        <label class="input input--name">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="ФИО"
+    data-value-missing="Заполните ФИО"
+    data-value-invalid="Что-то не так с введенным именем"
+    autocomplete="name"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+        <label class="input input--tel input--invalid">
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Телефон"
+    maxlength="25"
+    minlength="10"
+    data-value-missing="Напишите телефон"
+    data-value-invalid="Проверьте корректность телефона"
+    autocomplete="tel"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+      </fieldset>
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Дата и время</h3>
+        <div class="modal__group-column">
+          <div class="calendar calendar--inline calendar--only-future">
+            <input type="text" name="date" class="calendar__input" readonly>
+          </div>
+          <div class="timepicker">
+            <select name="time" id="consult_time" class="timepicker__select">
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+            </select>
+          </div>
+        </div>
+        <!-- <p class="modal__caption section-text--right">Московское время</p> -->
+      </fieldset>
+      <button class="button button--primary button--fullsize button--light modal__button">Оставить заявку</button>
+    </form>
+  </div>
+</section>
+<section class="poppa modal" id="callback-pop-service">
+  <div class="modal__inner">
+    <h2 class="modal__title">Запись на посещение <br> Cosmomedica Center <br> на Малой Бронной</h2>
+    <form action="#" class="modal__form">
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Ваши контакты</h3>
+        <label class="input input--name">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="ФИО"
+    data-value-missing="Заполните ФИО"
+    data-value-invalid="Что-то не так с введенным именем"
+    autocomplete="name"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+        <label class="input input--tel input--invalid">
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Телефон"
+    maxlength="25"
+    minlength="10"
+    data-value-missing="Напишите телефон"
+    data-value-invalid="Проверьте корректность телефона"
+    autocomplete="tel"
+  >
+  <svg class="input__error-icon">
+    <use xlink:href="./img/common/warn.svg#warn"></use>
+  </svg>
+</label>
+
+      </fieldset>
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Дата и время</h3>
+        <div class="modal__group-column">
+          <div class="calendar calendar--inline calendar--only-future">
+            <input type="text" name="date" class="calendar__input" readonly>
+          </div>
+          <div class="timepicker">
+            <select name="time" id="service_time" class="timepicker__select">
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="11:00–12:00">11:00–12:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+              <option value="12:00–13:00">12:00–13:00</option>
+              <option value="13:00–14:00">13:00–14:00</option>
+            </select>
+          </div>
+        </div>
+        <!-- <p class="modal__caption section-text--right">Московское время</p> -->
+      </fieldset>
+      <fieldset class="modal__group">
+        <h3 class="modal__group-title">Комментарий</h3>
+        <label class="textarea">
+          <textarea name="user_comment" class="textarea__field" placeholder="Интересующие вас услуги, специалист или другие пожелания"></textarea>
+        </label>
+      </fieldset>
+      <button class="button button--primary button--fullsize button--light modal__button">Заказать обратный звонок</button>
+    </form>
+  </div>
+</section>
+<section class="poppa modal" id="thanks-pop-service">
+  <div class="modal__inner">
+    <h2 class="modal__title">Запись на посещение <br> Cosmomedica Center <br> на Малой Бронной</h2>
+    <div class="modal__group">
+      <h3 class="modal__group-title">Ожидайте обратный звонок</h3>
+      <p class="modal__desc">Сотрудник Cosmomedica Center свяжется с вами в ближайшее рабочее время для подтверждения и уточнения деталей вашего посещения.</p>
+    </div>
+    <a href="#" class="button button--primary button--fullsize button--light modal__button">Вернуться к странице услуг</a>
+  </div>
+</section>
+<section class="poppa modal" id="thanks-pop">
+  <div class="modal__inner">
+    <h2 class="modal__title">Запись на косультацию</h2>
+    <div class="modal__group">
+      <h3 class="modal__group-title">Вы успешно записаны на личную консультацию в WhatsApp</h3>
+      <p class="modal__desc">Дата и время</p>
+      <p class="modal__desc modal__desc--bigger">1 декабря (четверг), 13:30</p>
+    </div>
+  </div>
+</section>
+
+    </div>
+
+    
+
+<!-- <div class="snack" id="snack-cookies">
+  <div class="container gtc-2 snack__container">
+    <div class="snack__info">
+      <span class="snack__hl">Our Site Uses Cookies</span>
+      By clicking Agree, you agree to our
+      <a href="#" class="link link--inline">terms of service</a>,
+      <a href="#" class="link link--inline">privacy policy</a>
+      and
+      <a href="#" class="link link--inline">cookies policy</a>
+    </div>
+    <div class="snack__buttons flex">
+      <button class="snack__button button button--primary">Agree</button>
+    </div>
+  </div>
+</div> -->
+
+    <script src="./js/bundle.min.js?_v=20221129002856"></script>
+  </body>
+</html>
