@@ -18,6 +18,9 @@ font-weight: 400;
 font-size: 14px;
 line-height: 17px;
 color: #A1AEB3;
+  @media (max-width: 601px) {
+    margin-bottom: 12px
+  }
 }
 .case-review-card__desc {
   font-weight: 400;

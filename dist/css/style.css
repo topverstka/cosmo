@@ -5914,6 +5914,11 @@ span.flatpickr-weekday {
   line-height: 17px;
   color: #A1AEB3;
 }
+@media (max-width: 601px) {
+  .case-review-card__title {
+    margin-bottom: 12px;
+  }
+}
 
 .case-review-card__desc {
   font-weight: 400;
@@ -5967,7 +5972,7 @@ span.flatpickr-weekday {
 }
 
 .person-result--has-top-gap {
-  margin-top: 85px;
+  margin-top: 65px;
 }
 @media (max-width: 1024px) {
   .person-result--has-top-gap {
@@ -7784,6 +7789,12 @@ span.flatpickr-weekday {
   }
 }
 
+@media (min-width: 602px) {
+  .page__changes .captions-1-1__desc {
+    line-height: 1.4;
+  }
+}
+
 .changes-cases {
   margin-bottom: 82px;
 }
@@ -7890,6 +7901,84 @@ span.flatpickr-weekday {
 @media (max-width: 576px) {
   .changes-cases ~ .captions {
     margin-top: -10px;
+  }
+}
+
+.page__changes-cases .page-heading {
+  margin-bottom: 22px;
+}
+@media (max-width: 601px) {
+  .page__changes-cases .page-heading {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 35px;
+  }
+}
+
+.page__changes-cases .page-heading__title {
+  margin-bottom: 64px;
+}
+@media (max-width: 601px) {
+  .page__changes-cases .page-heading__title {
+    margin-bottom: 14px;
+  }
+}
+
+.page__changes-cases .page-heading__captions {
+  column-gap: 10px;
+}
+
+.page__changes-cases .captions-1-1__desc {
+  font-family: var(--ff-regular);
+}
+
+.page__changes-cases .captions-1-1__desc:not(.captions-1-1__desc--big) {
+  line-height: 1.45;
+  max-width: 100%;
+}
+@media (max-width: 601px) {
+  .page__changes-cases .captions-1-1__desc:not(.captions-1-1__desc--big) {
+    line-height: 1.2;
+  }
+}
+
+.page__changes-cases .person-result {
+  margin-bottom: 46px;
+}
+@media (max-width: 601px) {
+  .page__changes-cases .person-result {
+    padding-bottom: 27px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 602px) {
+  .page__changes-cases .related-products {
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 602px) {
+  .page__changes-cases .related-products__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 602px) {
+  .page__changes-cases .related-products__gallery ~ .container {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 601px) {
+  .page__changes-cases .person-result__compare .person-result__media {
+    height: inherit;
+  }
+}
+
+@media (max-width: 601px) {
+  .page__changes-cases .person-result__media-pic {
+    --gallery-item-h: 172px;
   }
 }
 

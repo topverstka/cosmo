@@ -244,3 +244,9 @@
     padding-right: 10px;
   }
 }
+
+.page__changes .captions-1-1__desc {
+  @media (min-width: 602px) {
+    line-height: 1.4;
+  }
+}
