@@ -375,7 +375,7 @@ if (cartSidebar && cartColumns) {
 
 const rowFilters = document.querySelectorAll('.row-filters__select');
 rowFilters.forEach((filter, index, arr) => {
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 1024 || filter.parentElement.classList.contains('blog__filters')) {
     filter.style.zIndex = arr.length - index;
   }
 })

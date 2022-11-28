@@ -5737,7 +5737,6 @@ span.flatpickr-weekday {
 @media (max-width: 576px) {
   .row-filters {
     margin-bottom: 16px;
-    height: 50vh;
     flex-wrap: wrap;
     justify-content: stretch;
   }
@@ -5761,14 +5760,6 @@ span.flatpickr-weekday {
   --maxw: 256px;
   z-index: 2;
   position: relative;
-}
-@media (max-width: 1024px) {
-  .row-filters__select {
-    margin-right: 0;
-    --maxw: 100%;
-    width: 100%;
-    --bg: #F0F3F5;
-  }
 }
 
 .row-filters__select-label {
@@ -5819,21 +5810,6 @@ span.flatpickr-weekday {
   .row-filters__select--has-label .select__list--single > .select__item {
     white-space: initial;
     height: 42px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .row-filters__select .select__list--dropdown {
-    position: fixed;
-    top: unset;
-    bottom: 0;
-    bottom: -100vh;
-    z-index: 10;
-    width: 100%;
-    height: 420px;
-    max-height: initial;
-    border-radius: 0;
-    padding-top: 40px;
   }
 }
 
@@ -6267,6 +6243,10 @@ span.flatpickr-weekday {
     font-size: 14px;
     font-weight: 400;
     padding-left: 20px;
+    padding-right: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 12px;
   }
 }
 
@@ -8429,11 +8409,18 @@ span.flatpickr-weekday {
 .blog__filters {
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
 }
 @media (max-width: 601px) {
   .blog__filters {
-    padding-left: 0;
-    padding-right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 601px) {
+  .blog__filters .select__list--single > .select__item {
+    font-size: 12px;
   }
 }
 
@@ -9046,9 +9033,34 @@ span.flatpickr-weekday {
   margin-bottom: 31px;
 }
 
+@media (max-width: 1025px) {
+  .catalog-products__filters {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .catalog-products__filters .row-filters__select .select__list--dropdown {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    bottom: -100vh;
+    z-index: 10;
+    width: 100%;
+    height: 420px;
+    max-height: initial;
+    border-radius: 0;
+    padding-top: 40px;
+  }
+}
+
 @media (min-width: 1025px) {
   .catalog-products__filters .row-filters__select {
     margin-right: 8px;
+    --bg: #F0F3F5;
+    margin-right: 0;
+    --maxw: 100%;
+    width: 100%;
   }
 }
 

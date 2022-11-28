@@ -10,7 +10,6 @@
   row-gap: 8px;
   @media (max-width: 576px) {
     margin-bottom: 16px;
-    height: 50vh;
     flex-wrap: wrap;
     justify-content: stretch;
   }
@@ -36,12 +35,6 @@
   --maxw: 256px;
   z-index: 2;
   position: relative;
-  @media (max-width: 1024px) {
-    margin-right: 0;
-    --maxw: 100%;
-    width: 100%;
-    --bg: #F0F3F5;
-  }
 }
 .row-filters__select-label {
   margin-right: -8px;
@@ -88,21 +81,6 @@
   @media (max-width: 1024px) {
     white-space: initial;
     height: 42px;
-  }
-}
-
-.row-filters__select .select__list--dropdown {
-  @media (max-width: 1024px) {
-    position: fixed;
-    top: unset;
-    bottom: 0;
-    bottom: -100vh;
-    z-index: 10;
-    width: 100%;
-    height: 420px;
-    max-height: initial;
-    border-radius: 0;
-    padding-top: 40px;
   }
 }
 
