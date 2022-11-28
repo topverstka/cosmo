@@ -18,6 +18,9 @@
   justify-content: space-between;
   align-items: flex-start;
   min-height: var(--sidebar-minh);
+  @media (max-width: 601px) {
+    margin-bottom: 30px
+  }
 }
 .blog-sidebar-about__top,
 .blog-sidebar-about__bottom {
@@ -33,6 +36,7 @@
   margin-bottom: 28px;
   @media (max-width: 768px) {
     margin-bottom: 16px;
+    font-size: 11px
   }
 }
 .blog-sidebar-about__desc {
@@ -41,13 +45,19 @@
   line-height: 120%;
   color: #F0F3F5;
   @media (max-width: 768px) {
-    font-size: 16px
+    font-size: 16px;
+    font-size: 17px;
+    line-height: 1.14;
   }
 }
 
 .blog-related__title {
   margin-bottom: 30px;
   padding-left: 28px;
+  @media (max-width: 601px) {
+    padding-left: 20px;
+    margin-bottom: 26px;
+  }
 }
 .blog-related-card {
   min-height: var(--sidebar-minh);
@@ -60,6 +70,11 @@
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 8px;
+  @media (max-width: 601px) {
+    padding: 25px;
+    padding-top: 9px;
+    --sidebar-minh: 350px;
+  }
 }
 .blog-related-card:last-of-type {
   margin-bottom: 0;
@@ -88,7 +103,19 @@
   color: #000000;
   @media (max-width: 601px) {
     font-size: 16px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+  }
+}
+.blog-related-card__meta {
+  @media (max-width: 601px) {
+  font-size: 12px;
+  }
+}
 
+.blog-sidebar-about__button {
+  @media (max-width: 601px) {
+    padding-top: 11px;
+    padding-bottom: 14px;
+    font-size: 14px;
   }
 }
