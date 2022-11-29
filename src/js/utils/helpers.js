@@ -53,7 +53,7 @@ removeAll();
  * @param {Тайминг} time Время перерыва между сраабатыванием функции
  * @returns void
  */
-const debounce = function (fn, time) {
+export function debounce(fn, time) {
   if (!fn && !time) return;
   let timeout;
 
@@ -66,7 +66,6 @@ const debounce = function (fn, time) {
     timeout = setTimeout(functionCall, time);
   };
 };
-debounce;
 
 /**
  * Scroll page to top

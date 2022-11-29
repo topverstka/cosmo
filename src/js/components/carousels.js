@@ -1,10 +1,10 @@
 "use strict"
 
 import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
+import {debounce} from "../utils/helpers.js";
 
 if (document.querySelector('.promo-carousel')) {
   function normalizePaginationOffset(swiper) {
-
     if (window.innerWidth > 601) return
 
     const currentSlideCard = swiper.slides[swiper.activeIndex].querySelector('.promo-carousel-card')
@@ -17,6 +17,7 @@ if (document.querySelector('.promo-carousel')) {
   let promoSlider = new Swiper(".promo-carousel", {
     modules: [Navigation, Autoplay, Pagination],
     spaceBetween: 100,
+    autoHeight: true,
     autoplay: {
       delay: 3000,
     },
@@ -32,6 +33,9 @@ if (document.querySelector('.promo-carousel')) {
         normalizePaginationOffset(this)
       },
     }
+  });
+  window.addEventListener("resize", (e) => {
+    debounce(normalizePaginationOffset(promoSlider), 200);
   });
 }
 

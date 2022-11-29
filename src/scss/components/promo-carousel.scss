@@ -1,11 +1,11 @@
 .promo-carousel {
-  height: 680px;
+  min-height: 680px;
   margin-bottom: 8px;
   @media (max-width: 1024px) {
-    height: 500px;
+    min-height: 500px;
   }
   @media (max-width: 601px) {
-    height: initial;
+    min-height: initial;
   }
 }
 .promo-carousel__slide {
@@ -112,6 +112,7 @@
   justify-content: flex-start;
   max-width: 280px;
   width: 100%;
+  transition: all 0.3s ease;
   @media (max-width: 601px) {
     left: 24px
   }
