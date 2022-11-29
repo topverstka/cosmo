@@ -48,6 +48,9 @@ if (buttonCart) {
 }
 
 
+/**
+ * Header Auth 
+ */
 function showAuth() {
     buttonAuth.parentElement.querySelector('.auth').classList.add('auth--visible')
     buttonAuth.classList.add('header__button--active');
@@ -112,6 +115,9 @@ if (buttonAuth) {
 }
 
 
+/**
+ * Header Snacks
+ */
 const SNACKS_SHOW_CLASS = 'header__snacks--show';
 const SNACK_VISIBLE_CLASS = 'header-snack--visible';
 const headerSnacksContainer = document.querySelector(".header__snacks");
@@ -140,27 +146,51 @@ function toggleSnackVisibility(snackName) {
 
 const headerPickers = document.querySelectorAll(".header__picker");
 headerPickers.forEach((picker) => {
-picker.addEventListener("click", () => {
-  const snackName = picker.dataset.snack;
-  if (!snackName) return;
-
+  picker.addEventListener("click", () => {
+    const snackName = picker.dataset.snack;
+    if (!snackName) return;
     toggleSnackVisibility(snackName)
   });
 });
 
 const headerSnacks = document.querySelectorAll(".header-snack");
 headerSnacks.forEach((snack) => {
-const closer = snack.querySelector(".header-snack__close");
+  const closer = snack.querySelector(".header-snack__close");
   closer.addEventListener("click", () => {
     closeSnack(snack)
   });
 });
-window.addEventListener("scroll", () => {
-  if (headerSnacksContainer.classList.contains(SNACKS_SHOW_CLASS)) {
-    closeSnack();
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (headerSnacksContainer.classList.contains(SNACKS_SHOW_CLASS)) {
+//     closeSnack();
+//   }
+// });
 
+
+/**
+ * При выборе нового языка меняет надпись языка в шапке
+ */
 document.getElementById("dropdown-city").addEventListener("change", (e) => {
   document.querySelector(".header__geo .header__picker-text").innerText = e.target.value;
 });
+
+
+
+const header = document.querySelector('.header');
+const HEADER_SCROLLED_CLASS = 'header--scrolled'
+
+function isWindowScrolled() {
+  return window.scrollY > 5;
+}
+
+function stickyHeader() {
+  if (isWindowScrolled()) {
+    header.classList.add(HEADER_SCROLLED_CLASS);
+  } else {
+    header.classList.remove(HEADER_SCROLLED_CLASS);
+  }
+}
+
+window.addEventListener('scroll', stickyHeader);
+window.addEventListener('orientationchange', stickyHeader);
+stickyHeader();

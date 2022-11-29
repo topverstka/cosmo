@@ -74,6 +74,7 @@
   line-height: var(--chips-lh);
   font-weight: var(--chips-fw);
   border: var(--chips-border);
+  display: block;
 }
 .chips__caption:hover {
   @media (any-hover: hover) {

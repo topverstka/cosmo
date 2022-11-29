@@ -65,14 +65,16 @@ body._lock {
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
   // overflow: hidden;
 }
 .wrapper > .content {
   position: relative;
   z-index: 1;
   flex: 1 0 auto;
+}
+.main {
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 /*
