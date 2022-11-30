@@ -109,13 +109,8 @@ body._lock {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  // padding-right: 16px;
-  // padding-left: 16px;
-  @media (max-width: 1200px) {
-    max-width: 720px;
-  }
-  @media (max-width: 962px) {
-    max-width: 100%;
+  @media (max-width: 1023px) {
+    max-width: calc(100% - 16px);
   }
 }
 input[type="search"]::-webkit-search-cancel-button {

@@ -5,13 +5,13 @@ import {debounce} from "../utils/helpers.js";
 
 if (document.querySelector('.promo-carousel')) {
   function normalizePaginationOffset(swiper) {
-    if (window.innerWidth > 601) return
+    if (window.innerWidth > 768) return
 
     const currentSlideCard = swiper.slides[swiper.activeIndex].querySelector('.promo-carousel-card')
     const paginationBottomOffset = +currentSlideCard.getBoundingClientRect().height;
     const initialPaginationBottomOffset = 38;
     const newPaginationOffset = Math.round(initialPaginationBottomOffset) + Math.round(paginationBottomOffset);
-    console.log(newPaginationOffset)
+    // console.log(newPaginationOffset)
     swiper.pagination.el.style.bottom =  newPaginationOffset + 'px';
   }
   let promoSlider = new Swiper(".promo-carousel", {

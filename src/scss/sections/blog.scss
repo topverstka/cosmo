@@ -7,14 +7,12 @@
   gap: 8px;
   padding-top: 8px;
   margin-bottom: 40px;
-  @media (max-width: 1200px) {
+  @media (max-width: 1023px) {
     grid-template-columns: 1fr;
-    max-width: 720px;
+    // max-width: 720px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  @media (max-width: 962px) {
-    max-width: 100%;
   }
   @media (max-width: 601px) {
     margin-bottom: 18px;// main.html magazine
@@ -26,6 +24,9 @@
   grid-template-columns: auto 350px;
   background-color: #fff;
   border-radius: 12px;
+  @media (max-width: 1400px) and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media (max-width: 601px) {
     grid-template-columns: auto 280px;
   }
@@ -36,6 +37,10 @@
 
 .blog-card--bigger-title .blog-card__title {
   font-size: 27px;
+  @media (max-width: 1400px) and (min-width: 1280px) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
   @media (max-width: 601px) {
     font-size: 25px;
     margin-bottom: 3px;
@@ -56,6 +61,9 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 40px;
+  @media (max-width: 1400px) and (min-width: 1280px) {
+    padding: 35px;
+  }
 }
 .blog-card--grey .blog-card__info {
   @media (max-width: 576px) {
@@ -68,6 +76,9 @@
   font-weight: 400;
   line-height: 120%;
   color: #000000;
+  @media (max-width: 1400px) and (min-width: 1280px) {
+    font-size: 17.8px
+  }
   @media (max-width: 601px) {
     margin-bottom: 10px;
   }
@@ -78,6 +89,9 @@
   font-weight: 400;
   line-height: 17px;
   color: #a1aeb3;
+  @media (max-width: 1400px) and (min-width: 1280px) {
+    font-size: 12.44px
+  }
   @media (max-width: 576px) {
     margin-bottom: 34px;
     font-family: "RF Dewi", sans-serif;
@@ -88,6 +102,9 @@
   // margin-bottom: 28px;
   padding-left: 18px;
   padding-right: 18px;
+  @media (max-width: 1400px) and (min-width: 1280px) {
+    font-size: 12.44;
+  }
   @media (max-width: 601px) {
     margin-bottom: 0;
     font-size: 14px;
@@ -180,6 +197,7 @@
     font-size: 12px;
   }
 }
+
 
 @import "./blog-article";
 @import "./blog-sidebar";

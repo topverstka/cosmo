@@ -4,7 +4,7 @@
   @media (max-width: 1024px) {
     min-height: 500px;
   }
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     min-height: initial;
   }
 }
@@ -15,7 +15,7 @@
   @media (max-width: 1130px) {
     grid-template-columns: 70.421348314606741573033707865169% auto;
   }
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     grid-template-columns: 1fr;
   }
 }
@@ -38,9 +38,8 @@
 .promo-carousel__img {
   border-radius: 12px 0px 0px 12px;
   object-fit: cover;
-  @media (max-width: 601px) {
-
-  border-radius: 12px 12px 0 0;
+  @media (max-width: $mobile-break) {
+    border-radius: 12px 12px 0 0;
   }
 }
 .promo-carousel__info {
@@ -53,7 +52,7 @@
   padding-bottom: 78px;
   background-color: #fff;
   border-radius: 0px 12px 12px 0px;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     padding-right: 33px;
     border-radius: 0 0 12px 12px;
     padding-bottom: 77px;
@@ -66,7 +65,7 @@
   font-weight: 400;
   line-height: 14px;
   color: #a1aeb3;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     font-family: unset;
     margin-bottom: 12px;
   }
@@ -77,20 +76,20 @@
   font-weight: 400;
   line-height: 110%;
   color: #000000;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     margin-bottom: 20px
   }
 }
 
 .promo-carousel__desc {
-  @media (max-width: 610px) {
+  @media (max-width: $mobile-break) {
     margin-bottom: 60px
 
   }
 }
 
 .promo-carousel__button {
-  @media  (max-width: 601px) {
+  @media  (max-width: $mobile-break) {
     --fz-button: 14px;
     padding-left: 20px;
     padding-right: 20px;
@@ -113,7 +112,7 @@
   max-width: 280px;
   width: 100%;
   transition: all 0.3s ease;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     left: 24px
   }
 }
@@ -152,7 +151,7 @@
   padding-right: 15px;
   background-color: #5f6c75;
   border-radius: 6px;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     padding: 16.75px;
     display: grid;
     grid-template-columns: 52.974930362116991643454038997214% auto;
@@ -172,7 +171,7 @@
   font-weight: 400;
   line-height: 120%;
   color: #f0f3f5;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     font-size: 14px;
     margin-bottom: 0;
   }
@@ -184,12 +183,12 @@
   line-height: 17px;
   color: #a1aeb3;
   font-family: "RF Dewi", sans-serif;
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     display: none
   }
 }
 .promo-carousel-card__button {
-  @media (max-width: 601px) {
+  @media (max-width: $mobile-break) {
     --fz-button: 12px;
     padding: 7px 17px 9px;
     max-width: fit-content;
