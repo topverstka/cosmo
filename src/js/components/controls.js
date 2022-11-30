@@ -191,3 +191,38 @@ textareas.forEach(area => {
 });
 
 
+/**
+ * Stepper
+ */
+const steppers = document.querySelectorAll('.stepper');
+function getStepperValue(stepper) {
+  const input = stepper.querySelector('.stepper__value');
+  let value = +input.value;
+  return value
+}
+function setStepperValue(stepper, value) {
+  const input = stepper.querySelector('.stepper__value');
+  input.value = value;
+}
+function decrementStepper(stepper) {
+  let value = getStepperValue(stepper)
+  value = value < 1 ? value : value - 1;
+  setStepperValue(stepper, value)
+}
+function incrementStepper(stepper) {
+  let value = getStepperValue(stepper)
+  value++;
+  setStepperValue(stepper, value)
+}
+steppers.forEach((stepper) => {
+  const minus = stepper.querySelector('.stepper__button-minus');
+  const plus = stepper.querySelector('.stepper__button-plus');
+  const input = stepper.querySelector('.stepper__value');
+
+  minus.addEventListener("click", (e) => {
+    decrementStepper(stepper)
+  });
+  plus.addEventListener("click", (e) => {
+    incrementStepper(stepper)
+  });
+})
