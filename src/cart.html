@@ -98,9 +98,34 @@
       </main>
 
       @@include('tpls/footer.html',{})
-    </div>
+      </div>
 
-    @@include('tpls/modals.html', {})
+      @@include('tpls/modals.html', {})
+      <section class="poppa poppa--wide out-of-stock-pop" id="out-of-stock-pop">
+      <div class="search-pop__container">
+        <div class="out-of-stock-pop__gallery cart__gallery products--layout-horizontal">
+          @@include('tpls/cards/card.html',{img: "product-cropped.png", className: "cart__product product-card--out"})
+          @@include('tpls/cards/card.html',{img: "product-cropped.png", className: "cart__product product-card--out"})
+        </div>
+        <div class="container flex flex--center flex--column">
+          <button class="button button--primary button--light out-of-stock-pop__button-remove">Удалить закончившийся товар</button>
+          <button class="button--thirdly out-of-stock-pop__button-remove-all">Удалить все отсутствующие товары (2)</button>
+        </div>
+        <div class="search-pop__results">
+          <h2 class="section-title search-pop__title">
+            Возможно, вас заинтересуют другие товары
+          </h2>
+          <div class="search-pop__gallery">
+            <div class="search-pop__gallery-inner">
+              @@include('./tpls/cards/card.html',{img: "card.png"})
+              @@include('./tpls/cards/card.html',{img: "card.png"})
+              @@include('./tpls/cards/card.html',{img: "card.png"})
+              @@include('./tpls/cards/card.html',{img: "card.png"})
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="./js/bundle.min.js"></script>
   </body>
 </html>
