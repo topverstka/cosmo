@@ -171,7 +171,26 @@
 }
 
 .button-cart__counter {
-  display: none;
+  position: absolute;
+  top: 40px; 
+  opacity: 0; 
+  left: 0;
+  right: 0;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s ease, transform 0.3s ease, opacity 0.2s ease;
+  padding-bottom: 2px;
+}
+.button-cart--not-empty.header__button--active .button-cart__counter {
+  top: 0;
+  opacity: 1;
+}
+.button-cart--not-empty.header__button--active .button__icon {
+  transform: translateY(-40px);
+  opacity: 0;
 }
 .button--circle {
   border-radius: 50%;

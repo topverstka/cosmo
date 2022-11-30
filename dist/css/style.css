@@ -2539,7 +2539,28 @@ select {
 }
 
 .button-cart__counter {
-  display: none;
+  position: absolute;
+  top: 40px;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s ease, transform 0.3s ease, opacity 0.2s ease;
+  padding-bottom: 2px;
+}
+
+.button-cart--not-empty.header__button--active .button-cart__counter {
+  top: 0;
+  opacity: 1;
+}
+
+.button-cart--not-empty.header__button--active .button__icon {
+  transform: translateY(-40px);
+  opacity: 0;
 }
 
 .button--circle {
@@ -5521,6 +5542,8 @@ span.flatpickr-weekday {
   display: block;
   max-width: 100%;
   border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media (any-hover: hover) {
@@ -5541,6 +5564,10 @@ span.flatpickr-weekday {
   }
 }
 
+.minicart__message + .minicart__bottom {
+  margin-top: 25px;
+}
+
 .auth {
   opacity: 0;
   transform-origin: top;
@@ -5553,6 +5580,7 @@ span.flatpickr-weekday {
   background: #5F6C75;
   border-radius: 12px;
   padding: 20px;
+  color: #fff;
 }
 
 .auth--visible {
@@ -5580,6 +5608,8 @@ span.flatpickr-weekday {
 
 .auth__button-submit {
   border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .auth__fieldset {
@@ -5610,6 +5640,47 @@ span.flatpickr-weekday {
 
 .auth__button-method-toggler {
   --button-color: #fff;
+}
+
+.auth__name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 34px;
+  display: block;
+}
+
+.auth__list-links {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.auth__list-item {
+  margin-bottom: 16px;
+}
+
+.auth__logout {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.auth__logout .button__icon {
+  background-color: #fff;
+  -webkit-mask: url("../img/common/logout.svg");
+  mask: url("../img/common/logout.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-bottom: -1px;
 }
 
 .modal {
@@ -6439,19 +6510,13 @@ span.flatpickr-weekday {
 }
 @media (max-width: 920px) {
   .header__nav {
-    margin-right: 0;
-    width: 100%;
-    padding-top: 28px;
-  }
-}
-@media (max-width: 920px) {
-  .header__nav {
     position: relative;
     transform: translateY(-100vh);
     transition: all 0.3s ease;
     background: #F0F3F5;
     left: 0;
     top: 25px;
+    width: 100%;
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
@@ -6462,9 +6527,10 @@ span.flatpickr-weekday {
     z-index: 1;
     padding-bottom: 32px;
     padding-top: 0;
-    padding-left: 49px;
-    width: 100%;
-    padding-right: 22px;
+    margin-left: -8px;
+    width: calc(100% + 48px);
+    padding-left: 52px;
+    padding-right: 32px;
     overflow-y: overlay;
   }
   .header__nav::-webkit-scrollbar {
@@ -6483,15 +6549,6 @@ span.flatpickr-weekday {
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .header__nav {
-    margin-left: -22px;
-    width: calc(100% + 33px);
-    padding-left: 36px;
-    padding-right: 45px;
-  }
-}
-
 .header--opened .header__nav {
   transform: translateY(0);
 }
@@ -6860,6 +6917,7 @@ span.flatpickr-weekday {
   background: #fff;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
   opacity: 0;
+  transition: all 0.65s ease, opacity 0.3s ease, pointer-events 0s;
   transform: scaleY(0);
   transform-origin: top;
 }
@@ -6931,15 +6989,15 @@ span.flatpickr-weekday {
 }
 
 .header__nav-item-dropdown:hover,
-.header__nav-link:hover ~ .header__nav-item-dropdown {
+.header__nav-link--hovered ~ .header__nav-item-dropdown {
   pointer-events: initial;
   opacity: 1;
   transform: scaleY(1);
-  transition: all 0.65s ease, pointer-events 0s;
+  transition: all 0.65s ease, opacity 0.3s ease, pointer-events 0s;
 }
 @media (max-width: 920px) {
   .header__nav-item-dropdown:hover,
-.header__nav-link:hover ~ .header__nav-item-dropdown {
+.header__nav-link--hovered ~ .header__nav-item-dropdown {
     max-height: 3000px;
   }
 }
@@ -7100,7 +7158,12 @@ span.flatpickr-weekday {
 @media (max-width: 1280px) {
   .header__nav-item-dropdown-card--single.blog-card {
     max-width: 100%;
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+.header__nav-item-dropdown-card--single .blog-card__media {
+  padding: 0;
 }
 
 .header__nav-item-dropdown-card--single .blog-card__info {

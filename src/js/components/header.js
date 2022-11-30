@@ -1,3 +1,28 @@
+"use strict"
+/**
+ * header__nav
+ */
+const BURGER_OPENED_WIDTH = 920;
+const headerNavLinks = document.querySelectorAll('.header__nav-link');
+const HEADER_NAV_LINK_HOVERED = "header__nav-link--hovered";
+headerNavLinks.forEach((link) => {
+  link.addEventListener("mouseover", (e) => {
+    if (window.innerWidth > BURGER_OPENED_WIDTH) return;
+    link.classList.add(HEADER_NAV_LINK_HOVERED)
+  });
+  link.addEventListener("mouseleave", (e) => {
+      link.classList.remove(HEADER_NAV_LINK_HOVERED)
+  });
+  link.addEventListener("click", (e) => {
+    setTimeout(() => {
+      if (!link.classList.contains(HEADER_NAV_LINK_HOVERED)) return
+      link.classList.remove(HEADER_NAV_LINK_HOVERED);
+    }, 1)
+  });
+});
+
+
+
 /**
  * header__controls
  */
@@ -28,14 +53,17 @@ if (buttonCart) {
     toggleMinicart()
   });
 
-  minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
-  const yOffset = e.target.scrollTop;
-  if (yOffset > 20) {
-    e.target.classList.add('minicart__content--scrolled')
-  } else {
-    e.target.classList.remove('minicart__content--scrolled')
+  if (minicart.querySelector('.minicart__content')) {
+
+    minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
+      const yOffset = e.target.scrollTop;
+      if (yOffset > 20) {
+        e.target.classList.add('minicart__content--scrolled')
+      } else {
+        e.target.classList.remove('minicart__content--scrolled')
+      }
+    })
   }
-  })
   window.addEventListener('scroll', () => {
     minicart.classList.remove('minicart--visible')
   })

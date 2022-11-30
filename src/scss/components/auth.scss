@@ -11,6 +11,7 @@
   border-radius: 12px;
   padding: 20px;
   // max-height: 557px;
+  color: #fff;
 }
 .auth--visible {
   opacity: 1;
@@ -37,6 +38,8 @@
 
 .auth__button-submit {
   border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .auth__fieldset {
@@ -66,4 +69,34 @@
 
 .auth__button-method-toggler {
   --button-color: #fff;
+}
+
+.auth__name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 34px;
+  display: block;
+}
+.auth__list-links {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.auth__list-item {
+  margin-bottom: 16px;
+}
+.auth__logout {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.auth__logout .button__icon {
+  background-color: #fff;
+  @include getmask("../img/common/logout.svg");
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-bottom: -1px;
 }

@@ -136,6 +136,8 @@
   display: block;
   max-width: 100%;
   border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .minicart__button:hover {
   @media (any-hover: hover) {
@@ -150,4 +152,8 @@
   @media (max-width: 1020px) {
     font-size: 12px;
   }
+}
+
+.minicart__message + .minicart__bottom {
+  margin-top: 25px;
 }
