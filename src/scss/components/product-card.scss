@@ -19,6 +19,9 @@
   background-color: var(--bg-element);
   --brad: 5px;
   border-radius: var(--brad);
+  @media (max-width: 768px) and (min-width: 602px) {
+    --brad: 25px;
+  }
   @media (max-width: 576px) {
     --brad: 12px;
     // padding: 12px; В макете popular было 20пк отступ
@@ -34,7 +37,13 @@
   @media (max-width: 1300px) {
     min-height: 258px;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 1279px) and (min-width: 1024px) {
+    min-height: 247px;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    min-height: 735px;
+  }
+  @media (max-width: 601px) {
     min-height: 319px;
   }
 }
@@ -63,7 +72,7 @@
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.1875;
   color: #000000;
   max-width: 70%;
   min-width: 100px;
@@ -71,7 +80,16 @@
     font-size: 14.22px;
     margin-bottom: 10px;
   }
-  @media (max-width: $mobile-break) {
+  @media (max-width: 1279px) and (min-width: 1025px) {
+    font-size: 11.37px;
+    max-width: 74%;
+    margin-bottom: 8.53px;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  @media (max-width: 601px) {
     margin-bottom: 11px;
     // max-width: calc(100% - 20px);
     min-width: initial;
@@ -97,7 +115,17 @@
   --chips-lh: 12px;
   --chips-padding: 7px 9px 9px 9px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 1279px) {
+    --chips-fz: 7.11px; 
+    --chips-padding: 5px 5.5px 6.4px;
+    max-width: 74%;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    --chips-fz: 20px; 
+    --chips-padding: 14px 17px 19px;
+    max-width: 74%;
+  }
+  @media (max-width: 601px) {
     // max-width: 100%; // В magazine на главной было так
   }
 }
@@ -115,6 +143,13 @@
   padding: 0;
   margin-right: 8px;
   transition: var(--tr);
+  @media (max-width: 1279px) and (min-width: 769px) {
+    --size: 32px;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    --size: 86px;
+    margin-right: 16px;
+  }
 }
 .product-card__button-add::before {
   position: absolute;
@@ -171,6 +206,11 @@
   transition: color 0s, background-color 0.3s, transform 0.3s;
   transform: scaleX(0);
   transform-origin: left;
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 18px;
+    padding-left: 60px;
+    padding-right: 40px;
+  }
 }
 .product-card__button-add:hover .button__text {
   @media (any-hover: hover) {
@@ -203,6 +243,12 @@
   color: #000000;
   transition: all 0.35s ease;
   white-space: nowrap;
+  @media (max-width: 1279px) and (min-width: 1024px)  {
+    font-size: 9.96px;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 28.67px;
+  }
 }
 .product-card__button-add:hover ~ .product-card__price {
   opacity: 0  ;
@@ -215,6 +261,9 @@
   margin-right: 4px;
   color: #a1aeb3;
   text-decoration-line: line-through;
+  @media (max-width: 768px) and (min-width: 602px) {
+    margin-right: 16px;
+  }
 }
 
 .product-card--tall .product-card__img {
@@ -401,6 +450,10 @@
   --icon-color: #fff;
   transition: all 0.3s ease;
   pointer-events: none;
+  @media (max-width: 768px) and (min-width: 602px) {
+    max-width: 370px;
+    padding: 10px;
+  }
 }
 .product-card__tooltip::before {
   content: "";
@@ -437,6 +490,9 @@
   height: var(--size);
   transition: inherit;
   pointer-events: auto;
+  @media (max-width: 768px) and (min-width: 602px) {
+    --size: 50px;
+  }
 }
 .product-card__tooltip:hover .product-card__tooltip-icon {
   @media (any-hover:hover) {
@@ -450,7 +506,7 @@
   font-family: 'RF Dewi', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.242;
   color: #FFFFFF;
   // max-width: 0px;
   // max-height: 1px;
@@ -459,6 +515,11 @@
   transform-origin: right;
   transform: scaleX(0);
   opacity: 0;
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 25px;
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+  }
 }
 .product-card__tooltip:hover .product-card__tooltip-desc {
   @media (any-hover:hover) {

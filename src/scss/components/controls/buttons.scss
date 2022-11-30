@@ -121,6 +121,12 @@
   fill: var(--icon-color);
   stroke: none;
   transition: all var(--tr) ease;
+  @media (max-width: 768px) and (min-width: 602px) {
+    width: var(--button-icon-size, 26px);
+    min-width: var(--button-icon-size, 26px);
+    max-width: var(--button-icon-size, 26px);
+    height: 26px;
+  }
 }
 .button--icon-stroke .button__icon {
   fill: transparent;

@@ -42,7 +42,7 @@
 .page-heading__title {
   font-weight: 400;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 1.2;
   text-align: center;
   color: #000000;
   // margin-bottom: 40px;
@@ -52,12 +52,19 @@
     margin-bottom: 16px;
     line-height: 1.1;
   }
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 48px;
+    margin-bottom: 65px
+  }
 }
 .page-heading__title:only-child {
   // margin-bottom: 60px;
   margin-bottom: 64px; //doc.html
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 602px) {
+    margin-bottom: 65px
+  }
+  @media (max-width: 601px) {
     margin-bottom: 32px
   }
 }

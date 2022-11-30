@@ -226,6 +226,7 @@
   min-width: var(--size);
   height: var(--size);
   padding: 0;
+  --button-icon-size: 12px;
 }
 .header__button--active {
   --button-bg: var(--c-accent);
