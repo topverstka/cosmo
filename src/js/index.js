@@ -291,7 +291,7 @@ stickyPageHeadings.forEach((heading) => {
     const top = heading.getBoundingClientRect().top;
     const titleHeight = heading.querySelector('.page-heading__title').getBoundingClientRect().height
     const titlePadding = window.getComputedStyle(heading).paddingTop
-    heading.style.top = `-${titleHeight + titlePadding}px`
+    // heading.style.top = `-${titleHeight + titlePadding}px`
     // console.log(top, titleHeight)
     // if(top <= -titleHeight -5) {
     if(top <= titleHeight -5) {

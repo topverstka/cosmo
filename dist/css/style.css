@@ -11434,7 +11434,7 @@ span.flatpickr-weekday {
 }
 
 .services__sidebar-card {
-  top: 70px;
+  top: 150px;
 }
 @media (max-width: 1024px) {
   .services__sidebar-card {
@@ -11493,7 +11493,7 @@ span.flatpickr-weekday {
 }
 
 .page__services-all .page-heading--sticky {
-  top: -65px;
+  top: -25px;
 }
 @media (max-width: 420px) {
   .page__services-all .page-heading--sticky {
