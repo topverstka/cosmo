@@ -1,8 +1,14 @@
 .promo-carousel {
   min-height: 680px;
   margin-bottom: 8px;
+  @media (max-width: 1400px) {
+    min-height: 480px;
+  }
+  @media (max-width: 1280px) {
+    min-height: 480px;
+  }
   @media (max-width: 1024px) {
-    min-height: 500px;
+    min-height: 450px;
   }
   @media (max-width: $mobile-break) {
     min-height: initial;
@@ -112,6 +118,9 @@
   max-width: 280px;
   width: 100%;
   transition: all 0.3s ease;
+  @media (max-width: 1130px) {
+    left: calc(70.921348% + 20px);
+  }
   @media (max-width: $mobile-break) {
     left: 24px
   }
