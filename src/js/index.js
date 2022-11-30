@@ -294,7 +294,7 @@ stickyPageHeadings.forEach((heading) => {
     // heading.style.top = `-${titleHeight + titlePadding}px`
     // console.log(top, titleHeight)
     // if(top <= -titleHeight -5) {
-    if(top <= titleHeight -5) {
+    if(top <= titleHeight) {
       heading.classList.add('page-heading--sticky-run')
     } else {
       heading.classList.remove('page-heading--sticky-run')
