@@ -3179,9 +3179,11 @@ select {
   line-height: 19px;
   color: #000000;
   margin-bottom: 8px;
+  display: block;
 }
 
 .radio__desc {
+  display: block;
   font-family: "RF Dewi", sans-serif;
   font-style: normal;
   font-weight: 400;
