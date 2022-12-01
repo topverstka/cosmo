@@ -436,6 +436,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     docsDesc.forEach((desc) => {
       const height = desc.getBoundingClientRect();
       const spoilerButton = desc.parentElement.querySelector('.doc-card__spoiler-button')
+
+      if (!spoilerButton) return
+
       if (height < SPOILER_HEIGHT_BREAKPOINT) {
         spoilerButton.remove();
       } else {
