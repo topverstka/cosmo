@@ -421,3 +421,31 @@ if (filterButton && filterBlock) {
     }
   })
 }
+
+
+/*
+ * Spoilers
+ * Добавь для .doc модификатор doc--has-spoilers
+ */
+const SPOILER_HEIGHT_BREAKPOINT = 180;
+const SPOILER_MINIFIED_CLASS = 'doc-card__desc--minified';
+window.addEventListener('DOMContentLoaded', (event) => {
+  const spoilerDocs = document.querySelectorAll('.doc--has-spoilers');
+  spoilerDocs.forEach((doc) => {
+    const docsDesc = doc.querySelectorAll('.doc-card__desc');
+    docsDesc.forEach((desc) => {
+      const height = desc.getBoundingClientRect();
+      const spoilerButton = desc.parentElement.querySelector('.doc-card__spoiler-button')
+      if (height < SPOILER_HEIGHT_BREAKPOINT) {
+        spoilerButton.remove();
+      } else {
+        desc.classList.add(SPOILER_MINIFIED_CLASS);
+        spoilerButton.addEventListener("click", (e) => {
+          desc.classList.remove(SPOILER_MINIFIED_CLASS);
+          spoilerButton.remove();
+        });
+      }
+    })
+  })
+  
+});

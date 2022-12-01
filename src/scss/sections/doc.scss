@@ -104,3 +104,10 @@
     padding-top: 30px
   }
 }
+
+.doc--has-spoilers .doc-card__desc.doc-card__desc--minified {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
