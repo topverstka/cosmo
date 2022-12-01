@@ -28,6 +28,9 @@
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 26px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 52px;
+  }
 }
 .gallery-accordion__item {
   transition: all 0.3s ease;
@@ -56,6 +59,9 @@
   margin-right: auto;
   --button-color: #A1AEB3;
   font-size: 14px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
   @media (max-width: 601px) {
     font-size: 12px;
   }
