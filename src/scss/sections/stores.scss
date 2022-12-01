@@ -274,6 +274,7 @@
   overflow: auto;
   height: 100%;
   position: relative;
+  @include macscrollbar;
 }
 .stores__details-gallery::before {
   position: sticky;
