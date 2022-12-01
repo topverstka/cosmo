@@ -45,9 +45,16 @@
   padding-left: 12.5px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.2;
   color: #000;
   border: none;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 32px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 40px
+  }
   @media (max-width: 601px) {
     font-size: 12px;
     padding-top: 0;
@@ -66,6 +73,9 @@
   background: #f0f3f5;
   border-radius: 6px;
   transition: all 0.3s ease;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 75px;
+  }
   @media (max-width: 601px) {
     --size: 34px;
     
@@ -77,6 +87,9 @@
   min-width: var(--size);
   height: var(--size);
   stroke: #000;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 34px;
+  }
 }
 .search__button:hover {
   @media (any-hover: hover) {

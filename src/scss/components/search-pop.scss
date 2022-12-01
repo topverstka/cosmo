@@ -32,7 +32,7 @@
   grid-template-columns: repeat(4, 1fr);
   row-gap: 8px;
   column-gap: 8px;
-  @media (max-width: 601px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-wrap: nowrap;
     row-gap: 0;
@@ -63,7 +63,7 @@
 
 .search-pop__suggests {
   margin-bottom: 40px;
-  @media (max-width: 601px) {
+  @media (max-width: 768px) {
     overflow: hidden;
     margin-left: -20px;
     width: calc(100% + 40px);
@@ -75,7 +75,7 @@
   align-items: center;
   padding-left: 22px;
   padding-right: 20px;
-  @media (max-width: 601px) {
+  @media (max-width: 768px) {
     margin-bottom: -20px;
     overflow-x: auto;
   }
@@ -94,10 +94,8 @@
   background: #f0f3f5;
   border-radius: 100px;
   transition: all 0.3s ease;
-  @media (max-width: 601px) {
-    margin-bottom: 20px;
-    white-space: nowrap;
-  }
+  white-space: nowrap;
+  margin-bottom: 20px;
 }
 .search-pop__suggest--search::before {
   display: block;
@@ -137,11 +135,23 @@
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
-  @media (min-width: 602px) {
+  @media (min-width: 768px) {
     padding-left: 20px;
     margin-bottom: 37px;
   }
 }
 .search-pop__title + .search-pop__gallery {
   margin-top: 40px;
+}
+
+.search-pop__gallery .product-card {
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-right: 16px;
+  }
+}
+.search-pop__gallery .product-card__info {
+  @media (min-width: 602px) and (max-width: 768px) {
+    min-height: 600px;
+    min-width: 440px;
+  }
 }

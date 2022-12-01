@@ -3621,9 +3621,18 @@ select {
   padding-left: 12.5px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.2;
   color: #000;
   border: none;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .search__input {
+    font-size: 32px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 40px;
+  }
 }
 @media (max-width: 601px) {
   .search__input {
@@ -3647,6 +3656,11 @@ select {
   border-radius: 6px;
   transition: all 0.3s ease;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .search__button {
+    --size: 75px;
+  }
+}
 @media (max-width: 601px) {
   .search__button {
     --size: 34px;
@@ -3659,6 +3673,11 @@ select {
   min-width: var(--size);
   height: var(--size);
   stroke: #000;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .search__button-icon {
+    --size: 34px;
+  }
 }
 
 @media (any-hover: hover) {
@@ -6223,7 +6242,7 @@ span.flatpickr-weekday {
   row-gap: 8px;
   column-gap: 8px;
 }
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .search-pop__gallery-inner {
     display: flex;
     flex-wrap: nowrap;
@@ -6258,7 +6277,7 @@ span.flatpickr-weekday {
 .search-pop__suggests {
   margin-bottom: 40px;
 }
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .search-pop__suggests {
     overflow: hidden;
     margin-left: -20px;
@@ -6273,7 +6292,7 @@ span.flatpickr-weekday {
   padding-left: 22px;
   padding-right: 20px;
 }
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .search-pop__suggests-track {
     margin-bottom: -20px;
     overflow-x: auto;
@@ -6294,12 +6313,8 @@ span.flatpickr-weekday {
   background: #f0f3f5;
   border-radius: 100px;
   transition: all 0.3s ease;
-}
-@media (max-width: 601px) {
-  .search-pop__suggest {
-    margin-bottom: 20px;
-    white-space: nowrap;
-  }
+  white-space: nowrap;
+  margin-bottom: 20px;
 }
 
 .search-pop__suggest--search::before {
@@ -6354,7 +6369,7 @@ span.flatpickr-weekday {
   line-height: 140%;
   color: #a1aeb3;
 }
-@media (min-width: 602px) {
+@media (min-width: 768px) {
   .search-pop__results-count {
     padding-left: 20px;
     margin-bottom: 37px;
@@ -6363,6 +6378,19 @@ span.flatpickr-weekday {
 
 .search-pop__title + .search-pop__gallery {
   margin-top: 40px;
+}
+
+@media (min-width: 602px) and (max-width: 768px) {
+  .search-pop__gallery .product-card {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 602px) and (max-width: 768px) {
+  .search-pop__gallery .product-card__info {
+    min-height: 600px;
+    min-width: 440px;
+  }
 }
 
 .minicart {
