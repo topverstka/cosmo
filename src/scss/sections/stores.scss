@@ -221,12 +221,8 @@
 
 
 .stores__details {
-  // transform: scaleY(0);
-  // opacity: 0;
-  // pointer-events: none;
   transition: all 0.45s ease, pointerEvents 0s;
   transform-origin: top;
-  // max-height: 1px;
   overflow: hidden;
   z-index: 1;
   height: 100%;
@@ -234,6 +230,10 @@
   flex-direction: column;
   align-items: flex-start;
   max-width: 450px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    
+  }
 }
 .stores__menu--show-details {
   // max-width: 450px;
@@ -275,6 +275,9 @@
   height: 100%;
   position: relative;
   @include macscrollbar;
+  @media (max-width: 768px) {
+    overflow: initial;
+  }
 }
 .stores__details-gallery::before {
   position: sticky;
@@ -309,6 +312,9 @@
     #ffffff 24.79%,
     rgba(255, 255, 255, 0) 100%
   );
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .stores__details-info {
   margin-bottom: 30px;
@@ -318,15 +324,21 @@
 }
 
 .stores__details-media {
+  display: block;
   margin-bottom: 8px;
 }
+.stores__details-pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .stores__details-img {
+  display: block;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .stores__city-picker {
   --brad: 6px;
-}
-.stores__city-picker {
   --fz: 12px;
 }

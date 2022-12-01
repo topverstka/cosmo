@@ -6,7 +6,15 @@ import DismalModules, { acc } from "./utils/modules.js";
 
 import "./components/header.js"
 import "./components/controls.js"
+import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Toolbar: {
+    display: [
+      "close",
+    ],
+  },
+});
 
 
 /**

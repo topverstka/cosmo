@@ -4,6 +4,7 @@
 // Библиотеки
 @import "./libs/swiper";
 @import "./libs/flatpickr.min";
+@import "./libs/fancybox";
 // @import "./libs/lightgallery";
 // @import "./libs/rangeslider";
 
@@ -230,4 +231,69 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .page__cart .page-heading__title {
     margin-bottom: 0;
+}
+
+
+
+.fancybox__thumbs {
+  padding-bottom: 22px;
+}
+.fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after {
+  display: none;
+}
+.fancybox__thumbs .carousel__slide {
+  padding: 6px;
+  border-radius: 6px;
+}
+.fancybox__thumbs .carousel__slide.is-nav-selected {
+  border: 1px solid #fff;
+}
+
+.fancybox__nav svg {
+  display: none;
+}
+.fancybox__nav .carousel__button {
+  width: 60px;
+  height: 40px;
+  border-radius: 60px;
+  background-color: #fff;
+  transition: 0.3s all ease;
+  @media (max-width: 768px) {
+    display: none
+  }
+}
+.fancybox__nav .carousel__button::after {
+  content: "";
+  @include getmask("../img/common/arrow-left-mask.svg");
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+}
+.fancybox__nav .carousel__button.is-next::after {
+  transform: scaleX(-1);
+}
+.fancybox__nav .carousel__button.is-prev {
+  left: 20px;
+}
+.fancybox__nav .carousel__button.is-next {
+  right: 20px;
+}
+
+.fancybox__nav .carousel__button:hover {
+  @media (any-hover:hover) {
+    background-color: #000;
+  }
+}
+.fancybox__nav .carousel__button:hover::after {
+  @media (any-hover:hover) {
+    background-color: #fff;
+  }
+}
+.carousel__button svg {
+  width: 32px;
+  height: 32px;
 }
