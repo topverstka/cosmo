@@ -9501,7 +9501,7 @@ span.flatpickr-weekday {
   }
 }
 
-.blog-article .products--layout-horizontal .product-card__button-add::before {
+.blog-article .products--layout-horizontal .product-card:not(.product-card--in-cart) .product-card__button-add::before {
   background-color: #fff;
 }
 
