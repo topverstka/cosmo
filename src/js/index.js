@@ -396,7 +396,17 @@ if (filterButton && filterBlock) {
   window.addEventListener('click', (e) => {
     if (e.target.contains(filterBlock)) return;
     if (e.target.contains(filterButton)) return;
+    
+    let isClickBeyondFilters = true;
+    const isSelect = e.path.map((item, index, pathElems) => {
+      if (pathElems.length - 4 < index) return;
+      if (item.classList.contains('select')) {
+        isClickBeyondFilters = false;
+      }
+    })
 
-    filterBlock.classList.remove(FILTER_OPENED_CLASS);
+    if (isClickBeyondFilters) {
+      filterBlock.classList.remove(FILTER_OPENED_CLASS);
+    }
   })
 }
