@@ -21,7 +21,7 @@
   background: var(--button-bg, transparent);
   border-radius: 100px;
   transition: all 0.3s ease;
-  @media (max-width: 576px) {
+  @media (max-width: 601px) {
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -132,8 +132,11 @@
   fill: transparent;
   stroke: var(--icon-color);
 }
-.button__icon ~ .button__text{
+.button__icon ~ .button__text {
   margin-left: 8px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-left: 16px;
+  }
 }
 .button__icon--selected {
   position: absolute;

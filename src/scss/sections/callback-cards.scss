@@ -8,6 +8,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
+  @media (max-width: 768px) and (min-width: 602px) {
+    column-gap: 16px;
+  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     row-gap: 8px;
@@ -22,7 +25,10 @@
   justify-content: space-between;
   align-items: flex-start;
   min-height: 380px;
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 602px) {
+    min-height: 394px;
+  }
+  @media (max-width: 601px) {
     min-height: 192px;
     padding: 20px;
   }
@@ -33,7 +39,11 @@
   line-height: 110%;
   color: #000000;
   margin-bottom: 30px;
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 32px;
+    margin-bottom: 32px
+  }
+  @media (max-width: 601px) {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 13px;
@@ -47,21 +57,27 @@
   font-size: 14px;
   line-height: 140%;
   color: #000000;
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 24.58px;
+  }
+  @media (max-width: 601px) {
     font-size: 12px
   }
 }
 
 .callback-cards-card__desc br {
-  @media (max-width: 576px) {
+  @media (max-width: 601px) {
     display: none;
   }
 }
 
 .callback-cards-card__button {
   padding: 11px 18px 14px 18px;
+  @media (max-width: 768px) and (min-width: 602px) {
+    --fz-button: 24.58px;
+  }
   @media (max-width: 601px) {
-    --fz: 12px;
+    --fz-button: 12px;
     padding: 7px 15px 9px 15px;
     font-weight: 400
   }
