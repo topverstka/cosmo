@@ -80,6 +80,8 @@
     flex-wrap: wrap;
   }
   @media (max-width: 601px) {
+    --title-fz: 14px;
+    --item-fz: 16px;
     --title-bottom: 20px;
     --item-bottom: 14px;
     margin-bottom: 30px;

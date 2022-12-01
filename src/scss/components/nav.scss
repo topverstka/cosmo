@@ -66,11 +66,15 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 120%;
-  @media (max-width: 1023px) and (min-width: 602px) {
+  @media (max-width: 1024px) and (min-width: 769px) {
+    font-size: 9.96px;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
     font-size: 32px;
   }
   @media (max-width: 601px) {
     margin-bottom: 32px;
+    font-size: 14px
   }
 }
 .nav__list--contacts .nav__item:last-child {
