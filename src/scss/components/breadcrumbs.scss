@@ -15,7 +15,6 @@
   @media (min-width: 602px) and (max-width: 768px) {
     padding-top: 24px;
     margin-bottom: 57px;
-    padding-top: 2px;
     font-size: 24px;
   }
   @media (max-width: 768px) {
@@ -50,6 +49,7 @@
   align-items: center;
   padding-bottom: 20px;
   @media (min-width: 602px) and (max-width: 768px) {
+    padding-top: 2px;
     padding-bottom: 40px;
   }
 }

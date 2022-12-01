@@ -16,6 +16,10 @@
   --angle-color: #fff;
   --brad: 62px;
   --maxw: initial;
+  --fz: 14px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --fz: 28px;
+  }
 }
 .select > .select{
   --color: inherit;
@@ -114,7 +118,7 @@
 }
 .select__item {
   padding: 8px 20px 12px 20px;
-  font-size: 14px;
+  font-size: var(--fz);
   font-weight: 400;
   line-height: 140%;
   color: #000000;
@@ -129,7 +133,11 @@
   background: var(--bg);
   border-radius: var(--brad);
   // opacity: 0.4;
-  @media (max-width: 576px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: var(--fz);
+    padding-right: 60px;
+  }
+  @media (max-width: 601px) {
     padding-left: 20px;
   }
   @media (max-width: 420px) {
@@ -155,6 +163,10 @@
   transition: all 0.3s ease;
   transform: rotate(180deg);
   @include getmask("../img/common/arrow-circle.svg");
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 }
 .select.is-open .select__list--single::after {
   transform: rotate(0);

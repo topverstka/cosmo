@@ -78,6 +78,9 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+  }
   @media (max-width: 601px) {
     padding-left: 10px;
     padding-right: 10px;
