@@ -3015,7 +3015,7 @@ select {
   align-items: center;
   width: 100%;
 }
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   .pagination {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -3027,7 +3027,7 @@ select {
   border-radius: 8px;
   font-weight: 600;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.2;
   text-align: center;
   color: #000000;
   margin-right: 4px;
@@ -3035,6 +3035,13 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) and (min-width: 601px) {
+  .nav-page {
+    font-size: 24px;
+    margin-right: 10px;
+    padding: 16px 15px;
+  }
 }
 
 .nav-page:last-child {
@@ -3063,7 +3070,7 @@ select {
 .nav-prev {
   margin-right: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .nav-prev {
     margin-top: 16px;
     order: 100;
@@ -3092,7 +3099,7 @@ select {
 .nav-next {
   margin-left: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .nav-next {
     margin-top: 16px;
     order: 101;
