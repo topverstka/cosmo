@@ -2,9 +2,12 @@
   display: grid;
   grid-template-columns: auto minmax(320px, 469px);
   column-gap: 8px;
-  @media (max-width: 968px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     row-gap: 8px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    row-gap: 16px;
   }
 }
 
@@ -17,10 +20,12 @@
   @media (min-width: 602px) and (max-width: 768px) {
     padding-top: 40px;
   }
-  @media (max-width: 601px) {
-    padding-top: 20px;
+  @media (max-width: 768px) {
     margin-top: -30px;
     margin-bottom: 0;
+  }
+  @media (max-width: 601px) {
+    padding-top: 20px;
   }
 }
 .blog-article__container {

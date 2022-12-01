@@ -9146,10 +9146,15 @@ span.flatpickr-weekday {
   grid-template-columns: auto minmax(320px, 469px);
   column-gap: 8px;
 }
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .blog__article-layout {
     grid-template-columns: 1fr;
     row-gap: 8px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog__article-layout {
+    row-gap: 16px;
   }
 }
 
@@ -9165,11 +9170,15 @@ span.flatpickr-weekday {
     padding-top: 40px;
   }
 }
+@media (max-width: 768px) {
+  .blog-article {
+    margin-top: -30px;
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 601px) {
   .blog-article {
     padding-top: 20px;
-    margin-top: -30px;
-    margin-bottom: 0;
   }
 }
 

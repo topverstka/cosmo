@@ -7,7 +7,7 @@ const headerNavLinks = document.querySelectorAll('.header__nav-link');
 const HEADER_NAV_LINK_HOVERED = "header__nav-link--hovered";
 headerNavLinks.forEach((link) => {
   link.addEventListener("mouseover", (e) => {
-    if (window.innerWidth > BURGER_OPENED_WIDTH) return;
+    if (window.innerWidth > BURGER_OPENED_WIDTH && link.classList.contains('header__nav-item--mobile-open')) return;
     link.classList.add(HEADER_NAV_LINK_HOVERED)
   });
   link.addEventListener("mouseleave", (e) => {
@@ -48,13 +48,13 @@ function toggleMinicart() {
     showMinicat();
   }
 }
-if (buttonCart) {
+if (buttonCart && minicart) {
   buttonCart.addEventListener('click', () => {
     toggleMinicart()
   });
 
+  // scroll direcionts dim detector
   if (minicart.querySelector('.minicart__content')) {
-
     minicart.querySelector('.minicart__content').addEventListener('scroll', (e) => {
       const yOffset = e.target.scrollTop;
       if (yOffset > 20) {
@@ -64,12 +64,15 @@ if (buttonCart) {
       }
     })
   }
+
   window.addEventListener('scroll', () => {
-    minicart.classList.remove('minicart--visible')
+    hideMinicart();
   })
   window.addEventListener('click', (e) => {
-    if (e.path.includes(minicart)) return;
-    if (e.path.includes(buttonCart)) return;
+    const path = e.path || (e.composedPath && e.composedPath());
+    if (!path) return;
+    if (path.includes(minicart)) return;
+    if (path.includes(buttonCart)) return;
 
     hideMinicart();
   });
@@ -131,17 +134,30 @@ if (buttonAuth) {
     })
   })
   window.addEventListener('scroll', () => {
-    miniAuth.classList.remove('auth--visible')
+    hideAuth();
   })
 
   window.addEventListener('click', (e) => {
-    if (e.path.includes(miniAuth)) return;
-    if (e.path.includes(buttonAuth)) return;
+    const path = e.path || (e.composedPath && e.composedPath());
+    if (!path) return
+    if (path.includes(miniAuth)) return;
+    if (path.includes(buttonAuth)) return;
 
     hideAuth();
   })
 }
 
+function isClickedBeyond(e, selector) {
+    let isClickBeyond = true;
+    const path = event.path || (event.composedPath && event.composedPath());
+    const isSelect = path.map((item, index, pathElems) => {
+      if (pathElems.length - 4 < index) return;
+      if (item.classList.includes(selector)) {
+        isClickBeyond = false;
+      }
+    })
+    return isClickBeyond;
+}
 
 /**
  * Header Snacks

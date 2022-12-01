@@ -197,7 +197,8 @@ function cartRemove(product) {
 }
 productAdd.forEach((button) => {
   button.addEventListener('click', (e) => {
-    const currentCard = [...e.path].filter((item) => {
+    const path = e.path || (event.e && e.composedPath());
+    const currentCard = [...path].filter((item) => {
       if (!item.classList) return;
       return item.classList.contains('product-card')
     })[0];
@@ -398,7 +399,9 @@ if (filterButton && filterBlock) {
     if (e.target.contains(filterButton)) return;
     
     let isClickBeyondFilters = true;
-    const isSelect = e.path.map((item, index, pathElems) => {
+    const path = e.path || (event.e && e.composedPath());
+    const isSelect = path.map((item, index, pathElems) => {
+
       if (pathElems.length - 4 < index) return;
       if (item.classList.contains('select')) {
         isClickBeyondFilters = false;
