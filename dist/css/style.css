@@ -2304,7 +2304,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   --ff-regular: "RF Dewi Extended", sans-serif;
   --ff-title: "Poiret One", sans-serif;
   --fz-button: 14px;
-  --lh-button: 17px;
+  --lh-button: 1.21;
   --fw-button: 600;
 }
 @media (max-width: 1100px) {
@@ -14119,11 +14119,11 @@ span.flatpickr-weekday {
     max-width: 417px;
   }
 }
-@media (max-width: 769px) and (min-width: 602px) {
+@media (max-width: 768px) {
   .product-hero__info {
-    max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 100%;
   }
 }
 @media (max-width: 870px) {
@@ -14419,9 +14419,29 @@ span.flatpickr-weekday {
   height: 42px;
   display: none;
 }
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .product-hero__stepper {
+    height: 40px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .product-hero__stepper {
+    height: 35px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-hero__stepper {
+    height: 28px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .product-hero__stepper {
+    height: 82px;
+  }
+}
 
 .product-hero__order--in-cart .product-hero__stepper {
-  display: unset;
+  display: flex;
 }
 
 .product-hero__order-buy-button {
@@ -14473,6 +14493,30 @@ span.flatpickr-weekday {
     padding-top: 11px;
     padding-bottom: 13px;
   }
+}
+
+.product-hero__order-buy-button .button__icon {
+  position: relative;
+}
+
+.product-hero__order-buy-button .button__icon--cart,
+.product-hero__order-buy-button .button__icon--selected {
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.product-hero__order--in-cart .product-hero__order-buy-button {
+  --button-bg: var(--c-accent);
+  --button-color: var(--c-text-on);
+}
+
+.product-hero__order--in-cart .button__icon--cart {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.product-hero__order--in-cart .button__icon--selected {
+  transform: translateY(0) scale(2.5);
+  opacity: 1;
 }
 
 .product-hero__order-buy-button .button__text {
@@ -14560,8 +14604,8 @@ span.flatpickr-weekday {
 }
 @media (max-width: 601px) {
   .product-bullets__list {
-    padding-left: 28px;
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

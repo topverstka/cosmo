@@ -452,3 +452,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
   
 });
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  const productPageAddButton = document.querySelector('.product-hero__order-buy-button');
+  productPageAddButton.addEventListener("click", (e) => {
+    const productHeroOrder = document.querySelector('.product-hero__order');
+    productHeroOrder.classList.add('product-hero__order--in-cart')
+    productPageAddButton.querySelector('.button__text').innerText = productPageAddButton.dataset.inCartText
+  });
+});

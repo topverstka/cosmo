@@ -55,8 +55,10 @@
     grid-template-columns: 1fr;
   }
   @media (max-width: 601px) {
-    padding-left: 28px;
-    padding-right: 40px;
+    // padding-left: 28px;
+    // padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .product-bullets-card {
