@@ -86,3 +86,13 @@
   color: var(--chips-active-color);
   background: var(--chips-active-bg);
 }
+
+.chips__input:disabled ~ .chips__caption {
+  color: #A1AEB3;
+  cursor: default;
+}
+.chips__input:disabled ~ .chips__caption:hover {
+  @media (any-hover:hover) {
+    background-color: var(--chips-bg);
+  }
+}

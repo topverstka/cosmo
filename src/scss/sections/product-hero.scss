@@ -408,3 +408,30 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.product-hero__order--out .product-hero__order-buy-button {
+  --button-bg: #F0F3F5;
+  --button-color: #A1AEB3;
+  pointer-events: none;
+}
+.product-hero__order--out .product-hero__order-buy-button .button__icon {
+  --icon-color: var(--button-color);
+}
+
+.product-hero__price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media (max-width: 768px) {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+.product-hero__price-old {
+  margin-right: 8px;
+  color: #a1aeb3;
+  text-decoration-line: line-through;
+  @media (max-width: 768px) {
+    margin-right: 0
+  }
+}
