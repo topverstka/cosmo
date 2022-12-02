@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Товар</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221202025704" >
+    <link rel="stylesheet" href="./css/style.css?_v=20221202032551" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -1440,12 +1440,23 @@
 
         <section class="product-hero">
           <div class="product-hero__top">
-            <button class="product-hero-play button button--primary button--icon-stroke" type="button">
+            <button data-fancybox-trigger="product-pop-gallery" class="product-hero-play button button--primary button--icon-stroke" type="button">
               <svg class="button__icon">
                 <use xlink:href="./img/common/play-icon.svg#play" />
               </svg>
               <span class="button__text">Смотреть</span>
             </button>
+            <div class="product-hero__pop-slides">
+              <a data-fancybox="product-pop-gallery" href="https://www.youtube.com/watch?v=z2X2HaTvkl8">
+                <img src="./img/catalog/product-hero.png" alt="">
+              </a>
+              <a data-fancybox="product-pop-gallery" href="./img/catalog/facemask.jpg">
+                <img src="./img/catalog/facemask.jpg" alt="">
+              </a>
+              <a data-fancybox="product-pop-gallery" href="./img/catalog/card.png">
+                <img src="./img/catalog/card.png" alt="">
+              </a>
+            </div>
           </div>
           <div class="product-hero__main">
             <div class="product-hero__media">
@@ -2963,6 +2974,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221202025704"></script>
+    <script src="./js/bundle.min.js?_v=20221202032551"></script>
   </body>
 </html>

@@ -14041,6 +14041,10 @@ span.flatpickr-weekday {
   }
 }
 
+.product-hero__pop-slides {
+  display: none;
+}
+
 .product-hero-play .button__icon {
   width: 12px;
 }
@@ -15720,6 +15724,26 @@ span.flatpickr-weekday {
 
 .fancybox__thumbs .carousel__slide.is-nav-selected {
   border: 1px solid #fff;
+}
+
+.fancybox__thumbs .carousel__slide.has-video::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 60px;
+  display: block;
+  background-image: url("../img/common/play-icon-mask.svg");
+  background-position: 22px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-color: #fff;
+  width: 60px;
+  height: 42px;
 }
 
 .fancybox__nav svg {
