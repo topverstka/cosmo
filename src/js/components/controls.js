@@ -18,6 +18,7 @@ if (document.querySelector(".select")) {
       shouldSort: false,
       // removeItemButton: true,
       renderSelectedChoices: 'always',
+      maxItemCount: -1,
       classNames: {
         containerOuter: "select",
         input: "select__input",

@@ -150,6 +150,7 @@
 .select__list--single {
   position: relative;
 }
+.select__list--multiple::after,
 .select__list--single::after {
   position: absolute;
   top: 10px;
@@ -167,6 +168,10 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.select__list--multiple .select__item:nth-child(n+2) {
+  display: none;
 }
 .select.is-open .select__list--single::after {
   transform: rotate(0);

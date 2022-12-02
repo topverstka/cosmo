@@ -88,3 +88,9 @@
   }
 }
 
+
+.row-filters .select__list--dropdown .select__item {
+  @media (max-width: 1023px) {
+    margin-bottom: 8px;
+  }
+}
