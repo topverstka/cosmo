@@ -37,11 +37,12 @@
   position: relative;
 }
 .row-filters__select-label {
+  display: none;
   margin-right: -8px;
   z-index: 2;
   position: relative;
   white-space: nowrap;
-  display: block;
+  // display: block;
   @media (max-width: 1024px) {
     margin-right: auto;
   }
@@ -66,6 +67,9 @@
 .row-filters__select .choices__inner  {
   z-index: 7;
   position: relative;
+}
+.row-filters__select--has-label .row-filters__select-label  {
+  display: block;
 }
 .row-filters__select--has-label .select__item--selectable  {
   background-color: transparent;

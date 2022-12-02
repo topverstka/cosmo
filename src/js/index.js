@@ -397,14 +397,20 @@ rowFilters.forEach((filter, index, arr) => {
 
 const filterButton = document.querySelector('.catalog-products__filters-button-mobile');
 const filterBlock = document.querySelector('.catalog-products__filters');
+const buttonBack = document.querySelector('.catalog-products__filters-back-button')
 const FILTER_OPENED_CLASS = 'filters--opened'
 if (filterButton && filterBlock) {
   filterButton.addEventListener('click', () => {
     filterBlock.classList.add(FILTER_OPENED_CLASS);
   })
   window.addEventListener('click', (e) => {
-    if (e.target.contains(filterBlock)) return;
-    if (e.target.contains(filterButton)) return;
+    console.log(e.target)
+    if (e.target.contains(filterBlock)) {
+      filterBlock.classList.remove(FILTER_OPENED_CLASS);
+      return
+    }
+
+    if (e.target.contains(filterButton) || e.target.contains(buttonBack)) return;
     
     let isClickBeyondFilters = true;
     const path = e.path || (e.composedPath && e.composedPath());
@@ -415,6 +421,10 @@ if (filterButton && filterBlock) {
         isClickBeyondFilters = false;
       }
     })
+
+    if (e.target.classList.contains('row-filters')) {
+      isClickBeyondFilters = true;
+    }
 
     if (isClickBeyondFilters) {
       filterBlock.classList.remove(FILTER_OPENED_CLASS);
@@ -456,9 +466,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 window.addEventListener('DOMContentLoaded', (event) => {
   const productPageAddButton = document.querySelector('.product-hero__order-buy-button');
-  productPageAddButton.addEventListener("click", (e) => {
-    const productHeroOrder = document.querySelector('.product-hero__order');
-    productHeroOrder.classList.add('product-hero__order--in-cart')
-    productPageAddButton.querySelector('.button__text').innerText = productPageAddButton.dataset.inCartText
-  });
+  if (productPageAddButton) {
+    productPageAddButton.addEventListener("click", (e) => {
+      const productHeroOrder = document.querySelector('.product-hero__order');
+      productHeroOrder.classList.add('product-hero__order--in-cart')
+      productPageAddButton.querySelector('.button__text').innerText = productPageAddButton.dataset.inCartText
+    });
+  }
 });

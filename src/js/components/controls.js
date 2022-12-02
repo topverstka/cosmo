@@ -57,7 +57,24 @@ if (document.querySelector(".select")) {
     if (dropdown.classList.contains('select--allow-multiple')) {
       choicesOptions.maxItemCount = -1;
     }
-    const choices = new Choices(dropdown.querySelector(".select__input"), choicesOptions) });
+    const customSelect = new Choices(dropdown.querySelector(".select__input"), choicesOptions) 
+
+    const backButton = document.querySelector('.catalog-products__filters-back-button');
+    if (backButton) {
+      customSelect.passedElement.element.addEventListener('showDropdown', (e) => {
+        backButton.classList.add('is-visible')
+        const filterName = e.target.parentElement.parentElement.parentElement.querySelector('.row-filters__select-label').innerText;
+        if (!filterName) return
+
+          console.log(backButton, filterName)
+        backButton.querySelector('.button__text').innerText = filterName;
+      })
+      customSelect.passedElement.element,addEventListener('hideDropdown', (e) => {
+        backButton.classList.remove('is-visible')
+      })
+    }
+  });
+
 }
 
 if (document.querySelector(".timepicker")) {

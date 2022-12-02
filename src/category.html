@@ -83,64 +83,73 @@
           </nav>
           <div class="catalog-products">
             <form action="/api" class="catalog-products__filters row-filters">
-              <div class="select row-filters__select">
-                <select
-                  name="sort"
-                  id="catalog-sort"
-                  class="select__input"
-                >
-                  <option value="Сначала популярные">Сначала популярные</option>
-                  <option value="Сначала дорогие">Сначала дорогие</option>
-                  <option value="Сначала дешевые">Сначала дешевые</option>
-                </select>
-              </div>
-              <div class="select row-filters__select row-filters__select--has-label" >
-                <label class="row-filters__select-label">Cостояние кожи:</label>
-                <select
-                  name="filter[0]"
-                  id="filter-0"
-                  class="select__input"
-                >
-                  <option value="Комбинированное">Комбинированное</option>
-                  <option value="Нормальное">Нормлаьное</option>
-                  <option value="Сухое">Сухое</option>
-                </select>
-              </div>
-              <div class="select row-filters__select select row-filters__select--has-label">
-                <label class="row-filters__select-label">Потребности кожи:</label>
-                <select
-                  name="filter[1]"
-                  id="filter-1"
-                  class="select__input"
-                >
-                  <option value="Высокая влажность">Высокая влажность</option>
-                  <option value="Частый уход">Частый уход</option>
-                  <option value="Соблюдение температур">Соблюдение температур</option>
-                </select>
-              </div>
-              <div class="select row-filters__select row-filters__select--has-label">
-                <label class="row-filters__select-label">Время применения</label>
-                <select
-                  name="filter[2]"
-                  id="filter-2"
-                  class="select__input"
-                >
-                  <option value="Утро">Утро</option>
-                  <option value="День">День</option>
-                  <option value="Вечер">Вечер</option>
-                </select>
-              </div>
-              <div class="select row-filters__select row-filters__select--has-label">
-                <label class="row-filters__select-label">Объем:</label>
-                <select
-                  name="filter[3]"
-                  id="filter-3"
-                  class="select__input "
-                >
-                  <option value="250">250мл</option>
-                  <option value="200">200мл</option>
-                  <option value="100">100мл</option>
-                </select>
+              <button class="catalog-products__filters-back-button" type="button">
+                <svg class="button__icon">
+                  <use xlink:href="./img/common/arrow-left.svg#arrow-left" />
+                </svg>
+                <span class="button__text"></span>
+              </button>
+              <div class="catalog-products__filters-list">
+                <div class="select row-filters__select">
+                  <label class="row-filters__select-label">Цена</label>
+                  <select
+                    name="sort"
+                    id="catalog-sort"
+                    class="select__input"
+                  >
+                    <option value="Сначала популярные">Сначала популярные</option>
+                    <option value="Сначала дорогие">Сначала дорогие</option>
+                    <option value="Сначала дешевые">Сначала дешевые</option>
+                  </select>
+                </div>
+                <div class="select row-filters__select row-filters__select--has-label" >
+                  <label class="row-filters__select-label">Cостояние кожи:</label>
+                  <select
+                    name="filter[0]"
+                    id="filter-0"
+                    class="select__input"
+                  >
+                    <option value="Комбинированное">Комбинированное</option>
+                    <option value="Нормальное">Нормлаьное</option>
+                    <option value="Сухое">Сухое</option>
+                  </select>
+                </div>
+                <div class="select row-filters__select select row-filters__select--has-label">
+                  <label class="row-filters__select-label">Потребности кожи:</label>
+                  <select
+                    name="filter[1]"
+                    id="filter-1"
+                    class="select__input"
+                  >
+                    <option value="Высокая влажность">Высокая влажность</option>
+                    <option value="Частый уход">Частый уход</option>
+                    <option value="Соблюдение температур">Соблюдение температур</option>
+                  </select>
+                </div>
+                <div class="select row-filters__select row-filters__select--has-label">
+                  <label class="row-filters__select-label">Время применения</label>
+                  <select
+                    name="filter[2]"
+                    id="filter-2"
+                    class="select__input"
+                  >
+                    <option value="Утро">Утро</option>
+                    <option value="День">День</option>
+                    <option value="Вечер">Вечер</option>
+                  </select>
+                </div>
+                <div class="select row-filters__select row-filters__select--has-label">
+                  <label class="row-filters__select-label">Объем:</label>
+                  <select
+                    name="filter[3]"
+                    id="filter-3"
+                    class="select__input "
+                  >
+                    <option value="250">250мл</option>
+                    <option value="200">200мл</option>
+                    <option value="100">100мл</option>
+                  </select>
+                </div>
               </div>
               <div class="catalog-products__filters-buttons">
                 <button class="button button--primary catalog-products__filters-button-clear" type="button">Очистить все</button>
