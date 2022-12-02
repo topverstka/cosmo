@@ -1,7 +1,47 @@
 "use strict"
 
-import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs } from "swiper";
 import {debounce} from "../utils/helpers.js";
+
+if (document.querySelector('.product-hero-gallery') && document.querySelector('.product-hero-thumbs')) {
+  let swiper = new Swiper(".product-hero-thumbs", {
+    direction: 'vertical',
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    centerInsufficientSlides: true,
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+  });
+  let heroGallery = new Swiper(".product-hero-gallery", {
+    modules: [Navigation, Pagination],
+    spaceBetween: 10,
+    pagination: {
+      el: ".product-hero-gallery-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".product-hero-gallery-next",
+      prevEl: ".product-hero-gallery-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+    on: {
+      slideChange: function() {
+        swiper.slideTo(this.activeIndex);
+      },
+    }
+  });
+  swiper.on('slideChange', () => {
+    heroGallery.slideTo(swiper.activeIndex);
+  })
+  swiper.slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      heroGallery.slideTo(index);
+    })
+  })
+}
+
 
 if (document.querySelector('.promo-carousel')) {
   function normalizePaginationOffset(swiper) {
