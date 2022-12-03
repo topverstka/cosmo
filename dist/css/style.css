@@ -4249,18 +4249,19 @@ select {
     padding-top: 40px;
     padding-bottom: 40px;
     height: 540px;
-    overflow: hidden;
   }
 }
 @media (max-width: 768px) {
   .calendar--inline {
     max-width: 100%;
+    overflow: hidden;
   }
 }
 @media (max-width: 601px) {
   .calendar--inline {
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 285px;
   }
 }
 
@@ -4421,7 +4422,7 @@ select {
 
 .flatpickr-day {
   border-radius: 6px;
-  max-width: 32px;
+  max-width: 100%;
   max-height: 26px;
   display: flex;
   justify-content: center;
@@ -4433,7 +4434,6 @@ select {
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .flatpickr-day {
-    max-width: 64px;
     max-height: 52px;
     height: 52px;
     font-size: 24px;
