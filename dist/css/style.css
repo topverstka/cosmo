@@ -9556,7 +9556,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 1300px) {
   .changes-card {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -9591,7 +9591,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 1300px) {
   .changes-card:nth-of-type(even) {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 .changes-card:nth-of-type(even) .changes-card__before-img, .changes-card:nth-of-type(even) .changes-card__after-img {
@@ -9719,7 +9719,6 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .changes-card__after-pic {
     --size: 440px;
-    --height: 410px;
   }
 }
 @media (max-width: 610px) {

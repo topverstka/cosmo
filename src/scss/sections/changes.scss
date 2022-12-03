@@ -72,7 +72,7 @@
   justify-content: space-between;
   margin-right: 8px;
   @media (max-width: 1300px) {
-   justify-content: flex-start
+   justify-content: flex-end;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 16px;
@@ -98,7 +98,7 @@
 .changes-card:nth-of-type(even) {
   margin-right: 0;
   @media (max-width: 1300px) {
-    justify-content: flex-end
+    justify-content: flex-start;
   }
   .changes-card__before-img, .changes-card__after-img {
     object-position: top;
@@ -197,7 +197,6 @@
   }
   @media (min-width: 602px) and (max-width: 768px) {
     --size: 440px;
-    --height: 410px;
   }
   @media (max-width: 610px) {
     --size: 220px;
