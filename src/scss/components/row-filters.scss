@@ -69,6 +69,13 @@
   z-index: 7;
   position: relative;
 }
+.row-filters__select--has-label .choices__inner .select__item {
+  @media (max-width: 768px) {
+    max-width: 50px;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
 .row-filters__select--has-label .row-filters__select-label  {
   display: block;
 }

@@ -160,14 +160,23 @@
   position: absolute;
   left: -200vh;
   // transition: all 0.3s ease;
-  bottom: 41.5vh;
+  bottom: 42.5vh;
   z-index: 200;
-  height: 8.5vh;
+  height: 7.5vh;
   --button-icon-size: 30px;
   padding-left: 20px;
   @media (min-width: 1021px) {
     display: none;
   }
+}
+.catalog-products__filters-back-button::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .catalog-products__filters-back-button.is-visible {
   left: 0;
@@ -202,7 +211,7 @@
    margin-left: 0;
   }
 }
-.catalog-products__filters .row-filters__select .select__item--selectable {
+.catalog-products__filters .row-filters__select .select__list--dropdown .select__item--selectable {
   @media (max-width: 1023px) {
     background-color: #F0F3F5;
     border-radius: 6px;

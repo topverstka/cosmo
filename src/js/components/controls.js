@@ -172,6 +172,7 @@ calendars.forEach((calendar) => {
       altFormat: "D, j M Y",
       locale: Russian,
       time_24hr: true,
+      disableMobile: "true",
     }
   if (calendar.classList.contains('calendar--inline')) {
     calendarSettings.inline = true;

@@ -4434,6 +4434,10 @@ select {
   padding-left: 0;
 }
 
+.numInputWrapper {
+  transform: translateY(4px);
+}
+
 .calendar:not(.calendar--has-year) .flatpickr-monthDropdown-months ~ .numInputWrapper {
   display: none;
 }
@@ -7051,7 +7055,7 @@ span.flatpickr-weekday {
   width: 16px;
 }
 .minicart__content::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: #5F6C75;
   border-radius: 16px;
 }
 .minicart__content::-webkit-scrollbar-thumb {
@@ -7539,6 +7543,14 @@ span.flatpickr-weekday {
 .row-filters__select .choices__inner {
   z-index: 7;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .row-filters__select--has-label .choices__inner .select__item {
+    max-width: 50px;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .row-filters__select--has-label .row-filters__select-label {
@@ -11917,9 +11929,9 @@ span.flatpickr-weekday {
   align-items: center;
   position: absolute;
   left: -200vh;
-  bottom: 41.5vh;
+  bottom: 42.5vh;
   z-index: 200;
-  height: 8.5vh;
+  height: 7.5vh;
   --button-icon-size: 30px;
   padding-left: 20px;
 }
@@ -11927,6 +11939,16 @@ span.flatpickr-weekday {
   .catalog-products__filters-back-button {
     display: none;
   }
+}
+
+.catalog-products__filters-back-button::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .catalog-products__filters-back-button.is-visible {
@@ -11970,7 +11992,7 @@ span.flatpickr-weekday {
 }
 
 @media (max-width: 1023px) {
-  .catalog-products__filters .row-filters__select .select__item--selectable {
+  .catalog-products__filters .row-filters__select .select__list--dropdown .select__item--selectable {
     background-color: #F0F3F5;
     border-radius: 6px;
   }

@@ -117,6 +117,9 @@
 .flatpickr-current-month .flatpickr-monthDropdown-months {
   padding-left: 0;
 }
+.numInputWrapper {
+  transform: translateY(4px);
+}
 .calendar:not(.calendar--has-year) .flatpickr-monthDropdown-months ~ .numInputWrapper {
   display: none;
 }
