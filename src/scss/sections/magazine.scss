@@ -29,12 +29,14 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 24px 20px;
-  background: #5f6c75;
   border-radius: 12px;
   @media (max-width: 601px) {
     padding: 20px;
     padding-right: 17px;
   }
+}
+.magazine-card:first-child {
+  background: #5f6c75;
 }
 
 .magazine-card__title {

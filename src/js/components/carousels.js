@@ -56,10 +56,15 @@ if (document.querySelector('.promo-carousel')) {
   }
   let promoSlider = new Swiper(".promo-carousel", {
     modules: [Navigation, Autoplay, Pagination],
-    spaceBetween: 100,
+    spaceBetween: 10,
     autoHeight: true,
     autoplay: {
       delay: 3000,
+    },
+    breakpoints: {
+      769: {
+        spaceBetween: 100,
+      }
     },
     pagination: {
       el: ".promo-carousel__pagination",

@@ -69,7 +69,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 50px;
+  padding: 40px; //main.html
+  // padding: 50px;
   @media (max-width: 1400px) and (min-width: 1281px) {
     padding: 40px;
   }
@@ -116,12 +117,15 @@
 }
 .blog-card__desc {
   margin-bottom: 16px;
-  font-size: 18.67px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.21;
   color: #a1aeb3;
+  font-family: 'RF Dewi', sans-serif;
+  @media (min-width: 1800px) {
+    font-size: 18.67px;
+  }
   @media (max-width: 1400px) and (min-width: 1281px) {
-    font-size: 14px
   }
   @media (max-width: 1280px) and (min-width: 1025px) {
     font-size: 12.44px;

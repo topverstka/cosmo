@@ -1,6 +1,10 @@
 .promo-carousel {
   min-height: 680px;
   margin-bottom: 8px;
+  @media (min-width: 1400px) and (max-width: 1440px) {
+    max-height: 680px;
+    
+  }
   @media (max-width: 1400px) {
     min-height: 480px;
   }
@@ -55,7 +59,7 @@
   justify-content: space-between;
   padding: 20px;
   padding-right: 12px;
-  padding-bottom: 78px;
+  padding-bottom: 88px;
   background-color: #fff;
   border-radius: 0px 12px 12px 0px;
   @media (max-width: $mobile-break) {
@@ -160,6 +164,7 @@
   padding-right: 15px;
   background-color: #5f6c75;
   border-radius: 6px;
+  padding-bottom: 28px;
   @media (max-width: $mobile-break) {
     padding: 16.75px;
     display: grid;

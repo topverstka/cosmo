@@ -5154,6 +5154,11 @@ span.flatpickr-weekday {
   min-height: 680px;
   margin-bottom: 8px;
 }
+@media (min-width: 1400px) and (max-width: 1440px) {
+  .promo-carousel {
+    max-height: 680px;
+  }
+}
 @media (max-width: 1400px) {
   .promo-carousel {
     min-height: 480px;
@@ -5226,7 +5231,7 @@ span.flatpickr-weekday {
   justify-content: space-between;
   padding: 20px;
   padding-right: 12px;
-  padding-bottom: 78px;
+  padding-bottom: 88px;
   background-color: #fff;
   border-radius: 0px 12px 12px 0px;
 }
@@ -5347,6 +5352,7 @@ span.flatpickr-weekday {
   padding-right: 15px;
   background-color: #5f6c75;
   border-radius: 6px;
+  padding-bottom: 28px;
 }
 @media (max-width: 768px) {
   .promo-carousel-card {
@@ -5636,7 +5642,7 @@ span.flatpickr-weekday {
   padding: 20px;
   overflow: hidden;
   background-color: var(--bg-element);
-  --brad: 5px;
+  --brad: 12px;
   border-radius: var(--brad);
 }
 @media (max-width: 768px) and (min-width: 602px) {
@@ -5713,16 +5719,16 @@ span.flatpickr-weekday {
   max-width: 70%;
   min-width: 100px;
 }
-@media (max-width: 1440px) and (min-width: 1280px) {
+@media (max-width: 1279px) and (min-width: 1025px) {
   .product-card__name {
     font-size: 14.22px;
     margin-bottom: 10px;
+    max-width: 74%;
   }
 }
-@media (max-width: 1279px) and (min-width: 1025px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .product-card__name {
     font-size: 11.37px;
-    max-width: 74%;
     margin-bottom: 8.53px;
   }
 }
@@ -5931,6 +5937,12 @@ span.flatpickr-weekday {
 @media (max-width: 768px) and (min-width: 602px) {
   .product-card__price-old {
     margin-right: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .product-card--tall .product-card__name {
+    margin-bottom: 20px;
   }
 }
 
@@ -6297,7 +6309,7 @@ span.flatpickr-weekday {
   display: block;
   width: fit-content;
   padding: 0px 8px 4px;
-  margin-bottom: 11px;
+  margin-bottom: 7px;
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
@@ -9762,6 +9774,8 @@ span.flatpickr-weekday {
 }
 
 .testimonials-card__add-to-cart {
+  padding-left: 17px;
+  padding-right: 17px;
   margin-right: 8px;
 }
 @media (max-width: 420px) {
@@ -9824,7 +9838,6 @@ span.flatpickr-weekday {
   align-items: flex-start;
   justify-content: space-between;
   padding: 24px 20px;
-  background: #5f6c75;
   border-radius: 12px;
 }
 @media (max-width: 601px) {
@@ -9832,6 +9845,10 @@ span.flatpickr-weekday {
     padding: 20px;
     padding-right: 17px;
   }
+}
+
+.magazine-card:first-child {
+  background: #5f6c75;
 }
 
 .magazine-card__title {
@@ -10166,7 +10183,7 @@ span.flatpickr-weekday {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 50px;
+  padding: 40px;
 }
 @media (max-width: 1400px) and (min-width: 1281px) {
   .blog-card__info {
@@ -10236,14 +10253,15 @@ span.flatpickr-weekday {
 
 .blog-card__desc {
   margin-bottom: 16px;
-  font-size: 18.67px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.21;
   color: #a1aeb3;
+  font-family: "RF Dewi", sans-serif;
 }
-@media (max-width: 1400px) and (min-width: 1281px) {
+@media (min-width: 1800px) {
   .blog-card__desc {
-    font-size: 14px;
+    font-size: 18.67px;
   }
 }
 @media (max-width: 1280px) and (min-width: 1025px) {
