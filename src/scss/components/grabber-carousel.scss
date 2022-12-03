@@ -8,6 +8,9 @@
   @media (max-width: 1024px) {
     max-width: calc(100% - 40px);
   }
+  @media (max-width: 601px) {
+    max-width: calc(100% - 45px);
+  }
 }
 .grabber-carousel .swiper-wrapper {
   overflow-x: visible;
@@ -41,6 +44,10 @@
   line-height: 19px;
   color: #000000;
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
   @media (max-width: 601px) {
     font-size: 14px;
     margin-bottom: 4px;
@@ -49,7 +56,14 @@
 .grabber-carousel__slide-desc {
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.2;
   color: #5F6C75;
   opacity: 0.6;
+  @media (max-width: 768px) {
+    font-family: "RF Dewi", sans-serif;
+    font-size: 24px;
+  }
+  @media (max-width: 601px) {
+    font-size: 12px;
+  }
 }

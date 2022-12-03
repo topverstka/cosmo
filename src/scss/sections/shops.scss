@@ -1,10 +1,10 @@
 .shops {
   border-radius: 8px;
   background-color: var(--bg-element);
-  padding-top: 65px;
+  padding-top: 75px;
   padding-bottom: 57px;
   @media (max-width: 601px) {
-    padding-top: 52px;
+    padding-top: 42px;
     padding-bottom: 42px;
   }
 }
@@ -16,6 +16,9 @@
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
+  @media (max-width: 601px) {
+    padding-left: 10px;
+  }
 }
 
 .shops__container .section-heading {
@@ -25,7 +28,11 @@
   }
 }
 .shops__button-all {
-  @media (max-width: 576px) {
+  @media (min-width: 769px) {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+  @media (max-width: 768px) {
     display: none;
   }
 }

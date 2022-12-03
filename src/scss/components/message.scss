@@ -6,6 +6,11 @@
   @media (max-width: 768px) {
   }
 }
+.message__container {
+  @media (max-width: 601px) {
+    width: 100%;
+  }
+}
 .message-card {
   background-color: #fff;
   max-width: 708px;
@@ -53,6 +58,9 @@
   @media (max-width: 768px) {
     margin-bottom: 26px;
   }
+  @media (max-width: 601px) {
+    margin-bottom: 33px;
+  }
 }
 
 .message-card__desc br {
@@ -80,5 +88,10 @@
     font-size: 12px;
     font-weight: 400;
     padding-left: 12px;
+  }
+  @media (max-width: 601px) {
+    width: 100%;
+    font-size: 14px;
+    display: block; 
   }
 }

@@ -317,3 +317,16 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 32px;
   height: 32px;
 }
+
+.page__about .about-features__columns {
+  @media (min-width: 769px) {
+    grid-template-columns: 0.85fr 0.9fr;
+    column-gap: 48px;
+  }
+
+}
+.page__about .about-features{
+  @media (min-width: 769px) {
+    margin-bottom: 67px;
+  }
+}

@@ -216,6 +216,9 @@
   padding-bottom: 22px;
   margin-right: auto;
   margin-left: auto;
+  @media (max-width: 601px) {
+    font-size: 14px;
+  }
 }
 .button--light {
   --button-bg: var(--bg-element);

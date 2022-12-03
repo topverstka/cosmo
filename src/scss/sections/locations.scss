@@ -40,8 +40,12 @@
   @media (max-width: 810px) {
     margin-bottom: 20px
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    row-gap: 80px;
+    margin-bottom: 80px;
+  }
+  @media (max-width: 601px) {
     row-gap: 40px;
     padding-left: 0;
     padding-right: 0;
@@ -50,7 +54,10 @@
 }
 .locations--no-bg .locations__container {
   padding-top: 122px;
-  @media (max-width: 810px) {
+  @media (max-width: 768px) {
+    padding-top: 96px
+  }
+  @media (max-width: 601px) {
     padding-top: 48px
   }
 }
@@ -67,10 +74,14 @@
   font-weight: 400;
   line-height: 110%;
   color: #000000;
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
+    font-size: 40px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  @media (max-width: 601px) {
     font-size: 20px;
-    margin-bottom: 7px;
-    line-height: 120%;
+    margin-bottom: 3px;
   }
 }
 
@@ -80,9 +91,14 @@
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
-  @media (max-width: 576px) {
-    font-size: 14px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+  }
+  @media (max-width: 768px) {
     line-height: 1.2;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 601px) {
     margin-bottom: 24px;
   }
 }
@@ -94,8 +110,15 @@
   font-weight: 400;
   line-height: 140%;
   color: #000000;
-  @media (max-width: 576px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    max-width: 100%;
+    font-size: 28px;
+  }
+  @media (max-width: 768px) {
     line-height: 1.2;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 601px) {
     margin-bottom: 16px;
   }
 }
@@ -103,7 +126,7 @@
 .locations-card__pic {
   display: block;
   margin-bottom: 28px;
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     order: 5;
     margin-bottom: 0;
   }
@@ -111,6 +134,9 @@
 .locations-card__img {
   object-fit: cover;
   border-radius: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 24px;
+  }
 }
 
 .locations-card--reverse .locations-card__pic {

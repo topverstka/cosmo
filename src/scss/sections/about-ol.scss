@@ -1,9 +1,15 @@
 .about-ol {
   background: #FFFFFF;
   border-radius: 12px;
-  padding-top: 82px;
-  padding-bottom: 106px;
-  @media (max-width: 576px) {
+  padding-top: 84px;
+  padding-bottom: 114px;
+  @media (max-width: 768px) {
+    padding-left: 36px;
+    padding-right: 36px;
+    border-radius: 24px;
+  }
+  @media (max-width: 601px) {
+    border-radius: 12px;
     padding-top: 40px;
     padding-left: 18px;
     padding-right: 18px;
@@ -17,9 +23,14 @@
   text-align: center;
   color: #000000;
   margin-bottom: 49px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+  }
   @media (max-width: 601px) {
-    margin-bottom: 28px;
     font-size: 20px;
+    margin-bottom: 26px;
   }
 }
 .about-ol-list {
@@ -38,7 +49,7 @@
   border-radius: 12px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   color: #000000;
   list-style: none;
   counter-increment: about-ol;
@@ -50,24 +61,43 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    font-size: 28px;
+    padding: 12px;
+    padding-bottom: 24px;
+    padding-left: 60px;
+    padding-right: 40px;
+    min-height: 182px;
+    margin-bottom: 16px;
+    border-radius: 24px;
+  }
   @media (max-width: 601px) {
+    border-radius: 12px;
     font-size: 14px;
-    line-height: 1.25;
-    padding-top: 12px;
+    line-height: 1.18;
+    padding-top: 6px;
     padding-bottom: 12px;
     padding-right: 20px;
     padding-left: 30px;
     min-height: 91px;
+    margin-bottom: 8px;
   }
 }
 .about-ol-list__item::before {
   content: counter(about-ol);
   font-weight: 300;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 1.2;
   text-align: center;
   color: #000000;
   margin-right: 45px;
+  @media (max-width: 768px) and (min-width: 602px) {
+    margin-right: 40px;
+    min-width: 60px;
+    display: block;
+    max-width: 60px;
+    font-size: 80px;
+  }
   @media (max-width: 601px) {
     margin-right: 20px;
     min-width: 30px;

@@ -38,7 +38,8 @@
   font-size: 27px;
   line-height: 110%;
   color: #000000;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  // margin-bottom: 30px;
   @media (max-width: 768px) and (min-width: 602px) {
     font-size: 32px;
     margin-bottom: 32px
@@ -61,7 +62,8 @@
     font-size: 24.58px;
   }
   @media (max-width: 601px) {
-    font-size: 12px
+    font-size: 12px;
+    line-height: 1.2;
   }
 }
 

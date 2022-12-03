@@ -39,6 +39,9 @@
     padding-bottom: 21px;
   }
 }
+.doc-card:last-of-type {
+  margin-bottom: 0;
+}
 .doc--small .doc-card {
   column-gap: 29px;
   grid-template-columns: 320px auto;
@@ -102,6 +105,9 @@
 .doc ~ .callback-cards {
   @media (min-width: 602px) {
     padding-top: 30px
+  }
+  @media (max-width: 601px) {
+    padding-top: 60px
   }
 }
 
