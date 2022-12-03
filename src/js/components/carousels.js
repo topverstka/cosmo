@@ -48,14 +48,15 @@ if (document.querySelector('.promo-carousel')) {
     if (window.innerWidth > 769) return
 
     const currentSlideCard = swiper.slides[swiper.activeIndex].querySelector('.promo-carousel-card')
-    const paginationBottomOffset = +currentSlideCard.getBoundingClientRect().height;
-    let initialPaginationBottomOffset = 38;
-    if (window.innerWidth > 601 && window.innerWidth <= 768) {
-      initialPaginationBottomOffset = 148;
-    }
-    const newPaginationOffset = Math.round(initialPaginationBottomOffset) + Math.round(paginationBottomOffset);
-    // console.log(newPaginationOffset)
-    swiper.pagination.el.style.bottom =  newPaginationOffset + 'px';
+    setTimeout(() => {
+      const paginationBottomOffset = +currentSlideCard.getBoundingClientRect().height;
+      let initialPaginationBottomOffset = 38;
+      if (window.innerWidth > 601 && window.innerWidth <= 768) {
+        initialPaginationBottomOffset = 98;
+      }
+      const newPaginationOffset = Math.round(initialPaginationBottomOffset) + Math.round(paginationBottomOffset);
+      swiper.pagination.el.style.bottom =  newPaginationOffset + 'px';
+    }, 200)
   }
   let promoSlider = new Swiper(".promo-carousel", {
     modules: [Navigation, Autoplay, Pagination],

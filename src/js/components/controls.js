@@ -248,14 +248,15 @@ textareas.forEach(area => {
  * Stepper
  */
 const steppers = document.querySelectorAll('.stepper');
+function getStepperInput(stepper) {
+  return stepper.querySelector('.stepper__value');
+}
 function getStepperValue(stepper) {
-  const input = stepper.querySelector('.stepper__value');
-  let value = +input.value;
+  let value = +getStepperInput(stepper).value;
   return value
 }
 function setStepperValue(stepper, value) {
-  const input = stepper.querySelector('.stepper__value');
-  input.value = value;
+  getStepperInput(stepper).value = value;
 }
 function decrementStepper(stepper) {
   let value = getStepperValue(stepper)
@@ -267,6 +268,11 @@ function incrementStepper(stepper) {
   value++;
   setStepperValue(stepper, value)
 }
+function leaveOnlyDigits(stepper) {
+  let value = getStepperInput(stepper).value;
+  value = value.replaceAll(/\D+/g, '');
+  getStepperInput(stepper).value = value;
+}
 steppers.forEach((stepper) => {
   const minus = stepper.querySelector('.stepper__button-minus');
   const plus = stepper.querySelector('.stepper__button-plus');
@@ -275,6 +281,12 @@ steppers.forEach((stepper) => {
   minus.addEventListener("click", (e) => {
     decrementStepper(stepper)
   });
+  input.addEventListener('input', () => {
+    leaveOnlyDigits(stepper);
+  })
+  input.addEventListener('change', () => {
+    leaveOnlyDigits(stepper);
+  })
   plus.addEventListener("click", (e) => {
     incrementStepper(stepper)
   });

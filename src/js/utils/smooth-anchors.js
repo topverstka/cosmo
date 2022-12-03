@@ -22,6 +22,7 @@ function scrollToAnchor(distanceTop = 0) {
             let href = link.getAttribute('href')
             if (!href || href == "#") return;
             let anchor = document.querySelector(href)
+            if (!anchor) return;
             window.scroll({
                 top: anchor.getBoundingClientRect().top + pageYOffset - distanceTop,
                 left: 0,

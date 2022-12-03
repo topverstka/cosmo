@@ -2560,7 +2560,7 @@ body._lock {
   margin-left: auto;
   width: 100%;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .container {
     max-width: calc(100% - 16px);
   }
@@ -3377,7 +3377,6 @@ select {
   line-height: var(--lh-button);
   color: var(--button-color);
   text-align: center;
-  letter-spacing: 0.03em;
   cursor: pointer;
   background: var(--button-bg, transparent);
   border-radius: 100px;
@@ -8633,6 +8632,11 @@ span.flatpickr-weekday {
     min-height: initial;
   }
 }
+@media (max-width: 768px) {
+  .header__nav-item-dropdown {
+    border-radius: 0 0 12px 12px;
+  }
+}
 
 .header__nav-item-dropdown-content {
   height: 100%;
@@ -9434,6 +9438,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 768px) {
   .popular__gallery .product-card--tall {
+    order: -1;
     grid-row-start: unset;
     grid-row-end: unset;
     grid-column-start: unset;
@@ -9454,9 +9459,14 @@ span.flatpickr-weekday {
   --fz-button: 14px;
   --fw-button: 500;
 }
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .popular__button-container {
     display: unset;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .popular__button-container {
+    --fz-button: 28px;
   }
 }
 
@@ -9582,8 +9592,10 @@ span.flatpickr-weekday {
   }
 }
 
-.changes-card__before-img, .changes-card__after-img {
+.changes-card__before-img,
+.changes-card__after-img {
   object-position: bottom;
+  object-fit: cover;
 }
 
 .changes-card:nth-of-type(even) {
@@ -9732,10 +9744,22 @@ span.flatpickr-weekday {
 .changes-card__after-img {
   border-radius: 12px;
 }
-
-.changes-card__before-img,
+@media (min-width: 602px) and (max-width: 768px) {
+  .changes-card__before-img,
 .changes-card__after-img {
+    border-radius: 24.5px;
+  }
+}
+
+.changes-card__before-pic,
+.changes-card__after-pic {
   border-radius: 12px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .changes-card__before-pic,
+.changes-card__after-pic {
+    border-radius: 24.5px;
+  }
 }
 
 .changes-card:nth-of-type(odd) {
@@ -10805,7 +10829,7 @@ span.flatpickr-weekday {
   border-radius: 12px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 601px) {
   .blog-card .product-card {
     max-width: 100%;
     width: 100%;
@@ -11669,6 +11693,26 @@ span.flatpickr-weekday {
 .locations-card--reverse .locations-card__pic {
   order: 5;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .locations__button-more {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1280px) {
+  .locations__container .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 601px) {
+  .locations__container .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .catalog {

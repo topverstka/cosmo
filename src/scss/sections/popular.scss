@@ -58,6 +58,7 @@
     grid-column-start: 2;
   }
   @media (max-width: 768px) {
+    order: -1;
     grid-row-start: unset;
     grid-row-end: unset;
     grid-column-start: unset;
@@ -74,7 +75,10 @@
   display: none;  
   --fz-button: 14px;
   --fw-button: 500;
-  @media (max-width: 601px) {
+  @media (max-width: 768px) {
     display: unset;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    --fz-button: 28px;
   }
 }

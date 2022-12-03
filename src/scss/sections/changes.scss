@@ -91,8 +91,10 @@
   }
 }
 
-.changes-card__before-img, .changes-card__after-img {
+.changes-card__before-img,
+.changes-card__after-img {
   object-position: bottom;
+  object-fit: cover;
 }
 
 .changes-card:nth-of-type(even) {
@@ -207,11 +209,17 @@
 .changes-card__before-img,
 .changes-card__after-img {
   border-radius: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 24.5px;
+  }
 }
 
-.changes-card__before-img,
-.changes-card__after-img {
+.changes-card__before-pic,
+.changes-card__after-pic {
   border-radius: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 24.5px;
+  }
 }
 
 .changes-card:nth-of-type(odd) {

@@ -143,3 +143,20 @@
   order: 5;
   margin-bottom: 0;
 }
+.locations__button-more {
+  @media (max-width: 768px) {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.locations__container .container {
+  @media (max-width: 1280px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: 601px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
