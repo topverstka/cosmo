@@ -1,17 +1,27 @@
 .timepicker {
+  --height: 310px;
   max-width: 271px;
-  max-height: 310px;
+  max-height: var(--height);
+  height: var(--height);
   width: 100%;
   border-radius: 6px;
   background: #F0F3F5;
-  padding: 13px;
+  padding-right: 13px;
   padding-bottom: 3px;
   padding-left: 18px;
-  padding-top: 10px;
-  --height: 310px;
-  height: var(--height);
-  @media (max-width: 601px) {
+  padding-top: 14px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --height: 420px;
+    padding-right: 26px;
+    padding-bottom: 6px;
+    padding-left: 36px;
+    padding-top: 28px;
+  }
+  @media (max-width: 768px) {
     max-width: 100%;
+  }
+  @media (max-width: 601px) {
+    --height: 330px;
   }
 }
 
@@ -26,8 +36,12 @@
 .timepicker__list.timepicker__list--dropdown {
   overflow: auto;
   height: calc(var(--height) - 10px);
-  margin-top: -10px;
-  @include macscrollbar(12px, 4px, #f0f3f5);
+  margin-top: -14px;
+  @include macscrollbarHasMine(4px, 4px, #000, #D3DCDF);
+  @media (min-width: 602px) and (max-width: 768px) {
+    height: calc(var(--height) - 36px);
+    margin-top: -7px;
+  }
 }
 
 .timepicker__item::before {
@@ -43,6 +57,10 @@
   margin-bottom: 10px;
   color: var(--time-color, #000);
   font-size: 16px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
 }
 .timepicker__item:last-of-type {
   margin-bottom: 0;
@@ -59,6 +77,12 @@
   background-color: transparent;
   border-radius: 100%;
   transition: all 0.3s ease;
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: 16px;
+    height: 16px;
+    left: 22px;
+    top: 22px;
+  }
 }
 .timepicker__item::before {
   content: "";
@@ -74,6 +98,12 @@
   transition: all 0.3s ease;
   margin-right: 8px;
   font-size: 16px;
+  @media (min-width: 601px) and (max-width: 768px) {
+    font-size: 32px;
+    margin-right: 16px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .timepicker__item.is-selected {

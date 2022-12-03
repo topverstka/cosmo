@@ -1,3 +1,8 @@
+.checkout {
+  @media (max-width: 601px) {
+    margin-bottom: 40px;
+  }
+}
 .checkout__subtotal .cart-total__title,
 .checkout__subtotal .cart-total__value {
   font-size: 14px;
@@ -17,6 +22,11 @@
   padding-bottom: 72px;
   @media (max-width: 576px) {
     padding-bottom: 60px;
+  }
+}
+.checkout__fields .fieldset__title {
+  @media (max-width: 768px) {
+    margin-bottom: 11px;
   }
 }
 
@@ -79,4 +89,15 @@
 .button-detect-city {
   font-size: 14px;
   font-family: "RF Dewi", sans-serif;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.checkout__button-pick-location {
+  margin-top: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-top: 24px;
+    font-size: 24px;
+  }
 }

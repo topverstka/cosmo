@@ -20,7 +20,7 @@ if (document.querySelector(".select")) {
       // removeItemButton: true,
       // removeItems: true,
       delimiter: ',',
-      searchChoices: false,
+      // searchChoices: false,
       renderSelectedChoices: 'always',
       maxItemCount: -1,
       classNames: {

@@ -15,7 +15,11 @@
   width: 100%;
   font-family: var(--ff-regular);
   margin-bottom: 8px;
-  @media (max-width: 768px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    --fz: 24px;
+    --padding: 24px 40px 32px 20px;
+  }
+  @media (max-width: 601px) {
     --padding: 12px 20px 16px 20px;
     --fz: 12px;
     --lh: 14px;
@@ -84,6 +88,12 @@
   z-index: 2;
   transform: var(--error-icon-transform);
   transition: all 0.45s ease;
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    right: 10px;
+  }
 }
 
 .input__label {
