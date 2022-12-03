@@ -4,6 +4,9 @@
   justify-content: flex-start;
   background: #f0f3f5;
   border-radius: 6px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 12px;
+  }
 }
 .review-card__pic {
   display: block;
@@ -11,7 +14,11 @@
   min-width: var(--size);
   height: var(--size);
   --size: 140px;
-  @media (max-width: 420px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 180px;
+    height: 188px;
+  }
+  @media (max-width: 601px) {
     --size: 90px;
     height: 94px;
   }
@@ -19,10 +26,19 @@
 .review-card__img {
   border-radius: 6px;
   object-fit: cover;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 12px;
+  }
 }
 
 .review-card__info {
   padding: 20px;
+  @media (min-width: 602px) and (max-width: 768px) {
+   padding-top: 16px; 
+   padding-left: 26px;
+   padding-right: 6px;
+   padding-bottom: 28px;
+  }
   @media (max-width: 601px) {
     padding-top: 8px;
     padding-left: 13px;
@@ -43,10 +59,15 @@
   background: #ffffff;
   border-radius: 6px;
   transition: all 0.3s ease;
-  @media (max-width: 420px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 20px;
+    padding: 0 8px 4px 8px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 601px) {
     font-size: 10px;
     padding: 0 4px 2px 4px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
   }
 }
 .review-card__profile:hover {
@@ -61,8 +82,13 @@
   font-weight: 400;
   line-height: 140%;
   color: #000000;
-  @media (max-width: 420px) {
-    font-size: 10px;
+  @media (min-width: 062px) and (max-width: 768px) {
+    font-size: 20px
+  }
+  @media (max-width: 768px) {
     line-height: 1.2;
+  }
+  @media (max-width: 601px) {
+    font-size: 10px;
   }
 }

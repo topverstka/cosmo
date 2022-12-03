@@ -25,24 +25,38 @@
     margin-bottom: 28px
   }
 }
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .chips--has-scroll {
     padding-left: 0;  
     padding-right: 0; 
     overflow: hidden;
+    margin-left: -16px;
+    width: calc(100% + 24px);
+  }
+  .chips--has-scroll .chips__track {
+    margin-bottom: -40px;  
+    overflow-x: auto;
+  }
+  .chips--has-scroll .chips__content {
+    padding-left: 36px; 
+    padding-right: 36px; 
+    padding-bottom: 40px;  
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 601px) {
+  .chips--has-scroll {
     margin-left: -8px;
     width: calc(100% + 16px);
   }
   .chips--has-scroll .chips__track {
     margin-bottom: -20px;  
-    overflow-x: auto;
   }
   .chips--has-scroll .chips__content {
     padding-left: 28px; 
     padding-right: 28px; 
     padding-bottom: 20px;  
-    white-space: nowrap;
-    flex-wrap: nowrap;
   }
 }
 .chips--ghost {
@@ -75,6 +89,9 @@
   font-weight: var(--chips-fw);
   border: var(--chips-border);
   display: block;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 12px;
+  }
 }
 .chips__caption:hover {
   @media (any-hover: hover) {
