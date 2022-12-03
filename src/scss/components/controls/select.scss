@@ -21,6 +21,10 @@
     --fz: 28px;
   }
 }
+.select.is-selected {
+  --value-color: #fff;
+  --bg: #79868d;
+}
 .select > .select{
   --color: inherit;
   --bg: inherit;
@@ -31,6 +35,12 @@
 }
 .select .choices__inner {
   max-width: var(--maxw);
+  display: flex;
+  min-width: 41px;
+  min-height: 39px;
+}
+.select__list .select__item.is-selected.select__item--selectable {
+  background-color: #f8f8f8;
 }
 
 .select__list--dropdown {
@@ -77,7 +87,8 @@
   z-index: 2;
   display: block;
   width: calc(100% - 5px);
-  height: 100px;
+  height: 30px;
+  // height: 100px;
   pointer-events: none;
   content: "";
   background: linear-gradient(
@@ -92,7 +103,7 @@
   position: relative;
   width: calc(100% + 40px);
   max-height: 482px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   margin-left: -20px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -149,6 +160,7 @@
 }
 .select__list--single {
   position: relative;
+  width: 100%;
 }
 .select__list--multiple::after,
 .select__list--single::after {
@@ -170,9 +182,55 @@
   }
 }
 
-.select__list--multiple .select__item:nth-child(n+2) {
+.is-selected .select__list--multiple::after {
   display: none;
 }
+.select__list--multiple {
+  display: flex;
+  max-width: 100px;
+}
+.is-multiple input[name="search_terms"] {
+  opacity: 0;
+  max-width: 100%;
+  pointer-events: none;
+}
+.select__list--multiple .select__item {
+  opacity: 0;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 41px;
+}
+.is-multiple .choices__inner {
+  max-width: 50px;
+}
+.select__button-reset {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 8px;
+  display: none;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  content: "";
+  transition: all 0.3s ease;
+  transform: rotate(180deg);
+  background-color: #fff;
+  @include getmask("../img/common/clear.svg");
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+.is-selected  .select__button-reset {
+  display: block;
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+// .select__list--multiple .select__item:nth-child(n+2) {
+//   display: none;
+// }
 .select.is-open .select__list--single::after {
   transform: rotate(0);
 }

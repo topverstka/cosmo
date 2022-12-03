@@ -500,6 +500,7 @@
 }
 
 .header__nav-item-dropdown-card--single.blog-card {
+  grid-area: cards;
   grid-template-columns: 465px 589px;
   justify-content: space-between;
   padding: 0;
@@ -616,5 +617,6 @@
 }
 
 .header__button-services {
+  grid-area: button;
   justify-self: flex-end;
 }

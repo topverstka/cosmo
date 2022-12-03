@@ -42,6 +42,7 @@
   z-index: 2;
   position: relative;
   white-space: nowrap;
+  color: var(--value-color, #000);
   // display: block;
   @media (max-width: 1024px) {
     margin-right: auto;

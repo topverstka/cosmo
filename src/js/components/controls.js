@@ -16,7 +16,11 @@ if (document.querySelector(".select")) {
       searchPlaceholderValue: "Поиск",
       noResultsText: "Нет результатов",
       shouldSort: false,
+      allowHTML: true,
       // removeItemButton: true,
+      // removeItems: true,
+      delimiter: ',',
+      searchChoices: false,
       renderSelectedChoices: 'always',
       maxItemCount: -1,
       classNames: {
@@ -58,7 +62,38 @@ if (document.querySelector(".select")) {
     if (dropdown.classList.contains('select--allow-multiple')) {
       choicesOptions.maxItemCount = -1;
     }
-    const customSelect = new Choices(dropdown.querySelector(".select__input"), choicesOptions) 
+    const defaultSelect = dropdown.querySelector(".select__input");
+    const customSelect = new Choices(defaultSelect, choicesOptions) 
+
+    defaultSelect.addEventListener('change', (e) => {
+      dropdown.classList.add('is-selected')
+      console.log(customSelect.getValue()) 
+    })
+
+    const resetFilterButton = document.createElement('span');
+    resetFilterButton.classList.add('select__button-reset');
+    dropdown.append(resetFilterButton);
+    resetFilterButton.addEventListener('click', () => {
+      dropdown.classList.remove('is-selected')
+      customSelect.removeActiveItems()
+      // console.log(customSelect.getValue())
+    })
+
+    if (defaultSelect.multiple) {
+      dropdown.classList.add('is-multiple');
+      const activeItemsCounter = document.createElement('span')
+      activeItemsCounter.classList.add('select__active-items-counter');
+      dropdown.querySelector('.row-filters__select-label').append(activeItemsCounter);
+
+      defaultSelect.addEventListener('change', (e) => {
+        activeItemsCounter.innerText = ' ' + customSelect.getValue().length
+      })
+      const currentValue = customSelect.getValue().length;
+      if (currentValue > 0) {
+        activeItemsCounter.innerText = ' ' + customSelect.getValue().length
+        dropdown.classList.add('is-selected')
+      }
+    }
 
     const backButton = document.querySelector('.catalog-products__filters-back-button');
     if (backButton) {
@@ -67,7 +102,7 @@ if (document.querySelector(".select")) {
         const filterName = e.target.parentElement.parentElement.parentElement.querySelector('.row-filters__select-label').innerText;
         if (!filterName) return
 
-          console.log(backButton, filterName)
+          // console.log(backButton, filterName)
         backButton.querySelector('.button__text').innerText = filterName;
       })
       customSelect.passedElement.element,addEventListener('hideDropdown', (e) => {

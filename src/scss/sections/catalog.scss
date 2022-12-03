@@ -29,6 +29,7 @@
     column-gap: 8px;
     row-gap: 8px;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
     padding: 0 10px 0 20px;
     @include macscrollbar;
@@ -207,4 +208,8 @@
     border-radius: 6px;
       // margin-bottom: 8px
   }
+}
+.catalog-products__filters .row-filters__select.is-selected {
+  --value-color: #fff;
+  --bg: #79868d;
 }
