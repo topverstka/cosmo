@@ -166,19 +166,35 @@
                 <span class="button__text">Фильтры</span>
               </button>
             </form>
-            <div class="catalog-products__gallery">
-              @@include('tpls/cards/card-has-tooltip.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png", className: "product-card--out"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
-              @@include('tpls/cards/card.html',{img: "card.png"})
+            <div class="catalog-products__gallery-wrap">
+              <div class="catalog-products__gallery catalog-products__gallery--has-tall">
+                @@include('tpls/cards/card-has-tooltip.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png", className: "product-card--out"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "product-tall.png", className: "product-card--tall"})
+              </div>
+              <div class="catalog-products__gallery catalog-products__gallery--has-tall catalog-products__gallery--has-tall-left">
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "product-tall.png", className: "product-card--tall"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+              </div>
+              <div class="catalog-products__gallery">
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+              </div>
+              <div class="catalog-products__gallery catalog-products__gallery--has-tall catalog-products__gallery--has-tall-left">
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+                @@include('tpls/cards/card.html',{img: "product-tall.png", className: "product-card--tall"})
+                @@include('tpls/cards/card.html',{img: "card.png"})
+              </div>
             </div>
             <div class="catalog-products__pagination pagination navigation-pages">
               <!-- <span class="nav-arrow nav-prev disabled">Назад</span> -->

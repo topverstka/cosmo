@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Каталог</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20221204123946" >
+    <link rel="stylesheet" href="./css/style.css?_v=20221204125446" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -1575,8 +1575,9 @@
                 <span class="button__text">Фильтры</span>
               </button>
             </form>
-            <div class="catalog-products__gallery">
-              <article class="product-card @@className">
+            <div class="catalog-products__gallery-wrap">
+              <div class="catalog-products__gallery catalog-products__gallery--has-tall">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <p class="product-card__tooltip">
       <span class="product-card__tooltip-desc">
@@ -1643,7 +1644,7 @@
   </div>
 </article>
 
-              <article class="product-card product-card--out">
+                <article class="product-card product-card--out">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -1702,7 +1703,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -1761,7 +1762,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -1820,7 +1821,68 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card product-card--tall">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/product-tall.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              </div>
+              <div class="catalog-products__gallery catalog-products__gallery--has-tall catalog-products__gallery--has-tall-left">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -1879,7 +1941,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -1938,7 +2000,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -1997,7 +2059,66 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card product-card--tall">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/product-tall.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -2056,7 +2177,9 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+              </div>
+              <div class="catalog-products__gallery">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -2115,7 +2238,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -2174,7 +2297,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -2233,7 +2356,7 @@
   </div>
 </article>
 
-              <article class="product-card @@className">
+                <article class="product-card @@className">
   <div class="product-card__inner">
     <picture class="product-card__pic">
       <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
@@ -2292,6 +2415,363 @@
   </div>
 </article>
 
+                <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+                <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              </div>
+              <div class="catalog-products__gallery catalog-products__gallery--has-tall catalog-products__gallery--has-tall-left">
+                <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+                <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+                <article class="product-card product-card--tall">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/product-tall.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+                <article class="product-card @@className">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="./placeholder.png" data-src="./img/catalog/card.png" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <form action="/api" class="chips product-card__options">
+          <div class="chips__track">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" checked hidden>
+                <span class="chips__caption">200мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">100мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">50мл</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" name="option" class="chips__input" hidden>
+                <span class="chips__caption">15мл</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--primary product-card__button-add">
+            <svg class="button__icon button__icon--cart">
+              <use xlink:href="./img/common/cart.svg#cart" />
+            </svg>
+            <svg class="button__icon button__icon--selected">
+              <use xlink:href="./img/common/check.svg#check" />
+            </svg>
+            <span class="button__text">В корзину</span>
+          </button>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+              </div>
             </div>
             <div class="catalog-products__pagination pagination navigation-pages">
               <!-- <span class="nav-arrow nav-prev disabled">Назад</span> -->
@@ -2712,6 +3192,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20221204123946"></script>
+    <script src="./js/bundle.min.js?_v=20221204125446"></script>
   </body>
 </html>

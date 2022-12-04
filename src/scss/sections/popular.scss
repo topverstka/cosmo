@@ -19,9 +19,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
-  @media (max-width: 810px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     margin-bottom: 12px;
@@ -64,7 +61,7 @@
     grid-column-start: unset;
   }
 }
-.popular__gallery .product-card--tall .product-card__info {
+.product-card--tall .product-card__info {
   min-height: 594px;
   @media (min-width: 602px) and (max-width: 768px) {
     min-height: 1164px;
