@@ -1,8 +1,12 @@
 .shops {
-  border-radius: 8px;
+  --brad: 8px;
+  border-radius: var(--brad);
   background-color: var(--bg-element);
   padding-top: 75px;
   padding-bottom: 57px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --brad: 16px;
+  }
   @media (max-width: 601px) {
     padding-top: 42px;
     padding-bottom: 42px;

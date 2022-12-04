@@ -10,19 +10,6 @@ headerNavLinks.forEach((link) => {
     if (!link.parentElement.classList.contains('header__nav-item--mobile-open')) return
     link.parentElement.classList.toggle(HEADER_NAV_LINK_OPENED);
   });
-  // link.addEventListener("mouseover", (e) => {
-  //   if (window.innerWidth > BURGER_OPENED_WIDTH && link.classList.contains('header__nav-item--mobile-open')) return;
-  //   link.classList.add(HEADER_NAV_LINK_HOVERED)
-  // });
-  // link.addEventListener("mouseleave", (e) => {
-  //     link.classList.remove(HEADER_NAV_LINK_HOVERED)
-  // });
-  // link.addEventListener("click", (e) => {
-  //   setTimeout(() => {
-  //     if (!link.classList.contains(HEADER_NAV_LINK_HOVERED)) return
-  //     link.classList.remove(HEADER_NAV_LINK_HOVERED);
-  //   }, 1)
-  // });
 });
 
 

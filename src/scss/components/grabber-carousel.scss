@@ -8,7 +8,11 @@
   @media (max-width: 1024px) {
     max-width: calc(100% - 40px);
   }
+  @media (max-width: 767px) {
+    padding-right: 40px;
+  }
   @media (max-width: 601px) {
+    padding-right: 20px;
     max-width: calc(100% - 45px);
   }
 }
@@ -29,19 +33,24 @@
   }
 }
 .grabber-carousel__slide-pic {
+  --brad: 12px;
   display: block;
+  border-radius: var(--brad);
   height: 100%;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --brad: 25px;
+  }
 }
 .grabber-carousel__slide-img {
   display: block;
   height: 100%;
-  border-radius: 12px;
+  border-radius: var(--brad);
   object-fit: cover;
 }
 .grabber-carousel__slide-title {
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   color: #000000;
   margin-bottom: 8px;
   @media (max-width: 768px) {

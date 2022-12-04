@@ -5988,8 +5988,14 @@ span.flatpickr-weekday {
     max-width: calc(100% - 40px);
   }
 }
+@media (max-width: 767px) {
+  .grabber-carousel {
+    padding-right: 40px;
+  }
+}
 @media (max-width: 601px) {
   .grabber-carousel {
+    padding-right: 20px;
     max-width: calc(100% - 45px);
   }
 }
@@ -6016,21 +6022,28 @@ span.flatpickr-weekday {
 }
 
 .grabber-carousel__slide-pic {
+  --brad: 12px;
   display: block;
+  border-radius: var(--brad);
   height: 100%;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .grabber-carousel__slide-pic {
+    --brad: 25px;
+  }
 }
 
 .grabber-carousel__slide-img {
   display: block;
   height: 100%;
-  border-radius: 12px;
+  border-radius: var(--brad);
   object-fit: cover;
 }
 
 .grabber-carousel__slide-title {
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   color: #000000;
   margin-bottom: 8px;
 }
@@ -11646,11 +11659,13 @@ span.flatpickr-weekday {
   display: grid;
   grid-template-columns: auto minmax(320px, 469px);
   column-gap: 8px;
+  margin-top: 8px;
 }
 @media (max-width: 768px) {
   .blog__article-layout {
     grid-template-columns: 1fr;
     row-gap: 8px;
+    margin-top: -30px;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -11658,22 +11673,26 @@ span.flatpickr-weekday {
     row-gap: 16px;
   }
 }
+@media (min-width: 601px) and (max-width: px) {
+  .blog__article-layout {
+    margin-top: -15px;
+  }
+}
 
 .blog-article {
   background-color: var(--bg-element);
   padding: 33px 20px 20px;
   margin-bottom: 40px;
-  margin-top: 8px;
   border-radius: 12px;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .blog-article {
     padding-top: 40px;
+    border-radius: 24px;
   }
 }
 @media (max-width: 768px) {
   .blog-article {
-    margin-top: -30px;
     margin-bottom: 0;
   }
 }
@@ -11825,7 +11844,7 @@ span.flatpickr-weekday {
 
 .blog-article__index-item {
   margin-bottom: 7px;
-  text-decoration: underline;
+  text-decoration: none;
   color: #5F6C75;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -11840,12 +11859,14 @@ span.flatpickr-weekday {
 }
 
 .blog-article__index-link {
+  display: inline;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   color: inherit;
   border: none;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .blog-article__index-link {
@@ -11913,6 +11934,12 @@ span.flatpickr-weekday {
 .blog-article-share {
   background-color: #F0F3F5;
   padding: 40px;
+  border-radius: 6px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog-article-share {
+    border-radius: 12px;
+  }
 }
 @media (max-width: 601px) {
   .blog-article-share {
@@ -12041,7 +12068,7 @@ span.flatpickr-weekday {
   }
 }
 
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .blog-article .gallery-accordion__button-more {
     margin-left: 0;
   }
@@ -14124,10 +14151,16 @@ span.flatpickr-weekday {
 }
 
 .shops {
-  border-radius: 8px;
+  --brad: 8px;
+  border-radius: var(--brad);
   background-color: var(--bg-element);
   padding-top: 75px;
   padding-bottom: 57px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .shops {
+    --brad: 16px;
+  }
 }
 @media (max-width: 601px) {
   .shops {
@@ -17168,6 +17201,13 @@ span.flatpickr-weekday {
   background: #000000;
 }
 
+@media (min-width: 787px) {
+  .product-hero-gallery-prev,
+.product-hero-gallery-next {
+    display: none;
+  }
+}
+
 .product-bullets {
   margin-left: -8px;
   width: calc(100% + 16px);
@@ -17548,10 +17588,7 @@ span.flatpickr-weekday {
 .product-details__desc ol li {
   list-style-type: none;
   counter-increment: product-desc-list;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: inline;
   line-height: 1.4;
 }
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -17580,6 +17617,7 @@ span.flatpickr-weekday {
   font-size: 20px;
   line-height: 120%;
   margin-bottom: 17px;
+  display: block;
 }
 @media (max-width: 1024px) and (min-width: 769px) {
   .product-details__desc ol li::before {
@@ -17694,14 +17732,14 @@ span.flatpickr-weekday {
   margin-bottom: 0;
 }
 
-.product-details-actives__title {
+.product-details-actives .product-details-actives__title {
   font-size: 20px;
   line-height: 120%;
   color: #000000;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 @media (max-width: 601px) {
-  .product-details-actives__title {
+  .product-details-actives .product-details-actives__title {
     margin-bottom: 22px;
   }
 }
