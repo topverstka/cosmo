@@ -9,6 +9,9 @@
   @media (max-width: 962px) {
     display: block;
   }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: 221px auto;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 16px;
     border-radius: 25px;

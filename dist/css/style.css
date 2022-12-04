@@ -5032,6 +5032,11 @@ span.flatpickr-weekday {
     display: block;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fieldset {
+    grid-template-columns: 221px auto;
+  }
+}
 @media (min-width: 602px) and (max-width: 768px) {
   .fieldset {
     margin-bottom: 16px;
@@ -9887,11 +9892,16 @@ span.flatpickr-weekday {
   color: #000000;
   margin-bottom: 33px;
 }
+@media (max-width: 1024px) {
+  .page-heading__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+}
 @media (max-width: 768px) {
   .page-heading__title {
     font-size: 27px;
-    margin-bottom: 16px;
-    line-height: 1.1;
   }
 }
 @media (max-width: 768px) and (min-width: 602px) {
@@ -9903,6 +9913,11 @@ span.flatpickr-weekday {
 
 .page-heading__title:only-child {
   margin-bottom: 64px;
+}
+@media (max-width: 1024px) {
+  .page-heading__title:only-child {
+    margin-bottom: 36px;
+  }
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .page-heading__title:only-child {
@@ -15949,7 +15964,7 @@ span.flatpickr-weekday {
   padding-top: 26px;
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1025px) {
   .page__account .page-heading__title:only-child {
     margin-bottom: 96px;
   }
@@ -15970,6 +15985,11 @@ span.flatpickr-weekday {
   margin-bottom: 8px;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .account-personal-addresses__button-use {
+    font-size: 10px;
+  }
+}
 @media (max-width: 601px) {
   .account-personal-addresses__button-use {
     padding-left: 22px;
