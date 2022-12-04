@@ -153,6 +153,9 @@
     margin-bottom: 32px
   }
 }
+.cart__section:last-of-type {
+  margin-bottom: 36px;
+}
 
 .cart__section .gallery-accordion__content {
   @media (min-width: 602px) {
@@ -311,6 +314,9 @@
     padding-top: 6px;
     margin-right: 8px
   }
+}
+.cart-product .product-card__price {
+  font-weight: 400;
 }
 
 

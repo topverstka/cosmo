@@ -484,4 +484,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
       productPageAddButton.querySelector('.button__text').innerText = productPageAddButton.dataset.inCartText
     });
   }
+
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach((modal) => {
+    const inputs = modal.querySelectorAll('.input .input__field');
+    const submitButton = modal.querySelector('.modal__button')
+    let inputValidity = [];
+    inputs.forEach((input) => {
+      // console.log(input.value)
+      input.addEventListener("input", (e) => {
+        inputs.forEach((input) => {
+          if (input.value == "") {
+            inputValidity.push(false);
+          } else {
+            inputValidity.push(true);
+          }
+          if (inputValidity.includes(false)) {
+            submitButton.disabled = true
+          } else {
+            submitButton.disabled = false
+          }
+          inputValidity = [];
+        })
+        
+      });
+    })
+    
+  })
+  
 });
