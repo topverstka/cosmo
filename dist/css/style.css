@@ -3190,6 +3190,14 @@ select {
   -webkit-mask-size: contain;
   mask-size: contain;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .select--has-search .select__list--dropdown::before {
+    width: 44px;
+    height: 44px;
+    top: 40px;
+    right: 40px;
+  }
+}
 
 .select__list--dropdown::after {
   position: absolute;
@@ -3259,6 +3267,14 @@ select {
   cursor: pointer;
   background-color: #fff;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .select__item {
+    padding-right: 22px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 37px;
+  }
+}
 
 .select__list--single > .select__item {
   width: 100%;
@@ -3272,6 +3288,9 @@ select {
   .select__list--single > .select__item {
     font-size: var(--fz);
     padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 37px;
   }
 }
 @media (max-width: 601px) {
@@ -3320,6 +3339,8 @@ select {
 .select__list--single::after {
     width: 40px;
     height: 40px;
+    top: 20px;
+    right: 16px;
   }
 }
 
@@ -3401,10 +3422,17 @@ select {
   padding: 14px 20px 16px;
   font-size: 12px;
   font-weight: 600;
-  line-height: 14px;
+  line-height: 1.16;
   color: #a1aeb3;
   background: #f0f3f5;
   border-radius: 6px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .select__list .select__input[type=search] {
+    font-size: 24px;
+    padding: 24px 40px 32px;
+    border-radius: 12px;
+  }
 }
 
 .select__item--selectable {
@@ -5512,7 +5540,7 @@ span.flatpickr-weekday {
 }
 @media (min-width: 1400px) and (max-width: 1440px) {
   .promo-carousel {
-    max-height: 680px;
+    max-height: initial;
   }
 }
 @media (max-width: 1400px) {
@@ -15032,7 +15060,7 @@ span.flatpickr-weekday {
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location__contacts-item::before {
-    width: 32px;
+    width: 30px;
     height: 36px;
     margin-right: 16px;
   }
@@ -15699,9 +15727,12 @@ span.flatpickr-weekday {
   }
 }
 
-@media (max-width: 601px) {
+.checkout {
+  padding-bottom: 72px;
+}
+@media (max-width: 576px) {
   .checkout {
-    margin-bottom: 40px;
+    padding-bottom: 60px;
   }
 }
 
@@ -15724,15 +15755,6 @@ span.flatpickr-weekday {
   --angle-color: #fff;
   margin-right: 0;
   margin-bottom: 8px;
-}
-
-.checkout__fields {
-  padding-bottom: 72px;
-}
-@media (max-width: 576px) {
-  .checkout__fields {
-    padding-bottom: 60px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -15830,6 +15852,11 @@ span.flatpickr-weekday {
   grid-template-columns: 318px auto;
   column-gap: 30px;
   margin-bottom: 58px;
+}
+@media (max-width: 1024px) {
+  .account {
+    grid-template-columns: 208px auto;
+  }
 }
 @media (max-width: 1020px) {
   .account {

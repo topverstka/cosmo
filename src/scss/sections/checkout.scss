@@ -1,6 +1,10 @@
 .checkout {
-  @media (max-width: 601px) {
-    margin-bottom: 40px;
+  padding-bottom: 72px;
+  // @media (max-width: 601px) {
+  //   margin-bottom: 40px;
+  // }
+  @media (max-width: 576px) {
+    padding-bottom: 60px;
   }
 }
 .checkout__subtotal .cart-total__title,
@@ -22,10 +26,6 @@
 }
 
 .checkout__fields {
-  padding-bottom: 72px;
-  @media (max-width: 576px) {
-    padding-bottom: 60px;
-  }
 }
 .checkout__fields .fieldset__title {
   @media (max-width: 768px) {

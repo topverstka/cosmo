@@ -91,6 +91,12 @@
   content: "";
   background-color: #000;
   @include getmask("../img/common/search-mask.svg");
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: 44px;
+    height: 44px;
+    top: 40px;
+    right: 40px;
+  }
 }
 .select__list--dropdown::after {
   position: absolute;
@@ -148,6 +154,12 @@
   color: #000000;
   cursor: pointer;
   background-color: #fff;
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding-right: 22px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 37px;
+  }
 }
 .select__list--single > .select__item {
   width: 100%;
@@ -160,6 +172,9 @@
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: var(--fz);
     padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 37px;
   }
   @media (max-width: 601px) {
     padding-left: 20px;
@@ -192,6 +207,8 @@
   @media (min-width: 602px) and (max-width: 768px) {
     width: 40px;
     height: 40px;
+    top: 20px;
+    right: 16px;
   }
 }
 
@@ -260,10 +277,15 @@
   padding: 14px 20px 16px;
   font-size: 12px;
   font-weight: 600;
-  line-height: 14px;
+  line-height: 1.16;
   color: #a1aeb3;
   background: #f0f3f5;
   border-radius: 6px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+    padding: 24px 40px 32px;
+    border-radius: 12px;
+  }
 }
 
 .select__item--selectable {

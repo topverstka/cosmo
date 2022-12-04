@@ -2,8 +2,8 @@
   min-height: 680px;
   margin-bottom: 8px;
   @media (min-width: 1400px) and (max-width: 1440px) {
-    max-height: 680px;
-    
+    // max-height: 680px;
+    max-height: initial;
   }
   @media (max-width: 1400px) {
     min-height: 480px;
