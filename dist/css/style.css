@@ -6723,6 +6723,16 @@ span.flatpickr-weekday {
   padding-right: 8px;
   padding-bottom: 2px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .product-card__caption {
+    margin-top: 16px;
+    font-size: 28px;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 4px;
+  }
+}
 
 .review-card {
   display: flex;
@@ -8168,9 +8178,20 @@ span.flatpickr-weekday {
   background: #5F6C75;
   border-radius: 12px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card {
+    padding: 80px;
+    border-radius: 25px;
+  }
+}
 
 .case-review-card__top {
   margin-bottom: 40px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card__top {
+    margin-bottom: 80px;
+  }
 }
 
 .case-review-card__title {
@@ -8179,8 +8200,14 @@ span.flatpickr-weekday {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2142;
   color: #A1AEB3;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card__title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
 }
 @media (max-width: 601px) {
   .case-review-card__title {
@@ -8194,6 +8221,11 @@ span.flatpickr-weekday {
   line-height: 140%;
   color: #F0F3F5;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card__desc {
+    font-size: 28px;
+  }
+}
 
 .case-review-card__pic {
   display: block;
@@ -8202,10 +8234,20 @@ span.flatpickr-weekday {
   width: var(--size);
   height: var(--size);
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card__pic {
+    --size: 200px;
+  }
+}
 
 .case-review-card__img {
   object-fit: cover;
   border-radius: 6px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card__img {
+    border-radius: 12px;
+  }
 }
 
 .case-review-card__profile {
@@ -8220,6 +8262,13 @@ span.flatpickr-weekday {
   padding: 0px 8px 4px;
   background: #F0F3F5;
   border-radius: 6px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .case-review-card__profile-link {
+    font-size: 28px;
+    border-radius: 12px;
+    padding: 2px 16px 8px;
+  }
 }
 
 .case-review-card__bottom {
@@ -10496,7 +10545,12 @@ span.flatpickr-weekday {
 .changes-cases {
   margin-bottom: 82px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .changes-cases {
+    margin-bottom: 101px;
+  }
+}
+@media (max-width: 601px) {
   .changes-cases {
     margin-bottom: 51px;
   }
@@ -10516,6 +10570,11 @@ span.flatpickr-weekday {
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .changes-cases__gallery {
+    gap: 16px;
+  }
+}
 
 .changes-cases-card {
   display: grid;
@@ -10523,7 +10582,7 @@ span.flatpickr-weekday {
   column-gap: 8px;
   row-gap: 8px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .changes-cases-card {
     grid-template-columns: 1fr;
   }
@@ -10546,7 +10605,7 @@ span.flatpickr-weekday {
 .changes-cases-card--has-carousel .changes-case-card-carousel {
   grid-column: 2/3;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .changes-cases-card--has-carousel .changes-case-card-carousel {
     grid-column: unset;
   }
@@ -10555,16 +10614,27 @@ span.flatpickr-weekday {
 .changes-case-card-carousel__slide {
   padding: 20px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .changes-case-card-carousel__slide {
+    padding: 40px;
+  }
+}
 
 .changes-case-card-carousel__title {
   font-family: "RF Dewi";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2142;
   color: #A1AEB3;
   margin-bottom: 27px;
   text-align: center;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .changes-case-card-carousel__title {
+    font-size: 28px;
+    margin-bottom: 54px;
+  }
 }
 
 .changes-case-card-carousel__title-link {
@@ -10577,6 +10647,11 @@ span.flatpickr-weekday {
   margin-bottom: 26px;
   display: block;
   height: 196px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .changes-case-card-carousel__pic {
+    height: 392px;
+  }
 }
 
 .changes-case-card-carousel__button {
@@ -10662,13 +10737,13 @@ span.flatpickr-weekday {
   }
 }
 
-@media (min-width: 602px) {
+@media (min-width: 769px) {
   .page__changes-cases .related-products__gallery ~ .container {
     padding-top: 0;
   }
 }
 
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .page__changes-cases .person-result__compare .person-result__media {
     height: inherit;
   }
@@ -12904,7 +12979,7 @@ span.flatpickr-weekday {
     justify-content: flex-start;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .categories-nav__list {
     overflow: auto;
     flex-wrap: nowrap;
@@ -12940,6 +13015,7 @@ span.flatpickr-weekday {
   .categories-nav__list-link {
     font-size: 24px;
     padding: 24px 32px;
+    border-radius: 12px;
   }
 }
 @media (max-width: 601px) {
@@ -15258,9 +15334,20 @@ span.flatpickr-weekday {
   column-gap: 8px;
   row-gap: 8px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .related-products__gallery {
+    column-gap: 16px;
+    row-gap: 48px;
+  }
+}
 @media (max-width: 768px) {
   .related-products__gallery {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 601px) {
+  .related-products__gallery {
+    row-gap: 24px;
   }
 }
 

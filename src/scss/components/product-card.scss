@@ -576,4 +576,12 @@
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 2px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-top: 16px;
+    font-size: 28px;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 4px;
+  }
 }

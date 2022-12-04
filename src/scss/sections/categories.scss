@@ -167,7 +167,7 @@
   @media (max-width: 1024px) {
     justify-content: flex-start;
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     overflow: auto;
     flex-wrap: nowrap;
     margin-bottom: -20px;
@@ -196,7 +196,8 @@
   transition: all 0.3s ease;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
-    padding: 24px 32px
+    padding: 24px 32px;
+    border-radius: 12px;
   }
   @media (max-width: 601px) {
     padding-left: 16px;

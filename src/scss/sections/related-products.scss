@@ -47,8 +47,15 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 8px;
   row-gap: 8px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    column-gap: 16px;
+    row-gap: 48px;
+  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+  @media (max-width: 601px) {
+    row-gap: 24px;
   }
 }
 
