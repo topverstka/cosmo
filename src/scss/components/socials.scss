@@ -56,13 +56,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 72px;
+    padding: 10px;
+    margin-right: 16px;
+  }
 }
 .socials__icon--google {
   height: 16px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    height: 32px;
+  }
 }
 .socials__icon--vk {
   height: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    height: 24px;
+  }
 }
 .socials__icon--yandex {
   height: 16px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    height: 32px;
+  }
 }

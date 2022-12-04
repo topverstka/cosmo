@@ -17,6 +17,10 @@
     right: -8px;
     top: 51px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    top: 97px;
+    width: 590px;
+  }
 }
 .minicart--visible {
   opacity: 1;
@@ -26,10 +30,14 @@
 .minicart__message {
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2142;
   color: #A1AEB3;
   margin-bottom: 8px;
   text-align: center;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
 }
 .minicart__total {
   font-weight: 400;
@@ -42,6 +50,11 @@
     margin-bottom: -2px;
     padding-right: 10px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 40px;
+    margin-bottom: -4px;
+    padding-right: 20px;
+  }
 }
 .minicart__content {
   position: relative;
@@ -52,6 +65,11 @@
   @include macscrollbar(16px, 4px, #5F6C75);
   @media (max-width: 1020px) {
     max-height: 353px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    max-height: 50vh;
+    max-width: 100%;
+    width: 100%;
   }
 }
 .minicart__content::after {
@@ -91,34 +109,52 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 20px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 40px
+  }
 }
 .minicart-item__pic {
+  --brad: 6px;
+  --size: 80px;
   padding: 6px;
   margin-right: 16px;
-  --size: 80px;
   min-width: var(--size);
   max-width: var(--size);
   width: 100%;
   height: var(--size);
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: var(--brad);
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 160px;
+    --brad: 12px;
+    margin-right: 32px;
+    padding: 12px;
+  }
 }
 .minicart-item__img {
-  border-radius: 6px;
+  border-radius: var(--brad);
 }
 .minicart-item__name {
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2142;
   color: #FFFFFF;
   margin-bottom: 6px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
 }
 .minicart-item__variation {
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   color: #A1AEB3;
   margin-bottom: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+   font-size: 24px;
+   margin-bottom: 24px;
+  }
 }
 .minicart-item__total {
   display: flex;
@@ -130,6 +166,10 @@
   @media (max-width: 1020px) {
     max-width: 56px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    max-width: 112px;
+    margin-right: 14px;
+  }
 }
 .minicart__button {
   width: 100%;
@@ -138,6 +178,12 @@
   border-radius: 6px;
   padding-left: 10px;
   padding-right: 10px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
+  @media (max-width: 601px) {
+    font-size: 12px;
+  }
 }
 .minicart__button:hover {
   @media (any-hover: hover) {
@@ -152,8 +198,14 @@
   @media (max-width: 1020px) {
     font-size: 12px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .minicart__message + .minicart__bottom {
   margin-top: 25px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-top: 50px;
+  }
 }

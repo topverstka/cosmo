@@ -71,6 +71,9 @@
   background-color: transparent;
   transition: all 0.3s ease;
   --closer-color: #fff;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 .poppa__closer::before,
 .poppa__closer::after {

@@ -14,7 +14,11 @@
     max-height: var(--size);
     margin-right: 12px;
     fill: var(--icon-color);
-    @media (max-width: 575px) {
+    @media (min-width: 602px) and (max-width: 768px) {
+        --size: 64px;
+        margin-right: 18px;
+    }
+    @media (max-width: 601px) {
         --size: 32px;
         margin-right: 9px;
     }

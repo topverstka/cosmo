@@ -11,6 +11,9 @@
   @media (max-width: 1020px) {
     padding-top: 137px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding-top: 274px;
+  }
 }
 .header-snack {
   position: absolute;
@@ -35,6 +38,13 @@
     min-height: 134px;
     height: 100%;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 24px;
+    min-height: 268px;
+  }
 }
 
 .header-snack .select__list--single::after {
@@ -42,6 +52,12 @@
   right: 10px;
   width: 24px;
   height: 24px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    top: 7px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+  }
 }
 .header-snack--visible {
   pointer-events: initial;
@@ -65,10 +81,13 @@
   margin-right: 24px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 14px;
+  line-height: 1.16;
   @media (max-width: 1020px) {
     margin-bottom: 20px;
     margin-right: 0;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+   font-size: 24px; 
   }
 }
 .header-snack__content {
@@ -97,6 +116,9 @@
   @media (max-width: 1020px) {
     max-width: 210px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    max-width: 70%;
+  }
 }
 
 .header-snack__close {
@@ -110,6 +132,11 @@
     right: 13px;
     top: 4px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 80px;
+    top: 8px;
+    right: 26px;
+  }
 }
 .header-snack__close::before,
 .header-snack__close::after {
@@ -122,6 +149,10 @@
   content: "";
   background: #fff;
   transition: $tr;
+  @media (min-width: 602px) and (max-width: 768px) {
+   height: 4px; 
+   width: 70%;
+  }
 }
 .header-snack__close::before {
   transform: translate(-50%, -50%) rotate(45deg);
@@ -135,4 +166,7 @@
   --bg: transparent;
   border-radius: var(--brad);
   border: 1px solid #9FA7AC;
+  @media (min-width: 602px) and (max-width: 768px) {
+    max-width: 100%;
+  }
 }

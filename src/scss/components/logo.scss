@@ -12,6 +12,10 @@
     height: 30px;
     max-width: 212px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    height: 60px;
+    max-width: 424px;
+  }
   @media (max-width: 330px) {
     max-width: 172px;
   }

@@ -69,6 +69,9 @@
     width: calc(100% + 40px);
     margin-bottom: 22px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 44px;
+  }
 }
 .search-pop__suggests-track {
   display: flex;
@@ -78,6 +81,10 @@
   @media (max-width: 768px) {
     margin-bottom: -20px;
     overflow-x: auto;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding-left: 44px;
+    padding-right: 40px;
   }
 }
 .search-pop__suggest {
@@ -89,13 +96,18 @@
   margin-right: 8px;
   font-size: 14px;
   font-weight: 600;
-  line-height: 17px;
+  line-height: 1.2142;
   color: #000;
   background: #f0f3f5;
   border-radius: 100px;
   transition: all 0.3s ease;
   white-space: nowrap;
   margin-bottom: 20px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding: 22px 44px 28px;
+    font-size: 28px;
+    margin-right: 16px;
+  }
 }
 .search-pop__suggest--search::before {
   display: block;
@@ -106,6 +118,12 @@
   content: "";
   background-color: #000;
   @include getmask("../img/common/search-mask.svg");
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-right: 18px;
+    margin-bottom: -3px;
+    width: 32px;
+    height: 32px;
+  }
 }
 .search-pop__suggest--search:hover::before {
   background-color: #fff;
@@ -123,9 +141,14 @@
 .search-pop__title {
   margin-bottom: 15px;
   color: #fff;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 34px;
+  }
+  @media (max-width: 768px) {
+    line-height: 1.2;
+  }
   @media (max-width: 601px) {
     padding-left: 0;
-    line-height: 1.2;
     margin-bottom: 17px;
   }
 }

@@ -14,9 +14,16 @@
     height: 2px;
     background: #fff;
     transition: $tr;
+    @media (min-width: 602px) and (max-width: 768px) {
+      width: 50%;
+      height: 4px;
+    }
 
     &:nth-child(1) {
       transform: translate(-50%, calc(-50% - 5px));
+      @media (min-width: 602px) and (max-width: 768px) {
+        transform: translate(-50%, calc(-50% - 10px));
+      }
     }
 
     &:nth-child(2) {
@@ -25,6 +32,9 @@
 
     &:nth-child(3) {
       transform: translate(-50%, calc(-50% + 5px));
+      @media (min-width: 602px) and (max-width: 768px) {
+        transform: translate(-50%, calc(-50% + 10px));
+      }
     }
   }
 

@@ -24,6 +24,11 @@
   @media (max-width: 962px) {
     margin-bottom: 28px
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    --chips-fz: 28px;
+    --chips-padding: 26px 40px 30px;
+    --chips-item-mr: 16px;
+  }
 }
 @media (max-width: 768px) {
   .chips--has-scroll {
