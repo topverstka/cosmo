@@ -306,7 +306,7 @@ stickyPageHeadings.forEach((heading) => {
 
     const HEADING_HEIGHT = heading.getBoundingClientRect().height;
     const HEADING_OFFSET = HEADER_HEIGHT - (HEADING_HEIGHT - NAVBAR_HEIGHT * 1.5);
-    
+
     if (NAVBAR_HEIGHT > NAVBAR_TOP - HEADER_HEIGHT) {
       heading.classList.add('page-heading--sticky-run');
       heading.style.top = `${HEADING_OFFSET}px`;
@@ -322,7 +322,7 @@ const dynamicNavContent = document.querySelector('.nav-dynamic-content');
 
 if (dynamicNav && dynamicNavContent) {
   const dynamicLinks = dynamicNav.querySelectorAll('a');
-  const dynamicSections = dynamicNavContent.querySelectorAll('.categories');
+  const dynamicSections = dynamicNavContent.querySelectorAll('.nav-dynamic-content__section');
   dynamicSections.forEach((section, index, array) => {
     window.addEventListener('scroll', () => {
       const top = section.getBoundingClientRect().top;
