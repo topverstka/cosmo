@@ -199,12 +199,17 @@
     height: 50px;
   }
 }
+body:not(.os-linux):not(.os-macos) .poppa__closer {
+  @media (min-width: 769px) {
+    right: 27px;
+  }
+}
 .poppa__closer::before,
 .poppa__closer::after {
   top: 44%;
   right: 0;
   width: 85%;
-  height: 8%;
+  height: 5%;
   margin-right: auto;
   margin-left: auto;
   @media (max-width: 768px) {

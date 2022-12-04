@@ -298,13 +298,24 @@ const stickyPageHeadings = document.querySelectorAll('.page-heading--sticky');
 stickyPageHeadings.forEach((heading) => {
   window.addEventListener('scroll', () => {
     const top = heading.getBoundingClientRect().top;
-    const titleHeight = heading.querySelector('.page-heading__title').getBoundingClientRect().height
+    const titleHeight = heading.querySelector('.page-heading__title').getBoundingClientRect().height;
+    const titleTop = heading.querySelector('.page-heading__title').getBoundingClientRect().top;
+    const titleBottom = heading.querySelector('.page-heading__title').getBoundingClientRect().bottom;
     const titlePadding = window.getComputedStyle(heading).paddingTop
+
+    const headerHeight = document.querySelector('.header').getBoundingClientRect().height;
+
     // heading.style.top = `-${titleHeight + titlePadding}px`
     // console.log(top, titleHeight)
     // if(top <= -titleHeight -5) {
-    if(top <= titleHeight) {
+
+    // if(top <= titleHeight) {
+    console.log('bottom' , headerHeight, titleBottom)
+    console.log('top', headerHeight, titleTop)
+    if (titleTop <= 25) {
       heading.classList.add('page-heading--sticky-run')
+    // } else if (headerHeight <= titleBottom) {
+    //   heading.classList.add('page-heading--sticky-run')
     } else {
       heading.classList.remove('page-heading--sticky-run')
     }
@@ -316,7 +327,7 @@ const dynamicNavContent = document.querySelector('.nav-dynamic-content');
 
 if (dynamicNav && dynamicNavContent) {
   const dynamicLinks = dynamicNav.querySelectorAll('a');
-  const dynamicSections = dynamicNavContent.querySelectorAll('section');
+  const dynamicSections = dynamicNavContent.querySelectorAll('.categories');
   dynamicSections.forEach((section, index, array) => {
     window.addEventListener('scroll', () => {
       const top = section.getBoundingClientRect().top;

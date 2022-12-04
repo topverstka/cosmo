@@ -13,11 +13,11 @@
 
 .page-heading--sticky {
   position: sticky;
-  top: 25px;
+  top: -25px;
   z-index: 5;
   transition: all 0.3s ease;
   @media (max-width: 768px) {
-    top: 25px;
+    top: -25px;
   }
   @media (max-width: 420px) {
     // top: -115px;
@@ -102,7 +102,7 @@
   @media (max-width: 968px) {
     white-space: nowrap;
     overflow-y: auto;
-    margin-bottom: -20px;
+    margin-bottom: -40px;
     justify-content: flex-start;
     padding-left: 20px;
   }
@@ -111,24 +111,35 @@
   margin-left: 19px;
   margin-right: 19px;
   @media (max-width: 968px) {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     margin-left: 8px;
     margin-right: 8px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }
 .page-heading__nav-link {
   font-weight: 600;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.214;
   text-align: center;
   color: #A1AEB3;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 .page-heading__nav-link--current {
   color: #000000;
 }
 .page-heading__title ~ .page-heading__nav {
   margin-top: -20px;
-  @media (max-width: 968px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-top: 0;
+    height: 60px;
+  }
+  @media (max-width: 601px) {
     margin-top: 0;
     height: 30px;
   }
