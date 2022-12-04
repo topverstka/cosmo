@@ -90,7 +90,6 @@
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 26px;
-  // max-width: 385px;
   @media (max-width: 601px) {
     margin-bottom: 27px;
   }
@@ -116,7 +115,10 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
-  @media (max-width: 576px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+   font-size: 32px;
+  }
+  @media (max-width: 601px) {
     font-size: 16px;
   }
 }
@@ -124,7 +126,10 @@
   font-weight: 400;
   font-size: 27px;
   line-height: 110%;
-  @media (max-width: 576px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 40px;
+  }
+  @media (max-width: 601px) {
     font-size: 20px;
   }
 }
@@ -197,7 +202,7 @@
   width: 100%;
   column-gap: 8px;
   row-gap: 8px;
-  @media (max-width: 750px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 601px) {
@@ -214,6 +219,9 @@
 }
 .cart__gifts-gallery .product-card__info {
   min-height: 320px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    min-height: 500px;
+  }
   @media (max-width: 601px) {
     min-height: 250px;
   }

@@ -16,7 +16,11 @@
   margin-bottom: 31px;
   padding-left: 10px;
   padding-right: 10px;
-  @media (max-width: 768px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 56px;
+    font-size: 40px;
+  }
+  @media (max-width: 601px) {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
@@ -39,12 +43,18 @@
 
 .account-personal__main {
   margin-bottom: 21px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 68px;
+  }
   @media (max-width: 601px) {
     margin-bottom: 34px;
   }
 }
 .account-personal-addresses__card .fieldset__title {
   margin-bottom: 54px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 64px;
+  }
   @media (max-width: 601px) {
     margin-bottom: 32px;
   }
@@ -52,6 +62,9 @@
 
 .account-personal-addresses {
   margin-bottom: 32px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 28px;
+  }
   @media (max-width: 601px) {
     margin-bottom: 14px;
   }

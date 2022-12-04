@@ -8,6 +8,9 @@
   border-radius: 100px;
   max-width: 87px;
   width: 100%;
+  @media (min-width: 602px) and (max-width: 768px) {
+    max-width: 174px;
+  }
 }
 .stepper__button {
   background-color: var(--bg);

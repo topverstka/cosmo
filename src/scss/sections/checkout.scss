@@ -7,6 +7,9 @@
 .checkout__subtotal .cart-total__value {
   font-size: 14px;
   line-height: 140%;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 .checkout__select {
