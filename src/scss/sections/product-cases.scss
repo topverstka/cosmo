@@ -1,11 +1,15 @@
 .product-cases {
+  --brad: 12px;
   background-color: var(--bg-element);
-  border-radius: 12px;
+  border-radius: var(--brad);
   padding-top: 40px;
   padding-bottom: 50px;
   margin-bottom: 87px;
   @media (max-width: 810px) {
     margin-bottom: 32px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    --brad: 25px;
   }
   @media (max-width: 601px) {
     padding-top: 26px;

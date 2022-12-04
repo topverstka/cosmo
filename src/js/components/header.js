@@ -7,6 +7,7 @@ const headerNavLinks = document.querySelectorAll('.header__nav-link');
 const HEADER_NAV_LINK_OPENED = "header__nav-link--opened";
 headerNavLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
+    if (!link.parentElement.classList.contains('header__nav-item--mobile-open')) return
     link.parentElement.classList.toggle(HEADER_NAV_LINK_OPENED);
   });
   // link.addEventListener("mouseover", (e) => {

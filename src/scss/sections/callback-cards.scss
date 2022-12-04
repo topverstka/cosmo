@@ -17,8 +17,9 @@
   }
 }
 .callback-cards-card {
+  --brad: 12px;
   background-color: var(--bg-element);
-  border-radius: 12px;
+  border-radius: var(--brad);
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -27,6 +28,7 @@
   min-height: 380px;
   @media (max-width: 768px) and (min-width: 602px) {
     min-height: 394px;
+    --brad: 25px;
   }
   @media (max-width: 601px) {
     min-height: 192px;

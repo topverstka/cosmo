@@ -133,6 +133,7 @@
   padding-bottom: 8px;
   padding-left: 18px;
   padding-right: 18px;
+  font-weight: 700;
   @media (max-width: 1279px) and (min-width: 769px) {
     font-size: 9.69px;
     padding: 3px 12px 6px;
@@ -240,7 +241,7 @@
 .product-hero__bullet {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   font-size: 14px;
   line-height: 140%;
   margin-bottom: 13px;
@@ -253,7 +254,6 @@
     font-size: 28.6px;
     margin-bottom: 12px;
   }
-
   @media (max-width: 601px) {
     margin-bottom: 9px
   }
@@ -267,9 +267,11 @@
   min-width: var(--size);
   height: var(--size);
   margin-right: 8px;
+  margin-top: 2px;
   @media (max-width: 768px) and (min-width: 602px){
     --size: 32px;
     margin-right: 16px;
+    margin-top: 4px;
   }
 }
 .prodct-bullets-card__desc {
@@ -326,6 +328,9 @@
   align-items: center;
   justify-content: flex-start;
   min-width: 50%;
+  @media (min-width: 602px) and (max-width: 768px) {
+    min-width: 65%;
+  }
 }
 .product-hero__stepper {
   --stepper-value-color: #000;
@@ -354,24 +359,24 @@
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  max-width: 320px;
+  padding-top: 11px;
+  padding-bottom: 13px;
   width: 100%;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  --fz-button: 18.6px;
-  @media (max-width: 1900px) and (min-width: 1440px) {
-    max-width: 280px;
-    --fz-button: 14px;
-    padding-top: 11px;
-    padding-bottom: 13px;
+    max-width: 240px;
+  --fz-button: 14px;
+  @media (min-width: 1800px) {
+    max-width: 320px;
+    --fz-button: 18.6px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
-  @media (max-width: 1439px) and (min-width: 1280px) {
-    max-width: 280px;
+  @media (max-width: 1280px) and (min-width: 1025px) {
+    max-width: 240px;
     --fz-button: 12.4px;
     padding-top: 9px;
     padding-bottom: 11px;
   }
-  @media (max-width: 1279px) and (min-width: 769px) {
+  @media (max-width: 1024px) and (min-width: 769px) {
     max-width: 170px;
     --fz-button: 10px;
     padding-top: 7px;

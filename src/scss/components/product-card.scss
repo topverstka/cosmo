@@ -130,6 +130,8 @@
   }
   @media (max-width: 601px) {
     // max-width: 100%; // В magazine на главной было так
+    --chips-fz: 10px; 
+    --chips-padding: 7px 8px 9px;
   }
 }
 

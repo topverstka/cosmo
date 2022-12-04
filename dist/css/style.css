@@ -6223,6 +6223,13 @@ span.flatpickr-weekday {
     max-width: 74%;
   }
 }
+@media (max-width: 601px) {
+  .product-card__options {
+    --chips-fz: 10px;
+    --chips-padding: 7px 8px 9px;
+  }
+}
+
 .product-card__order {
   display: flex;
   align-items: center;
@@ -13125,8 +13132,9 @@ span.flatpickr-weekday {
 }
 
 .callback-cards-card {
+  --brad: 12px;
   background-color: var(--bg-element);
-  border-radius: 12px;
+  border-radius: var(--brad);
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -13137,6 +13145,7 @@ span.flatpickr-weekday {
 @media (max-width: 768px) and (min-width: 602px) {
   .callback-cards-card {
     min-height: 394px;
+    --brad: 25px;
   }
 }
 @media (max-width: 601px) {
@@ -16655,6 +16664,7 @@ span.flatpickr-weekday {
   padding-bottom: 8px;
   padding-left: 18px;
   padding-right: 18px;
+  font-weight: 700;
 }
 @media (max-width: 1279px) and (min-width: 769px) {
   .product-hero__badge {
@@ -16799,7 +16809,7 @@ span.flatpickr-weekday {
 .product-hero__bullet {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   font-size: 14px;
   line-height: 140%;
   margin-bottom: 13px;
@@ -16833,11 +16843,13 @@ span.flatpickr-weekday {
   min-width: var(--size);
   height: var(--size);
   margin-right: 8px;
+  margin-top: 2px;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .product-hero__bullet-icon {
     --size: 32px;
     margin-right: 16px;
+    margin-top: 4px;
   }
 }
 
@@ -16906,6 +16918,11 @@ span.flatpickr-weekday {
   justify-content: flex-start;
   min-width: 50%;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .product-hero__order-buy {
+    min-width: 65%;
+  }
+}
 
 .product-hero__stepper {
   --stepper-value-color: #000;
@@ -16944,29 +16961,29 @@ span.flatpickr-weekday {
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  max-width: 320px;
+  padding-top: 11px;
+  padding-bottom: 13px;
   width: 100%;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  --fz-button: 18.6px;
+  max-width: 240px;
+  --fz-button: 14px;
 }
-@media (max-width: 1900px) and (min-width: 1440px) {
+@media (min-width: 1800px) {
   .product-hero__order-buy-button {
-    max-width: 280px;
-    --fz-button: 14px;
-    padding-top: 11px;
-    padding-bottom: 13px;
+    max-width: 320px;
+    --fz-button: 18.6px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
-@media (max-width: 1439px) and (min-width: 1280px) {
+@media (max-width: 1280px) and (min-width: 1025px) {
   .product-hero__order-buy-button {
-    max-width: 280px;
+    max-width: 240px;
     --fz-button: 12.4px;
     padding-top: 9px;
     padding-bottom: 11px;
   }
 }
-@media (max-width: 1279px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   .product-hero__order-buy-button {
     max-width: 170px;
     --fz-button: 10px;
@@ -17406,6 +17423,7 @@ span.flatpickr-weekday {
 @media (max-width: 768px) and (min-width: 602px) {
   .product-details__desc {
     margin-bottom: 86px;
+    max-width: 100%;
   }
 }
 @media (max-width: 810px) {
@@ -17417,6 +17435,7 @@ span.flatpickr-weekday {
 @media (max-width: 601px) {
   .product-details__desc {
     margin-bottom: 40px;
+    max-width: 100%;
   }
 }
 
@@ -17583,10 +17602,11 @@ span.flatpickr-weekday {
 .product-details__desc a {
   display: inline-block;
   border: none;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: inherit;
   line-height: inherit;
   display: inline;
+  border-bottom: 1px solid var(--button-color);
 }
 
 .product-details-contra {
@@ -17744,8 +17764,9 @@ span.flatpickr-weekday {
 }
 
 .product-cases {
+  --brad: 12px;
   background-color: var(--bg-element);
-  border-radius: 12px;
+  border-radius: var(--brad);
   padding-top: 40px;
   padding-bottom: 50px;
   margin-bottom: 87px;
@@ -17753,6 +17774,11 @@ span.flatpickr-weekday {
 @media (max-width: 810px) {
   .product-cases {
     margin-bottom: 32px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .product-cases {
+    --brad: 25px;
   }
 }
 @media (max-width: 601px) {
