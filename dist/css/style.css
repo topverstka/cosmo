@@ -5178,6 +5178,11 @@ span.flatpickr-weekday {
   justify-content: flex-start;
   color: var(--link-color);
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .link {
+    font-size: 24px;
+  }
+}
 
 .link::before {
   display: block;
@@ -5188,6 +5193,13 @@ span.flatpickr-weekday {
   background-position: center;
   margin-right: 8px;
   background-color: var(--c-accent);
+}
+@media (min-width: 602px) and (max-width: 678px) {
+  .link::before {
+    width: 32px;
+    height: 36px;
+    margin-right: 16px;
+  }
 }
 
 .link--geo::before {
@@ -14506,7 +14518,14 @@ span.flatpickr-weekday {
   line-height: 140%;
   color: #000000;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__info {
+    margin-bottom: 80px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (max-width: 601px) {
   .services-location__info {
     margin-bottom: 40px;
     padding-left: 24px;
@@ -14527,7 +14546,13 @@ span.flatpickr-weekday {
   color: #000000;
   margin-bottom: 21px;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__name {
+    font-size: 40px;
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 601px) {
   .services-location__name {
     font-size: 20px;
     line-height: 120%;
@@ -14552,7 +14577,14 @@ span.flatpickr-weekday {
   align-items: center;
   justify-content: flex-start;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__contacts-item {
+    margin-right: 24px;
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 601px) {
   .services-location__contacts-item {
     margin-bottom: 8px;
   }
@@ -14574,6 +14606,13 @@ span.flatpickr-weekday {
   background-position: center;
   margin-right: 8px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__contacts-item::before {
+    width: 32px;
+    height: 36px;
+    margin-right: 16px;
+  }
+}
 
 .services-location-address::before {
   background-image: url("../img/common/icon-geo.svg");
@@ -14581,6 +14620,11 @@ span.flatpickr-weekday {
 
 .services-location-time {
   margin-right: 14px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location-time {
+    margin-right: 28px;
+  }
 }
 
 .services-location-time::before {
@@ -14594,7 +14638,14 @@ span.flatpickr-weekday {
 .services-location__gallery {
   grid-area: gallery;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__gallery {
+    margin-bottom: 80px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (max-width: 601px) {
   .services-location__gallery {
     padding-left: 24px;
     padding-right: 24px;
@@ -14617,13 +14668,15 @@ span.flatpickr-weekday {
   height: 316px;
   margin-bottom: 12px;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
   .services-location__media {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    height: 362px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 601px) {
   .services-location__media {
+    margin-bottom: 8px;
     height: 181px;
   }
 }
@@ -14639,13 +14692,24 @@ span.flatpickr-weekday {
   border-radius: 12px;
   width: 100%;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__img {
+    border-radius: 24px;
+  }
+}
 
 .services-location__button-more {
   --button-color: #5F6C75;
   font-family: "RF Dewi", sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 602px) {
+  .services-location__button-book {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 601px) {
   .services-location__button-book {
     padding-top: 12px;
     padding-bottom: 15px;
@@ -14658,7 +14722,12 @@ span.flatpickr-weekday {
   background: #F0F3F5;
   margin-bottom: 8px;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location-service-card {
+    padding: 24px 10px 32px 32px;
+  }
+}
+@media (max-width: 601px) {
   .services-location-service-card {
     padding: 12px 5px 16px 16px;
   }
@@ -14680,19 +14749,29 @@ span.flatpickr-weekday {
   color: #000000;
   margin-bottom: 20px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location-service-card__title {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+}
 @media (max-width: 768px) {
   .services-location-service-card__title {
-    font-size: 14px;
     line-height: 1.15;
-    margin-bottom: 11px;
     max-width: 80%;
+  }
+}
+@media (max-width: 601px) {
+  .services-location-service-card__title {
+    font-size: 14px;
+    margin-bottom: 11px;
   }
 }
 
 .services-location-service-card__desc {
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   color: #A1AEB3;
   font-family: "RF Dewi", sans-serif;
 }
@@ -14705,11 +14784,21 @@ span.flatpickr-weekday {
     overflow: hidden;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location-service-card__desc {
+    font-size: 24px;
+  }
+}
 
 .services-location__services-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location__services-buttons {
+    column-gap: 20px;
+  }
 }
 
 .services-all__layout {
@@ -14733,7 +14822,12 @@ span.flatpickr-weekday {
 .services-all__category {
   margin-bottom: 60px;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all__category {
+    margin-bottom: 64px;
+  }
+}
+@media (max-width: 601px) {
   .services-all__category {
     margin-bottom: 32px;
   }
@@ -14742,7 +14836,13 @@ span.flatpickr-weekday {
 .services-all__title {
   margin-bottom: 42px;
 }
-@media (max-width: 768px) {
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all__title {
+    margin-bottom: 48px;
+    padding-left: 40px;
+  }
+}
+@media (max-width: 601px) {
   .services-all__title {
     margin-bottom: 24px;
     padding-left: 20px;
@@ -14755,6 +14855,13 @@ span.flatpickr-weekday {
   background-color: #fff;
   border-radius: 12px;
   margin-bottom: 8px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all-card {
+    padding: 40px;
+    margin-bottom: 16px;
+    border-radius: 24.5px;
+  }
 }
 @media (max-width: 601px) {
   .services-all-card {
@@ -14773,6 +14880,12 @@ span.flatpickr-weekday {
   color: #000000;
   margin-bottom: 2px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all-card__title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
 @media (max-width: 601px) {
   .services-all-card__title {
     font-size: 16px;
@@ -14787,6 +14900,12 @@ span.flatpickr-weekday {
   color: #A1AEB3;
   margin-bottom: 16px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all-card__subtitle {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
 
 .services-all-card__desc {
   font-weight: 400;
@@ -14794,6 +14913,12 @@ span.flatpickr-weekday {
   line-height: 140%;
   color: #A1AEB3;
   margin-bottom: 19px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all-card__desc {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
 }
 @media (max-width: 601px) {
   .services-all-card__desc {
@@ -14833,6 +14958,11 @@ span.flatpickr-weekday {
 .services-all-card .product-card__price {
   font-size: 16px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-all-card .product-card__price {
+    font-size: 32px;
+  }
+}
 
 .services__sidebar {
   --sidebar-minh: 452px;
@@ -14852,6 +14982,11 @@ span.flatpickr-weekday {
 @media (max-width: 768px) {
   .services__sidebar {
     --sidebar-minh: 359px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services__sidebar {
+    max-width: 600px;
   }
 }
 
@@ -14883,6 +15018,7 @@ span.flatpickr-weekday {
 @media (max-width: 768px) {
   .services__sidebar-card {
     padding-top: 28px;
+    width: 100%;
   }
 }
 
@@ -14918,6 +15054,11 @@ span.flatpickr-weekday {
   .page__services-all .blog-sidebar-about__desc {
     font-size: 23px;
     line-height: 1.08;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .page__services-all .blog-sidebar-about__desc {
+    font-size: 28px;
   }
 }
 

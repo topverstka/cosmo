@@ -350,6 +350,11 @@ if (servicesLeadButton) {
   servicesLeadButton.addEventListener('click', () => {
     document.querySelector('.services__sidebar').classList.add('services__sidebar--active');
   });
+  window.addEventListener('click', (e) => {
+    if (!e.target == sideNav || e.target == servicesLeadButton) return;
+
+    document.querySelector('.services__sidebar').classList.remove('services__sidebar--active');
+  })
 }
 
 const sideNav = document.querySelector('.side-navigation');

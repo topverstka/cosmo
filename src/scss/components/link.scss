@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: flex-start;
   color: var(--link-color);
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 .link::before {
   display: block;
@@ -14,6 +17,11 @@
   background-position: center;
   margin-right: 8px;
   background-color: var(--c-accent);
+  @media (min-width: 602px) and (max-width: 678px) {
+    width: 32px;
+    height: 36px;
+    margin-right: 16px;
+  }
 }
 .link--geo::before {
   content: "";
