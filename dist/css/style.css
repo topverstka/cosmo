@@ -4688,15 +4688,42 @@ span.flatpickr-weekday {
   mask-size: contain;
   background-color: #fff;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .calendar__button-day-prev,
+.calendar__button-day-next {
+    --size: 32px;
+    top: -72px;
+  }
+}
 
 .calendar__button-day-prev {
   left: 40px;
   transform: rotate(-90deg);
 }
+@media (min-width: 769px) {
+  .calendar__button-day-prev {
+    left: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .calendar__button-day-prev {
+    left: 20px;
+  }
+}
 
 .calendar__button-day-next {
   right: 40px;
   transform: rotate(90deg);
+}
+@media (min-width: 769px) {
+  .calendar__button-day-next {
+    right: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .calendar__button-day-next {
+    right: 20px;
+  }
 }
 
 .timepicker {

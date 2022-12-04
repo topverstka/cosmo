@@ -251,13 +251,30 @@ span.flatpickr-weekday {
   top: -33px;
   @include getmask("../img/common/arrow-circle.svg");
   background-color: #fff;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --size: 32px;
+    top: -72px;
+    
+  }
 }
 
 .calendar__button-day-prev {
   left: 40px;
   transform: rotate(-90deg);
+  @media (min-width: 769px) {
+    left: 20px;
+  }
+  @media (max-width: 380px) {
+    left: 20px;
+  }
 }
 .calendar__button-day-next {
   right: 40px;
   transform: rotate(90deg);
+  @media (min-width: 769px) {
+    right: 20px;
+  }
+  @media (max-width: 380px) {
+    right: 20px;
+  }
 }
