@@ -59,6 +59,7 @@
   }
   @media (max-width: 768px) {
     max-width: calc(100% - 40px);
+    width: 100%;
   }
   @media (max-width: 601px) {
     max-width: 280px;
@@ -130,6 +131,15 @@
   margin-bottom: 12px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 24px;
+  }
+  @media (max-width: 768px) {
+    max-width: calc(100% - 40px);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 601px) {
+    max-width: 280px;
   }
 }
 .flatpickr-current-month {
@@ -229,4 +239,25 @@ span.flatpickr-weekday {
     max-width: 100%;
     width: 100%;
   }
+}
+
+.calendar__button-day-prev,
+.calendar__button-day-next {
+  --size: 16px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: -33px;
+  @include getmask("../img/common/arrow-circle.svg");
+  background-color: #fff;
+}
+
+.calendar__button-day-prev {
+  left: 40px;
+  transform: rotate(-90deg);
+}
+.calendar__button-day-next {
+  right: 40px;
+  transform: rotate(90deg);
 }

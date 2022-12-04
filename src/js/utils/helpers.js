@@ -105,8 +105,7 @@ export function getShortHumanDate(date, locale = "ru") {
    return date.toLocaleString("ru", options);
 }
 
-export function getTodayPlus(days) {
-  let someDate = new Date();
+export function getTodayPlus(days, someDate = new Date()) {
   let numberOfDaysToAdd = days;
   let result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
   return new Date(result)

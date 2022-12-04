@@ -185,11 +185,43 @@ calendars.forEach((calendar) => {
     calendarSettings.defaultDate = getTodayPlus(2);
   }
 
-  // if (calendar.classList.contains('calendar--has-year')) {
-  //   console.log('year', calendarInput)
-  // }
 
-  flatpickr(calendarInput, calendarSettings);
+  const flatCalendar = flatpickr(calendarInput, calendarSettings);
+
+  const dayPrev = document.createElement('span');
+  const dayNext = document.createElement('span');
+  dayNext.classList.add('calendar__button-day-next');
+  dayPrev.classList.add('calendar__button-day-prev');
+  calendar.querySelector('.flatpickr-months').append(dayPrev);
+  calendar.querySelector('.flatpickr-months').append(dayNext);
+
+  function getCalendarDate() {
+    let today = calendar.querySelector('.calendar__input.flatpickr-input').value
+    return new Date(Date.parse(today));
+  }
+  function moveCurrentCalendarDate(modifier) {
+    let dayOld = getCalendarDate();
+    let dayNew = getCalendarDate();
+    dayNew.setDate(dayOld.getDate()+modifier)
+    return dayNew
+  }
+
+  dayNext.addEventListener("click", (e) => {
+    let day = moveCurrentCalendarDate(1)
+    flatCalendar.setDate(day, true, "D, j M Y")
+  });
+  dayPrev.addEventListener("click", (e) => {
+    let day = moveCurrentCalendarDate(-1)
+    if (calendar.classList.contains('calendar--only-future')) {
+      let newDate = new Date(day).getTime()
+      let today = new Date(flatCalendar.now).getTime()
+      if (newDate > today) {
+        flatCalendar.setDate(newDate, true, "D, j M Y")
+      }
+    } else {
+      flatCalendar.setDate(newDate, true, "D, j M Y")
+    }
+  });
 });
 
 

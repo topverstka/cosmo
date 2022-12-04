@@ -4451,6 +4451,7 @@ select {
 @media (max-width: 768px) {
   .calendar--inline .calendar__input {
     max-width: calc(100% - 40px);
+    width: 100%;
   }
 }
 @media (max-width: 601px) {
@@ -4538,6 +4539,19 @@ select {
 @media (min-width: 602px) and (max-width: 768px) {
   .flatpickr-months {
     margin-bottom: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .flatpickr-months {
+    max-width: calc(100% - 40px);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 601px) {
+  .flatpickr-months {
+    max-width: 280px;
   }
 }
 
@@ -4654,6 +4668,35 @@ span.flatpickr-weekday {
     max-width: 100%;
     width: 100%;
   }
+}
+
+.calendar__button-day-prev,
+.calendar__button-day-next {
+  --size: 16px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: -33px;
+  -webkit-mask: url("../img/common/arrow-circle.svg");
+  mask: url("../img/common/arrow-circle.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #fff;
+}
+
+.calendar__button-day-prev {
+  left: 40px;
+  transform: rotate(-90deg);
+}
+
+.calendar__button-day-next {
+  right: 40px;
+  transform: rotate(90deg);
 }
 
 .timepicker {
