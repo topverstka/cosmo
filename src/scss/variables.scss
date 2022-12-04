@@ -91,6 +91,22 @@ $error: var(--c-error);
     --fz-button: 12px;
     --lh-button: 126%;
   }
+
+
+  --fz-menu-items: 12px;
+  --lh-menu-items: 1.16;
+  @media (min-width: 1800px) {
+    --fz-menu-items: 16px;
+  }
+  @media (max-width: 1280px) {
+    --fz-menu-items: 10.67px;
+  }
+  @media (max-width: 1024px) {
+    --fz-menu-items: 8.53px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    --fz-menu-items: 24px;
+  }
 }
 
 // ================ Other Start ================
