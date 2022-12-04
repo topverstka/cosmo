@@ -297,27 +297,22 @@ orderCards.forEach(card => {
 const stickyPageHeadings = document.querySelectorAll('.page-heading--sticky');
 stickyPageHeadings.forEach((heading) => {
   window.addEventListener('scroll', () => {
-    const top = heading.getBoundingClientRect().top;
-    const titleHeight = heading.querySelector('.page-heading__title').getBoundingClientRect().height;
-    const titleTop = heading.querySelector('.page-heading__title').getBoundingClientRect().top;
-    const titleBottom = heading.querySelector('.page-heading__title').getBoundingClientRect().bottom;
-    const titlePadding = window.getComputedStyle(heading).paddingTop
+    const header = document.querySelector('.header');
+    const navbar = heading.querySelector('.page-heading__nav');
 
-    const headerHeight = document.querySelector('.header').getBoundingClientRect().height;
+    const HEADER_HEIGHT = header.getBoundingClientRect().height;
+    const NAVBAR_TOP = navbar.getBoundingClientRect().top;
+    const NAVBAR_HEIGHT = navbar.getBoundingClientRect().height;
 
-    // heading.style.top = `-${titleHeight + titlePadding}px`
-    // console.log(top, titleHeight)
-    // if(top <= -titleHeight -5) {
-
-    // if(top <= titleHeight) {
-    console.log('bottom' , headerHeight, titleBottom)
-    console.log('top', headerHeight, titleTop)
-    if (titleTop <= 25) {
-      heading.classList.add('page-heading--sticky-run')
-    // } else if (headerHeight <= titleBottom) {
-    //   heading.classList.add('page-heading--sticky-run')
+    const HEADING_HEIGHT = heading.getBoundingClientRect().height;
+    const HEADING_OFFSET = HEADER_HEIGHT - (HEADING_HEIGHT - NAVBAR_HEIGHT * 1.5);
+    
+    if (NAVBAR_HEIGHT > NAVBAR_TOP - HEADER_HEIGHT) {
+      heading.classList.add('page-heading--sticky-run');
+      heading.style.top = `${HEADING_OFFSET}px`;
     } else {
-      heading.classList.remove('page-heading--sticky-run')
+      heading.classList.remove('page-heading--sticky-run');
+      heading.style.top = '';
     }
   })
 })
