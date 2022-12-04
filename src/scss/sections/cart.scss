@@ -20,6 +20,9 @@
   line-height: 120%;
   color: #000000;
   margin-right: 30px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 32px;
+  }
   @media (max-width: 601px) {
     font-size: 16px;
   }
@@ -339,6 +342,9 @@
 .cart__button-clear {
   font-size: 14px;
   font-family: "RF Dewi", sans-serif;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
   @media (max-width: 601px) {
     font-size: 12px;
   }

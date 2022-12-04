@@ -280,6 +280,9 @@
   --brad: 6px;
   margin-right: 0;
   margin-bottom: 20px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --brad: 12px;
+  }
   @media (max-width: 601px) {
     margin-bottom: 18px
   }

@@ -2956,6 +2956,7 @@ input[type=search]::-webkit-search-cancel-button {
   .input {
     --fz: 24px;
     --padding: 24px 40px 32px 20px;
+    --border-radius: 12px;
   }
 }
 @media (max-width: 601px) {
@@ -3421,6 +3422,11 @@ select {
   margin-right: 0;
   margin-bottom: 20px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .select--grey {
+    --brad: 12px;
+  }
+}
 @media (max-width: 601px) {
   .select--grey {
     margin-bottom: 18px;
@@ -3844,6 +3850,11 @@ select {
     margin-bottom: 40px;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .search__form {
+    border-radius: 24px;
+  }
+}
 @media (max-width: 601px) {
   .search__form {
     padding: 4px;
@@ -3918,6 +3929,7 @@ select {
 @media (min-width: 602px) and (max-width: 768px) {
   .search__button {
     --size: 75px;
+    border-radius: 12px;
   }
 }
 @media (max-width: 601px) {
@@ -4995,6 +5007,7 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .fieldset {
     margin-bottom: 16px;
+    border-radius: 25px;
   }
 }
 @media (max-width: 601px) {
@@ -6866,6 +6879,7 @@ span.flatpickr-weekday {
     font-size: 20px;
     padding: 0 8px 4px 8px;
     margin-bottom: 16px;
+    border-radius: 12px;
   }
 }
 @media (max-width: 601px) {
@@ -8364,6 +8378,11 @@ span.flatpickr-weekday {
     margin-bottom: 36px;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .person-result {
+    border-radius: 24px;
+  }
+}
 
 .person-result--has-top-gap {
   margin-top: 65px;
@@ -8440,6 +8459,11 @@ span.flatpickr-weekday {
 .person-result__media-img {
   border-radius: 12px;
   object-fit: cover;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .person-result__media-img {
+    border-radius: 24px;
+  }
 }
 
 .person-result__media--double {
@@ -8606,6 +8630,11 @@ span.flatpickr-weekday {
     padding-left: 36px;
     padding-right: 36px;
     padding-bottom: 60px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .message-card {
+    border-radius: 24px;
   }
 }
 
@@ -10881,6 +10910,7 @@ span.flatpickr-weekday {
   .testimonials-card {
     padding: 16px;
     padding-bottom: 36px;
+    border-radius: 25px;
   }
 }
 @media (max-width: 601px) {
@@ -11031,6 +11061,7 @@ span.flatpickr-weekday {
   .magazine-card {
     padding: 40px;
     padding-right: 34px;
+    border-radius: 25px;
   }
 }
 @media (max-width: 601px) {
@@ -11190,6 +11221,11 @@ span.flatpickr-weekday {
   width: 100%;
   height: 100%;
   border-radius: var(--brad);
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .magazine-card__bg-pic {
+    --brad: 25px;
+  }
 }
 
 .magazine-card__img {
@@ -11379,6 +11415,11 @@ span.flatpickr-weekday {
     margin-right: auto;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog__gallery {
+    gap: 16px;
+  }
+}
 @media (max-width: 601px) {
   .blog__gallery {
     margin-bottom: 18px;
@@ -11394,6 +11435,11 @@ span.flatpickr-weekday {
 @media (max-width: 1400px) and (min-width: 1024px) {
   .blog-card {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog-card {
+    border-radius: 25px;
   }
 }
 @media (max-width: 768px) {
@@ -11637,6 +11683,11 @@ span.flatpickr-weekday {
   object-fit: cover;
   border-radius: 12px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog-card__img {
+    border-radius: 25px;
+  }
+}
 
 .blog-card--grey .blog-card__media {
   padding: 0;
@@ -11644,6 +11695,11 @@ span.flatpickr-weekday {
 
 .blog-card--grey .product-card {
   border-radius: 12px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog-card--grey .product-card {
+    border-radius: 25px;
+  }
 }
 
 @media (max-width: 601px) {
@@ -12183,6 +12239,12 @@ span.flatpickr-weekday {
   width: 100%;
 }
 
+@media (min-width: 602px) and (max-width: 768px) {
+  .blog-sidebar-about__top {
+    margin-bottom: 30px;
+  }
+}
+
 .blog-sidebar-about__title {
   font-family: "RF Dewi", sans-serif;
   font-style: normal;
@@ -12368,6 +12430,7 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .locations__container {
     padding-bottom: 80px;
+    border-radius: 25px;
   }
 }
 @media (max-width: 601px) {
@@ -12862,6 +12925,11 @@ span.flatpickr-weekday {
     border-radius: 6px;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .catalog-products__filters .row-filters__select .select__list--dropdown .select__item--selectable {
+    border-radius: 12px;
+  }
+}
 
 .catalog-products__filters .row-filters__select.is-selected {
   --value-color: #fff;
@@ -12926,6 +12994,11 @@ span.flatpickr-weekday {
     max-width: 49%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .categories-card {
+    --brad: 24px;
   }
 }
 @media (max-width: 576px) {
@@ -13357,6 +13430,11 @@ span.flatpickr-weekday {
     padding-bottom: 21px;
   }
 }
+@media (min-width: 602px) and (max-width: 678px) {
+  .doc-card {
+    border-radius: 24px;
+  }
+}
 
 .doc-card:last-of-type {
   margin-bottom: 0;
@@ -13479,6 +13557,11 @@ span.flatpickr-weekday {
   line-height: 120%;
   color: #000000;
   margin-right: 30px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .cart-heading__count {
+    font-size: 32px;
+  }
 }
 @media (max-width: 601px) {
   .cart-heading__count {
@@ -13868,6 +13951,11 @@ span.flatpickr-weekday {
   font-size: 14px;
   font-family: "RF Dewi", sans-serif;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .cart__button-clear {
+    font-size: 24px;
+  }
+}
 @media (max-width: 601px) {
   .cart__button-clear {
     font-size: 12px;
@@ -13992,6 +14080,11 @@ span.flatpickr-weekday {
 .about-features__img {
   border-radius: 12px;
   object-fit: cover;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .about-features__img {
+    border-radius: 25px;
+  }
 }
 
 .about-features__columns {
@@ -14324,6 +14417,7 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .stores__menu {
     margin-top: 480px;
+    padding-top: 40px;
   }
 }
 
@@ -14375,9 +14469,15 @@ span.flatpickr-weekday {
 .stores__results-caption {
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   color: #A2AAAD;
   margin-bottom: 16px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .stores__results-caption {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
 }
 
 .stores-list {
@@ -14765,6 +14865,12 @@ span.flatpickr-weekday {
     row-gap: 4px;
   }
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-gallery .about-features__gallery {
+    row-gap: 8px;
+    margin-bottom: 16px;
+  }
+}
 
 .services-location {
   background-color: var(--bg-element);
@@ -14777,6 +14883,14 @@ span.flatpickr-weekday {
   .services-location {
     padding-top: 30px;
     padding-bottom: 40px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services-location {
+    margin-bottom: 16px;
+    border-radius: 25px;
+    padding-bottom: 80px;
+    padding-top: 60px;
   }
 }
 
@@ -15035,6 +15149,8 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location-service-card {
     padding: 24px 10px 32px 32px;
+    border-radius: 24px;
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 601px) {
@@ -15047,6 +15163,11 @@ span.flatpickr-weekday {
   margin-bottom: 18px;
 }
 @media (max-width: 768px) {
+  .services-location-service-card:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 601px) {
   .services-location-service-card:last-of-type {
     margin-bottom: 15px;
   }
@@ -15306,6 +15427,11 @@ span.flatpickr-weekday {
   --button-color: var(--c-text-on);
   z-index: 1;
   display: none;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .services__sidebar-toggler {
+    border-radius: 12px;
+  }
 }
 @media (max-width: 1024px) {
   .services__sidebar-toggler {
@@ -15864,6 +15990,11 @@ span.flatpickr-weekday {
   border-radius: 12px;
   margin-bottom: 8px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .order-history-card {
+    border-radius: 24px;
+  }
+}
 @media (max-width: 768px) {
   .order-history-card {
     padding-top: 30px;
@@ -16008,6 +16139,12 @@ span.flatpickr-weekday {
   padding-left: 18px;
   padding-right: 18px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .order-history-card__button-more {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
 @media (max-width: 601px) {
   .order-history-card__button-more {
     --fz-button: 14px;
@@ -16114,6 +16251,7 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .order-history-card__products {
     padding: 32px;
+    border-radius: 12px;
   }
 }
 @media (max-width: 601px) {
@@ -16189,7 +16327,7 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .order-history-card__products-more {
     font-size: 40px;
-    border-radius: 12px;
+    border-radius: 24px;
   }
 }
 @media (max-width: 420px) {
@@ -16304,6 +16442,11 @@ span.flatpickr-weekday {
 
 .order-history-card .order-history__product {
   --brad: 12px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .order-history-card .order-history__product {
+    margin-bottom: 16px;
+  }
 }
 @media (max-width: 601px) {
   .order-history-card .order-history__product {
@@ -16612,6 +16755,7 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .order-history__product .product-card__info {
     padding-top: 12px;
+    padding-right: 24px;
   }
 }
 @media (max-width: 601px) {
@@ -16638,7 +16782,7 @@ span.flatpickr-weekday {
 
 @media (max-width: 768px) {
   .order-history__product .product-card__variation {
-    margin-bottom: 46px;
+    margin-bottom: 36px;
   }
 }
 @media (max-width: 601px) {
@@ -18121,6 +18265,8 @@ span.flatpickr-weekday {
   .footer__top {
     padding-top: 36px;
     padding-bottom: 38px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 @media (max-width: 601px) {
@@ -18486,6 +18632,11 @@ span.flatpickr-weekday {
 .section-map ~ .callback-cards {
   padding-top: 8px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .section-map ~ .callback-cards {
+    padding-top: 16px;
+  }
+}
 
 .section-map__frame {
   width: 100%;
@@ -18495,6 +18646,11 @@ span.flatpickr-weekday {
 @media (max-width: 601px) {
   .section-map__frame {
     height: 590px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .section-map__frame {
+    border-radius: 25px;
   }
 }
 

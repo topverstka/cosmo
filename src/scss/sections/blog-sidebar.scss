@@ -26,6 +26,11 @@
 .blog-sidebar-about__bottom {
   width: 100%;
 }
+.blog-sidebar-about__top {
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
 .blog-sidebar-about__title {
   font-family: 'RF Dewi', sans-serif;
   font-style: normal;

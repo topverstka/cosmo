@@ -7,6 +7,9 @@
   @media (max-width: 1024px) {
     margin-bottom: 36px;
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 24px;
+  }
 }
 .person-result--has-top-gap {
   margin-top: 65px;
@@ -68,6 +71,9 @@
 .person-result__media-img {
   border-radius: 12px;
   object-fit: cover;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 24px;
+  }
 }
 .person-result__media--double {
   max-width: 320px;

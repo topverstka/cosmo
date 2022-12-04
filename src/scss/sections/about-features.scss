@@ -68,6 +68,9 @@
 .about-features__img {
   border-radius: 12px;
   object-fit: cover;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 25px;
+  }
 }
 
 .about-features__columns {

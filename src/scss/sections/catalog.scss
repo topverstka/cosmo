@@ -250,6 +250,9 @@
     border-radius: 6px;
       // margin-bottom: 8px
   }
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 12px;
+  }
 }
 .catalog-products__filters .row-filters__select.is-selected {
   --value-color: #fff;

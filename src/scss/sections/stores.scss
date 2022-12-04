@@ -40,7 +40,8 @@
     overflow: visible;
   }
   @media (min-width: 602px) and (max-width: 768px) {
-    margin-top: 480px
+    margin-top: 480px;
+    padding-top: 40px;
   }
 }
 .stores__menu::before {
@@ -84,9 +85,13 @@
 .stores__results-caption {
  font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   color: #A2AAAD;
   margin-bottom: 16px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
 }
 
 .stores-list {
