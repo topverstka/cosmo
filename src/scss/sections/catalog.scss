@@ -25,7 +25,8 @@
     align-items: center;
     flex-wrap: wrap;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: 1fr;
     column-gap: 8px;
     row-gap: 8px;
     overflow-y: scroll;
@@ -35,7 +36,7 @@
     @include macscrollbar;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 601px) {
     margin-bottom: 16px;
     flex-wrap: wrap;
     justify-content: stretch;
@@ -168,6 +169,9 @@
     height: 40vh;
     box-shadow: none;
     z-index: 100;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    height: 36vh;
   }
 }
 .catalog-products__filters .row-filters__select {

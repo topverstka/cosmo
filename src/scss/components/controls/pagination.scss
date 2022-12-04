@@ -38,13 +38,18 @@
   border-radius: 8px;
   font-weight: 600;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   text-align: center;
   color: #000000;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+    padding: 15px 16px;
+    border-radius: 16px;
+  }
 }
 .nav-arrow.disabled {
   display: none;
@@ -54,6 +59,10 @@
   @media (max-width: 768px) {
     margin-top: 16px;
     order: 100;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-right: 40px;
+    margin-top: 32px
   }
 }
 .nav-prev::before {
@@ -66,12 +75,21 @@
   background-color: #000;
   margin-bottom: -2px;
   transform: rotate(-90deg);
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-right: 16px;
+    width: 32px;
+    height: 32px;
+    margin-bottom: -4px;
+  }
 }
 .nav-next {
   margin-left: 20px;
   @media (max-width: 768px) {
     margin-top: 16px;
     order: 101;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-top: 32px;
   }
 }
 .nav-next::after {
@@ -84,4 +102,10 @@
   background-color: #000;
   margin-bottom: -2px;
   transform: rotate(90deg);
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+    margin-bottom: -4px;
+  }
 }

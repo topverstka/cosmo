@@ -41,6 +41,9 @@
   display: flex;
   min-width: 41px;
   min-height: 39px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    min-height: 59px;
+  }
 }
 .select__list .select__item.is-selected.select__item--selectable {
   background-color: #f8f8f8;
@@ -70,6 +73,12 @@
 .select.is-open .select__list--dropdown {
   opacity: 1;
   transform: scaleY(1);
+}
+.select__list--dropdown .select__list {
+  @media (max-width: 1023px) {
+    overflow-y: auto;
+    height: 100%;
+  }
 }
 .select--has-search .select__list--dropdown::before {
   position: absolute;
