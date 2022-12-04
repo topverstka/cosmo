@@ -228,7 +228,7 @@
   }
   @media (max-width: 768px) {
     left: -28%;
-    top: -61%;
+    top: -58%;
     width: 160%;
     height: 160%;
   }
@@ -269,10 +269,16 @@
   line-height: 140%;
   color: #ffffff;
   text-align: center;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 36px
+  }
+  @media (max-width: 768px) {
+    font-family: "RF Dewi", sans-serif;
+  }
   @media (max-width: 601px) {
     font-size: 12px;
     margin-bottom: 18px;
-    font-family: "RF Dewi", sans-serif;
   }
 }
 .magazine-card-fullsize__button-about {

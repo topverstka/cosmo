@@ -20,7 +20,10 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
-  @media (max-width: 576px) {
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding-bottom: 80px;
+  }
+  @media (max-width: 601px) {
     padding: 40px;
   }
 }

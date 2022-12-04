@@ -1,7 +1,11 @@
 .stores {
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  @media (max-width: 768px) {
+    margin-left: -8px;
+    width: calc(100% + 16px);
   }
 }
 .stores__container {
@@ -32,6 +36,28 @@
     margin-top: 320px;
     max-width: 100%;
     height: initial;
+    border-radius: 0;
+    overflow: visible;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-top: 480px
+  }
+}
+.stores__menu::before {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(180deg, rgba(95, 108, 117, 0.15) 0%, rgba(95, 108, 117, 0) 100%);
+  transform: rotate(-180deg);
+  @media (max-width: 768px) {
+    content: "";
+    height: 40px;
+    top: -40px;
+  }
+  @media (max-width: 601px) {
+    height: 20px;
+    top: -20px;
   }
 }
 .stores__list {
@@ -210,13 +236,17 @@
   overflow: hidden;
   transform: translateZ(0);
   @media (max-width: 768px) {
-    height: 480px;;
+    border-radius: 0;
+    height: 480px;
   }
 }
 .stores__map-frame {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
 }
 
 
@@ -289,12 +319,14 @@
   height: 30px;
   margin-bottom: -10px;
   pointer-events: none;
-  content: "";
   background: linear-gradient(
     180deg,
     #ffffff 24.79%,
     rgba(255, 255, 255, 0) 100%
   );
+  @media (min-width: 769px) {
+    content: "";
+  }
 }
 .stores__details-gallery::after {
   position: sticky;
@@ -306,7 +338,6 @@
   height: 30px;
   margin-bottom: -30px;
   pointer-events: none;
-  content: "";
   background: linear-gradient(
     0deg,
     #ffffff 24.79%,
@@ -315,17 +346,29 @@
   @media (max-width: 768px) {
     display: none;
   }
+  @media (min-width: 769px) {
+    content: "";
+  }
 }
 .stores__details-info {
   margin-bottom: 30px;
 }
 .stores__details-route {
   margin-bottom: 40px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
+  @media (max-width: 601px) {
+    font-size: 14px;
+  }
 }
 
 .stores__details-media {
   display: block;
   margin-bottom: 8px;
+  @media (min-width: 602px) and (max-width: 768px) {
+   margin-bottom: 16px; 
+  }
 }
 .stores__details-pic {
   display: block;
@@ -336,9 +379,19 @@
   display: block;
   border-radius: 6px;
   object-fit: cover;
+  @media (min-width: 602px) and (max-width: 768px) {
+   border-radius: 12px; 
+  }
 }
 
 .stores__city-picker {
   --brad: 6px;
   --fz: 12px;
+}
+
+.stores__details-title {
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

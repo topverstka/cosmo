@@ -125,11 +125,6 @@
   @media (max-width: 1370px) {
     margin-right: 20px
   }
-  // @media (max-width: $burgerwidth) {
-  //   margin-right: 0;
-  //   width: 100%;
-  //   padding-top: 28px;
-  // }
   @media (max-width: $burgerwidth) {
     position: relative;
     transform: translateY(-100vh);
@@ -146,8 +141,8 @@
     z-index: 1;
     padding-bottom: 32px;
     padding-top: 0;
-    margin-left: -8px;
-    width: calc(100% + 48px);
+    margin-left: -4px;
+    width: calc(100% + 52px);
     padding-left: 38px;
     padding-right: 32px;
     overflow-y: overlay;
@@ -159,10 +154,10 @@
   }
 }
 .header--opened .header__nav {
-  top: 25px;
+  top: 16px;
   transform: translateY(0);
   @media (min-width: 602px) and (max-width: 768px) {
-    top: 45px
+    top: 42px
   }
 }
 .header__nav-links {

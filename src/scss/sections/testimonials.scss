@@ -81,7 +81,7 @@
   margin-right: 8px;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
-    padding: 24px 26px 18px;
+    padding: 20px 20px 25px;
   }
   @media (max-width: 420px) {
     font-size: 12px;
@@ -92,6 +92,10 @@
   }
 }
 .testimonials-card__more {
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+    padding: 20px 20px 25px;
+  }
   @media (max-width: 420px) {
     font-size: 12px;
     padding: 7px 13px 9px;

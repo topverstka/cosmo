@@ -22,7 +22,7 @@
   border-radius: 100px;
   transition: all 0.3s ease;
   @media (min-width: 602px) and (max-width: 768px) {
-    --fz-button: 29px;
+    --fz-button: 24px;
     padding: 20px 20px 25px;
   }
   @media (max-width: 601px) {
@@ -216,6 +216,12 @@
   padding-bottom: 22px;
   margin-right: auto;
   margin-left: auto;
+  @media (min-width: 602px) and (max-width: 768px) {
+    padding-top: 41px;
+    // padding-bottom: 23px;
+    padding-bottom: 44px;
+    font-size: 28px;
+  }
   @media (max-width: 601px) {
     font-size: 14px;
   }

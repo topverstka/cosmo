@@ -16,7 +16,7 @@
     padding: 40px;
     border-radius: 24.5px;
     top: 80px;
-    width: 580px;
+    width: 590px;
   }
 }
 .auth--visible {
@@ -118,6 +118,9 @@
   margin-bottom: 16px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 32px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 28px;
   }
 }
 .auth__logout {

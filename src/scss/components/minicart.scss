@@ -17,9 +17,13 @@
     right: -8px;
     top: 51px;
   }
+  @media (max-width: 768px) {
+    padding-right: 8px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     top: 97px;
     width: 590px;
+    padding-top: 47px;
   }
 }
 .minicart--visible {

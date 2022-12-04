@@ -67,6 +67,9 @@ $error: var(--c-error);
   --radius-s: 4px;
   --radius-l: 30px;
   --section-radius: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    --section-radius: 25px;
+  }
   --button-radius: 6px;
 
   --tr: 0.3s;

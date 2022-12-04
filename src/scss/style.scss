@@ -113,6 +113,9 @@ body._lock {
   @media (max-width: 1280px) {
     max-width: calc(100% - 16px);
   }
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
@@ -213,12 +216,12 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 ._only-desktop {
-  @media (max-width: 601px) {
+  @media (max-width: 786px) {
     display: none !important;
   }
 }
 ._only-mobile {
-  @media (min-width: 602px) {
+  @media (min-width: 769px) {
     display: none !important;
   }
 }

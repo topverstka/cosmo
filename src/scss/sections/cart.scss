@@ -244,6 +244,9 @@
 }
 .cart__gift .product-card__link::before {
   border-radius: 12px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 25px;
+  }
 }
 .cart__gift .product-card__pic {
   left: 0;

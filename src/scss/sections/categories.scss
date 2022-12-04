@@ -165,7 +165,7 @@
   align-items: center;
   flex-wrap: wrap;
   @media (max-width: 1024px) {
-    justify-content: flex-start;
+    // justify-content: flex-start;
   }
   @media (max-width: 768px) {
     overflow: auto;
@@ -248,7 +248,10 @@
   }
 }
 .nav-dynamic-content ~ .callback-cards{
-  @media (min-width: 1025px) {
+  @media (min-width: 602px) {
     padding-top: 120px;
+  }
+  @media (max-width: 601px) {
+    padding-top: 60px;
   }
 }
