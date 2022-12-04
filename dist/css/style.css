@@ -7909,6 +7909,16 @@ span.flatpickr-weekday {
   max-height: 215px;
   overflow: hidden;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .modal__group-column .calendar--inline .flatpickr-calendar.inline {
+    max-height: 445px;
+  }
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .modal__group-column .calendar--inline {
+    height: 580px;
+  }
+}
 
 .modal__group-column .timepicker {
   max-width: 100%;
@@ -7920,6 +7930,11 @@ span.flatpickr-weekday {
 
 .modal__inner {
   max-width: 375px;
+}
+@media (min-width: 602px) and (max-width: 768px) {
+  .modal__inner {
+    max-width: 535px;
+  }
 }
 
 .cart__gallery.out-of-stock-pop__gallery {
