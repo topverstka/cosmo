@@ -558,6 +558,9 @@
   @media (min-width: 1800px) {
     height: 730px;
   }
+  @media (max-width: 1280px) {
+    height: 560px;
+  }
   @media (max-width: 601px) {
     height: 355px
   }
@@ -567,11 +570,13 @@
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 25px 25px 0 0;
   }
-  @media (min-width: 1025px) {
-    object-fit: cover;
-  }
   @media (max-width: 601px) {
     border-radius: 12px 12px 0 0;
   }
 }
 
+.product-hero__media-pic--cover  .product-hero__media-img {
+  // @media (min-width: 1025px) {
+    object-fit: cover;
+  // }
+}

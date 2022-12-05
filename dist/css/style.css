@@ -17906,6 +17906,11 @@ span.flatpickr-weekday {
     height: 730px;
   }
 }
+@media (max-width: 1280px) {
+  .product-hero--has-carousel .product-hero-gallery .product-hero__media-pic {
+    height: 560px;
+  }
+}
 @media (max-width: 601px) {
   .product-hero--has-carousel .product-hero-gallery .product-hero__media-pic {
     height: 355px;
@@ -17920,15 +17925,14 @@ span.flatpickr-weekday {
     border-radius: 25px 25px 0 0;
   }
 }
-@media (min-width: 1025px) {
-  .product-hero--has-carousel .product-hero-gallery .product-hero__media-img {
-    object-fit: cover;
-  }
-}
 @media (max-width: 601px) {
   .product-hero--has-carousel .product-hero-gallery .product-hero__media-img {
     border-radius: 12px 12px 0 0;
   }
+}
+
+.product-hero__media-pic--cover .product-hero__media-img {
+  object-fit: cover;
 }
 
 .product-bullets {
