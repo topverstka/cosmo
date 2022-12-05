@@ -563,12 +563,15 @@
   }
 }
 .product-hero--has-carousel .product-hero-gallery .product-hero__media-img  {
+  border-radius: 12px 0 0 12px;
   @media (min-width: 602px) and (max-width: 768px) {
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px 25px 0 0;
   }
   @media (min-width: 1025px) {
     object-fit: cover;
-    border-radius: 12px 0 0 12px;
+  }
+  @media (max-width: 601px) {
+    border-radius: 12px 12px 0 0;
   }
 }
 
