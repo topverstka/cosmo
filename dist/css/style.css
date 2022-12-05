@@ -3156,7 +3156,7 @@ select {
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .select .choices__inner {
-    min-height: 59px;
+    min-height: 79px;
   }
 }
 
@@ -8203,6 +8203,11 @@ span.flatpickr-weekday {
   justify-content: flex-start;
   align-items: center;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .row-filters__select--has-label {
+    padding-left: 40px;
+  }
+}
 
 .row-filters__select {
   min-width: fit-content;
@@ -12877,14 +12882,14 @@ span.flatpickr-weekday {
 
 .catalog-products__gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 8px;
   row-gap: 8px;
   margin-bottom: 8px;
 }
 @media (max-width: 1279px) and (min-width: 769px) {
   .catalog-products__gallery {
-    grid-template-columns: repeat(auto-fill, minmax(249px, auto));
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 5px;
     row-gap: 5px;
   }
@@ -13308,6 +13313,7 @@ span.flatpickr-weekday {
   .categories-nav__list {
     overflow: auto;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     margin-bottom: -20px;
     padding-left: 20px;
     padding-right: 20px;
