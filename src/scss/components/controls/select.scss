@@ -46,7 +46,7 @@
   }
 }
 .select__list .select__item.is-selected.select__item--selectable {
-  background-color: #f8f8f8;
+  background-color: #f8f8f8 !important;
 }
 
 .select__list--dropdown {
@@ -66,6 +66,11 @@
   transform: scaleY(0);
   transform-origin: top;
   padding-right: 26px;
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
 }
 .select--has-search .select__list--dropdown {
   padding-top: 20px;

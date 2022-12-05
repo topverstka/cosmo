@@ -65,52 +65,60 @@ if (document.querySelector(".select")) {
     const defaultSelect = dropdown.querySelector(".select__input");
     const customSelect = new Choices(defaultSelect, choicesOptions) 
 
-    defaultSelect.addEventListener('change', (e) => {
-      dropdown.classList.add('is-selected')
-      console.log(customSelect.getValue()) 
-    })
-
-    const resetFilterButton = document.createElement('span');
-    resetFilterButton.classList.add('select__button-reset');
-    dropdown.append(resetFilterButton);
-    resetFilterButton.addEventListener('click', () => {
-      dropdown.classList.remove('is-selected')
-      customSelect.removeActiveItems()
-      // console.log(customSelect.getValue())
-    })
 
     if (defaultSelect.multiple) {
       dropdown.classList.add('is-multiple');
+
+      // Создает интикатор числа выбранных фильтров в малтипл
       const activeItemsCounter = document.createElement('span')
       activeItemsCounter.classList.add('select__active-items-counter');
       dropdown.querySelector('.row-filters__select-label').append(activeItemsCounter);
 
+      // Для малтипл обновляет количество выбранных фильтров при изменении
       defaultSelect.addEventListener('change', (e) => {
         activeItemsCounter.innerText = ' ' + customSelect.getValue().length
+        dropdown.classList.add('is-selected')
       })
+
+      // Для малтип показывает количетсво фильтров при старте
       const currentValue = customSelect.getValue().length;
       if (currentValue > 0) {
         activeItemsCounter.innerText = ' ' + customSelect.getValue().length
         dropdown.classList.add('is-selected')
       }
-    }
 
-    const backButton = document.querySelector('.catalog-products__filters-back-button');
-    if (backButton) {
-      customSelect.passedElement.element.addEventListener('showDropdown', (e) => {
-        backButton.classList.add('is-visible')
-        const filterName = e.target.parentElement.parentElement.parentElement.querySelector('.row-filters__select-label').innerText;
-        if (!filterName) return
-
-          // console.log(backButton, filterName)
-        backButton.querySelector('.button__text').innerText = filterName;
-      })
-      customSelect.passedElement.element,addEventListener('hideDropdown', (e) => {
-        backButton.classList.remove('is-visible')
+      // Убирает активные фильтры в малтипл
+      const resetFilterButton = document.createElement('span');
+      resetFilterButton.classList.add('select__button-reset');
+      dropdown.append(resetFilterButton);
+      resetFilterButton.addEventListener('click', () => {
+        customSelect.removeActiveItems()
+        activeItemsCounter.innerText = '';
+        dropdown.classList.remove('is-selected')
       })
     }
+
+
+    const backButton = document.createElement('span');
+    backButton.classList.add('catalog-products__filters-back-button')
+    dropdown.querySelector('.select__list--dropdown').append(backButton)
+
+    const backButtonIcon = document.createElement('span');
+    const backButtonText = document.createElement('span');
+    backButtonIcon.classList.add('button__icon');
+    backButtonText.classList.add('button__text');
+    backButton.append(backButtonIcon);
+    backButton.append(backButtonText);
+
+    const filterName = dropdown.querySelector('.row-filters__select-label');
+    if (filterName) {
+      backButtonText.innerText = filterName.innerText;
+    }
+    backButton.addEventListener("click", (e) => {
+      customSelect.hideDropdown();
+    });
+
   });
-
 }
 
 if (document.querySelector(".timepicker")) {

@@ -3155,7 +3155,7 @@ select {
 }
 
 .select__list .select__item.is-selected.select__item--selectable {
-  background-color: #f8f8f8;
+  background-color: #f8f8f8 !important;
 }
 
 .select__list--dropdown {
@@ -3175,6 +3175,13 @@ select {
   transform: scaleY(0);
   transform-origin: top;
   padding-right: 26px;
+}
+@media (max-width: 1023px) {
+  .select__list--dropdown {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
 }
 
 .select--has-search .select__list--dropdown {
@@ -8217,7 +8224,7 @@ span.flatpickr-weekday {
 }
 
 @media (max-width: 1024px) {
-  .row-filters__select--has-label .select__list--single > .select__item {
+  .row-filters__select--has-label.is-multiple .select__list--single > .select__item {
     color: transparent;
   }
 }
@@ -12866,13 +12873,13 @@ span.flatpickr-weekday {
     height: 420px;
     max-height: initial;
     border-radius: 0;
-    padding-top: 40px;
+    padding-top: 24px;
   }
 }
 
 @media (max-width: 1023px) {
   .catalog-products__filters .row-filters__select .is-open .select__list--dropdown {
-    top: 50vh;
+    bottom: 10vh;
     height: 40vh;
     box-shadow: none;
     z-index: 100;
@@ -12900,30 +12907,36 @@ span.flatpickr-weekday {
 }
 
 .catalog-products__filters-back-button {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: -200vh;
-  bottom: 42.5vh;
-  z-index: 200;
-  height: 7.5vh;
-  --button-icon-size: 30px;
-  padding-left: 20px;
+  display: none;
 }
-@media (min-width: 1021px) {
+@media (max-width: 1023px) {
   .catalog-products__filters-back-button {
-    display: none;
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+    font-size: 16px;
+    text-align: center;
+    padding-right: 40px;
   }
 }
 
-.catalog-products__filters-back-button::before {
-  content: "";
+.catalog-products__filters-back-button .button__icon {
+  -webkit-mask: url("../img/common/arrow-left-mask.svg");
+  mask: url("../img/common/arrow-left-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #000;
   display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  width: 60px;
+  height: 40px;
+  margin-left: 30px;
+  transform: scale(2);
+  pointer-events: none;
 }
 
 .catalog-products__filters-back-button.is-visible {

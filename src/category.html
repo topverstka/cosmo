@@ -83,12 +83,6 @@
           </nav>
           <div class="catalog-products">
             <form action="/api" class="catalog-products__filters row-filters">
-              <button class="catalog-products__filters-back-button" type="button">
-                <svg class="button__icon">
-                  <use xlink:href="./img/common/arrow-left.svg#arrow-left" />
-                </svg>
-                <span class="button__text"></span>
-              </button>
               <div class="catalog-products__filters-list">
                 <div class="select row-filters__select">
                   <label class="row-filters__select-label">Цена</label>
@@ -122,6 +116,7 @@
                     name="filter[1]"
                     id="filter-1"
                     class="select__input"
+                    multiple
                   >
                     <option value="Без потребностей">Без потребностей</option>
                     <option value="Высокая влажность">Высокая влажность</option>
@@ -135,6 +130,7 @@
                     name="filter[2]"
                     id="filter-2"
                     class="select__input"
+                    multiple
                   >
                     <option value="Любое">Любое</option>
                     <option value="Утро">Утро</option>
@@ -148,6 +144,7 @@
                     name="filter[3]"
                     id="filter-3"
                     class="select__input "
+                    multiple
                   >
                     <option value="250">250мл</option>
                     <option value="200">200мл</option>

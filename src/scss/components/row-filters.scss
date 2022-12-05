@@ -89,7 +89,7 @@
   background-color: transparent;
 }
 
-.row-filters__select--has-label .select__list--single > .select__item  {
+.row-filters__select--has-label.is-multiple .select__list--single > .select__item  {
   @media (max-width: 1024px) {
     color: transparent;
   }
