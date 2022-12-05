@@ -54,6 +54,9 @@
     margin-bottom: -2px;
     padding-right: 10px;
   }
+  @media (min-width: 769px) and (max-width: 1280px) {
+    margin-bottom: 8px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 40px;
     margin-bottom: -4px;

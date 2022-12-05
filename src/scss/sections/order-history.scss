@@ -89,6 +89,9 @@
   }
 }
 .order-history-card__heading {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    margin-bottom: 28px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 56px;
   }
@@ -114,6 +117,9 @@
     margin-top: 16px;
     --fz-button: 14px;
     padding: 11px 22px 14px;
+  }
+  @media (min-width: 796px) and (max-width: 1280px) {
+    --fz-button: 10px;
   }
   @media (max-width: 768px) and (min-width: 602px) {
     margin-top: 32px;

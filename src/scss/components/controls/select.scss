@@ -2,7 +2,8 @@
  * @library https://choices-js.github.io/Choices/
  *
  * Бывают:
- * select--has-search
+ * .select--has-search
+ * select[multiple]
  */
  select {
   -webkit-appearance: none;
@@ -173,6 +174,7 @@
   color: var(--value-color);
   background: var(--bg);
   border-radius: var(--brad);
+  font-size: inherit;
   // opacity: 0.4;
   @media (min-width: 769px) and (max-width: 1280px) {
     padding: 8px 47px 10px 17px;
