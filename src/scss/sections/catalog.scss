@@ -103,12 +103,12 @@
 }
 .catalog-products__gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 8px;
   row-gap: 8px;
   margin-bottom: 8px;
   @media (max-width: 1279px) and (min-width: 769px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 5px;
     row-gap: 5px;
   }
