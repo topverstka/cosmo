@@ -15275,7 +15275,7 @@ span.flatpickr-weekday {
 .services-location__info {
   grid-area: info;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
 }
@@ -15302,7 +15302,7 @@ span.flatpickr-weekday {
 
 .services-location__name {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
   margin-bottom: 21px;
@@ -15512,7 +15512,7 @@ span.flatpickr-weekday {
 
 .services-location-service-card__title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   margin-bottom: 20px;
@@ -15538,7 +15538,7 @@ span.flatpickr-weekday {
 
 .services-location-service-card__desc {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.16;
   color: #A1AEB3;
   font-family: "RF Dewi", sans-serif;
@@ -15643,7 +15643,7 @@ span.flatpickr-weekday {
 
 .services-all-card__title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   margin-bottom: 2px;
@@ -15663,7 +15663,7 @@ span.flatpickr-weekday {
 
 .services-all-card__subtitle {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
   margin-bottom: 16px;
@@ -15677,7 +15677,7 @@ span.flatpickr-weekday {
 
 .services-all-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
   margin-bottom: 19px;
@@ -15724,7 +15724,7 @@ span.flatpickr-weekday {
 }
 
 .services-all-card .product-card__price {
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-all-card .product-card__price {
