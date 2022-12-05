@@ -4045,7 +4045,7 @@ select {
   padding-right: 20px;
   padding-bottom: 10px;
   padding-left: 12.5px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.2;
   color: #000;
@@ -6193,6 +6193,11 @@ span.flatpickr-weekday {
   margin-right: 0;
   overflow: visible;
 }
+@media (min-width: 1800px) {
+  .grabber-carousel {
+    max-width: calc(100% - 330px);
+  }
+}
 @media (max-width: 1024px) {
   .grabber-carousel {
     max-width: calc(100% - 40px);
@@ -7490,7 +7495,7 @@ span.flatpickr-weekday {
   width: fit-content;
   padding: 11px 22px 14px;
   margin-right: 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.2142;
   color: #000;
@@ -7572,7 +7577,7 @@ span.flatpickr-weekday {
 
 .search-pop__results-count {
   margin-bottom: 40px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
