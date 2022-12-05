@@ -38,7 +38,7 @@
 }
 .message-card__title {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
   text-align: center;
   color: #000000;
@@ -50,7 +50,7 @@
 }
 .message-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   text-align: center;
   color: #A1AEB3;
@@ -80,6 +80,8 @@
 .message-card__button {
   padding-left: 17px;
   padding-right: 17px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   font-weight: 400;
   @media (max-width: 768px) {
     padding-right: 20px;

@@ -15,8 +15,9 @@
   z-index: var(--z-poppa);
   display: block;
   width: 100%;
-  height: calc(100 * 1vh);
-  max-height: 1000px;
+  // height: #{'calc(100 * 1vh)'};
+  height: 100%;
+  // max-height: 1000px;
   pointer-events: none;
 }
 .poppa__overlay {
@@ -26,7 +27,7 @@
   width: 100%;
   // height: calc(100 * 1vh);
   height: 100%;
-  max-height: 1000px;
+  max-height: 100%;
   pointer-events: none;
   background-color: var(--bg-poppa-overlay);
   opacity: 0;

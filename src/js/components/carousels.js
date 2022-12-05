@@ -1,6 +1,6 @@
 "use strict"
 
-import Swiper, { Navigation, Autoplay, Pagination, Thumbs } from "swiper";
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade } from "swiper";
 import {debounce} from "../utils/helpers.js";
 
 if (document.querySelector('.product-hero-gallery') && document.querySelector('.product-hero-thumbs')) {
@@ -13,11 +13,15 @@ if (document.querySelector('.product-hero-gallery') && document.querySelector('.
     slidesPerView: 'auto',
   });
   let heroGallery = new Swiper(".product-hero-gallery", {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, EffectFade],
     spaceBetween: 10,
     pagination: {
       el: ".product-hero-gallery-pagination",
       clickable: true,
+    },
+    effect: 'fade',
+      fadeEffect: {
+      crossFade: true
     },
     navigation: {
       nextEl: ".product-hero-gallery-next",

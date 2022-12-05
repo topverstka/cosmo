@@ -4384,10 +4384,18 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s ease;
 }
 @media (max-width: 768px) and (min-width: 601px) {
   .nav-page {
     border-radius: 16px;
+  }
+}
+
+@media (any-hover: hover) {
+  .nav-page:not(.nav__gap):hover {
+    color: var(--c-text-on);
+    background-color: var(--c-accent);
   }
 }
 
@@ -4407,11 +4415,18 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .nav-arrow {
     border-radius: 16px;
   }
+}
+
+.nav-arrow:hover {
+  color: var(--c-text-on);
+  background-color: var(--c-accent);
 }
 
 .nav-arrow.disabled {
@@ -4451,6 +4466,7 @@ select {
   background-color: #000;
   margin-bottom: -2px;
   transform: rotate(-90deg);
+  transition: all 0.3s ease;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .nav-prev::before {
@@ -4458,6 +4474,12 @@ select {
     width: 32px;
     height: 32px;
     margin-bottom: -4px;
+  }
+}
+
+@media (any-hover: hover) {
+  .nav-prev:hover::before {
+    background-color: #fff;
   }
 }
 
@@ -4500,6 +4522,12 @@ select {
     height: 32px;
     margin-left: 16px;
     margin-bottom: -4px;
+  }
+}
+
+@media (any-hover: hover) {
+  .nav-next:hover::after {
+    background-color: #fff;
   }
 }
 
@@ -5599,6 +5627,7 @@ span.flatpickr-weekday {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 0.75rem;
+  transition: all 0.3s ease;
 }
 @media (min-width: 1800px) {
   .side-navigation__link {
@@ -7162,8 +7191,7 @@ span.flatpickr-weekday {
   z-index: var(--z-poppa);
   display: block;
   width: 100%;
-  height: 100vh;
-  max-height: 1000px;
+  height: 100%;
   pointer-events: none;
 }
 
@@ -7173,7 +7201,7 @@ span.flatpickr-weekday {
   left: 0;
   width: 100%;
   height: 100%;
-  max-height: 1000px;
+  max-height: 100%;
   pointer-events: none;
   background-color: var(--bg-poppa-overlay);
   opacity: 0;
@@ -8140,7 +8168,7 @@ span.flatpickr-weekday {
 
 .modal__title {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   color: #FFFFFF;
   margin-bottom: 40px;
@@ -8183,7 +8211,7 @@ span.flatpickr-weekday {
 
 .modal__group-title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   margin-bottom: 35px;
@@ -8915,7 +8943,7 @@ span.flatpickr-weekday {
 
 .message-card__title {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
   text-align: center;
   color: #000000;
@@ -8930,7 +8958,7 @@ span.flatpickr-weekday {
 
 .message-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   text-align: center;
   color: #A1AEB3;
@@ -8965,6 +8993,8 @@ span.flatpickr-weekday {
 .message-card__button {
   padding-left: 17px;
   padding-right: 17px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   font-weight: 400;
 }
 @media (max-width: 768px) {
