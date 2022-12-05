@@ -43,6 +43,9 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media (min-width: 1800px) {
+    max-width: 1180px;
+  }
   @media (max-width: 601px) {
     padding-left: 0;
     padding-right: 0;
@@ -50,7 +53,7 @@
 }
 .blog-article__date {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
   display: block;
@@ -64,7 +67,7 @@
 }
 .blog-article__title {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.2;
   color: #000000;
   margin-bottom: 20px;
@@ -80,7 +83,7 @@
 }
 .blog-article__summary {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
   margin-bottom: 39px;
@@ -130,7 +133,7 @@
   }
 }
 .blog-article__index-title {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2;
   color: #A1AEB3;
   margin-bottom: 28px;
@@ -156,7 +159,7 @@
 .blog-article__index-link {
   display: inline;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: inherit;
   border: none;
@@ -178,7 +181,7 @@
 }
 .blog-article__content > h2 {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
   margin-top: 40px;
@@ -196,7 +199,7 @@
 }
 .blog-article__content > p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
   margin-bottom: 22px;
@@ -224,7 +227,7 @@
 .blog-article-share__title {
   margin-bottom: 44px;
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   text-align: center;
   color: #000000;
