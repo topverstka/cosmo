@@ -275,6 +275,15 @@
   }
 }
 
+.product-card--tall .product-card__info {
+  min-height: 594px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    min-height: 1164px;
+  }
+  @media (min-width: 691px) and (max-width: px) {
+    min-height: 554px;
+  }
+}
 .product-card--tall .product-card__name {
   @media (min-width: 769px) {
     margin-bottom: 20px;
