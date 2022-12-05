@@ -48,7 +48,7 @@
   color: var(--value-color, #000);
   // display: block;
   @media (max-width: 1024px) {
-    margin-right: auto;
+      margin-right: auto;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 28px;

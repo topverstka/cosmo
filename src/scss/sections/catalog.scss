@@ -191,15 +191,21 @@
 .catalog-products__filters-back-button {
   display: none;
   @media (max-width: 1023px) {
-    display: flex;
     align-items: center;
     // background-color: red;
     margin-left: -20px;
     width: calc(100% + 40px);
     font-size: 16px;
     text-align: center;
-    padding-right: 40px
+    padding-right: 40px;
   }
+}
+
+.row-filters__select .catalog-products__filters-back-button {
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+}
 //   position: absolute;
 //   left: -200vh;
 //   // transition: all 0.3s ease;
@@ -220,7 +226,7 @@
 //   position: absolute;
 //   left: 0;
 //   top: 0;
-}
+// }
 
 .catalog-products__filters-back-button .button__icon {
   @include getmask("../img/common/arrow-left-mask.svg");
@@ -279,4 +285,12 @@
 .catalog-products__filters .row-filters__select.is-selected {
   --value-color: #fff;
   --bg: #79868d;
+}
+
+.row-filters__select .select__list--dropdown {
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
 }
