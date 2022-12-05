@@ -3518,7 +3518,7 @@ select {
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .button {
-    --fz-button: 10px;
+    --fz-button: 12px;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -5077,9 +5077,14 @@ span.flatpickr-weekday {
     display: block;
   }
 }
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .fieldset {
+    grid-template-columns: 171px auto;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
   .fieldset {
-    grid-template-columns: 221px auto;
+    grid-template-columns: 171px auto;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -5360,12 +5365,6 @@ span.flatpickr-weekday {
   position: sticky;
   top: 98px;
   bottom: 8px;
-}
-
-@media (min-width: 1025px) {
-  .sidebar .link--time {
-    margin-bottom: 17px;
-  }
 }
 
 /*
