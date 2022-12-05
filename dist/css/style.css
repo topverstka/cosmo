@@ -3311,6 +3311,11 @@ select {
   background: var(--bg);
   border-radius: var(--brad);
 }
+@media (min-width: 769px) and (max-width: 1280px) {
+  .select__list--single > .select__item {
+    padding: 8px 47px 10px 17px;
+  }
+}
 @media (min-width: 602px) and (max-width: 768px) {
   .select__list--single > .select__item {
     font-size: var(--fz);
@@ -3508,6 +3513,11 @@ select {
   background: var(--button-bg, transparent);
   border-radius: 100px;
   transition: all 0.3s ease;
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .button {
+    --fz-button: 10px;
+  }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .button {
@@ -3780,6 +3790,12 @@ select {
 @media (max-width: 962px) {
   .chips {
     margin-bottom: 28px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .chips {
+    --chips-fz: 10px;
+    --chips-padding: 9px 14px 12px;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -5567,7 +5583,7 @@ span.flatpickr-weekday {
 }
 
 .promo-carousel {
-  min-height: 680px;
+  min-height: 688px;
   margin-bottom: 8px;
 }
 @media (min-width: 1400px) and (max-width: 1440px) {
@@ -7848,9 +7864,10 @@ span.flatpickr-weekday {
   margin-bottom: 34px;
   display: block;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1280px) and (min-width: 769px) {
   .auth__name {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -7865,27 +7882,19 @@ span.flatpickr-weekday {
   font-weight: 400;
   line-height: 140%;
 }
-@media (max-width: 1024px) {
-  .auth__list-links {
-    font-size: 10px;
-  }
-}
-@media (min-width: 602px) and (max-width: 678px) {
-  .auth__list-links {
-    font-size: 28px;
-  }
-}
 
 .auth__list-item {
   margin-bottom: 16px;
 }
-@media (min-width: 602px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1280px) {
   .auth__list-item {
-    margin-bottom: 32px;
+    margin-bottom: 10px;
+    font-size: 10px;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .auth__list-item {
+    margin-bottom: 32px;
     font-size: 28px;
   }
 }
@@ -7895,6 +7904,11 @@ span.flatpickr-weekday {
   padding-right: 0;
   font-size: 14px;
   font-weight: 400;
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .auth__logout {
+    font-size: 10px;
+  }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .auth__logout {
@@ -7916,6 +7930,11 @@ span.flatpickr-weekday {
   height: 16px;
   min-width: 16px;
   margin-bottom: -1px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .auth__logout .button__icon {
+    padding-bottom: 0;
+  }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .auth__logout .button__icon {
@@ -9227,6 +9246,11 @@ span.flatpickr-weekday {
     padding-top: 137px;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header__snacks--show {
+    padding-top: 60px;
+  }
+}
 @media (min-width: 602px) and (max-width: 768px) {
   .header__snacks--show {
     padding-top: 274px;
@@ -9256,6 +9280,12 @@ span.flatpickr-weekday {
     padding-top: 12px;
     min-height: 134px;
     height: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .header-snack {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {

@@ -11,6 +11,9 @@
   @media (max-width: 1020px) {
     padding-top: 137px;
   }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding-top: 60px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     padding-top: 274px;
   }
@@ -37,6 +40,10 @@
     padding-top: 12px;
     min-height: 134px;
     height: 100%;
+  }
+  @media (min-width: 769px) and (max-width: 1280px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 40px;
