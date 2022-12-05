@@ -17896,6 +17896,10 @@ span.flatpickr-weekday {
   margin-bottom: 64px;
 }
 
+.product-hero--has-carousel .product-hero-thumbs .product-hero__media-pic {
+  background-color: #fff;
+}
+
 @media (min-width: 769px) {
   .product-hero--has-carousel .product-hero-gallery .product-hero__media-pic {
     height: 620px;

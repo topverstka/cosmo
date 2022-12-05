@@ -551,6 +551,9 @@
   margin-top: 16px;
   margin-bottom: 64px;
 }
+.product-hero--has-carousel .product-hero-thumbs .product-hero__media-pic {
+  background-color: #fff;
+}
 .product-hero--has-carousel .product-hero-gallery .product-hero__media-pic {
   @media (min-width: 769px) {
     height: 620px;
