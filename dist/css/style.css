@@ -16365,7 +16365,7 @@ span.flatpickr-weekday {
 
 .order-history-card__id {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
   margin-bottom: 17px;
@@ -16385,7 +16385,7 @@ span.flatpickr-weekday {
 
 .order-history-card__status {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   margin-bottom: 5px;
@@ -16399,7 +16399,7 @@ span.flatpickr-weekday {
 
 .order-history-card__caption {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
 }
@@ -16440,8 +16440,6 @@ span.flatpickr-weekday {
 @media (min-width: 602px) {
   .order-history-card__button-track {
     margin-top: 16px;
-    --fz-button: 14px;
-    padding: 11px 22px 14px;
   }
 }
 @media (min-width: 796px) and (max-width: 1280px) {
@@ -16558,7 +16556,7 @@ span.flatpickr-weekday {
 
 .order-history-card__info-row:first-child .order-history-card__info-title {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
   color: #A1AEB3;
 }
@@ -16594,7 +16592,7 @@ span.flatpickr-weekday {
 
 .order-history-card__products-title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   margin-bottom: 0px;
@@ -16651,7 +16649,7 @@ span.flatpickr-weekday {
   background-color: #fff;
   border-radius: 6px;
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   color: #5F6C75;
   width: 100%;
@@ -16850,7 +16848,7 @@ span.flatpickr-weekday {
 }
 
 .order-history__product .product-card__price {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -17125,7 +17123,7 @@ span.flatpickr-weekday {
 }
 
 .order-history-card__button-repeat {
-  font-size: 13px;
+  font-size: 0.875rem;
   margin-right: 11px;
   margin-top: -8px;
 }
