@@ -499,8 +499,8 @@
   border-radius: var(--size);
   border: 1px solid #A1AEB2;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.875rem;
+  line-height: 1.21;
   @media (max-width: 768px) {
     --size: 72px;
     font-size: 28px;
