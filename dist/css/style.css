@@ -17787,7 +17787,7 @@ span.flatpickr-weekday {
 }
 @media (min-width: 1025px) {
   .product-hero-carousel {
-    max-width: calc(1vw * 48);
+    max-width: calc(1vw * 47);
   }
 }
 @media (max-width: 1024px) {
@@ -17929,6 +17929,10 @@ span.flatpickr-weekday {
   .product-hero--has-carousel .product-hero-gallery .product-hero__media-img {
     border-radius: 12px 12px 0 0;
   }
+}
+
+.product-hero--has-carousel .product-hero__main {
+  column-gap: 65px;
 }
 
 .product-hero__media-pic--cover .product-hero__media-img {
