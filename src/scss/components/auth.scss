@@ -54,8 +54,12 @@
   padding-right: 10px;
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
+  }
+  @media (max-width: 768px) {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 14px;
   }
 }
 

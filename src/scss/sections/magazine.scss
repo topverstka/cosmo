@@ -15,10 +15,12 @@
   column-gap: 8px;
   margin-bottom: 8px;
   @media (min-width: 602px) and (max-width: 768px) {
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+  @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "card pic1" "card pic2" "card pic3";
-    row-gap: 8px;
-    column-gap: 8px;
   }
   @media (max-width: 601px) {
     row-gap: 4px;
@@ -78,7 +80,7 @@
     padding: 7px 17px 9px;
     font-size: 12px;
     margin-left: 0;
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 }
 .magazine-card__button:hover {

@@ -35,8 +35,8 @@
     align-items: flex-start;
     padding: 16px;
     position: relative;
-    padding-right: 14px;
-    padding-left: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
     max-height: 64px;
     height: 100%;
   }
@@ -437,10 +437,12 @@
   }
 }
 .header__nav-link--opened .header__nav-item-dropdown {
-  max-height: 5000px;
-  pointer-events: initial;
-  opacity: 1;
-  transform: scaleY(1);
+  @media (max-width: $burgerwidth) {
+    max-height: 5000px;
+    pointer-events: initial;
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 .header__nav-item:not(.header__nav-item--mobile-open) .header__nav-item-dropdown {

@@ -3234,6 +3234,11 @@ select {
   background: linear-gradient(0deg, #ffffff 24.79%, rgba(255, 255, 255, 0) 100%);
   border-radius: 0 0 14px 14px;
 }
+@media (min-width: 602px) and (max-width: 768px) {
+  .select__list--dropdown::after {
+    width: calc(100% - 10px);
+  }
+}
 
 .select__list--dropdown .select__list {
   position: relative;
@@ -7786,8 +7791,14 @@ span.flatpickr-weekday {
 @media (min-width: 602px) and (max-width: 768px) {
   .auth__button-submit {
     border-radius: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .auth__button-submit {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 14px;
   }
 }
 
@@ -8830,8 +8841,8 @@ span.flatpickr-weekday {
     align-items: flex-start;
     padding: 16px;
     position: relative;
-    padding-right: 14px;
-    padding-left: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
     max-height: 64px;
     height: 100%;
   }
@@ -9265,8 +9276,8 @@ span.flatpickr-weekday {
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .header-snack .select__list--single::after {
-    top: 7px;
-    right: 10px;
+    top: 14px;
+    right: 20px;
     width: 48px;
     height: 48px;
   }
@@ -9562,11 +9573,13 @@ span.flatpickr-weekday {
   }
 }
 
-.header__nav-link--opened .header__nav-item-dropdown {
-  max-height: 5000px;
-  pointer-events: initial;
-  opacity: 1;
-  transform: scaleY(1);
+@media (max-width: 920px) {
+  .header__nav-link--opened .header__nav-item-dropdown {
+    max-height: 5000px;
+    pointer-events: initial;
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 @media (max-width: 920px) {
@@ -11082,10 +11095,14 @@ span.flatpickr-weekday {
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .magazine__row {
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .magazine__row {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "card pic1" "card pic2" "card pic3";
-    row-gap: 8px;
-    column-gap: 8px;
   }
 }
 @media (max-width: 601px) {
@@ -11163,7 +11180,6 @@ span.flatpickr-weekday {
     padding: 7px 17px 9px;
     font-size: 12px;
     margin-left: 0;
-    margin-bottom: 0;
   }
 }
 
@@ -18326,7 +18342,7 @@ span.flatpickr-weekday {
   padding-right: 16px;
   padding-bottom: 34px;
   padding-left: 16px;
-  margin-bottom: 59px;
+  margin-bottom: 65px;
   color: var(--c-text-on);
   background-color: var(--c-accent);
   border-radius: var(--section-radius);

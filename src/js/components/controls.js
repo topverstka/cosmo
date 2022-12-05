@@ -68,7 +68,7 @@ if (document.querySelector(".select")) {
 
     if (defaultSelect.multiple) {
       dropdown.classList.add('is-multiple');
-      dropdown.querySelector('input[name="search_terms"]').inputmode = "none"
+      dropdown.querySelector('input[name="search_terms"]').setAttribute('inputmode',"none");
 
       // Создает интикатор числа выбранных фильтров в малтипл
       const activeItemsCounter = document.createElement('span')

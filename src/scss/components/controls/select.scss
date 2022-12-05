@@ -115,6 +115,9 @@
     rgba(255, 255, 255, 0) 100%
   );
   border-radius: 0 0 14px 14px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    width: calc(100% - 10px);
+  }
 }
 
 .select__list--dropdown .select__list {
