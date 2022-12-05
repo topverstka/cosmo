@@ -60,9 +60,9 @@
 }
 .stepper__value {
   background-color: transparent;
-  max-width: 12px;
+  max-width: 0.8rem;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2142;
   text-align: center;
   color: var(--stepper-value-color, #FFFFFF);
@@ -71,5 +71,8 @@
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 28px;
     max-width: 24px;
+  }
+  @media (max-width: 601px) {
+    font-size: 14px
   }
 }

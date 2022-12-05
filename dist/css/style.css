@@ -2622,6 +2622,11 @@ body._lock {
   margin-left: auto;
   width: 100%;
 }
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1580px;
+  }
+}
 @media (max-width: 1280px) {
   .container {
     max-width: calc(100% - 16px);
@@ -2874,8 +2879,8 @@ input[type=search]::-webkit-search-cancel-button {
   --nav-item-color: var(--c-text-on);
   --title-bottom: 12px;
   --item-bottom: 8px;
-  --item-fz: 16px;
-  --title-fz: 14px;
+  --item-fz: 1rem;
+  --title-fz: 0.875rem;
   text-transform: initial;
 }
 .nav__list {
@@ -3824,7 +3829,7 @@ select {
 .button--thirdly, .product-details__desc a, .doc-card__desc a {
   padding: 0;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.2;
   --button-color: #5F6C75;
   --button-bg: transparent;
@@ -4236,9 +4241,9 @@ select {
 
 .stepper__value {
   background-color: transparent;
-  max-width: 12px;
+  max-width: 0.8rem;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2142;
   text-align: center;
   color: var(--stepper-value-color, #FFFFFF);
@@ -4249,6 +4254,11 @@ select {
   .stepper__value {
     font-size: 28px;
     max-width: 24px;
+  }
+}
+@media (max-width: 601px) {
+  .stepper__value {
+    font-size: 14px;
   }
 }
 
@@ -5930,6 +5940,11 @@ span.flatpickr-weekday {
   border-radius: 6px;
   padding-bottom: 28px;
 }
+@media (min-width: 1800px) {
+  .promo-carousel-card {
+    max-width: 322px;
+  }
+}
 @media (max-width: 768px) {
   .promo-carousel-card {
     padding: 16.75px;
@@ -6750,10 +6765,9 @@ span.flatpickr-weekday {
 }
 
 .products--layout-horizontal .product-card__name {
-  margin-bottom: 23px;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.25;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .products--layout-horizontal .product-card__name {
@@ -6819,7 +6833,7 @@ span.flatpickr-weekday {
 
 .product-card__variation {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
   margin-bottom: 49px;
@@ -7069,9 +7083,9 @@ span.flatpickr-weekday {
 .review-card__profile {
   display: block;
   width: fit-content;
-  padding: 0px 8px 4px;
+  padding: 0px 0.57em 0.28em;
   margin-bottom: 7px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #000000;
@@ -7599,7 +7613,8 @@ span.flatpickr-weekday {
 }
 @media (min-width: 1800px) {
   .minicart {
-    width: 330px;
+    width: 400px;
+    padding: 14px;
   }
 }
 @media (max-width: 1020px) {
@@ -7629,7 +7644,7 @@ span.flatpickr-weekday {
 
 .minicart__message {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2142;
   color: #A1AEB3;
   margin-bottom: 8px;
@@ -7644,7 +7659,7 @@ span.flatpickr-weekday {
 
 .minicart__total {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #FFFFFF;
   margin-bottom: 28px;
@@ -7751,6 +7766,11 @@ span.flatpickr-weekday {
   align-items: flex-start;
   margin-bottom: 20px;
 }
+@media (min-width: 1800px) {
+  .minicart-item {
+    margin-bottom: 30px;
+  }
+}
 @media (min-width: 602px) and (max-width: 768px) {
   .minicart-item {
     margin-bottom: 40px;
@@ -7784,7 +7804,7 @@ span.flatpickr-weekday {
 
 .minicart-item__name {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2142;
   color: #FFFFFF;
   margin-bottom: 6px;
@@ -7798,7 +7818,7 @@ span.flatpickr-weekday {
 
 .minicart-item__variation {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.16;
   color: #A1AEB3;
   margin-bottom: 12px;
@@ -7858,8 +7878,8 @@ span.flatpickr-weekday {
 
 .minicart-item__price {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.875rem;
+  line-height: 1.2142;
   color: #FFFFFF;
 }
 @media (max-width: 1020px) {
@@ -8813,7 +8833,7 @@ span.flatpickr-weekday {
   margin-left: auto;
   margin-right: auto;
   --button-color: #A1AEB3;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .gallery-accordion__button-more {
@@ -11323,7 +11343,7 @@ span.flatpickr-weekday {
 }
 
 .magazine-card__title {
-  font-size: 27px;
+  font-size: 1.6875rem;
   font-weight: 400;
   line-height: 110%;
   color: #f0f3f5;
@@ -11374,7 +11394,7 @@ span.flatpickr-weekday {
 
 .magazine-card__desc {
   max-width: 508px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
@@ -11595,8 +11615,8 @@ span.flatpickr-weekday {
 }
 
 .magazine-card-fullsize__title {
-  margin-bottom: 20px;
-  font-size: 40px;
+  margin-bottom: 1.25rem;
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 48px;
   color: #ffffff;
@@ -11611,8 +11631,8 @@ span.flatpickr-weekday {
 }
 
 .magazine-card-fullsize__desc {
-  margin-bottom: 42px;
-  font-size: 14px;
+  margin-bottom: 2.625rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #ffffff;
@@ -11678,6 +11698,11 @@ span.flatpickr-weekday {
   background-color: #fff;
   border-radius: 12px;
 }
+@media (min-width: 1800px) {
+  .blog-card {
+    grid-template-columns: auto 440px;
+  }
+}
 @media (max-width: 1400px) and (min-width: 1024px) {
   .blog-card {
     grid-template-columns: 1fr 1fr;
@@ -11695,13 +11720,7 @@ span.flatpickr-weekday {
 }
 
 .blog-card--bigger-title .blog-card__title {
-  font-size: 27px;
-}
-@media (min-width: 1800px) {
-  .blog-card--bigger-title .blog-card__title {
-    font-size: 36px;
-    margin-bottom: 16px;
-  }
+  font-size: 1.6875rem;
 }
 @media (max-width: 1400px) and (min-width: 1280px) {
   .blog-card--bigger-title .blog-card__title {
@@ -11777,16 +11796,11 @@ span.flatpickr-weekday {
 }
 
 .blog-card__title {
-  margin-bottom: 12px;
-  font-size: 20px;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 120%;
   color: #000000;
-}
-@media (min-width: 1800px) {
-  .blog-card__title {
-    font-size: 26.6px;
-  }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .blog-card__title {
@@ -11811,9 +11825,9 @@ span.flatpickr-weekday {
 }
 
 .blog-card__desc {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.21;
   color: #a1aeb3;
   font-family: "RF Dewi", sans-serif;
@@ -12754,8 +12768,8 @@ span.flatpickr-weekday {
 }
 
 .locations-card__title {
-  margin-bottom: 10px;
-  font-size: 27px;
+  margin-bottom: 0.625rem;
+  font-size: 1.6875rem;
   font-weight: 400;
   line-height: 110%;
   color: #000000;
@@ -12775,8 +12789,8 @@ span.flatpickr-weekday {
 }
 
 .locations-card__address {
-  margin-bottom: 28px;
-  font-size: 14px;
+  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
@@ -12800,11 +12814,16 @@ span.flatpickr-weekday {
 
 .locations-card__desc {
   max-width: 451px;
-  margin-bottom: 28px;
-  font-size: 14px;
+  margin-bottom: 2em;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #000000;
+}
+@media (min-width: 1800px) {
+  .locations-card__desc {
+    max-width: 90%;
+  }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .locations-card__desc {
@@ -13829,7 +13848,7 @@ span.flatpickr-weekday {
 
 .cart-heading__count {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   margin-right: 30px;
@@ -13949,7 +13968,7 @@ span.flatpickr-weekday {
 
 .cart-total__title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -17290,6 +17309,7 @@ span.flatpickr-weekday {
   padding-left: 18px;
   padding-right: 18px;
   font-weight: 700;
+  font-size: 0.875rem;
 }
 @media (max-width: 1279px) and (min-width: 769px) {
   .product-hero__badge {
@@ -17314,8 +17334,9 @@ span.flatpickr-weekday {
 }
 
 .product-hero__name {
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
   padding-left: 0;
+  font-size: 1.6875rem;
 }
 @media (max-width: 1279px) and (min-width: 769px) {
   .product-hero__name {
@@ -17338,8 +17359,8 @@ span.flatpickr-weekday {
 
 .product-hero__sku {
   font-family: "RF Dewi", sans-serif;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 1.16;
   color: #A1AEB3;
   margin-bottom: 34px;
 }
@@ -17362,7 +17383,7 @@ span.flatpickr-weekday {
 }
 
 .product-hero__options {
-  --chips-fz: 12px;
+  --chips-fz: 0.75rem;
   --chips-lh: 1.3;
   --chips-padding: 8px 11px 9px;
   --chips-bg: #F0F3F5;
@@ -17394,7 +17415,7 @@ span.flatpickr-weekday {
 }
 
 .product-hero__order {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
 }
 @media (max-width: 768px) {
@@ -17435,7 +17456,7 @@ span.flatpickr-weekday {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   margin-bottom: 13px;
   color: #A1AEB3;
@@ -17463,7 +17484,7 @@ span.flatpickr-weekday {
 }
 
 .product-hero__bullet-icon {
-  --size: 17px;
+  --size: 1.0625rem;
   width: var(--size);
   min-width: var(--size);
   height: var(--size);
@@ -17486,7 +17507,7 @@ span.flatpickr-weekday {
 }
 
 .product-hero__desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
   margin-bottom: 50px;
@@ -17596,8 +17617,6 @@ span.flatpickr-weekday {
   .product-hero__order-buy-button {
     max-width: 320px;
     --fz-button: 18.6px;
-    padding-top: 14px;
-    padding-bottom: 14px;
   }
 }
 @media (max-width: 1280px) and (min-width: 1025px) {
@@ -17952,7 +17971,7 @@ span.flatpickr-weekday {
 }
 @media (min-width: 1800px) {
   .product-details__container {
-    max-width: calc(1186px + 120px + (1186px * 0.3));
+    max-width: calc(1580px + 120px + (1580px * 0.1));
   }
 }
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -18029,7 +18048,7 @@ span.flatpickr-weekday {
 }
 
 .product-details__title {
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
   text-align: center;
   margin-bottom: 40px;
@@ -18072,7 +18091,7 @@ span.flatpickr-weekday {
 
 .product-details__desc h3 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   margin-bottom: 16px;
   max-width: 579px;
@@ -18120,7 +18139,7 @@ span.flatpickr-weekday {
 .product-details__desc p {
   max-width: 579px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   margin-bottom: 32px;
   max-width: 667px;
@@ -18152,6 +18171,11 @@ span.flatpickr-weekday {
   margin-bottom: 47px;
   max-width: 667px;
 }
+@media (min-width: 1800px) {
+  .product-details__desc ol {
+    max-width: 827px;
+  }
+}
 @media (max-width: 1024px) and (min-width: 769px) {
   .product-details__desc ol {
     column-gap: 36px;
@@ -18181,6 +18205,7 @@ span.flatpickr-weekday {
   counter-increment: product-desc-list;
   display: inline;
   line-height: 1.4;
+  font-size: 0.875rem;
 }
 @media (max-width: 1024px) and (min-width: 769px) {
   .product-details__desc ol li {
@@ -18205,9 +18230,9 @@ span.flatpickr-weekday {
 
 .product-details__desc ol li::before {
   content: counter(product-desc-list);
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
-  margin-bottom: 17px;
+  margin-bottom: 1.0625rem;
   display: block;
 }
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -18268,7 +18293,7 @@ span.flatpickr-weekday {
 }
 
 .product-details-contra .product-details-contra__title {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.4;
   font-weight: 600;
 }
@@ -18629,8 +18654,8 @@ span.flatpickr-weekday {
 
 .footer__nav {
   margin-bottom: 61px;
-  --title-bottom: 19px;
-  --item-bottom: 12px;
+  --title-bottom: 1.1875rem;
+  --item-bottom: 0.75rem;
 }
 @media (max-width: 768px) and (min-height: 602px) {
   .footer__nav {
@@ -18718,7 +18743,7 @@ span.flatpickr-weekday {
 
 .footer__credits-item {
   margin-right: 78px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.21;
 }

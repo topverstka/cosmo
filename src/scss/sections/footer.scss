@@ -74,8 +74,8 @@
 
 .footer__nav {
   margin-bottom: 61px;
-  --title-bottom: 19px;
-  --item-bottom: 12px;
+  --title-bottom: 1.1875rem;
+  --item-bottom: 0.75rem;
   @media (max-width: 768px) and (min-height: 602px) {
     margin-bottom: 65px;
     --title-fz: 28px;
@@ -142,7 +142,7 @@
 }
 .footer__credits-item {
   margin-right: 78px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.21;
   @media (max-width: 1260px) {

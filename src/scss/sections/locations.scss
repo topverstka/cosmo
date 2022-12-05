@@ -73,8 +73,8 @@
   justify-content: flex-start;
 }
 .locations-card__title {
-  margin-bottom: 10px;
-  font-size: 27px;
+  margin-bottom: 0.625rem;
+  font-size: 1.6875rem;
   font-weight: 400;
   line-height: 110%;
   color: #000000;
@@ -90,8 +90,8 @@
 }
 
 .locations-card__address {
-  margin-bottom: 28px;
-  font-size: 14px;
+  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
@@ -109,11 +109,14 @@
 
 .locations-card__desc {
   max-width: 451px;
-  margin-bottom: 28px;
-  font-size: 14px;
+  margin-bottom: 2em;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #000000;
+  @media (min-width: 1800px) {
+    max-width: 90%;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     max-width: 100%;
     font-size: 28px;

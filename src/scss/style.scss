@@ -122,6 +122,9 @@ body._lock {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+  @media (min-width: 1800px) {
+    max-width: 1580px;
+  }
   @media (max-width: 1280px) {
     max-width: calc(100% - 16px);
   }

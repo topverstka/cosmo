@@ -212,6 +212,9 @@
   background-color: #5f6c75;
   border-radius: 6px;
   padding-bottom: 28px;
+  @media (min-width: 1800px) {
+    max-width: 322px;
+  }
   @media (max-width: $mobile-break) {
     padding: 16.75px;
     display: grid;

@@ -27,6 +27,9 @@
   grid-template-columns: auto 350px;
   background-color: #fff;
   border-radius: 12px;
+  @media (min-width: 1800px) {
+    grid-template-columns: auto 440px;
+  }
   @media (max-width: 1400px) and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -39,11 +42,7 @@
 }
 
 .blog-card--bigger-title .blog-card__title {
-  font-size: 27px;
-  @media (min-width: 1800px) {
-    font-size: 36px;
-    margin-bottom: 16px
-  }
+  font-size: 1.6875rem;
   @media (max-width: 1400px) and (min-width: 1280px) {
     font-size: 24px;
     margin-bottom: 10px;
@@ -99,14 +98,11 @@
   }
 }
 .blog-card__title {
-  margin-bottom: 12px;
-  font-size: 20px;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 120%;
   color: #000000;
-  @media (min-width: 1800px) {
-    font-size: 26.6px;
-  }
   @media (min-width: 1025px) and (max-width: 1280px) {
     font-size: 17.8px
   }
@@ -122,9 +118,9 @@
   }
 }
 .blog-card__desc {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.21;
   color: #a1aeb3;
   font-family: 'RF Dewi', sans-serif;
