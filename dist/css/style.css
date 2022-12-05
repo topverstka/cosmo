@@ -14375,6 +14375,12 @@ span.flatpickr-weekday {
   column-gap: 8px;
   counter-reset: about-ol;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-ol-list {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 @media (max-width: 768px) {
   .about-ol-list {
     column-count: 1;
@@ -14382,6 +14388,7 @@ span.flatpickr-weekday {
 }
 
 .about-ol-list__item {
+  break-inside: avoid;
   background: #F0F3F5;
   border-radius: 12px;
   font-weight: 400;
@@ -14398,6 +14405,11 @@ span.flatpickr-weekday {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 8px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-ol-list__item {
+    min-height: 94px;
+  }
 }
 @media (max-width: 768px) {
   .about-ol-list__item {
@@ -15782,7 +15794,7 @@ span.flatpickr-weekday {
 .related-products .gallery-accordion__content ~ .container .button {
   margin-top: 23px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .related-products .gallery-accordion__content ~ .container .button {
     margin-top: 0;
   }
@@ -15978,7 +15990,7 @@ span.flatpickr-weekday {
 @media (max-width: 1020px) {
   .account {
     grid-template-columns: 1fr;
-    margin-bottom: 140px;
+    margin-bottom: 0;
   }
 }
 
@@ -16468,6 +16480,7 @@ span.flatpickr-weekday {
 @media (max-width: 601px) {
   .order-history-card:not(.order-history-card--opened) .order-history-card__products-gallery {
     margin-bottom: 12px;
+    column-gap: 8px;
   }
 }
 
@@ -16874,7 +16887,7 @@ span.flatpickr-weekday {
 
 @media (max-width: 768px) {
   .products--layout-horizontal .order-history__product .product-card__inner {
-    padding: 0px;
+    padding: 8px;
   }
 }
 @media (max-width: 601px) {

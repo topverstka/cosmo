@@ -270,6 +270,7 @@
   }
   @media (max-width: 601px) {
     margin-bottom: 12px;
+    column-gap: 8px;
   }
 }
 
@@ -591,7 +592,7 @@
 
 .products--layout-horizontal .order-history__product .product-card__inner {
   @media (max-width: 768px) {
-    padding: 0px;
+    padding: 8px;
   }
   @media (max-width: 601px) {
     padding: 4px
