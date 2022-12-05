@@ -132,13 +132,10 @@
   color: #000000;
 }
 .page-heading__title ~ .page-heading__nav {
-  margin-top: -20px;
   @media (min-width: 602px) and (max-width: 768px) {
-    margin-top: 0;
     height: 60px;
   }
   @media (max-width: 601px) {
-    margin-top: 0;
     height: 30px;
   }
 }

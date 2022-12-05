@@ -97,6 +97,9 @@
 }
 
 .row-filters__select--has-label .select__list--single > .select__item  {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
   @media (max-width: 1024px) {
     white-space: initial;
     height: 42px;

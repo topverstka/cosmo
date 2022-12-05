@@ -16,7 +16,7 @@
   column-gap: 8px;
   row-gap: 8px;
   // grid-template-columns: 41.362359550561797752808988764045% 24.578651685393258426966292134831% 16.151685393258426966292134831461% 16.151685393258426966292134831461%;
-  grid-template-columns: 49.8% 20.878652% 14.351685% 13.451685%; //services.html
+  grid-template-columns: auto 20.878652% 14.351685% 13.451685%; //services.html
   // grid-template-rows: 32.203389830508474576271186440678% 66.101694915254237288135593220339%;
   grid-template-rows: 36.70339% 60.601695%; // services
   grid-template-areas: "pic1 pic2 pic3 pic4" "pic1 pic2 pic5 pic5";

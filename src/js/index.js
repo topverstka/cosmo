@@ -387,8 +387,12 @@ function recalculateCartColumnsBottomGap() {
       return accum + card.getBoundingClientRect().height
     }, 0)
     // additionalHeight -= (cards.length - 1) * GAP;
-    additionalHeight -= 20;
-    console.log(additionalHeight)
+    if (window.innerHeight > 768 && window.innerHeight < 1025) {
+      additionalHeight += 30;
+    } else {
+      additionalHeight -= 20;
+    }
+    // console.log(additionalHeight)
     cartColumns.style.paddingBottom = `${additionalHeight}px`;
   }
 }

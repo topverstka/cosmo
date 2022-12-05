@@ -18,6 +18,9 @@
   justify-content: space-between;
   align-items: flex-start;
   min-height: var(--sidebar-minh);
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 30px;
+  }
   @media (max-width: 601px) {
     margin-bottom: 30px
   }

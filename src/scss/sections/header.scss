@@ -40,6 +40,10 @@
     max-height: 64px;
     height: 100%;
   }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 36px;
     padding-top: 30px;

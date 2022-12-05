@@ -3,6 +3,9 @@
   grid-template-columns: auto minmax(320px, 469px);
   column-gap: 8px;
   margin-top: 8px;
+  @media (max-width: 1024px) {
+    grid-template-columns: auto minmax(220px, 350px);
+  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     row-gap: 8px;

@@ -41,6 +41,9 @@
 
 .footer__logo {
   max-width: 213px;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    max-width: 133px;
+  }
   @media (max-width: 768px) and (min-height: 602px) {
     height: 49px;
     max-width: 360px;
