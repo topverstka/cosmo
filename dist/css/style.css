@@ -5156,6 +5156,11 @@ span.flatpickr-weekday {
   column-gap: 27px;
   margin-bottom: 8px;
 }
+@media (min-width: 1800px) {
+  .fieldset {
+    grid-template-columns: 400px auto;
+  }
+}
 @media (max-width: 962px) {
   .fieldset {
     display: block;
@@ -10222,7 +10227,7 @@ span.flatpickr-weekday {
 
 .page-heading__nav-link {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.214;
   text-align: center;
   color: #A1AEB3;
@@ -13397,7 +13402,7 @@ span.flatpickr-weekday {
 
 .categories-card__name {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
 }
@@ -13481,7 +13486,7 @@ span.flatpickr-weekday {
   background: var(--categories-nav-link-bg, #000000);
   border-radius: 6px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.166;
   color: var(--categories-nav-link-color, #FFFFFF);
   transition: all 0.3s ease;
@@ -13615,7 +13620,7 @@ span.flatpickr-weekday {
 
 .callback-cards-card__title {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
   margin-bottom: 25px;
@@ -13640,7 +13645,7 @@ span.flatpickr-weekday {
 
 .callback-cards-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
 }
@@ -13664,6 +13669,11 @@ span.flatpickr-weekday {
 
 .callback-cards-card__button {
   padding: 11px 18px 14px 18px;
+}
+@media (min-width: 1800px) {
+  .callback-cards-card__button {
+    padding: 14px 22px 18px 22px;
+  }
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .callback-cards-card__button {

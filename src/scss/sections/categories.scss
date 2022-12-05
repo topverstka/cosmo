@@ -124,7 +124,7 @@
 }
 .categories-card__name {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
   @media (min-width: 602px) and (max-width: 768px) {
@@ -194,7 +194,7 @@
   background: var(--categories-nav-link-bg, #000000);
   border-radius: 6px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.166;
   color: var(--categories-nav-link-color, #FFFFFF);
   transition: all 0.3s ease;

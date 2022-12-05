@@ -37,7 +37,7 @@
 }
 .callback-cards-card__title {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
   margin-bottom: 25px;
@@ -57,7 +57,7 @@
 }
 .callback-cards-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
   @media (max-width: 768px) and (min-width: 602px) {
@@ -77,6 +77,9 @@
 
 .callback-cards-card__button {
   padding: 11px 18px 14px 18px;
+  @media (min-width: 1800px) {
+    padding: 14px 22px 18px 22px;
+  }
   @media (max-width: 768px) and (min-width: 602px) {
     --fz-button: 24.58px;
   }

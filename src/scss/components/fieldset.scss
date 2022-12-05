@@ -6,6 +6,9 @@
   grid-template-columns: 291px auto;
   column-gap: 27px;
   margin-bottom: 8px;
+  @media (min-width: 1800px) {
+    grid-template-columns: 400px auto;
+  }
   @media (max-width: 962px) {
     display: block;
   }
