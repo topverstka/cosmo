@@ -1,6 +1,9 @@
 .promo-carousel {
   min-height: 688px;
   margin-bottom: 8px;
+  @media (min-width: 1800px) {
+    min-height: 80vh;
+  }
   @media (min-width: 1400px) and (max-width: 1440px) {
     // max-height: 680px;
     max-height: initial;
@@ -70,6 +73,11 @@
   padding-bottom: 88px;
   background-color: #fff;
   border-radius: var(--info-brad);
+  @media (min-width: 1800px) {
+    padding: 26px;
+    padding-right: 46px;
+    padding-bottom: 78px
+  }
   @media (max-width: $mobile-break) {
     --info-brad: 0 0 12px 12px;
     padding-right: 33px;
@@ -83,11 +91,11 @@
   }
 }
 .promo-carousel__category {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   font-family: "RF Dewi", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.166;
   color: #a1aeb3;
   @media (max-width: $mobile-break) {
     font-family: unset;
@@ -95,32 +103,33 @@
   }
   @media (min-width: 602px) and (max-width: 768px) {
     font-family: unset;
-    margin-bottom: 24px;
-    font-size: 24px;
+    // margin-bottom: 24px;
+    // font-size: 24px;
   }
 }
 .promo-carousel__title {
-  margin-bottom: 22px;
-  font-size: 27px;
+  margin-bottom: 0.885rem;//22px;
+  font-size: 1.6875rem;
+  // font-size: 27px;
   font-weight: 400;
   line-height: 110%;
   color: #000000;
-  @media (max-width: $mobile-break) {
-    margin-bottom: 20px
-  }
-  @media (min-width: 602px) and (max-width: 768px) {
-    font-size: 55px;
-    margin-bottom: 34px;
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
   }
 }
 
 .promo-carousel__desc {
+  font-size: 0.875rem;
+  // @media (min-width: 1800px) {
+  //   font-size: 18.67px;
+  // }
   @media (max-width: $mobile-break) {
-    margin-bottom: 60px
+    margin-bottom: 3.75rem;
   }
-  @media (min-width: 602px) and (max-width: 768px) {
-    font-size: 28px;
-  }
+  // @media (min-width: 602px) and (max-width: 768px) {
+  //   font-size: 28px;
+  // }
 }
 
 .promo-carousel__button {
@@ -225,12 +234,13 @@
 }
 .promo-carousel-card__title {
   margin-bottom: 27px;
-  font-size: 20px;
+  // font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 120%;
   color: #f0f3f5;
   @media (max-width: $mobile-break) {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 0;
   }
   @media (min-width: 602px) and (max-width: 768px) {
@@ -239,9 +249,9 @@
 }
 .promo-carousel-card__desc {
   margin-bottom: 39px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 1.21;
   color: #a1aeb3;
   font-family: "RF Dewi", sans-serif;
   @media (max-width: $mobile-break) {

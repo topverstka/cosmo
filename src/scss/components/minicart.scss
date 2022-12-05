@@ -13,6 +13,9 @@
   padding-top: 20px;
   padding-right: 0px;
   // max-height: 557px;
+  @media (min-width: 1800px) {
+    width: 330px;
+  }
   @media (max-width: 1020px) {
     right: -8px;
     top: 51px;

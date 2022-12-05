@@ -44,6 +44,9 @@
   display: flex;
   min-width: 41px;
   min-height: 39px;
+  @media (min-width: 1800px) {
+    min-height: 49px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     min-height: 79px;
   }
@@ -69,6 +72,9 @@
   transform: scaleY(0);
   transform-origin: top;
   padding-right: 26px;
+  @media (min-width: 1800px) {
+   top: 58px; 
+  }
 }
 .select--has-search .select__list--dropdown {
   padding-top: 20px;
@@ -214,6 +220,10 @@
   transition: all 0.3s ease;
   transform: rotate(180deg);
   @include getmask("../img/common/arrow-circle.svg");
+  @media (min-width: 1800px) {
+    top: 14px;
+    right: 10px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     width: 40px;
     height: 40px;
@@ -257,9 +267,15 @@
   transform: rotate(180deg);
   background-color: #fff;
   @include getmask("../img/common/clear.svg");
+  @media (min-width: 1800px) {
+    top: 14px;
+    right: 10px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     width: 40px;
     height: 40px;
+    top: 20px;
+    right: 16px;
   }
 }
 .is-selected.row-filters__select  .select__button-reset {

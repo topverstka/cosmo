@@ -32,6 +32,10 @@
   margin-bottom: 30px;
   --chips-fz: 12px;
   --chips-fw: 400;
+  @media (min-width: 1800px) {
+    --chips-fz: 16px;
+    --chips-padding: 16px 26px 21px;
+  }
   @media (min-width: 769px) {
     padding-left: 20px;
     padding-right: 20px;

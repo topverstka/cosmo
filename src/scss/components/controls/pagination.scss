@@ -10,22 +10,23 @@
 }
 
 .nav-page {
-  padding: 7.5px 8px;
+  padding: 0.625em 0.66em;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.2;
   text-align: center;
   color: #000000;
-  margin-right: 4px;
+  margin-right: 0.33em;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) and (min-width: 601px) {
-    font-size: 24px;
-    margin-right: 10px;
-    padding: 16px 15px;
+    // font-size: 24px;
+    // margin-right: 10px;
+    border-radius: 16px;
+    // padding: 16px 15px;
   }
 }
 .nav-page:last-child {
@@ -33,11 +34,10 @@
 }
 
 .nav-arrow {
-  position: relative;
-  padding: 7.5px 8px;
+  padding: 0.625em 0.66em;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.16;
   text-align: center;
   color: #000000;
@@ -46,8 +46,8 @@
   justify-content: center;
   align-items: center;
   @media (min-width: 602px) and (max-width: 768px) {
-    font-size: 24px;
-    padding: 15px 16px;
+    // font-size: 24px;
+    // padding: 15px 16px;
     border-radius: 16px;
   }
 }

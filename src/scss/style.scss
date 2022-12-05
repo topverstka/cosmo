@@ -45,10 +45,22 @@
 html {
   scrollbar-color: #000 transparent;
   scrollbar-width: thin;
+  font-size: 16px;
+  @media (min-width: 1800px) {
+    font-size: 21.33px;
+  }
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    font-size: 14.22px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 11.38px;
+  }
+  @media (min-width: 601px) and (max-width: 768px) {
+    font-size: 32.77px;
+  }
 }
 body {
   font-family: $ff-main;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
   color: $text-primary;

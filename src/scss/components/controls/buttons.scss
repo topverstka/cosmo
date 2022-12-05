@@ -21,6 +21,10 @@
   background: var(--button-bg, transparent);
   border-radius: 100px;
   transition: all 0.3s ease;
+  @media (min-width: 1800px) {
+    --fz-button: 18.67px;
+    padding: 14px 29px 18px;
+  }
   @media (min-width: 769px) and (max-width: 1280px) {
     --fz-button: 12px;
   }
@@ -128,6 +132,12 @@
   fill: var(--icon-color);
   stroke: none;
   transition: all var(--tr) ease;
+  @media (min-width: 1800px) {
+    width: var(--button-icon-size, 16px);
+    min-width: var(--button-icon-size, 16px);
+    max-width: var(--button-icon-size, 16px);
+    height: 16px
+  }
   @media (max-width: 768px) and (min-width: 602px) {
     width: var(--button-icon-size, 26px);
     min-width: var(--button-icon-size, 26px);

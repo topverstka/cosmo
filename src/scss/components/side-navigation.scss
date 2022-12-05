@@ -46,6 +46,9 @@
   display: block;
   width: 100%;
   margin-bottom: 11px;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    margin-bottom: 6px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 22px;
   }
@@ -69,7 +72,11 @@
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 12px;
+  // font-size: 12px;
+  font-size: 0.75rem;
+  @media (min-width: 1800px) {
+    font-size: 0.85rem;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
     padding-top: 14px;

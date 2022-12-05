@@ -143,6 +143,9 @@
   font-weight: 400;
   line-height: 140%;
   color: #000000;
+  @media (min-width: 1800px) {
+    font-size: 18.67px;
+  }
   @media (max-width: 768px) {
     font-size: 24px;
     top: -72px;
