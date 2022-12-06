@@ -5712,17 +5712,19 @@ span.flatpickr-weekday {
 }
 
 .promo-carousel {
-  min-height: 688px;
+  --max-height: 680px;
+  max-height: var(--max-height);
   margin-bottom: 8px;
+}
+@media (min-width: 769px) {
+  .promo-carousel {
+    height: 80vh;
+    min-height: initial;
+  }
 }
 @media (min-width: 1800px) {
   .promo-carousel {
-    min-height: 80vh;
-  }
-}
-@media (min-width: 1400px) and (max-width: 1440px) {
-  .promo-carousel {
-    max-height: initial;
+    --max-height: 846px;
   }
 }
 @media (max-width: 1400px) {
@@ -5733,21 +5735,70 @@ span.flatpickr-weekday {
 @media (max-width: 1280px) {
   .promo-carousel {
     min-height: 480px;
+    --max-height: 604px;
+  }
+}
+@media (min-width: 769px) {
+  .promo-carousel {
+    height: 100%;
   }
 }
 @media (max-width: 1024px) {
   .promo-carousel {
-    min-height: 450px;
+    min-height: initial;
+    --max-height: 483px;
   }
 }
 @media (max-width: 768px) {
   .promo-carousel {
     min-height: initial;
+    --max-height: initial;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .promo-carousel {
     margin-bottom: 16px;
+  }
+}
+@media (min-width: 769px) and (max-height: 900px) {
+  .promo-carousel {
+    --max-height: 80vh;
+  }
+}
+
+.promo-carousel .promo-carousel__img,
+.promo-carousel .promo-carousel__pic,
+.promo-carousel .promo-carousel__hero,
+.promo-carousel .promo-carousel__slide,
+.promo-carousel .swiper-wrapper {
+  max-height: var(--max-height);
+}
+@media (min-width: 769px) {
+  .promo-carousel .promo-carousel__img,
+.promo-carousel .promo-carousel__pic,
+.promo-carousel .promo-carousel__hero,
+.promo-carousel .promo-carousel__slide,
+.promo-carousel .swiper-wrapper {
+    height: 80vh;
+    max-height: var(--max-height);
+  }
+}
+@media (min-width: 1800px) {
+  .promo-carousel .promo-carousel__img,
+.promo-carousel .promo-carousel__pic,
+.promo-carousel .promo-carousel__hero,
+.promo-carousel .promo-carousel__slide,
+.promo-carousel .swiper-wrapper {
+    max-height: var(--max-height);
+  }
+}
+@media (min-width: 769px) {
+  .promo-carousel .promo-carousel__img,
+.promo-carousel .promo-carousel__pic,
+.promo-carousel .promo-carousel__hero,
+.promo-carousel .promo-carousel__slide,
+.promo-carousel .swiper-wrapper {
+    height: 100%;
   }
 }
 
