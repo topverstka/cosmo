@@ -2538,7 +2538,7 @@ html {
   scrollbar-width: thin;
   font-size: 1.1vw;
 }
-@media (min-width: 601px) and (max-width: 768px) {
+@media (max-width: 768px) {
   html {
     font-size: 4.2vw;
   }
