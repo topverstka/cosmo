@@ -6,13 +6,13 @@
 .chips {
   margin-bottom: 40px;
 
-  --chips-fz: 14px;
+  --chips-fz: 1.14rem; //14px by default
   --chips-fw: 400;
   --chips-lh: 1.25;
-  --chips-padding: 13px 20px 15px;
+  --chips-padding: 0.9285714285714286em 1.42em 1.0714em;
   --chips-border: none;
-  --chips-item-mr: 8px;
-  --chips-item-mb: 8px;
+  --chips-item-mr: 0.57em;
+  --chips-item-mb: 0.57em;
 
   --chips-bg: #fff;
   --chips-active-bg: #5f6c75;
@@ -25,11 +25,11 @@
     margin-bottom: 28px
   }
   @media (min-width: 769px) and (max-width: 1280px) {
-    --chips-fz: 10px;
+    // --chips-fz: 10px;
     --chips-padding: 9px 14px 12px;
   }
   @media (min-width: 602px) and (max-width: 768px) {
-    --chips-fz: 28px;
+    // --chips-fz: 28px;
     --chips-padding: 26px 40px 30px;
     --chips-item-mr: 16px;
   }
