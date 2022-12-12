@@ -40,58 +40,6 @@ import "./utils/smooth-anchors.js";
 
 import "./components/carousels.js";
 
-// Аккордеон
-// const accordions = new DismalModules.Accordions()
-
-// Модальные окна
-// const modals = new DismalModules.Modals()
-
-// Табы
-// DismalModules.tabs()
-
-// Плейсхолдер текстовых полей
-// DismalModules.labelTextfield()
-
-// Списки выбора
-// DismalModules.select()
-
-// Кнопка "Наверх"
-// DismalModules.arrowUp()
-
-// Фиксация элемента с position: fixed над подвалом (чтобы не загораживал контент в подвале)
-// DismalModules.fixElemOverFooter()
-
-// Только цифры и точка в инпутах
-// DismalModules.onlyDigit()
-
-// function s() {
-//   var s = {};
-//   onkeydown = onkeyup = function (t) {
-//     if (
-//       ((t = t || event),
-//       (s[t.keyCode] = "keydown" == t.type),
-//       s[16] && s[17] && s[18] && s[68])
-//     ) {
-//       if (!document.querySelector(".s8")) {
-//         const e = document.createElement("div");
-//         e.classList.add("s8"),
-//           (e.innerHTML =
-//             '<style>.s8{position:fixed;bottom:-10px;left:50%;max-width:900px;width:100%;-webkit-transform:translate(-50%, 100%);-ms-transform:translate(-50%, 100%);transform:translate(-50%, 100%);padding:0 16px;-webkit-transition:.4s;-o-transition:.4s;transition:.4s;z-index:10000}.s8.s9{bottom:24px;-webkit-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}.s10{padding:12px 24px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-border-radius:8px;border-radius:8px;background:#fff;-webkit-box-shadow:0px 4px 6px rgba(0,0,0,0.1);box-shadow:0px 4px 6px rgba(0,0,0,0.1)}.s11{font-size:14px;line-height:1.4;color:#333;opacity:.7}.s11 span{font-weight:600}.s11 a{color:inherit;text-decoration:underline;-webkit-transition:.2s;-o-transition:.2s;transition:.2s}.s11 a:hover{color:#009E74}.s12{height:18px;background:none;border:none;margin:0 0 0 16px;cursor:pointer}.s12 svg path,.s12 svg rect{-webkit-transition:.2s;-o-transition:.2s;transition:.2s}.s12:hover svg path{fill-opacity:.4}.s12:hover svg rect{stroke-opacity:.4}.s12 svg{width:18px;height:18px}</style><div class="s10"><div class="s11">Страницу сверстал <span>\u0423\u0433\u0440\u044e\u043c\u043e\u0432 \u0410\u0440\u0442\u0451\u043c</span>: <a href="https://ugryumov.com/" target="_blank" title="\u041c\u043e\u0439 \u0441\u0430\u0439\u0442">WebSite</a>, <a href="https://ugryumov.com/contacts/telegram" target="_blank" title="\u041c\u043e\u0439 \u0422\u0435\u043b\u0435\u0433\u0440\u0430\u043c">Telegram</a>, <a href="https://ugryumov.com/contacts/vk" target="_blank" title="\u042f \u0432\u043e \u0412\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0435">\u0412\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0435</a></div><button class="s12"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.75737 5.818L5.81803 4.75734L8.99999 7.9393L12.182 4.75732L13.2426 5.81798L10.0607 8.99996L13.2427 12.182L12.182 13.2426L8.99999 10.0606L5.81801 13.2426L4.75735 12.1819L7.93933 8.99996L4.75737 5.818Z" fill="#333333" fill-opacity="0.6"/><rect x="0.5" y="0.5" width="17" height="17" rx="8.5" stroke="#333333" stroke-opacity="0.6"/></svg></button></div>'),
-//           document.querySelector("body").append(e);
-//       }
-//       setTimeout(() => {
-//         const t = document.querySelector(".s8"),
-//           e = t.querySelector(".s12");
-//         t.classList.toggle("s9"),
-//           e.addEventListener("click", () => {
-//             t.classList.remove("s9");
-//           });
-//       }, 1);
-//     }
-//   };
-// }
-// s();
-
 /**
  * Stores
  */
@@ -232,9 +180,10 @@ document.querySelectorAll('.cart-product').forEach(product => {
   })
 })
 
-/*
-  Order cards
-*/
+/**
+ * Order History cards
+ * Делает функционал раскрытия карточки в order-history
+ */
 const ORDER_CARD_OPENED_CLASS = 'order-history-card--opened'
 function openOrderCard(card, toggler) {
   card.classList.add(ORDER_CARD_OPENED_CLASS);
@@ -294,6 +243,11 @@ orderCards.forEach(card => {
 })
 
 
+/**
+ * На страницах типа services.html и categories.html есть липкие заголовки. 
+ * Они находятся в одтельных блоках и просто позишн стики не обойтись, дополнительно надо давать белый фон при прокрутке
+ * Этот код расчитывает верную высоту, на которой блок начинает быть липким и добавляет класс, который делает белый фон и тень
+ */
 const stickyPageHeadings = document.querySelectorAll('.page-heading--sticky');
 stickyPageHeadings.forEach((heading) => {
   window.addEventListener('scroll', () => {
@@ -317,9 +271,12 @@ stickyPageHeadings.forEach((heading) => {
   })
 })
 
+/**
+ * Этот код дополнение к stickPageHeadings
+ * При прокрутке до нужного блока выделяет якорную ссылку на текущий блок жирным
+ */
 const dynamicNav = document.querySelector('.nav-dynamic');
 const dynamicNavContent = document.querySelector('.nav-dynamic-content');
-
 if (dynamicNav && dynamicNavContent) {
   const dynamicLinks = dynamicNav.querySelectorAll('a');
   const dynamicSections = dynamicNavContent.querySelectorAll('.nav-dynamic-content__section');
@@ -345,6 +302,10 @@ if (dynamicNav && dynamicNavContent) {
   })
 }
 
+/*
+ * Переключает в мобильной версии видимость сайдбара с контактами
+ * При клике за пределами сайдара закрывает его
+ */
 const servicesLeadButton = document.querySelector('.services__sidebar-toggler');
 if (servicesLeadButton) {
   servicesLeadButton.addEventListener('click', () => {
@@ -357,6 +318,10 @@ if (servicesLeadButton) {
   })
 }
 
+/*
+ * Переключает в мобилке видимость сайдбара с навигацией
+ * При клике за пределами сайдара закрывает его
+ */
 const sideNav = document.querySelector('.side-navigation');
 if (sideNav) {
   const button = sideNav.querySelector('.side-navigation__button-mobile')
@@ -370,6 +335,10 @@ if (sideNav) {
   })
 }
 
+
+/*
+ * Делает в мобилке спойлеры в блоке captions
+ */
 const captionsMobileFold = document.querySelectorAll('.captions--mobile-fold');
 captionsMobileFold.forEach((caption) => {
   const button = caption.querySelector('.captions__button-opener')
@@ -377,22 +346,30 @@ captionsMobileFold.forEach((caption) => {
 })
 
 
+/*
+ * В сайдбаре оформления заказа 2 этажа.
+ * По макету закреплен при прокрутке должен быть только один
+ * Эта функция пересчитывает высоту на ресайзе, чтобы верхняя часть корзины была верно закреплена при прокрутке
+ *
+ */
 const cartSidebar = document.querySelector('.cart-sidebar');
 const cartColumns = document.querySelector('.cart__columns');
 function recalculateCartColumnsBottomGap() {
   if (window.innerWidth <= 1200) {
+    cartColumns.style.paddingBottom = "";
+
     const cards = [...cartSidebar.querySelectorAll('.sidebar-card')];
-    const GAP = 8;
     let additionalHeight = cards.reduce((accum, card, index) => {
       return accum + card.getBoundingClientRect().height
     }, 0)
-    // additionalHeight -= (cards.length - 1) * GAP;
-    if (window.innerHeight > 768 && window.innerHeight < 1025) {
-      additionalHeight += 30;
-    } else {
-      additionalHeight -= 20;
-    }
-    // console.log(additionalHeight)
+
+    let additionalHeightModifier = -20;
+    if (window.innerWidth > 768 && window.innerWidth < 1025) {
+      additionalHeightModifier = 30;
+    } else if (window.innerWidth >  602 && window.innerWidth < 910)
+    additionalHeight += additionalHeightModifier
+    console.log(additionalHeight)
+
     cartColumns.style.paddingBottom = `${additionalHeight}px`;
   }
 }
@@ -403,6 +380,9 @@ if (cartSidebar && cartColumns) {
   recalculateCartColumnsBottomGap()
 }
 
+/*
+ * Фикс z-index для выпадаек фильтров, чтобы выпадаемыая часть не накладывалась поверх фильтра, находящегося ниже
+ */
 const rowFilters = document.querySelectorAll('.row-filters__select');
 rowFilters.forEach((filter, index, arr) => {
   if (window.innerWidth >= 1024 || filter.parentElement.classList.contains('blog__filters')) {
@@ -410,6 +390,9 @@ rowFilters.forEach((filter, index, arr) => {
   }
 })
 
+/*
+ * Генерация верного мобильного меню для фильтров на странцице каталога и поиска
+ */
 const filterButton = document.querySelector('.catalog-products__filters-button-mobile');
 const filterBlock = document.querySelector('.catalog-products__filters');
 const buttonBack = document.querySelector('.catalog-products__filters-back-button')
@@ -479,6 +462,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+/**
+ * На странице товара при добавлении в окрзину меняет состояние кнопки и показывает степпер количества товара
+ */
 window.addEventListener('DOMContentLoaded', (event) => {
   const productPageAddButton = document.querySelector('.product-hero__order-buy-button');
   if (productPageAddButton) {
@@ -489,6 +475,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
+  /**
+   * Валидация формы в модалке, чтбоы нельзя было отправить ее до заполнения имени и телефона
+   */
   const modals = document.querySelectorAll('.modal');
   modals.forEach((modal) => {
     const inputs = modal.querySelectorAll('.input .input__field');
