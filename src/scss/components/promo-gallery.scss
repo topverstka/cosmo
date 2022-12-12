@@ -21,8 +21,14 @@
   padding: 24px 61px 20px 20px;
   background-color: #fff;
   border-radius: 12px;
-  @media (max-width: 1200px){
+  @media (max-width: 1280px) {
+    min-height: 208px;
+  }
+  @media (max-width: 1200px) {
     padding-right: 100px
+  }
+  @media (max-width: 1024px) {
+    min-height: 168px;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 32px;
@@ -33,6 +39,9 @@
     min-height: 188px;
     padding: 15px;
     border-radius: 8.75px;
+  }
+  @media (min-width: 1800px) {
+    min-height: 308px;
   }
 }
 .promo-gallery-card__top,

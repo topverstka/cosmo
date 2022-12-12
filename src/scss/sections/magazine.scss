@@ -11,6 +11,7 @@
   display: grid;
   grid-template-areas: "card pic1 pic2 pic3" "card pic4 pic4 pic3";
   grid-template-columns: 49.7% 14.1% 13.5714285714% auto;
+  // grid-template-rows: 10vw 17vw;
   row-gap: 8px;
   column-gap: 8px;
   margin-bottom: 8px;
@@ -20,6 +21,7 @@
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 29vw 29vw 29vw;
     grid-template-areas: "card pic1" "card pic2" "card pic3";
   }
   @media (max-width: 601px) {
@@ -111,39 +113,39 @@
 }
 .magazine-card:nth-child(2) {
   grid-area: pic1;
-  height: 140px;
-  @media (min-width: 602px) and (max-width: 768px) {
-    height: 224px
-  }
-  @media (max-width: 601px) {
-    height: 112px
-  }
+  // height: 140px;
+  // @media (min-width: 602px) and (max-width: 768px) {
+  //   height: 224px
+  // }
+  // @media (max-width: 601px) {
+    // height: 112px
+  // }
 }
 .magazine-card:nth-child(3) {
   grid-area: pic2;
-  height: 140px;
-  @media (min-width: 602px) and (max-width: 768px) {
-    height: 224px
-  }
-  @media (max-width: 601px) {
-    height: 112px
-  }
+  // height: 140px;
+  // @media (min-width: 602px) and (max-width: 768px) {
+    // height: 224px
+  // }
+  // @media (max-width: 601px) {
+    // height: 112px
+  // }
 }
 .magazine-card:nth-child(4) {
   grid-area: pic3;
-  @media (min-width: 602px) and (max-width: 768px) {
-    height: 224px
-  }
-  @media (max-width: 601px) {
-    height: 140px;
-  }
-  @media (max-width: 420px) {
-    height: 112px
-  }
+  // @media (min-width: 602px) and (max-width: 768px) {
+  //   height: 224px
+  // }
+  // @media (max-width: 601px) {
+  //   height: 140px;
+  // }
+  // @media (max-width: 420px) {
+  //   height: 112px
+  // }
 }
 .magazine-card:nth-child(5) {
   grid-area: pic4;
-  height: 232px;
+  // height: 232px;
   @media (max-width: 768px) {
     display: none
   }
@@ -262,6 +264,9 @@
   line-height: 48px;
   color: #ffffff;
   text-align: center;
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
   @media (max-width: 601px) {
     font-size: 20px;
     line-height: 1;

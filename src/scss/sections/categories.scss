@@ -30,7 +30,8 @@
 .categories-card  {
   margin-left: 4px;
   margin-right: 4px;
-  min-height: 348px;
+  // min-height: 348px;
+  min-height: 24vw;
   width: calc(25% - 8px);
   margin-bottom: 8px;
   position: relative;
@@ -44,6 +45,9 @@
     margin-left: auto;
     margin-right: auto;
   }
+  @media (max-width: 768px) {
+    min-height: 40vw;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     --brad: 24px;
   }
@@ -53,7 +57,11 @@
 }
 .categories:not(.categories-catalog) .categories-card {
   @media (max-width: 1024px) {
-    min-height: 177px;
+    // min-height: 177px;
+    min-height: 17vw
+  }
+  @media (max-width: 768px) {
+    min-height: 34vw
   }
 }
 .categories:not(.categories-catalog) .categories-card:first-of-type {
@@ -229,15 +237,16 @@
 }
 
 .categories-catalog .categories-card {
-  @media (max-width: 1024px) {
-    min-height: 265px;
-  }
+  // @media (max-width: 1024px) {
+  //   min-height: 265px;
+  // }
   @media (min-width: 602px) and (max-width: 768px) {
-    min-height: 315px;
+    // min-height: 315px;
+    min-height: 41vw;
   }
-  @media (max-width: 601px) {
-    min-height: 175px;
-  }
+  // @media (max-width: 601px) {
+  //   min-height: 175px;
+  // }
 }
 
 
