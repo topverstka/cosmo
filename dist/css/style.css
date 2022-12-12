@@ -11408,6 +11408,7 @@ span.flatpickr-weekday {
   display: grid;
   grid-template-areas: "card pic1 pic2 pic3" "card pic4 pic4 pic3";
   grid-template-columns: 49.7% 14.1% 13.5714285714% auto;
+  grid-template-rows: 10vw 17vw;
   row-gap: 8px;
   column-gap: 8px;
   margin-bottom: 8px;
