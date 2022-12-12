@@ -6228,10 +6228,8 @@ span.flatpickr-weekday {
   display: none;
 }
 
-@media (min-width: 1021px) {
-  .promo-gallery-card--no-pic .promo-gallery-card__title {
-    max-width: 100%;
-  }
+.promo-gallery-card--no-pic .promo-gallery-card__title {
+  max-width: 100%;
 }
 
 .promo-gallery-card--no-pic .promo-gallery-card__desc {
