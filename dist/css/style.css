@@ -2536,26 +2536,11 @@ h6 {
 html {
   scrollbar-color: #000 transparent;
   scrollbar-width: thin;
-  font-size: 16px;
-}
-@media (min-width: 1800px) {
-  html {
-    font-size: 21.33px;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1280px) {
-  html {
-    font-size: 14.22px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  html {
-    font-size: 11.38px;
-  }
+  font-size: 1.1vw;
 }
 @media (min-width: 601px) and (max-width: 768px) {
   html {
-    font-size: 32.77px;
+    font-size: 4.2vw;
   }
 }
 
@@ -6128,43 +6113,31 @@ span.flatpickr-weekday {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  min-height: 248px;
+  min-height: 17.22vw;
   padding: 24px 61px 20px 20px;
   background-color: #fff;
   border-radius: 12px;
-}
-@media (max-width: 1280px) {
-  .promo-gallery-card {
-    min-height: 208px;
-  }
 }
 @media (max-width: 1200px) {
   .promo-gallery-card {
     padding-right: 100px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .promo-gallery-card {
-    min-height: 168px;
+    min-height: 50vw;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .promo-gallery-card {
     padding: 32px;
-    min-height: 385px;
     border-radius: 25px;
   }
 }
 @media (max-width: 610px) {
   .promo-gallery-card {
-    min-height: 188px;
     padding: 15px;
     border-radius: 8.75px;
-  }
-}
-@media (min-width: 1800px) {
-  .promo-gallery-card {
-    min-height: 308px;
   }
 }
 
@@ -11408,7 +11381,7 @@ span.flatpickr-weekday {
   display: grid;
   grid-template-areas: "card pic1 pic2 pic3" "card pic4 pic4 pic3";
   grid-template-columns: 49.7% 14.1% 13.5714285714% auto;
-  grid-template-rows: 10vw 17vw;
+  grid-template-rows: 10vw 16vw;
   row-gap: 8px;
   column-gap: 8px;
   margin-bottom: 8px;
