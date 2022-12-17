@@ -9047,6 +9047,7 @@ span.flatpickr-weekday {
 .header--scrolled {
   background-color: #fff;
   border-bottom: 1px solid #c5cacf;
+  box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
 }
 
 .header--opened {
@@ -13583,6 +13584,10 @@ span.flatpickr-weekday {
   }
 }
 
+.page__categories .header--scrolled {
+  box-shadow: none;
+}
+
 .callback-cards {
   padding-top: 40px;
 }
@@ -15799,6 +15804,10 @@ span.flatpickr-weekday {
   .services__sidebar--active .services__sidebar-card {
     bottom: -40px;
   }
+}
+
+.page__services-all .header--scrolled {
+  box-shadow: none;
 }
 
 @media (min-width: 602px) {

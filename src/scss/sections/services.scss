@@ -478,6 +478,9 @@
   }
 }
 
+.page__services-all .header--scrolled {
+  box-shadow: none;
+}
 .page__services-all .page-heading {
   @media (min-width: 602px) {
     margin-bottom: 22px;
