@@ -84,9 +84,9 @@
 }
 .header-snack__title {
   width: 100%;
-  max-width: 434px;
-  margin-right: 24px;
-  font-size: 12px;
+  max-width: 30.138vw;//434px
+  margin-right: 1.5rem;
+  font-size: 0.75rem; //12
   font-weight: 500;
   line-height: 1.16;
   @media (max-width: 1020px) {
@@ -95,6 +95,7 @@
   }
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px; 
+    max-width: 100%;
   }
 }
 .header-snack__content {
