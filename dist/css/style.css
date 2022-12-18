@@ -13231,12 +13231,12 @@ span.flatpickr-weekday {
   margin-left: 4px;
   margin-right: 4px;
   min-height: 24vw;
-  width: calc(25% - 8px);
-  margin-bottom: 8px;
+  width: calc(25% - 0.5rem);
+  margin-bottom: 0.5rem;
   position: relative;
-  --brad: 12px;
+  --brad: var(--brad-regular);
   border-radius: var(--brad);
-  padding: 20px;
+  padding: 1.25rem;
   overflow: hidden;
 }
 @media (max-width: 1024px) {
@@ -13250,6 +13250,8 @@ span.flatpickr-weekday {
 @media (max-width: 768px) {
   .categories-card {
     min-height: 40vw;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -13257,7 +13259,7 @@ span.flatpickr-weekday {
     --brad: 24px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 601px) {
   .categories-card {
     padding: 12px;
   }
@@ -13306,7 +13308,7 @@ span.flatpickr-weekday {
 
 .categories-card--tight {
   width: calc(20% - 8px);
-  min-height: 278px;
+  min-height: calc(var(--index) * 19.4);
 }
 @media (max-width: 1024px) {
   .categories-card--tight {
@@ -13317,6 +13319,8 @@ span.flatpickr-weekday {
 @media (max-width: 700px) {
   .categories-card--tight {
     width: 48.5%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 576px) {
@@ -13432,7 +13436,7 @@ span.flatpickr-weekday {
 }
 
 .categories-nav__list-item {
-  margin-right: 8px;
+  margin-right: 0.5rem;
   padding-bottom: 20px;
   white-space: nowrap;
 }
@@ -13444,9 +13448,9 @@ span.flatpickr-weekday {
 .categories-nav__list-link {
   display: block;
   align-items: center;
-  padding: 12px 20px 16px;
+  padding: 1em 1.6666666667em 1.3333333333em;
   background: var(--categories-nav-link-bg, #000000);
-  border-radius: 6px;
+  border-radius: 0.5em;
   font-weight: 600;
   font-size: 0.76rem;
   line-height: 1.166;
@@ -13516,12 +13520,21 @@ span.flatpickr-weekday {
 }
 @media (max-width: 601px) {
   .nav-dynamic-content ~ .callback-cards {
-    padding-top: 60px;
+    padding-top: 0;
   }
 }
 
 .page__categories .header--scrolled {
   box-shadow: none;
+}
+
+.js-categories-card-slideshow .categories-card__pic {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.js-categories-card-slideshow .categories-card__pic--visible {
+  opacity: 1;
 }
 
 .callback-cards {

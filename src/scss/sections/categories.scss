@@ -32,12 +32,12 @@
   margin-right: 4px;
   // min-height: 348px;
   min-height: 24vw;
-  width: calc(25% - 8px);
-  margin-bottom: 8px;
+  width: calc(25% - 0.5rem);
+  margin-bottom: 0.5rem;
   position: relative;
-  --brad: 12px;
+  --brad: var(--brad-regular);
   border-radius: var(--brad);
-  padding: 20px;
+  padding: 1.25rem;//20px;
   overflow: hidden;
   @media (max-width: 1024px) {
     width: 49%;
@@ -47,11 +47,13 @@
   }
   @media (max-width: 768px) {
     min-height: 40vw;
+    margin-left: 0;
+    margin-right: 0;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     --brad: 24px;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 601px) {
     padding: 12px;
   }
 }
@@ -89,13 +91,15 @@
 }
 .categories-card--tight  {
   width: calc(20% - 8px);
-  min-height: 278px;
+  min-height: #{'calc(var(--index) * 19.4)'};//278px;
   @media (max-width: 1024px) {
     width: 32%;
     min-height: 228px;
   }
   @media (max-width: 700px) {
     width: 48.5%;
+    margin-left: 0;
+    margin-right: 0;
   }
   @media (max-width: 576px) {
     min-height: 177px;
@@ -188,7 +192,7 @@
   }
 }
 .categories-nav__list-item {
-  margin-right: 8px;
+  margin-right: 0.5rem;
   padding-bottom: 20px;
   white-space: nowrap;
 }
@@ -198,9 +202,9 @@
 .categories-nav__list-link {
   display: block;
   align-items: center;
-  padding: 12px 20px 16px;
+  padding: 1em 1.6666666666666667em 1.3333333333333333em;//12px 20px 16px;
   background: var(--categories-nav-link-bg, #000000);
-  border-radius: 6px;
+  border-radius: 0.5em;
   font-weight: 600;
   font-size: 0.76rem;
   line-height: 1.166;
@@ -237,16 +241,9 @@
 }
 
 .categories-catalog .categories-card {
-  // @media (max-width: 1024px) {
-  //   min-height: 265px;
-  // }
   @media (min-width: 602px) and (max-width: 768px) {
-    // min-height: 315px;
-    min-height: 41vw;
+    min-height: 41vw; //315
   }
-  // @media (max-width: 601px) {
-  //   min-height: 175px;
-  // }
 }
 
 
@@ -265,10 +262,19 @@
     padding-top: 120px;
   }
   @media (max-width: 601px) {
-    padding-top: 60px;
+    padding-top: 0;
   }
 }
 
 .page__categories .header--scrolled {
   box-shadow: none;
+}
+
+
+.js-categories-card-slideshow .categories-card__pic {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.js-categories-card-slideshow .categories-card__pic--visible {
+  opacity: 1;
 }

@@ -513,5 +513,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
     
   })
+
+  const categoriesSlideshow = [...document.querySelectorAll('.js-categories-card-slideshow')];
+  categoriesSlideshow.forEach(slideshow => {
+    const slides = [...slideshow.querySelectorAll('.categories-card__pic')];
+    let currentSlide = 0;
+    setInterval(() => {
+      slides.forEach(slide => {
+        slide.classList.remove('categories-card__pic--visible')
+      })
+      slides[currentSlide].classList.add('categories-card__pic--visible')
+      currentSlide++;
+
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+    }, 1000)
+  })
   
 });
