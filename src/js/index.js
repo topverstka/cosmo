@@ -168,6 +168,9 @@ productAdd.forEach((button) => {
 })
 
 
+/**
+ * В корзине добавляет класс убранного айтема 
+ */
 document.querySelectorAll('.cart-product').forEach(product => {
   const removeButton = product.querySelector('.cart-product__button-remove');
   const returnButton = product.querySelector('.cart-product__button-return');
@@ -362,15 +365,17 @@ function recalculateCartColumnsBottomGap() {
     let additionalHeight = cards.reduce((accum, card, index) => {
       return accum + card.getBoundingClientRect().height
     }, 0)
+    console.log(additionalHeight)
 
     let additionalHeightModifier = -20;
     if (window.innerWidth > 768 && window.innerWidth < 1025) {
       additionalHeightModifier = 30;
     } else if (window.innerWidth >  602 && window.innerWidth < 910)
     additionalHeight += additionalHeightModifier
-    console.log(additionalHeight)
 
-    cartColumns.style.paddingBottom = `${additionalHeight}px`;
+    if (cards.length > 1) {
+      cartColumns.style.paddingBottom = `${additionalHeight}px`;
+    }
   }
 }
 if (cartSidebar && cartColumns) {

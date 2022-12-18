@@ -7,10 +7,17 @@
   overflow-y: auto;
   padding-left: 8px;
   padding-right: 8px;
+  @media (max-width: 768px) {
+    padding-top: 100px
+  }
   @media (max-width: 601px) {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 112px;
+  }
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .poppa__overlay--search-pop .poppa__aligner {
@@ -148,7 +155,7 @@
     line-height: 1.2;
   }
   @media (max-width: 601px) {
-    padding-left: 0;
+    // padding-left: 0;
     margin-bottom: 17px;
   }
 }
@@ -164,7 +171,7 @@
   }
 }
 .search-pop__title + .search-pop__gallery {
-  margin-top: 40px;
+  margin-top: 2.5rem;//40px;
 }
 
 .search-pop__gallery .product-card {
@@ -173,6 +180,9 @@
   }
 }
 .search-pop__gallery .product-card__info {
+  @media (max-width: 768px) {
+    max-width: 500px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     min-height: 600px;
     min-width: 440px;
