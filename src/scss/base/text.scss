@@ -110,16 +110,13 @@
 }
 .captions-1-1__desc {
   font-family: "RF Dewi", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;//14px;
   font-weight: 400;
   line-height: 1.214;
   color: #a1aeb3;
   opacity: 0.6;
   max-width: 93%;
   break-inside: avoid;
-  @media (min-width: 1800px) {
-    font-size: 18.67px;
-  }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 28px;
     font-size: 24px;
@@ -139,7 +136,7 @@
   }
 }
 .captions-1-1__desc--big {
-  font-size: 20px;
+  font-size: 1.25rem;//20px;
   line-height: 120%;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 36px;

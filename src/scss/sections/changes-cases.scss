@@ -12,9 +12,9 @@
 }
 .changes-cases__gallery {
   display: grid;
-  gap: 8px;
+  gap: 0.5rem;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
   @media (min-width: 602px) and (max-width: 768px) {
@@ -24,8 +24,8 @@
 .changes-cases-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 8px;
-  row-gap: 8px;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -51,7 +51,7 @@
 }
 
 .changes-case-card-carousel__slide {
-  padding: 20px;
+  padding: 1.25rem;//20px;
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 40px;
   }
@@ -64,7 +64,7 @@
   font-size: 0.875rem;
   line-height: 1.2142;
   color: #A1AEB3;
-  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;//27px;
   text-align: center;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 28px;
@@ -80,7 +80,7 @@
 .changes-case-card-carousel__pic {
   margin-bottom: 26px;
   display: block;
-  height: 196px;
+  height: #{'calc(var(--index) * 16)'};//196px;
   @media (min-width: 602px) and (max-width: 768px) {
     height: 392px;
   }
@@ -108,7 +108,7 @@
 }
 
 .page__changes-cases .page-heading {
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;//22px;
   @media (max-width: 601px) {
     padding-left: 10px;
     padding-right: 10px;
