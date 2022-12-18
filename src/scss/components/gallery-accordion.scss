@@ -20,6 +20,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 1600px) {
+    max-width: 100%;   
+  }
 }
 
 .gallery-accordion__content {
@@ -27,7 +30,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 26px;
+  margin-bottom: 1.625rem;//26px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 52px;
   }
@@ -69,12 +72,4 @@
 .gallery-accordion__button-more--hidden {
   opacity: 0;
   pointer-events: none;
-}
-.person-result__media-pic {
-  display: block;
-  height: var(--gallery-item-h, 348px);
-}
-.person-result__media-img {
-  display: block;
-  height: var(--gallery-item-h, 348px);
 }
