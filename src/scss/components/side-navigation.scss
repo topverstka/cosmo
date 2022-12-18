@@ -72,8 +72,7 @@
 .side-navigation__item--current {
   color: var(--c-text-on);
   background: #5F6C75;
-  border-radius: 6px;
-  // margin-bottom: 11px;
+  border-radius: var(--brad-half);
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
   }
@@ -81,12 +80,11 @@
 .side-navigation__link {
   width: 100%;
   display: block;
-  padding-top: 7px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  // font-size: 12px;
-  font-size: 0.76rem;
+  padding-top: 0.4375rem;//7px;
+  padding-bottom: 0.3125rem;//5px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 0.76rem;//12px;
   transition: all 0.3s ease;
   @media (min-width: 1800px) {
     font-size: 0.85rem;
@@ -106,8 +104,8 @@
 }
 
 .side-navigation__item--current .side-navigation__link {
-  padding-top: 7px;
-  padding-bottom: 9px;
+  padding-top: 0.4375rem;//7px;
+  padding-bottom: 0.5625rem;//9px;
   @media (min-width: 692px) and (max-width: 768px) {
     padding-top: 14px;    
     padding-bottom: 18px;

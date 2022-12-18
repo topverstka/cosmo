@@ -38,6 +38,9 @@
     position: relative;
     padding-top: 60px;
   }
+  @media (min-width: 1800px) {
+    padding-top: 110px;
+  }
 }
 .account__pages .side-navigation__list {
   @media (min-width: 1021px) {
