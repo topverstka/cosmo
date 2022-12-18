@@ -6,7 +6,7 @@
   transition: all 0.3s ease;
 }
 .header__snacks--show {
-  padding-top: 80px;
+  padding-top: 5rem; //86
   overflow: visible;
   @media (max-width: 1020px) {
     padding-top: 137px;
@@ -22,17 +22,17 @@
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 20px;
-  padding-right: 18px;
-  padding-bottom: 20px;
-  padding-left: 28px;
+  padding-top: 1.25rem;//20px;
+  padding-right: 1.125rem;//18px;
+  padding-bottom: 1.25rem;//20px;
+  padding-left: 1.75rem;//28px;
   color: #fff;
   pointer-events: none;
   background: #5f6c75;
   opacity: 0;
   transition: all 0.3s ease;
   @media (max-width: 1020px) {
-    min-height: 87px;
+    min-height: 5rem; //86
     // padding-left: 15px;
     margin-bottom: 20px;
     padding-left: 25px;
@@ -54,18 +54,6 @@
   }
 }
 
-.header-snack .select__list--single::after {
-  top: 7px;
-  right: 10px;
-  width: 24px;
-  height: 24px;
-  @media (min-width: 602px) and (max-width: 768px) {
-    top: 14px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-  }
-}
 .header-snack--visible {
   pointer-events: initial;
   opacity: 1;
@@ -86,7 +74,7 @@
   width: 100%;
   max-width: 30.138vw;//434px
   margin-right: 1.5rem;
-  font-size: 0.75rem; //12
+  font-size: 0.76rem; //12
   font-weight: 500;
   line-height: 1.16;
   @media (max-width: 1020px) {
@@ -130,7 +118,7 @@
 }
 
 .header-snack__close {
-  --size: 40px;
+  --size: 2.5rem;//40px;
   position: relative;
   width: var(--size);
   height: var(--size);
@@ -170,7 +158,7 @@
 }
 
 .header-snack__select {
-  max-width: 350px;
+  max-width: 24.305vw;//350px;
   --bg: transparent;
   border-radius: var(--brad);
   border: 1px solid #9FA7AC;

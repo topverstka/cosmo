@@ -195,8 +195,8 @@
 }
 
 .poppa__closer {
-  top: 12px;
-  right: 11px;
+  top: 0.75rem;//12px;
+  right: 1.5rem;//11px;
   @media (max-width: 601px) {
     top: 22px;
     width: 50px;

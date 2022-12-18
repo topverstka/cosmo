@@ -65,7 +65,8 @@ $error: var(--c-error);
   --radius-poppa: 10px;
   --overlay-poppa: rgba(0, 0, 0, 0.8);
 
-  --brad-regular: 0.75rem;
+  --brad-regular: 0.76rem;
+  --brad-half: #{'calc(var(--brad-regular) / 2)'};
 
   --c-border: #cecece;
   --radius-s: 4px;
@@ -97,17 +98,8 @@ $error: var(--c-error);
   }
 
 
-  --fz-menu-items: 12px;
+  --fz-menu-items: 0.75rem; //12
   --lh-menu-items: 1.16;
-  @media (min-width: 1800px) {
-    --fz-menu-items: 16px;
-  }
-  @media (max-width: 1280px) {
-    --fz-menu-items: 10.67px;
-  }
-  @media (max-width: 1024px) {
-    --fz-menu-items: 8.53px;
-  }
   @media (min-width: 602px) and (max-width: 768px) {
     --fz-menu-items: 24px;
   }

@@ -3,7 +3,7 @@
   align-items: center;
 }
 .socials__item {
-  margin-right: 20px;
+  margin-right: 1.25rem;//20px;
   @media (max-width: 575px) {
     margin-right: 9px;
   }
@@ -23,7 +23,7 @@
   max-height: var(--size);
   fill: var(--icon-color);
   transition: var(--tr);
-  font-size: var(--fz, 20px);
+  font-size: var(--fz, 1.25rem);//20
   line-height: 1.2;
   @media (max-width: 601px) {
     font-size: var(--fz, 14px);
@@ -48,11 +48,11 @@
 }
 
 .socials--icons .socials__link {
-  --size: 36px;
+  --size: 2.25rem;//36px;
   background-color: #fff;
   border-radius: 100%;
-  padding: 5px;
-  margin-right: 8px;
+  padding: 0.3125rem;//5px;
+  margin-right: 0.5rem;//8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,19 +63,19 @@
   }
 }
 .socials__icon--google {
-  height: 16px;
+  height: 1rem;
   @media (min-width: 602px) and (max-width: 768px) {
     height: 32px;
   }
 }
 .socials__icon--vk {
-  height: 12px;
+  height: 0.76rem;
   @media (min-width: 602px) and (max-width: 768px) {
     height: 24px;
   }
 }
 .socials__icon--yandex {
-  height: 16px;
+  height: 1rem;
   @media (min-width: 602px) and (max-width: 768px) {
     height: 32px;
   }

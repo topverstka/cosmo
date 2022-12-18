@@ -18,6 +18,7 @@
   @media (min-width: 602px) and (max-width: 768px) {
     row-gap: 16px;
     column-gap: 16px;
+    margin-bottom: 16px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -36,8 +37,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 24px 20px;
-  border-radius: 12px;
+  padding: 1.5rem 1.25rem;//24px 20px;
+  border-radius: var(--brad-regular);
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 40px;
     padding-right: 34px;
@@ -91,13 +92,14 @@
   }
 }
 .magazine-card__desc {
-  max-width: 508px;
+  max-width: 35.27777777777778vw;//508px;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 28px;
+    max-width: 100%;
   }
   @media (max-width: 768px) {
     line-height: 1.25;
@@ -173,10 +175,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 630px;
+  height: #{'calc(var(--index) * 44)'};//630px;
   padding-bottom: 80px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   @media (max-width: 1024px) and (min-width: 768px) {
     height: 480px;
   }
@@ -192,7 +194,7 @@
     padding-bottom: 44px;
   }
   @media (min-width: 1800px) {
-    height: 740px;
+    // height: 740px;
   }
 }
 .magazine-card-fullsize::before {
@@ -243,9 +245,6 @@
   @media (min-width: 1850px) {
     top: -4%;
     height: 110%;
-  }
-  @media (min-width: 1930px) {
-    height: 145%;
   }
 }
 .magazine-card-fullsize__img {

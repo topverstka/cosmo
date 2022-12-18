@@ -36,9 +36,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  @media (min-width: 1800px) {
-    min-height: 408px;
-  }
   @media (max-width: 1300px) {
     min-height: 258px;
   }
@@ -199,7 +196,7 @@
   padding-right: 20px;
   padding-bottom: 13px;
   padding-left: 30px;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 600;
   line-height: 1.16;
   white-space: nowrap;
@@ -301,10 +298,15 @@
   object-fit: cover;
 }
 .product-card--tall .product-card__options {
-  max-width: 235px;
+  max-width: 100%;
+  --chips-bg: #fff;
   @media (max-width: 768px) {
     max-width: 100%;
   }
+}
+.product-card:not(.product-card--tall) .chips__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 

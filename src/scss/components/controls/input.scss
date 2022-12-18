@@ -1,10 +1,10 @@
 .input {
   --border-color: transparent;
-  --border-radius: 6px;
+  --border-radius: var(--brad-half);
   --text-color: var(--c-text-regular);
-  --fz: 0.75rem;
+  --fz: 0.76rem;
   --lh: 1;
-  --padding: 12px 20px 16px 20px;
+  --padding: 1em 1.66em 1.33em;//12px 20px 16px 20px;
   --label-color: var(--bg-element);
   --message-color: var(--c-text);
   --message-transform: scale(1, 0);
@@ -14,7 +14,7 @@
   display: block;
   width: 100%;
   font-family: var(--ff-regular);
-  margin-bottom: 8px;
+  margin-bottom: 0.66em;//8px;
   @media (min-width: 602px) and (max-width: 768px) {
     --fz: 24px;
     --padding: 24px 40px 32px 20px;
@@ -28,12 +28,6 @@
 }
 .input:last-of-type {
   margin-bottom: 0;
-}
-.input--active {
-  // --border-color: var(--c-text-grey-2);
-  --label-top: -9px;
-  --lebel-left: 12px;
-  --label-fz: calc(var(--label-fz) - 5);
 }
 .input--invalid {
   --label-color: var(--c-error);
@@ -57,8 +51,8 @@
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
-  padding-top: 11px;
-  padding-bottom: 16px;
+  // padding-top: ;//11px;
+  // padding-bottom: 16px;
 }
 .input__field::placeholder {
   color: rgba(0, 0, 0, 0.19);
@@ -81,11 +75,11 @@
 }
 .input__error-icon {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;//20px;
+  height: 1.25rem;//20px;
   position: absolute;
-  top: 11px;
-  right: 11px;
+  top: 0.6875rem;//11px;
+  right: 0.6875rem;
   z-index: 2;
   transform: var(--error-icon-transform);
   transition: all 0.45s ease;
@@ -97,20 +91,6 @@
   }
 }
 
-.input__label {
-  position: absolute;
-  top: var(--label-top);
-  left: var(--label-left);
-  z-index: 3;
-  display: inline-block;
-  padding-right: 4px;
-  padding-left: 4px;
-  color: var(--label-color);
-  pointer-events: none;
-  background-color: var(--bg-element);
-  transition: all 0.3s ease;
-}
-
 .input__message {
   z-index: 1;
   min-height: 1.2em;
@@ -119,12 +99,12 @@
   transform: var(--message-transform);
   transform-origin: top;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75rem;//12px;
+  line-height: 1.1666666666666667;//14px;
   color: #FFFFFF;
   background: #A1AEB3;
-  border-radius: 6px;
-  padding: 5px 10px 8px;
+  border-radius: var(--brad-regular);
+  padding: 0.4166666666666667em 0.8333333333333334em 0.6666666666666666em;//5px 10px 8px;
   display: inline-block;
 }
 

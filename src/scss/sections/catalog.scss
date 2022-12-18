@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: 318px auto;
+  grid-template-columns: 22.083333333333332vw auto;//318px auto;
   column-gap: 40px;
   @media (max-width: 1279px) {
     grid-template-columns: 226px auto;
@@ -113,8 +113,10 @@
     row-gap: 5px;
   }
   @media (max-width: 768px) and (min-width: 602px) {
-    grid-template-columns: 1fr;
     row-gap: 16px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 }
 .catalog-products__gallery:last-of-type {

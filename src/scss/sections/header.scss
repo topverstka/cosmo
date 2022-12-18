@@ -203,9 +203,9 @@
 
 .header__nav-link {
   display: block;
-  padding-right: 28px;
-  margin-top: 34px;
-  margin-bottom: 36px;
+  padding-right: 1.75rem;//28px;
+  margin-top: 2.125rem;//34px;
+  margin-bottom: 2.25rem;//36px;
   @media (max-width: 1200px) {
     margin-right: 10px;
     padding-right: 18px;
@@ -242,12 +242,11 @@
   }
 }
 .header__button {
-  --size: 36px;
+  --size: 2.25rem;//36px;
   width: var(--size);
   min-width: var(--size);
   height: var(--size);
   padding: 0;
-  --button-icon-size: 12px;
   @media (min-width: 602px) and (max-width: 768px) {
     --size: 72px;
     --button-icon-size: 24px;
@@ -292,8 +291,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-right: 28px;
-  font-size: var(--fz-menu-items);
+  margin-right: 1.75rem;//28px;
+  font-size: var(--fz-menu-items); //12
   font-weight: 700;
   line-height: var(--lh-menu-items);
   @media (max-width: 1280px) {
@@ -311,9 +310,9 @@
   margin-right: 0;
 }
 .header__picker-icon {
-  max-width: 14px;
-  height: 15px;
-  margin-right: 4px;
+  max-width: 1.1666666666666667em;//14px;
+  height: 1.25em;//15px;
+  margin-right: 0.3333333333333333em;//4px;
   @media (min-width: 602px) and (max-width: 768px) {
     max-width: 24px;
     height: 32px;
@@ -330,7 +329,7 @@
   z-index: -1;
   width: 100%;
   min-height: 480px;
-  padding-top: 84px;
+  padding-top: 5.25rem;//84px;
   text-transform: initial;
   pointer-events: none;
   background: #fff;
@@ -354,16 +353,16 @@
 
 .header__nav-item-dropdown-content {
   height: 100%;
-  padding-top: 32px;
+  padding-top: 2rem;//32px;
   padding-right: 127px;
-  padding-bottom: 60px;
+  padding-bottom: 3.75rem;//60px;
   padding-left: 127px;
   border-top: 1px solid rgba(108, 121, 130, 0.3);
   display: grid;
   grid-template-areas:
       "title button"
       "cards cards";
-  row-gap: 24px;
+  row-gap: 1.5rem;//24px;
   justify-content: space-between;
   @media (max-width: 1200px) {
     padding-right: 30px;
@@ -465,9 +464,9 @@
 .header__nav-catalog {
   --nav-item-color: #000;
   --nav-title-color: #a1aeb3;
-  --title-bottom: 16px;
-  --item-bottom: 16px;
-  --item-fz: 14px;
+  --title-bottom: 1rem; //16
+  --item-bottom: 1rem;//16
+  --item-fz: 0.875rem;//14px;
   justify-content: space-between;
   @media (max-width: $burgerwidth) {
     display: block;
@@ -540,10 +539,10 @@
   }
 }
 .header__nav-item-dropdown-card .blog-card__info {
-  padding: 20px;
+  padding: 1.25rem;//20px;
 }
 .header__nav-item-dropdown-card .blog-card__desc {
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   // font-size: 12px;
 }
 .header__nav-item-dropdown-card .blog-card__pic {
@@ -555,7 +554,7 @@
   padding: 0.66em 1.33em  0.83em;
   margin-bottom: 0;
   // font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
 }
 
 .header__nav-item-dropdown-card--single.blog-card {
@@ -659,12 +658,12 @@
   }
 }
 .header__button-back {
-  padding: 0 10px;
+  padding: 0 0.625rem;//0 10px;
   transition: all 0.3s ease;
 }
 .header__button-back-icon {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;//40px;
+  height: 2.5rem;//40px;
   fill: #000;
   transition: all 0.3s ease;
   @media (min-width: 602px) and (max-width: 768px) {

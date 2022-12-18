@@ -4,12 +4,12 @@
   transform: scaleY(0);
   transition: all 0.3s ease, pointer-events 0s;
   position: absolute;
-  width: 310px;
+  width: 21.52777777777778vw;//310px;
   right: 0;
-  top: 40px;
+  top: 2.5rem;//40px;
   background: #5F6C75;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: var(--brad-regular);
+  padding: 1.25rem;//20px;
   // max-height: 557px;
   color: #fff;
   @media (min-width: 602px) and (max-width: 768px) {
@@ -26,14 +26,14 @@
 }
 
 .auth__form {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 32px;
   }
 }
 
 .auth__methods {
-  margin-bottom: 23px;
+  margin-bottom: 1.4375rem;//23px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,9 +49,9 @@
 }
 
 .auth__button-submit {
-  border-radius: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
+  border-radius: var(--brad-half);
+  padding-left: 0.625rem;//10px;
+  padding-right: 0.625rem;//10px;
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
   }
@@ -77,15 +77,15 @@
   transform: var(--message-transform);
   transform-origin: top;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.76rem;//12px;
   line-height: 1.166;
   color: #FFFFFF;
   background: #A1AEB3;
-  border-radius: 6px;
-  padding: 5px 10px 8px;
+  border-radius: var(--brad-half);
+  padding: 0.3125rem 0.625rem 0.47rem;//5px 10px 8px;
   display: inline-block;
-  margin-bottom: 16px;
-  margin-top: 8px; 
+  margin-bottom: 1rem;
+  margin-top: 0.5rem; 
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
     margin-top: 16px;
@@ -101,9 +101,9 @@
 
 .auth__name {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;//20px;
   line-height: 120%;
-  margin-bottom: 34px;
+  margin-bottom: 2.125rem;//34px;
   display: block;
   @media (max-width: 1280px) and (min-width: 769px) {
     font-size: 16px;
@@ -115,12 +115,12 @@
   }
 }
 .auth__list-links {
-  font-size: 14px;
+  font-size: 0.875rem;//14px;
   font-weight: 400;
   line-height: 140%;
 }
 .auth__list-item {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   @media (min-width: 769px) and (max-width: 1280px) {
     margin-bottom: 10px;   
     font-size: 10px;
@@ -133,7 +133,7 @@
 .auth__logout {
   padding-left: 0;
   padding-right: 0;
-  font-size: 14px;
+  font-size: 0.875rem;//14px;
   font-weight: 400;
   @media (min-width: 769px) and (max-width: 1280px) {
     font-size: 10px;
@@ -145,9 +145,9 @@
 .auth__logout .button__icon {
   background-color: #fff;
   @include getmask("../img/common/logout.svg");
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
+  width: 1rem;
+  height: 1rem;
+  min-width: 1rem;
   margin-bottom: -1px;
   @media (min-width: 769px) and (max-width: 1024px) {
     padding-bottom: 0;

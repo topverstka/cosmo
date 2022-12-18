@@ -13,7 +13,7 @@
   padding: 0.625em 0.66em;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   line-height: 1.2;
   text-align: center;
   color: #000000;
@@ -44,7 +44,7 @@
   padding: 0.625em 0.66em;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   line-height: 1.16;
   text-align: center;
   color: #000000;
@@ -68,7 +68,7 @@
   display: none;
 }
 .nav-prev {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   @media (max-width: 768px) {
     margin-top: 16px;
     order: 100;
@@ -81,9 +81,9 @@
 .nav-prev::before {
   content: "";
   display: block;
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+  width: 1rem;//16px;
+  height: 1rem;
+  margin-right: 0.5rem;//8px;
   @include getmask("../img/common/arrow-circle.svg");
   background-color: #000;
   margin-bottom: -2px;
@@ -102,7 +102,7 @@
   }
 }
 .nav-next {
-  margin-left: 20px;
+  margin-left: 1.25rem;//20px;
   @media (max-width: 768px) {
     margin-top: 16px;
     order: 101;
@@ -114,9 +114,9 @@
 .nav-next::after {
   content: "";
   display: block;
-  width: 16px;
-  height: 16px;
-  margin-left: 8px;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
   @include getmask("../img/common/arrow-circle.svg");
   background-color: #000;
   margin-bottom: -2px;

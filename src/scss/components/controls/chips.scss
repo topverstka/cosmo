@@ -75,6 +75,9 @@
   --chips-border: 1px solid var(--chips-active-bg);
   --chips-active-bg:  #a1aeb2;
   // --border-color: #a1aeb2;
+  --chips-fz: 0.76rem; //12
+  --chips-padding: 1.08em 1.66em 1.25em;
+
 }
 .chips__content {
   display: flex;
@@ -91,13 +94,14 @@
   padding: var(--chips-padding);
   background: var(--chips-bg);
   color: var(--chips-color);
-  border-radius: 6px;
+  border-radius: 0.375rem;
   transition: var(--tr);
   font-size: var(--chips-fz);
   line-height: var(--chips-lh);
   font-weight: var(--chips-fw);
   border: var(--chips-border);
   display: block;
+  text-align: center;
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
   }

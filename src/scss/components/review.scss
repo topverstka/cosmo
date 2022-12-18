@@ -3,7 +3,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   background: #f0f3f5;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
   }
@@ -13,7 +13,7 @@
   width: var(--size);
   min-width: var(--size);
   height: var(--size);
-  --size: 140px;
+  --size: 9.722222222222223vw;//140px;
   @media (min-width: 602px) and (max-width: 768px) {
     --size: 180px;
     height: 188px;
@@ -24,7 +24,7 @@
   }
 }
 .review-card__img {
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   object-fit: cover;
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
@@ -32,7 +32,7 @@
 }
 
 .review-card__info {
-  padding: 20px;
+  padding: 1.25rem; //20px
   @media (min-width: 602px) and (max-width: 768px) {
    padding-top: 16px; 
    padding-left: 26px;
@@ -51,13 +51,13 @@
   display: block;
   width: fit-content;
   padding: 0px 0.57em 0.28em;
-  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;//7px;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 140%;
   color: #000000;
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   transition: all 0.3s ease;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 20px;

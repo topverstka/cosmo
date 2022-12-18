@@ -17,7 +17,7 @@
   --angle-color: #fff;
   --brad: 62px;
   --maxw: initial;
-  --fz: 14px;
+  --fz: 0.875rem;
   @media (min-width: 769px) and (max-width: 1280px) {
   }
   @media (min-width: 602px) and (max-width: 768px) {
@@ -42,11 +42,11 @@
 .select .choices__inner {
   max-width: var(--maxw);
   display: flex;
-  min-width: 41px;
-  min-height: 39px;
-  @media (min-width: 1800px) {
-    min-height: 49px;
-  }
+  min-width: 2.5625rem;//41px;
+  min-height: 2.4375rem;//39px;
+  // @media (min-width: 1800px) {
+  //   min-height: 49px;
+  // }
   @media (min-width: 602px) and (max-width: 768px) {
     min-height: 79px;
   }
@@ -58,26 +58,22 @@
 .select__list--dropdown {
   position: absolute;
   z-index: 3;
-  top: 48px;
+  top: 3.0rem;//48px;
   left: 0;
   width: 100%;
-  padding: 0 20px;
-  border-radius: 12px;
+  padding: 0 1.25rem;//0 20px;
+  border-radius: var(--brad-regular);
   overflow: hidden;
   background: #ffffff;
-  border-radius: 14px;
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
   opacity: 0;
   transition: all 0.3s ease;
   transform: scaleY(0);
   transform-origin: top;
-  padding-right: 26px;
-  @media (min-width: 1800px) {
-   top: 58px; 
-  }
+  padding-right: 1.625rem;//26px;
 }
 .select--has-search .select__list--dropdown {
-  padding-top: 20px;
+  padding-top: 1.25rem;//20px;
 }
 .select.is-open .select__list--dropdown {
   opacity: 1;
@@ -91,11 +87,11 @@
 }
 .select--has-search .select__list--dropdown::before {
   position: absolute;
-  top: 32px;
-  right: 36px;
+  top: 2.0rem;//32px;
+  right: 2.25rem;//36px;
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;//22px;
+  height: 1.375rem;//22px;
   pointer-events: none;
   content: "";
   background-color: #000;
@@ -132,10 +128,10 @@
 .select__list--dropdown .select__list {
   position: relative;
   // width: calc(100% + 40px);
-  width: calc(100% + 46px);
+  width: calc(100% + 2.875rem);//calc(100% + 46px);
   max-height: 482px;
-  padding-bottom: 10px;
-  margin-left: -20px;
+  padding-bottom: 0.625rem;//10px;
+  margin-left: -1.25rem;//-20px;
   overflow-x: hidden;
   overflow-y: auto;
   @include macscrollbar(12px);
@@ -159,7 +155,7 @@
   );
 }
 .select__item {
-  padding: 8px 20px 12px 20px;
+  padding: 0.5rem 1.25rem 0.76rem;//8px 20px 12px 20px;
   font-size: var(--fz);
   font-weight: 400;
   line-height: 140%;
@@ -175,18 +171,18 @@
 }
 .select__list--single > .select__item {
   width: 100%;
-  padding: 10px 47px 11px 17px;
+  padding: 0.625rem 2.9375rem 0.6875rem 1.0625rem;//10px 47px 11px 17px;
   margin-left: unset;
   color: var(--value-color);
   background: var(--bg);
   border-radius: var(--brad);
   font-size: inherit;
   // opacity: 0.4;
+  font-size: var(--fz);
   @media (min-width: 769px) and (max-width: 1280px) {
     padding: 8px 47px 10px 17px;
   }
   @media (min-width: 602px) and (max-width: 768px) {
-    font-size: var(--fz);
     padding-right: 60px;
     padding-top: 20px;
     padding-bottom: 22px;
@@ -209,21 +205,17 @@
 .select__list--multiple::after,
 .select__list--single::after {
   position: absolute;
-  top: 10px;
-  right: 8px;
+  top: 0.625rem;//10px;
+  right: 0.5rem;//8px;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;//20px;
+  height: 1.25rem;//20px;
   pointer-events: none;
   content: "";
   background-color: var(--angle-color);
   transition: all 0.3s ease;
   transform: rotate(180deg);
   @include getmask("../img/common/arrow-circle.svg");
-  @media (min-width: 1800px) {
-    top: 14px;
-    right: 10px;
-  }
   @media (min-width: 602px) and (max-width: 768px) {
     width: 40px;
     height: 40px;
@@ -248,29 +240,25 @@
   opacity: 0;
   padding-left: 0;
   padding-right: 0;
-  max-width: 41px;
+  max-width: 2.5625rem;//41px;
 }
 .is-multiple .choices__inner {
-  max-width: 50px;
+  max-width: 3.125rem;//50px;
 }
 .select__button-reset {
   position: absolute;
   z-index: 10;
-  top: 10px;
-  right: 8px;
+  top: 0.625rem;//10px;
+  right: 0.5rem;//8px;
   display: none;
   pointer-events: none;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem; //20
+  height: 1.25rem;//20px;
   content: "";
   transition: all 0.3s ease;
   transform: rotate(180deg);
   background-color: #fff;
   @include getmask("../img/common/clear.svg");
-  @media (min-width: 1800px) {
-    top: 14px;
-    right: 10px;
-  }
   @media (min-width: 602px) and (max-width: 768px) {
     width: 40px;
     height: 40px;
@@ -300,13 +288,13 @@
 }
 .select__list .select__input[type="search"] {
   width: 100%;
-  padding: 14px 20px 16px;
-  font-size: 12px;
+  padding: 0.875rem 1.25rem 1rem;//14px 20px 16px;
+  font-size: 0.76rem;//12px;
   font-weight: 600;
   line-height: 1.16;
   color: #a1aeb3;
   background: #f0f3f5;
-  border-radius: 6px;
+  border-radius: #{'calc(var(--brad-regular) / 2)'};//6px
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
     padding: 24px 40px 32px;
@@ -325,7 +313,7 @@
   --bg: var(--c-accent);
   --value-color: var(--c-text-on);
   --angle-color: #fff;
-  --brad: 6px;
+  --brad: #{'calc(var(--brad-regular) / 2)'};//6px
   margin-right: 0;
   margin-bottom: 20px;
   @media (min-width: 602px) and (max-width: 768px) {

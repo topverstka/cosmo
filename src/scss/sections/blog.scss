@@ -4,7 +4,7 @@
 .blog__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  gap: 0.5rem;//8px;
   padding-top: 8px;
   margin-bottom: 40px;
   @media (max-width: 1023px) {
@@ -96,7 +96,7 @@
   }
 }
 .blog-card__title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.76rem;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 120%;
@@ -146,8 +146,8 @@
 }
 
 .blog-card__button {
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 1.2857142857142858em;//18px;
+  padding-right: 1.2857142857142858em;//18px;
   @media (max-width: 1400px) and (min-width: 1281px) {
     font-size: 14px
   }
@@ -172,9 +172,9 @@
 .blog-card__media {
   display: flex;
   align-items: stretch;
-  padding-top: 0.75rem; //12 ↓
-  padding-right: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.76rem; //12 ↓
+  padding-right: 0.76rem;
+  padding-bottom: 0.76rem;
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 24px;
   }

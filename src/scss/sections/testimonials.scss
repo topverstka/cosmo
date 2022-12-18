@@ -13,8 +13,8 @@
 .testimonials__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 8px;
-  column-gap: 8px;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
   margin-bottom: 42px;
   @media (max-width: 810px) {
     grid-template-columns: 1fr;
@@ -27,9 +27,9 @@
   }
 }
 .testimonials-card {
-  padding: 20px;
+  padding: 1.25rem;//20px;
   background-color: var(--bg-element);
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 16px;
     padding-bottom: 36px;
@@ -42,7 +42,7 @@
 }
 
 .testimonials-card__review {
-  margin-bottom: 35px;
+  margin-bottom: 2.1875rem;//35px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 56px;   
   }
@@ -51,7 +51,7 @@
   }
 }
 .testimonials-card__bundle {
-  height: 160px;
+  height: 10.0rem;//160px;
   margin-bottom: 48px;
   @media (min-width: 602px) and (max-width: 768px) {
     padding-left: 24px;
@@ -67,6 +67,9 @@
     height: 140px 
   }
 }
+.testimonials-card__img {
+  display: block;
+}
 
 .testimonials-card__buttons {
   @media (min-width: 602px) and (max-width: 768px) {
@@ -77,8 +80,6 @@
   }
 }
 .testimonials-card__add-to-cart {
-  padding-left: 17px;
-  padding-right: 17px;
   margin-right: 8px;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;

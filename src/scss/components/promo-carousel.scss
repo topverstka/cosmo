@@ -7,7 +7,8 @@
     min-height: initial;
   }
   @media (min-width: 1800px) {
-    --max-height: 846px;
+    // --max-height: 846px;
+    --max-height: 80vh;
   }
   @media (max-width: 1400px) {
     min-height: 480px;
@@ -16,9 +17,9 @@
     min-height: 480px;
     --max-height: 604px;
   }
-  @media (min-width: 769px) {
-    height: 100%;
-  }
+  // @media (min-width: 769px) {
+  //   height: 100%;
+  // }
   @media (max-width: 1024px) {
     min-height: initial;
     --max-height: 483px;
@@ -60,7 +61,7 @@
 .promo-carousel__slide {
   display: grid;
   grid-template-columns: 75.421348314606741573033707865169% auto;
-  border-radius: 12px 0px 0px 12px;
+  border-radius: var(--brad-regular) 0px 0px var(--brad-regular);
   @media (max-width: 1130px) {
     grid-template-columns: 70.421348314606741573033707865169% auto;
   }
@@ -74,7 +75,7 @@
   align-items: flex-end;
 }
 .promo-carousel__pic {
-  --img-brad: 12px 0px 0px 12px;
+  --img-brad: var(--brad-regular) 0px 0px var(--brad-regular);//12 0 0 12
   position: static;
   top: 0;
   left: 0;
@@ -96,7 +97,7 @@
   object-fit: cover;
 }
 .promo-carousel__info {
-  --info-brad: 0px 12px 12px 0px;
+  --info-brad: 0 var(--brad-regular) var(--brad-regular) 0;// 0 12 12 0
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -126,7 +127,7 @@
 .promo-carousel__category {
   margin-bottom: 2rem;
   font-family: "RF Dewi", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 400;
   line-height: 1.166;
   color: #a1aeb3;
@@ -238,16 +239,13 @@
   left: 8px;
   bottom: 8px;
   z-index: 2;
-  max-width: 232px;
-  padding: 20px;
-  padding-top: 24px;
-  padding-right: 15px;
+  max-width: 16.11111111111111vw;//232px;
+  padding: 1.25rem;//20px;
+  padding-top: 1.5rem;//24px;
+  padding-right: 0.9375rem;//15px;
+  padding-bottom: 1.75rem;//28px;
   background-color: #5f6c75;
-  border-radius: 6px;
-  padding-bottom: 28px;
-  @media (min-width: 1800px) {
-    max-width: 322px;
-  }
+  border-radius: var(--brad-half);
   @media (max-width: $mobile-break) {
     padding: 16.75px;
     display: grid;
@@ -258,7 +256,7 @@
     width: 100%;
     position: static;
     margin-top: 8px;
-    border-radius:  12px;
+    border-radius:  var(--brad-regular);
     padding-bottom: 22px;
   }
   @media (min-width: 602px) and (max-width: 768px) {
