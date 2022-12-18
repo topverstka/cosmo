@@ -2366,6 +2366,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   --fz-button: 0.875rem;
   --lh-button: 1.21;
   --fw-button: 600;
+  --w-container: 1186px;
   --fz-menu-items: 0.75rem;
   --lh-menu-items: 1.16;
 }
@@ -2383,6 +2384,26 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   :root {
     --fz-button: 12px;
     --lh-button: 126%;
+  }
+}
+@media (min-width: 1800px) {
+  :root {
+    --w-container: 1580px;
+  }
+}
+@media (min-width: 2000px) {
+  :root {
+    --w-container: 2090px;
+  }
+}
+@media (max-width: 1280px) {
+  :root {
+    --w-container: calc(100% - 16px);
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --w-container: 100%;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -2880,7 +2901,7 @@ input[type=search]::-webkit-search-cancel-button {
   margin-bottom: var(--item-bottom);
   font-size: var(--item-fz);
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.1875;
   color: var(--nav-item-color);
 }
 @media (max-width: 576px) {
@@ -2926,8 +2947,8 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .nav__list--contacts .nav__item {
-  margin-bottom: 21px;
-  font-size: 20px;
+  margin-bottom: 1.05em;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 120%;
 }
@@ -5341,12 +5362,12 @@ span.flatpickr-weekday {
 
 .link::before {
   display: block;
-  width: 16px;
-  height: 18px;
+  width: 1rem;
+  height: 1.125rem;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   background-color: var(--c-accent);
 }
 @media (min-width: 602px) and (max-width: 678px) {
@@ -5412,10 +5433,10 @@ span.flatpickr-weekday {
 </article>
  */
 .sidebar-card {
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   background-color: #5F6C75;
-  padding: 40px;
-  margin-bottom: 8px;
+  padding: 2.5rem;
+  margin-bottom: 0.5rem;
   color: #fff;
 }
 @media (max-width: 768px) {
@@ -5429,12 +5450,12 @@ span.flatpickr-weekday {
 }
 
 .sidebar-card__desc {
-  margin-bottom: 27px;
+  margin-bottom: 1.9285714286em;
   font-family: "RF Dewi", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.875rem;
+  line-height: 1.2142857143;
   color: #A1AEB3;
 }
 
@@ -5444,11 +5465,11 @@ span.flatpickr-weekday {
 
 .sidebar-card__link {
   --link-color: #fff;
-  margin-bottom: 11px;
+  margin-bottom: 0.6875rem;
 }
 
 .sidebar-card__link:first-of-type {
-  margin-top: 27px;
+  margin-top: 1.6875rem;
 }
 @media (max-width: 768px) {
   .sidebar-card__link:first-of-type {
@@ -10044,13 +10065,17 @@ span.flatpickr-weekday {
 
 .page-heading--sticky {
   position: sticky;
-  z-index: 5;
+  z-index: 12;
   transition: all 0.3s ease;
 }
 
 .page-heading--sticky-run {
   background: #FFFFFF;
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
+}
+
+.page-heading--sticky-run .page-heading__nav-list {
+  transform: translateY(-5px);
 }
 
 .breadcrumbs ~ .page-heading {
@@ -12370,7 +12395,7 @@ span.flatpickr-weekday {
  * @blog-sidebar
  */
 .blog-sidebar {
-  --sidebar-minh: 452px;
+  --sidebar-minh: calc(var(--index) * 32);
 }
 @media (max-width: 601px) {
   .blog-sidebar {
@@ -12379,10 +12404,11 @@ span.flatpickr-weekday {
 }
 
 .blog-sidebar-about {
+  pointer-events: initial;
   background-color: #5F6C75;
-  margin-bottom: 40px;
-  border-radius: 12px;
-  padding: 40px;
+  margin-bottom: 2.5rem;
+  border-radius: var(--brad-regular);
+  padding: 2.5rem;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -12416,10 +12442,10 @@ span.flatpickr-weekday {
   font-family: "RF Dewi", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.875rem;
+  line-height: 1.2142857143;
   color: #A1AEB3;
-  margin-bottom: 28px;
+  margin-bottom: 2rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .blog-sidebar-about__title {
@@ -12612,18 +12638,13 @@ span.flatpickr-weekday {
   column-gap: 127px;
   justify-content: center;
   margin-bottom: 50px;
+  max-width: var(--w-container);
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 1800px) {
   .locations__gallery {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1580px;
     grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 2000px) {
-  .locations__gallery {
-    max-width: 2090px;
   }
 }
 @media (max-width: 1300px) {
@@ -13493,7 +13514,7 @@ span.flatpickr-weekday {
 .callback-cards__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 8px;
+  column-gap: 0.5rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .callback-cards__gallery {
@@ -13508,7 +13529,7 @@ span.flatpickr-weekday {
 }
 
 .callback-cards-card {
-  --brad: 12px;
+  --brad: var(--brad-regular);
   background-color: var(--bg-element);
   border-radius: var(--brad);
   padding: 40px;
@@ -13517,6 +13538,11 @@ span.flatpickr-weekday {
   justify-content: space-between;
   align-items: flex-start;
   min-height: 380px;
+}
+@media (min-width: 1800px) {
+  .callback-cards-card {
+    min-height: calc(var(--index) * 21.4);
+  }
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .callback-cards-card {
@@ -13536,7 +13562,7 @@ span.flatpickr-weekday {
   font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
-  margin-bottom: 25px;
+  margin-bottom: 0.9259259259em;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .callback-cards-card__title {
@@ -13581,12 +13607,7 @@ span.flatpickr-weekday {
 }
 
 .callback-cards-card__button {
-  padding: 11px 18px 14px 18px;
-}
-@media (min-width: 1800px) {
-  .callback-cards-card__button {
-    padding: 14px 22px 18px 22px;
-  }
+  padding: 0.7857142857em 1.2857142857em 1em;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .callback-cards-card__button {
@@ -15109,10 +15130,10 @@ span.flatpickr-weekday {
 
 .services-location {
   background-color: var(--bg-element);
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   padding-top: 81px;
   padding-bottom: 84px;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 768px) {
   .services-location {
@@ -15134,17 +15155,22 @@ span.flatpickr-weekday {
 }
 @media (max-width: 768px) {
   .services-location ~ .services-location {
+    padding-top: 64px;
+  }
+}
+@media (max-width: 601px) {
+  .services-location ~ .services-location {
     padding-top: 34px;
   }
 }
 
 .services-location__container {
-  max-width: 1186px;
+  max-width: var(--w-container);
   margin-left: auto;
   margin-right: auto;
   display: grid;
   grid-template-areas: "info info" "gallery services";
-  grid-template-columns: auto 589px;
+  grid-template-columns: auto 40.9027777778vw;
   column-gap: 127px;
   row-gap: 94px;
 }
@@ -15203,7 +15229,7 @@ span.flatpickr-weekday {
   font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
-  margin-bottom: 21px;
+  margin-bottom: 0.7777777778em;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location__name {
@@ -15231,7 +15257,7 @@ span.flatpickr-weekday {
 }
 
 .services-location__contacts-item {
-  margin-right: 12px;
+  margin-right: 0.76rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -15258,12 +15284,12 @@ span.flatpickr-weekday {
 .services-location__contacts-item::before {
   content: "";
   display: block;
-  width: 14px;
-  height: 18px;
+  width: 0.875rem;
+  height: 1.125rem;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location__contacts-item::before {
@@ -15324,8 +15350,8 @@ span.flatpickr-weekday {
 
 .services-location__media {
   display: block;
-  height: 316px;
-  margin-bottom: 12px;
+  height: calc(var(--index) * 22);
+  margin-bottom: 0.76rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location__media {
@@ -15348,7 +15374,7 @@ span.flatpickr-weekday {
 
 .services-location__img {
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   width: 100%;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -15376,10 +15402,10 @@ span.flatpickr-weekday {
 }
 
 .services-location-service-card {
-  padding: 20px;
-  border-radius: 12px;
+  padding: 1.25rem;
+  border-radius: var(--brad-regular);
   background: #F0F3F5;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location-service-card {
@@ -15413,7 +15439,7 @@ span.flatpickr-weekday {
   font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-location-service-card__title {
@@ -15469,7 +15495,7 @@ span.flatpickr-weekday {
 
 .services-all__layout {
   display: grid;
-  grid-template-columns: auto minmax(320px, 469px);
+  grid-template-columns: auto minmax(320px, 32.5694444444vw);
   column-gap: 8px;
   position: relative;
 }
@@ -15486,7 +15512,7 @@ span.flatpickr-weekday {
 }
 
 .services-all__category {
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-all__category {
@@ -15516,11 +15542,11 @@ span.flatpickr-weekday {
 }
 
 .services-all-card {
-  padding: 20px;
-  padding-right: 40px;
+  padding: 1.25rem;
+  padding-right: 2.5rem;
   background-color: #fff;
-  border-radius: 12px;
-  margin-bottom: 8px;
+  border-radius: var(--brad-regular);
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-all-card {
@@ -15544,7 +15570,7 @@ span.flatpickr-weekday {
   font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
-  margin-bottom: 2px;
+  margin-bottom: 0.125rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-all-card__title {
@@ -15564,7 +15590,7 @@ span.flatpickr-weekday {
   font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-all-card__subtitle {
@@ -15578,7 +15604,7 @@ span.flatpickr-weekday {
   font-size: 0.875rem;
   line-height: 140%;
   color: #A1AEB3;
-  margin-bottom: 19px;
+  margin-bottom: 1.3571428571em;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services-all-card__desc {
@@ -15635,8 +15661,10 @@ span.flatpickr-weekday {
 }
 @media (max-width: 1024px) {
   .services__sidebar {
-    position: fixed;
-    bottom: 8px;
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    top: 0;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -15657,11 +15685,14 @@ span.flatpickr-weekday {
 }
 
 .services__sidebar-toggler {
-  border-radius: 6px;
+  pointer-events: initial;
+  border-radius: var(--brad-half);
   --button-bg: var(--c-accent);
   --button-color: var(--c-text-on);
   z-index: 1;
   display: none;
+  position: sticky;
+  top: 87vh;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .services__sidebar-toggler {
@@ -15673,13 +15704,29 @@ span.flatpickr-weekday {
     display: flex;
   }
 }
+@media (max-width: 601px) {
+  .services__sidebar-toggler {
+    top: 91.5vh;
+  }
+}
 
 .services__sidebar-card {
   top: 150px;
 }
+@media (min-width: 1800px) {
+  .services__sidebar-card {
+    margin-bottom: 110px;
+    top: 185px;
+  }
+}
 @media (max-width: 1024px) {
   .services__sidebar-card {
-    position: absolute;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    max-width: calc(100% - 1rem);
+    margin-left: auto;
+    margin-right: auto;
     transition: all 0.3s ease;
     z-index: 2;
     top: unset;
@@ -15695,10 +15742,23 @@ span.flatpickr-weekday {
 
 @media (max-width: 1024px) {
   .services__sidebar--active .services__sidebar-card {
-    bottom: -40px;
+    bottom: -70px;
+  }
+}
+@media (max-width: 601px) {
+  .services__sidebar--active .services__sidebar-card {
+    bottom: -20px;
   }
 }
 
+@media (max-width: 1024px) {
+  .services-all {
+    padding-bottom: 100px;
+  }
+  .services-all__layout {
+    margin-bottom: 70px;
+  }
+}
 .page__services-all .header--scrolled {
   box-shadow: none;
 }
@@ -15724,10 +15784,15 @@ span.flatpickr-weekday {
     padding-top: 70px;
   }
 }
+@media (min-width: 1800px) {
+  .page__services-all .sidebar {
+    padding-top: 80px;
+  }
+}
 
 @media (min-width: 1025px) {
   .page__services-all .blog-sidebar-about__desc {
-    font-size: 23px;
+    font-size: 1.4375rem;
     line-height: 1.08;
   }
 }
@@ -15756,7 +15821,7 @@ span.flatpickr-weekday {
 }
 
 .certificates__container {
-  max-width: 1186px;
+  max-width: var(--w-container);
   margin-left: auto;
   margin-right: auto;
 }
@@ -15776,6 +15841,7 @@ span.flatpickr-weekday {
 .sertificates__pic {
   margin-right: 9px;
   display: block;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .sertificates__pic {
@@ -15784,7 +15850,7 @@ span.flatpickr-weekday {
 }
 
 .sertificates__pic:nth-of-type(1) {
-  max-width: 230px;
+  max-width: 19.4%;
   margin-top: auto;
 }
 @media (max-width: 768px) {
@@ -15797,7 +15863,7 @@ span.flatpickr-weekday {
 }
 
 .sertificates__pic:nth-of-type(2) {
-  max-width: 350px;
+  max-width: 29.6%;
   margin-top: auto;
 }
 @media (max-width: 768px) {
@@ -15809,7 +15875,7 @@ span.flatpickr-weekday {
 }
 
 .sertificates__pic:nth-of-type(3) {
-  max-width: 230px;
+  max-width: 19.4%;
 }
 @media (max-width: 768px) {
   .sertificates__pic:nth-of-type(3) {
@@ -15819,7 +15885,7 @@ span.flatpickr-weekday {
 }
 
 .sertificates__pic:nth-of-type(4) {
-  max-width: 350px;
+  max-width: 29.6%;
   margin-right: 0;
   margin-bottom: 70px;
 }
@@ -18568,10 +18634,10 @@ span.flatpickr-weekday {
 }
 
 .footer {
-  padding-bottom: 52px;
-  padding-top: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-bottom: 3.25rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .footer {
@@ -18591,11 +18657,11 @@ span.flatpickr-weekday {
 }
 
 .footer__top {
-  padding-top: 26px;
-  padding-right: 16px;
-  padding-bottom: 34px;
-  padding-left: 16px;
-  margin-bottom: 65px;
+  padding-top: 1.625rem;
+  padding-right: 1rem;
+  padding-bottom: 2.125rem;
+  padding-left: 1rem;
+  margin-bottom: 4.0625rem;
   color: var(--c-text-on);
   background-color: var(--c-accent);
   border-radius: var(--section-radius);
@@ -18617,7 +18683,7 @@ span.flatpickr-weekday {
 }
 
 .footer__logo {
-  max-width: 213px;
+  max-width: 13.3125rem;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .footer__logo {
@@ -18645,7 +18711,7 @@ span.flatpickr-weekday {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 79px;
+  margin-bottom: 4.9375rem;
 }
 @media (max-width: 768px) and (min-height: 602px) {
   .footer__info {
@@ -18753,7 +18819,7 @@ span.flatpickr-weekday {
 }
 
 .footer__credits-item {
-  margin-right: 78px;
+  margin-right: 5.5714285714em;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.21;
@@ -18820,8 +18886,8 @@ span.flatpickr-weekday {
 }
 
 .footer__payments-item:nth-of-type(1) {
-  width: 70px;
-  margin-left: -5px;
+  width: 4.375rem;
+  margin-left: -0.3125rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .footer__payments-item:nth-of-type(1) {
@@ -18830,8 +18896,8 @@ span.flatpickr-weekday {
 }
 
 .footer__payments-item:nth-of-type(3) .footer__payments-logo {
-  height: 21px;
-  margin-top: 2px;
+  height: 1.3125rem;
+  margin-top: 0.125rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .footer__payments-item:nth-of-type(3) .footer__payments-logo {
@@ -18845,7 +18911,7 @@ span.flatpickr-weekday {
 }
 
 .footer__payments-logo {
-  height: 20px;
+  height: 1.25rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .footer__payments-logo {
@@ -18859,7 +18925,7 @@ span.flatpickr-weekday {
 }
 
 .footer__payments-item:last-of-type .footer__payments-logo {
-  height: 33px;
+  height: 2.0625rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .footer__payments-item:last-of-type .footer__payments-logo {
@@ -18873,9 +18939,9 @@ span.flatpickr-weekday {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  font-size: 14px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.21;
   color: #A1AEB2;
@@ -18943,7 +19009,7 @@ span.flatpickr-weekday {
 .footer__bottom-copy {
   width: 100%;
   max-width: 100%;
-  margin-top: 16px;
+  margin-top: 1rem;
   text-align: center;
 }
 @media (max-width: 768px) and (min-width: 602px) {
@@ -18984,7 +19050,7 @@ span.flatpickr-weekday {
 
 .section-map__frame {
   width: 100%;
-  height: 500px;
+  height: calc(var(--index) * 34.7);
   border-radius: 12px;
 }
 @media (max-width: 601px) {

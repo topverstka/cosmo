@@ -10,12 +10,12 @@
 }
 .link::before {
   display: block;
-  width: 16px;
-  height: 18px;
+  width: 1rem;
+  height: 1.125rem;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   background-color: var(--c-accent);
   @media (min-width: 602px) and (max-width: 678px) {
     width: 32px;

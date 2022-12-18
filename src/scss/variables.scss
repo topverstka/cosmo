@@ -97,6 +97,19 @@ $error: var(--c-error);
     --lh-button: 126%;
   }
 
+  --w-container: 1186px;
+  @media (min-width: 1800px) {
+    --w-container: 1580px;
+  }
+  @media (min-width: 2000px) {
+    --w-container: 2090px;
+  }
+  @media (max-width: 1280px) {
+    --w-container: calc(100% - 16px);
+  }
+  @media (max-width: 768px) {
+    --w-container: 100%;
+  }
 
   --fz-menu-items: 0.75rem; //12
   --lh-menu-items: 1.16;

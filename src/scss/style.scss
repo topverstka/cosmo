@@ -219,7 +219,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .section-map__frame {
   width: 100%;
-  height: 500px;
+  height: #{'calc(var(--index) * 34.7)'};//500
   border-radius: 12px;
   @media (max-width: 601px) {
     height: 590px;

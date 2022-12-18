@@ -23,10 +23,10 @@
  */
 .sidebar-card {
   // border-radius: 8px;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   background-color: #5F6C75;
-  padding: 40px;
-  margin-bottom: 8px;
+  padding: 2.5rem;//40px;
+  margin-bottom: 0.5rem;
   color: #fff;
   @media (max-width: 768px) {
     padding: 30px 32px;
@@ -36,12 +36,12 @@
   min-height: initial;
 }
 .sidebar-card__desc {
-  margin-bottom: 27px;
+  margin-bottom: 1.9285714285714286em;//27px;
   font-family: 'RF Dewi', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.875rem;//14px;
+  line-height: 1.2142857142857142;
   color: #A1AEB3;
 }
 .sidebar-card__desc:last-of-type {
@@ -49,10 +49,10 @@
 }
 .sidebar-card__link {
   --link-color: #fff;
-  margin-bottom: 11px;
+  margin-bottom: 0.6875rem;//11px;
 }
 .sidebar-card__link:first-of-type {
-  margin-top: 27px;
+  margin-top: 1.6875rem;//27px;
   @media (max-width: 768px) {
     margin-top: 16px;
   }

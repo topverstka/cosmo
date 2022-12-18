@@ -1,9 +1,9 @@
 .footer {
   // padding-bottom: 90px;
-  padding-bottom: 52px; //services.html
-  padding-top: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-bottom: 3.25rem;//52px; //services.html
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   @media (max-width: 768px) and (min-width: 602px) {
     padding-bottom: 175px;
     padding-top: 16px;
@@ -18,11 +18,11 @@
   padding-left: 0;
 }
 .footer__top {
-  padding-top: 26px;
-  padding-right: 16px;
-  padding-bottom: 34px;
-  padding-left: 16px;
-  margin-bottom: 65px;
+  padding-top: 1.625rem;//26px;
+  padding-right: 1rem;
+  padding-bottom: 2.125rem;//34px;
+  padding-left: 1rem;
+  margin-bottom: 4.0625rem;//65px;
   color: var(--c-text-on);
   background-color: var(--c-accent);
   border-radius: var(--section-radius);
@@ -40,7 +40,7 @@
 }
 
 .footer__logo {
-  max-width: 213px;
+  max-width: 13.3125rem;//213px;
   @media (min-width: 769px) and (max-width: 1024px) {
     max-width: 133px;
   }
@@ -60,7 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 79px;
+  margin-bottom: 4.9375rem;//79px;
   @media (max-width: 768px) and (min-height: 602px) {
     margin-bottom: 226px;
   }
@@ -141,7 +141,7 @@
   }
 }
 .footer__credits-item {
-  margin-right: 78px;
+  margin-right: 5.571428571428571em;//78px;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.21;
@@ -192,16 +192,16 @@
   }
 }
 .footer__payments-item:nth-of-type(1) {
-  width: 70px;
-  margin-left: -5px;
+  width: 4.375rem;//70px;
+  margin-left: -0.3125rem;//-5px;
   @media (max-width: 768px) and (min-width: 602px) {
     width: 120px;
   }
 }
 .footer__payments-item:nth-of-type(3) {
   .footer__payments-logo {
-    height: 21px;
-    margin-top: 2px;
+    height: 1.3125rem;//21px;
+    margin-top: 0.125rem;//2px;
     @media (max-width: 768px) and (min-width: 602px) {
       height: 42px;
     }
@@ -212,7 +212,7 @@
   margin-top: -2px;
 }
 .footer__payments-logo {
-  height: 20px;
+  height: 1.25rem;//20px;
   @media (max-width: 768px) and (min-width: 602px) {
     height: 48px;
   }
@@ -221,7 +221,7 @@
   }
 }
 .footer__payments-item:last-of-type .footer__payments-logo {
-  height: 33px;
+  height: 2.0625rem;//33px;
   @media (max-width: 768px) and (min-width: 602px) {
     height: 66px;
   }
@@ -233,9 +233,9 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  font-size: 14px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 0.875rem;//14px;
   font-weight: 400;
   line-height: 1.21;
   // color: #7c878e;
@@ -287,7 +287,7 @@
 .footer__bottom-copy {
   width: 100%;
   max-width: 100%;
-  margin-top: 16px;
+  margin-top: 1rem;
   text-align: center;
   @media (max-width: 768px) and (min-width: 602px) {
     font-size: 24.58px;
