@@ -9,7 +9,8 @@
   max-width: 5.4375rem;//87px;
   width: 100%;
   @media (min-width: 602px) and (max-width: 768px) {
-    max-width: 174px;
+    max-width: 5.4375rem;//174px;
+    width: 100%;
   }
 }
 .stepper__button {
@@ -18,7 +19,7 @@
   width: 1.375rem;//22px;
   height: var(--stepper-button-height, 1.75rem); //28
   @media (min-width: 602px) and (max-width: 768px) {
-    width: 44px;
+    width: 2.75rem;//44px;
     height: var(--stepper-button-height, 56px);
   }
 }

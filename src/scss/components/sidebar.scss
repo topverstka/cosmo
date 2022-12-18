@@ -5,6 +5,10 @@
   position: sticky;
   top: 98px;
   bottom: 8px;
+  @media (min-width: 1800px) {
+    top: 165px;
+    margin-bottom: 110px;
+  }
 }
 
 // .sidebar .link--time {
