@@ -9,7 +9,7 @@
   }
 }
 .stores__container {
-  height: calc(100 * 1vh - 84px - 32px);
+  height: calc(100 * 1vh - 5.25rem - 2.0rem);//calc(100 * 1vh - 84px - 32px);
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -26,9 +26,9 @@
   height: 100%;
   width: 100%;
   background-color: var(--bg-element);
-  border-radius: 12px 0 0 12px;
-  padding: 20px;
-  max-width: 331px;
+  border-radius: var(--brad-regular) 0 0 var(--brad-regular);
+  padding: 1.25rem;//20px;
+  max-width: 22.98611111111111vw;//331px;
   transition: all 0.45s ease;
   transform-origin: left;
   overflow: hidden;
@@ -68,7 +68,7 @@
 }
 
 .stores__city {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   position: relative;
   z-index: 2;
   @media (min-width: 602px) and (max-width: 768px) {
@@ -77,17 +77,17 @@
 }
 
 .stores__list-title {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;//32px;
   padding-left: 0;
   padding-right: 0;
 }
 
 .stores__results-caption {
- font-weight: 400;
-  font-size: 12px;
+  font-weight: 400;
+  font-size:  0.75rem;
   line-height: 1.16;
   color: #A2AAAD;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
     margin-bottom: 32px;
@@ -95,11 +95,11 @@
 }
 
 .stores-list {
-  height: calc(100% - 166px);
+  height: calc(100% - 11.527777777777779vw);//calc(100% - 166px);
   overflow-y: auto;
   position: relative;
-  width: calc(100% + 20px);
-  padding-right: 8px;
+  width: calc(100% + 1.25rem);//20
+  padding-right: 0.5rem;
   @include macscrollbar;
   @media (max-width: 768px) {
     height: initial;
@@ -114,8 +114,8 @@
   z-index: 2;
   display: block;
   width: calc(100%);
-  height: 30px;
-  margin-bottom: -10px;
+  height: 1.875rem;//30px;
+  margin-bottom: -0.625rem;//10px;
   pointer-events: none;
   content: "";
   background: linear-gradient(
@@ -125,13 +125,13 @@
   );
 }
 .stores-list-card {
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 28px;
+  padding-top: 0.9375rem;//15px;
+  padding-left: 1.25rem;//20px;
+  padding-bottom: 1.25rem;
+  padding-right: 1.75rem;//28px;
   background: #F0F3F5;
-  border-radius: 6px;
-  margin-bottom: 8px;
+  border-radius: var(--brad-half);
+  margin-bottom: 0.5rem;
   @media (min-width: 602px) and (max-width: 768px) {
     padding-top: 30px;
     padding-left: 40px;
@@ -143,10 +143,10 @@
 }
 .stores-list-card__name {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.2;
   color: #000000;
-  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
   cursor: pointer;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 32px;
@@ -156,10 +156,10 @@
 
 .stores-lists-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2;
   color: #000000;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -175,11 +175,11 @@
 .stores-lists-card__desc::before {
   content: "";
   display: block;
-  height: 15px;
-  width: 15px;
-  min-width:15px;
-  margin-top: 2px;
-  margin-right: 8px;
+  height: 0.9375rem;//15px;
+  width: 0.9375rem;
+  min-width: 0.9375rem;
+  margin-top: 0.125rem;
+  margin-right: 0.5rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,8 +221,8 @@
   z-index: 2;
   display: block;
   width: 100%;
-  height: 30px;
-  margin-bottom: -30px;
+  height: 1.875rem;//30
+  margin-bottom: -1.875rem;
   pointer-events: none;
   content: "";
   background: linear-gradient(
@@ -237,7 +237,7 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   overflow: hidden;
   transform: translateZ(0);
   @media (max-width: 768px) {
@@ -248,7 +248,7 @@
 .stores__map-frame {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   @media (max-width: 768px) {
     border-radius: 0;
   }
@@ -264,7 +264,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 450px;
+  max-width: 31.25vw;//450px;
   @media (max-width: 768px) {
     max-width: 100%;
     
@@ -289,7 +289,7 @@
 
 .stores__details-show-list {
   --button-color: #5F6C75;
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;//28px;
   border: none;
 }
 .stores__details-show-list::before {
@@ -299,9 +299,9 @@
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 10px;
-  height: 10px;
-  margin-right: 10px;
+  width: 0.625rem;//10px;
+  height: 0.625rem;//10px;
+  margin-right: 0.625rem;
   transform: scale(-1, 1);
 }
 
@@ -321,8 +321,8 @@
   z-index: 2;
   display: block;
   width: calc(100%);
-  height: 30px;
-  margin-bottom: -10px;
+  height: 1.875rem;//30px;
+  margin-bottom: -0.625rem;//10px;
   pointer-events: none;
   background: linear-gradient(
     180deg,
@@ -340,8 +340,8 @@
   z-index: 2;
   display: block;
   width: calc(100%);
-  height: 30px;
-  margin-bottom: -30px;
+  height: 1.875rem;
+  margin-bottom: -1.875rem;
   pointer-events: none;
   background: linear-gradient(
     0deg,
@@ -356,10 +356,10 @@
   }
 }
 .stores__details-info {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .stores__details-route {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;//40px;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 24px;
   }
@@ -370,7 +370,7 @@
 
 .stores__details-media {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   @media (min-width: 602px) and (max-width: 768px) {
    margin-bottom: 16px; 
   }
@@ -382,7 +382,7 @@
 }
 .stores__details-img {
   display: block;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   object-fit: cover;
   @media (min-width: 602px) and (max-width: 768px) {
    border-radius: 12px; 
@@ -390,8 +390,8 @@
 }
 
 .stores__city-picker {
-  --brad: 6px;
-  --fz: 12px;
+  --brad: var(--brad-half);
+  --fz: 0.75rem;//12px;
 }
 
 .stores__details-title {

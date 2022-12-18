@@ -1,8 +1,8 @@
 .blog__article-layout {
   display: grid;
-  grid-template-columns: auto minmax(320px, 469px);
-  column-gap: 8px;
-  margin-top: 8px;
+  grid-template-columns: auto minmax(320px, 32.56944444444444vw); //320 - 469
+  column-gap: 0.5rem;
+  margin-top: 0.5rem;
   @media (max-width: 1024px) {
     grid-template-columns: auto minmax(220px, 350px);
   }
@@ -97,9 +97,9 @@
   }
 }
 .blog-article__cover {
-  height: 450px;
+  height: #{'calc(var(--index) * 31.3)'};//450px;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;//40px;
   @media (max-width: 601px) {
     height: 259px;
     margin-bottom: 20px
@@ -118,13 +118,13 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
 }
 
 .blog-article__index {
   background: #F0F3F5;
-  border-radius: 6px;
-  padding: 40px;
+  border-radius: var(--brad-half);
+  padding: 2.5rem;//40px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 40px 44px;
   }
@@ -136,7 +136,7 @@
   font-size: 0.875rem;
   line-height: 1.2;
   color: #A1AEB3;
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;//28px;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 28px;
     margin-bottom: 32px;
@@ -146,7 +146,7 @@
   }
 }
 .blog-article__index-item {
-  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;//7px;
   text-decoration: none;
   color: #5F6C75;
   @media (min-width: 602px) and (max-width: 768px) {
@@ -174,7 +174,7 @@
 }
 
 .blog-article__content {
-  margin-bottom: 80px;
+  margin-bottom: 5.0rem;//80px;
   @media (max-width: 601px) {
     margin-bottom: 28px
   }
@@ -184,8 +184,8 @@
   font-size: 1.6875rem;
   line-height: 110%;
   color: #000000;
-  margin-top: 40px;
-  margin-bottom: 32px;
+  margin-top: 2.5rem;//40px;
+  margin-bottom: 2rem;//32px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 36px;
     margin-top: 56px;
@@ -202,7 +202,7 @@
   font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;//22px;
   @media (min-width: 602px) and (max-width: 768px) {
    font-size: 24px;
    margin-bottom: 24px;
@@ -215,8 +215,8 @@
 
 .blog-article-share {
   background-color: #F0F3F5;
-  padding: 40px;
-  border-radius: 6px;
+  padding: 2.5rem;//40px;
+  border-radius: var(--brad-half);
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
   }
@@ -225,7 +225,7 @@
   }
 }
 .blog-article-share__title {
-  margin-bottom: 44px;
+  margin-bottom: 2.75rem;//44px;
   font-weight: 400;
   font-size: 1.6875rem;
   line-height: 110%;
@@ -242,12 +242,15 @@
 }
 .blog-article-share__button {
   display: block;
-  max-width: 229px;
+  max-width: 15.902777777777777vw;//229px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 19px;
-  padding-bottom: 24px;
+  padding-top: 1.1875rem;//19px;
+  padding-bottom: 1.5rem;//24px;
+  @media (max-width: 768px) {
+    max-width: 229px;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 11px 42px 14px;
   }
@@ -258,14 +261,14 @@
 }
 
 .blog-article__gallery {
-  padding-top: 18px;
+  padding-top: 1.125rem;//18px;
 }
 .blog-article__gallery-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 8px;
-  row-gap: 8px;
-  margin-bottom: 16px;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 .blog-article__media-pic {
   display: block;
@@ -273,7 +276,7 @@
   display: block;
 }
 .blog-article__media-img {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   object-fit: cover;
 }
 .blog-article__gallery-more {
@@ -284,10 +287,9 @@
 }
 
 .blog-article-prodcuts__gallery {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;//30px;
   @media (max-width: 601px) {
     margin-bottom: 24px
-    
   }
 }
 
@@ -300,6 +302,7 @@
   }
 }
 .blog-article .products--layout-horizontal .product-card__pic {
+  border-radius: var(--brad-half);
   @media (max-width: 601px) {
     margin-top: 0;
     margin-right: 16px;
@@ -310,11 +313,14 @@
   }
 }
 .blog-article .products--layout-horizontal .product-card__options {
-  margin-bottom: 12px;
+  margin-bottom: 0.76rem;
+}
+.blog-article .products--layout-horizontal .product-card__options .chips__content {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .blog-article .gallery-accordion {
-  padding-top: 20px;
+  padding-top: 1.25rem;//20px;
   @media (min-width: 602px) and (max-width: 768px) {
     padding-top: 24px;
   }
@@ -329,11 +335,11 @@
 }
 
 .blog-article .blog-sidebar {
-  margin-top: 9px;
+  margin-top: 0.5625rem;//9
 }
 
 .blog-aritcle-products {
-  padding-top: 18px;
+  padding-top: 1.125rem;//18px;
 }
 .blog-article-products__button-more {
   @media (max-width: 601px) {

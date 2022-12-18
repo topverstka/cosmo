@@ -1,9 +1,9 @@
 .shops {
-  --brad: 8px;
+  --brad: 0.5rem;
   border-radius: var(--brad);
   background-color: var(--bg-element);
-  padding-top: 75px;
-  padding-bottom: 57px;
+  padding-top: 4.6875rem;//75px;
+  padding-bottom: 3.5625rem;//57px;
   @media (min-width: 602px) and (max-width: 768px) {
     --brad: 16px;
   }
@@ -33,8 +33,8 @@
 }
 .shops__button-all {
   @media (min-width: 769px) {
-    padding-left: 19px;
-    padding-right: 19px;
+    padding-left: 1.1875rem;//19
+    padding-right: 1.1875rem;
   }
   @media (max-width: 768px) {
     display: none;

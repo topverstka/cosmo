@@ -172,11 +172,11 @@
   Not supports in Firefox and IE
   @source https://gist.github.com/spemer/a0e218bbb45433bd611e68446523a00b
 */
-@mixin macscrollbarHasMine($width: 16px, $border: 4px, $background: #fff, $backgroundTrack: #fff) {
+@mixin macscrollbarHasMine($width: 1rem, $border: 0.25rem, $background: #fff, $backgroundTrack: #fff) {
   /* total width */
   &::-webkit-scrollbar {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 1.25rem;//20px;
+      padding-bottom: 1.25rem;//20px;
       background-color: #{$backgroundTrack};
       border-radius: #{$width};
       width: #{$width};
@@ -200,7 +200,7 @@
       display:none;
   }
 }
-@mixin macscrollbar($width: 16px, $border: 4px, $background: #fff) {
+@mixin macscrollbar($width: 1rem, $border: 0.25rem, $background: #fff) {
   /* total width */
   &::-webkit-scrollbar {
       background-color: #{$background};
