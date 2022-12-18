@@ -451,7 +451,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   spoilerDocs.forEach((doc) => {
     const docsDesc = doc.querySelectorAll('.doc-card__desc');
     docsDesc.forEach((desc) => {
-      const height = desc.getBoundingClientRect();
+      const height = desc.getBoundingClientRect().height;
       const spoilerButton = desc.parentElement.querySelector('.doc-card__spoiler-button')
 
       if (!spoilerButton) return

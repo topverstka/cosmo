@@ -8844,7 +8844,7 @@ span.flatpickr-weekday {
 }
 
 .message {
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 8.125rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8857,26 +8857,27 @@ span.flatpickr-weekday {
 
 .message-card {
   background-color: #fff;
-  max-width: 708px;
+  max-width: 49.1666666667vw;
   width: 100%;
-  padding-top: 80px;
-  padding-left: 119px;
-  padding-right: 119px;
-  padding-bottom: 90px;
+  padding-top: 5rem;
+  padding-left: 7.4375rem;
+  padding-right: 7.4375rem;
+  padding-bottom: 5.625rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
 }
 @media (max-width: 768px) {
   .message-card {
-    padding-top: 56px;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-bottom: 60px;
+    max-width: 100%;
+    padding-top: 3.5rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 3.75rem;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -8888,15 +8889,14 @@ span.flatpickr-weekday {
 .message-card__title {
   font-weight: 400;
   font-size: 2.5rem;
-  line-height: 48px;
+  line-height: 1.2;
   text-align: center;
   color: #000000;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (max-width: 768px) {
   .message-card__title {
-    font-size: 27px;
-    line-height: 29px;
+    font-size: 1.6875rem;
   }
 }
 
@@ -8906,13 +8906,14 @@ span.flatpickr-weekday {
   line-height: 140%;
   text-align: center;
   color: #A1AEB3;
-  margin-bottom: 37px;
-  max-width: 400px;
+  margin-bottom: 2.3125rem;
+  max-width: 27.7777777778vw;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 768px) {
   .message-card__desc {
+    max-width: 70vw;
     margin-bottom: 26px;
   }
 }
@@ -8929,34 +8930,28 @@ span.flatpickr-weekday {
 }
 
 .message-card__link {
-  margin-top: 18px;
+  margin-top: 1.125rem;
   font-family: "RF Dewi", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .message-card__button {
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 10px;
-  padding-bottom: 12px;
+  padding-left: 1.0625rem;
+  padding-right: 1.0625rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.75rem;
   font-weight: 400;
 }
 @media (max-width: 768px) {
   .message-card__button {
-    padding-right: 20px;
-    font-size: 14px;
     font-weight: 400;
-    padding-left: 20px;
-    padding-right: 12px;
-    font-size: 12px;
+    font-size: 0.875rem;
     font-weight: 400;
-    padding-left: 12px;
   }
 }
 @media (max-width: 601px) {
   .message-card__button {
     width: 100%;
-    font-size: 14px;
     display: block;
   }
 }
@@ -13623,8 +13618,8 @@ span.flatpickr-weekday {
 }
 
 .doc--small {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 @media (max-width: 768px) {
   .doc--small {
@@ -13634,42 +13629,42 @@ span.flatpickr-weekday {
 }
 
 .doc__title {
-  margin-top: 44px;
-  margin-bottom: 40px;
+  margin-top: 2.75rem;
+  margin-bottom: 2.5rem;
   font-weight: 400;
-  font-size: 27px;
+  font-size: 2.5rem;
   line-height: 110%;
   text-align: center;
   color: #000000;
 }
 @media (max-width: 768px) {
   .doc__title {
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 28px;
+    font-size: 1.6875rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.75rem;
   }
 }
 
 .doc-card {
-  padding-top: 80px;
-  padding-left: 120px;
-  padding-bottom: 82px;
-  padding-right: 120px;
+  padding-top: 5rem;
+  padding-left: 7.5rem;
+  padding-bottom: 5.125rem;
+  padding-right: 7.5rem;
   background-color: var(--bg-element);
   display: grid;
-  border-radius: 12px;
-  grid-template-columns: 308px auto;
-  column-gap: 50px;
-  margin-bottom: 8px;
+  border-radius: var(--brad-regular);
+  grid-template-columns: 21.3888888889vw auto;
+  column-gap: 3.125rem;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 768px) {
   .doc-card {
     display: block;
-    padding: 20px;
-    padding-bottom: 21px;
+    padding: 1.25rem;
+    padding-bottom: 1.3125rem;
   }
 }
-@media (min-width: 602px) and (max-width: 678px) {
+@media (min-width: 602px) and (max-width: 768px) {
   .doc-card {
     border-radius: 24px;
   }
@@ -13680,52 +13675,51 @@ span.flatpickr-weekday {
 }
 
 .doc--small .doc-card {
-  column-gap: 29px;
-  grid-template-columns: 320px auto;
+  column-gap: 1.8125rem;
+  grid-template-columns: 22.2rem auto;
 }
 @media (max-width: 768px) {
   .doc--small .doc-card {
-    padding-top: 14px;
+    padding-top: 0.875rem;
   }
 }
 @media (min-width: 769px) {
   .doc--small .doc-card {
-    padding-bottom: 1px;
-    padding-top: 40px;
-    padding-left: 80px;
-    padding-right: 70px;
-    padding-bottom: 40px;
+    padding-top: 2.5rem;
+    padding-left: 5rem;
+    padding-right: 4.375rem;
+    padding-bottom: 2.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .doc--small .doc-card__title {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
   }
 }
 
 .doc-card__title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
 }
 @media (max-width: 768px) {
   .doc-card__title {
-    margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
   }
 }
 
 .doc-card__desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   color: #000000;
 }
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .doc-card__desc {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.2;
   }
 }
@@ -13753,12 +13747,12 @@ span.flatpickr-weekday {
 
 @media (min-width: 602px) {
   .doc ~ .callback-cards {
-    padding-top: 30px;
+    padding-top: 1.875rem;
   }
 }
 @media (max-width: 601px) {
   .doc ~ .callback-cards {
-    padding-top: 60px;
+    padding-top: 3.75rem;
   }
 }
 
