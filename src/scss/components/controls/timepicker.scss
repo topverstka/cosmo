@@ -1,15 +1,15 @@
 .timepicker {
-  --height: 310px;
-  max-width: 271px;
+  --height: #{'calc(var(--index) * 21)'};//310px;
+  max-width: 18.819444444444443vw;//271px;
   max-height: var(--height);
   height: var(--height);
   width: 100%;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   background: #F0F3F5;
-  padding-right: 13px;
-  padding-bottom: 3px;
-  padding-left: 18px;
-  padding-top: 14px;
+  padding-right: 0.8125rem;//13px;
+  padding-bottom: 0.1875rem;//3px;
+  padding-left: 1.125rem;//18px;
+  padding-top: 0.875rem;//14px;
   @media (min-width: 602px) and (max-width: 768px) {
     --height: 420px;
     padding-right: 26px;
@@ -35,8 +35,8 @@
 
 .timepicker__list.timepicker__list--dropdown {
   overflow: auto;
-  height: calc(var(--height) - 10px);
-  margin-top: -14px;
+  height: calc(var(--height) - 0.625rem);//10px
+  margin-top: -0.875rem;//-14px;
   @include macscrollbarHasMine(4px, 4px, #000, #D3DCDF);
   @media (min-width: 602px) and (max-width: 768px) {
     height: calc(var(--height) - 36px);
@@ -54,9 +54,9 @@
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;//10px;
   color: var(--time-color, #000);
-  font-size: 16px;
+  font-size: 1rem;
   @media (min-width: 602px) and (max-width: 768px) {
     font-size: 32px;
     margin-bottom: 20px;
@@ -68,12 +68,12 @@
 .timepicker__item::after {
   content: "";
   position: absolute;
-  left: 11px;
-  top: 11px;
+  left: 0.6875rem;//11px;
+  top: 0.6875rem;//11px;
   display: block;
   margin: auto;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
   background-color: transparent;
   border-radius: 100%;
   transition: all 0.3s ease;
@@ -87,8 +87,8 @@
 .timepicker__item::before {
   content: "";
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;//30px;
+  height: 1.875rem;//30px;
   border: 1px solid #D3DCDF;
   border-radius: 100%;
   position: static;
@@ -96,8 +96,8 @@
   top: 0;
   background-color: transparent;
   transition: all 0.3s ease;
-  margin-right: 8px;
-  font-size: 16px;
+  margin-right: 0.5rem;
+  font-size: 1rem;
   @media (min-width: 601px) and (max-width: 768px) {
     font-size: 32px;
     margin-right: 16px;
@@ -126,9 +126,9 @@
   left: 0;
   z-index: 2;
   display: block;
-  width: calc(100% - 14px);
-  height: 30px;
-  margin-bottom: -10px;
+  width: calc(100% - 0.875rem);//14
+  height: 1.875rem;//30px;
+  margin-bottom: -0.625rem;//-10px;
   pointer-events: none;
   content: "";
   background: linear-gradient(
@@ -145,8 +145,8 @@
   z-index: 2;
   display: block;
   width: 100%;
-  height: 30px;
-  margin-bottom: -30px;
+  height: 1.875rem;//30px;
+  margin-bottom: -1.875rem;//30px;
   pointer-events: none;
   content: "";
   background: linear-gradient(0deg, #f0f3f5 24.79%, rgba(255, 255, 255, 0) 100%);

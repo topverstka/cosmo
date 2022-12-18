@@ -16,9 +16,7 @@
   font-family: var(--ff-regular);
   margin-bottom: 0.66em;//8px;
   @media (min-width: 602px) and (max-width: 768px) {
-    --fz: 24px;
-    --padding: 24px 40px 32px 20px;
-    --border-radius: 12px;
+    margin-bottom: 0
   }
   @media (max-width: 601px) {
     --padding: 12px 20px 16px 20px;
@@ -83,12 +81,6 @@
   z-index: 2;
   transform: var(--error-icon-transform);
   transition: all 0.45s ease;
-  @media (min-width: 602px) and (max-width: 768px) {
-    width: 30px;
-    height: 30px;
-    top: 15px;
-    right: 10px;
-  }
 }
 
 .input__message {

@@ -1,27 +1,18 @@
 .fieldset {
   background-color: var(--bg-element);
-  border-radius: 12px;
-  padding: 40px;
+  border-radius: var(--brad-regular);
+  padding: 2.5rem;//40px;
   display: grid;
-  grid-template-columns: 291px auto;
-  column-gap: 27px;
-  margin-bottom: 8px;
-  @media (min-width: 1800px) {
-    grid-template-columns: 400px auto;
-  }
+  grid-template-columns: 20.208333333333332vw auto;//291px auto;
+  column-gap: 1.6875rem;//27px;
+  margin-bottom: 0.5rem;//8px;
   @media (max-width: 962px) {
     display: block;
-  }
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    grid-template-columns: 171px auto;
-  }
-  @media (min-width: 769px) and (max-width: 1024px) {
-    grid-template-columns: 171px auto;
-    // grid-template-columns: 221px auto;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 16px;
     border-radius: 25px;
+    padding: 1.5rem;
   }
   @media (max-width: 601px) {
     padding: 20px;
@@ -45,7 +36,7 @@
 .fieldset__title {
   font-size: 1.25rem;
   line-height: 120%;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;//12px;
   @media (max-width: 768px) and (min-width: 602px) {
     font-size: 40px;
     margin-bottom: 40px;
@@ -73,7 +64,7 @@
 }
 
 .fieldset__layout {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;//20px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-bottom: 40px;
   }
@@ -134,7 +125,8 @@
 .fieldset__layout--2-end-3 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 8px;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
   counter-reset: rows;
 }
 .fieldset__layout--2-end-3 .input {

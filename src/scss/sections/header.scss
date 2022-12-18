@@ -9,7 +9,7 @@
     height: 100%;
   }
 }
-.header--scrolled {
+.header--scrolled:not(.header--mini) {
   background-color: #fff;
   border-bottom: 1px solid #c5cacf;
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
@@ -606,6 +606,9 @@
   }
 }
 
+.header--mini {
+  position: relative;
+}
 .header--mini .header__container {
   padding-top: 22px;
   padding-bottom: 22px;

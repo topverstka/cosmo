@@ -368,10 +368,14 @@ function recalculateCartColumnsBottomGap() {
     console.log(additionalHeight)
 
     let additionalHeightModifier = -20;
-    if (window.innerWidth > 768 && window.innerWidth < 1025) {
+    // if (window.innerWidth > 768 && window.innerWidth < 1025) {
+    if (window.innerWidth <= 768 && window.innerWidth >= 601) {
+      additionalHeightModifier = 60;
+    // } else if (window.innerWidth >  602 && window.innerWidth < 910) {
+    } else if (window.innerWidth < 1025) {
       additionalHeightModifier = 30;
-    } else if (window.innerWidth >  602 && window.innerWidth < 910)
-    additionalHeight += additionalHeightModifier
+    }
+      additionalHeight += additionalHeightModifier
 
     if (cards.length > 1) {
       cartColumns.style.paddingBottom = `${additionalHeight}px`;

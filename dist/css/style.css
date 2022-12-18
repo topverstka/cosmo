@@ -3015,9 +3015,7 @@ input[type=search]::-webkit-search-cancel-button {
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .input {
-    --fz: 24px;
-    --padding: 24px 40px 32px 20px;
-    --border-radius: 12px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 601px) {
@@ -3086,14 +3084,6 @@ input[type=search]::-webkit-search-cancel-button {
   z-index: 2;
   transform: var(--error-icon-transform);
   transition: all 0.45s ease;
-}
-@media (min-width: 602px) and (max-width: 768px) {
-  .input__error-icon {
-    width: 30px;
-    height: 30px;
-    top: 15px;
-    right: 10px;
-  }
 }
 
 .input__message {
@@ -3542,7 +3532,6 @@ select {
 @media (min-width: 602px) and (max-width: 768px) {
   .button {
     --fz-button: 24px;
-    padding: 20px 20px 25px;
   }
 }
 @media (max-width: 601px) {
@@ -4492,13 +4481,13 @@ select {
 
 .radio__check {
   position: relative;
-  --size: 28px;
+  --size: 1.75rem;
   width: var(--size);
   min-width: var(--size);
   height: var(--size);
   border-radius: var(--size);
   border: 1px solid #F0F3F5;
-  margin-right: 16px;
+  margin-right: 1rem;
   transition: all 0.3s ease;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -4516,8 +4505,8 @@ select {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: calc(100% - 18px);
-  height: calc(100% - 18px);
+  width: calc(100% - 1.125rem);
+  height: calc(100% - 1.125rem);
   background-color: #fff;
   border-radius: 100%;
   transition: all 0.3s ease;
@@ -4557,7 +4546,7 @@ select {
   font-size: 1rem;
   line-height: 1.1875;
   color: #000000;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   display: block;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -4591,10 +4580,11 @@ select {
  3. calendar--has-year
  */
 .calendar--inline {
-  max-width: 270px;
+  max-width: 18.75vw;
+  min-width: 270px;
   background-color: #F0F3F5;
-  border-radius: 12px;
-  padding: 11px;
+  border-radius: var(--brad-regular);
+  padding: 0.6875rem;
   position: relative;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -4628,17 +4618,17 @@ select {
   margin-bottom: 0;
   color: var(--c-text-on);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   background-color: var(--c-accent);
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   line-height: 1.166;
   text-align: center;
-  padding-top: 8px;
-  padding-bottom: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.625rem;
   font-family: "RF Dewi Extended", sans-serif;
-  margin-bottom: 17px;
+  margin-bottom: 1.0625rem;
   cursor: initial;
-  max-width: 255px;
+  max-width: 17.7083333333vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -4663,17 +4653,17 @@ select {
 }
 
 .flatpickr-calendar {
-  max-width: 270px;
+  max-width: 18.75vw;
 }
 
 .calendar:not(.calendar--inline) .flatpickr-calendar.open {
-  max-width: 270px;
+  max-width: 18.75vw;
   overflow: hidden;
-  padding: 11px;
+  padding: 0.6875rem;
 }
 .calendar:not(.calendar--inline) .flatpickr-calendar.open .flatpickr-months .flatpickr-prev-month, .calendar:not(.calendar--inline) .flatpickr-calendar.open .flatpickr-months .flatpickr-next-month,
 .calendar:not(.calendar--inline) .flatpickr-calendar.open .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month, .calendar:not(.calendar--inline) .flatpickr-calendar.open .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {
-  top: 10px;
+  top: 0.625rem;
 }
 
 .flatpickr-current-month {
@@ -4688,9 +4678,11 @@ select {
   }
 }
 
-.flatpickr-prev-month svg,
-.flatpickr-next-month svg {
+.flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-months .flatpickr-next-month svg {
   fill: #A1AEB3;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 @media (any-hover: hover) {
@@ -4702,16 +4694,16 @@ select {
 
 .flatpickr-monthDropdown-months {
   font-weight: 400;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: var(--brad-half);
+  font-size: 1rem;
   line-height: 1.1875;
   text-align: center;
   color: #000000;
-  margin-bottom: -10px;
+  margin-bottom: -0.625rem;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  height: 34px;
+  height: 2.125rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .flatpickr-monthDropdown-months {
@@ -4724,7 +4716,7 @@ select {
 }
 
 .numInputWrapper {
-  transform: translateY(4px);
+  transform: translateY(0.25rem);
 }
 
 .calendar:not(.calendar--has-year) .flatpickr-monthDropdown-months ~ .numInputWrapper {
@@ -4732,11 +4724,11 @@ select {
 }
 
 .numInput.cur-year {
-  padding-top: 5px;
+  padding-top: 0.3125rem;
 }
 
 .flatpickr-months {
-  margin-bottom: 12px;
+  margin-bottom: 0.76rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .flatpickr-months {
@@ -4768,8 +4760,8 @@ select {
 .calendar .flatpickr-calendar {
   width: 100%;
   background-color: #F0F3F5;
-  border-radius: 6px;
-  margin-top: -10px;
+  border-radius: var(--brad-half);
+  margin-top: -0.625rem;
 }
 
 .flatpickr-days {
@@ -4781,8 +4773,8 @@ select {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .dayContainer {
@@ -4792,15 +4784,15 @@ select {
 }
 
 .flatpickr-day {
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   max-width: 100%;
-  max-height: 26px;
+  max-height: 1.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.1666666667;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -4819,8 +4811,8 @@ select {
 }
 
 .flatpickr-weekdays {
-  height: 19px;
-  margin-bottom: 3px;
+  height: 1.1875rem;
+  margin-bottom: 0.1875rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .flatpickr-weekdays {
@@ -4830,8 +4822,8 @@ select {
 }
 
 .flatpickr-weekdays .flatpickr-weekdaycontainer {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .flatpickr-weekdays .flatpickr-weekdaycontainer {
@@ -4841,7 +4833,7 @@ select {
 }
 
 span.flatpickr-weekday {
-  font-size: 9px;
+  font-size: 0.5625rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   span.flatpickr-weekday {
@@ -4874,12 +4866,13 @@ span.flatpickr-weekday {
 
 .calendar__button-day-prev,
 .calendar__button-day-next {
-  --size: 16px;
+  cursor: pointer;
+  --size: 1rem;
   display: block;
   width: var(--size);
   height: var(--size);
   position: absolute;
-  top: -33px;
+  top: -2.0625rem;
   -webkit-mask: url("../img/common/arrow-circle.svg");
   mask: url("../img/common/arrow-circle.svg");
   -webkit-mask-repeat: no-repeat;
@@ -4899,7 +4892,7 @@ span.flatpickr-weekday {
 }
 
 .calendar__button-day-prev {
-  left: 40px;
+  left: 2.5rem;
   transform: rotate(-90deg);
 }
 @media (min-width: 769px) {
@@ -4914,7 +4907,7 @@ span.flatpickr-weekday {
 }
 
 .calendar__button-day-next {
-  right: 40px;
+  right: 2.5rem;
   transform: rotate(90deg);
 }
 @media (min-width: 769px) {
@@ -4929,17 +4922,17 @@ span.flatpickr-weekday {
 }
 
 .timepicker {
-  --height: 310px;
-  max-width: 271px;
+  --height: calc(var(--index) * 21);
+  max-width: 18.8194444444vw;
   max-height: var(--height);
   height: var(--height);
   width: 100%;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   background: #F0F3F5;
-  padding-right: 13px;
-  padding-bottom: 3px;
-  padding-left: 18px;
-  padding-top: 14px;
+  padding-right: 0.8125rem;
+  padding-bottom: 0.1875rem;
+  padding-left: 1.125rem;
+  padding-top: 0.875rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .timepicker {
@@ -4971,8 +4964,8 @@ span.flatpickr-weekday {
 
 .timepicker__list.timepicker__list--dropdown {
   overflow: auto;
-  height: calc(var(--height) - 10px);
-  margin-top: -14px;
+  height: calc(var(--height) - 0.625rem);
+  margin-top: -0.875rem;
   /* total width */
   /* background of the scrollbar except button or resizer */
   /* scrollbar itself */
@@ -5010,9 +5003,9 @@ span.flatpickr-weekday {
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: var(--time-color, #000);
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .timepicker__item {
@@ -5028,12 +5021,12 @@ span.flatpickr-weekday {
 .timepicker__item::after {
   content: "";
   position: absolute;
-  left: 11px;
-  top: 11px;
+  left: 0.6875rem;
+  top: 0.6875rem;
   display: block;
   margin: auto;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
   background-color: transparent;
   border-radius: 100%;
   transition: all 0.3s ease;
@@ -5050,8 +5043,8 @@ span.flatpickr-weekday {
 .timepicker__item::before {
   content: "";
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   border: 1px solid #D3DCDF;
   border-radius: 100%;
   position: static;
@@ -5059,8 +5052,8 @@ span.flatpickr-weekday {
   top: 0;
   background-color: transparent;
   transition: all 0.3s ease;
-  margin-right: 8px;
-  font-size: 16px;
+  margin-right: 0.5rem;
+  font-size: 1rem;
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .timepicker__item::before {
@@ -5089,9 +5082,9 @@ span.flatpickr-weekday {
   left: 0;
   z-index: 2;
   display: block;
-  width: calc(100% - 14px);
-  height: 30px;
-  margin-bottom: -10px;
+  width: calc(100% - 0.875rem);
+  height: 1.875rem;
+  margin-bottom: -0.625rem;
   pointer-events: none;
   content: "";
   background: linear-gradient(180deg, #f0f3f5 24.79%, rgba(255, 255, 255, 0) 100%);
@@ -5104,8 +5097,8 @@ span.flatpickr-weekday {
   z-index: 2;
   display: block;
   width: 100%;
-  height: 30px;
-  margin-bottom: -30px;
+  height: 1.875rem;
+  margin-bottom: -1.875rem;
   pointer-events: none;
   content: "";
   background: linear-gradient(0deg, #f0f3f5 24.79%, rgba(255, 255, 255, 0) 100%);
@@ -5113,37 +5106,23 @@ span.flatpickr-weekday {
 
 .fieldset {
   background-color: var(--bg-element);
-  border-radius: 12px;
-  padding: 40px;
+  border-radius: var(--brad-regular);
+  padding: 2.5rem;
   display: grid;
-  grid-template-columns: 291px auto;
-  column-gap: 27px;
-  margin-bottom: 8px;
-}
-@media (min-width: 1800px) {
-  .fieldset {
-    grid-template-columns: 400px auto;
-  }
+  grid-template-columns: 20.2083333333vw auto;
+  column-gap: 1.6875rem;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 962px) {
   .fieldset {
     display: block;
   }
 }
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .fieldset {
-    grid-template-columns: 171px auto;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .fieldset {
-    grid-template-columns: 171px auto;
-  }
-}
 @media (min-width: 602px) and (max-width: 768px) {
   .fieldset {
     margin-bottom: 16px;
     border-radius: 25px;
+    padding: 1.5rem;
   }
 }
 @media (max-width: 601px) {
@@ -5174,7 +5153,7 @@ span.flatpickr-weekday {
 .fieldset__title {
   font-size: 1.25rem;
   line-height: 120%;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 @media (max-width: 768px) and (min-width: 602px) {
   .fieldset__title {
@@ -5213,7 +5192,7 @@ span.flatpickr-weekday {
 }
 
 .fieldset__layout {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .fieldset__layout {
@@ -5287,7 +5266,8 @@ span.flatpickr-weekday {
 .fieldset__layout--2-end-3 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 8px;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
   counter-reset: rows;
 }
 
@@ -5485,7 +5465,8 @@ span.flatpickr-weekday {
 
 @media (max-width: 1020px) {
   .side-navigation {
-    position: fixed;
+    position: absolute;
+    top: 0;
     z-index: 10;
     left: 0;
     right: 0;
@@ -5504,9 +5485,8 @@ span.flatpickr-weekday {
 }
 
 @media (max-width: 1020px) {
-  .side-navigation--visible {
-    background-color: rgba(0, 0, 0, 0.85);
-    pointer-events: initial;
+  .side-navigation--visible .side-navigation__button-mobile {
+    z-index: -2;
   }
 }
 
@@ -5514,10 +5494,10 @@ span.flatpickr-weekday {
   .side-navigation__list {
     transition: all 0.3s ease;
     background-color: var(--bg-element);
-    position: absolute;
+    position: fixed;
     bottom: -100%;
-    width: 100%;
-    padding: 20px;
+    width: 100vw;
+    padding: 1.25rem;
     z-index: 2;
     max-height: 70vh;
     overflow: auto;
@@ -5527,6 +5507,20 @@ span.flatpickr-weekday {
 @media (max-width: 1020px) {
   .side-navigation--visible .side-navigation__list {
     bottom: 0;
+  }
+}
+
+@media (max-width: 1020px) {
+  .side-navigation--visible::after {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    pointer-events: initial;
   }
 }
 
@@ -5610,11 +5604,14 @@ span.flatpickr-weekday {
 }
 
 .side-navigation__button-mobile {
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   --button-bg: var(--c-accent);
   --button-color: var(--c-text-on);
   z-index: 1;
   display: none;
+  position: sticky;
+  top: 87vh;
+  bottom: 1rem;
 }
 @media (max-width: 1020px) {
   .side-navigation__button-mobile {
@@ -9010,7 +9007,7 @@ span.flatpickr-weekday {
   }
 }
 
-.header--scrolled {
+.header--scrolled:not(.header--mini) {
   background-color: #fff;
   border-bottom: 1px solid #c5cacf;
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
@@ -9958,6 +9955,10 @@ span.flatpickr-weekday {
   .button-burger {
     display: none;
   }
+}
+
+.header--mini {
+  position: relative;
 }
 
 .header--mini .header__container {
@@ -16029,6 +16030,10 @@ span.flatpickr-weekday {
   }
 }
 
+.page__checkout .sidebar__sticky {
+  margin-bottom: 0;
+}
+
 @media (min-width: 601px) {
   .page__checkout .page-heading__title:only-child {
     margin-bottom: 79px;
@@ -16037,27 +16042,27 @@ span.flatpickr-weekday {
 
 @media (min-width: 602px) {
   .page__checkout .sidebar-card {
-    padding-top: 37px;
-    padding-bottom: 21px;
+    padding-top: 2.3125rem;
+    padding-bottom: 1.3125rem;
   }
 }
 
 @media (min-width: 602px) {
   .page__checkout .cart-total__row {
-    margin-bottom: 17px;
+    margin-bottom: 1.0625rem;
   }
 }
 
 @media (min-width: 602px) {
   .page__checkout .cart-total {
-    padding-top: 27px;
-    padding-bottom: 40px;
+    padding-top: 1.6875rem;
+    padding-bottom: 2.5rem;
   }
 }
 
 @media (min-width: 602px) {
   .page__checkout .cart-total .cart-total__row {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
   }
 }
 
@@ -16104,7 +16109,7 @@ span.flatpickr-weekday {
 }
 
 .checkout__button-pick-location {
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .checkout__button-pick-location {
@@ -16115,9 +16120,9 @@ span.flatpickr-weekday {
 
 .account {
   display: grid;
-  grid-template-columns: 318px auto;
-  column-gap: 30px;
-  margin-bottom: 58px;
+  grid-template-columns: 22.0833333333vw auto;
+  column-gap: 1.875rem;
+  margin-bottom: 3.625rem;
 }
 @media (max-width: 1024px) {
   .account {
@@ -16128,16 +16133,18 @@ span.flatpickr-weekday {
   .account {
     grid-template-columns: 1fr;
     margin-bottom: 0;
+    padding-bottom: 120px;
+    position: relative;
   }
 }
 
 .account__title {
   font-weight: 400;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 110%;
-  margin-bottom: 31px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-bottom: 1.9375rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .account__title {
@@ -16186,11 +16193,6 @@ span.flatpickr-weekday {
 .account-personal-addresses__card .fieldset__title {
   margin-bottom: 54px;
 }
-@media (min-width: 602px) and (max-width: 768px) {
-  .account-personal-addresses__card .fieldset__title {
-    margin-bottom: 64px;
-  }
-}
 @media (max-width: 601px) {
   .account-personal-addresses__card .fieldset__title {
     margin-bottom: 32px;
@@ -16221,19 +16223,13 @@ span.flatpickr-weekday {
   }
 }
 
-@media (min-width: 602px) {
-  .page__account .fieldset {
-    padding-left: 50px;
-  }
-}
-@media (max-width: 601px) {
-  .page__account .fieldset {
-    padding-bottom: 34px;
-  }
-}
-
 .page__account .fieldset .calendar {
   margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .page__account .fieldset .calendar {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
