@@ -11298,9 +11298,9 @@ span.flatpickr-weekday {
   grid-template-areas: "card pic1 pic2 pic3" "card pic4 pic4 pic3";
   grid-template-columns: 49.7% 14.1% 13.5714285714% auto;
   grid-template-rows: 10vw 16vw;
-  row-gap: 8px;
-  column-gap: 8px;
-  margin-bottom: 8px;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .magazine__row {
@@ -11545,7 +11545,7 @@ span.flatpickr-weekday {
 
 .magazine-card-fullsize__img {
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   object-position: bottom;
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -11558,7 +11558,7 @@ span.flatpickr-weekday {
   margin-bottom: 1.25rem;
   font-size: 2.5rem;
   font-weight: 400;
-  line-height: 48px;
+  line-height: 1.2em;
   color: #ffffff;
   text-align: center;
 }
@@ -11615,10 +11615,10 @@ span.flatpickr-weekday {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
-  padding-top: 8px;
-  margin-bottom: 40px;
+  padding-top: 0.5rem;
+  margin-bottom: 2.5rem;
 }
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   .blog__gallery {
     grid-template-columns: 1fr;
     max-width: 100%;
