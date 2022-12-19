@@ -91,7 +91,7 @@
     z-index: 1;
     display: block;
     width: 100%;
-    height: 128px;
+    height: 0.16666666666666666rem;//128px;
     background: #fff;
     box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
     // transform: scaleY(0);
@@ -149,7 +149,8 @@
     z-index: 1;
     padding-bottom: 32px;
     padding-top: 0;
-    margin-left: -4px;
+    margin-left: 0;
+    margin-right: 0;
     width: calc(100% + 32px);
     padding-left: 38px;
     padding-right: 32px;
@@ -162,7 +163,7 @@
   }
 }
 .header--opened .header__nav {
-  top: 16px;
+  top: 1.2rem;//16px;
   transform: translateY(0);
   @media (min-width: 602px) and (max-width: 768px) {
     top: 42px
@@ -688,7 +689,8 @@
 
 .header__auth {
   @media (max-width: $burgerwidth) {
-    top: #{'calc(var(--index) * 25)'}; 
+    // top: #{'calc(var(--index) * 25)'}; 
+    top: #{'calc(var(--index) * 30)'}; 
     // top: 115px; 
   }
 }
