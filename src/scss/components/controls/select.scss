@@ -134,7 +134,7 @@
   margin-left: -1.25rem;//-20px;
   overflow-x: hidden;
   overflow-y: auto;
-  @include macscrollbar(12px);
+  @include macscrollbar(0.75rem);
   scrollbar-width: thin;
 }
 .select__list--dropdown .select__list::before {

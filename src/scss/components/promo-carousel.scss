@@ -155,23 +155,12 @@
 
 .promo-carousel__desc {
   font-size: 0.875rem;
-  // @media (min-width: 1800px) {
-  //   font-size: 18.67px;
-  // }
   @media (max-width: $mobile-break) {
     margin-bottom: 3.75rem;
   }
-  // @media (min-width: 602px) and (max-width: 768px) {
-  //   font-size: 28px;
-  // }
 }
 
 .promo-carousel__button {
-  @media  (max-width: $mobile-break) {
-    --fz-button: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   @media (min-width: 602px) and (max-width: 768px) {
     --fz-button: 28px;
     padding-left: 40px;
@@ -187,7 +176,7 @@
 .promo-carousel__pagination {
   position: absolute;
   bottom: 30px;
-  left: calc(75.421348314606741573033707865169% + 20px);
+  left: calc(75.421348314606741573033707865169% + 1.25rem);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -196,7 +185,7 @@
   width: 100%;
   transition: all 0.3s ease;
   @media (max-width: 1130px) {
-    left: calc(70.921348% + 20px);
+    left: calc(70.921348% + 1.25rem);//20
   }
   @media (max-width: $mobile-break) {
     left: 24px
@@ -246,6 +235,7 @@
   padding-bottom: 1.75rem;//28px;
   background-color: #5f6c75;
   border-radius: var(--brad-half);
+  display: none;
   @media (max-width: $mobile-break) {
     padding: 16.75px;
     display: grid;
@@ -258,6 +248,7 @@
     margin-top: 8px;
     border-radius:  var(--brad-regular);
     padding-bottom: 22px;
+    display: none;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     margin-top: 16px;
@@ -265,6 +256,9 @@
     border-radius: 12px;
     padding-bottom: 38px;
   }
+}
+.promo-carousel-card--singular {
+  display: grid;
 }
 .promo-carousel-card__title {
   margin-bottom: 27px;
@@ -294,11 +288,11 @@
 }
 .promo-carousel-card__button {
   @media (max-width: $mobile-break) {
-    --fz-button: 12px;
-    padding: 7px 17px 9px;
+    // --fz-button: 12px;
+    // padding: 7px 17px 9px;
     max-width: fit-content;
     margin-left: auto;
-    margin-right: 4px;
+    margin-right: 0.25rem;//4px;
     margin-top: auto;
   }
   @media (min-width: 602px) and (max-width: 768px) {

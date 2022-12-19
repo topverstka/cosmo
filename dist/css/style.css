@@ -2372,7 +2372,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 @media (max-width: 768px) {
   :root {
-    --fz-button: 12px;
+    --fz-button: 0.76rem;
     --lh-button: 126%;
   }
 }
@@ -3258,15 +3258,15 @@ select {
 }
 .select__list--dropdown .select__list::-webkit-scrollbar {
   background-color: #fff;
-  width: 12px;
+  width: 0.75rem;
 }
 .select__list--dropdown .select__list::-webkit-scrollbar-track {
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 .select__list--dropdown .select__list::-webkit-scrollbar-thumb {
   background-color: #000;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   border: 0.25rem solid #fff;
 }
 .select__list--dropdown .select__list::-webkit-scrollbar-button {
@@ -3530,13 +3530,6 @@ select {
     --fz-button: 24px;
   }
 }
-@media (max-width: 601px) {
-  .button {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
 .button[disabled] {
   pointer-events: none;
   cursor: default;
@@ -5880,13 +5873,6 @@ span.flatpickr-weekday {
   }
 }
 
-@media (max-width: 768px) {
-  .promo-carousel__button {
-    --fz-button: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 @media (min-width: 602px) and (max-width: 768px) {
   .promo-carousel__button {
     --fz-button: 28px;
@@ -5904,7 +5890,7 @@ span.flatpickr-weekday {
 .promo-carousel__pagination {
   position: absolute;
   bottom: 30px;
-  left: calc(75.4213483146% + 20px);
+  left: calc(75.4213483146% + 1.25rem);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -5915,7 +5901,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 1130px) {
   .promo-carousel__pagination {
-    left: calc(70.921348% + 20px);
+    left: calc(70.921348% + 1.25rem);
   }
 }
 @media (max-width: 768px) {
@@ -5975,6 +5961,7 @@ span.flatpickr-weekday {
   padding-bottom: 1.75rem;
   background-color: #5f6c75;
   border-radius: var(--brad-half);
+  display: none;
 }
 @media (max-width: 768px) {
   .promo-carousel-card {
@@ -5989,6 +5976,7 @@ span.flatpickr-weekday {
     margin-top: 8px;
     border-radius: var(--brad-regular);
     padding-bottom: 22px;
+    display: none;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -5998,6 +5986,10 @@ span.flatpickr-weekday {
     border-radius: 12px;
     padding-bottom: 38px;
   }
+}
+
+.promo-carousel-card--singular {
+  display: grid;
 }
 
 .promo-carousel-card__title {
@@ -6035,11 +6027,9 @@ span.flatpickr-weekday {
 
 @media (max-width: 768px) {
   .promo-carousel-card__button {
-    --fz-button: 12px;
-    padding: 7px 17px 9px;
     max-width: fit-content;
     margin-left: auto;
-    margin-right: 4px;
+    margin-right: 0.25rem;
     margin-top: auto;
   }
 }
@@ -14788,15 +14778,15 @@ span.flatpickr-weekday {
 }
 .stores-list::-webkit-scrollbar {
   background-color: #fff;
-  width: 0.9rem;
+  width: 0.7rem;
 }
 .stores-list::-webkit-scrollbar-track {
   background-color: #fff;
-  border-radius: 0.9rem;
+  border-radius: 0.7rem;
 }
 .stores-list::-webkit-scrollbar-thumb {
   background-color: #000;
-  border-radius: 0.9rem;
+  border-radius: 0.7rem;
   border: 0.25rem solid #fff;
 }
 .stores-list::-webkit-scrollbar-button {

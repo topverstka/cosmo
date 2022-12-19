@@ -49,7 +49,7 @@ if (document.querySelector('.product-hero-gallery') && document.querySelector('.
 
 if (document.querySelector('.promo-carousel')) {
   function normalizePaginationOffset(swiper) {
-    if (window.innerWidth > 769) return
+    // if (window.innerWidth > 769) return
 
     const currentSlideCard = swiper.slides[swiper.activeIndex].querySelector('.promo-carousel-card')
     setTimeout(() => {
@@ -58,6 +58,12 @@ if (document.querySelector('.promo-carousel')) {
       if (window.innerWidth > 601 && window.innerWidth <= 768) {
         initialPaginationBottomOffset = 98;
       }
+      if (window.innerWidth < 769){
+        const singularCard = document.querySelector('.promo-carousel-card--singular');
+        const singularCardHeight = singularCard.getBoundingClientRect().height
+        initialPaginationBottomOffset += singularCardHeight;
+      }
+
       const newPaginationOffset = Math.round(initialPaginationBottomOffset) + Math.round(paginationBottomOffset);
       swiper.pagination.el.style.bottom =  newPaginationOffset + 'px';
     }, 200)

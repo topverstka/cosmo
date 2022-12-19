@@ -93,7 +93,7 @@ $error: var(--c-error);
   --lh-button: 1.21;
   --fw-button: 600;
   @media (max-width: 768px) {
-    --fz-button: 12px;
+    --fz-button: 0.76rem;//12px;
     --lh-button: 126%;
   }
 

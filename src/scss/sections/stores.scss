@@ -100,7 +100,7 @@
   position: relative;
   width: calc(100% + 1.25rem);//20
   padding-right: 0.5rem;
-  @include macscrollbar(0.9rem);
+  @include macscrollbar(0.7rem);
   @media (max-width: 768px) {
     height: initial;
     overflow: initial;
