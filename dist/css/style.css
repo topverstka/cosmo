@@ -6249,9 +6249,13 @@ span.flatpickr-weekday {
   margin-bottom: 1.25rem;
   display: block;
 }
+@media (max-width: 768px) {
+  .grabber-carousel__slide-media {
+    height: calc(var(--index) * 42);
+  }
+}
 @media (max-width: 601px) {
   .grabber-carousel__slide-media {
-    height: 166px;
     margin-bottom: 8px;
   }
 }
@@ -7181,7 +7185,7 @@ span.flatpickr-weekday {
   transform: scale(1);
 }
 
-.poppa__closer {
+.poppa__closer, .carousel__button {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -7194,13 +7198,14 @@ span.flatpickr-weekday {
   --closer-color: #fff;
 }
 @media (min-width: 602px) and (max-width: 768px) {
-  .poppa__closer {
+  .poppa__closer, .carousel__button {
     font-size: 24px;
   }
 }
 
-.poppa__closer::before,
-.poppa__closer::after {
+.poppa__closer::before, .carousel__button::before,
+.poppa__closer::after,
+.carousel__button::after {
   position: absolute;
   top: 48%;
   left: 0;
@@ -7213,16 +7218,17 @@ span.flatpickr-weekday {
   transition: all 0.3s ease;
 }
 
-.poppa__closer::before {
+.poppa__closer::before, .carousel__button::before {
   transform: rotate(45deg);
 }
 
-.poppa__closer::after {
+.poppa__closer::after, .carousel__button::after {
   transform: rotate(-45deg);
 }
 
-.poppa__closer:hover::before,
-.poppa__closer:hover::after {
+.poppa__closer:hover::before, .carousel__button:hover::before,
+.poppa__closer:hover::after,
+.carousel__button:hover::after {
   background-color: var(--c-poppa-closer-hover);
 }
 
@@ -7274,7 +7280,7 @@ span.flatpickr-weekday {
   background: var(--bg-poppa-overlay);
 }
 
-.poppa__closer {
+.poppa__closer, .carousel__button {
   --closer-color: #fff;
   font-size: 1.25rem;
   color: transparent;
@@ -7282,7 +7288,7 @@ span.flatpickr-weekday {
   border-radius: var(--radius-poppa);
 }
 @media (max-width: 768px) {
-  .poppa__closer {
+  .poppa__closer, .carousel__button {
     font-size: 0.75rem;
   }
 }
@@ -7318,26 +7324,27 @@ span.flatpickr-weekday {
   }
 }
 
-.poppa__closer {
+.poppa__closer, .carousel__button {
   top: 0.75rem;
   right: 1.5rem;
 }
 @media (max-width: 601px) {
-  .poppa__closer {
-    top: 22px;
-    width: 50px;
-    height: 50px;
+  .poppa__closer, .carousel__button {
+    top: 1.375rem;
+    width: 2.125rem;
+    height: 2.125rem;
   }
 }
 
 @media (min-width: 769px) {
-  body:not(.os-linux):not(.os-macos) .poppa__closer {
+  body:not(.os-linux):not(.os-macos) .poppa__closer, body:not(.os-linux):not(.os-macos) .carousel__button {
     right: 27px;
   }
 }
 
-.poppa__closer::before,
-.poppa__closer::after {
+.poppa__closer::before, .carousel__button::before,
+.poppa__closer::after,
+.carousel__button::after {
   top: 44%;
   right: 0;
   width: 85%;
@@ -7346,8 +7353,9 @@ span.flatpickr-weekday {
   margin-left: auto;
 }
 @media (max-width: 768px) {
-  .poppa__closer::before,
-.poppa__closer::after {
+  .poppa__closer::before, .carousel__button::before,
+.poppa__closer::after,
+.carousel__button::after {
     top: 46%;
     width: 70%;
   }
@@ -14619,6 +14627,12 @@ span.flatpickr-weekday {
   overflow: hidden;
 }
 
+.shops__heading {
+  max-width: calc(100% - 8.2638888889vw);
+  margin-right: 0;
+  padding-right: 8.2638888889vw;
+}
+
 .shops__title {
   margin-bottom: 0;
   padding-left: 0;
@@ -14632,8 +14646,8 @@ span.flatpickr-weekday {
 
 @media (max-width: 1024px) {
   .shops__container .section-heading {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -19212,8 +19226,7 @@ span.flatpickr-weekday {
 }
 
 .carousel__button svg {
-  width: 2rem;
-  height: 2rem;
+  opacity: 0;
 }
 
 @media (min-width: 769px) {

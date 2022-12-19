@@ -347,9 +347,15 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #fff;
   }
 }
+.carousel__button {
+  // width: 2rem;
+  // height: 2rem;
+  @extend .poppa__closer;
+}
 .carousel__button svg {
-  width: 2rem;
-  height: 2rem;
+  // width: 2rem;
+  // height: 2rem;
+  opacity: 0;
 }
 
 .page__about .about-features__columns {

@@ -197,9 +197,9 @@
   top: 0.75rem;//12px;
   right: 1.5rem;//11px;
   @media (max-width: 601px) {
-    top: 22px;
-    width: 50px;
-    height: 50px;
+    top: 1.375rem;//22px;
+    width: 2.125rem;//50px;
+    height: 2.125rem;//50px;
   }
 }
 body:not(.os-linux):not(.os-macos) .poppa__closer {

@@ -16,6 +16,11 @@
   overflow: hidden;
 }
 
+.shops__heading {
+  max-width: calc(100% - 8.2638888889vw);
+  margin-right: 0;
+  padding-right: 8.2638888889vw;
+}
 .shops__title {
   margin-bottom: 0;
   padding-left: 0;
@@ -27,8 +32,8 @@
 
 .shops__container .section-heading {
   @media (max-width: 1024px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .shops__button-all {
