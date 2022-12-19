@@ -9,6 +9,11 @@ function openBurger() {
   header.classList.add(HEADER_OPENED_CLASS);
   burger.classList.add(BURGER_OPENED)
   bodyLock(true);
+  const stickyHeader = document.querySelector('.page-heading--sticky-run');
+
+  if (!stickyHeader) return;
+
+  stickyHeader.style.transform = '';
 }
 function closeBurger() {
   header.classList.remove(HEADER_OPENED_CLASS);

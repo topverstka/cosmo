@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 22.083333333333332vw auto;//318px auto;
   column-gap: 40px;
+  position: relative;
   @media (max-width: 1279px) {
     grid-template-columns: 226px auto;
     column-gap: 25px;
@@ -270,10 +271,10 @@
   }
 }
 .catalog-products__filters-button-mobile {
-  position: fixed;
-  bottom: 8px;
-  right: 8px;
-  width: 48%;
+  // position: fixed;
+  // bottom: 8px;
+  // right: 8px;
+  // width: 48%;
 }
 .catalog-products__filters .select__list--dropdown .select__list {
   @media (max-width: 1023px) {

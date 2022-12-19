@@ -14,7 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 8px;
+    // padding-bottom: 8px;
+    padding-bottom: 1.25rem;
     pointer-events: none;
     transition: all 0.3s ease;
   }
@@ -131,7 +132,8 @@
     display: flex;
     justify-content: center;
     pointer-events: auto;
-    width: 359px;
+    max-width: 359px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     .button__text {
@@ -141,18 +143,24 @@
       pointer-events: none;
     }
   }
+  @media (max-width: 768px) {
+    max-width: 46%;
+  }
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 12px;
   }
   @media (max-width: 601px) {
-    width: calc(100% - 16px);
+    // max-width: 46%;
   }
+  // @media (max-width: 601px) {
+  //   width: calc(100% - 16px);
+  // }
 }
 
 .side-navigation__button-mobile--half {
   max-width: 46%;
   // left: 8px;
-  margin-left: 8px;
+  // margin-left: 8px;
   @media (min-width: 602px) and (max-width: 768px) {
     margin-left: 16px;
   }
