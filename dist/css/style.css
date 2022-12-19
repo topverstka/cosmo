@@ -9011,6 +9011,10 @@ span.flatpickr-weekday {
   margin-left: 0;
 }
 
+.header--hidden {
+  transform: translateY(-100%);
+}
+
 .header__container {
   position: relative;
   z-index: 1;

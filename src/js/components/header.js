@@ -1,6 +1,6 @@
 "use strict"
 /**
- * header__nav
+ * Бургер
  */
 const BURGER_OPENED_WIDTH = 920;
 const headerNavLinks = document.querySelectorAll('.header__nav-link');
@@ -15,9 +15,8 @@ headerNavLinks.forEach((link) => {
 
 
 /**
- * header__controls
+ * Кнопки открытия и закрытия миникорзины и аутенфикации
  */
-
 const minicart = document.querySelector('.minicart');
 const buttonCart = document.querySelector('.button-cart');
 const miniAuth = document.querySelector('.auth');
@@ -71,7 +70,7 @@ if (buttonCart && minicart) {
 
 
 /**
- * Header Auth 
+ * Кнопки атунтикации
  */
 function showAuth() {
     buttonAuth.parentElement.querySelector('.auth').classList.add('auth--visible')
@@ -151,7 +150,7 @@ function isClickedBeyond(e, selector) {
 }
 
 /**
- * Header Snacks
+ * Снекбары выбора языка и города
  */
 const SNACKS_SHOW_CLASS = 'header__snacks--show';
 const SNACK_VISIBLE_CLASS = 'header-snack--visible';
@@ -211,12 +210,61 @@ document.getElementById("dropdown-city").addEventListener("change", (e) => {
 
 
 
+/**
+ * Липкая шапка
+ */
+
 const header = document.querySelector('.header');
 const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
+let lastScrollY = 0;
 function isWindowScrolled() {
-  return window.scrollY > 5;
+
+if (window.scrollY > lastScrollY) {
+    header.classList.add('header--hidden');
+
+    const event = new Event("header-hide");
+    header.dispatchEvent(event);
+  } else {
+    header.classList.remove('header--hidden');
+
+    const event = new Event("header-show");
+    header.dispatchEvent(event);
+  }
+
+  setTimeout(() => {
+    lastScrollY  = window.scrollY;
+  }, 5)
+
+  return lastScrollY > 5;
 }
+
+const debounce = (callback, wait) => {
+  let timeoutId = null;
+  return (...args) => {
+    window.clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(() => {
+      callback.apply(null, args);
+    }, wait);
+  };
+}
+
+header.addEventListener("header-hide", (e) => {
+  const stickyHeader = document.querySelector('.page-heading--sticky-run');
+
+  const headerHeight = header.getBoundingClientRect().height;
+
+  if (!stickyHeader) return;
+
+  stickyHeader.style.transform = `translateY(-${headerHeight}px)`;
+});
+header.addEventListener("header-show", (e) => {
+  const stickyHeader = document.querySelector('.page-heading--sticky-run');
+
+  if (!stickyHeader) return;
+
+  stickyHeader.style.transform = '';
+});
 
 function stickyHeader() {
   if (isWindowScrolled()) {
