@@ -12329,6 +12329,10 @@ span.flatpickr-weekday {
   margin-bottom: 1rem;
 }
 
+.blog-article__media {
+  display: block;
+}
+
 .blog-article__media-pic {
   display: block;
   height: 100%;
