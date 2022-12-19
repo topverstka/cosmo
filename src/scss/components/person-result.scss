@@ -103,11 +103,13 @@
 }
 
 .person-result__compare .person-result__media {
-  max-width: 238px;
+  // max-width: 238px;
+  max-width: 16.52777777777778vw;
   // height: 348px;
   margin-bottom: 0;
   height: var(--gallery-item-h, calc(var(--index) * 24));//348
   @media (max-width: 768px) {
+    max-width: 48%;
     height: var(--gallery-item-h, calc(var(--index) * 48));//348
   }
 }

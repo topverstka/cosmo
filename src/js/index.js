@@ -119,6 +119,9 @@ function initAccordionGallery() {
       if (!expandButton) return;
 
       expandButton.addEventListener('click', () => {
+        if (gallery.querySelector('.gallery-accordion-modal')) return;
+        if (gallery.querySelector('.modal-gallery-crousel')) return;
+        
         expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
         setTimeout(() => {
           expandButton.style.display = 'none';

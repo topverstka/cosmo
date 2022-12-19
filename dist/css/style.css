@@ -8289,6 +8289,10 @@ span.flatpickr-weekday {
   font-family: unset;
 }
 
+.modal-gallery-crousel {
+  display: none;
+}
+
 .row-filters {
   justify-content: flex-start;
   align-items: center;
@@ -8745,12 +8749,13 @@ span.flatpickr-weekday {
 }
 
 .person-result__compare .person-result__media {
-  max-width: 238px;
+  max-width: 16.5277777778vw;
   margin-bottom: 0;
   height: var(--gallery-item-h, calc(var(--index) * 24));
 }
 @media (max-width: 768px) {
   .person-result__compare .person-result__media {
+    max-width: 48%;
     height: var(--gallery-item-h, calc(var(--index) * 48));
   }
 }
@@ -8851,6 +8856,10 @@ span.flatpickr-weekday {
 .gallery-accordion__button-more--hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.gallery-accordion-modal {
+  display: none;
 }
 
 .message {
