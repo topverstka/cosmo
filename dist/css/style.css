@@ -14788,15 +14788,15 @@ span.flatpickr-weekday {
 }
 .stores-list::-webkit-scrollbar {
   background-color: #fff;
-  width: 1rem;
+  width: 0.9rem;
 }
 .stores-list::-webkit-scrollbar-track {
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.9rem;
 }
 .stores-list::-webkit-scrollbar-thumb {
   background-color: #000;
-  border-radius: 1rem;
+  border-radius: 0.9rem;
   border: 0.25rem solid #fff;
 }
 .stores-list::-webkit-scrollbar-button {
