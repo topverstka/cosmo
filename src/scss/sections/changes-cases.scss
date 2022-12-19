@@ -9,6 +9,9 @@
 }
 .changes-cases--has-mb {
   margin-bottom: 120px;
+  @media (max-width: 576px) {
+    margin-bottom: 3.75rem;
+  }
 }
 .changes-cases__gallery {
   display: grid;
@@ -81,8 +84,8 @@
   margin-bottom: 26px;
   display: block;
   height: #{'calc(var(--index) * 16)'};//196px;
-  @media (min-width: 602px) and (max-width: 768px) {
-    height: 392px;
+  @media (max-width: 768px) {
+    height: #{'calc(var(--index) * 54.3)'};
   }
 }
 

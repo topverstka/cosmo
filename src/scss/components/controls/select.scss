@@ -52,7 +52,7 @@
   }
 }
 .select__list .select__item.is-selected.select__item--selectable {
-  background-color: #f8f8f8 !important;
+  background-color: #F0F3F5 !important;//#f8f8f8 !important;
 }
 
 .select__list--dropdown {
@@ -112,7 +112,7 @@
   z-index: 2;
   display: block;
   width: calc(100% - 5px);
-  height: 30px;
+  height: 1rem;//30px;
   // height: 100px;
   pointer-events: none;
   content: "";
@@ -147,7 +147,7 @@
   display: block;
   width: calc(100% - 14px);
   height: 30px;
-  margin-bottom: -10px;
+  margin-bottom: 0;//-10px;
   pointer-events: none;
   content: "";
   background: linear-gradient(

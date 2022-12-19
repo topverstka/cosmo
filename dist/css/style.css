@@ -3158,7 +3158,7 @@ select {
 }
 
 .select__list .select__item.is-selected.select__item--selectable {
-  background-color: #f8f8f8 !important;
+  background-color: #F0F3F5 !important;
 }
 
 .select__list--dropdown {
@@ -3230,7 +3230,7 @@ select {
   z-index: 2;
   display: block;
   width: calc(100% - 5px);
-  height: 30px;
+  height: 1rem;
   pointer-events: none;
   content: "";
   background: linear-gradient(0deg, #ffffff 24.79%, rgba(255, 255, 255, 0) 100%);
@@ -3281,7 +3281,7 @@ select {
   display: block;
   width: calc(100% - 14px);
   height: 30px;
-  margin-bottom: -10px;
+  margin-bottom: 0;
   pointer-events: none;
   content: "";
   background: linear-gradient(180deg, #ffffff 24.79%, rgba(255, 255, 255, 0) 100%);
@@ -4550,6 +4550,10 @@ select {
     font-size: 32px;
     margin-bottom: 12px;
   }
+}
+
+.radio__title:only-child {
+  margin-bottom: 0.2rem;
 }
 
 .radio__desc {
@@ -10946,6 +10950,11 @@ span.flatpickr-weekday {
 .changes-cases--has-mb {
   margin-bottom: 120px;
 }
+@media (max-width: 576px) {
+  .changes-cases--has-mb {
+    margin-bottom: 3.75rem;
+  }
+}
 
 .changes-cases__gallery {
   display: grid;
@@ -11035,9 +11044,9 @@ span.flatpickr-weekday {
   display: block;
   height: calc(var(--index) * 16);
 }
-@media (min-width: 602px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .changes-case-card-carousel__pic {
-    height: 392px;
+    height: calc(var(--index) * 54.3);
   }
 }
 
@@ -11861,6 +11870,12 @@ span.flatpickr-weekday {
 .blog-card__media-compare .blog-card__pic,
 .blog-card__media-compare .blog-card__img {
   border-radius: var(--brad-half);
+}
+@media (max-width: 768px) {
+  .blog-card__media-compare .blog-card__pic,
+.blog-card__media-compare .blog-card__img {
+    height: calc(var(--index) * 85);
+  }
 }
 
 .blog-card__img {
@@ -13208,7 +13223,7 @@ span.flatpickr-weekday {
 }
 @media (max-width: 576px) {
   .categories:last-of-type {
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
   }
 }
 @media (min-width: 1025px) {
@@ -13228,7 +13243,7 @@ span.flatpickr-weekday {
   margin-left: 4px;
   margin-right: 4px;
   min-height: 24vw;
-  width: calc(25% - 0.5rem);
+  width: calc(24.9% - 0.5rem);
   margin-bottom: 0.5rem;
   position: relative;
   --brad: var(--brad-regular);
@@ -13249,6 +13264,7 @@ span.flatpickr-weekday {
     min-height: 40vw;
     margin-left: 0;
     margin-right: 0;
+    padding: 0.55rem;
   }
 }
 @media (min-width: 602px) and (max-width: 768px) {
@@ -13260,6 +13276,19 @@ span.flatpickr-weekday {
   .categories-card {
     padding: 12px;
   }
+}
+
+.categories-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: var(--brad-regular);
 }
 
 @media (max-width: 1024px) {
@@ -13279,17 +13308,17 @@ span.flatpickr-weekday {
     max-width: 48.5%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .categories:not(.categories-catalog) .categories-card:first-of-type {
     width: 100%;
     max-width: 100%;
   }
 }
 
-@media (max-width: 1024px) and (min-width: 700px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   .categories:not(.categories-catalog) .categories-card:nth-of-type(2) {
-    width: 48.5%;
-    max-width: 48.5%;
+    width: 49.3%;
+    max-width: 49.3%;
   }
 }
 
@@ -13311,9 +13340,10 @@ span.flatpickr-weekday {
   .categories-card--tight {
     width: 32%;
     min-height: 228px;
+    margin-bottom: 0.6rem;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .categories-card--tight {
     width: 48.5%;
     margin-left: 0;
@@ -15963,11 +15993,6 @@ span.flatpickr-weekday {
 @media (max-width: 768px) {
   .related-products__gallery {
     grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 601px) {
-  .related-products__gallery {
-    row-gap: 24px;
   }
 }
 

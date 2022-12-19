@@ -14,7 +14,7 @@
 .categories:last-of-type {
   margin-bottom: 0;
   @media (max-width: 576px) {
-    margin-bottom: 60px
+    margin-bottom: 3.75rem;//60px
   }
   @media (min-width: 1025px) {
     margin-top: -10px;
@@ -32,7 +32,7 @@
   margin-right: 4px;
   // min-height: 348px;
   min-height: 24vw;
-  width: calc(25% - 0.5rem);
+  width: calc(24.9% - 0.5rem);
   margin-bottom: 0.5rem;
   position: relative;
   --brad: var(--brad-regular);
@@ -49,6 +49,7 @@
     min-height: 40vw;
     margin-left: 0;
     margin-right: 0;
+    padding: 0.55rem;
   }
   @media (min-width: 602px) and (max-width: 768px) {
     --brad: 24px;
@@ -56,6 +57,18 @@
   @media (max-width: 601px) {
     padding: 12px;
   }
+}
+.categories-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: var(--brad-regular);
 }
 .categories:not(.categories-catalog) .categories-card {
   @media (max-width: 1024px) {
@@ -71,15 +84,15 @@
     width: 48.5%;
     max-width: 48.5%;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     width: 100%;
     max-width: 100%;
   }
 }
 .categories:not(.categories-catalog) .categories-card:nth-of-type(2) {
-  @media (max-width: 1024px) and (min-width: 700px) {
-    width: 48.5%;
-    max-width: 48.5%;
+  @media (max-width: 1024px) and (min-width: 769px) {
+    width: 49.3%;
+    max-width: 49.3%;
   }
 }
 .categories-card--wide  {
@@ -95,8 +108,9 @@
   @media (max-width: 1024px) {
     width: 32%;
     min-height: 228px;
+    margin-bottom: 0.6rem;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     width: 48.5%;
     margin-left: 0;
     margin-right: 0;

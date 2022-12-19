@@ -84,6 +84,9 @@
     margin-bottom: 12px;
   }
 }
+.radio__title:only-child {
+  margin-bottom: 0.2rem;
+}
 .radio__desc {
   display: block;
   font-family: 'RF Dewi', sans-serif;

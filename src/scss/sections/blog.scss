@@ -178,6 +178,9 @@
 .blog-card__media-compare .blog-card__pic,
 .blog-card__media-compare .blog-card__img {
   border-radius: var(--brad-half);
+  @media (max-width: 768px) {
+    height: #{'calc(var(--index) * 85)'};
+  }
 }
 .blog-card__img {
   object-fit: cover;
