@@ -6,11 +6,11 @@
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  padding: 7.5px;
-  margin-bottom: 41px;
+  padding: 0.46875rem;//7.5px;
+  margin-bottom: 2.5625rem;//41px;
   background-color: transparent;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
 
   @media (max-width: 1100px) {
     margin-bottom: 40px;
@@ -27,10 +27,10 @@
 .search__icon {
   position: absolute;
   top: 50.6%;
-  left: 16px;
+  left: 1rem;
   z-index: 3;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   pointer-events: none;
   stroke: var(--c-accent);
   transform: translateY(-50%) scale(1.35);
@@ -42,10 +42,10 @@
 .search__input {
   display: block;
   width: 100%;
-  padding-top: 8px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 12.5px;
+  padding-top: 0.5rem;
+  padding-right: 1.25rem;//20px;
+  padding-bottom: 0.625rem;//10px;
+  padding-left: 0.78125rem;//12.5px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.2;
@@ -60,22 +60,22 @@
     padding-right: 40px
   }
   @media (max-width: 601px) {
-    font-size: 12px;
+    font-size: 0.75rem;
     padding-top: 0;
-    padding-bottom: 3px;
-    padding-left: 17px;
+    padding-bottom: 0.1875rem;//3px;
+    padding-left: 1.0625rem;//17px;
   }
 }
 .search__input::placeholder {
   color: #a1aeb3;
 }
 .search__button {
-  --size: 45px;
+  --size: 2.8125rem;//45px;
   width: var(--size);
   min-width: var(--size);
   height: var(--size);
   background: #f0f3f5;
-  border-radius: 6px;
+  border-radius: var(--brad-half);
   transition: all 0.3s ease;
   @media (min-width: 602px) and (max-width: 768px) {
     --size: 75px;
@@ -87,7 +87,7 @@
   }
 }
 .search__button-icon {
-  --size: 24px;
+  --size: 1.5625rem;//24px;
   width: var(--size);
   min-width: var(--size);
   height: var(--size);
@@ -120,11 +120,11 @@
 }
 .search-results__link {
   display: block;
-  margin-bottom: 19px;
+  margin-bottom: 1.1875rem;//19px;
   font-size: var(--fz-body);
   line-height: var(--lh-body);
   transition: all 0.3s ease;
-  @media (max-width: 575px) {
+  @media (max-width: 601px) {
     margin-bottom: 20px;
   }
 }
@@ -141,21 +141,13 @@
 .partners__search {
   display: flex;
 }
-// .partners__search .search__form {
-//     @media (max-width: 1100px) and (min-width: 768px) {
-//         margin-bottom: 38px;
-//     }
-//     @media (max-width: 575px) {
-//         margin-bottom: 17px;
-//     }
-// }
 
 .section__search .section__title {
   @media (max-width: 1100px) {
     margin-bottom: 20px;
     font-size: var(--fz-h2);
   }
-  @media (max-width: 575px) {
-    margin-bottom: 16px;
+  @media (max-width: 601px) {
+    margin-bottom: 1rem;
   }
 }
