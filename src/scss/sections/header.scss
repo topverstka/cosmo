@@ -99,7 +99,7 @@
     transition: all 0.3s ease;
   }
   @media (min-width: 602px) and (max-width: 768px) {
-    height: 226px;
+    // height: 226px;
   }
 }
 .header--opened .header__container::after {
@@ -138,7 +138,7 @@
     transform: translateY(-100vh);
     transition: all 0.3s ease;
     background: #F0F3F5;
-    left: 0;
+    left: -5px;
     // top: 25px;
     top: -25vh;
     width: 100%;

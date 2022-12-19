@@ -63,7 +63,11 @@ if (document.querySelector('.promo-carousel')) {
     }, 200)
   }
   let promoSlider = new Swiper(".promo-carousel", {
-    modules: [Navigation, Autoplay, Pagination],
+    modules: [Navigation, Autoplay, Pagination, EffectFade],
+    effect: 'fade',
+      fadeEffect: {
+      crossFade: true
+    },
     spaceBetween: 10,
     autoHeight: true,
     autoplay: {

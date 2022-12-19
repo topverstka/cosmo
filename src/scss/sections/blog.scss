@@ -27,7 +27,7 @@
   grid-template-columns: auto 24.3vw;
   // grid-template-columns: auto 350px;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: var(--brad-regular);
   @media (max-width: 1400px) and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -73,16 +73,6 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 2.5rem; //main.html 40px
-  // padding: 50px;
-  // @media (max-width: 1400px) and (min-width: 1281px) {
-  //   padding: 40px;
-  // }
-  // @media (min-width: 1025px) and (max-width: 1280px) {
-  //   padding: 35px;
-  // }
-  // @media (min-width: 769px) and (max-width: 1024px) {
-  //   padding: 28px;
-  // }
   @media (min-width: 602px) and (max-width: 768px) {
     padding: 81px;
   }
@@ -177,7 +167,7 @@
 .blog-card__media-compare {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 8px;
+  column-gap: 0.5rem;
   width: 100%;
   margin-left: auto;
 }
@@ -191,7 +181,7 @@
 }
 .blog-card__img {
   object-fit: cover;
-  border-radius: var(--brad-regular);
+  border-radius: var(--brad-half);
   @media (min-width: 602px) and (max-width: 768px) {
     border-radius: 25px;
   }

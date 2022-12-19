@@ -179,22 +179,14 @@
   padding-bottom: 80px;
   overflow: hidden;
   border-radius: var(--brad-regular);
-  @media (max-width: 1024px) and (min-width: 768px) {
-    height: 480px;
-  }
-  @media (max-width: 962px) {
-    height: 400px;
-  }
   @media (min-width: 602px) and (max-width: 768px) {
-    height: 500px;
     border-radius: 24.5px;
   }
-  @media (max-width: 601px) {
-    height: 360px;
-    padding-bottom: 44px;
+  @media (max-width: 768px) {
+    height: #{'calc(var(--index) * 98)'};
   }
-  @media (min-width: 1800px) {
-    // height: 740px;
+  @media (max-width: 601px) {
+    padding-bottom: 44px;
   }
 }
 .magazine-card-fullsize::before {
@@ -230,22 +222,22 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  @media (max-width: 962px) {
-    left: -15%;
-    top: -30%;
-    width: 120%;
-    height: 130%;
-  }
+  // @media (max-width: 962px) {
+  //   left: -15%;
+  //   top: -30%;
+  //   width: 120%;
+  //   height: 130%;
+  // }
   @media (max-width: 768px) {
     left: -28%;
     top: -58%;
     width: 160%;
     height: 160%;
   }
-  @media (min-width: 1850px) {
-    top: -4%;
-    height: 110%;
-  }
+  // @media (min-width: 1850px) {
+  //   top: -4%;
+  //   height: 110%;
+  // }
 }
 .magazine-card-fullsize__img {
   object-fit: cover;
