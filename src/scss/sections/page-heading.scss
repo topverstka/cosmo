@@ -21,7 +21,8 @@
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
 }
 .page-heading--sticky-run .page-heading__nav-list {
-  transform: translateY(-5px);
+  // transform: translateY(0.3125rem);
+  transform: translateY(-0.15rem);
 }
 .breadcrumbs ~ .page-heading {
   width: 100%;
@@ -90,7 +91,7 @@
 }
 
 .page-heading__nav {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   @media (max-width: 968px) {
     padding-bottom: 0;
     overflow: hidden;
