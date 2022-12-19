@@ -11,7 +11,7 @@
   max-width: 18.75vw;//270px;
   min-width: 270px;
   background-color: #F0F3F5;
-  border-radius: var(--brad-regular);
+  border-radius: var(--brad-half);
   padding: 0.6875rem;//11px;
   position: relative;
   @media (min-width: 602px) and (max-width: 768px) {
@@ -186,6 +186,9 @@
   font-weight: 600;
   font-size: 0.75rem;//12px;
   line-height: 1.1666666666666667;
+  background-color: #fff;
+  width: 12.885714%;
+  flex-basis: 12.885714%;
   @media (min-width: 602px) and (max-width: 768px) {
     max-height: 52px;
     height: 52px;
@@ -282,4 +285,17 @@ span.flatpickr-weekday {
   @media (max-width: 380px) {
     right: 20px;
   }
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover,
+.flatpickr-day.notAllowed,
+.flatpickr-day.notAllowed.prevMonthDay,
+.flatpickr-day.notAllowed.nextMonthDay {
+  background: none;
+}
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover {
+  color: unset;
+  font-weight: 600;
 }
