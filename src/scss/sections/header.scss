@@ -94,7 +94,7 @@
     height: 128px;
     background: #fff;
     box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
-    transform: scaleY(0);
+    // transform: scaleY(0);
     transform-origin: top;
     transition: all 0.3s ease;
   }
@@ -339,7 +339,7 @@
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: all 0.65s ease, opacity 0.3s ease, pointer-events 0s;
-  transform: scaleY(0);
+  // transform: scaleY(0);
   transform-origin: top;
   @media (max-width: $burgerwidth) {
     position: static;
@@ -688,7 +688,8 @@
 
 .header__auth {
   @media (max-width: $burgerwidth) {
-    top: 115px; 
+    top: #{'calc(var(--index) * 25)'}; 
+    // top: 115px; 
   }
 }
 

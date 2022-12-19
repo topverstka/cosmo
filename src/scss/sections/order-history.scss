@@ -156,8 +156,6 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 0px;
   transition: all 0.3s ease;
-  transform-origin: top;
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   max-height: 1px;
@@ -240,7 +238,6 @@
   margin-bottom: 0px;
   transition: all 0.3s ease;
   transform-origin: top;
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   max-height: 1px;
@@ -329,7 +326,6 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 0.5rem;
   transform-origin: top;
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
@@ -435,7 +431,6 @@
 .order-history-card:not(.order-history-card--opened) .order-history__product .product-card__info {
   max-width: 0px;
   overflow: hidden;
-  transform: scaleX(0);
   transform-origin: left;
 }
 
@@ -464,7 +459,6 @@
 }
 .order-history-card--opened .order-history-card__info {
   pointer-events: initial;
-  transform: scaleY(1);
   opacity: 1;
   max-height: initial;
   overflow: initial;
@@ -478,7 +472,6 @@
 }
 .order-history-card--opened .order-history-card__products-title {
   pointer-events: initial;
-  transform: scaleY(1);
   opacity: 1;
   max-height: initial;
   overflow: initial;
@@ -560,7 +553,6 @@
 }
 .order-history-card--opened .order-hisotry-card__total-full {
   pointer-events: initial;
-  transform: scaleY(1);
   opacity: 1;
   max-height: initial;
   overflow: initial;
@@ -571,7 +563,6 @@
 }
 
 .order-history-card--opened .order-history-card__total-short {
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   max-height: 1px;

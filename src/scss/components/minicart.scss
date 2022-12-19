@@ -1,7 +1,5 @@
 .minicart {
   opacity: 0;
-  transform-origin: top;
-  transform: scaleY(0);
   transition: all 0.3s ease, pointer-events 0s;
   position: absolute;
   width: 21.52777777777778vw;//310px;
@@ -12,6 +10,7 @@
   padding: 0.5rem;//8px;
   padding-top: 1.25rem;//20px;
   padding-right: 0;
+  pointer-events: none;
   @media (max-width: 1020px) {
     right: -8px;
     top: 51px;
@@ -27,7 +26,6 @@
 }
 .minicart--visible {
   opacity: 1;
-  transform: scaleY(1);
   pointer-events: initial;
 }
 .minicart__message {

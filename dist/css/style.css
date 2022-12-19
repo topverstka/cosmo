@@ -3174,7 +3174,7 @@ select {
   box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
   opacity: 0;
   transition: all 0.3s ease;
-  transform: scaleY(0);
+  pointer-events: none;
   transform-origin: top;
   padding-right: 1.625rem;
 }
@@ -3185,7 +3185,7 @@ select {
 
 .select.is-open .select__list--dropdown {
   opacity: 1;
-  transform: scaleY(1);
+  pointer-events: initial;
 }
 
 @media (max-width: 1023px) {
@@ -3442,6 +3442,7 @@ select {
   cursor: pointer;
 }
 
+.select.is-open .select__list--multiple::after,
 .select.is-open .select__list--single::after {
   transform: rotate(0);
 }
@@ -6515,7 +6516,8 @@ span.flatpickr-weekday {
   background-color: var(--button-bg);
   border-radius: 0 100px 100px 0;
   transition: color 0s, background-color 0.3s, transform 0.3s;
-  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
   transform-origin: left;
 }
 @media (min-width: 1800px) {
@@ -6533,14 +6535,9 @@ span.flatpickr-weekday {
 }
 
 @media (any-hover: hover) {
-  .product-card__button-add:hover .button__text {
-    transform: scaleX(1);
-  }
-}
-
-@media (any-hover: hover) {
-  .product-card--in-cart .product-card__button-add:hover .button__text {
-    transform: scaleX(0);
+  .product-card:not(.product-card--in-cart) .product-card__button-add:hover .button__text {
+    opacity: 1;
+    pointer-events: initial;
   }
 }
 
@@ -6935,7 +6932,7 @@ span.flatpickr-weekday {
   overflow: hidden;
   white-space: nowrap;
   transform-origin: right;
-  transform: scaleX(0);
+  pointer-events: none;
   opacity: 0;
 }
 @media (max-width: 768px) and (min-width: 602px) {
@@ -6946,7 +6943,7 @@ span.flatpickr-weekday {
 
 .product-card__tooltip:hover .product-card__tooltip-desc {
   white-space: initial;
-  transform: scaleX(1);
+  pointer-events: initial;
   opacity: 1;
 }
 
@@ -7366,6 +7363,11 @@ span.flatpickr-weekday {
   display: initial;
 }
 
+.search-pop__box {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 @media (max-width: 601px) {
   .search-pop__gallery {
     margin-left: -20px;
@@ -7449,6 +7451,12 @@ span.flatpickr-weekday {
   .search-pop__suggests-track {
     padding-left: 44px;
     padding-right: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .search-pop__suggests-track {
+    padding-left: 2.5rem;
+    padding-left: 2.5rem;
   }
 }
 
@@ -7544,16 +7552,22 @@ span.flatpickr-weekday {
   font-weight: 400;
   line-height: 140%;
   color: #a1aeb3;
+  padding-left: 1.25rem;
 }
 @media (min-width: 768px) {
   .search-pop__results-count {
-    padding-left: 1.25rem;
     margin-bottom: 2.3125rem;
   }
 }
 
 .search-pop__title + .search-pop__gallery {
   margin-top: 2.5rem;
+}
+@media (max-width: 786px) {
+  .search-pop__title + .search-pop__gallery {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 @media (min-width: 602px) and (max-width: 768px) {
@@ -7576,8 +7590,6 @@ span.flatpickr-weekday {
 
 .minicart {
   opacity: 0;
-  transform-origin: top;
-  transform: scaleY(0);
   transition: all 0.3s ease, pointer-events 0s;
   position: absolute;
   width: 21.5277777778vw;
@@ -7588,6 +7600,7 @@ span.flatpickr-weekday {
   padding: 0.5rem;
   padding-top: 1.25rem;
   padding-right: 0;
+  pointer-events: none;
 }
 @media (max-width: 1020px) {
   .minicart {
@@ -7610,7 +7623,6 @@ span.flatpickr-weekday {
 
 .minicart--visible {
   opacity: 1;
-  transform: scaleY(1);
   pointer-events: initial;
 }
 
@@ -7877,8 +7889,6 @@ span.flatpickr-weekday {
 
 .auth {
   opacity: 0;
-  transform-origin: top;
-  transform: scaleY(0);
   transition: all 0.3s ease, pointer-events 0s;
   position: absolute;
   width: 21.5277777778vw;
@@ -7886,8 +7896,14 @@ span.flatpickr-weekday {
   top: 2.5rem;
   background: #5F6C75;
   border-radius: var(--brad-regular);
+  pointer-events: none;
   padding: 1.25rem;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .auth {
+    width: auto;
+  }
 }
 @media (min-width: 602px) and (max-width: 768px) {
   .auth {
@@ -7900,7 +7916,6 @@ span.flatpickr-weekday {
 
 .auth--visible {
   opacity: 1;
-  transform: scaleY(1);
   pointer-events: initial;
 }
 
@@ -7952,6 +7967,10 @@ span.flatpickr-weekday {
 
 .auth__fieldset {
   display: none;
+}
+
+.auth__fieldset .input {
+  margin-bottom: 0.5rem;
 }
 
 .auth__fieldset--visible {
@@ -8381,6 +8400,7 @@ span.flatpickr-weekday {
 .row-filters__select .choices__inner {
   z-index: 7;
   position: relative;
+  pointer-events: none;
 }
 
 @media (max-width: 1023px) {
@@ -8734,7 +8754,6 @@ span.flatpickr-weekday {
   max-height: 348px;
   overflow: initial;
   pointer-events: initial;
-  transform: scaleY(1);
 }
 
 .person-result__gallery-more {
@@ -8820,8 +8839,6 @@ span.flatpickr-weekday {
   height: auto;
   overflow: hidden;
   pointer-events: none;
-  transform: scaleY(0);
-  transform-origin: top;
 }
 
 .gallery-accordion__item--visible {
@@ -8829,7 +8846,6 @@ span.flatpickr-weekday {
   max-height: 1000px;
   overflow: initial;
   pointer-events: initial;
-  transform: scaleY(1);
 }
 
 .gallery-accordion .button--light {
@@ -9098,7 +9114,6 @@ span.flatpickr-weekday {
     height: 128px;
     background: #fff;
     box-shadow: 0px 0px 20px rgba(95, 108, 117, 0.2);
-    transform: scaleY(0);
     transform-origin: top;
     transition: all 0.3s ease;
   }
@@ -9633,7 +9648,6 @@ span.flatpickr-weekday {
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: all 0.65s ease, opacity 0.3s ease, pointer-events 0s;
-  transform: scaleY(0);
   transform-origin: top;
 }
 @media (max-width: 920px) {
@@ -10053,7 +10067,7 @@ span.flatpickr-weekday {
 
 @media (max-width: 920px) {
   .header__auth {
-    top: 115px;
+    top: calc(var(--index) * 25);
   }
 }
 
@@ -14930,14 +14944,12 @@ span.flatpickr-weekday {
 .stores__menu--show-details .stores__details {
   max-height: 2000px;
   opacity: 1;
-  transform: scaleY(1);
   pointer-events: initial;
   overflow: initial;
 }
 .stores__menu--show-details .stores__list {
   max-height: 1px;
   overflow: hidden;
-  transform: scaleY(0);
   opacity: 1;
 }
 
@@ -16458,8 +16470,6 @@ span.flatpickr-weekday {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 0px;
   transition: all 0.3s ease;
-  transform-origin: top;
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   max-height: 1px;
@@ -16567,7 +16577,6 @@ span.flatpickr-weekday {
   margin-bottom: 0px;
   transition: all 0.3s ease;
   transform-origin: top;
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   max-height: 1px;
@@ -16676,7 +16685,6 @@ span.flatpickr-weekday {
   grid-template-columns: 1fr 1fr;
   column-gap: 0.5rem;
   transform-origin: top;
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
@@ -16817,7 +16825,6 @@ span.flatpickr-weekday {
 .order-history-card:not(.order-history-card--opened) .order-history__product .product-card__info {
   max-width: 0px;
   overflow: hidden;
-  transform: scaleX(0);
   transform-origin: left;
 }
 
@@ -16851,7 +16858,6 @@ span.flatpickr-weekday {
 
 .order-history-card--opened .order-history-card__info {
   pointer-events: initial;
-  transform: scaleY(1);
   opacity: 1;
   max-height: initial;
   overflow: initial;
@@ -16870,7 +16876,6 @@ span.flatpickr-weekday {
 
 .order-history-card--opened .order-history-card__products-title {
   pointer-events: initial;
-  transform: scaleY(1);
   opacity: 1;
   max-height: initial;
   overflow: initial;
@@ -16982,7 +16987,6 @@ span.flatpickr-weekday {
 
 .order-history-card--opened .order-hisotry-card__total-full {
   pointer-events: initial;
-  transform: scaleY(1);
   opacity: 1;
   max-height: initial;
   overflow: initial;
@@ -16993,7 +16997,6 @@ span.flatpickr-weekday {
 }
 
 .order-history-card--opened .order-history-card__total-short {
-  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   max-height: 1px;

@@ -275,14 +275,12 @@
   .stores__details {
     max-height: 2000px;
     opacity: 1;
-    transform: scaleY(1);
     pointer-events: initial;
     overflow: initial;
   }
   .stores__list {
     max-height: 1px;
     overflow: hidden;
-    transform: scaleY(0);
     opacity: 1;
   }
 }

@@ -42,8 +42,6 @@
   height: auto;
   overflow: hidden;
   pointer-events: none;
-  transform: scaleY(0);
-  transform-origin: top;
 }
 .gallery-accordion__item--visible {
   opacity: 1;
@@ -51,7 +49,6 @@
   max-height: 1000px;
   overflow: initial;
   pointer-events: initial;
-  transform: scaleY(1);
 }
 
 .gallery-accordion .button--light {
