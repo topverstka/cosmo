@@ -227,8 +227,9 @@ const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
 let lastScrollY = 0;
 function isWindowScrolled() {
+  if (window.scrollY < 0) return;
 
-if (window.scrollY > lastScrollY) {
+  if (window.scrollY > lastScrollY) {
     header.classList.add('header--hidden');
 
     const event = new Event("header-hide");
@@ -285,3 +286,31 @@ function stickyHeader() {
 window.addEventListener('scroll', stickyHeader);
 window.addEventListener('orientationchange', stickyHeader);
 stickyHeader();
+
+
+/**
+ * Липкая «купить» на странице товара в десктопе
+ */
+const productSticky = document.querySelector('.product-sticky');
+(()=>{
+  if (!productSticky) return;
+
+  header.addEventListener('header-show', (e) => {
+    header.classList.add('header--no-shadow');
+    productSticky.style.top = header.getBoundingClientRect().height + 'px';
+  });
+  header.addEventListener('header-hide', (e) => {
+    header.classList.remove('header--no-shadow');
+    productSticky.style.top = '';
+  });
+
+  window.addEventListener("scroll", (e) => {
+    const offset = productSticky.getBoundingClientRect().top
+    if (offset <= productSticky.getBoundingClientRect().height + header.getBoundingClientRect().height) {
+      productSticky.classList.add('product-sticky--visible')
+    } else {
+      productSticky.classList.remove('product-sticky--visible')
+    }
+  });
+})()
+

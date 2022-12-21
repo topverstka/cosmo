@@ -479,14 +479,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
  * На странице товара при добавлении в окрзину меняет состояние кнопки и показывает степпер количества товара
  */
 window.addEventListener('DOMContentLoaded', (event) => {
-  const productPageAddButton = document.querySelector('.product-hero__order-buy-button');
-  if (productPageAddButton) {
+  const productPageAddButtons = document.querySelectorAll('.product-hero__order-buy-button');
+  productPageAddButtons.forEach((productPageAddButton) => {
     productPageAddButton.addEventListener("click", (e) => {
       const productHeroOrder = document.querySelector('.product-hero__order');
-      productHeroOrder.classList.add('product-hero__order--in-cart')
-      productPageAddButton.querySelector('.button__text').innerText = productPageAddButton.dataset.inCartText
+      productPageAddButtons.forEach((button) => {
+        button.parentElement.classList.add('product-hero__order--in-cart')
+        button.querySelector('.button__text').innerText = productPageAddButton.dataset.inCartText
+      })
     });
-  }
+  })
 
   /**
    * Валидация формы в модалке, чтбоы нельзя было отправить ее до заполнения имени и телефона
