@@ -9695,7 +9695,6 @@ span.flatpickr-weekday {
 }
 
 .header__nav-item-dropdown {
-  transform: translateY(-100vh);
   position: absolute;
   top: 0;
   left: 0;
@@ -9724,6 +9723,11 @@ span.flatpickr-weekday {
 @media (max-width: 768px) {
   .header__nav-item-dropdown {
     border-radius: 0 0 12px 12px;
+  }
+}
+@media (min-width: 1025px) {
+  .header__nav-item-dropdown {
+    transform: translateY(-100vh);
   }
 }
 
