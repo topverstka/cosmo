@@ -194,6 +194,14 @@ headerSnacks.forEach((snack) => {
     closeSnack(snack)
   });
 });
+document.addEventListener('keyup', (e) => {
+  if (e.keyCode == 27) {
+    const currentSnack = document.querySelector('.header-snack--visible');
+    if (!currentSnack) return
+
+    closeSnack(currentSnack);
+  }
+})
 // window.addEventListener("scroll", () => {
 //   if (headerSnacksContainer.classList.contains(SNACKS_SHOW_CLASS)) {
 //     closeSnack();

@@ -104,6 +104,7 @@
 }
 .header--opened .header__container::after {
     transform: scaleY(1);
+    height: 8.16666666666666666rem;//128px;
 }
 .header__menu {
   display: flex;

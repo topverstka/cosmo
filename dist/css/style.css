@@ -9149,6 +9149,7 @@ span.flatpickr-weekday {
 }
 .header--opened .header__container::after {
   transform: scaleY(1);
+  height: 8.1666666667rem;
 }
 
 .header__menu {
@@ -9473,8 +9474,14 @@ span.flatpickr-weekday {
     padding-top: 274px;
   }
 }
+@media (max-width: 768px) {
+  .header__snacks--show {
+    padding-top: 127px;
+  }
+}
 
 .header-snack {
+  min-height: 5.3455rem;
   position: absolute;
   top: 0;
   width: 100%;
@@ -9490,12 +9497,10 @@ span.flatpickr-weekday {
 }
 @media (max-width: 1020px) {
   .header-snack {
-    min-height: 5rem;
     margin-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 12px;
-    min-height: 134px;
     height: 100%;
   }
 }
@@ -9545,7 +9550,6 @@ span.flatpickr-weekday {
 }
 @media (max-width: 1020px) {
   .header-snack__title {
-    margin-bottom: 20px;
     margin-right: 0;
   }
 }
@@ -9553,6 +9557,11 @@ span.flatpickr-weekday {
   .header-snack__title {
     font-size: 24px;
     max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .header-snack__title {
+    max-width: 80.138vw;
   }
 }
 
@@ -9653,6 +9662,11 @@ span.flatpickr-weekday {
   border: 1px solid #9FA7AC;
 }
 @media (min-width: 602px) and (max-width: 768px) {
+  .header-snack__select {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
   .header-snack__select {
     max-width: 100%;
   }
