@@ -176,6 +176,68 @@
           </div>
         </div>
 
+        <div class="product-sticky">
+          <picture class="product-stikcy__pic">
+            <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+            <img class="product-sticky__img " src="./img/catalog/product-hero.png" alt="" >
+          </picture>
+          <div class="product-sticky__info">
+            <h3 class="product-sticky__name">Биостимулирующий крем с витамином С</h3>
+            <div class="product-sticky__meta">              
+              <form action="/api" class="chips product-sticky__options">
+                <div class="chips__track">
+                  <div class="chips__content">
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" checked hidden>
+                      <span class="chips__caption">200мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">100мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">50мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">15мл</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <nav class="product-sticky__nav">
+                <a href="#product-about" class="product-sticky__nav-link button--thirdly">О продукте</a>
+                <a href="#product-reviews" class="product-sticky__nav-link button--thirdly">Отзывы</a>
+                <a href="#product-recommeded" class="product-sticky__nav-link button--thirdly">Рекомендации</a>
+                <a href="#product-related" class="product-sticky__nav-link button--thirdly">Похожие товары</a>
+              </nav>
+            </div>
+          </div>
+          <div class="product-sticky__buy">
+            <div class="product-hero__price product-sticky__price">
+              <p class="product-hero__price-new">5 000 ₽ </p>
+            </div>
+            <div class="product-hero__order-buy">
+              <div class="stepper product-hero__stepper">
+                <button class="stepper__button stepper__button-minus"></button>
+                <input type="text" class="stepper__value" inputmode="numeric"  value="2">
+                <button class="stepper__button stepper__button-plus"></button>
+              </div>
+              <button class="button button--primary button--dark product-hero__order-buy-button product-sticky__button-cart" data-in-cart-text="В корзине">
+                <span class="button__icon">
+                  <svg class="button__icon--cart">
+                    <use xlink:href="./img/common/cart.svg#cart" />
+                  </svg>
+                  <svg class="button__icon--selected">
+                    <use xlink:href="./img/common/check.svg#check" />
+                  </svg>
+                </span>
+                <span class="button__text">В корзину</span>
+              </button>
+            </div>
+          </div>
+        </div>
         <section class="product-details" id="product-details">
           <div class="product-details__container container">
             <h2 class="section-title section-text--center product-details__title">О продукте</h2>
