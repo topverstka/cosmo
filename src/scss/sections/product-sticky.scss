@@ -14,13 +14,14 @@
 	margin-top: -4.875rem;
 	opacity: 0;
 	pointer-events: none;
+	transform: translateY(-100%);
 	@media (max-width: 1024px) {
 		display: none
 	}
 }
 .product-sticky--visible {
-	margin-top: 0;
 	pointer-events: initial;
+	transform: translateY(0);
 	opacity: 1;
 }
 .product-stikcy__pic {
@@ -39,6 +40,7 @@
 	--chips-fz: 0.75rem;
 	--chips-padding: 0.16666666666666666em 0.5833333333333334em 0.4166666666666667em;
 	--chips-item-mb: 0;
+  --chips-bg: #F0F3F5;
 	margin-bottom: 0;
 	margin-right: 0.75rem;
 }
