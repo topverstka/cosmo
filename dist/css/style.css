@@ -3764,6 +3764,14 @@ select {
   --button-color: var(--c-accent);
 }
 
+.button-minicart .button__icon {
+  transform: translateY(-0.06rem);
+}
+
+.button-auth .button__icon {
+  transform: translateY(-0.05rem);
+}
+
 /**
  *
  * form.chips>.chips__track>.chips__content>label.chips__item>input.chips__input[type="radio"][hidden][name="option"]+span.chips__caption

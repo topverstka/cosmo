@@ -267,3 +267,9 @@
   --button-bg: var(--bg-app);
   --button-color: var(--c-accent);
 }
+.button-minicart .button__icon {
+  transform: translateY(-0.06rem);
+}
+.button-auth .button__icon {
+  transform: translateY(-0.05rem);
+}
