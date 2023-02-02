@@ -27,6 +27,7 @@ import "./poppa.js";
  */
 import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
+window.lazyload = lazyLoadInstance;
 
 
 
