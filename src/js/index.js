@@ -416,7 +416,7 @@ if (filterButton && filterBlock) {
     filterBlock.classList.add(FILTER_OPENED_CLASS);
   })
   window.addEventListener('click', (e) => {
-    console.log(e.target)
+    // console.log(e.target)
     if (e.target.contains(filterBlock)) {
       filterBlock.classList.remove(FILTER_OPENED_CLASS);
       return

@@ -8,9 +8,14 @@ import "../unstable/burger.js";
  * Dropdown Select
  */
 import Choices from "choices.js";
-if (document.querySelector(".select")) {
-  const dropdowns = document.querySelectorAll(".select");
+function initSelects(selector = '.select') {
+  if (!document.querySelector(selector)) return;
+
+  const dropdowns = document.querySelectorAll(selector);
   dropdowns.forEach((dropdown) => {
+
+    if (dropdown.querySelector('select').dataset.choice) return;
+
     let choicesOptions = {
       searchEnabled: false,
       searchPlaceholderValue: "Поиск",
@@ -121,6 +126,11 @@ if (document.querySelector(".select")) {
 
   });
 }
+initSelects();
+window.initSelects = (selector) => {
+  initSelects(selector);
+}
+
 
 if (document.querySelector(".timepicker")) {
   const timepickers = document.querySelectorAll(".timepicker");
