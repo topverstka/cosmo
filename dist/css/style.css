@@ -3474,9 +3474,7 @@ select {
 }
 
 .select__item--selectable {
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .select--grey {
@@ -7185,7 +7183,7 @@ span.flatpickr-weekday {
   transform: scale(1);
 }
 
-.poppa__closer, .carousel__button {
+.poppa__closer, .fancybox__button--close {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -7198,14 +7196,14 @@ span.flatpickr-weekday {
   --closer-color: #fff;
 }
 @media (min-width: 602px) and (max-width: 768px) {
-  .poppa__closer, .carousel__button {
+  .poppa__closer, .fancybox__button--close {
     font-size: 24px;
   }
 }
 
-.poppa__closer::before, .carousel__button::before,
+.poppa__closer::before, .fancybox__button--close::before,
 .poppa__closer::after,
-.carousel__button::after {
+.fancybox__button--close::after {
   position: absolute;
   top: 48%;
   left: 0;
@@ -7218,17 +7216,17 @@ span.flatpickr-weekday {
   transition: all 0.3s ease;
 }
 
-.poppa__closer::before, .carousel__button::before {
+.poppa__closer::before, .fancybox__button--close::before {
   transform: rotate(45deg);
 }
 
-.poppa__closer::after, .carousel__button::after {
+.poppa__closer::after, .fancybox__button--close::after {
   transform: rotate(-45deg);
 }
 
-.poppa__closer:hover::before, .carousel__button:hover::before,
+.poppa__closer:hover::before, .fancybox__button--close:hover::before,
 .poppa__closer:hover::after,
-.carousel__button:hover::after {
+.fancybox__button--close:hover::after {
   background-color: var(--c-poppa-closer-hover);
 }
 
@@ -7280,7 +7278,7 @@ span.flatpickr-weekday {
   background: var(--bg-poppa-overlay);
 }
 
-.poppa__closer, .carousel__button {
+.poppa__closer, .fancybox__button--close {
   --closer-color: #fff;
   font-size: 1.25rem;
   color: transparent;
@@ -7288,7 +7286,7 @@ span.flatpickr-weekday {
   border-radius: var(--radius-poppa);
 }
 @media (max-width: 768px) {
-  .poppa__closer, .carousel__button {
+  .poppa__closer, .fancybox__button--close {
     font-size: 0.75rem;
   }
 }
@@ -7324,12 +7322,12 @@ span.flatpickr-weekday {
   }
 }
 
-.poppa__closer, .carousel__button {
+.poppa__closer, .fancybox__button--close {
   top: 0.75rem;
   right: 1.5rem;
 }
 @media (max-width: 601px) {
-  .poppa__closer, .carousel__button {
+  .poppa__closer, .fancybox__button--close {
     top: 1.375rem;
     width: 2.125rem;
     height: 2.125rem;
@@ -7337,14 +7335,14 @@ span.flatpickr-weekday {
 }
 
 @media (min-width: 769px) {
-  body:not(.os-linux):not(.os-macos) .poppa__closer, body:not(.os-linux):not(.os-macos) .carousel__button {
+  body:not(.os-linux):not(.os-macos) .poppa__closer, body:not(.os-linux):not(.os-macos) .fancybox__button--close {
     right: 27px;
   }
 }
 
-.poppa__closer::before, .carousel__button::before,
+.poppa__closer::before, .fancybox__button--close::before,
 .poppa__closer::after,
-.carousel__button::after {
+.fancybox__button--close::after {
   top: 44%;
   right: 0;
   width: 85%;
@@ -7353,9 +7351,9 @@ span.flatpickr-weekday {
   margin-left: auto;
 }
 @media (max-width: 768px) {
-  .poppa__closer::before, .carousel__button::before,
+  .poppa__closer::before, .fancybox__button--close::before,
 .poppa__closer::after,
-.carousel__button::after {
+.fancybox__button--close::after {
     top: 46%;
     width: 70%;
   }
@@ -17327,6 +17325,16 @@ span.flatpickr-weekday {
   .product-hero__media-pic {
     height: 265px;
   }
+}
+
+.product-hero__media-vid {
+  position: relative;
+}
+.product-hero__media-vid .product-hero-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .product-hero__info {

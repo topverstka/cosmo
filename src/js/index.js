@@ -92,7 +92,7 @@ if (storesCards) {
 function initAccordionGallery() {
   const GALLERY_INITIAL_SHOW = 3; // or data-start-show attr of gallerySelector
   const GALLERY_ITEM_VISIBLE_CLASS = 'gallery-accordion__item--visible';
-  const GALLERY_BUTTON_HIDDEN_CLASS = 'gallery-accordion__button-more--hidden'
+  // const GALLERY_BUTTON_HIDDEN_CLASS = 'gallery-accordion__button-more--hidden'
   const galleries = [...document.querySelectorAll('.gallery-accordion')];
 
   if (galleries) {
@@ -124,10 +124,10 @@ function initAccordionGallery() {
         // if (gallery.querySelector('.modal-gallery-crousel')) return;
         // if (gallery.querySelector('[data-fancybox]')) return;
         
-        expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
-        setTimeout(() => {
-          expandButton.style.display = 'none';
-        }, 100)
+        // expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+        // setTimeout(() => {
+        //   expandButton.style.display = 'none';
+        // }, 100)
         cards.forEach(card => {
             card.style.display = '';
             setTimeout(() => {
@@ -137,10 +137,10 @@ function initAccordionGallery() {
       })
 
       if ([...cards].length <= initialShow) {
-        expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
-        setTimeout(() => {
-          expandButton.style.display = 'none';
-        }, 100)
+        // expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+        // setTimeout(() => {
+        //   expandButton.style.display = 'none';
+        // }, 100)
       }
     })
   }

@@ -227,14 +227,18 @@ const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
 let lastScrollY = 0;
 function isWindowScrolled() {
-  if (window.scrollY < 0) return;
+  console.log('pageYOffset = ' + window.pageYOffset)
+  console.log('lastScrollY = ' + lastScrollY)
+  
+  
+  if (window.pageYOffset < 0) return;
 
-  if (window.scrollY > lastScrollY) {
+  if (window.pageYOffset > lastScrollY) {
     header.classList.add('header--hidden');
 
     const event = new Event("header-hide");
     header.dispatchEvent(event);
-  } else {
+  } else if((window.pageYOffset < lastScrollY)){
     header.classList.remove('header--hidden');
 
     const event = new Event("header-show");
@@ -242,11 +246,12 @@ function isWindowScrolled() {
   }
 
   setTimeout(() => {
-    lastScrollY  = window.scrollY;
-  }, 5)
-
-  return lastScrollY > 5;
+    lastScrollY  = window.pageYOffset;
+  }, 1000)
+  return lastScrollY > 15;
 }
+
+
 
 const debounce = (callback, wait) => {
   let timeoutId = null;
