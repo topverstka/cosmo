@@ -227,10 +227,6 @@ const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
 let lastScrollY = 0;
 function isWindowScrolled() {
-  console.log('pageYOffset = ' + window.pageYOffset)
-  console.log('lastScrollY = ' + lastScrollY)
-  
-  
   if (window.pageYOffset < 0) return;
 
   if (window.pageYOffset > lastScrollY) {
