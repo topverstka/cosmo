@@ -1,0 +1,70 @@
+.poppa__overlay--address-pop .poppa-aligner{
+ height: 100%;
+}
+
+.address-pop{
+ max-width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 1.4rem;
+ padding-top: 4.2rem;
+}
+
+.address-pop__container{
+ border-radius: 0.6rem;
+ width: 100%;
+ height: 100%;
+ background: #fff;
+ display: flex;
+}
+
+.address-pop__left{
+ width: 16.55rem;
+ min-width: 16.55rem;
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.address-pop__search{
+ background: #F0F3F5;
+ padding: 0;
+ margin-bottom: 0.8rem;
+}
+
+.address-pop__search .search__input{
+ padding-top: 0.6rem;
+ padding-right: 2.5rem;
+ padding-bottom: 0.8rem;
+ padding-left: 1rem;
+ font-size: 0.6rem;
+}
+
+.address-pop__search .search__button{
+ --size: 2.1rem;
+}
+
+.address-pop__search .search__button-icon{
+ --size: 0.95rem;
+}
+
+.address-pop__define{
+ font-weight: 600;
+ font-size: 0.7rem;
+ color: #5F6C75;
+ text-decoration-line: underline;
+ cursor: pointer;
+}
+
+.address-pop__map{
+ width: 100%;
+ height: 100%;
+}
+
+.address-pop__button{
+ font-size: 0.7rem;
+ height: 3rem;
+}

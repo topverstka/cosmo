@@ -158,38 +158,18 @@
                       <input
                         class="input__field"
                         name="shipping_address"
+                        id="shipping_address"
                         type="text"
-                        placeholder="Улица"
+                        placeholder="Адрес"
                         
                       >
                       <svg class="input__error-icon">
                         <use xlink:href="./img/common/warn.svg#warn" />
                       </svg>
                     </label>
-                    <label class="input">
-                      <input
-                        class="input__field"
-                        name="shipping_home"
-                        type="text"
-                        placeholder="Дом"
-                      >
-                      <svg class="input__error-icon">
-                        <use xlink:href="./img/common/warn.svg#warn" />
-                      </svg>
-                    </label>
-                    <label class="input">
-                      <input
-                        class="input__field"
-                        name="shipping_appartment"
-                        type="text"
-                        placeholder="Квартира"
-                      >
-                      <svg class="input__error-icon">
-                        <use xlink:href="./img/common/warn.svg#warn" />
-                      </svg>
-                    </label>
+
                   </div>
-                  <button class="button--thirdly button--fw-bold checkout__button-pick-location">Выбрать на карте</button>
+                  <button class="button--thirdly button--fw-bold checkout__button-pick-location" data-poppa-open="address-pop">Выбрать на карте</button>
                 </div>
               </fieldset>
               <fieldset class="fieldset fieldset-shipping-time">
@@ -296,6 +276,85 @@
     </div>
 
     @@include('tpls/modals.html', {})
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE"></script>
+    <script src="https://unpkg.com/location-picker/dist/location-picker.min.js"></script>
+
     <script src="./js/bundle.min.js"></script>
+    
+
+
+
+  
+
+
+
+
+
+    <script>
+      let confirmBtn = document.querySelector('.address-pop__button')
+      let shippingAddress = document.querySelector('#shipping_address')
+      const geocoder = new google.maps.Geocoder();
+      let lp = new locationPicker('map', {
+        setCurrentPosition: true,
+      }, {
+        fullscreenControl: false,
+        zoom: 15
+      });
+
+      confirmBtn.onclick = function () {
+        let location = lp.getMarkerPosition();
+        geocodeLatLng(geocoder, location);
+
+      };
+
+      function geocodeLatLng(geocoder, location) {
+        const latlng = {
+          lat: +location.lat,
+          lng: +location.lng,
+        };
+
+        geocoder
+          .geocode({ location: latlng })
+          .then((response) => {
+            if (response.results[0]) {
+              shippingAddress.value = response.results[0].formatted_address;
+            } else {
+              window.alert("No results found");
+            }
+          })
+      }
+
+      let defineBtn = document.querySelector('.address-pop__define');
+      defineBtn.onclick = function () {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((location) => {
+                const pos = {
+                  lat: location.coords.latitude ,
+                  lng: location.coords.longitude,
+                };
+                geocodeLatLng(geocoder, pos);
+              }
+            );
+          }
+        };
+
+
+        let findForm = document.getElementById('address-pop__search');
+        findForm.onsubmit = function (event) {
+          event.preventDefault()
+          codeAddress()
+        }
+
+      function codeAddress() {
+        let address = document.getElementById('address-pop__input').value;
+        geocoder.geocode( { 'address': address}, function(results, status) {
+          if (status == 'OK') {
+            lp.setLocation(results[0].geometry.location);
+          } else {
+            alert('Адрес не найден');
+          }
+        });
+        }
+    </script>
   </body>
 </html>

@@ -162,6 +162,7 @@ class Poppa {
     const closeButtons = document.querySelectorAll("[data-poppa-close]");
     closeButtons.forEach((button) => {
       button.addEventListener("click", () => {
+        console.log('123')
         this.handleClose(button);
       });
     });

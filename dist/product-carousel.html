@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Товар</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230228154237" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230306191952" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -2858,7 +2858,25 @@
     </div>
   </div>
 </section>
-
+<section class="poppa modal modal-address address-pop" id="address-pop">
+  <div class="address-pop__container">
+    <div class="address-pop__left">
+      <div class="address-pop__top">
+        <form class="address-pop__search search__form" id="address-pop__search"> 
+          <input type="search" name="address" placeholder="Поиск по карте" class="search__input address-pop__input" id="address-pop__input">
+          <button class="search__button" type="submit" >
+            <svg class="search__button-icon">
+              <use xlink:href="./img/common/search.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="address-pop__define" data-poppa-close="address-pop">Определить автоматически</div>
+      </div>
+      <div class="button button--primary button--dark address-pop__button" data-poppa-close="address-pop">Доставить сюда</div>
+    </div>
+    <div class="address-pop__map" id="map"></div>
+  </div>
+</section>
     </div>
 
     
@@ -2879,6 +2897,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20230228154237"></script>
+    <script src="./js/bundle.min.js?_v=20230306191952"></script>
   </body>
 </html>

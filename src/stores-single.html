@@ -55,7 +55,13 @@
                     </div>
                   </div>
                 </div>
-                <a href="#" class="button button--primary button--dark stores__details-route">Построить маршрут</a>
+                
+                <a
+                target="_blank"
+                id="location--button"
+                href="https://goo.gl/maps/nSx7PiVVuVDj3Vs98" 
+                class="button button--primary button--dark stores__details-route">Построить маршрут</a>
+                
                 <div class="stores__details-gallery">
                   <a href="./img/shops/shop-1.jpg" data-fancybox="gallery" class="stores__details-media">
                       <picture class="stores__details-pic">
@@ -110,8 +116,8 @@
                 </div>
               </div>
             </div>
-            <div class="stores__map">
-              <iframe class="stores__map-frame" data-map-all="https://yandex.ru/map-widget/v1/?um=constructor%3A55860d3fd995a2cb53892f466e8293d43f61c8888b604205c95f69e6aec34dd2&amp;source=constructor" src="https://yandex.ru/map-widget/v1/?um=constructor%3A55860d3fd995a2cb53892f466e8293d43f61c8888b604205c95f69e6aec34dd2&amp;source=constructor" ></iframe>
+            <div class="stores__map" id="stores__map">
+              
             </div>
           </div>
         </section>
@@ -121,5 +127,40 @@
 
     @@include('tpls/modals.html', {})
     <script src="./js/bundle.min.js"></script>
+    <script async defer src="http://maps.google.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE&callback=drawMap"></script>
+    
+    <script>
+
+    let map;
+    
+    let locations ={"name": "Aviapark", "lat":"55.79085417198687", "lng":"37.534175998479135", "is_exact": true};
+    function drawMap() {
+    
+    let centerMap = new google.maps.LatLng(55.6638595603936, 37.51128950402161);
+
+    let myOptions = {
+      zoom: 10,
+      center: centerMap,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: true,
+      fullscreenControl: false 
+      }
+
+    map = new google.maps.Map(document.getElementById("stores__map"), myOptions);
+
+    plotMarker(locations)
+
+    }
+    function plotMarker(location) {
+ 
+    let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(location.lat,  location.lng),
+          title: location.name, 
+          map: map
+        });
+    }
+    
+
+    </script>
   </body>
 </html>

@@ -35,6 +35,12 @@ window.lazyload = lazyLoadInstance;
 import "./unstable/tabs.js";
 
 /**
+ * location-picker
+ */
+
+// import "./libs/location-picker.min.js";
+
+/**
  * Smooth anchors
  */
 import "./utils/smooth-anchors.js";

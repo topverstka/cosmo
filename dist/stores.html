@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230228154237" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230306191952" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -1616,8 +1616,8 @@
                 </div>
               </div>
             </div>
-            <div class="stores__map">
-              <iframe class="stores__map-frame" data-map-all="https://yandex.ru/map-widget/v1/?um=constructor%3A55860d3fd995a2cb53892f466e8293d43f61c8888b604205c95f69e6aec34dd2&amp;source=constructor" src="https://yandex.ru/map-widget/v1/?um=constructor%3A55860d3fd995a2cb53892f466e8293d43f61c8888b604205c95f69e6aec34dd2&amp;source=constructor" ></iframe>
+            <div class="stores__map" id="stores__map">
+              
             </div>
           </div>
         </section>
@@ -1643,6 +1643,52 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20230228154237"></script>
+    <script src="./js/bundle.min.js?_v=20230306191952"></script>
+    <script async defer src="http://maps.google.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE&callback=drawMap&_v=20230306191952"></script>
+
+    <script>
+
+    let map;
+    let locations = [
+        {"name": "Aviapark", "lat":"55.79085417198687", "lng":"37.534175998479135", "is_exact": true},
+        {"name": "RIO", "lat":"55.663710664050214", "lng":"37.51112768313316", "is_exact": true},
+        {"name": "Eiffel Tower", "lat":"55.6638595603936", "lng":"37.51128950402161", "is_exact": true},
+    ];
+    function drawMap() {
+ 
+    let centerMap = new google.maps.LatLng(55.75656053006921, 37.61477268505672);
+
+    let myOptions = {
+      zoom: 10,
+      center: centerMap,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: true,
+      fullscreenControl: false 
+      }
+
+    map = new google.maps.Map(document.getElementById("stores__map"), myOptions);
+
+    setMarkers(locations);
+
+    }
+
+    function setMarkers(locations) {
+      for (i=0; i < locations.length; i++) {
+        var location = locations[i];
+        plotMarker(location)
+      }
+    }
+
+    function plotMarker(location) {
+ 
+    let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(location.lat,  location.lng),
+          title: location.name, 
+          map: map
+        });
+    }
+
+    </script>
+
   </body>
 </html>
