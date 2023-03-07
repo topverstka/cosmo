@@ -7376,6 +7376,7 @@ span.flatpickr-weekday {
 
 .address-pop__container {
   border-radius: 0.6rem;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background: #fff;
@@ -7431,6 +7432,52 @@ span.flatpickr-weekday {
   height: 3rem;
 }
 
+@media (min-width: 602px) and (max-width: 768px) {
+  .address-pop__search .search__input {
+    padding-top: 0.3rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 0.3rem;
+  }
+  .address-pop__search .search__button {
+    --size: 1.2rem;
+  }
+  .address-pop__left {
+    width: 8rem;
+    min-width: 8rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .address-pop__define {
+    font-size: 0.4rem;
+  }
+  .address-pop__button {
+    font-size: 0.4rem;
+    height: 1.5rem;
+  }
+}
+@media (max-width: 602px) {
+  .address-pop__container {
+    flex-direction: column;
+  }
+  .address-pop__left {
+    width: 100%;
+    min-width: auto;
+    padding: 0.5rem;
+  }
+  .address-pop__define {
+    text-align: center;
+  }
+  .address-pop__button {
+    height: 2rem;
+    margin-top: 0.8rem;
+    width: 55%;
+    margin: 0.8rem auto 0;
+  }
+}
 .search-pop {
   display: none;
   max-width: 100%;
