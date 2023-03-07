@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230306191952" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230307114407" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -1643,12 +1643,13 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20230306191952"></script>
-    <script async defer src="http://maps.google.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE&callback=drawMap&_v=20230306191952"></script>
+    <script src="./js/bundle.min.js?_v=20230307114407"></script>
+    <script async defer src="http://maps.google.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE&callback=drawMap&_v=20230307114407"></script>
 
     <script>
 
     let map;
+    const image = "./img/common/marker.svg";
     let locations = [
         {"name": "Aviapark", "lat":"55.79085417198687", "lng":"37.534175998479135", "is_exact": true},
         {"name": "RIO", "lat":"55.663710664050214", "lng":"37.51112768313316", "is_exact": true},
@@ -1684,7 +1685,8 @@
     let marker = new google.maps.Marker({
           position: new google.maps.LatLng(location.lat,  location.lng),
           title: location.name, 
-          map: map
+          map: map,
+          icon: image,
         });
     }
 

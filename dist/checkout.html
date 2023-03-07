@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Оформление заказа</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230306191952" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230307114407" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -145,7 +145,7 @@
                   <p class="section-desc fieldset__desc">Укажите название населённого пункта, куда будет доставлен заказ</p>
                 </div>
                 <div class="fieldset__body">
-                  <div class="select select--grey select--has-search" data-search-placeholder="Населенный пункт">
+                  <div class="select select--grey select--has-search" data-search-placeholder="Населенный пункт" id="shipping_city_wrap">
                     <select
                       name="shipping_city"
                       id="shipping_city"
@@ -792,10 +792,10 @@
   </div>
 </div> -->
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE&_v=20230306191952"></script>
-    <script src="https://unpkg.com/location-picker/dist/location-picker.min.js?_v=20230306191952"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8KDeBuYaEsmOWp8oxTX1pWPYh7pn8kJE&_v=20230307114407"></script>
+    <script src="https://unpkg.com/location-picker/dist/location-picker.min.js?_v=20230307114407"></script>
 
-    <script src="./js/bundle.min.js?_v=20230306191952"></script>
+    <script src="./js/bundle.min.js?_v=20230307114407"></script>
     
 
 
@@ -809,12 +809,14 @@
     <script>
       let confirmBtn = document.querySelector('.address-pop__button')
       let shippingAddress = document.querySelector('#shipping_address')
+      const image = "./img/common/marker.svg";
       const geocoder = new google.maps.Geocoder();
       let lp = new locationPicker('map', {
         setCurrentPosition: true,
       }, {
         fullscreenControl: false,
-        zoom: 15
+        zoom: 15,
+        icon: image,
       });
 
       confirmBtn.onclick = function () {
@@ -871,6 +873,41 @@
           }
         });
         }
+
+        let detectCityBtn = document.querySelector('.button-detect-city');
+        detectCityBtn.onclick = function () {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((location) => {
+                const latlng = {
+                  lat: location.coords.latitude ,
+                  lng: location.coords.longitude,
+                };
+
+                geocoder
+                  .geocode({ location: latlng })
+                  .then((response) => {
+                    let result = response.results[0].address_components
+                    let itemLocality='';
+                    if (result) {
+                      for (const key in result) {
+                        if(result[key].types[0] == "locality"){
+                          itemLocality = result[key].long_name
+                        }
+                      }
+                      document.querySelector('#shipping_city option').textContent = itemLocality;
+                      document.querySelector('#shipping_city option').value = itemLocality;
+                      document.querySelector('#shipping_city_wrap .select__item').textContent = itemLocality;
+                      document.querySelector('#shipping_city_wrap .select__item ').value = itemLocality;
+                      
+                    } else {
+                      window.alert("No results found");
+                    }
+                })
+              }
+            );
+          }
+        };
+
     </script>
   </body>
 </html>

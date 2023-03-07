@@ -32,7 +32,7 @@
                   <p class="section-desc fieldset__desc">Укажите название населённого пункта, куда будет доставлен заказ</p>
                 </div>
                 <div class="fieldset__body">
-                  <div class="select select--grey select--has-search" data-search-placeholder="Населенный пункт">
+                  <div class="select select--grey select--has-search" data-search-placeholder="Населенный пункт" id="shipping_city_wrap">
                     <select
                       name="shipping_city"
                       id="shipping_city"
@@ -293,12 +293,14 @@
     <script>
       let confirmBtn = document.querySelector('.address-pop__button')
       let shippingAddress = document.querySelector('#shipping_address')
+      const image = "./img/common/marker.svg";
       const geocoder = new google.maps.Geocoder();
       let lp = new locationPicker('map', {
         setCurrentPosition: true,
       }, {
         fullscreenControl: false,
-        zoom: 15
+        zoom: 15,
+        icon: image,
       });
 
       confirmBtn.onclick = function () {
@@ -355,6 +357,41 @@
           }
         });
         }
+
+        let detectCityBtn = document.querySelector('.button-detect-city');
+        detectCityBtn.onclick = function () {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((location) => {
+                const latlng = {
+                  lat: location.coords.latitude ,
+                  lng: location.coords.longitude,
+                };
+
+                geocoder
+                  .geocode({ location: latlng })
+                  .then((response) => {
+                    let result = response.results[0].address_components
+                    let itemLocality='';
+                    if (result) {
+                      for (const key in result) {
+                        if(result[key].types[0] == "locality"){
+                          itemLocality = result[key].long_name
+                        }
+                      }
+                      document.querySelector('#shipping_city option').textContent = itemLocality;
+                      document.querySelector('#shipping_city option').value = itemLocality;
+                      document.querySelector('#shipping_city_wrap .select__item').textContent = itemLocality;
+                      document.querySelector('#shipping_city_wrap .select__item ').value = itemLocality;
+                      
+                    } else {
+                      window.alert("No results found");
+                    }
+                })
+              }
+            );
+          }
+        };
+
     </script>
   </body>
 </html>

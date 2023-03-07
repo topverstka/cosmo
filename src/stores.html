@@ -223,6 +223,7 @@
     <script>
 
     let map;
+    const image = "./img/common/marker.svg";
     let locations = [
         {"name": "Aviapark", "lat":"55.79085417198687", "lng":"37.534175998479135", "is_exact": true},
         {"name": "RIO", "lat":"55.663710664050214", "lng":"37.51112768313316", "is_exact": true},
@@ -258,7 +259,8 @@
     let marker = new google.maps.Marker({
           position: new google.maps.LatLng(location.lat,  location.lng),
           title: location.name, 
-          map: map
+          map: map,
+          icon: image,
         });
     }
 
