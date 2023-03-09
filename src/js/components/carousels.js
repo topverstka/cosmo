@@ -170,7 +170,7 @@ if (document.querySelector('.product-cases-carousel')) {
       });
       carousel.querySelectorAll('.product-cases-carousel-slide').forEach(slide => {
         slide.querySelector('.gallery-accordion__button-more').addEventListener('click', () => {
-          console.log(productCaseSlider)
+          // console.log(productCaseSlider)
           setTimeout(() => {
             productCaseSlider.update();
           }, 200)

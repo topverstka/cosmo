@@ -47,7 +47,7 @@ function setupLazyYT($) {
     video.classList.add(videoClass);
 
     function initVideo() {
-      console.log("yep");
+      // console.log("yep");
       // if (review.classList.contains("js_lazy-init"))
       review.classList.add("js_lazy-init");
       video.src = video.getAttribute("data-src");

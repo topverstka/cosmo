@@ -99,8 +99,8 @@ setTimeout(() => {
               }
             });
 
-          console.log(dropdownItem);
-          console.log(tabsBar.dataset);
+          // console.log(dropdownItem);
+          // console.log(tabsBar.dataset);
         });
       });
     }

@@ -376,7 +376,7 @@ function recalculateCartColumnsBottomGap() {
     let additionalHeight = cards.reduce((accum, card, index) => {
       return accum + card.getBoundingClientRect().height
     }, 0)
-    console.log(additionalHeight)
+    // console.log(additionalHeight)
 
     let additionalHeightModifier = -20;
     // if (window.innerWidth > 768 && window.innerWidth < 1025) {

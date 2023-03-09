@@ -79,7 +79,7 @@ class Poppa {
     document.addEventListener("keydown", (e) => {
       const id = this.getLastOpenedId();
       if (e.key === "Escape" && id) {
-        console.log(id);
+        // console.log(id);
         this.closePop(id);
         // modal.classList.remove("_show");
         // bodyLock(false);
@@ -162,7 +162,7 @@ class Poppa {
     const closeButtons = document.querySelectorAll("[data-poppa-close]");
     closeButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        console.log('123')
+        // console.log('123')
         this.handleClose(button);
       });
     });

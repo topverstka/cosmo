@@ -319,7 +319,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener("scroll", (e) => {
     const offset = productSticky.getBoundingClientRect()
 
-    console.log(window.scrollY, productStickyOffset)
+    // console.log(window.scrollY, productStickyOffset)
 
     if (window.scrollY <= productStickyOffset) {
       productSticky.classList.remove('product-sticky--visible');
