@@ -17902,10 +17902,11 @@ span.flatpickr-weekday {
 }
 
 .product-hero-thumbs {
+  height: 400px;
   position: absolute;
   left: 31px;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   margin-top: auto;
   margin-bottom: auto;
   width: 90px;

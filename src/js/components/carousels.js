@@ -6,11 +6,11 @@ import {debounce} from "../utils/helpers.js";
 if (document.querySelector('.product-hero-gallery') && document.querySelector('.product-hero-thumbs')) {
   let swiper = new Swiper(".product-hero-thumbs", {
     direction: 'vertical',
-    centeredSlides: true,
-    centeredSlidesBounds: true,
-    centerInsufficientSlides: true,
+    // centeredSlides: true,
+    // centeredSlidesBounds: true,
+    // centerInsufficientSlides: true,
     spaceBetween: 10,
-    slidesPerView: 'auto',
+    slidesPerView: 4,
   });
   let heroGallery = new Swiper(".product-hero-gallery", {
     modules: [Navigation, Pagination, EffectFade],
