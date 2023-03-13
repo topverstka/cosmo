@@ -9414,6 +9414,7 @@ span.flatpickr-weekday {
   font-size: var(--fz-menu-items);
   font-weight: 700;
   line-height: var(--lh-menu-items);
+  cursor: pointer;
 }
 @media (max-width: 920px) {
   .header__nav-item {
@@ -9476,7 +9477,8 @@ span.flatpickr-weekday {
 }
 
 @media (any-hover: hover) {
-  .header__nav-link:hover {
+  .header__nav-item:hover .header__nav-link,
+.header__nav-link:hover {
     padding-top: 34px;
     padding-bottom: 36px;
     margin-top: unset;
@@ -9485,7 +9487,8 @@ span.flatpickr-weekday {
   }
 }
 @media (any-hover: hover) and (max-width: 920px) {
-  .header__nav-link:hover {
+  .header__nav-item:hover .header__nav-link,
+.header__nav-link:hover {
     padding: 16.5px 16px;
   }
 }
@@ -9852,6 +9855,7 @@ span.flatpickr-weekday {
   transition: all 0.65s 0.3s ease, opacity 0.3s 0.3s ease;
   transform-origin: top;
   pointer-events: none;
+  cursor: default;
 }
 @media (max-width: 920px) {
   .header__nav-item-dropdown {

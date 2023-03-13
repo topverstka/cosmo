@@ -203,6 +203,7 @@
   font-size: var(--fz-menu-items);
   font-weight: 700;
   line-height: var(--lh-menu-items);
+  cursor: pointer;
   @media (max-width: $burgerwidth) {
     width: 100%;
     // width: inherit;
@@ -251,6 +252,7 @@
     line-height: 1.145;
   }
 }
+.header__nav-item:hover .header__nav-link,
 .header__nav-link:hover {
   @media (any-hover: hover) {
     padding-top: 34px;
@@ -384,6 +386,7 @@
   // transform: scaleY(0);
   transform-origin: top;
   pointer-events: none;
+  cursor: default;
   @media (max-width: $burgerwidth) {
     pointer-events: none;
     position: static;
