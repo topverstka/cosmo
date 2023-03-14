@@ -225,20 +225,38 @@ document.getElementById("dropdown-city").addEventListener("change", (e) => {
 const header = document.querySelector('.header');
 const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
+function hideHeader() {
+  header.classList.add('header--hidden');
+
+  const event = new Event("header-hide");
+  header.dispatchEvent(event);
+}
+function showHeader() {
+  header.classList.remove('header--hidden');
+
+  const event = new Event("header-show");
+  header.dispatchEvent(event);
+}
+
 let lastScrollY = 0;
 function isWindowScrolled() {
-  if (window.pageYOffset < 0) return;
+  if (window.pageYOffset < 0) return false;
+  
+  if (window.pageYOffset < 10) {
+    header.classList.remove(HEADER_SCROLLED_CLASS);
+    return false
+  };
+
+  if (window.pageYOffset < 100) {
+    showHeader();
+    header.classList.add(HEADER_SCROLLED_CLASS);
+    return true;
+  }
 
   if (window.pageYOffset > lastScrollY) {
-    header.classList.add('header--hidden');
-
-    const event = new Event("header-hide");
-    header.dispatchEvent(event);
+    hideHeader();
   } else if((window.pageYOffset < lastScrollY)){
-    header.classList.remove('header--hidden');
-
-    const event = new Event("header-show");
-    header.dispatchEvent(event);
+    showHeader()
   }
 
   setTimeout(() => {
