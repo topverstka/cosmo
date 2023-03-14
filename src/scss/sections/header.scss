@@ -472,8 +472,8 @@
 }
 
 .header__nav-item-dropdown:hover,
-.header__nav-item:hover .header__nav-item-dropdown,
-.header__nav-link:hover ~ .header__nav-item-dropdown {
+.header__nav-item:hover .header__nav-item-dropdown {
+// .header__nav-link:hover ~ .header__nav-item-dropdown {
   @media (min-width: calc($burgerwidth + 1px)) {
     opacity: 1;
     transition: all 0.65s ease, opacity 0s ease;

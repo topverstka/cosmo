@@ -9962,23 +9962,20 @@ span.flatpickr-weekday {
 
 @media (min-width: 921px) {
   .header__nav-item-dropdown:hover,
-.header__nav-item:hover .header__nav-item-dropdown,
-.header__nav-link:hover ~ .header__nav-item-dropdown {
+.header__nav-item:hover .header__nav-item-dropdown {
     opacity: 1;
     transition: all 0.65s ease, opacity 0s ease;
     pointer-events: all;
   }
   .header__nav-item-dropdown:hover .header__nav-item-dropdown-content,
-.header__nav-item:hover .header__nav-item-dropdown .header__nav-item-dropdown-content,
-.header__nav-link:hover ~ .header__nav-item-dropdown .header__nav-item-dropdown-content {
+.header__nav-item:hover .header__nav-item-dropdown .header__nav-item-dropdown-content {
     opacity: 1;
     transition: all 0.65s ease, opacity 1.4s ease;
   }
 }
 @media (max-width: 920px) {
   .header__nav-item-dropdown:hover,
-.header__nav-item:hover .header__nav-item-dropdown,
-.header__nav-link:hover ~ .header__nav-item-dropdown {
+.header__nav-item:hover .header__nav-item-dropdown {
     pointer-events: initial;
   }
 }
