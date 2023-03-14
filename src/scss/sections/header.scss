@@ -1,3 +1,11 @@
+@keyframes headershow {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -9,6 +17,20 @@
     height: 100%;
   }
 }
+.header--static:not(.header--hidden) {
+  position: static;
+}
+.header--static.header--hidden {
+  transition: 0s;
+}
+.header:not(.header--static) {
+  // transform: translateY(-100%);
+  // transition: 0s;
+}
+.header.header--visible {
+  // transform: translateY(0);
+}
+
 .header--scrolled:not(.header--mini) {
   background-color: #fff;
   border-bottom: 1px solid #c5cacf;
@@ -265,8 +287,8 @@
   @media (any-hover: hover) {
     // padding-top: 34px;
     // padding-bottom: 36px;
-    padding-top: 2.125rem;//34px;
-    padding-bottom: 2.25rem;//36px;
+    // padding-top: 2.125rem;//34px;
+    // padding-bottom: 2.25rem;//36px;
     margin-top: unset;
     margin-bottom: unset;
     color: #6c7982;

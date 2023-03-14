@@ -9155,6 +9155,14 @@ span.flatpickr-weekday {
   margin-bottom: 2.5rem;
 }
 
+@keyframes headershow {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -9167,6 +9175,14 @@ span.flatpickr-weekday {
     width: 100%;
     height: 100%;
   }
+}
+
+.header--static:not(.header--hidden) {
+  position: static;
+}
+
+.header--static.header--hidden {
+  transition: 0s;
 }
 
 .header--scrolled:not(.header--mini) {
@@ -9491,8 +9507,6 @@ span.flatpickr-weekday {
 @media (any-hover: hover) {
   .header__nav-item:hover .header__nav-link,
 .header__nav-link:hover {
-    padding-top: 2.125rem;
-    padding-bottom: 2.25rem;
     margin-top: unset;
     margin-bottom: unset;
     color: #6c7982;

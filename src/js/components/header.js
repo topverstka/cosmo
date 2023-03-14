@@ -227,12 +227,14 @@ const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
 function hideHeader() {
   header.classList.add('header--hidden');
+  // header.classList.remove('header--visible');
 
   const event = new Event("header-hide");
   header.dispatchEvent(event);
 }
 function showHeader() {
   header.classList.remove('header--hidden');
+  // header.classList.add('header--visible');
 
   const event = new Event("header-show");
   header.dispatchEvent(event);
@@ -241,11 +243,20 @@ function showHeader() {
 let lastScrollY = 0;
 function isWindowScrolled() {
   if (window.pageYOffset < 0) return false;
-  
-  if (window.pageYOffset < 30) {
+
+  if (window.pageYOffset < 800) {
+    header.classList.add('header--static');
+  }
+  if (window.pageYOffset < 1000) {
+    if (window.pageYOffset > 300) {
+      header.classList.add('header--hidden');
+    } else {
+      header.classList.remove('header--hidden');
+    }
     header.classList.remove(HEADER_SCROLLED_CLASS);
     return false
   };
+  header.classList.remove('header--static');
 
   if (window.pageYOffset < 100) {
     showHeader();
