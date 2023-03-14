@@ -9454,8 +9454,8 @@ span.flatpickr-weekday {
 .header__nav-link {
   display: block;
   padding-right: 1.75rem;
-  margin-top: 2.125rem;
-  margin-bottom: 2.25rem;
+  padding-top: 2.125rem;
+  padding-bottom: 2.25rem;
 }
 @media (max-width: 1200px) {
   .header__nav-link {

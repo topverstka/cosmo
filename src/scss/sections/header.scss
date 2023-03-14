@@ -235,8 +235,8 @@
 .header__nav-link {
   display: block;
   padding-right: 1.75rem;//28px;
-  margin-top: 2.125rem;//34px;
-  margin-bottom: 2.25rem;//36px;
+  padding-top: 2.125rem;//34px;
+  padding-bottom: 2.25rem;//36px;
   @media (max-width: 1200px) {
     margin-right: 10px;
     padding-right: 18px;
