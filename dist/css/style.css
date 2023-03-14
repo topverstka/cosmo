@@ -9409,6 +9409,11 @@ span.flatpickr-weekday {
     padding-top: 32px;
   }
 }
+@media (min-width: 921px) {
+  .header__nav-links {
+    align-items: stretch;
+  }
+}
 
 .header__nav-item {
   font-size: var(--fz-menu-items);
@@ -9432,6 +9437,13 @@ span.flatpickr-weekday {
     border-radius: 12px;
     margin-bottom: 16px;
     font-size: 28px;
+  }
+}
+@media (min-width: 921px) {
+  .header__nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

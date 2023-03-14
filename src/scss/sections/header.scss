@@ -198,6 +198,9 @@
     width: inherit;
     padding-top: 32px;
   }
+  @media (min-width: $burgerwidth + 1) {
+    align-items: stretch;
+  }
 }
 .header__nav-item {
   font-size: var(--fz-menu-items);
@@ -218,6 +221,11 @@
     border-radius: 12px;   
     margin-bottom: 16px;
     font-size: 28px;
+  }
+  @media (min-width: $burgerwidth + 1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .header__nav-item:last-of-type {
