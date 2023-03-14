@@ -242,7 +242,7 @@ let lastScrollY = 0;
 function isWindowScrolled() {
   if (window.pageYOffset < 0) return false;
   
-  if (window.pageYOffset < 10) {
+  if (window.pageYOffset < 30) {
     header.classList.remove(HEADER_SCROLLED_CLASS);
     return false
   };

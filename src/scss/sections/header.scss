@@ -263,8 +263,10 @@
 .header__nav-item:hover .header__nav-link,
 .header__nav-link:hover {
   @media (any-hover: hover) {
-    padding-top: 34px;
-    padding-bottom: 36px;
+    // padding-top: 34px;
+    // padding-bottom: 36px;
+    padding-top: 2.125rem;//34px;
+    padding-bottom: 2.25rem;//36px;
     margin-top: unset;
     margin-bottom: unset;
     color: #6c7982;

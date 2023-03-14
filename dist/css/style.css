@@ -9491,8 +9491,8 @@ span.flatpickr-weekday {
 @media (any-hover: hover) {
   .header__nav-item:hover .header__nav-link,
 .header__nav-link:hover {
-    padding-top: 34px;
-    padding-bottom: 36px;
+    padding-top: 2.125rem;
+    padding-bottom: 2.25rem;
     margin-top: unset;
     margin-bottom: unset;
     color: #6c7982;
