@@ -9971,6 +9971,7 @@ span.flatpickr-weekday {
 .header__nav-item:hover .header__nav-item-dropdown .header__nav-item-dropdown-content {
     opacity: 1;
     transition: all 0.65s ease, opacity 1.4s ease;
+    pointer-events: all;
   }
 }
 @media (max-width: 920px) {
