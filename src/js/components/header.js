@@ -226,27 +226,20 @@ const header = document.querySelector('.header');
 const HEADER_SCROLLED_CLASS = 'header--scrolled'
 
 function hideHeader() {
-  header.classList.add('header--hidden');
+  // header.classList.add('header--hidden');
   // header.classList.remove('header--visible');
 
-  const event = new Event("header-hide");
-  header.dispatchEvent(event);
+  // const event = new Event("header-hide");
+  // header.dispatchEvent(event);
 }
 function showHeader() {
-  header.classList.remove('header--hidden');
+  // header.classList.remove('header--hidden');
   // header.classList.add('header--visible');
 
-  const event = new Event("header-show");
-  header.dispatchEvent(event);
+  // const event = new Event("header-show");
+  // header.dispatchEvent(event);
 }
-
-let lastScrollY = 0;
-function isWindowScrolled() {
-  if (window.pageYOffset < 0) return false;
-
-  if (window.pageYOffset < 800) {
-    header.classList.add('header--static');
-  }
+function handleHeaderOnFirstScreen() {
   if (window.pageYOffset < 1000) {
     if (window.pageYOffset > 300) {
       header.classList.add('header--hidden');
@@ -256,14 +249,32 @@ function isWindowScrolled() {
     header.classList.remove(HEADER_SCROLLED_CLASS);
     return false
   };
-  header.classList.remove('header--static');
+}
 
-  if (window.pageYOffset < 100) {
-    showHeader();
-    header.classList.add(HEADER_SCROLLED_CLASS);
+let lastScrollY = 0;
+function isWindowScrolled() {
+  if (window.pageYOffset) {
     return true;
+  } else {
+    return false;
   }
 
+  // if (window.pageYOffset < 800) {
+  //   header.classList.add('header--static');
+  // }
+  // handleHeaderOnFirstScreen()
+
+  // header.classList.remove('header--static');
+
+  // if (window.pageYOffset < 30) {
+  //   showHeader();
+    // header.classList.add(HEADER_SCROLLED_CLASS);
+  //   return false;
+  // }
+
+  // if (window.pageYOffset < 41) {return false; }
+
+  /*
   if (window.pageYOffset > lastScrollY) {
     hideHeader();
   } else if((window.pageYOffset < lastScrollY)){
@@ -274,6 +285,7 @@ function isWindowScrolled() {
     lastScrollY  = window.pageYOffset;
   }, 1000)
   return lastScrollY > 15;
+  */
 }
 
 
