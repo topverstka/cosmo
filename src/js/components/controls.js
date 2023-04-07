@@ -324,6 +324,14 @@ function leaveOnlyDigits(stepper) {
   value = value.replaceAll(/\D+/g, '');
   getStepperInput(stepper).value = value;
 }
+function dispatchStepperChangeEvent(targetElement, stepper) {
+  const changeEvent = new CustomEvent("stepper-change", {
+    bubbles: true,
+    cancelable: false,
+    detail: { stepper }
+  });
+  targetElement.dispatchEvent(changeEvent);
+}
 
 function initSteppers(steppers = document.querySelectorAll('.stepper')) {
 
@@ -339,30 +347,26 @@ function initSteppers(steppers = document.querySelectorAll('.stepper')) {
       console.warn(`There is no such input ${input} inside the stepper ${stepper}`);
       return;
     };
-    const changeEvent = new Event("stepper-change", {
-      bubbles: true,
-      cancelable: false,
-    });
 
     if (minus) {
       minus.addEventListener("click", (e) => {
         decrementStepper(stepper)
-        document.body.dispatchEvent(changeEvent);
+        dispatchStepperChangeEvent(document.body, input)
       });
     }
     input.addEventListener('input', () => {
       leaveOnlyDigits(stepper);
       if (input.value == '') input.value = 0
-      document.body.dispatchEvent(changeEvent);
+      dispatchStepperChangeEvent(document.body, input)
     })
     input.addEventListener('change', () => {
       leaveOnlyDigits(stepper);
-      document.body.dispatchEvent(changeEvent);
+      dispatchStepperChangeEvent(document.body, input)
     })
     if (plus) {
       plus.addEventListener("click", (e) => {
         incrementStepper(stepper)
-        document.body.dispatchEvent(changeEvent);
+        dispatchStepperChangeEvent(document.body, input)
       });
     }
 
@@ -375,3 +379,6 @@ function initSteppers(steppers = document.querySelectorAll('.stepper')) {
 initSteppers();
 window.initSteppers = initSteppers;
 
+document.body.addEventListener('stepper-change', (e) => {
+  console.log(e.detail.stepper)
+})
