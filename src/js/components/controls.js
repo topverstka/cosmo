@@ -299,7 +299,6 @@ textareas.forEach(area => {
 /**
  * Stepper
  */
-const steppers = document.querySelectorAll('.stepper');
 function getStepperInput(stepper) {
   return stepper.querySelector('.stepper__value');
 }
@@ -325,21 +324,54 @@ function leaveOnlyDigits(stepper) {
   value = value.replaceAll(/\D+/g, '');
   getStepperInput(stepper).value = value;
 }
-steppers.forEach((stepper) => {
-  const minus = stepper.querySelector('.stepper__button-minus');
-  const plus = stepper.querySelector('.stepper__button-plus');
-  const input = stepper.querySelector('.stepper__value');
 
-  minus.addEventListener("click", (e) => {
-    decrementStepper(stepper)
-  });
-  input.addEventListener('input', () => {
-    leaveOnlyDigits(stepper);
+function initSteppers(steppers = document.querySelectorAll('.stepper')) {
+
+  let nowInitedSteppers = [];
+
+  steppers.forEach((stepper) => {
+    if (stepper.classList.contains('stepper--inited')) return;
+
+    const minus = stepper.querySelector('.stepper__button-minus');
+    const plus = stepper.querySelector('.stepper__button-plus');
+    const input = stepper.querySelector('.stepper__value');
+    if (!input) {
+      console.warn(`There is no such input ${input} inside the stepper ${stepper}`);
+      return;
+    };
+    const changeEvent = new Event("stepper-change", {
+      bubbles: true,
+      cancelable: false,
+    });
+
+    if (minus) {
+      minus.addEventListener("click", (e) => {
+        decrementStepper(stepper)
+        document.body.dispatchEvent(changeEvent);
+      });
+    }
+    input.addEventListener('input', () => {
+      leaveOnlyDigits(stepper);
+      if (input.value == '') input.value = 0
+      document.body.dispatchEvent(changeEvent);
+    })
+    input.addEventListener('change', () => {
+      leaveOnlyDigits(stepper);
+      document.body.dispatchEvent(changeEvent);
+    })
+    if (plus) {
+      plus.addEventListener("click", (e) => {
+        incrementStepper(stepper)
+        document.body.dispatchEvent(changeEvent);
+      });
+    }
+
+    stepper.classList.add('stepper--inited')
+    nowInitedSteppers.push(stepper);
   })
-  input.addEventListener('change', () => {
-    leaveOnlyDigits(stepper);
-  })
-  plus.addEventListener("click", (e) => {
-    incrementStepper(stepper)
-  });
-})
+
+  return nowInitedSteppers;
+}
+initSteppers();
+window.initSteppers = initSteppers;
+

@@ -106,9 +106,8 @@ function enableButton(button) {
 const formsList = document.querySelectorAll("form");
 formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
-    console.log("submit");
     form.querySelectorAll(".input").forEach((input) => {
       validateInput(input);
     });
@@ -121,15 +120,9 @@ formsList.forEach((form) => {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
-    // try {
-    // let result = await response.json();
-    // console.log(result);
-    console.log(form);
-    console.log("thanks");
     const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
       submitButton.dataset.buttonText = submitButton.innerHTML;
-      // submitButton.innerText = "Message envoyé"
       submitButton.innerHTML = "✓";
       disableButton(submitButton);
 
@@ -138,14 +131,6 @@ formsList.forEach((form) => {
         enableButton(submitButton);
       }, 10000);
     }
-    const sentEvent = new Event("form_sent", {
-      bubbles: true,
-      cancelable: false,
-    });
-    form.dispatchEvent(sentEvent);
-    // } catch {
-    // console.log("error");
-    // }
   });
 });
 
