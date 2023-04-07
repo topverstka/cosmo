@@ -106,20 +106,14 @@ function enableButton(button) {
 const formsList = document.querySelectorAll("form");
 formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
-    // event.preventDefault();
 
+    let fieldsStatus = [];
     form.querySelectorAll(".input").forEach((input) => {
-      validateInput(input);
+      fieldsStatus.push(validateInput(input));
     });
 
-    const formBody = new URLSearchParams(new FormData(form));
-    let response = await fetch(form.action, {
-      method: "POST",
-      body: formBody,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
+    if (fieldsStatus.includes(false)) event.preventDefault();
+
     const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
       submitButton.dataset.buttonText = submitButton.innerHTML;
