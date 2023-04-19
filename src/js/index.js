@@ -103,6 +103,9 @@ function initAccordionGallery() {
 
   if (galleries) {
     galleries.forEach(gallery => {
+
+      if (gallery.classList.contains('gallery-accordion--init')) return;
+
       const cards = gallery.querySelectorAll('.gallery-accordion__item')
       const expandButton = gallery.querySelector('.gallery-accordion__button-more');
       let initialShow = gallery.dataset.startShow || GALLERY_INITIAL_SHOW;
@@ -123,24 +126,31 @@ function initAccordionGallery() {
             }, 100)
         }
       })
-      if (!expandButton) return;
+      gallery.classList.add('gallery-accordion--init')
 
-      expandButton.addEventListener('click', () => {
-        // if (gallery.querySelector('.gallery-accordion-modal')) return;
-        // if (gallery.querySelector('.modal-gallery-crousel')) return;
-        // if (gallery.querySelector('[data-fancybox]')) return;
-        
-        // expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
-        // setTimeout(() => {
-        //   expandButton.style.display = 'none';
-        // }, 100)
-        cards.forEach(card => {
-            card.style.display = '';
-            setTimeout(() => {
-              card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
-            }, 100)
-        })
-      })
+      window.lazyload.update()
+
+      if (!expandButton) return;
+      if ( !expandButton.classList.contains('gallery-accordion__button-more--init') ) {
+        expandButton.addEventListener('click', () => {
+          // if (gallery.querySelector('.gallery-accordion-modal')) return;
+          // if (gallery.querySelector('.modal-gallery-crousel')) return;
+          // if (gallery.querySelector('[data-fancybox]')) return;
+          
+          // expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
+          // setTimeout(() => {
+          //   expandButton.style.display = 'none';
+          // }, 100)
+          cards.forEach(card => {
+              card.style.display = '';
+              setTimeout(() => {
+                card.classList.add(GALLERY_ITEM_VISIBLE_CLASS);
+              }, 100)
+          })
+        });
+        expandButton.classList.add('gallery-accordion__button-more--init');
+      }
+
 
       if ([...cards].length <= initialShow) {
         // expandButton.classList.add(GALLERY_BUTTON_HIDDEN_CLASS);
@@ -148,10 +158,13 @@ function initAccordionGallery() {
         //   expandButton.style.display = 'none';
         // }, 100)
       }
+
+
     })
   }
 }
 initAccordionGallery()
+window.initAccordionGallery = initAccordionGallery;
 
 
 const productAdd = document.querySelectorAll('.product-card__button-add');
