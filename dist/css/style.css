@@ -10837,7 +10837,6 @@ span.flatpickr-weekday {
 
 .changes__gallery {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   max-width: 1184px;
@@ -10861,6 +10860,11 @@ span.flatpickr-weekday {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .changes__gallery {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 768px) {

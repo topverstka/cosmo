@@ -22,7 +22,6 @@
 }
 .changes__gallery {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   max-width: 1184px;
@@ -40,6 +39,9 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     margin-bottom: 40px
+  }
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
